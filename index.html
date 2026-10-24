@@ -122,6 +122,12 @@ button, input { font: inherit; color: inherit; }
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); cursor: pointer; font-size: 12.5px; color: var(--ink-soft);
   display: inline-flex; align-items: center; gap: 7px; letter-spacing: 0.01em;
 }
+#massChips .chip[aria-pressed="true"] { border-color: color-mix(in srgb, var(--gold) 60%, transparent); color: var(--ink); background: rgba(232,184,74,0.14); }
+#massChips .tick { fill: none; stroke: currentColor; stroke-width: 2; width: 13px; height: 13px; margin: 0; }
+#massChips .lang { cursor: default; padding-right: 6px; }
+#massChips select { background: transparent; color: var(--ink); border: 0; font: inherit; font-size: 12.5px; cursor: pointer; max-width: 150px; }
+#massChips select option { background: var(--panel-solid); }
+#massChips .mass-note { color: var(--ink-faint); font-size: 11.5px; text-shadow: 0 1px 6px #000; }
 .chip i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
 .chip[aria-pressed="true"] { color: var(--ink); border-color: color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232, 184, 74, 0.14); }
 .chip small { color: var(--ink-faint); font-variant-numeric: tabular-nums; font-size: 11.5px; }
@@ -192,7 +198,8 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .patron .pimg img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: top; display: block; border: 1.5px solid color-mix(in srgb, var(--gold) 55%, transparent); }
 .patron .plabel { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 2px; }
 .patron b { font-weight: 600; }
-.patron p { margin: 4px 0 6px; font-size: 13px; line-height: 1.5; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.patron .feast { font-size: 12px; color: var(--gold-soft); margin-top: 2px; }
+.patron p { margin: 4px 0 6px; font-size: 13px; line-height: 1.5; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
 .patron small { display: block; margin-top: 4px; font-size: 11px; color: var(--ink-faint); }
 .card .body > * { min-width: 0; }
 .strip { display: flex; gap: 6px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
@@ -213,6 +220,12 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .lb-bar #lbCount { font-family: var(--font-data); color: var(--gold-soft); }
 .lb-bar a { color: var(--ink-soft); }
 @media (max-width: 640px) { .lb-stage { padding: 56px 8px 8px; } .lb-nav { top: auto; bottom: 64px; transform: none; } }
+
+/* toast */
+.toast { position: fixed; z-index: 15; left: 50%; top: 140px; transform: translate(-50%, -8px); opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease;
+  background: var(--panel-solid); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); color: var(--ink); padding: 8px 16px; border-radius: 18px; font-size: 13px; box-shadow: 0 10px 30px #000a; white-space: nowrap; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+@media (max-width: 640px) { .toast { top: 170px; } }
 
 /* tooltip */
 .tip {
@@ -279,9 +292,28 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 16px; margin: 0; font-size: 13.5px; }
 .facts dt { color: var(--ink-faint); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 2px; }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.facts dd.addr { line-height: 1.45; }
+.facts .mini { margin-left: 8px; vertical-align: 1px; height: 22px; padding: 0 9px; border-radius: 11px; border: 1px solid var(--line); background: none; color: var(--ink-soft); font-size: 11.5px; cursor: pointer; }
+.facts .mini:hover { color: var(--ink); border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.facts dd.links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.facts dd.links a { display: inline-flex; align-items: center; gap: 6px; }
+.facts dd.links svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .facts a { color: var(--gold-soft); text-underline-offset: 3px; }
 .facts .mono { font-family: var(--font-data); font-size: 12.5px; font-variant-numeric: tabular-nums; }
 .sect h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.staff { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.staff li { display: flex; align-items: center; gap: 11px; font-size: 13.5px; }
+.staff .ph { flex: none; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; display: grid; place-items: center; background: rgba(232,184,74,0.1); border: 1px solid var(--line); color: var(--gold-soft); font-weight: 600; font-size: 14px; }
+.staff .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
+.staff b { display: block; font-weight: 600; }
+.staff small { color: var(--ink-soft); font-size: 12px; }
+.staff-src { margin: 9px 0 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
+.staff-src a { color: var(--gold-soft); text-underline-offset: 3px; }
+.sched { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 13.5px; }
+.sched li { padding-left: 12px; position: relative; }
+.sched li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.7; }
+.facts .dead { color: var(--ink-faint); }
+.facts .moved { color: var(--ink-faint); font-size: 12px; }
 .media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .media a {
   display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 12px;
@@ -357,6 +389,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
   <div class="chips" id="chips" role="group" aria-label="Show church types"></div>
+  <div class="chips" id="massChips" role="group" aria-label="Filter by Mass times" hidden></div>
 </header>
 
 <div class="ctrls">
@@ -376,6 +409,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 </footer>
 
 <div id="tip" class="tip" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 <aside id="near" class="favs" hidden aria-labelledby="nearTitle">
   <header><h2 id="nearTitle">Near you<small id="nearN"></small></h2><button class="x" id="nearClose" aria-label="Close nearby churches"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
@@ -475,6 +509,7 @@ function buildGeoJSON() {
   for (let i = 0; i < n; i++) {
     const t = typ[i] & 7;
     if (!enabled.has(t)) continue;
+    if (state.only && !state.only.has(i)) continue;
     feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t, m: typ[i] >> 3 } });
   }
   return { type: 'FeatureCollection', features: feats };
@@ -484,7 +519,7 @@ function notableGeoJSON() {
   const { lon, lat, typ, n, enabled } = state;
   for (let i = 0; i < n; i++) {
     const t = typ[i] & 7;
-    if ((t === 1 || t === 2) && enabled.has(t)) feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t } });
+    if ((t === 1 || t === 2) && enabled.has(t) && !(state.only && !state.only.has(i))) feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t } });
   }
   return { type: 'FeatureCollection', features: feats };
 }
@@ -494,6 +529,135 @@ async function shardFor(i) {
   if (!state.shards.has(s)) state.shards.set(s, getJSON('data/d/' + s + '.json').catch(e => { state.shards.delete(s); throw e; }));
   const recs = await state.shards.get(s);
   return recs[i - s * state.meta.shardSize];
+}
+
+/* ---------- website checks and parish staff (data/web, built by scripts/web in GitHub Actions) ---------- */
+const web = { shards: new Map(), meta: null };
+let overrides = null;  // data/overrides.json: hand corrections, keyed by church index
+async function webFor(i) {
+  if (!overrides) overrides = getJSON('data/overrides.json').catch(() => ({}));
+  const s = Math.floor(i / state.meta.shardSize);
+  if (!web.meta) web.meta = getJSON('data/web/meta.json').catch(() => ({}));
+  if (!web.shards.has(s)) web.shards.set(s, getJSON('data/web/' + s + '.json').catch(() => { web.shards.delete(s); return {}; }));
+  const [sh, meta] = await Promise.all([web.shards.get(s), web.meta]);
+  return { entry: sh[i - s * state.meta.shardSize] || null, checked: meta.checked || '', fix: (await overrides)[i] || {} };
+}
+// Many listed "websites" are profiles on big platforms; name them for what they are
+const PLATFORMS = [
+  [/(^|\.)(facebook|fb)\.com$/, 'Facebook', 'Facebook page'], [/(^|\.)instagram\.com$/, 'Instagram', 'Instagram'],
+  [/(^|\.)(youtube\.com|youtu\.be)$/, 'YouTube', 'YouTube channel'], [/(^|\.)tiktok\.com$/, 'TikTok', 'TikTok'],
+  [/(^|\.)(twitter|x)\.com$/, 'X', 'X (Twitter)'], [/(^|\.)(whatsapp\.com|wa\.me)$/, 'WhatsApp', 'WhatsApp'],
+  [/(^|\.)linktr\.ee$/, 'Links', 'Links page'], [/(^|\.)wikipedia\.org$/, 'Wikipedia', 'Wikipedia article'],
+  [/(^|\.)(maps\.app\.goo\.gl|goo\.gl)$|^maps\.google\./, null, null],
+];
+function linkKind(u) {
+  let h = ''; try { h = new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return null; }
+  for (const [rx, btn, row] of PLATFORMS) if (rx.test(h)) return { btn, row, platform: true };
+  return { btn: 'Parish website', row: 'Website', platform: false };
+}
+const ROLE_ORDER = ['Pastor', 'Administrator', 'Rector', 'Parochial vicar', 'Chaplain', 'In residence', '', 'Pastor emeritus', 'Deacon'];
+function initials(n) { return n.split(/\s+/).filter(w => /^[A-ZÀ-Þ]/.test(w)).map(w => w[0]).slice(0, 2).join('') || '✝'; }
+function pastorOf(entry) {
+  const staff = (entry && entry[2]) || [];
+  return staff.find(p => p[0] === 'p' && /^(Pastor|Administrator|Rector)$/.test(p[3])) || null;
+}
+function scheduleHTML(entry, checked, host) {
+  const mass = (entry && entry[4]) || [], conf = (entry && entry[5]) || [], src = entry && entry[6];
+  if (!mass.length && !conf.length) return '';
+  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) : '';
+  const list = (rows) => `<ul class="sched">${rows.map(r => `<li>${esc(r)}</li>`).join('')}</ul>`;
+  return `<div class="sect">${mass.length ? `<h3>Mass times</h3>${list(mass)}` : ''}${conf.length ? `<h3${mass.length ? ' style="margin-top:14px"' : ''}>Confession</h3>${list(conf)}` : ''}
+    <p class="staff-src">From <a href="${esc(src)}" target="_blank" rel="noopener">${esc(host(src))}</a>${when ? `, checked ${esc(when)}` : ''}. Times change for holidays and seasons, so check with the parish.</p></div>`;
+}
+function staffHTML(entry, checked, webUrl, host) {
+  const staff = (entry && entry[2]) || [];
+  const src = (entry && entry[3]) || webUrl;
+  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) : '';
+  if (!staff.length) return '';  // only show Staff when the parish site named its clergy
+  // "Father Vu Lam" and "Fr. Peter Vu Lam" on one page are the same man: keep the fuller entry
+  const words = (n) => n.toLowerCase().replace(/\./g, '').split(/\s+/);
+  const dup = (a, b) => a !== b && a[2].length <= b[2].length && words(a[2]).every(w => words(b[2]).includes(w));
+  const rows = staff.filter(p => !staff.some(q => dup(p, q) && (q[2].length > p[2].length || staff.indexOf(q) < staff.indexOf(p))))
+    .map(([k, title, nm, role, img]) => ({ k, title, nm, role: role || (k === 'd' ? 'Deacon' : 'Priest'), img }))
+    .sort((a, b) => (a.k === 'd') - (b.k === 'd') || ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role));
+  return `<div class="sect"><h3>Staff</h3><ul class="staff">${rows.map(p => `
+      <li><span class="ph">${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode('${esc(initials(p.nm))}'))">` : esc(initials(p.nm))}</span>
+        <span><b>${esc(p.title)} ${esc(p.nm)}</b><small>${esc(p.role)}</small></span></li>`).join('')}</ul>
+    <p class="staff-src">From <a href="${esc(src)}" target="_blank" rel="noopener">${esc(host(src))}</a>${when ? `, checked ${esc(when)}` : ''}. Assignments change, so confirm with the parish.</p></div>`;
+}
+
+/* ---------- Mass filters: "Mass soon", "Confession soon" and Mass language, from data/web/sched.json ---------- */
+// Each church: [time zone index, slot...]; slot = kind (0 Mass, 1 Confession) | day mask << 1 (bit 0 = Sunday) | minutes << 8 | language << 19
+const LANG_NAMES = { es: 'Spanish', la: 'Latin', vi: 'Vietnamese', pl: 'Polish', pt: 'Portuguese', it: 'Italian', fr: 'French', ko: 'Korean', tl: 'Tagalog', zh: 'Chinese',
+  ht: 'Haitian Creole', de: 'German', en: 'English', ga: 'Irish', ar: 'Arabic', uk: 'Ukrainian', hu: 'Hungarian', hr: 'Croatian', sw: 'Swahili', ig: 'Igbo', ml: 'Malayalam', ta: 'Tamil', asl: 'Sign language' };
+const SOON_MIN = 120;
+const mf = { data: null, mode: '', lang: '', timer: 0, fmts: new Map() };
+function localNow(tz) {
+  let f = mf.fmts.get(tz);
+  if (!f) { try { f = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }); } catch (e) { f = null; } mf.fmts.set(tz, f); }
+  if (!f) return null;
+  const p = Object.fromEntries(f.formatToParts(new Date()).map(x => [x.type, x.value]));
+  return { day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), min: (+p.hour % 24) * 60 + +p.minute };
+}
+function soonSet(kind) {
+  const out = new Set(), now = new Map();
+  for (const [k, v] of Object.entries(mf.data.c)) {
+    const tz = mf.data.tz[v[0]];
+    if (!now.has(tz)) now.set(tz, localNow(tz));
+    const t = now.get(tz); if (!t) continue;
+    for (let j = 1; j < v.length; j++) {
+      const s = v[j];
+      if ((s & 1) !== kind || !((s >> 1) & 127 & (1 << t.day))) continue;
+      const d = ((s >> 8) & 2047) - t.min;
+      if (d >= -10 && d <= SOON_MIN) { out.add(+k); break; }
+    }
+  }
+  return out;
+}
+function langSet(code) {
+  const li = mf.data.langs.indexOf(code), out = new Set();
+  for (const [k, v] of Object.entries(mf.data.c)) for (let j = 1; j < v.length; j++) if ((v[j] & 1) === 0 && (v[j] >> 19) === li) { out.add(+k); break; }
+  return out;
+}
+function applyMassFilter() {
+  let only = null;
+  if (mf.mode) only = soonSet(mf.mode === 'mass' ? 0 : 1);
+  if (mf.lang) { const l = langSet(mf.lang); only = only ? new Set([...only].filter(i => l.has(i))) : l; }
+  state.only = only;
+  map.getSource('churches').setData(buildGeoJSON());
+  map.getSource('notable').setData(notableGeoJSON());
+  renderMassChips();
+  if (only) $('tagline').innerHTML = `Showing <b>${fmt(only.size)}</b> ${only.size === 1 ? 'church' : 'churches'} with ${mf.mode === 'conf' ? 'Confession' : 'Mass'}${mf.mode ? ' in the next 2 hours' : ''}${mf.lang ? ' in ' + esc(LANG_NAMES[mf.lang] || mf.lang) : ''}`;
+  else updateTagline();
+  clearInterval(mf.timer);
+  if (mf.mode) mf.timer = setInterval(applyMassFilter, 5 * 60 * 1000);  // "soon" moves with the clock
+  map.once('idle', updateNames);
+}
+function renderMassChips() {
+  const langs = {};
+  for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = v[j] >> 19; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
+  const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(LANG_NAMES[c] || c)} (${fmt(n)})</option>`; }).join('');
+  const clock = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>';
+  $('massChips').innerHTML = `<span class="lbl">Mass</span>
+    <button class="chip" data-m="mass" aria-pressed="${mf.mode === 'mass'}" title="Churches with a Mass starting in the next 2 hours, local time">${clock}Mass soon</button>
+    <button class="chip" data-m="conf" aria-pressed="${mf.mode === 'conf'}" title="Churches with Confession in the next 2 hours, local time">${clock}Confession soon</button>
+    ${opts ? `<label class="chip lang"><span>Language</span><select id="massLang" aria-label="Mass language"><option value="">Any</option>${opts}</select></label>` : ''}
+    ${mf.mode || mf.lang ? '<button class="chip" data-m="clear">Clear</button>' : ''}
+    <small class="mass-note">Times found for ${fmt(Object.keys(mf.data.c).length)} churches</small>`;
+  $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang));
+}
+async function initMassFilters() {
+  try { mf.data = await getJSON('data/web/sched.json'); } catch (e) { return; }
+  if (!mf.data || !Object.keys(mf.data.c || {}).length) return;
+  renderMassChips();
+  $('massChips').hidden = false;
+  $('massChips').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-m]'); if (!b) return;
+    const m = b.dataset.m;
+    if (m === 'clear') { mf.mode = ''; mf.lang = ''; } else mf.mode = mf.mode === m ? '' : m;
+    applyMassFilter();
+  });
+  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; applyMassFilter(); } });
 }
 
 /* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
@@ -937,7 +1101,8 @@ async function wikiExtract(url) {
   try {
     const r = await fetch(`https://${m[1]}.wikipedia.org/api/rest_v1/page/summary/${m[2]}`, { signal: ctl.signal });
     if (!r.ok) return null; const j = await r.json();
-    return j.type === 'standard' && j.extract ? { text: j.extract, url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || url, lang: m[1] } : null;
+    const text = j.type === 'standard' ? faithful(j.extract, 4) : '';
+    return text ? { text, url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || url, lang: m[1] } : null;
   } finally { clearTimeout(timer); }
 }
 function galleryItem(page) {
@@ -1018,7 +1183,9 @@ async function patronInfo(title) {
   try {
     const r = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title.replace(/ /g, '_')), { signal: ctl.signal });
     if (!r.ok) return null; const j = await r.json(); if (j.type !== 'standard') return null;
-    const out = { name: j.title, text: j.extract || '', url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || '' };
+    const bio = BIOS[title] || BIOS[j.title];
+    const name = title === 'Mary, mother of Jesus' ? 'The Blessed Virgin Mary' : title === 'Holy Spirit in Christianity' ? 'The Holy Spirit' : title === 'Trinity' ? 'The Most Holy Trinity' : j.title.replace(/ \(archangel\)$/, ', Archangel').replace(/^(Pope )/, 'Saint $1');
+    const out = { name, text: bio ? bio[1] : faithful(j.extract), feast: bio ? bio[0] : '', url: 'https://www.franciscanmedia.org/?s=' + encodeURIComponent(name.replace(/^The /, '')) };
     // credit the picture through its Commons file page; pictures held only on Wikipedia are left out
     const orig = j.originalimage && j.originalimage.source;
     if (orig && /upload\.wikimedia\.org\/wikipedia\/commons\//.test(orig)) {
@@ -1028,6 +1195,83 @@ async function patronInfo(title) {
     }
     return out;
   } finally { clearTimeout(timer); }
+}
+// Short bios in the Church's own voice for the dedications most parishes carry: [feast, text]
+const BIOS = {
+  'Mary, mother of Jesus': ['January 1, Mary, Mother of God', 'The Blessed Virgin Mary, Mother of God and Mother of the Church, chosen from all eternity to bear the Savior. Conceived without sin and ever virgin, she was assumed body and soul into heaven.'],
+  'Our Lady of Guadalupe': ['December 12', 'In 1531 the Blessed Virgin appeared to Saint Juan Diego on the hill of Tepeyac near Mexico City and left her image on his tilma. She is Patroness of the Americas.'],
+  'Our Lady of Fátima': ['May 13', 'In 1917 the Blessed Virgin appeared to three shepherd children at Fátima in Portugal, calling the world to prayer, penance, the daily Rosary and devotion to her Immaculate Heart.'],
+  'Our Lady of Lourdes': ['February 11', 'In 1858 the Blessed Virgin appeared eighteen times to Saint Bernadette at Lourdes in France, saying "I am the Immaculate Conception." Her spring there has been a place of healing and pilgrimage ever since.'],
+  'Our Lady of Aparecida': ['October 12', 'In 1717 fishermen drew a small image of the Immaculate Conception from the Paraíba River, and their empty nets were filled. Our Lady of Aparecida is Queen and Patroness of Brazil.'],
+  'Our Mother of Perpetual Help': ['June 27', 'An ancient icon of the Child Jesus running to His Mother at the sight of the instruments of His Passion. Blessed Pius IX entrusted it to the Redemptorists in 1866 to make it known throughout the world.'],
+  'Our Lady of the Pillar': ['October 12', 'Tradition holds that the Blessed Virgin came to Saint James the Apostle at Zaragoza to strengthen his preaching in Spain, leaving a pillar as a sign. She is Patroness of Spain and of the Hispanic peoples.'],
+  'Our Lady of Mount Carmel': ['July 16', 'Mary as Mother and Patroness of the Carmelite Order. She gave Saint Simon Stock the Brown Scapular as a sign of her protection for all who wear it devoutly.'],
+  'Our Lady of the Rosary': ['October 7', 'The feast recalls the victory at Lepanto in 1571, won as the faithful prayed the Rosary. It invites us to contemplate the mysteries of Christ with His Mother.'],
+  'Our Lady of Sorrows': ['September 15', 'Honors the Blessed Mother\'s sharing in the Passion of her Son through her seven sorrows, from Simeon\'s prophecy to the burial of Jesus. She stood faithfully at the foot of the Cross.'],
+  'Immaculate Conception': ['December 8', 'By a singular grace of God, the Blessed Virgin Mary was preserved free from original sin from the first moment of her conception. It is the patronal feast of the United States.'],
+  'Assumption of Mary': ['August 15', 'At the end of her earthly life the Blessed Virgin Mary was taken up body and soul into heavenly glory, as Pope Pius XII solemnly defined in 1950.'],
+  'Sacred Heart': ['Friday after the Second Sunday after Pentecost', 'Devotion to the Most Sacred Heart of Jesus honors His burning love for mankind. Our Lord revealed its promises to Saint Margaret Mary Alacoque in the 1670s.'],
+  'Holy Family': ['Sunday after Christmas', 'Jesus, Mary and Joseph in their home at Nazareth, the model for every Christian family in faith, love and obedience to God.'],
+  'Trinity': ['Sunday after Pentecost', 'The central mystery of our faith: one God in three divine Persons, the Father, the Son and the Holy Spirit.'],
+  'Holy Spirit in Christianity': ['Pentecost', 'The Third Person of the Most Holy Trinity, the Lord and Giver of life, who came upon the Apostles at Pentecost and sanctifies the Church.'],
+  'Christ the King': ['Last Sunday of the liturgical year', 'Pope Pius XI instituted this solemnity in 1925 to proclaim the reign of Jesus Christ over every heart, family and nation.'],
+  'Divine Mercy': ['Second Sunday of Easter', 'Devotion to God\'s merciful love revealed to Saint Faustina Kowalska, summed up in the prayer "Jesus, I trust in You." Saint John Paul II established Divine Mercy Sunday in 2000.'],
+  'Santo Niño de Cebú': ['Third Sunday of January', 'The image of the Holy Child Jesus given at the baptism of the queen of Cebu in 1521, the oldest Christian image in the Philippines.'],
+  'Juan Diego': ['December 9', 'Saint Juan Diego Cuauhtlatoatzin, the humble Indigenous convert to whom Our Lady of Guadalupe appeared in 1531. Canonized by Saint John Paul II in 2002.'],
+  'Kateri Tekakwitha': ['July 14', 'The "Lily of the Mohawks" (1656–1680), a young convert of great purity and prayer and the first Indigenous saint of North America.'],
+  'Martin de Porres': ['November 3', 'Dominican brother of Lima, Peru (1579–1639), known for his humble care of the sick and poor of every race. Patron of social justice.'],
+  'Francis Xavier': ['December 3', 'One of the first Jesuits, he carried the Gospel to India, Southeast Asia and Japan and baptized many thousands. Patron of the missions.'],
+  'Francis de Sales': ['January 24', 'Bishop of Geneva and Doctor of the Church (1567–1622), who taught that every person is called to holiness. Patron of writers and journalists.'],
+  'Saint Joseph': ['March 19', 'Spouse of the Blessed Virgin Mary and foster father of Jesus, the just man who guarded the Holy Family. Patron of the universal Church, of fathers and workers, and of a happy death.'],
+  'Saint Patrick': ['March 17', 'Bishop and Apostle of Ireland in the fifth century. Taken to Ireland as a slave in his youth, he returned as a missionary and brought the island to the faith.'],
+  'Anthony of Padua': ['June 13', 'Franciscan priest and Doctor of the Church (1195–1231), a powerful preacher and worker of miracles. Patron of the poor and of lost things.'],
+  'Francis of Assisi': ['October 4', 'Founder of the Franciscans (1181–1226), who embraced poverty to follow Christ and received the stigmata, the wounds of the Lord. Patron of Italy and of animals.'],
+  'John the Baptist': ['June 24', 'The Forerunner of the Lord, who preached repentance, baptized Jesus in the Jordan and gave his life as a martyr for the truth.'],
+  'Michael (archangel)': ['September 29', 'Prince of the heavenly host, who defends God\'s people against the snares of the devil. Patron of soldiers, police and the sick.'],
+  'Raphael (archangel)': ['September 29', 'The archangel who guided Tobias and healed Tobit; his name means "God heals." Patron of travelers and of healing.'],
+  'Gabriel': ['September 29', 'The archangel who announced to the Virgin Mary that she would be the Mother of the Son of God. Patron of messengers.'],
+  'Saint Peter': ['June 29', 'Prince of the Apostles and first Pope, to whom Christ gave the keys of the Kingdom. He was martyred in Rome and rests beneath Saint Peter\'s Basilica.'],
+  'Paul the Apostle': ['June 29', 'Apostle to the Gentiles, converted on the road to Damascus. His journeys and letters carried the Gospel across the Roman world, and he was martyred in Rome.'],
+  'Saint Anne': ['July 26', 'Mother of the Blessed Virgin Mary and grandmother of Jesus, honored together with Saint Joachim. Patroness of mothers and grandmothers.'],
+  'Thérèse of Lisieux': ['October 1', 'Carmelite nun and Doctor of the Church (1873–1897), the Little Flower, who taught the "little way" of trust and love. Patroness of the missions.'],
+  'Jude the Apostle': ['October 28', 'Apostle and kinsman of the Lord, author of the Letter of Jude. Patron of desperate cases.'],
+  'Vincent de Paul': ['September 27', 'French priest (1581–1660) who founded the Congregation of the Mission and the Daughters of Charity. Patron of all works of charity.'],
+  'Thomas Aquinas': ['January 28', 'Dominican priest and Doctor of the Church (1225–1274), author of the Summa Theologiae. Patron of Catholic schools and students.'],
+  'Rita of Cascia': ['May 22', 'Wife, mother, widow and Augustinian nun (1381–1457) who bore suffering with great patience. Patroness of impossible causes.'],
+  'Augustine of Hippo': ['August 28', 'Bishop and Doctor of the Church (354–430), converted through the prayers of his mother, Saint Monica. Author of the Confessions.'],
+  'Saint Monica': ['August 27', 'Mother of Saint Augustine, whose years of faithful prayer won his conversion. Patroness of mothers and wives.'],
+  'Saint Sebastian': ['January 20', 'Roman soldier martyred for the faith under Diocletian around 288. Patron of soldiers and athletes.'],
+  'Saint Lawrence': ['August 10', 'Deacon of Rome martyred in 258, who presented the poor as the true treasures of the Church. Patron of deacons and of the poor.'],
+  'Saint Stephen': ['December 26', 'One of the first seven deacons and the first martyr of the Church, who died praying for those who stoned him.'],
+  'Saint Nicholas': ['December 6', 'Bishop of Myra in the fourth century, beloved for his charity and secret gifts. Patron of children and sailors.'],
+  'Saint George': ['April 23', 'Soldier and martyr of the early fourth century, a model of courage in the faith. Patron of soldiers and scouts.'],
+  'James the Great': ['July 25', 'Apostle and brother of Saint John, the first of the Twelve to be martyred. His shrine at Santiago de Compostela draws pilgrims on the Camino. Patron of Spain.'],
+  'Andrew the Apostle': ['November 30', 'Brother of Saint Peter and the first called of the Apostles, who brought Peter to Jesus. He was martyred on a cross at Patras. Patron of Scotland.'],
+  'Martin of Tours': ['November 11', 'Roman soldier who shared his cloak with a beggar and later became Bishop of Tours (died 397). Patron of soldiers.'],
+  'Benedict of Nursia': ['July 11', 'Father of Western monasticism (c. 480–547), whose Rule of prayer and work guided monks for centuries. Patron of Europe.'],
+  'Saint Dominic': ['August 8', 'Founder of the Order of Preachers (1170–1221), devoted to preaching the truth and to the Rosary.'],
+  'Ignatius of Loyola': ['July 31', 'Soldier turned saint (1491–1556) who founded the Society of Jesus and wrote the Spiritual Exercises, all "for the greater glory of God."'],
+  'Charles Borromeo': ['November 4', 'Archbishop of Milan (1538–1584) who renewed the Church after the Council of Trent and cared for the sick during the plague.'],
+  'Elizabeth Ann Seton': ['January 4', 'Wife, mother, widow and convert (1774–1821) who founded the Sisters of Charity and Catholic schools in America. The first saint born in the United States.'],
+  'Isidore the Laborer': ['May 15', 'Farm worker of Madrid (died 1130), faithful to daily Mass and generous to the poor. Patron of farmers.'],
+  'Saint Lucy': ['December 13', 'Virgin and martyr of Syracuse (died 304), whose name means "light." Patroness of the blind.'],
+  'Saint Cecilia': ['November 22', 'Virgin and martyr of Rome who sang to God in her heart. Patroness of musicians and sacred music.'],
+  'Clare of Assisi': ['August 11', 'Follower of Saint Francis (1194–1253) and foundress of the Poor Clares, devoted to poverty and to the Blessed Sacrament.'],
+  'Pope John Paul II': ['October 22', 'Pope from 1978 to 2005, born Karol Wojtyła in Poland, a tireless pilgrim who called the world to "be not afraid." Canonized in 2014.'],
+  'Pope Pius X': ['August 21', 'Pope from 1903 to 1914 who encouraged frequent Holy Communion and opened it to young children, "to restore all things in Christ."'],
+  'Luke the Evangelist': ['October 18', 'Physician and companion of Saint Paul, author of the Gospel of Luke and the Acts of the Apostles. Patron of doctors and artists.'],
+  'Mark the Evangelist': ['April 25', 'Companion of Saint Peter and author of the Gospel of Mark. Patron of Venice.'],
+  'Matthew the Apostle': ['September 21', 'Tax collector called by Jesus to be an Apostle, author of the first Gospel.'],
+  'Bartholomew the Apostle': ['August 24', 'One of the Twelve, called by the Lord "an Israelite in whom there is no guile," who preached the Gospel and died a martyr.'],
+  'Helena, mother of Constantine I': ['August 18', 'Empress and mother of Constantine the Great, who on pilgrimage to Jerusalem found the True Cross.'],
+  'Brigid of Kildare': ['February 1', 'Abbess of Kildare (died c. 525), beloved for her charity and hospitality. Patroness of Ireland.'],
+  'Louis IX of France': ['August 25', 'King of France (1214–1270), a just ruler devoted to prayer and to the poor.'],
+};
+// For dedications without a written bio, keep the plain biographical sentences and drop commentary written from outside the faith
+const OUTSIDER = /important figure|venerated|revered|regarded|considered|believed|believe|according to|tradition(al)?(ly)?\b|legend|myth|islam|quran|muslim|baha|druze|jewish tradition|protestant|orthodox|lutheran|anglican|methodist|reformed|denomination|religions?\b|faiths?\b|scholars|historians|historicity|apocryph|christians?\b|christianity/i;
+function faithful(text, max = 2) {
+  const sentences = String(text || '').match(/[^.!?]+[.!?]+(\s|$)/g) || [];
+  return sentences.filter(x => !OUTSIDER.test(x)).slice(0, max).join('').trim();
 }
 const FACT_ROWS = [['P571', 'Founded'], ['P1619', 'Opened'], ['P825', 'Dedicated to'], ['P708', 'Diocese'], ['P84', 'Architect'], ['P149', 'Style'], ['P1435', 'Heritage status'], ['P5138', 'Part of']];
 async function showAbout(i, rec) {
@@ -1041,8 +1285,9 @@ async function showAbout(i, rec) {
   const patronHTML = pt ? `<div class="patron">
       ${pt.img ? `<a class="pimg" href="${esc(pt.img.page)}" target="_blank" rel="noopener" title="Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(pt.img.src)}" alt="${esc(pt.name)}"></a>` : ''}
       <div><div class="plabel">${pt.sure ? 'Dedicated to' : 'Named for'}</div><b>${esc(pt.name)}</b>
+      ${pt.feast ? `<div class="feast">Feast day: ${esc(pt.feast)}</div>` : ''}
       ${pt.text ? `<p>${esc(pt.text)}</p>` : ''}
-      ${pt.url ? `<a class="more" href="${esc(pt.url)}" target="_blank" rel="noopener">About ${esc(pt.name)} on Wikipedia</a>` : ''}
+      ${pt.url ? `<a class="more" href="${esc(pt.url)}" target="_blank" rel="noopener">Learn more at Franciscan Media</a>` : ''}
       ${pt.img ? `<small>Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}</small>` : ''}</div>
     </div>` : '';
   if (!rows.length && !a.extract && a.gallery.length < 2 && !pt) { box.innerHTML = ''; return; }
@@ -1105,6 +1350,7 @@ function nearest(lat, lon, k) {
   let worst = Infinity;
   for (let i = 0; i < n; i++) {
     if (!enabled.has(typ[i] & 7)) continue;
+    if (state.only && !state.only.has(i)) continue;
     const dx = (L[i] / 1e6 - lon) * cos, dy = A[i] / 1e6 - lat, d = dx * dx + dy * dy;
     if (best.length < k || d < worst) {
       best.push([d, i]); best.sort((a, b) => a[0] - b[0]); if (best.length > k) best.pop();
@@ -1331,10 +1577,32 @@ function wireShare(i, name, place) {
 }
 addEventListener('click', (e) => { const m = $('shareMenu'); if (m && !m.hidden && !e.target.closest('.share-wrap')) { m.hidden = true; $('shareBtn').setAttribute('aria-expanded', false); } });
 
+/* postal address in each country's official layout (Google libaddressinput formats), country last.
+   %A street, %C town, %S region, %Z postcode, %n new line; name, organisation and district fields are not in our data */
+const ADDRESS_FMT = {"RE":"%O%n%N%n%A%n%Z %C %X","PG":"%N%n%O%n%A%n%C %Z %S","SA":"%N%n%O%n%A%n%C %Z","TA":"%N%n%O%n%A%n%C%n%Z","MU":"%N%n%O%n%A%n%Z%n%C","DO":"%N%n%O%n%A%n%Z %C","RU":"%N%n%O%n%A%n%C%n%S%n%Z","SV":"%N%n%O%n%A%n%Z-%C%n%S","BF":"%N%n%O%n%A%n%C %X","GB":"%N%n%O%n%A%n%C%n%Z","XK":"%N%n%O%n%A%n%Z %C","MC":"%N%n%O%n%A%nMC-%Z %C %X","PN":"%N%n%O%n%A%n%C%n%Z","AI":"%N%n%O%n%A%n%C%n%Z","SD":"%N%n%O%n%A%n%C%n%Z","BT":"%N%n%O%n%A%n%C %Z","JM":"%N%n%O%n%A%n%C%n%S %X","TV":"%N%n%O%n%A%n%C%n%S","SK":"%N%n%O%n%A%n%Z %C","ZZ":"%N%n%O%n%A%n%C","CI":"%N%n%O%n%X %A %C %X","YT":"%O%n%N%n%A%n%Z %C %X","KP":"%Z%n%S%n%C%n%A%n%O%n%N","NO":"%N%n%O%n%A%n%Z %C","PW":"%N%n%O%n%A%n%C %S %Z","SN":"%N%n%O%n%A%n%Z %C","MG":"%N%n%O%n%A%n%Z %C","IT":"%N%n%O%n%A%n%Z %C %S","RS":"%N%n%O%n%A%n%Z %C","AL":"%N%n%O%n%A%n%Z%n%C","BE":"%O%n%N%n%A%n%Z %C","MN":"%N%n%O%n%A%n%C%n%S %Z","MO":"%A%n%O%n%N","GF":"%O%n%N%n%A%n%Z %C %X","SH":"%N%n%O%n%A%n%C%n%Z","PA":"%N%n%O%n%A%n%C%n%S","HR":"%N%n%O%n%A%nHR-%Z %C","GL":"%N%n%O%n%A%n%Z %C","PF":"%N%n%O%n%A%n%Z %C %S","GE":"%N%n%O%n%A%n%Z %C","MD":"%N%n%O%n%A%nMD-%Z %C","JP":"\u3012%Z%n%S%n%A%n%O%n%N","UY":"%N%n%O%n%A%n%Z %C %S","AM":"%N%n%O%n%A%n%Z%n%C%n%S","NI":"%N%n%O%n%A%n%Z%n%C, %S","CA":"%N%n%O%n%A%n%C %S %Z","OM":"%N%n%O%n%A%n%Z%n%C","MQ":"%O%n%N%n%A%n%Z %C %X","NZ":"%N%n%O%n%A%n%D%n%C %Z","LU":"%O%n%N%n%A%nL-%Z %C","AE":"%N%n%O%n%A%n%S","IR":"%O%n%N%n%S%n%C, %D%n%A%n%Z","AZ":"%N%n%O%n%A%nAZ %Z %C","CU":"%N%n%O%n%A%n%C %S%n%Z","KG":"%N%n%O%n%A%n%Z %C","NA":"%N%n%O%n%A%n%C%n%Z","FK":"%N%n%O%n%A%n%C%n%Z","SM":"%N%n%O%n%A%n%Z %C","GP":"%O%n%N%n%A%n%Z %C %X","BL":"%O%n%N%n%A%n%Z %C %X","BM":"%N%n%O%n%A%n%C %Z","GW":"%N%n%O%n%A%n%Z %C","KH":"%N%n%O%n%A%n%C %Z","EC":"%N%n%O%n%A%n%Z%n%C","PK":"%N%n%O%n%A%n%D%n%C-%Z","MA":"%N%n%O%n%A%n%Z %C","WF":"%O%n%N%n%A%n%Z %C %X","CZ":"%N%n%O%n%A%n%Z %C","ID":"%N%n%O%n%A%n%C%n%S %Z","NR":"%N%n%O%n%A%n%S","CX":"%O%n%N%n%A%n%C %S %Z","IO":"%N%n%O%n%A%n%C%n%Z","UM":"%N%n%O%n%A%n%C %S %Z","GU":"%N%n%O%n%A%n%C %Z","MW":"%N%n%O%n%A%n%C %X","CN":"%Z%n%S%C%D%n%A%n%O%n%N","KE":"%N%n%O%n%A%n%C%n%Z","US":"%N%n%O%n%A%n%C, %S %Z","HM":"%O%n%N%n%A%n%C %S %Z","KN":"%N%n%O%n%A%n%C, %S","BR":"%O%n%N%n%A%n%D%n%C-%S%n%Z","SG":"%N%n%O%n%A%nSINGAPORE %Z","AC":"%N%n%O%n%A%n%C%n%Z","VI":"%N%n%O%n%A%n%C %S %Z","PE":"%N%n%O%n%A%n%C %Z%n%S","HK":"%S%n%C%n%A%n%O%n%N","AX":"%O%n%N%n%A%nAX-%Z %C%n\u00c5LAND","KW":"%N%n%O%n%A%n%Z %C","BA":"%N%n%O%n%A%n%Z %C","CL":"%N%n%O%n%A%n%Z %C%n%S","FR":"%O%n%N%n%A%n%Z %C","BH":"%N%n%O%n%A%n%C %Z","NC":"%O%n%N%n%A%n%Z %C %X","AU":"%O%n%N%n%A%n%C %S %Z","NE":"%N%n%O%n%A%n%Z %C","SO":"%N%n%O%n%A%n%C, %S %Z","IE":"%N%n%O%n%A%n%D%n%C%n%S%n%Z","MY":"%N%n%O%n%A%n%D%n%Z %C%n%S","LV":"%N%n%O%n%A%n%S%n%C, %Z","SC":"%N%n%O%n%A%n%C%n%S","HN":"%N%n%O%n%A%n%C, %S%n%Z","JE":"%N%n%O%n%A%n%C%nJERSEY%n%Z","IM":"%N%n%O%n%A%n%C%n%Z","FM":"%N%n%O%n%A%n%C %S %Z","TZ":"%N%n%O%n%A%n%Z %C","LS":"%N%n%O%n%A%n%C %Z","UZ":"%N%n%O%n%A%n%Z %C%n%S","BY":"%O%n%N%n%A%n%Z, %C%n%S","PT":"%N%n%O%n%A%n%Z %C","LB":"%N%n%O%n%A%n%C %Z","LI":"%O%n%N%n%A%nFL-%Z %C","BS":"%N%n%O%n%A%n%C, %S","VG":"%N%n%O%n%A%n%C%n%Z","RO":"%N%n%O%n%A%n%Z %S %C","PM":"%O%n%N%n%A%n%Z %C %X","MH":"%N%n%O%n%A%n%C %S %Z","NG":"%N%n%O%n%A%n%D%n%C %Z%n%S","IQ":"%O%n%N%n%A%n%C, %S%n%Z","LR":"%N%n%O%n%A%n%Z %C","AD":"%N%n%O%n%A%n%Z %C","DE":"%N%n%O%n%A%n%Z %C","LA":"%N%n%O%n%A%n%Z %C","GI":"%N%n%O%n%A%nGIBRALTAR%n%Z","MK":"%N%n%O%n%A%n%Z %C","MM":"%N%n%O%n%A%n%C, %Z","FI":"%O%n%N%n%A%nFI-%Z %C","TN":"%N%n%O%n%A%n%Z %C","BN":"%N%n%O%n%A%n%C %Z","FO":"%N%n%O%n%A%nFO%Z %C","TM":"%N%n%O%n%A%n%Z %C","AS":"%N%n%O%n%A%n%C %S %Z","CH":"%O%n%N%n%A%nCH-%Z %C","TH":"%N%n%O%n%A%n%D %C%n%S %Z","GG":"%N%n%O%n%A%n%C%nGUERNSEY%n%Z","LT":"%O%n%N%n%A%nLT-%Z %C %S","KY":"%N%n%O%n%A%n%S %Z","CR":"%N%n%O%n%A%n%S, %C%n%Z","TW":"%Z%n%S%C%n%A%n%O%n%N","BG":"%N%n%O%n%A%n%Z %C","TR":"%N%n%O%n%A%n%Z %C/%S","VE":"%N%n%O%n%A%n%C %Z, %S","SJ":"%N%n%O%n%A%n%Z %C","EG":"%N%n%O%n%A%n%C%n%S%n%Z","TJ":"%N%n%O%n%A%n%Z %C","ME":"%N%n%O%n%A%n%Z %C","ES":"%N%n%O%n%A%n%Z %C %S","KZ":"%Z%n%S%n%C%n%A%n%O%n%N","AT":"%O%n%N%n%A%n%Z %C","GN":"%N%n%O%n%Z %A %C","GR":"%N%n%O%n%A%n%Z %C","DZ":"%N%n%O%n%A%n%Z %C","ET":"%N%n%O%n%A%n%Z %C","BD":"%N%n%O%n%A%n%C - %Z","ZM":"%N%n%O%n%A%n%Z %C","NP":"%N%n%O%n%A%n%C %Z","VC":"%N%n%O%n%A%n%C %Z","DK":"%N%n%O%n%A%n%Z %C","KI":"%N%n%O%n%A%n%S%n%C","CY":"%N%n%O%n%A%n%Z %C","SR":"%N%n%O%n%A%n%C%n%S","BB":"%N%n%O%n%A%n%C, %S %Z","JO":"%N%n%O%n%A%n%C %Z","MT":"%N%n%O%n%A%n%C %Z","TC":"%N%n%O%n%A%n%C%n%Z","MV":"%N%n%O%n%A%n%C %Z","IL":"%N%n%O%n%A%n%C %Z","PH":"%N%n%O%n%A%n%D, %C%n%Z %S","AF":"%N%n%O%n%A%n%C%n%Z","IS":"%N%n%O%n%A%n%Z %C","CC":"%O%n%N%n%A%n%C %S %Z","UA":"%N%n%O%n%A%n%C%n%S%n%Z","LK":"%N%n%O%n%A%n%C%n%Z","NL":"%O%n%N%n%A%n%Z %C","HU":"%N%n%O%n%C%n%A%n%Z","CO":"%N%n%O%n%A%n%D%n%C, %S, %Z","MZ":"%N%n%O%n%A%n%Z %C%S","PL":"%N%n%O%n%A%n%Z %C","GS":"%N%n%O%n%A%n%n%C%n%Z","SE":"%O%n%N%n%A%nSE-%Z %C","VN":"%N%n%O%n%A%n%C%n%S %Z","AR":"%N%n%O%n%A%n%Z %C%n%S","KR":"%S %C%D%n%A%n%O%n%N%n%Z","VA":"%N%n%O%n%A%n%Z %C","CV":"%N%n%O%n%A%n%Z %C%n%S","EH":"%N%n%O%n%A%n%Z %C","GT":"%N%n%O%n%A%n%Z- %C","HT":"%N%n%O%n%A%nHT%Z %C","PY":"%N%n%O%n%A%n%Z %C","ZA":"%N%n%O%n%A%n%D%n%C%n%Z","MP":"%N%n%O%n%A%n%C %S %Z","PR":"%N%n%O%n%A%n%C PR %Z","IN":"%N%n%O%n%A%n%C %Z%n%S","EE":"%N%n%O%n%A%n%Z %C %S","MX":"%N%n%O%n%A%n%D%n%Z %C, %S","NF":"%O%n%N%n%A%n%C %S %Z","SI":"%N%n%O%n%A%nSI-%Z %C","SZ":"%N%n%O%n%A%n%C%n%Z","MF":"%O%n%N%n%A%n%Z %C %X"};
+function postalLines(street, town, region, postcode, cc) {
+  const clean = (v) => String(v || '').replace(/\\[nrt]/g, ' ').replace(/\s+/g, ' ').replace(/^[,\s]+|[,\s]+$/g, '');
+  street = clean(street); town = clean(town); region = clean(region); postcode = clean(postcode);
+  if (street && town && squash(street) === squash(town)) street = '';
+  if (postcode && street.includes(postcode)) street = clean(street.replace(postcode, ''));
+  if (region && squash(region) === squash(town)) region = '';
+  let fmt = (ADDRESS_FMT[cc] || '%A%n%C %Z').replace(/%([A-Z])(?=%[A-Z])/g, '%$1 '); // our data is romanized: space out run-together fields
+  // a country prefix such as "CH-", "HT" or 〒 only goes with a postcode, and only once
+  const pre = /(〒|[A-Z]{1,3}-?)%Z/.exec(fmt);
+  if (pre && (!postcode || postcode.toUpperCase().startsWith(pre[1].replace('-', '')))) fmt = fmt.replace(pre[0], '%Z');
+  const val = { A: street, C: town, S: region || (fmt.includes('%C') ? '' : town), Z: postcode };
+  const lines = fmt.split('%n').map(line => line
+    .replace(/%([A-Z])/g, (_, k) => val[k] || '\u0000')
+        .replace(/(\s*[,\-–]\s*)?\u0000(\s*[,\-–])?/g, (m, before, after) => (before && after ? before : ''))
+    .replace(/\u0000/g, '').replace(/^[\s,\-–]+|[\s,\-–]+$/g, '').replace(/\s{2,}/g, ' '));
+  return [...lines, countryName(cc)].filter(Boolean);
+}
 const icon = {
   photo: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>',
   video: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>',
   map: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  web: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>',
+  fb: '<svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>',
   book: '<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6"/></svg>',
 };
 
@@ -1354,17 +1622,25 @@ async function selectChurch(i, { fly = true } = {}) {
   $('cardBody').innerHTML = `<div><h2 id="cName">Loading…</h2></div>`;
   $('card').hidden = false;
   let rec;
-  try { rec = await shardFor(i); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">Details didn't load</h2><p class="where">Check your connection, then click the pin again.</p></div>`; return; }
+  let webInfo;
+  try { [rec, webInfo] = await Promise.all([shardFor(i), webFor(i)]); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">Details didn't load</h2><p class="where">Check your connection, then click the pin again.</p></div>`; return; }
   if (state.selected !== i) return;
-  const [name, street, town, region, postcode, cc, web, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const [name, street, town, region, postcode, cc, web0, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const web = webInfo.fix.web || web0;
+  const addr = postalLines(street, town, region, postcode, cc);
   const country = countryName(cc);
   const place = [town, region && region !== town ? region : '', country].filter(Boolean).join(', ');
   const q = encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   const qShort = encodeURIComponent([name, town].filter(Boolean).join(' '));
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
   const fb = (socials || []).find(s => /facebook\.com/.test(s));
-  const webUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
-  const confLabel = conf >= 0.8 ? 'High' : conf >= 0.55 ? 'Medium' : 'Low';
+  const listedUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
+  const wentry = webInfo.entry;
+  const webDead = !!(listedUrl && wentry && wentry[0] === 3);
+  const webUrl = webDead ? '' : (wentry && wentry[1]) || listedUrl;
+  const kind = webUrl ? linkKind(webUrl) : null;
+  const pastor = pastorOf(wentry);
+  const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   $('cardBody').innerHTML = `
     <div>
       <h2 id="cName">${esc(name)}</h2>
@@ -1372,7 +1648,7 @@ async function selectChurch(i, { fly = true } = {}) {
     </div>
     <div class="actions">
       <a class="btn primary" href="${directionsURL(lt, lng, name)}" target="_blank" rel="noopener">Directions</a>
-      ${webUrl ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">Parish website</a>` : ''}
+      ${kind && kind.btn ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn}</a>` : ''}
       <button class="btn save" id="saveBtn" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span>Save</span></button>
       <span class="share-wrap"><button class="btn" id="shareBtn" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Share</span></button>
         <span class="share-menu" id="shareMenu" role="menu" hidden>
@@ -1383,12 +1659,16 @@ async function selectChurch(i, { fly = true } = {}) {
       <button class="btn" id="flyBtn">Fly here</button>
     </div>
     <dl class="facts">
-      ${street ? `<dt>Address</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
-      ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
+      ${addr.length ? `<dt>Address</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="Copy the address">Copy</button></dd>` : ''}
+      ${pastor ? `<dt>${esc(pastor[3])}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
       ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
-      ${webUrl ? `<dt>Website</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(host(webUrl))}</a></dd>` : ''}
-      ${fb ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
+      ${(webUrl && kind && kind.row) || webDead || fb ? `<dt>Online</dt><dd class="links">${
+        webUrl && kind && kind.row ? `<a href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn === 'Facebook' ? icon.fb : icon.web}${esc(kind.btn === 'Facebook' ? 'Facebook Page' : kind.platform ? kind.row.replace(/^./, c => c.toUpperCase()) : host(webUrl))}</a>${wentry && wentry[0] === 2 ? '<span class="moved">(new address)</span>' : ''}` : ''}${
+        webDead ? `<span><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></span>` : ''}${
+        fb && !(kind && kind.btn === 'Facebook') ? `<a href="${esc(fb)}" target="_blank" rel="noopener">${icon.fb}Facebook Page</a>` : ''}</dd>` : ''}
     </dl>
+    ${scheduleHTML(wentry, webInfo.checked, host)}
+    ${staffHTML(wentry, webInfo.checked, webUrl, host)}
     <div id="cAbout"></div>
     <div class="sect">
       <h3>Photos, video and history</h3>
@@ -1400,13 +1680,18 @@ async function selectChurch(i, { fly = true } = {}) {
       </div>
     </div>
     <div class="prov">
-      <span class="pill">${confLabel} confidence</span>${how === 'name' ? '<span class="pill warn">Identified as Catholic by its name</span>' : '<span class="pill">Listed as Roman Catholic</span>'}
+      ${conf < 0.55 ? '<span class="pill warn" title="The map data this listing comes from is not sure it is accurate">Unverified listing</span>' : ''}${how === 'name' ? '<span class="pill warn">Identified as Catholic by its name</span>' : '<span class="pill">Listed as Roman Catholic</span>'}
       <div style="margin-top:8px">Source: Overture Maps places (${esc((datasets || []).join(', ') || 'Overture')})${updated ? ', updated ' + esc(updated) : ''}.</div>
     </div>`;
   if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
   syncSave(i);
   $('saveBtn').addEventListener('click', () => toggleFav(i, { name, place, t }));
   wireShare(i, name, place);
+  if ($('copyAddr')) $('copyAddr').addEventListener('click', async () => {
+    const b = $('copyAddr'); let ok = false;
+    try { await navigator.clipboard.writeText(addr.join('\n')); ok = true; } catch (e) {}
+    b.textContent = ok ? 'Copied' : 'Copy failed'; setTimeout(() => { b.textContent = 'Copy'; }, 1400);
+  });
   showAbout(i, rec);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
@@ -1462,7 +1747,31 @@ $('chips').addEventListener('click', (e) => {
   map.getSource('notable').setData(notableGeoJSON());
   updateTagline();
   map.once('idle', updateNames);
+  revealMatches();
 });
+// after a filter change, make sure some matching churches are on screen and say how many there are
+function revealMatches() {
+  let total = 0; for (const t of state.enabled) total += state.meta.types[t] || 0;
+  const all = state.enabled.size === TYPES.length;
+  const kinds = all ? 'churches' : TYPES.filter(t => state.enabled.has(t.code)).map(t => t.label.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' and $1');
+  toast(`${fmt(total)} ${kinds}`);
+  const b = map.getBounds(), { lon, lat, typ, n, enabled } = state;
+  let inView = 0;
+  if (map.getZoom() >= 3) for (let i = 0; i < n && inView < 5; i++) if (enabled.has(typ[i] & 7) && b.contains([lon[i] / 1e6, lat[i] / 1e6])) inView++;
+  if (map.getZoom() < 3 || inView >= 5) return;
+  // too few here: pull back until the nearest matches are in view
+  const c = map.getCenter(), near = nearest(c.lat, c.lng, 25);
+  if (!near.length) return;
+  const pts = [[c.lng, c.lat], ...near.map(r => [lon[r.i] / 1e6, lat[r.i] / 1e6])];
+  const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
+  const wide = innerWidth > 640, open = !$('card').hidden;
+  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: Math.min(map.getZoom(), 13), pitch: 0, duration: reduceMotion ? 0 : 1600 });
+}
+let toastTimer = 0;
+function toast(text) {
+  const el = $('toast'); el.textContent = text; el.classList.add('on');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), 2600);
+}
 function updateTagline() {
   let n = 0; for (const t of state.enabled) n += state.meta.types[t] || 0;
   const all = state.enabled.size === TYPES.length;
@@ -1561,7 +1870,7 @@ const mapReady = new Promise(res => map.once('load', res));
     addChurchLayers();
     hooks.layers();
     renderFavs();
-    renderChips(); updateTagline();
+    renderChips(); updateTagline(); initMassFilters();
     setProgress(1);
     let opened = false;
     const open = () => {
