@@ -198,7 +198,8 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .patron .pimg img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: top; display: block; border: 1.5px solid color-mix(in srgb, var(--gold) 55%, transparent); }
 .patron .plabel { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 2px; }
 .patron b { font-weight: 600; }
-.patron p { margin: 4px 0 6px; font-size: 13px; line-height: 1.5; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.patron .feast { font-size: 12px; color: var(--gold-soft); margin-top: 2px; }
+.patron p { margin: 4px 0 6px; font-size: 13px; line-height: 1.5; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
 .patron small { display: block; margin-top: 4px; font-size: 11px; color: var(--ink-faint); }
 .card .body > * { min-width: 0; }
 .strip { display: flex; gap: 6px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
@@ -219,6 +220,12 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .lb-bar #lbCount { font-family: var(--font-data); color: var(--gold-soft); }
 .lb-bar a { color: var(--ink-soft); }
 @media (max-width: 640px) { .lb-stage { padding: 56px 8px 8px; } .lb-nav { top: auto; bottom: 64px; transform: none; } }
+
+/* toast */
+.toast { position: fixed; z-index: 15; left: 50%; top: 140px; transform: translate(-50%, -8px); opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease;
+  background: var(--panel-solid); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); color: var(--ink); padding: 8px 16px; border-radius: 18px; font-size: 13px; box-shadow: 0 10px 30px #000a; white-space: nowrap; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+@media (max-width: 640px) { .toast { top: 170px; } }
 
 /* tooltip */
 .tip {
@@ -285,6 +292,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 16px; margin: 0; font-size: 13.5px; }
 .facts dt { color: var(--ink-faint); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 2px; }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.facts dd.wide { grid-column: 1 / -1; }
 .facts a { color: var(--gold-soft); text-underline-offset: 3px; }
 .facts .mono { font-family: var(--font-data); font-size: 12.5px; font-variant-numeric: tabular-nums; }
 .sect h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
@@ -395,6 +403,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 </footer>
 
 <div id="tip" class="tip" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 <aside id="near" class="favs" hidden aria-labelledby="nearTitle">
   <header><h2 id="nearTitle">Near you<small id="nearN"></small></h2><button class="x" id="nearClose" aria-label="Close nearby churches"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
@@ -1086,7 +1095,8 @@ async function wikiExtract(url) {
   try {
     const r = await fetch(`https://${m[1]}.wikipedia.org/api/rest_v1/page/summary/${m[2]}`, { signal: ctl.signal });
     if (!r.ok) return null; const j = await r.json();
-    return j.type === 'standard' && j.extract ? { text: j.extract, url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || url, lang: m[1] } : null;
+    const text = j.type === 'standard' ? faithful(j.extract, 4) : '';
+    return text ? { text, url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || url, lang: m[1] } : null;
   } finally { clearTimeout(timer); }
 }
 function galleryItem(page) {
@@ -1167,7 +1177,9 @@ async function patronInfo(title) {
   try {
     const r = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title.replace(/ /g, '_')), { signal: ctl.signal });
     if (!r.ok) return null; const j = await r.json(); if (j.type !== 'standard') return null;
-    const out = { name: j.title, text: j.extract || '', url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || '' };
+    const bio = BIOS[title] || BIOS[j.title];
+    const name = title === 'Mary, mother of Jesus' ? 'The Blessed Virgin Mary' : title === 'Holy Spirit in Christianity' ? 'The Holy Spirit' : title === 'Trinity' ? 'The Most Holy Trinity' : j.title.replace(/ \(archangel\)$/, ', Archangel').replace(/^(Pope )/, 'Saint $1');
+    const out = { name, text: bio ? bio[1] : faithful(j.extract), feast: bio ? bio[0] : '', url: 'https://www.franciscanmedia.org/?s=' + encodeURIComponent(name.replace(/^The /, '')) };
     // credit the picture through its Commons file page; pictures held only on Wikipedia are left out
     const orig = j.originalimage && j.originalimage.source;
     if (orig && /upload\.wikimedia\.org\/wikipedia\/commons\//.test(orig)) {
@@ -1177,6 +1189,83 @@ async function patronInfo(title) {
     }
     return out;
   } finally { clearTimeout(timer); }
+}
+// Short bios in the Church's own voice for the dedications most parishes carry: [feast, text]
+const BIOS = {
+  'Mary, mother of Jesus': ['January 1, Mary, Mother of God', 'The Blessed Virgin Mary, Mother of God and Mother of the Church, chosen from all eternity to bear the Savior. Conceived without sin and ever virgin, she was assumed body and soul into heaven.'],
+  'Our Lady of Guadalupe': ['December 12', 'In 1531 the Blessed Virgin appeared to Saint Juan Diego on the hill of Tepeyac near Mexico City and left her image on his tilma. She is Patroness of the Americas.'],
+  'Our Lady of Fátima': ['May 13', 'In 1917 the Blessed Virgin appeared to three shepherd children at Fátima in Portugal, calling the world to prayer, penance, the daily Rosary and devotion to her Immaculate Heart.'],
+  'Our Lady of Lourdes': ['February 11', 'In 1858 the Blessed Virgin appeared eighteen times to Saint Bernadette at Lourdes in France, saying "I am the Immaculate Conception." Her spring there has been a place of healing and pilgrimage ever since.'],
+  'Our Lady of Aparecida': ['October 12', 'In 1717 fishermen drew a small image of the Immaculate Conception from the Paraíba River, and their empty nets were filled. Our Lady of Aparecida is Queen and Patroness of Brazil.'],
+  'Our Mother of Perpetual Help': ['June 27', 'An ancient icon of the Child Jesus running to His Mother at the sight of the instruments of His Passion. Blessed Pius IX entrusted it to the Redemptorists in 1866 to make it known throughout the world.'],
+  'Our Lady of the Pillar': ['October 12', 'Tradition holds that the Blessed Virgin came to Saint James the Apostle at Zaragoza to strengthen his preaching in Spain, leaving a pillar as a sign. She is Patroness of Spain and of the Hispanic peoples.'],
+  'Our Lady of Mount Carmel': ['July 16', 'Mary as Mother and Patroness of the Carmelite Order. She gave Saint Simon Stock the Brown Scapular as a sign of her protection for all who wear it devoutly.'],
+  'Our Lady of the Rosary': ['October 7', 'The feast recalls the victory at Lepanto in 1571, won as the faithful prayed the Rosary. It invites us to contemplate the mysteries of Christ with His Mother.'],
+  'Our Lady of Sorrows': ['September 15', 'Honors the Blessed Mother\'s sharing in the Passion of her Son through her seven sorrows, from Simeon\'s prophecy to the burial of Jesus. She stood faithfully at the foot of the Cross.'],
+  'Immaculate Conception': ['December 8', 'By a singular grace of God, the Blessed Virgin Mary was preserved free from original sin from the first moment of her conception. It is the patronal feast of the United States.'],
+  'Assumption of Mary': ['August 15', 'At the end of her earthly life the Blessed Virgin Mary was taken up body and soul into heavenly glory, as Pope Pius XII solemnly defined in 1950.'],
+  'Sacred Heart': ['Friday after the Second Sunday after Pentecost', 'Devotion to the Most Sacred Heart of Jesus honors His burning love for mankind. Our Lord revealed its promises to Saint Margaret Mary Alacoque in the 1670s.'],
+  'Holy Family': ['Sunday after Christmas', 'Jesus, Mary and Joseph in their home at Nazareth, the model for every Christian family in faith, love and obedience to God.'],
+  'Trinity': ['Sunday after Pentecost', 'The central mystery of our faith: one God in three divine Persons, the Father, the Son and the Holy Spirit.'],
+  'Holy Spirit in Christianity': ['Pentecost', 'The Third Person of the Most Holy Trinity, the Lord and Giver of life, who came upon the Apostles at Pentecost and sanctifies the Church.'],
+  'Christ the King': ['Last Sunday of the liturgical year', 'Pope Pius XI instituted this solemnity in 1925 to proclaim the reign of Jesus Christ over every heart, family and nation.'],
+  'Divine Mercy': ['Second Sunday of Easter', 'Devotion to God\'s merciful love revealed to Saint Faustina Kowalska, summed up in the prayer "Jesus, I trust in You." Saint John Paul II established Divine Mercy Sunday in 2000.'],
+  'Santo Niño de Cebú': ['Third Sunday of January', 'The image of the Holy Child Jesus given at the baptism of the queen of Cebu in 1521, the oldest Christian image in the Philippines.'],
+  'Juan Diego': ['December 9', 'Saint Juan Diego Cuauhtlatoatzin, the humble Indigenous convert to whom Our Lady of Guadalupe appeared in 1531. Canonized by Saint John Paul II in 2002.'],
+  'Kateri Tekakwitha': ['July 14', 'The "Lily of the Mohawks" (1656–1680), a young convert of great purity and prayer and the first Indigenous saint of North America.'],
+  'Martin de Porres': ['November 3', 'Dominican brother of Lima, Peru (1579–1639), known for his humble care of the sick and poor of every race. Patron of social justice.'],
+  'Francis Xavier': ['December 3', 'One of the first Jesuits, he carried the Gospel to India, Southeast Asia and Japan and baptized many thousands. Patron of the missions.'],
+  'Francis de Sales': ['January 24', 'Bishop of Geneva and Doctor of the Church (1567–1622), who taught that every person is called to holiness. Patron of writers and journalists.'],
+  'Saint Joseph': ['March 19', 'Spouse of the Blessed Virgin Mary and foster father of Jesus, the just man who guarded the Holy Family. Patron of the universal Church, of fathers and workers, and of a happy death.'],
+  'Saint Patrick': ['March 17', 'Bishop and Apostle of Ireland in the fifth century. Taken to Ireland as a slave in his youth, he returned as a missionary and brought the island to the faith.'],
+  'Anthony of Padua': ['June 13', 'Franciscan priest and Doctor of the Church (1195–1231), a powerful preacher and worker of miracles. Patron of the poor and of lost things.'],
+  'Francis of Assisi': ['October 4', 'Founder of the Franciscans (1181–1226), who embraced poverty to follow Christ and received the stigmata, the wounds of the Lord. Patron of Italy and of animals.'],
+  'John the Baptist': ['June 24', 'The Forerunner of the Lord, who preached repentance, baptized Jesus in the Jordan and gave his life as a martyr for the truth.'],
+  'Michael (archangel)': ['September 29', 'Prince of the heavenly host, who defends God\'s people against the snares of the devil. Patron of soldiers, police and the sick.'],
+  'Raphael (archangel)': ['September 29', 'The archangel who guided Tobias and healed Tobit; his name means "God heals." Patron of travelers and of healing.'],
+  'Gabriel': ['September 29', 'The archangel who announced to the Virgin Mary that she would be the Mother of the Son of God. Patron of messengers.'],
+  'Saint Peter': ['June 29', 'Prince of the Apostles and first Pope, to whom Christ gave the keys of the Kingdom. He was martyred in Rome and rests beneath Saint Peter\'s Basilica.'],
+  'Paul the Apostle': ['June 29', 'Apostle to the Gentiles, converted on the road to Damascus. His journeys and letters carried the Gospel across the Roman world, and he was martyred in Rome.'],
+  'Saint Anne': ['July 26', 'Mother of the Blessed Virgin Mary and grandmother of Jesus, honored together with Saint Joachim. Patroness of mothers and grandmothers.'],
+  'Thérèse of Lisieux': ['October 1', 'Carmelite nun and Doctor of the Church (1873–1897), the Little Flower, who taught the "little way" of trust and love. Patroness of the missions.'],
+  'Jude the Apostle': ['October 28', 'Apostle and kinsman of the Lord, author of the Letter of Jude. Patron of desperate cases.'],
+  'Vincent de Paul': ['September 27', 'French priest (1581–1660) who founded the Congregation of the Mission and the Daughters of Charity. Patron of all works of charity.'],
+  'Thomas Aquinas': ['January 28', 'Dominican priest and Doctor of the Church (1225–1274), author of the Summa Theologiae. Patron of Catholic schools and students.'],
+  'Rita of Cascia': ['May 22', 'Wife, mother, widow and Augustinian nun (1381–1457) who bore suffering with great patience. Patroness of impossible causes.'],
+  'Augustine of Hippo': ['August 28', 'Bishop and Doctor of the Church (354–430), converted through the prayers of his mother, Saint Monica. Author of the Confessions.'],
+  'Saint Monica': ['August 27', 'Mother of Saint Augustine, whose years of faithful prayer won his conversion. Patroness of mothers and wives.'],
+  'Saint Sebastian': ['January 20', 'Roman soldier martyred for the faith under Diocletian around 288. Patron of soldiers and athletes.'],
+  'Saint Lawrence': ['August 10', 'Deacon of Rome martyred in 258, who presented the poor as the true treasures of the Church. Patron of deacons and of the poor.'],
+  'Saint Stephen': ['December 26', 'One of the first seven deacons and the first martyr of the Church, who died praying for those who stoned him.'],
+  'Saint Nicholas': ['December 6', 'Bishop of Myra in the fourth century, beloved for his charity and secret gifts. Patron of children and sailors.'],
+  'Saint George': ['April 23', 'Soldier and martyr of the early fourth century, a model of courage in the faith. Patron of soldiers and scouts.'],
+  'James the Great': ['July 25', 'Apostle and brother of Saint John, the first of the Twelve to be martyred. His shrine at Santiago de Compostela draws pilgrims on the Camino. Patron of Spain.'],
+  'Andrew the Apostle': ['November 30', 'Brother of Saint Peter and the first called of the Apostles, who brought Peter to Jesus. He was martyred on a cross at Patras. Patron of Scotland.'],
+  'Martin of Tours': ['November 11', 'Roman soldier who shared his cloak with a beggar and later became Bishop of Tours (died 397). Patron of soldiers.'],
+  'Benedict of Nursia': ['July 11', 'Father of Western monasticism (c. 480–547), whose Rule of prayer and work guided monks for centuries. Patron of Europe.'],
+  'Saint Dominic': ['August 8', 'Founder of the Order of Preachers (1170–1221), devoted to preaching the truth and to the Rosary.'],
+  'Ignatius of Loyola': ['July 31', 'Soldier turned saint (1491–1556) who founded the Society of Jesus and wrote the Spiritual Exercises, all "for the greater glory of God."'],
+  'Charles Borromeo': ['November 4', 'Archbishop of Milan (1538–1584) who renewed the Church after the Council of Trent and cared for the sick during the plague.'],
+  'Elizabeth Ann Seton': ['January 4', 'Wife, mother, widow and convert (1774–1821) who founded the Sisters of Charity and Catholic schools in America. The first saint born in the United States.'],
+  'Isidore the Laborer': ['May 15', 'Farm worker of Madrid (died 1130), faithful to daily Mass and generous to the poor. Patron of farmers.'],
+  'Saint Lucy': ['December 13', 'Virgin and martyr of Syracuse (died 304), whose name means "light." Patroness of the blind.'],
+  'Saint Cecilia': ['November 22', 'Virgin and martyr of Rome who sang to God in her heart. Patroness of musicians and sacred music.'],
+  'Clare of Assisi': ['August 11', 'Follower of Saint Francis (1194–1253) and foundress of the Poor Clares, devoted to poverty and to the Blessed Sacrament.'],
+  'Pope John Paul II': ['October 22', 'Pope from 1978 to 2005, born Karol Wojtyła in Poland, a tireless pilgrim who called the world to "be not afraid." Canonized in 2014.'],
+  'Pope Pius X': ['August 21', 'Pope from 1903 to 1914 who encouraged frequent Holy Communion and opened it to young children, "to restore all things in Christ."'],
+  'Luke the Evangelist': ['October 18', 'Physician and companion of Saint Paul, author of the Gospel of Luke and the Acts of the Apostles. Patron of doctors and artists.'],
+  'Mark the Evangelist': ['April 25', 'Companion of Saint Peter and author of the Gospel of Mark. Patron of Venice.'],
+  'Matthew the Apostle': ['September 21', 'Tax collector called by Jesus to be an Apostle, author of the first Gospel.'],
+  'Bartholomew the Apostle': ['August 24', 'One of the Twelve, called by the Lord "an Israelite in whom there is no guile," who preached the Gospel and died a martyr.'],
+  'Helena, mother of Constantine I': ['August 18', 'Empress and mother of Constantine the Great, who on pilgrimage to Jerusalem found the True Cross.'],
+  'Brigid of Kildare': ['February 1', 'Abbess of Kildare (died c. 525), beloved for her charity and hospitality. Patroness of Ireland.'],
+  'Louis IX of France': ['August 25', 'King of France (1214–1270), a just ruler devoted to prayer and to the poor.'],
+};
+// For dedications without a written bio, keep the plain biographical sentences and drop commentary written from outside the faith
+const OUTSIDER = /important figure|venerated|revered|regarded|considered|believed|believe|according to|tradition(al)?(ly)?\b|legend|myth|islam|quran|muslim|baha|druze|jewish tradition|protestant|orthodox|lutheran|anglican|methodist|reformed|denomination|religions?\b|faiths?\b|scholars|historians|historicity|apocryph|christians?\b|christianity/i;
+function faithful(text, max = 2) {
+  const sentences = String(text || '').match(/[^.!?]+[.!?]+(\s|$)/g) || [];
+  return sentences.filter(x => !OUTSIDER.test(x)).slice(0, max).join('').trim();
 }
 const FACT_ROWS = [['P571', 'Founded'], ['P1619', 'Opened'], ['P825', 'Dedicated to'], ['P708', 'Diocese'], ['P84', 'Architect'], ['P149', 'Style'], ['P1435', 'Heritage status'], ['P5138', 'Part of']];
 async function showAbout(i, rec) {
@@ -1190,8 +1279,9 @@ async function showAbout(i, rec) {
   const patronHTML = pt ? `<div class="patron">
       ${pt.img ? `<a class="pimg" href="${esc(pt.img.page)}" target="_blank" rel="noopener" title="Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(pt.img.src)}" alt="${esc(pt.name)}"></a>` : ''}
       <div><div class="plabel">${pt.sure ? 'Dedicated to' : 'Named for'}</div><b>${esc(pt.name)}</b>
+      ${pt.feast ? `<div class="feast">Feast day: ${esc(pt.feast)}</div>` : ''}
       ${pt.text ? `<p>${esc(pt.text)}</p>` : ''}
-      ${pt.url ? `<a class="more" href="${esc(pt.url)}" target="_blank" rel="noopener">About ${esc(pt.name)} on Wikipedia</a>` : ''}
+      ${pt.url ? `<a class="more" href="${esc(pt.url)}" target="_blank" rel="noopener">Learn more at Franciscan Media</a>` : ''}
       ${pt.img ? `<small>Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}</small>` : ''}</div>
     </div>` : '';
   if (!rows.length && !a.extract && a.gallery.length < 2 && !pt) { box.innerHTML = ''; return; }
@@ -1547,7 +1637,7 @@ async function selectChurch(i, { fly = true } = {}) {
       ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
       ${kind && kind.row ? `<dt>${kind.row}</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(kind.platform ? host(webUrl) + new URL(webUrl).pathname.replace(/\/$/, '') : host(webUrl))}</a>${wentry && wentry[0] === 2 ? ' <span class="moved">(new address)</span>' : ''}</dd>` : ''}
       ${webDead ? `<dt>Website</dt><dd><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></dd>` : ''}
-      ${fb && !(kind && kind.btn === 'Facebook') ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
+      ${fb && !(kind && kind.btn === 'Facebook') ? `<dd class="wide"><a href="${esc(fb)}" target="_blank" rel="noopener">Facebook Page</a></dd>` : ''}
     </dl>
     ${scheduleHTML(wentry, webInfo.checked, host)}
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
@@ -1624,7 +1714,31 @@ $('chips').addEventListener('click', (e) => {
   map.getSource('notable').setData(notableGeoJSON());
   updateTagline();
   map.once('idle', updateNames);
+  revealMatches();
 });
+// after a filter change, make sure some matching churches are on screen and say how many there are
+function revealMatches() {
+  let total = 0; for (const t of state.enabled) total += state.meta.types[t] || 0;
+  const all = state.enabled.size === TYPES.length;
+  const kinds = all ? 'churches' : TYPES.filter(t => state.enabled.has(t.code)).map(t => t.label.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' and $1');
+  toast(`${fmt(total)} ${kinds}`);
+  const b = map.getBounds(), { lon, lat, typ, n, enabled } = state;
+  let inView = 0;
+  if (map.getZoom() >= 3) for (let i = 0; i < n && inView < 5; i++) if (enabled.has(typ[i] & 7) && b.contains([lon[i] / 1e6, lat[i] / 1e6])) inView++;
+  if (map.getZoom() < 3 || inView >= 5) return;
+  // too few here: pull back until the nearest matches are in view
+  const c = map.getCenter(), near = nearest(c.lat, c.lng, 25);
+  if (!near.length) return;
+  const pts = [[c.lng, c.lat], ...near.map(r => [lon[r.i] / 1e6, lat[r.i] / 1e6])];
+  const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
+  const wide = innerWidth > 640, open = !$('card').hidden;
+  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: Math.min(map.getZoom(), 13), pitch: 0, duration: reduceMotion ? 0 : 1600 });
+}
+let toastTimer = 0;
+function toast(text) {
+  const el = $('toast'); el.textContent = text; el.classList.add('on');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), 2600);
+}
 function updateTagline() {
   let n = 0; for (const t of state.enabled) n += state.meta.types[t] || 0;
   const all = state.enabled.size === TYPES.length;
