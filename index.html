@@ -1039,7 +1039,7 @@ async function selectChurch(i, { fly = true } = {}) {
     <dl class="facts">
       ${street ? `<dt>Address</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
       ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
-      ${phone ? `<dt>Phone</dt><dd class="mono" id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
+      ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
       ${webUrl ? `<dt>Website</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(host(webUrl))}</a></dd>` : ''}
       ${fb ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
     </dl>
