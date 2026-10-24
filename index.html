@@ -487,18 +487,26 @@ function asPhoto(page) {
   const author = (plain(m.Artist && m.Artist.value) || plain(m.Credit && m.Credit.value) || 'Unknown author').replace(/^(user:|creator:)\s*/i, '').slice(0, 60);
   return { src: ii.thumburl || ii.url, file: page.title.replace(/^File:/, ''), page: ii.descriptionurl, author, license: plain(m.LicenseShortName && m.LicenseShortName.value) || 'See file page' };
 }
-// Commons files photographed within ~250 m whose titles name this church
-async function fromCommons(lat, lon, tokens) {
-  const j = await api('commons.wikimedia.org', { generator: 'geosearch', ggscoord: lat + '|' + lon, ggsradius: 250, ggslimit: 50, ggsnamespace: 6, ...II, prop: 'imageinfo|coordinates' });
+// Scores: a strong match (name in the title) lands above 1.4; a loose match (a church photo
+// right beside the pin, no name to confirm it) stays below 1, so it only wins when nothing better turns up.
+async function fileInfo(file) {
+  const k = await api('commons.wikimedia.org', { titles: 'File:' + file, ...II });
+  return asPhoto(((k.query && k.query.pages) || [])[0]);
+}
+// Commons files photographed within ~500 m of the church
+async function fromCommons(lat, lon, tokens, town) {
+  const j = await api('commons.wikimedia.org', { generator: 'geosearch', ggscoord: lat + '|' + lon, ggsradius: 500, ggslimit: 80, ggsnamespace: 6, ...II, prop: 'imageinfo|coordinates' });
   let best = null;
   for (const p of (j.query && j.query.pages) || []) {
     const title = p.title.replace(/^File:/, '');
     if (BADFILE.test(squash(title)) || BADFILE.test(title)) continue;
-    const c = p.coordinates && p.coordinates[0]; const d = c ? metres(lat, lon, c.lat, c.lon) : 250;
+    const c = p.coordinates && p.coordinates[0]; const d = c ? metres(lat, lon, c.lat, c.lon) : 500;
     const nm = nameMatch(tokens, title), churchy = CHURCHY.test(squash(title));
-    if (!(nm >= 0.5 || (churchy && d < 90 && nm > 0) || (churchy && !tokens.length && d < 90))) continue;
-    const score = nm * 3 + (churchy ? 1 : 0) - d / 250;
-    if (!best || score > best.score) best = { score, page: p };
+    let score = -1;
+    if (d < 250 && (nm >= 0.5 || (churchy && d < 90 && (nm > 0 || !tokens.length)))) score = nm * 3 + (churchy ? 1 : 0) - d / 250;
+    else if (nm >= 0.67 && churchy) score = 1.2 + nm - d / 500; // named, a little further off
+    else if (churchy && d < 200) score = 0.8 - d / 400 + (town && nameMatch(nameTokens(town), title) ? 0.15 : 0); // a church photo taken right here
+    if (score > 0 && (!best || score > best.score)) best = { score, page: p };
   }
   return best ? { score: best.score, photo: asPhoto(best.page) } : null;
 }
@@ -515,22 +523,73 @@ async function fromWikipedia(lang, lat, lon, tokens) {
     if (!best || score > best.score) best = { score, file: p.pageimage };
   }
   if (!best) return null;
-  const k = await api('commons.wikimedia.org', { titles: 'File:' + best.file, ...II });
-  const photo = asPhoto(((k.query && k.query.pages) || [])[0]);
+  const photo = await fileInfo(best.file);
   return photo ? { score: best.score, photo } : null;
+}
+// Wikidata: church, chapel, cathedral, basilica, shrine or abbey items with an image (P18) within 400 m
+const WD_TYPES = 'wd:Q16970 wd:Q1088552 wd:Q2977 wd:Q56242215 wd:Q163687 wd:Q120560 wd:Q108325 wd:Q317557 wd:Q1370598 wd:Q44613 wd:Q160742 wd:Q58851';
+async function fromWikidata(lat, lon, tokens, cc) {
+  const lang = WIKI_LANG[cc] || 'en';
+  const q = `SELECT ?item ?label ?img ?dist WHERE {
+    SERVICE wikibase:around { ?item wdt:P625 ?loc. bd:serviceParam wikibase:center "Point(${lon} ${lat})"^^geo:wktLiteral; wikibase:radius "0.4"; wikibase:distance ?dist. }
+    ?item wdt:P18 ?img. ?item wdt:P31/wdt:P279? ?type. VALUES ?type { ${WD_TYPES} }
+    OPTIONAL { ?item rdfs:label ?label. FILTER(LANG(?label) IN ("${lang}", "en")) }
+  } ORDER BY ?dist LIMIT 30`;
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 9000);
+  let j;
+  try {
+    const r = await fetch('https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(q), { signal: ctl.signal });
+    if (!r.ok) throw new Error('wikidata ' + r.status); j = await r.json();
+  } finally { clearTimeout(timer); }
+  let best = null;
+  for (const b of j.results.bindings) {
+    const d = parseFloat(b.dist.value) * 1000, label = b.label ? b.label.value : '';
+    const nm = nameMatch(tokens, label);
+    let score = -1;
+    if (nm >= 0.5) score = 1.6 + nm * 2 - d / 400;      // named the same
+    else if (d < 80) score = 1.5 - d / 200;              // the church item sits on the pin
+    else if (d < 200) score = 0.9 - d / 400;             // nearest church with a picture
+    if (score > 0 && (!best || score > best.score)) best = { score, file: decodeURIComponent(b.img.value.split('/').pop()).replace(/_/g, ' ') };
+  }
+  if (!best) return null;
+  const photo = await fileInfo(best.file);
+  return photo ? { score: best.score, photo } : null;
+}
+// Last resort: Commons search by church name and town, for photos that carry no location
+async function fromCommonsSearch(name, town, tokens) {
+  if (!tokens.length) return null;
+  const j = await api('commons.wikimedia.org', { generator: 'search', gsrsearch: [name, town].filter(Boolean).join(' ') + ' filetype:bitmap', gsrnamespace: 6, gsrlimit: 15, ...II });
+  const townTok = nameTokens(town);
+  let best = null;
+  for (const p of (j.query && j.query.pages) || []) {
+    const title = p.title.replace(/^File:/, '');
+    if (BADFILE.test(squash(title)) || BADFILE.test(title)) continue;
+    const nm = nameMatch(tokens, title), inTown = townTok.length && nameMatch(townTok, title) > 0, churchy = CHURCHY.test(squash(title));
+    if (!(nm >= 0.67 && (inTown || (churchy && tokens.length > 1)))) continue;
+    const score = 0.6 + nm * 0.3 + (inTown ? 0.1 : 0) - (p.index || 0) * 0.01;
+    if (!best || score > best.score) best = { score, page: p };
+  }
+  return best ? { score: best.score, photo: asPhoto(best.page) } : null;
 }
 function lookupPhoto(i, rec) {
   if (live.has(i)) return live.get(i);
   const lat = state.lat[i] / 1e6, lon = state.lon[i] / 1e6;
-  const [name, , , , , cc] = rec || [];
+  const [name, , town, , , cc] = rec || [];
   const tokens = nameTokens(name);
   const langs = [...new Set([WIKI_LANG[cc] || 'en', 'en'])];
-  const tries = [fromCommons(lat, lon, tokens), ...langs.map(l => fromWikipedia(l, lat, lon, tokens))].map(p => p.catch(() => undefined));
-  const job = Promise.all(tries).then(found => {
-    if (found.every(f => f === undefined)) { live.delete(i); return null; } // offline or rate limited: try again next click
-    const ok = found.filter(f => f && f.photo).sort((a, b) => b.score - a.score);
-    return ok.length ? ok[0].photo : null;
-  });
+  const settle = (ps) => Promise.all(ps.map(p => p.catch(() => undefined)));
+  const pick = (found) => found.filter(f => f && f.photo).sort((a, b) => b.score - a.score)[0];
+  const job = (async () => {
+    const first = await settle([fromCommons(lat, lon, tokens, town), fromWikidata(lat, lon, tokens, cc), ...langs.map(l => fromWikipedia(l, lat, lon, tokens))]);
+    let best = pick(first);
+    if (!best || best.score < 1) { // nothing named for sure: also search Commons by name and town
+      const more = await settle([fromCommonsSearch(name, town, tokens)]);
+      best = pick([best, ...more]);
+      first.push(...more);
+    }
+    if (!best && first.every(f => f === undefined)) live.delete(i); // offline or rate limited: try again next click
+    return best ? best.photo : null;
+  })();
   live.set(i, job);
   return job;
 }
@@ -576,7 +635,7 @@ async function addBasemap() {
 }
 
 function addChurchLayers() {
-  map.addSource('churches', { type: 'geojson', data: buildGeoJSON(), cluster: true, clusterRadius: 44, clusterMaxZoom: 9, maxzoom: 15, buffer: 64 });
+  map.addSource('churches', { type: 'geojson', data: buildGeoJSON(), cluster: true, clusterRadius: 44, clusterMaxZoom: 7, maxzoom: 15, buffer: 64 });
   map.addSource('notable', { type: 'geojson', data: notableGeoJSON() });
   map.addSource('sel', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
 
@@ -608,9 +667,9 @@ function addChurchLayers() {
   } });
   // church names under the pins once a city is in view (names arrive from the detail shards)
   map.addSource('names', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
-  map.addLayer({ id: 'pt-name', type: 'symbol', source: 'names', minzoom: NAME_ZOOM, layout: {
+  map.addLayer({ id: 'pt-name', type: 'symbol', source: 'names', minzoom: NAME_ZOOM - 0.05, layout: {
     'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'],
-    'text-size': ['interpolate', ['linear'], ['zoom'], NAME_ZOOM, 10.5, 14, 12, 17, 13.5],
+    'text-size': ['interpolate', ['linear'], ['zoom'], NAME_ZOOM, 10, 11, 11, 14, 12, 17, 13.5],
     'text-anchor': 'top', 'text-offset': [0, 1.1], 'text-max-width': 9, 'text-padding': 2,
     'symbol-sort-key': ['get', 'rank'],
   }, paint: { 'text-color': '#f3e9cf', 'text-halo-color': '#05070d', 'text-halo-width': 1.4, 'text-halo-blur': 0.4,
@@ -633,7 +692,7 @@ function addChurchLayers() {
 }
 
 /* ---------- church name labels ---------- */
-const NAME_ZOOM = 10.5;
+const NAME_ZOOM = 8;
 // only the Latin glyph range ships with the page, so fold accents and drop other scripts' letters
 const latinLabel = (s) => [...s].map(c => c.charCodeAt(0) <= 255 ? c : c.normalize('NFD').replace(/[̀-ͯ]/g, '')).filter(c => c.length && c.charCodeAt(0) <= 255).join('').replace(/\s+/g, ' ').trim();
 let nameSeq = 0;
@@ -641,18 +700,25 @@ async function updateNames() {
   const src = map.getSource('names');
   if (!src || map.getZoom() < NAME_ZOOM - 0.5) return;
   const seq = ++nameSeq;
-  const ids = [...new Set(map.queryRenderedFeatures({ layers: ['pt'] }).map(f => f.id))].slice(0, 1500);
-  const shardIds = new Set(ids.map(i => Math.floor(i / state.meta.shardSize)));
-  if (shardIds.size > 20) return;
+  const rankOf = { 1: 0, 2: 1, 3: 2, 4: 3, 6: 4, 0: 4, 5: 5 };
+  const rank = (i) => rankOf[state.typ[i] & 7] ?? 4;
+  // at wider zooms there are more pins than room for names: cathedrals and basilicas are named first
+  const seen = [...new Set(map.queryRenderedFeatures({ layers: ['pt'] }).map(f => f.id))].sort((a, b) => rank(a) - rank(b));
+  // cap the detail files fetched per view; labels that don't fit are hidden by collision anyway
+  const shardIds = new Set(), ids = [];
+  for (const i of seen) {
+    const sh = Math.floor(i / state.meta.shardSize);
+    if (!shardIds.has(sh)) { if (shardIds.size >= 24) continue; shardIds.add(sh); }
+    ids.push(i); if (ids.length >= 1500) break;
+  }
   let recs;
   try { recs = await Promise.all(ids.map(shardFor)); } catch (e) { return; }
   if (seq !== nameSeq) return;
-  const rankOf = { 1: 0, 2: 1, 3: 2, 4: 3, 6: 4, 0: 4, 5: 5 };
   const features = [];
   ids.forEach((i, k) => {
     const name = latinLabel(recs[k][0] || '');
     if (name.length < 2) return;
-    features.push({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { name, rank: rankOf[state.typ[i] & 7] ?? 4 } });
+    features.push({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { name, rank: rank(i) } });
   });
   src.setData({ type: 'FeatureCollection', features });
 }
@@ -774,9 +840,25 @@ function scene(t, lon, lat) {
   </svg>`, sun: `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}` };
 }
 
-function dms(v, pos, neg) {
-  const a = Math.abs(v); const d = Math.floor(a); const m = Math.floor((a - d) * 60); const s = ((a - d - m / 60) * 3600).toFixed(1);
-  return `${d}°${String(m).padStart(2, '0')}′${s.padStart(4, '0')}″${v >= 0 ? pos : neg}`;
+/* ---------- phone numbers: national format at home, international otherwise, tap to call ---------- */
+const phones = { lib: null, loading: null };
+function loadPhoneLib() {
+  if (!phones.loading) phones.loading = new Promise((res, rej) => {
+    const sc = document.createElement('script');
+    sc.src = 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.13.12/bundle/libphonenumber-min.js';
+    sc.onload = () => (phones.lib = window.libphonenumber) ? res(phones.lib) : rej();
+    sc.onerror = () => { phones.loading = null; rej(); };
+    document.head.appendChild(sc);
+  });
+  return phones.loading;
+}
+function phoneHTML(raw, cc) {
+  let text = raw, tel = String(raw).replace(/[^\d+]/g, '');
+  try {
+    const p = phones.lib && phones.lib.parsePhoneNumberFromString(String(raw), cc || undefined);
+    if (p && p.isPossible()) { text = p.country === cc ? p.formatNational() : p.formatInternational(); tel = p.number; }
+  } catch (e) {}
+  return `<a href="tel:${esc(tel)}">${esc(text)}</a>`;
 }
 const icon = {
   photo: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>',
@@ -795,9 +877,8 @@ async function selectChurch(i, { fly = true } = {}) {
   const t = state.typ[i] & 7; const byName = state.typ[i] >> 3;
   const sc = scene(t, lng, lt);
   const hero = $('hero');
-  hero.querySelectorAll('svg.scene, .badge, .suntime').forEach(n => n.remove());
+  hero.querySelectorAll('svg.scene').forEach(n => n.remove());
   hero.insertAdjacentHTML('afterbegin', sc.svg);
-  hero.insertAdjacentHTML('beforeend', `<span class="badge">${esc(TYPE_BY_CODE[t].one)}</span><span class="suntime" title="Approximate sun time at this church">Sun time ${sc.sun}</span>`);
   showPhoto(i);
   $('cardBody').innerHTML = `<div><h2 id="cName">Loading…</h2></div>`;
   $('card').hidden = false;
@@ -826,10 +907,9 @@ async function selectChurch(i, { fly = true } = {}) {
     <dl class="facts">
       ${street ? `<dt>Address</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
       ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
-      ${phone ? `<dt>Phone</dt><dd class="mono">${esc(phone)}</dd>` : ''}
+      ${phone ? `<dt>Phone</dt><dd class="mono" id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
       ${webUrl ? `<dt>Website</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(host(webUrl))}</a></dd>` : ''}
       ${fb ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
-      <dt>Position</dt><dd class="mono">${dms(lt, 'N', 'S')} ${dms(lng, 'E', 'W')}</dd>
     </dl>
     <div class="sect">
       <h3>Photos, video and history</h3>
@@ -844,6 +924,7 @@ async function selectChurch(i, { fly = true } = {}) {
       <span class="pill">${confLabel} confidence</span>${how === 'name' ? '<span class="pill warn">Identified as Catholic by its name</span>' : '<span class="pill">Listed as Roman Catholic</span>'}
       <div style="margin-top:8px">Source: Overture Maps places (${esc((datasets || []).join(', ') || 'Overture')})${updated ? ', updated ' + esc(updated) : ''}.</div>
     </div>`;
+  if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
 }
 function closeCard() {
@@ -984,7 +1065,7 @@ const mapReady = new Promise(res => map.once('load', res));
     const open = () => {
       if (opened) return; opened = true;
       $('veil').classList.add('gone');
-      setTimeout(() => photoIndex().catch(() => {}), 5000); // warm the small photo index once the globe is up
+      setTimeout(() => { photoIndex().catch(() => {}); loadPhoneLib().catch(() => {}); }, 5000); // warm the small photo index and phone formats once the globe is up
       // open over Rome, then let the world turn
       map.flyTo({ center: [12.45, 30], zoom: innerWidth < 640 ? 1.35 : 2.25, duration: reduceMotion ? 0 : 3200, essential: true });
       map.once('moveend', () => { state.ready = true; });
