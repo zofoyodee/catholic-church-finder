@@ -26,5 +26,19 @@ for f in sorted(os.listdir(os.path.join(root, 'i18n'))):
     if missing or unknown or wrong or lost or plural:
         bad += 1
         print(f, 'missing', missing, 'unknown', unknown, 'bad placeholders', wrong, 'dropped placeholders', lost, 'plural without _other', plural)
+# every curated saint bio, translated: i18n/saints/<lang>.json holds [name, feast, bio] for each English title
+bsrc = html[html.index('const BIOS = {'):]
+bsrc = bsrc[:bsrc.index('\n};') + 3]
+bios = json.loads(subprocess.run(['node', '-e', bsrc + '\nprocess.stdout.write(JSON.stringify(BIOS))'], capture_output=True, text=True, check=True).stdout)
+sdir = os.path.join(root, 'i18n', 'saints')
+for f in sorted(os.listdir(sdir)):
+    d = json.load(open(os.path.join(sdir, f), encoding='utf-8'))
+    missing = [k for k in bios if k not in d]
+    unknown = [k for k in d if k not in bios]
+    shape = [k for k, v in d.items() if not (isinstance(v, list) and len(v) == 3 and all(v))]
+    if missing or unknown or shape:
+        bad += 1
+        print('saints/' + f, 'missing', missing, 'unknown', unknown, 'not [name, feast, bio]', shape)
+print('checked', len(bios), 'saint bios')
 print('checked', len(groups), 'keys;', 'problems in', bad, 'files' if bad != 1 else 'file')
 sys.exit(1 if bad else 0)
