@@ -215,6 +215,12 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .lb-bar a { color: var(--ink-soft); }
 @media (max-width: 640px) { .lb-stage { padding: 56px 8px 8px; } .lb-nav { top: auto; bottom: 64px; transform: none; } }
 
+/* toast */
+.toast { position: fixed; z-index: 15; left: 50%; top: 140px; transform: translate(-50%, -8px); opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease;
+  background: var(--panel-solid); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); color: var(--ink); padding: 8px 16px; border-radius: 18px; font-size: 13px; box-shadow: 0 10px 30px #000a; white-space: nowrap; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+@media (max-width: 640px) { .toast { top: 170px; } }
+
 /* tooltip */
 .tip {
   position: fixed; z-index: 6; pointer-events: none; background: var(--panel-solid); border: 1px solid var(--line);
@@ -377,6 +383,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 </footer>
 
 <div id="tip" class="tip" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
 
 <aside id="near" class="favs" hidden aria-labelledby="nearTitle">
   <header><h2 id="nearTitle">Near you<small id="nearN"></small></h2><button class="x" id="nearClose" aria-label="Close nearby churches"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
@@ -1544,7 +1551,31 @@ $('chips').addEventListener('click', (e) => {
   map.getSource('notable').setData(notableGeoJSON());
   updateTagline();
   map.once('idle', updateNames);
+  revealMatches();
 });
+// after a filter change, make sure some matching churches are on screen and say how many there are
+function revealMatches() {
+  let total = 0; for (const t of state.enabled) total += state.meta.types[t] || 0;
+  const all = state.enabled.size === TYPES.length;
+  const kinds = all ? 'churches' : TYPES.filter(t => state.enabled.has(t.code)).map(t => t.label.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' and $1');
+  toast(`${fmt(total)} ${kinds}`);
+  const b = map.getBounds(), { lon, lat, typ, n, enabled } = state;
+  let inView = 0;
+  if (map.getZoom() >= 3) for (let i = 0; i < n && inView < 5; i++) if (enabled.has(typ[i] & 7) && b.contains([lon[i] / 1e6, lat[i] / 1e6])) inView++;
+  if (map.getZoom() < 3 || inView >= 5) return;
+  // too few here: pull back until the nearest matches are in view
+  const c = map.getCenter(), near = nearest(c.lat, c.lng, 25);
+  if (!near.length) return;
+  const pts = [[c.lng, c.lat], ...near.map(r => [lon[r.i] / 1e6, lat[r.i] / 1e6])];
+  const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
+  const wide = innerWidth > 640, open = !$('card').hidden;
+  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: Math.min(map.getZoom(), 13), pitch: 0, duration: reduceMotion ? 0 : 1600 });
+}
+let toastTimer = 0;
+function toast(text) {
+  const el = $('toast'); el.textContent = text; el.classList.add('on');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), 2600);
+}
 function updateTagline() {
   let n = 0; for (const t of state.enabled) n += state.meta.types[t] || 0;
   const all = state.enabled.size === TYPES.length;
