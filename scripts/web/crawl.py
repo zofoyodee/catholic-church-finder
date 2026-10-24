@@ -419,8 +419,8 @@ class Crawler:
             src = final if people else ''
             if len(people) < 2:
                 slinks = staff_links(html, final)
-                if not any(STAFF_STRONG.search(urlsplit(u).path) for u in slinks):
-                    slinks = (await self.sitemap_links(final, STAFF_PATH)) + slinks
+                if not slinks:
+                    slinks = await self.sitemap_links(final, STAFF_PATH)
                 for link in slinks[:3]:
                     if not await self.allowed(link):
                         continue
@@ -443,13 +443,14 @@ class Crawler:
             msrc = final if mass or conf else ''
             if not mass:
                 links = schedule_links(html, final)
-                if not links:
+                if not any(LINKS_STRONG.search(u) for u in links):
                     # menus built by JavaScript hide the links: try the sitemap, then the usual addresses
-                    links = await self.sitemap_links(final, LINKS_STRONG)
-                if not links:
-                    root = f'{urlsplit(final).scheme}://{urlsplit(final).netloc}'
-                    links = [root + p for p in GUESS_PATHS]
-                for link in links[:3]:
+                    more = await self.sitemap_links(final, LINKS_STRONG)
+                    if not more:
+                        root = f'{urlsplit(final).scheme}://{urlsplit(final).netloc}'
+                        more = [root + p for p in GUESS_PATHS]
+                    links = links[:2] + [u for u in more if u not in links]
+                for link in links[:5]:
                     if not await self.allowed(link):
                         continue
                     st, f2, h2, err = await self.get(link)
@@ -537,7 +538,7 @@ async def main():
                 path = urlsplit(u).path.strip('/')
                 shared = count[u] > 2 or (host_count[h] > 3 and not path)
                 try:
-                    results[u] = await asyncio.wait_for(c.check(u, names[u], shared), timeout=180)
+                    results[u] = await asyncio.wait_for(c.check(u, names[u], shared), timeout=300)
                 except asyncio.TimeoutError:
                     results[u] = {'s': 'unknown', 'e': 'slow'}
                 done += 1
