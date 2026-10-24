@@ -32,6 +32,7 @@ _raw = base64.b64decode(open('data/points.txt').read())
 _n = json.load(open('data/meta.json'))['count']
 LON, LAT = struct.unpack_from(f'<{_n}i', _raw, 0), struct.unpack_from(f'<{_n}i', _raw, 4 * _n)
 LANG_IDX = {c: i + 1 for i, (c, _) in enumerate(LANGS)}
+OV = json.load(open('data/overrides.json'))
 for k, j, r, added in records():
     out = shards[k]
     u = r[6]
@@ -39,6 +40,10 @@ for k, j, r, added in records():
         continue
     u = u if re.match(r'^https?://', u) else 'https://' + u
     x = res.get(u)
+    o = OV.get(str(k * 2000 + j), {})
+    if o.get('mass') or o.get('confession'):
+        # hand-entered times for parishes whose sites turn crawlers away
+        x = dict(x or {'s': 'unknown'}, mt=o.get('mass', []), ct=o.get('confession', []), msrc=o.get('times_source', u))
     if not x:
         stats['not_checked'] += 1
         if added:
