@@ -295,6 +295,14 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .facts dd.addr { line-height: 1.45; }
 .facts .mini { margin-left: 8px; vertical-align: 1px; height: 22px; padding: 0 9px; border-radius: 11px; border: 1px solid var(--line); background: none; color: var(--ink-soft); font-size: 11.5px; cursor: pointer; }
 .facts .mini:hover { color: var(--ink); border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.online { display: flex; gap: 8px; margin-top: 10px; }
+.online:empty, .online:not(:has(a)) { display: none; }
+.ibtn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); display: inline-grid; place-items: center; color: var(--ink); background: transparent; }
+.ibtn:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.ibtn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ibtn svg.solid { fill: currentColor; stroke: none; width: 18px; height: 18px; }
+.ibtn.fb { background: #1877f2; border-color: #1877f2; color: #fff; }
+.ibtn.fb:hover { background: #2a86ff; }
 .facts dd.links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .facts dd.links a { display: inline-flex; align-items: center; gap: 6px; }
 .facts dd.links svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
@@ -1601,7 +1609,8 @@ const icon = {
   video: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>',
   map: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
   web: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>',
-  fb: '<svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>',
+  fb: '<svg viewBox="0 0 24 24" class="solid"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4a21 21 0 0 0-2.4-.1c-2.4 0-4 1.4-4 4.1v2.1H7.7v3h2.6V21z"/></svg>',
+  link: '<svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>',
   book: '<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6"/></svg>',
 };
 
@@ -1644,10 +1653,13 @@ async function selectChurch(i, { fly = true } = {}) {
     <div>
       <h2 id="cName">${esc(name)}</h2>
       <div class="where">${esc(place || 'Location on the globe')}</div>
+      <div class="online">
+        ${webUrl && kind && kind.btn ? `<a class="ibtn${kind.btn === 'Facebook' ? ' fb' : ''}" href="${esc(webUrl)}" target="_blank" rel="noopener" title="${esc(kind.btn === 'Parish website' ? 'Parish website: ' + host(webUrl) : kind.btn)}" aria-label="${esc(kind.btn)}">${kind.btn === 'Facebook' ? icon.fb : kind.platform ? icon.link : icon.web}</a>` : ''}
+        ${fb && !(kind && kind.btn === 'Facebook') ? `<a class="ibtn fb" href="${esc(fb)}" target="_blank" rel="noopener" title="Facebook page" aria-label="Facebook page">${icon.fb}</a>` : ''}
+      </div>
     </div>
     <div class="actions">
       <a class="btn primary" href="${directionsURL(lt, lng, name)}" target="_blank" rel="noopener">Directions</a>
-      ${kind && kind.btn ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn}</a>` : ''}
       <button class="btn save" id="saveBtn" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span>Save</span></button>
       <span class="share-wrap"><button class="btn" id="shareBtn" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Share</span></button>
         <span class="share-menu" id="shareMenu" role="menu" hidden>
@@ -1661,10 +1673,7 @@ async function selectChurch(i, { fly = true } = {}) {
       ${addr.length ? `<dt>Address</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="Copy the address">Copy</button></dd>` : ''}
       ${pastor ? `<dt>${esc(pastor[3])}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
       ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
-      ${(webUrl && kind && kind.row) || webDead || fb ? `<dt>Online</dt><dd class="links">${
-        webUrl && kind && kind.row ? `<a href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn === 'Facebook' ? icon.fb : icon.web}${esc(kind.btn === 'Facebook' ? 'Facebook Page' : kind.platform ? kind.row.replace(/^./, c => c.toUpperCase()) : host(webUrl))}</a>${wentry && wentry[0] === 2 ? '<span class="moved">(new address)</span>' : ''}` : ''}${
-        webDead ? `<span><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></span>` : ''}${
-        fb && !(kind && kind.btn === 'Facebook') ? `<a href="${esc(fb)}" target="_blank" rel="noopener">${icon.fb}Facebook Page</a>` : ''}</dd>` : ''}
+      ${webDead ? `<dt>Website</dt><dd><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></dd>` : ''}
     </dl>
     ${scheduleHTML(wentry, webInfo.checked, host)}
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
