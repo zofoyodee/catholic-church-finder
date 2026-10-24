@@ -1,0 +1,41 @@
+name: Debug one website
+
+# Runs the crawler on the URLs in DEBUG_URLS and prints what it finds.
+on:
+  push:
+    branches: [claude/project-thread-oobyxx]
+    paths: [.github/workflows/debug-url.yml]
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    env:
+      DEBUG_URLS: https://fatimachurchabq.org/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install aiohttp==3.10.10 beautifulsoup4==4.12.3 lxml==5.3.0 regex==2024.9.11
+      - name: Fetch and parse
+        run: |
+          cd scripts/web
+          python - <<'PY'
+          import asyncio, json, os, aiohttp
+          from crawl import Crawler, HEADERS
+          from schedule import schedule_links, extract_schedule
+          async def main():
+              async with aiohttp.ClientSession(headers=HEADERS) as s:
+                  c = Crawler(s)
+                  for u in os.environ['DEBUG_URLS'].split():
+                      st, final, html, err = await c.get(u)
+                      print('GET', u, st, final, err, len(html))
+                      print(html[:1500])
+                      print('LINKS', schedule_links(html, final))
+                      print('HOME SCHED', extract_schedule(html))
+                      for l in schedule_links(html, final):
+                          st2, f2, h2, e2 = await c.get(l)
+                          print('PAGE', l, st2, e2, len(h2), extract_schedule(h2, 'm'))
+                      print('RESULT', json.dumps(await c.check(u, 'Our Lady of Fatima', False), ensure_ascii=False)[:3000])
+          asyncio.run(main())
+          PY
