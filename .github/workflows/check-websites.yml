@@ -1,0 +1,70 @@
+name: Check websites and find staff
+
+# Visits every church's listed website, marks links that moved or no longer
+# work, and reads priests and deacons from parish staff pages. Results are
+# committed to data/web/ and read by the details card.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Max URLs per part (0 = all)'
+        default: '0'
+  push:
+    branches: [claude/project-thread-oobyxx]
+    paths: [scripts/web/**, .github/workflows/check-websites.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: check-websites
+  cancel-in-progress: true
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install aiohttp==3.10.10 beautifulsoup4==4.12.3 lxml==5.3.0
+      - name: Crawl
+        run: python scripts/web/crawl.py ${{ matrix.part }} 16 part-${{ matrix.part }}.json ${{ inputs.limit || vars.CRAWL_LIMIT || '150' }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: part-${{ matrix.part }}
+          path: part-${{ matrix.part }}.json
+          retention-days: 14
+
+  build:
+    needs: crawl
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+          merge-multiple: true
+      - name: Build data/web
+        run: |
+          python scripts/web/build.py parts/*.json
+          python scripts/web/sample.py parts/*.json > scripts/web/sample.json
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add data/web scripts/web/sample.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update website checks and parish staff (data/web)"
+          for i in 1 2 3 4; do git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0; sleep $((i*5)); done
+          exit 1
