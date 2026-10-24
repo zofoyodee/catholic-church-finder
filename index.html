@@ -660,7 +660,7 @@ function langSet(code) {
   for (const [k, v] of Object.entries(mf.data.c)) for (let j = 1; j < v.length; j++) if ((v[j] & 1) === 0 && (v[j] >> 19) === li) { out.add(+k); break; }
   return out;
 }
-function applyMassFilter() {
+function applyMassFilter(fly) {
   let only = null;
   if (mf.mode) only = soonSet(mf.mode === 'mass' ? 0 : 1);
   if (mf.lang) { const l = langSet(mf.lang); only = only ? new Set([...only].filter(i => l.has(i))) : l; }
@@ -673,6 +673,7 @@ function applyMassFilter() {
   clearInterval(mf.timer);
   if (mf.mode) mf.timer = setInterval(applyMassFilter, 5 * 60 * 1000);  // "soon" moves with the clock
   map.once('idle', updateNames);
+  if (fly && only) flyToMatches(only);
 }
 function renderMassChips() {
   const langs = {};
@@ -682,7 +683,7 @@ function renderMassChips() {
   $('massChips').innerHTML = `<span class="lbl">Mass</span>
     <button class="chip" data-m="mass" aria-pressed="${mf.mode === 'mass'}" title="Churches with a Mass starting in the next 2 hours, local time">${clock}Mass soon</button>
     <button class="chip" data-m="conf" aria-pressed="${mf.mode === 'conf'}" title="Churches with Confession in the next 2 hours, local time">${clock}Confession soon</button>
-    ${opts ? `<label class="chip lang" title="Show only churches that list a Mass in this language. The number is how many churches list one."><span>Language</span><select id="massLang" aria-label="Show only churches with a Mass in this language"><option value="">Any language</option>${opts}</select></label>` : ''}
+    ${opts ? `<label class="chip lang" title="Filter churches by the language their Mass is said in. The number is how many churches list a Mass in that language. This does not change the language of the site."><svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg><span>Mass in</span><select id="massLang" aria-label="Show only churches with a Mass in this language"><option value="">any language</option>${opts}</select></label>` : ''}
     ${mf.mode || mf.lang ? '<button class="chip" data-m="clear">Clear</button>' : ''}
     <small class="mass-note" title="Mass and Confession times are read from parish websites, so only churches whose site lists them can be filtered">Times found for ${fmt(Object.keys(mf.data.c).length)} churches</small>`;
   $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang));
@@ -696,9 +697,9 @@ async function initMassFilters() {
     const b = e.target.closest('button[data-m]'); if (!b) return;
     const m = b.dataset.m;
     if (m === 'clear') { mf.mode = ''; mf.lang = ''; } else mf.mode = mf.mode === m ? '' : m;
-    applyMassFilter();
+    applyMassFilter(m !== 'clear');
   });
-  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; applyMassFilter(); } });
+  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; applyMassFilter(true); } });
 }
 
 /* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
@@ -1808,6 +1809,32 @@ function revealMatches() {
   const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
   const wide = innerWidth > 640, open = !$('card').hidden;
   map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: Math.min(map.getZoom(), 13), pitch: 0, duration: reduceMotion ? 0 : 1600 });
+}
+// After a Mass filter is picked, fly to where the matches are thickest: within the current view if several are
+// already on screen, otherwise anywhere on the globe
+function flyToMatches(only) {
+  const { lon, lat, typ, enabled } = state;
+  const b = map.getBounds(), cells = { view: new Map(), all: new Map() };
+  let total = 0, inView = 0;
+  const bump = (m, k) => m.set(k, (m.get(k) || 0) + 1);
+  for (const i of only) {
+    if (!enabled.has(typ[i] & 7)) continue;
+    total++;
+    const p = [lon[i] / 1e6, lat[i] / 1e6], k = Math.floor(p[1] / 4) + ',' + Math.floor(p[0] / 4);
+    bump(cells.all, k);
+    if (b.contains(p)) { inView++; bump(cells.view, k); }
+  }
+  toast(total ? $('tagline').textContent : 'No churches match right now');
+  if (!total) return;
+  let bestK = '', bestN = -1;
+  for (const [k, v] of inView >= 5 ? cells.view : cells.all) if (v > bestN) { bestN = v; bestK = k; }
+  const [la, lo] = bestK.split(',').map(Number);
+  let near = nearest(la * 4 + 2, lo * 4 + 2, 25);
+  near = near.filter(r => r.m <= Math.max(near[0].m * 4, 150e3));  // that cluster, not stragglers across the map
+  const pts = near.map(r => [lon[r.i] / 1e6, lat[r.i] / 1e6]);
+  const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
+  const wide = innerWidth > 640, open = !$('card').hidden;
+  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: 11, pitch: 0, duration: reduceMotion ? 0 : 1600 });
 }
 let toastTimer = 0;
 function toast(text) {
