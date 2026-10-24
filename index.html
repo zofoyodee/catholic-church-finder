@@ -213,6 +213,9 @@ button, input { font: inherit; color: inherit; }
 .staff small { color: var(--ink-soft); font-size: 12px; }
 .staff-src { margin: 9px 0 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
 .staff-src a { color: var(--gold-soft); text-underline-offset: 3px; }
+.sched { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 13.5px; }
+.sched li { padding-left: 12px; position: relative; }
+.sched li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.7; }
 .facts .dead { color: var(--ink-faint); }
 .facts .moved { color: var(--ink-faint); font-size: 12px; }
 .media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -423,6 +426,18 @@ function linkKind(u) {
 }
 const ROLE_ORDER = ['Pastor', 'Administrator', 'Rector', 'Parochial vicar', 'Chaplain', 'In residence', '', 'Pastor emeritus', 'Deacon'];
 function initials(n) { return n.split(/\s+/).filter(w => /^[A-ZÀ-Þ]/.test(w)).map(w => w[0]).slice(0, 2).join('') || '✝'; }
+function pastorOf(entry) {
+  const staff = (entry && entry[2]) || [];
+  return staff.find(p => p[0] === 'p' && /^(Pastor|Administrator|Rector)$/.test(p[3])) || null;
+}
+function scheduleHTML(entry, checked, host) {
+  const mass = (entry && entry[4]) || [], conf = (entry && entry[5]) || [], src = entry && entry[6];
+  if (!mass.length && !conf.length) return '';
+  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) : '';
+  const list = (rows) => `<ul class="sched">${rows.map(r => `<li>${esc(r)}</li>`).join('')}</ul>`;
+  return `<div class="sect">${mass.length ? `<h3>Mass times</h3>${list(mass)}` : ''}${conf.length ? `<h3${mass.length ? ' style="margin-top:14px"' : ''}>Confession</h3>${list(conf)}` : ''}
+    <p class="staff-src">From <a href="${esc(src)}" target="_blank" rel="noopener">${esc(host(src))}</a>${when ? `, checked ${esc(when)}` : ''}. Times change for holidays and seasons, so check with the parish.</p></div>`;
+}
 function staffHTML(entry, checked, webUrl, host) {
   const staff = (entry && entry[2]) || [];
   const src = (entry && entry[3]) || webUrl;
@@ -948,6 +963,7 @@ async function selectChurch(i, { fly = true } = {}) {
   const webDead = !!(listedUrl && wentry && wentry[0] === 3);
   const webUrl = webDead ? '' : (wentry && wentry[1]) || listedUrl;
   const kind = webUrl ? linkKind(webUrl) : null;
+  const pastor = pastorOf(wentry);
   const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   const confLabel = conf >= 0.8 ? 'High' : conf >= 0.55 ? 'Medium' : 'Low';
   $('cardBody').innerHTML = `
@@ -963,11 +979,13 @@ async function selectChurch(i, { fly = true } = {}) {
     <dl class="facts">
       ${street ? `<dt>Address</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
       ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
+      ${pastor ? `<dt>${esc(pastor[3])}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
       ${phone ? `<dt>Phone</dt><dd class="mono" id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
       ${kind && kind.row ? `<dt>${kind.row}</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(kind.platform ? host(webUrl) + new URL(webUrl).pathname.replace(/\/$/, '') : host(webUrl))}</a>${wentry && wentry[0] === 2 ? ' <span class="moved">(new address)</span>' : ''}</dd>` : ''}
       ${webDead ? `<dt>Website</dt><dd><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></dd>` : ''}
       ${fb && !(kind && kind.btn === 'Facebook') ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
     </dl>
+    ${scheduleHTML(wentry, webInfo.checked, host)}
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
     <div class="sect">
       <h3>Photos, video and history</h3>

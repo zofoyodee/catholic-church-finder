@@ -43,8 +43,17 @@ for k, j, r, added in records():
         stats['with_staff'] += 1
         stats['people'] += len(staff)
         stats['with_photo'] += sum(1 for p in staff if p[4])
-    if code == 3 or new or staff:
-        out[j] = [code, new, staff, x.get('src', '')] if staff else [code, new]
+    mass, conf = x.get('mt') or [], x.get('ct') or []
+    if mass or conf:
+        stats['with_mass' if mass else 'with_confession_only'] += 1
+        stats['with_confession'] += bool(conf)
+    if any(p[3] in ('Pastor', 'Administrator', 'Rector') for p in staff):
+        stats['with_pastor'] += 1
+    if code == 3 or new or staff or mass or conf:
+        e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', '')]
+        while e and not e[-1] and len(e) > 2:
+            e.pop()
+        out[j] = e
 for k, out in shards.items():
     with open(f'data/web/{k}.json', 'w') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))

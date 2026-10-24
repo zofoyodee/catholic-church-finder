@@ -19,6 +19,8 @@ import aiohttp
 import regex as re  # Unicode classes (\p{Lu}) for names in any Latin script
 from bs4 import BeautifulSoup, NavigableString
 
+from schedule import extract_schedule, schedule_links, LINKS_STRONG
+
 UA = 'CatholicChurchFinderBot/1.0 (+https://github.com/zofoyodee/catholic-church-finder)'
 HEADERS = {'User-Agent': UA, 'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.5', 'Accept-Language': 'en,es;q=0.8,pt;q=0.7,it;q=0.6,fr;q=0.5,de;q=0.4,pl;q=0.3'}
 MAX_BYTES = 1_500_000
@@ -399,6 +401,26 @@ class Crawler:
         if 0 < len(people) <= 14:
             res['p'] = [[p['kind'][0], p['title'], p['name'], p['role'], p['img']] for p in people[:12]]
             res['src'] = src
+        try:
+            mass, conf = extract_schedule(html)
+            msrc = final if mass or conf else ''
+            if not mass:
+                for link in schedule_links(html, final):
+                    if not await self.allowed(link):
+                        continue
+                    st, f2, h2, err = await self.get(link)
+                    if err or st >= 400 or not h2:
+                        continue
+                    m2, c2 = extract_schedule(h2, 'm' if LINKS_STRONG.search(urlsplit(f2).path) else None)
+                    if m2:
+                        mass, conf, msrc = m2, c2 or conf, f2
+                        break
+                    if c2 and not conf:
+                        conf, msrc = c2, f2
+            if mass or conf:
+                res['mt'], res['ct'], res['msrc'] = mass, conf, msrc
+        except Exception as e:  # noqa: BLE001
+            res['x'] = type(e).__name__
         return res
 
 
