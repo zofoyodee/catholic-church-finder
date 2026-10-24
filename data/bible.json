@@ -1,0 +1,1200 @@
+{
+"note": "Bible Places layer. Scripture references follow the New American Bible, Revised Edition (the Catholic canon, including Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach, Baruch and the Greek parts of Esther and Daniel). Where a place's location is debated, the text says so.",
+"groups": [
+  { "k": "ot", "label": "Old Testament" },
+  { "k": "deut", "label": "Tobit, Judith & Maccabees" },
+  { "k": "jesus", "label": "Life of Jesus" },
+  { "k": "church", "label": "Apostles & early Church" }
+],
+"lands": {
+  "HL": {
+    "n": "Israel and the Palestinian territories",
+    "a": "The Holy Land",
+    "also": "Canaan, Israel and Judah, Judea, Samaria and Galilee, Philistia",
+    "codes": ["IL", "PS"], "lp": [34.75, 30.75], "lab": "HOLY LAND",
+    "s": "The land God promised to Abraham, where Israel lived as a people and where Jesus was born, taught, died and rose. Catholics often call it the 'Fifth Gospel'.",
+    "b": [
+      "Called Canaan when Abram arrives and God promises it to his descendants (Genesis 12:5-7).",
+      "Described as 'a land flowing with milk and honey' when God calls Moses (Exodus 3:8).",
+      "Divided after Solomon into the northern kingdom of Israel and the southern kingdom of Judah (1 Kings 12:16-20).",
+      "In Jesus' time the regions were Judea, Samaria and Galilee (Luke 17:11; John 4:3-4). The name Palestine comes from Philistia, land of the Philistines (Exodus 15:14).",
+      "The Book of Judith is set in Bethulia, a town in Samaria whose site has never been identified (Judith 4:6; Judith 6:10-11).",
+      "The Maccabees fought here for the freedom to keep God's law and won back the Temple (1 Maccabees 2-4)."
+    ],
+    "t": [
+      "Since 1342 the Franciscans of the Custody of the Holy Land have cared for the holy sites on behalf of the Catholic Church.",
+      "The Latin Patriarchate of Jerusalem serves Catholics in Israel, Palestine, Jordan and Cyprus, alongside Melkite, Maronite, Syriac, Armenian and other Eastern Catholic communities.",
+      "Popes Paul VI (1964), John Paul II (2000), Benedict XVI (2009) and Francis (2014) all made pilgrimages here."
+    ],
+    "w": "Church of the Holy Sepulchre"
+  },
+  "IR": {
+    "n": "Iran",
+    "a": "Persia",
+    "also": "Elam, Media, Parthia",
+    "codes": ["IR"], "lp": [54.93, 32.17], "lab": "PERSIA",
+    "s": "Modern Iran was the heart of the Persian Empire. Its king Cyrus the Great let the Jews return from exile in Babylon, and the books of Esther, Tobit and Judith are partly set here.",
+    "b": [
+      "Isaiah calls Cyrus, a pagan king, the Lord's 'anointed', chosen to set the exiles free (Isaiah 44:28; Isaiah 45:1-4).",
+      "Cyrus's decree lets the Jews go home and rebuild the Temple in Jerusalem (Ezra 1:1-4; 2 Chronicles 36:22-23). A copy is later found at Ecbatana (Ezra 6:1-5).",
+      "Esther, a Jewish queen at the Persian court in Susa, risks her life to save her people, which is the origin of the feast of Purim (Esther 4:14; Esther 9:20-32). Catholic Bibles include the Greek additions to Esther, with the prayers of Mordecai and Esther.",
+      "Nehemiah is cupbearer to King Artaxerxes at Susa before going to rebuild Jerusalem's walls (Nehemiah 1:1; Nehemiah 2:1-8).",
+      "Daniel sees a vision at Susa, by the river Ulai (Daniel 8:2).",
+      "Israelites taken by Assyria were settled 'in the cities of the Medes' (2 Kings 17:6). This is the world of Tobit: his son Tobiah travels with the angel Raphael to Ecbatana and Rages in Media (Tobit 1:14; Tobit 3:7).",
+      "The Book of Judith opens with Arphaxad, king of the Medes, building the walls of Ecbatana (Judith 1:1-4).",
+      "Elam, in the south-west, appears from Abraham's day (Genesis 14:1) to the prophets (Jeremiah 49:34-39).",
+      "Parthians, Medes and Elamites heard the apostles preach in their own languages at Pentecost (Acts 2:9)."
+    ],
+    "t": [
+      "The Magi 'from the east' (Matthew 2:1) bear a title used for Persian priests. A later account says Persian invaders spared Bethlehem's Church of the Nativity in 614 because its mosaic showed the Magi in Persian dress.",
+      "Local tradition honours the tomb of the prophet Daniel at Shush (ancient Susa) and the tomb of Esther and Mordecai at Hamadan (ancient Ecbatana).",
+      "Catholics in Iran today belong to the Chaldean, Armenian and Latin (Tehran-Isfahan) Churches."
+    ],
+    "w": "Persepolis"
+  },
+  "IQ": {
+    "n": "Iraq",
+    "a": "Mesopotamia",
+    "also": "Babylonia, Assyria, Chaldea, Shinar",
+    "codes": ["IQ"], "lp": [43.26, 33.09], "lab": "MESOPOTAMIA",
+    "s": "The land between the Tigris and Euphrates. Abraham set out from Ur, Jonah preached in Nineveh, and the Jews lived in exile by the rivers of Babylon.",
+    "b": [
+      "The Tigris and Euphrates are named among the four rivers of Eden (Genesis 2:10-14).",
+      "The tower of Babel is built in 'the land of Shinar' (Genesis 11:1-9).",
+      "Abram's family leaves Ur of the Chaldeans (Genesis 11:31; Genesis 15:7).",
+      "Assyria, ruled from Nineveh, destroys the northern kingdom of Israel in 722 BC (2 Kings 17:5-6). Babylon destroys Jerusalem in 587 BC (2 Kings 25:8-11).",
+      "The exiles weep 'by the rivers of Babylon' (Psalm 137). Ezekiel receives his visions by the river Chebar (Ezekiel 1:1-3).",
+      "Tobit is a captive in Nineveh who buries the dead at risk to his life (Tobit 1:3; Tobit 1:17-20).",
+      "Baruch, Jeremiah's scribe, reads his book to the exiles in Babylon (Baruch 1:1-4).",
+      "People from Mesopotamia heard the Gospel at Pentecost (Acts 2:9)."
+    ],
+    "t": [
+      "Tradition says the apostle Thomas and his disciples Addai and Mari first brought the Gospel here. The Chaldean Catholic Church, with its patriarch in Baghdad, prays in a liturgy descended from that ancient Church of the East.",
+      "Many Christians of the Nineveh Plains, including Syriac Catholics of Qaraqosh, were driven out by the Islamic State in 2014.",
+      "Pope Francis made the first papal visit to Iraq in March 2021, praying at Ur, Mosul and Qaraqosh."
+    ],
+    "w": "Ziggurat of Ur"
+  },
+  "EG": {
+    "n": "Egypt",
+    "a": "Egypt",
+    "also": "Mizraim, the land of Goshen",
+    "codes": ["EG"], "lp": [29.45, 26.19], "lab": "EGYPT",
+    "s": "Egypt was a place of refuge and of slavery: Joseph rose to power here, Israel was enslaved and led out in the Exodus, and the Holy Family fled here from Herod.",
+    "b": [
+      "Abram goes down to Egypt in a famine (Genesis 12:10-20).",
+      "Joseph, sold by his brothers, becomes Pharaoh's governor, and Jacob's family settles in Goshen (Genesis 41:41-45; Genesis 47:27).",
+      "Israel is enslaved, building the store cities of Pithom and Raamses (Exodus 1:8-14). God frees them through Moses and the crossing of the Red Sea (Exodus 12-14).",
+      "Isaiah foresees an altar to the Lord in Egypt and God saying 'Blessed be my people Egypt' (Isaiah 19:19-25).",
+      "Joseph, Mary and the child Jesus flee to Egypt from Herod, fulfilling 'Out of Egypt I called my son' (Matthew 2:13-15; Hosea 11:1).",
+      "Ben Sira's grandson translated the Book of Sirach into Greek after coming to Egypt (Sirach, foreword). The Greek Old Testament, the Septuagint, was made in Alexandria and includes the books Catholics call deuterocanonical."
+    ],
+    "t": [
+      "Tradition names St Mark the Evangelist as the founder of the Church of Alexandria.",
+      "Christian monastic life began in the Egyptian desert with St Anthony the Great and the Desert Fathers.",
+      "The Coptic Catholic Church is based in Cairo. Coptic tradition traces the Holy Family's route through Egypt, including a cave under the Church of Sts Sergius and Bacchus in Old Cairo.",
+      "St John Paul II visited Mount Sinai in 2000, and Pope Francis visited Egypt in 2017."
+    ],
+    "w": "Saint Catherine's Monastery"
+  },
+  "JO": {
+    "n": "Jordan",
+    "a": "Moab, Ammon, Edom and Gilead",
+    "also": "Perea and the Decapolis in Jesus' time",
+    "codes": ["JO"], "lp": [36.38, 30.81], "lab": "MOAB",
+    "s": "East of the Jordan River lay Moab, Ammon, Edom and Gilead. Moses saw the Promised Land from Mount Nebo here, Ruth came from Moab, and John baptized 'beyond the Jordan'.",
+    "b": [
+      "Jacob wrestles with God at the ford of the Jabbok and is named Israel (Genesis 32).",
+      "Moses views the Promised Land from Mount Nebo and dies in Moab (Deuteronomy 34:1-6).",
+      "Ruth the Moabite, ancestor of David and of Jesus, chooses Naomi's God (Ruth 1:16; Matthew 1:5).",
+      "Elijah came from Tishbe in Gilead (1 Kings 17:1). Uriah is killed at the siege of Rabbah of the Ammonites, today's Amman (2 Samuel 11:1-17).",
+      "Judas Maccabeus campaigns in Gilead to rescue the Jews living there (1 Maccabees 5:9-54).",
+      "John baptizes at 'Bethany across the Jordan' (John 1:28). Jesus travels through the Decapolis (Mark 7:31)."
+    ],
+    "t": [
+      "The Jewish historian Josephus says John the Baptist was beheaded at Herod's fortress of Machaerus, east of the Dead Sea (compare Mark 6:17-29).",
+      "The baptism site at Bethany beyond the Jordan has been visited by Popes John Paul II, Benedict XVI and Francis.",
+      "The Marian shrine of Our Lady of the Mount at Anjara recalls a tradition that Jesus, Mary and the disciples rested in a cave there."
+    ],
+    "w": "Mount Nebo"
+  },
+  "SY": {
+    "n": "Syria",
+    "a": "Aram",
+    "also": "Aram-Damascus, Roman Syria",
+    "codes": ["SY"], "lp": [38.28, 35.01], "lab": "ARAM",
+    "s": "Ancient Aram, Israel's northern neighbour. Saul of Tarsus met the risen Christ on the road to Damascus, and in Jesus' day Roman Syria stretched to Antioch.",
+    "b": [
+      "Abraham's servant was Eliezer of Damascus (Genesis 15:2).",
+      "Naaman, an Aramean general, is healed of leprosy by washing in the Jordan at Elisha's word (2 Kings 5:1-14).",
+      "Jesus' fame 'spread to all of Syria' (Matthew 4:24). Quirinius was governor of Syria at the time of his birth (Luke 2:2).",
+      "Saul is blinded by the light of Christ on the road to Damascus and baptized in the city (Acts 9:1-19)."
+    ],
+    "t": [
+      "Villages such as Maaloula still speak a form of Aramaic, the language Jesus spoke.",
+      "The Melkite Greek Catholic Patriarch has his seat in Damascus. Syriac, Maronite, Armenian and Latin Catholics also live in Syria.",
+      "St John Paul II prayed at the shrine of St John the Baptist in Damascus's Umayyad Mosque in 2001, the first pope to enter a mosque."
+    ],
+    "w": "Ananias Chapel"
+  },
+  "LB": {
+    "n": "Lebanon",
+    "a": "Phoenicia",
+    "also": "Tyre and Sidon, the land of the cedars",
+    "codes": ["LB"], "lp": [35.9, 34.0], "lab": "PHOENICIA",
+    "s": "The coast of the Phoenicians, whose cedar wood built Solomon's Temple. Jesus visited the region of Tyre and Sidon, and Elijah stayed with a widow at Zarephath.",
+    "b": [
+      "King Hiram of Tyre sends cedars of Lebanon for Solomon's Temple (1 Kings 5).",
+      "Elijah is fed by the widow of Zarephath and raises her son (1 Kings 17:8-24; Luke 4:25-26).",
+      "The Psalms and the Song of Songs praise the cedars and the fragrance of Lebanon (Psalm 104:16; Song of Songs 4:8-15).",
+      "Jesus heals the daughter of a Syrophoenician woman in the region of Tyre (Mark 7:24-30)."
+    ],
+    "t": [
+      "Lebanon is home of the Maronite Catholic Church, whose patriarch lives at Bkerke, and of Melkite, Syriac and Armenian Catholics.",
+      "The Kadisha Valley, the 'Holy Valley' below the Cedars of God, sheltered Maronite hermits and monasteries for centuries.",
+      "Lebanese saints include St Charbel Makhlouf, St Rafqa and St Nimatullah al-Hardini."
+    ],
+    "w": "Cedars of God"
+  },
+  "TR": {
+    "n": "Turkey",
+    "a": "Asia Minor",
+    "also": "Anatolia: Galatia, Cappadocia, Cilicia, Pontus, Bithynia and the province of Asia",
+    "codes": ["TR"], "lp": [34.51, 39.35], "lab": "ASIA MINOR",
+    "s": "More New Testament places lie in Turkey than in any country outside the Holy Land: Paul's birthplace Tarsus, Antioch, Ephesus, the churches of Galatia and the seven churches of Revelation.",
+    "b": [
+      "Noah's ark comes to rest 'on the mountains of Ararat' (Genesis 8:4).",
+      "Abraham lives at Haran before setting out for Canaan (Genesis 11:31 - 12:5).",
+      "Paul is born at Tarsus in Cilicia (Acts 22:3). The disciples are first called Christians at Antioch (Acts 11:26).",
+      "Paul's journeys take him through Pisidian Antioch, Iconium, Lystra and Derbe (Acts 13-14), and he writes to the Galatians (Galatians 1:2).",
+      "1 Peter is addressed to Christians in Pontus, Galatia, Cappadocia, Asia and Bithynia (1 Peter 1:1).",
+      "Revelation is written to seven churches of Asia: Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia and Laodicea (Revelation 1:11)."
+    ],
+    "t": [
+      "The first ecumenical councils, at Nicaea (325), Constantinople (381), Ephesus (431) and Chalcedon (451), were held in what is now Turkey.",
+      "Tradition holds that St John brought the Virgin Mary to Ephesus (John 19:27).",
+      "St John XXIII served in Istanbul as the Pope's representative from 1935 to 1944. Small Latin, Armenian, Chaldean and Syriac Catholic communities remain."
+    ],
+    "w": "Library of Celsus"
+  },
+  "GR": {
+    "n": "Greece",
+    "a": "Macedonia and Achaia",
+    "also": "Javan, the Greeks",
+    "codes": ["GR"], "lp": [21.73, 39.49], "lab": "ACHAIA",
+    "s": "Paul first brought the Gospel to Europe here, at Philippi, then to Thessalonica, Athens and Corinth. The New Testament itself was written in Greek.",
+    "b": [
+      "Daniel's vision of the goat stands for 'the king of Greece', Alexander the Great (Daniel 8:21). 1 Maccabees opens with Alexander's conquests (1 Maccabees 1:1-9).",
+      "Jonathan Maccabeus writes to the Spartans to renew friendship (1 Maccabees 12:1-23).",
+      "In a vision a Macedonian begs Paul, 'Come over to Macedonia and help us' (Acts 16:9).",
+      "Paul founds churches at Philippi, Thessalonica, Beroea and Corinth and preaches in Athens (Acts 16-18).",
+      "John receives the Book of Revelation on the island of Patmos (Revelation 1:9)."
+    ],
+    "t": [
+      "Sts Cyril and Methodius, apostles to the Slavs and co-patrons of Europe, were born in Thessalonica.",
+      "St John Paul II visited the Areopagus in Athens in 2001, where Paul once preached.",
+      "Greece has small Latin and Greek Byzantine Catholic communities. Athens's Catholic cathedral is dedicated to St Dionysius the Areopagite, whom Paul converted (Acts 17:34)."
+    ],
+    "w": "Areopagus"
+  },
+  "IT": {
+    "n": "Italy",
+    "a": "Italy and Rome",
+    "also": "the Roman Empire",
+    "codes": ["IT"], "lp": [11.08, 44.73], "lab": "ROME",
+    "s": "Rome, capital of the empire, received Paul as a prisoner and is where, by ancient tradition, Peter and Paul were martyred. The Pope, Peter's successor, still lives here.",
+    "b": [
+      "Judas Maccabeus makes a treaty of friendship with the Romans (1 Maccabees 8:17-32).",
+      "Visitors from Rome are in Jerusalem at Pentecost (Acts 2:10).",
+      "Paul writes his Letter to the Romans before coming (Romans 1:7-15) and later lands at Rhegium and Puteoli on his way to Rome as a prisoner (Acts 28:13-16).",
+      "Hebrews sends greetings from 'those from Italy' (Hebrews 13:24)."
+    ],
+    "t": [
+      "Tradition holds that Peter was crucified on the Vatican Hill and Paul beheaded outside the walls on the road to Ostia, around AD 64-67 under Nero.",
+      "St Peter's Basilica stands over Peter's tomb, and St Paul Outside the Walls over Paul's.",
+      "Vatican City, inside Rome, is the seat of the Pope."
+    ],
+    "w": "St. Peter's Basilica"
+  },
+  "MT": {
+    "n": "Malta",
+    "a": "Melite",
+    "also": "",
+    "codes": ["MT"], "lp": [14.43, 35.89], "lab": "MELITE",
+    "s": "The island where Paul was shipwrecked on his way to Rome. He survived a viper bite and healed the father of Publius, the island's chief.",
+    "b": [
+      "The ship carrying Paul runs aground and all 276 aboard reach land safely (Acts 27:37-44).",
+      "The islanders show 'extraordinary kindness'. A viper bites Paul and he is unharmed (Acts 28:1-6).",
+      "Paul heals Publius's father and many others, and stays three months (Acts 28:7-11)."
+    ],
+    "t": [
+      "Malta keeps 10 February, the Feast of St Paul's Shipwreck, as a public holiday.",
+      "Tradition makes Publius the first bishop of Malta. Popes John Paul II, Benedict XVI and Francis have prayed at St Paul's Grotto in Rabat."
+    ],
+    "w": "St Paul's Islands"
+  },
+  "CY": {
+    "n": "Cyprus",
+    "a": "Cyprus",
+    "also": "Kittim",
+    "codes": ["CY", "CYN"], "lp": [33.08, 34.91], "lab": "CYPRUS",
+    "s": "Home of Barnabas and the first stop of Paul's first missionary journey, where the Roman governor Sergius Paulus came to believe.",
+    "b": [
+      "Kittim, linked with Cyprus, appears among Noah's descendants and in the prophets (Genesis 10:4; Isaiah 23:1).",
+      "Barnabas, 'son of encouragement', is a Levite from Cyprus (Acts 4:36).",
+      "Paul and Barnabas preach at Salamis and at Paphos, where the proconsul Sergius Paulus believes (Acts 13:4-12).",
+      "Barnabas later returns to Cyprus with Mark (Acts 15:39)."
+    ],
+    "t": [
+      "Tradition places the tomb of St Barnabas near Salamis.",
+      "Maronite and Latin Catholics live in Cyprus. Benedict XVI (2010) and Francis (2021) visited."
+    ],
+    "w": "Paphos"
+  },
+  "SA": {
+    "n": "Saudi Arabia",
+    "a": "Arabia",
+    "also": "Midian, Tema, Dedan",
+    "codes": ["SA"], "lp": [44.7, 23.81], "lab": "ARABIA",
+    "s": "North-west Arabia was Midian, where Moses fled and married. Paul spent time in Arabia after his conversion.",
+    "b": [
+      "Moses flees Pharaoh to Midian and marries Zipporah, daughter of Jethro, priest of Midian (Exodus 2:15-22; Exodus 3:1).",
+      "Isaiah sees camels from Midian and Ephah bringing gold and frankincense, a reading for Epiphany (Isaiah 60:6).",
+      "Paul calls Sinai 'a mountain in Arabia' (Galatians 4:25), and he went into Arabia after his conversion (Galatians 1:17).",
+      "Arabs were among those who heard the apostles at Pentecost (Acts 2:11)."
+    ],
+    "t": [
+      "Many Catholic migrant workers live in Saudi Arabia, which belongs to the Apostolic Vicariate of Northern Arabia. Public church services are not permitted there."
+    ],
+    "w": "Madain Salih"
+  },
+  "YE": {
+    "n": "Yemen",
+    "a": "Sheba",
+    "also": "Saba",
+    "codes": ["YE"], "lp": [45.87, 15.33], "lab": "SHEBA",
+    "s": "Most scholars place the kingdom of Sheba in Yemen. Its queen travelled to test Solomon's wisdom.",
+    "b": [
+      "The queen of Sheba visits Solomon with spices, gold and precious stones (1 Kings 10:1-13).",
+      "Jesus says 'the queen of the south' came from the ends of the earth to hear Solomon (Matthew 12:42).",
+      "'The kings of Sheba and Seba offer gifts', sung on the feast of the Epiphany (Psalm 72:10)."
+    ],
+    "t": [
+      "Four Missionaries of Charity, sisters of St Teresa of Calcutta's order, were killed at their home for the elderly in Aden in March 2016."
+    ],
+    "w": "Marib"
+  },
+  "ET": {
+    "n": "Ethiopia",
+    "a": "Ethiopia (Cush)",
+    "also": "Cush, Aksum",
+    "codes": ["ET"], "lp": [39.09, 8.03], "lab": "ETHIOPIA",
+    "s": "The Bible's 'Ethiopia' (Cush) mainly meant the Nile lands south of Egypt, today's Sudan. Modern Ethiopia has one of the oldest Christian traditions in the world.",
+    "b": [
+      "Moses marries a Cushite woman (Numbers 12:1).",
+      "Ebed-melech the Cushite rescues Jeremiah from the cistern (Jeremiah 38:7-13).",
+      "The Persian king rules 'from India to Ethiopia' (Esther 1:1).",
+      "Philip baptizes an Ethiopian official, treasurer of Queen Candace (Acts 8:26-40)."
+    ],
+    "t": [
+      "Ethiopia became Christian in the 4th century through St Frumentius, consecrated bishop by St Athanasius of Alexandria.",
+      "Ethiopian tradition traces its kings to Solomon and the queen of Sheba and holds that the Ark of the Covenant rests at Aksum.",
+      "The Ethiopian Catholic Church celebrates the ancient Ge'ez liturgy."
+    ],
+    "w": "Aksum"
+  },
+  "SD": {
+    "n": "Sudan",
+    "a": "Cush (Nubia)",
+    "also": "Kingdom of Meroë",
+    "codes": ["SD"], "lp": [29.26, 16.33], "lab": "CUSH",
+    "s": "Biblical Cush was mainly the land of Nubia along the Nile, in today's Sudan. Its kings once ruled Egypt.",
+    "b": [
+      "Isaiah addresses the 'land of buzzing insects, beyond the rivers of Ethiopia' (Isaiah 18:1-7).",
+      "Tirhakah, king of Cush, marches against Assyria (2 Kings 19:9).",
+      "Candace, the queen served by the official Philip baptized, was the title of the queens of Meroë in Nubia (Acts 8:27)."
+    ],
+    "t": [
+      "St Josephine Bakhita was born in Darfur, enslaved as a child, and became a Canossian sister in Italy. She was canonized in 2000.",
+      "St Daniel Comboni, missionary bishop of Khartoum, died there in 1881."
+    ],
+    "w": "Meroë"
+  },
+  "LY": {
+    "n": "Libya",
+    "a": "Cyrene (Libya)",
+    "also": "Cyrenaica",
+    "codes": ["LY"], "lp": [18.01, 26.64], "lab": "CYRENE",
+    "s": "The Greek city of Cyrene, on the coast of eastern Libya, was home to Simon, who helped Jesus carry the cross.",
+    "b": [
+      "Simon of Cyrene is made to carry Jesus' cross (Mark 15:21; Luke 23:26).",
+      "Jews from 'the districts of Libya near Cyrene' are at Pentecost (Acts 2:10).",
+      "Men from Cyrene are among the first to preach to Greeks at Antioch, and Lucius of Cyrene is a teacher there (Acts 11:20; Acts 13:1).",
+      "2 Maccabees is a summary of five books by Jason of Cyrene (2 Maccabees 2:23)."
+    ],
+    "t": [
+      "Simon of Cyrene is remembered at the Fifth Station of the Cross."
+    ],
+    "w": "Cyrene, Libya"
+  },
+  "ES": {
+    "n": "Spain",
+    "a": "Spain (perhaps Tarshish)",
+    "also": "Hispania",
+    "codes": ["ES"], "lp": [-3.46, 40.09], "lab": "HISPANIA",
+    "s": "Paul hoped to preach in Spain. The far-off port of Tarshish, where Jonah tried to flee, is often linked with southern Spain, though this is not certain.",
+    "b": [
+      "Jonah tries to flee from the Lord on a ship bound for Tarshish (Jonah 1:3).",
+      "The Romans conquer 'the land of Spain' for its silver and gold mines (1 Maccabees 8:3).",
+      "Paul plans to visit the Roman Christians on his way to Spain (Romans 15:24-28)."
+    ],
+    "t": [
+      "St Clement of Rome wrote that Paul reached 'the limits of the West', which many have read as Spain.",
+      "Tradition holds that St James the Greater preached in Spain. His shrine at Santiago de Compostela is the goal of the Camino pilgrimage.",
+      "Our Lady of the Pillar in Zaragoza recalls a tradition that Mary appeared to St James there."
+    ],
+    "w": "Santiago de Compostela Cathedral"
+  },
+  "AM": {
+    "n": "Armenia",
+    "a": "Ararat (Urartu)",
+    "also": "",
+    "codes": ["AM"], "lp": [44.8, 40.46], "lab": "ARARAT",
+    "s": "The 'mountains of Ararat' where the ark came to rest refer to the ancient kingdom of Urartu, around modern Armenia and eastern Turkey.",
+    "b": [
+      "The ark comes to rest on the mountains of Ararat (Genesis 8:4).",
+      "Sennacherib's sons flee to 'the land of Ararat' (2 Kings 19:37).",
+      "Jeremiah summons 'the kingdoms of Ararat, Minni and Ashkenaz' against Babylon (Jeremiah 51:27)."
+    ],
+    "t": [
+      "Armenia is traditionally the first nation to adopt Christianity, in 301, through St Gregory the Illuminator.",
+      "The Armenian Catholic Church is in full communion with Rome. Pope Francis visited in 2016, including Khor Virap monastery beneath Mount Ararat."
+    ],
+    "w": "Khor Virap"
+  },
+  "IN": {
+    "n": "India",
+    "a": "India (Hoddu)",
+    "also": "",
+    "codes": ["IN"], "lp": [79.36, 22.69], "lab": "INDIA",
+    "s": "India marks the eastern edge of the Persian Empire in the Book of Esther. Christian tradition says the apostle Thomas preached here.",
+    "b": [
+      "King Ahasuerus rules 127 provinces 'from India to Ethiopia' (Esther 1:1; Esther 8:9).",
+      "An Indian driver rides each war elephant of the Seleucid army (1 Maccabees 6:37)."
+    ],
+    "t": [
+      "Tradition holds that St Thomas the Apostle preached in India and was martyred near Chennai. San Thome Basilica stands over his tomb.",
+      "The Syro-Malabar and Syro-Malankara Catholic Churches of Kerala trace their faith to him."
+    ],
+    "w": "San Thome Basilica"
+  }
+},
+"places": [
+  { "id": "jerusalem", "n": "Jerusalem", "a": "Salem, Zion, the City of David", "c": "HL", "ll": [31.7767, 35.2345], "g": ["ot", "deut", "jesus", "church"],
+    "s": "The holy city of David and Solomon's Temple, and the place of Jesus' Passion, Death and Resurrection and of Pentecost.",
+    "b": [
+      "Melchizedek, king of Salem, brings out bread and wine and blesses Abram (Genesis 14:18-20).",
+      "Abraham is sent to offer Isaac in the land of Moriah, the hill where Solomon later builds the Temple (Genesis 22:2; 2 Chronicles 3:1).",
+      "David captures the city and makes it his capital (2 Samuel 5:6-10). Solomon builds the Temple (1 Kings 6-8).",
+      "Babylon burns the Temple in 587 BC (2 Kings 25:8-10). The returning exiles rebuild it (Ezra 6:15).",
+      "Judas Maccabeus purifies and rededicates the Temple, the feast Jesus later keeps as the Dedication (1 Maccabees 4:36-59; John 10:22).",
+      "Jesus is presented in the Temple and found there at twelve (Luke 2:22-52).",
+      "He enters on Palm Sunday, shares the Last Supper and institutes the Eucharist (Matthew 21:1-11; Mark 14:12-25).",
+      "He is crucified and rises, and the Spirit comes at Pentecost (John 19-20; Acts 2:1-41). The apostles meet in council here (Acts 15)."
+    ],
+    "t": [
+      "Catholics walk the Via Dolorosa, the Way of the Cross, through the Old City.",
+      "The Cenacle on Mount Zion is honoured as the Upper Room (Mark 14:15; Acts 1:13).",
+      "The Latin Patriarch of Jerusalem and the Franciscan Custody of the Holy Land are based here."
+    ],
+    "w": "Old City of Jerusalem" },
+  { "id": "sepulchre", "n": "Calvary and the Holy Sepulchre", "a": "Golgotha, 'the place of the Skull'", "c": "HL", "ll": [31.7785, 35.2296], "g": ["jesus"],
+    "s": "The place where Jesus was crucified and the nearby tomb where he was buried and rose again.",
+    "b": [
+      "Jesus carries his cross to Golgotha and is crucified (John 19:17-30).",
+      "Mary his mother and the beloved disciple stand by the cross (John 19:25-27).",
+      "He is laid in a new tomb in a garden nearby (John 19:41-42).",
+      "On the first day of the week the tomb is empty and the risen Jesus appears to Mary Magdalene (John 20:1-18)."
+    ],
+    "t": [
+      "The Church of the Holy Sepulchre was built by Emperor Constantine and dedicated in 335. Tradition says his mother, St Helena, found the True Cross here.",
+      "It is shared under an old agreement by Catholics (Franciscans), Greek Orthodox, Armenians and others. The last five Stations of the Cross are inside it."
+    ],
+    "w": "Church of the Holy Sepulchre" },
+  { "id": "olives", "n": "Mount of Olives and Gethsemane", "a": "Olivet", "c": "HL", "ll": [31.7794, 35.2397], "g": ["ot", "jesus", "church"],
+    "s": "The hill east of Jerusalem where Jesus wept over the city, prayed in agony in Gethsemane and ascended into heaven.",
+    "b": [
+      "David climbs the Mount of Olives weeping as he flees Absalom (2 Samuel 15:30).",
+      "Zechariah sees the Lord standing on the Mount of Olives on the day of the Lord (Zechariah 14:4).",
+      "Jesus weeps over Jerusalem (Luke 19:41-44).",
+      "In Gethsemane he prays, 'not my will but yours be done', and is arrested (Luke 22:39-53; Mark 14:32-50).",
+      "He ascends into heaven from the mount called Olivet (Acts 1:9-12)."
+    ],
+    "t": [
+      "The Basilica of the Agony, or Church of All Nations, stands at Gethsemane by ancient olive trees.",
+      "Dominus Flevit, a tear-shaped Franciscan chapel, marks where Jesus wept. The Pater Noster church shows the Lord's Prayer in over a hundred languages."
+    ],
+    "w": "Church of All Nations" },
+  { "id": "bethlehem", "n": "Bethlehem", "a": "Ephrathah, the City of David", "c": "HL", "ll": [31.7043, 35.2078], "g": ["ot", "jesus"],
+    "s": "The town of David and the birthplace of Jesus.",
+    "b": [
+      "Rachel is buried on the road to Ephrath, that is, Bethlehem (Genesis 35:19).",
+      "Ruth gleans in the fields of Boaz here (Ruth 2).",
+      "Samuel anoints the young shepherd David (1 Samuel 16:1-13).",
+      "Micah foretells a ruler from 'Bethlehem-Ephrathah' (Micah 5:1, numbered 5:2 in some Bibles).",
+      "Jesus is born and laid in a manger, and the shepherds come (Luke 2:1-20).",
+      "The Magi worship him, and Herod kills the Holy Innocents (Matthew 2:1-18)."
+    ],
+    "t": [
+      "The Church of the Nativity, first built under Constantine, is one of the oldest churches in continuous use. A silver star in the grotto marks the place of Christ's birth.",
+      "St Jerome lived here from 386 and translated much of the Latin Vulgate Bible in a cave beside the grotto.",
+      "Midnight Mass at Christmas is celebrated in the Franciscan Church of St Catherine next door."
+    ],
+    "w": "Church of the Nativity" },
+  { "id": "einkarem", "n": "Ein Karem", "a": "'a town of Judah in the hill country'", "c": "HL", "ll": [31.7656, 35.1606], "g": ["jesus"],
+    "s": "By tradition the home of Zechariah and Elizabeth, where Mary visited and sang the Magnificat and John the Baptist was born.",
+    "b": [
+      "Mary hurries to the hill country to visit Elizabeth, and the child leaps in her womb (Luke 1:39-45).",
+      "Mary sings the Magnificat: 'My soul proclaims the greatness of the Lord' (Luke 1:46-55).",
+      "John the Baptist is born and Zechariah sings the Benedictus (Luke 1:57-79)."
+    ],
+    "t": [
+      "Luke does not name the town; tradition since early centuries points to Ein Karem.",
+      "The Church of the Visitation displays the Magnificat in dozens of languages, and the Church of St John the Baptist marks his birthplace. Both are Franciscan."
+    ],
+    "w": "Church of the Visitation" },
+  { "id": "bethany", "n": "Bethany", "a": "al-Eizariya ('place of Lazarus')", "c": "HL", "ll": [31.7713, 35.2617], "g": ["jesus"],
+    "s": "The village of Martha, Mary and Lazarus, Jesus' friends, where he raised Lazarus from the dead.",
+    "b": [
+      "Jesus says 'I am the resurrection and the life' and raises Lazarus (John 11:1-44).",
+      "Mary anoints Jesus' feet with costly perfume (John 12:1-8).",
+      "Jesus leads the disciples out as far as Bethany and blesses them as he is taken up (Luke 24:50-51)."
+    ],
+    "t": [
+      "The Franciscan Church of St Lazarus stands near the traditional tomb of Lazarus."
+    ],
+    "w": "Church of Saint Lazarus, Bethany" },
+  { "id": "nazareth", "n": "Nazareth", "a": "", "c": "HL", "ll": [32.7021, 35.2978], "g": ["jesus"],
+    "s": "The village in Galilee where the angel Gabriel appeared to Mary and where Jesus grew up.",
+    "b": [
+      "The angel Gabriel announces to Mary that she will bear the Son of God, and she answers 'May it be done to me according to your word' (Luke 1:26-38).",
+      "The Holy Family settles in Nazareth after Egypt, and Jesus grows in wisdom and age (Matthew 2:19-23; Luke 2:39-52).",
+      "Jesus reads from Isaiah in the synagogue and is rejected by his own town (Luke 4:16-30).",
+      "'Can anything good come from Nazareth?' (John 1:46)."
+    ],
+    "t": [
+      "The Basilica of the Annunciation, consecrated in 1969, is built over the grotto venerated as Mary's home.",
+      "The nearby Church of St Joseph is by tradition the site of Joseph's workshop."
+    ],
+    "w": "Basilica of the Annunciation" },
+  { "id": "cana", "n": "Cana", "a": "Cana of Galilee", "c": "HL", "ll": [32.7466, 35.3392], "g": ["jesus"],
+    "s": "Where Jesus worked his first sign, turning water into wine at a wedding at his mother's request.",
+    "b": [
+      "At a wedding Mary tells the servants 'Do whatever he tells you', and Jesus changes water into wine (John 2:1-11).",
+      "Jesus heals a royal official's son at a word (John 4:46-54).",
+      "Nathanael, one of the Twelve, came from Cana (John 21:2)."
+    ],
+    "t": [
+      "Pilgrims visit the Franciscan Wedding Church at Kafr Kanna, where married couples often renew their vows. Some scholars prefer another site, Khirbet Qana, a few miles north."
+    ],
+    "w": "Kafr Kanna" },
+  { "id": "tabor", "n": "Mount Tabor", "a": "", "c": "HL", "ll": [32.6869, 35.3903], "g": ["ot", "jesus"],
+    "s": "The rounded mountain that tradition identifies as the place of Jesus' Transfiguration.",
+    "b": [
+      "Deborah sends Barak to gather Israel's army on Mount Tabor (Judges 4:6-14).",
+      "Jesus is transfigured before Peter, James and John on 'a high mountain', with Moses and Elijah (Matthew 17:1-9; Mark 9:2-8; Luke 9:28-36).",
+      "Peter later recalls being with him 'on the holy mountain' (2 Peter 1:16-18)."
+    ],
+    "t": [
+      "The Gospels do not name the mountain; Christians have honoured Tabor since at least the 4th century.",
+      "The Franciscan Basilica of the Transfiguration (1924) crowns the summit. The feast is kept on 6 August."
+    ],
+    "w": "Mount Tabor" },
+  { "id": "nain", "n": "Nain", "a": "", "c": "HL", "ll": [32.6311, 35.3478], "g": ["jesus"],
+    "s": "The village where Jesus raised a widow's only son.",
+    "b": [
+      "Moved with pity, Jesus touches the bier and says 'Young man, I tell you, arise!' (Luke 7:11-17)."
+    ],
+    "t": [
+      "A small Franciscan church marks the site in the Arab village of Nein."
+    ],
+    "w": "Nein" },
+  { "id": "magdala", "n": "Magdala", "a": "", "c": "HL", "ll": [32.8252, 35.5155], "g": ["jesus"],
+    "s": "Fishing town on the Sea of Galilee, home of Mary Magdalene, the first witness of the Resurrection.",
+    "b": [
+      "Mary 'called Magdalene' follows Jesus and supports his ministry (Luke 8:1-3).",
+      "She stands by the cross and is the first to see the risen Lord (John 19:25; John 20:11-18)."
+    ],
+    "t": [
+      "A first-century synagogue, where Jesus may have taught, was uncovered here in 2009.",
+      "Pope Francis raised her memorial to a feast in 2016, honouring her as 'apostle to the apostles'."
+    ],
+    "w": "Magdala" },
+  { "id": "tabgha", "n": "Tabgha", "a": "Heptapegon ('Seven Springs')", "c": "HL", "ll": [32.8733, 35.5494], "g": ["jesus"],
+    "s": "Lakeside spot honoured as the place of the multiplication of the loaves and of the risen Jesus' breakfast with the disciples.",
+    "b": [
+      "Jesus feeds five thousand with five loaves and two fish (Mark 6:30-44).",
+      "After the Resurrection he cooks fish on a charcoal fire by the lake and asks Peter three times 'Do you love me?', then says 'Feed my sheep' (John 21:1-19)."
+    ],
+    "t": [
+      "The Benedictine Church of the Multiplication keeps a famous 5th-century mosaic of loaves and fishes.",
+      "The Franciscan Church of the Primacy of St Peter is built over a rock called the Mensa Christi, the table of Christ. Catholics see in Jesus' charge to Peter a sign of his role as shepherd of the whole Church."
+    ],
+    "w": "Church of the Multiplication" },
+  { "id": "beatitudes", "n": "Mount of Beatitudes", "a": "", "c": "HL", "ll": [32.8810, 35.5565], "g": ["jesus"],
+    "s": "The hill above the Sea of Galilee traditionally linked with the Sermon on the Mount.",
+    "b": [
+      "Jesus goes up the mountain and teaches the Beatitudes, 'Blessed are the poor in spirit...' (Matthew 5:1-12).",
+      "The sermon includes the Lord's Prayer and the Golden Rule (Matthew 6:9-13; Matthew 7:12)."
+    ],
+    "t": [
+      "The octagonal Church of the Beatitudes (1938) has eight sides for the eight Beatitudes.",
+      "St John Paul II celebrated Mass for young people here in 2000."
+    ],
+    "w": "Church of the Beatitudes" },
+  { "id": "capernaum", "n": "Capernaum", "a": "Kfar Nahum, 'his own town'", "c": "HL", "ll": [32.8811, 35.5751], "g": ["jesus"],
+    "s": "Fishing town on the Sea of Galilee that Jesus made the base of his ministry, home of Peter.",
+    "b": [
+      "Jesus leaves Nazareth and settles in Capernaum (Matthew 4:13).",
+      "He teaches in the synagogue and heals Peter's mother-in-law (Mark 1:21-31).",
+      "Friends lower a paralysed man through the roof, and Jesus forgives and heals him (Mark 2:1-12).",
+      "He heals the centurion's servant: 'Lord, I am not worthy...' (Luke 7:1-10), words echoed at every Mass.",
+      "He gives the Bread of Life discourse in the synagogue (John 6:35-59)."
+    ],
+    "t": [
+      "A modern Franciscan church hovers above the excavated house venerated as Peter's since the first centuries.",
+      "The white limestone synagogue ruins date from about the 4th century, over an earlier one."
+    ],
+    "w": "Capernaum" },
+  { "id": "kursi", "n": "Kursi", "a": "the country of the Gerasenes", "c": "HL", "ll": [32.8261, 35.6506], "g": ["jesus"],
+    "s": "On the eastern shore of the lake, the site Byzantine Christians linked with Jesus driving demons into a herd of swine.",
+    "b": [
+      "Jesus frees a man possessed by 'Legion', and the swine rush into the sea (Mark 5:1-20; Matthew 8:28-34).",
+      "The healed man proclaims what Jesus did throughout the Decapolis (Mark 5:20)."
+    ],
+    "t": [
+      "The Gospels give different town names (Gerasa, Gadara). The ruins of a large 5th-century monastery at Kursi preserve the early tradition."
+    ],
+    "w": "Kursi, Sea of Galilee" },
+  { "id": "caesareaphilippi", "n": "Caesarea Philippi", "a": "Paneas (Banias)", "c": "HL", "ll": [33.2480, 35.6942], "g": ["jesus"],
+    "s": "At the springs of the Jordan, in today's Golan Heights, Peter confessed Jesus as the Christ and Jesus called him the rock.",
+    "b": [
+      "Peter says 'You are the Messiah, the Son of the living God' (Matthew 16:13-16).",
+      "Jesus answers 'You are Peter, and upon this rock I will build my church', and gives him the keys of the kingdom (Matthew 16:17-19)."
+    ],
+    "t": [
+      "Catholic teaching sees in this passage the foundation of Peter's primacy, continued in the bishops of Rome (Catechism of the Catholic Church 881)."
+    ],
+    "w": "Banias" },
+  { "id": "carmel", "n": "Mount Carmel", "a": "", "c": "HL", "ll": [32.8268, 34.9710], "g": ["ot"],
+    "s": "The ridge above Haifa where Elijah challenged the prophets of Baal, and the birthplace of the Carmelite order.",
+    "b": [
+      "Elijah calls down fire from heaven on his sacrifice and Israel cries 'The Lord is God!' (1 Kings 18:19-40).",
+      "From the summit Elijah's servant sees a small cloud bringing rain (1 Kings 18:41-46).",
+      "Isaiah speaks of 'the splendor of Carmel' (Isaiah 35:2)."
+    ],
+    "t": [
+      "Hermits living here in the spirit of Elijah received a rule from St Albert of Jerusalem around 1209, and became the Carmelite order.",
+      "The Stella Maris monastery honours Our Lady of Mount Carmel, whose feast is 16 July, and the brown scapular."
+    ],
+    "w": "Stella Maris Monastery" },
+  { "id": "caesarea", "n": "Caesarea Maritima", "a": "", "c": "HL", "ll": [32.5000, 34.8917], "g": ["church"],
+    "s": "Herod's Roman port, where the first Gentile family was baptized and Paul was held prisoner for two years.",
+    "b": [
+      "Peter baptizes the centurion Cornelius and his household, the first Gentile converts (Acts 10).",
+      "Herod Agrippa I dies here after accepting praise as a god (Acts 12:19-23).",
+      "Philip the evangelist lives here with his four daughters who prophesied (Acts 21:8-9).",
+      "Paul is held here two years and defends himself before Felix, Festus and King Agrippa, then appeals to Caesar (Acts 23:23 - 26:32)."
+    ],
+    "t": [
+      "A stone naming Pontius Pilate as prefect was found in the theatre in 1961.",
+      "Origen taught here, and Eusebius, the first great Church historian, was its bishop."
+    ],
+    "w": "Caesarea Maritima" },
+  { "id": "jaffa", "n": "Jaffa", "a": "Joppa", "c": "HL", "ll": [32.0543, 34.7520], "g": ["ot", "deut", "church"],
+    "s": "Ancient port, where Jonah set sail to flee God and where Peter raised Tabitha and saw the vision that opened the Church to Gentiles.",
+    "b": [
+      "Cedar from Lebanon for the Second Temple is shipped to Joppa (Ezra 3:7).",
+      "Jonah boards a ship at Joppa bound for Tarshish (Jonah 1:3).",
+      "Jonathan Maccabeus takes the city (1 Maccabees 10:75-76).",
+      "Peter raises Tabitha (Dorcas) to life (Acts 9:36-42).",
+      "On the roof of Simon the tanner's house, Peter sees the vision of the sheet with clean and unclean animals (Acts 10:9-16)."
+    ],
+    "t": [
+      "The Franciscan Church of St Peter overlooks the old harbour."
+    ],
+    "w": "St. Peter's Church, Jaffa" },
+  { "id": "emmaus", "n": "Emmaus", "a": "Emmaus-Nicopolis (one proposed site)", "c": "HL", "ll": [31.8394, 34.9894], "g": ["deut", "jesus"],
+    "s": "The village where two disciples recognized the risen Jesus in the breaking of the bread. Its exact location is uncertain.",
+    "b": [
+      "Judas Maccabeus defeats the Syrian general Gorgias near Emmaus (1 Maccabees 3:38 - 4:25).",
+      "On Easter evening Jesus walks with two disciples, explains the Scriptures, and is known to them 'in the breaking of the bread' (Luke 24:13-35)."
+    ],
+    "t": [
+      "Three places claim the name: Emmaus-Nicopolis (shown here, cared for by a Catholic community), the Franciscan church at el-Qubeibeh, and Abu Ghosh with its Benedictine monastery."
+    ],
+    "w": "Emmaus Nicopolis" },
+  { "id": "modein", "n": "Modein", "a": "Modi'in", "c": "HL", "ll": [31.9300, 35.0300], "g": ["deut"],
+    "s": "Home town of the priest Mattathias, where the Maccabean revolt began, and the family tomb of the Maccabees. Position shown is approximate.",
+    "b": [
+      "Mattathias refuses the king's order to offer pagan sacrifice and calls 'Let everyone who is zealous for the law and who stands by the covenant follow me!' (1 Maccabees 2:15-28).",
+      "Mattathias is buried at Modein (1 Maccabees 2:70).",
+      "Simon builds a great monument over the tombs of his father and brothers (1 Maccabees 13:25-30)."
+    ],
+    "t": [
+      "The Roman Martyrology remembers the Maccabean martyrs, including the mother and her seven sons (2 Maccabees 7), on 1 August. 2 Maccabees is also an early witness to prayer for the dead (2 Maccabees 12:43-46)."
+    ],
+    "w": "Modi'in" },
+  { "id": "jericho", "n": "Jericho", "a": "the City of Palms", "c": "HL", "ll": [31.8710, 35.4440], "g": ["ot", "jesus"],
+    "s": "One of the oldest cities on earth, whose walls fell before Joshua and where Jesus met Zacchaeus and healed Bartimaeus.",
+    "b": [
+      "Rahab hides Israel's spies (Joshua 2), and the walls fall at the trumpet blast (Joshua 6).",
+      "Elisha heals the city's spring (2 Kings 2:19-22).",
+      "Jesus heals blind Bartimaeus (Mark 10:46-52) and stays with Zacchaeus the tax collector (Luke 19:1-10).",
+      "The Good Samaritan parable is set on the road from Jerusalem down to Jericho (Luke 10:30-37)."
+    ],
+    "t": [
+      "The Mount of Temptation above the city is honoured as the place of Jesus' forty days in the desert (Matthew 4:1-11), with a Greek Orthodox monastery on its cliff."
+    ],
+    "w": "Jericho" },
+  { "id": "shechem", "n": "Jacob's Well and Shechem", "a": "Sychar, Shechem (near Nablus)", "c": "HL", "ll": [32.2095, 35.2850], "g": ["ot", "jesus"],
+    "s": "Abraham's first stop in Canaan and the well where Jesus spoke with the Samaritan woman.",
+    "b": [
+      "God appears to Abram at Shechem: 'To your descendants I will give this land' (Genesis 12:6-7).",
+      "Jacob buys land here (Genesis 33:18-20). Joshua renews the covenant at Shechem and Joseph's bones are buried here (Joshua 24).",
+      "At Jacob's well Jesus offers the Samaritan woman 'living water' and reveals himself as the Messiah (John 4:4-42)."
+    ],
+    "t": [
+      "The well is still in use inside the Greek Orthodox church of Bir Ya'qub. The Samaritan woman is honoured by tradition as St Photina."
+    ],
+    "w": "Jacob's Well" },
+  { "id": "samaria", "n": "Samaria (Sebastia)", "a": "Sebaste", "c": "HL", "ll": [32.2766, 35.1969], "g": ["ot", "church"],
+    "s": "Capital of the northern kingdom of Israel, later rebuilt by Herod as Sebaste.",
+    "b": [
+      "King Omri builds Samaria as his capital (1 Kings 16:24). Ahab and Jezebel set up Baal worship here (1 Kings 16:29-33).",
+      "The city falls to Assyria in 722 BC and its people are deported (2 Kings 17:5-6).",
+      "Philip preaches Christ here, and Peter and John lay hands on the new believers (Acts 8:5-17)."
+    ],
+    "t": [
+      "An old tradition places the tomb of John the Baptist at Sebastia, where the ruins of a Crusader cathedral remain."
+    ],
+    "w": "Sebastia, Nablus" },
+  { "id": "shiloh", "n": "Shiloh", "a": "", "c": "HL", "ll": [32.0556, 35.2897], "g": ["ot"],
+    "s": "Israel's first sanctuary, where the Ark rested and Hannah prayed for a son.",
+    "b": [
+      "Joshua sets up the meeting tent at Shiloh (Joshua 18:1).",
+      "Hannah prays for a child and dedicates Samuel to the Lord. The boy hears God call, 'Speak, for your servant is listening' (1 Samuel 1-3)."
+    ],
+    "t": [
+      "Hannah's song (1 Samuel 2:1-10) is often read alongside Mary's Magnificat."
+    ],
+    "w": "Shiloh (biblical city)" },
+  { "id": "hebron", "n": "Hebron", "a": "Kiriath-arba, Mamre", "c": "HL", "ll": [31.5246, 35.1107], "g": ["ot", "deut"],
+    "s": "City of the patriarchs. Abraham, Isaac and Jacob and their wives are buried here, and David first reigned here.",
+    "b": [
+      "Abraham welcomes three visitors at the oaks of Mamre and hears that Sarah will bear a son (Genesis 18:1-15).",
+      "He buys the cave of Machpelah to bury Sarah (Genesis 23). Abraham, Isaac, Rebekah, Jacob and Leah are buried there too (Genesis 49:29-31).",
+      "David is anointed king at Hebron and rules there seven years (2 Samuel 2:1-4; 2 Samuel 5:5).",
+      "Judas Maccabeus strikes Hebron (1 Maccabees 5:65)."
+    ],
+    "t": [
+      "Christian art has long seen in Abraham's three visitors a sign of the Trinity."
+    ],
+    "w": "Cave of the Patriarchs" },
+  { "id": "beersheba", "n": "Beersheba", "a": "", "c": "HL", "ll": [31.2445, 34.8406], "g": ["ot"],
+    "s": "The southern limit of Israel ('from Dan to Beersheba') and the home of the patriarchs.",
+    "b": [
+      "Abraham makes a covenant with Abimelech over a well and plants a tamarisk (Genesis 21:22-34).",
+      "God appears to Isaac at Beersheba (Genesis 26:23-25).",
+      "Elijah flees here from Jezebel before going into the desert (1 Kings 19:3-8)."
+    ],
+    "t": [],
+    "w": "Tel Be'er Sheva" },
+  { "id": "gaza", "n": "Gaza", "a": "", "c": "HL", "ll": [31.5017, 34.4668], "g": ["ot", "church"],
+    "s": "Philistine city of Samson's story, on the road where Philip baptized the Ethiopian.",
+    "b": [
+      "Samson carries off the gates of Gaza and later dies bringing down the temple of Dagon (Judges 16).",
+      "An angel sends Philip to 'the road that goes down from Jerusalem to Gaza', where he meets the Ethiopian official (Acts 8:26-40)."
+    ],
+    "t": [
+      "Holy Family is Gaza's Catholic parish. During the war that began in October 2023, Pope Francis telephoned the parish almost every evening."
+    ],
+    "w": "Gaza City" },
+  { "id": "jordan", "n": "Baptism site of Jesus", "a": "Bethany beyond the Jordan", "c": "JO", "ll": [31.8370, 35.5503], "g": ["ot", "jesus"],
+    "s": "The place on the Jordan River honoured as the site of John's preaching and Jesus' baptism.",
+    "b": [
+      "Israel crosses the Jordan on dry ground into the Promised Land (Joshua 3-4).",
+      "Elijah is taken up to heaven in a whirlwind across the Jordan (2 Kings 2:6-14).",
+      "Naaman washes seven times in the Jordan and is healed (2 Kings 5:14).",
+      "Jesus is baptized by John and the Father's voice says 'This is my beloved Son' (Matthew 3:13-17).",
+      "John was baptizing at 'Bethany across the Jordan' (John 1:28; John 10:40)."
+    ],
+    "t": [
+      "Popes John Paul II (2000), Benedict XVI (2009) and Francis (2014) visited this site on the Jordanian bank. Qasr al-Yahud, across the river, is honoured too."
+    ],
+    "w": "Al-Maghtas" },
+  { "id": "nebo", "n": "Mount Nebo", "a": "Pisgah", "c": "JO", "ll": [31.7678, 35.7256], "g": ["ot", "deut"],
+    "s": "The mountain in Moab from which Moses saw the Promised Land before he died.",
+    "b": [
+      "The Lord shows Moses the whole land from the top of Pisgah, and Moses dies in Moab (Deuteronomy 34:1-6).",
+      "2 Maccabees tells how Jeremiah hid the tent, the Ark of the Covenant and the altar of incense in a cave on the mountain Moses climbed (2 Maccabees 2:4-8)."
+    ],
+    "t": [
+      "The Franciscans care for the Memorial Church of Moses and its Byzantine mosaics.",
+      "A bronze serpent sculpture recalls the serpent Moses raised (Numbers 21:8-9), which Jesus compared to his cross (John 3:14).",
+      "St John Paul II prayed here in 2000, and Benedict XVI in 2009."
+    ],
+    "w": "Mount Nebo" },
+  { "id": "sinai", "n": "Mount Sinai", "a": "Horeb (Jebel Musa)", "c": "EG", "ll": [28.5392, 33.9750], "g": ["ot"],
+    "s": "The mountain of God, where Moses met God in the burning bush and received the Ten Commandments.",
+    "b": [
+      "God speaks to Moses from the burning bush: 'I am who am' (Exodus 3:1-14).",
+      "God gives the Ten Commandments and makes the covenant with Israel (Exodus 19-20; Exodus 24).",
+      "The people worship the golden calf while Moses is on the mountain (Exodus 32).",
+      "Elijah hears God in 'a light silent sound' at Horeb (1 Kings 19:8-13)."
+    ],
+    "t": [
+      "The Bible's mountain is identified with Jebel Musa by tradition since the 4th century; scholars propose other sites too.",
+      "St Catherine's Monastery (Greek Orthodox), built under Emperor Justinian in the 6th century, guards the traditional burning bush. St John Paul II visited in 2000."
+    ],
+    "w": "Mount Sinai" },
+  { "id": "goshen", "n": "Land of Goshen", "a": "Rameses (Avaris)", "c": "EG", "ll": [30.7870, 31.8210], "g": ["ot"],
+    "s": "The eastern Nile Delta, where Jacob's family settled and Israel was later enslaved, and from where the Exodus began.",
+    "b": [
+      "Joseph settles his father and brothers in Goshen (Genesis 45:10; Genesis 47:27).",
+      "A new Pharaoh enslaves Israel to build Pithom and Raamses (Exodus 1:8-14).",
+      "After the Passover Israel sets out from Rameses (Exodus 12:37)."
+    ],
+    "t": [
+      "Marked here at Tell el-Dab'a, ancient Avaris, beside Pi-Ramesses; the exact places named in Exodus are still discussed by archaeologists."
+    ],
+    "w": "Pi-Ramesses" },
+  { "id": "cairo", "n": "Old Cairo", "a": "Babylon of Egypt, near On (Heliopolis)", "c": "EG", "ll": [30.0060, 31.2302], "g": ["ot", "jesus"],
+    "s": "Coptic Cairo, where tradition says the Holy Family sheltered during their flight into Egypt.",
+    "b": [
+      "Joseph marries Asenath, daughter of the priest of On, the city later called Heliopolis on the edge of modern Cairo (Genesis 41:45).",
+      "An angel warns Joseph to flee to Egypt with Mary and the child, and they stay until Herod dies (Matthew 2:13-15)."
+    ],
+    "t": [
+      "Coptic tradition honours a crypt under the Church of Sts Sergius and Bacchus (Abu Serga) as a resting place of the Holy Family. The Gospel itself does not say where in Egypt they stayed."
+    ],
+    "w": "Saints Sergius and Bacchus Church (Cairo)" },
+  { "id": "alexandria", "n": "Alexandria", "a": "", "c": "EG", "ll": [31.2001, 29.9187], "g": ["deut", "church"],
+    "s": "The great Greek city of Egypt, where the Septuagint was made and where Apollos came from.",
+    "b": [
+      "Jews from Alexandria debate with Stephen in Jerusalem (Acts 6:9).",
+      "Apollos, 'an eloquent speaker' from Alexandria, preaches at Ephesus and Corinth (Acts 18:24-28).",
+      "Paul sails toward Rome on ships from Alexandria (Acts 27:6; Acts 28:11)."
+    ],
+    "t": [
+      "Alexandria's Jews translated the Scriptures into Greek, the Septuagint, which includes the deuterocanonical books. Most scholars think the Book of Wisdom was written here.",
+      "Tradition names St Mark its first bishop. St Athanasius and St Cyril, Doctors of the Church, were among its patriarchs."
+    ],
+    "w": "Alexandria" },
+  { "id": "ur", "n": "Ur of the Chaldeans", "a": "Tell el-Muqayyar", "c": "IQ", "ll": [30.9626, 46.1031], "g": ["ot"],
+    "s": "Ancient Sumerian city, home of Abraham's family before they set out for Haran and Canaan.",
+    "b": [
+      "Terah takes Abram and Sarai from Ur of the Chaldeans toward Canaan (Genesis 11:27-31).",
+      "'I am the Lord who brought you from Ur of the Chaldeans' (Genesis 15:7; Nehemiah 9:7).",
+      "Stephen recalls God appearing to Abraham in Mesopotamia (Acts 7:2-4)."
+    ],
+    "t": [
+      "Pope Francis led an interreligious prayer at Ur on 6 March 2021, calling Abraham the father of believers. St John Paul II had hoped to go in 2000."
+    ],
+    "w": "Ziggurat of Ur" },
+  { "id": "babylon", "n": "Babylon", "a": "Babel", "c": "IQ", "ll": [32.5364, 44.4209], "g": ["ot", "deut"],
+    "s": "Capital of Nebuchadnezzar's empire and the place of the Jewish exile; the setting of the Book of Daniel.",
+    "b": [
+      "The tower of Babel (Genesis 11:1-9).",
+      "Nebuchadnezzar takes Judah into exile in Babylon (2 Kings 24:10-16; 2 Kings 25:1-21).",
+      "'By the rivers of Babylon there we sat weeping' (Psalm 137:1). Jeremiah tells the exiles to seek the welfare of the city (Jeremiah 29:4-7).",
+      "Daniel and his friends serve at court. Three young men survive the fiery furnace (Daniel 1-3), and Belshazzar sees the writing on the wall (Daniel 5).",
+      "Catholic Bibles include the Prayer of Azariah and the Song of the Three Young Men in the furnace, 'Bless the Lord, all you works of the Lord' (Daniel 3:24-90).",
+      "Daniel saves the innocent Susanna (Daniel 13) and exposes the idol Bel (Daniel 14).",
+      "Baruch reads his book to the exiles in Babylon (Baruch 1:1-4)."
+    ],
+    "t": [
+      "The Song of the Three Young Men (Daniel 3:57-88) is prayed at Lauds on Sundays and feasts in the Liturgy of the Hours.",
+      "In Revelation, 'Babylon the great' stands for a proud power opposed to God (Revelation 18)."
+    ],
+    "w": "Babylon" },
+  { "id": "nineveh", "n": "Nineveh", "a": "beside modern Mosul", "c": "IQ", "ll": [36.3594, 43.1528], "g": ["ot", "deut"],
+    "s": "Great capital of Assyria, which repented at Jonah's preaching and where Tobit lived in exile.",
+    "b": [
+      "Jonah preaches and the whole city repents in sackcloth (Jonah 3:1-10). God asks 'should I not be concerned over the great city of Nineveh?' (Jonah 4:11).",
+      "Tobit, an exile in Nineveh, gives alms and buries the dead (Tobit 1:3; Tobit 1:16-20). Before dying he foretells the city's fall (Tobit 14:4).",
+      "The Book of Judith names Nebuchadnezzar as ruling 'in the great city of Nineveh' (Judith 1:1).",
+      "Nahum announces Nineveh's fall, which came in 612 BC (Nahum 3:7).",
+      "Jesus says the people of Nineveh 'repented at the preaching of Jonah; and there is something greater than Jonah here' (Matthew 12:41)."
+    ],
+    "t": [
+      "Catholic scholars generally read Tobit and Judith as inspired teaching stories rather than strict chronicles.",
+      "Pope Francis prayed for the victims of war among the ruined churches of Mosul in March 2021, then visited the Syriac Catholic town of Qaraqosh."
+    ],
+    "w": "Nineveh" },
+  { "id": "susa", "n": "Susa", "a": "Shushan (modern Shush)", "c": "IR", "ll": [32.1894, 48.2575], "g": ["ot"],
+    "s": "Winter capital of the Persian kings, where Queen Esther saved her people and Nehemiah served the king.",
+    "b": [
+      "King Ahasuerus holds a great banquet in the citadel of Susa (Esther 1:1-8).",
+      "Mordecai urges Esther, 'Who knows but that it was for a time like this that you obtained the royal dignity?' (Esther 4:14).",
+      "Esther approaches the king unbidden and saves the Jews (Esther 5-8).",
+      "Nehemiah, the king's cupbearer at Susa, hears that Jerusalem's walls lie in ruins (Nehemiah 1:1-4).",
+      "Daniel has a vision 'in the fortress of Susa' (Daniel 8:2)."
+    ],
+    "t": [
+      "A shrine at Shush is honoured as the tomb of the prophet Daniel.",
+      "Esther's prayer in the Greek part of the book is read at Mass in Lent (Esther C:12-25 in the NABRE)."
+    ],
+    "w": "Susa" },
+  { "id": "ecbatana", "n": "Ecbatana", "a": "Hamadan", "c": "IR", "ll": [34.7980, 48.5150], "g": ["ot", "deut"],
+    "s": "Capital of the Medes, where Tobiah married Sarah with the help of the angel Raphael.",
+    "b": [
+      "Arphaxad, king of the Medes, builds the walls of Ecbatana (Judith 1:1-4).",
+      "In Ecbatana, Sarah, daughter of Raguel, prays in her distress at the same hour as Tobit (Tobit 3:7-17).",
+      "Raphael guides Tobiah to Sarah. They pray together on their wedding night, 'Send down your mercy on me and on her' (Tobit 8:4-8).",
+      "Cyrus's decree to rebuild the Temple is found in the archives at Ecbatana (Ezra 6:1-5)."
+    ],
+    "t": [
+      "The prayer of Tobiah and Sarah is one of the readings offered for Catholic weddings.",
+      "Local tradition honours the tomb of Esther and Mordecai in Hamadan."
+    ],
+    "w": "Ecbatana" },
+  { "id": "rages", "n": "Rages", "a": "Rey (Ray), south of Tehran", "c": "IR", "ll": [35.5880, 51.4350], "g": ["deut"],
+    "s": "City of Media where Tobit had left money in trust, the goal of Tobiah's journey with the angel Raphael.",
+    "b": [
+      "Tobit deposits silver with Gabael at Rages in Media (Tobit 1:14).",
+      "Tobit sends his son to collect it (Tobit 4:1-2; Tobit 4:20).",
+      "Raphael travels to Rages and brings back the money while Tobiah celebrates his wedding (Tobit 9:1-6)."
+    ],
+    "t": [
+      "Raphael, whose name means 'God heals', is honoured with Michael and Gabriel on 29 September. He is patron of travellers and of the sick."
+    ],
+    "w": "Rey, Iran" },
+  { "id": "pasargadae", "n": "Pasargadae", "a": "", "c": "IR", "ll": [30.1939, 53.1672], "g": ["ot"],
+    "s": "Capital and tomb of Cyrus the Great, the Persian king who freed the Jewish exiles. The Bible names Cyrus but not this city.",
+    "b": [
+      "God calls Cyrus 'my shepherd' and 'his anointed' (Isaiah 44:28; Isaiah 45:1).",
+      "Cyrus proclaims that the God of heaven has charged him to rebuild the Temple in Jerusalem (Ezra 1:1-4).",
+      "The last words of the Hebrew Bible's order are Cyrus's decree (2 Chronicles 36:23)."
+    ],
+    "t": [],
+    "w": "Tomb of Cyrus" },
+  { "id": "damascus", "n": "Damascus", "a": "", "c": "SY", "ll": [33.5113, 36.3065], "g": ["ot", "church"],
+    "s": "One of the oldest continuously inhabited cities, where Saul was blinded, healed and baptized.",
+    "b": [
+      "Naaman of Damascus wonders why the rivers Abana and Pharpar are not better than the Jordan (2 Kings 5:12).",
+      "Saul is struck down on the road to Damascus: 'Saul, Saul, why are you persecuting me?' (Acts 9:3-9).",
+      "Ananias lays hands on him in a house on the street called Straight, and Saul is baptized (Acts 9:10-19).",
+      "Paul escapes the city in a basket lowered from the wall (Acts 9:23-25; 2 Corinthians 11:32-33)."
+    ],
+    "t": [
+      "The underground Chapel of St Ananias and the Straight Street still draw pilgrims.",
+      "St John Paul II prayed at the shrine of John the Baptist's head in the Umayyad Mosque in 2001."
+    ],
+    "w": "Straight Street" },
+  { "id": "tyre", "n": "Tyre and Sidon", "a": "Phoenicia, with Zarephath between them", "c": "LB", "ll": [33.2705, 35.1960], "g": ["ot", "jesus", "church"],
+    "s": "The great Phoenician ports, praised and rebuked by the prophets and visited by Jesus.",
+    "b": [
+      "King Hiram of Tyre sends cedar and craftsmen for Solomon's Temple (1 Kings 5).",
+      "Ezekiel laments the proud merchant city of Tyre (Ezekiel 27-28).",
+      "Jesus says Tyre and Sidon would have repented had they seen his works (Matthew 11:21-22).",
+      "A Canaanite woman's faith wins healing for her daughter: 'even the dogs eat the scraps' (Matthew 15:21-28).",
+      "Paul stays a week with the disciples at Tyre, and they pray together on the beach (Acts 21:3-6)."
+    ],
+    "t": [
+      "Near Sidon, the shrine of Our Lady of Mantara (Our Lady of Awaiting) at Maghdouche recalls a tradition that Mary waited there while Jesus preached in Sidon."
+    ],
+    "w": "Tyre, Lebanon" },
+  { "id": "cedars", "n": "Cedars of Lebanon", "a": "the Cedars of God, Kadisha Valley", "c": "LB", "ll": [34.2436, 36.0483], "g": ["ot"],
+    "s": "The last ancient grove of the cedars whose wood built the Temple and that the Psalms use as an image of the just.",
+    "b": [
+      "Solomon's Temple is roofed and panelled with cedar from Lebanon (1 Kings 5; 1 Kings 6:9-18).",
+      "'The trees of the Lord drink their fill, the cedars of Lebanon, which you planted' (Psalm 104:16).",
+      "'With me from Lebanon, my bride!' (Song of Songs 4:8)."
+    ],
+    "t": [
+      "The Kadisha (Holy) Valley below the grove sheltered Maronite hermits and monasteries for centuries.",
+      "St Charbel Makhlouf, hermit and wonderworker, lived in the mountains nearby at Annaya."
+    ],
+    "w": "Cedars of God" },
+  { "id": "ararat", "n": "Mount Ararat", "a": "Ağrı Dağı", "c": "TR", "ll": [39.7016, 44.2983], "g": ["ot"],
+    "s": "The great volcano of eastern Turkey, long associated with the mountains of Ararat where Noah's ark came to rest.",
+    "b": [
+      "'The ark came to rest on the mountains of Ararat' (Genesis 8:4).",
+      "Noah builds an altar, and God sets the rainbow as a sign of his covenant with all living things (Genesis 8:20 - 9:17)."
+    ],
+    "t": [
+      "Genesis names a region, the ancient kingdom of Urartu, not this particular peak. The covenant with Noah is seen in Catholic teaching as God's covenant with all nations (Catechism of the Catholic Church 56-58)."
+    ],
+    "w": "Mount Ararat" },
+  { "id": "haran", "n": "Haran", "a": "Harran", "c": "TR", "ll": [36.8650, 39.0310], "g": ["ot"],
+    "s": "Where Abraham heard God's call to leave his land, and where Jacob later found Rachel.",
+    "b": [
+      "Terah's family settles in Haran, and Terah dies there (Genesis 11:31-32).",
+      "God calls Abram: 'Go forth from your land... and I will make of you a great nation', and he sets out at 75 (Genesis 12:1-5).",
+      "Jacob flees to Haran, meets Rachel at the well and works for Laban (Genesis 28:10; Genesis 29)."
+    ],
+    "t": [
+      "Abraham's call is read at Mass and remembered in the Roman Canon, which names 'Abraham, our father in faith'."
+    ],
+    "w": "Harran" },
+  { "id": "tarsus", "n": "Tarsus", "a": "Tarsus in Cilicia", "c": "TR", "ll": [36.9177, 34.8928], "g": ["deut", "church"],
+    "s": "Birthplace of St Paul, 'a citizen of no mean city'.",
+    "b": [
+      "The people of Tarsus revolt against King Antiochus (2 Maccabees 4:30).",
+      "'I am a Jew, born in Tarsus in Cilicia' (Acts 22:3; Acts 21:39).",
+      "After his conversion, Saul is sent home to Tarsus, and Barnabas later fetches him to Antioch (Acts 9:30; Acts 11:25-26)."
+    ],
+    "t": [
+      "The old Church of St Paul is now a museum where Mass may be celebrated with permission. St Paul's Well is shown nearby."
+    ],
+    "w": "Tarsus, Mersin" },
+  { "id": "antioch", "n": "Antioch", "a": "Antakya; Antioch on the Orontes", "c": "TR", "ll": [36.2021, 36.1600], "g": ["deut", "church"],
+    "s": "Capital of the Seleucid kings in the Maccabean age, then the city where Jesus' followers were first called Christians and Paul's journeys began.",
+    "b": [
+      "Antiochus IV, who desecrated the Temple, rules from here (1 Maccabees 1:10; 1 Maccabees 3:37).",
+      "The faithful high priest Onias is murdered near Antioch (2 Maccabees 4:33-34).",
+      "'It was in Antioch that the disciples were first called Christians' (Acts 11:26).",
+      "The church sends out Barnabas and Saul (Acts 13:1-3). Paul confronts Peter here over eating with Gentiles (Galatians 2:11-14)."
+    ],
+    "t": [
+      "Tradition counts St Peter as Antioch's first bishop. St Ignatius of Antioch, writing about 110, is the first known to speak of 'the Catholic Church'.",
+      "The Cave Church of St Peter on Mount Staurin is honoured as an early meeting place. Much of the city was destroyed in the earthquake of February 2023."
+    ],
+    "w": "Church of Saint Peter" },
+  { "id": "pisidianantioch", "n": "Pisidian Antioch", "a": "near Yalvaç", "c": "TR", "ll": [38.3060, 31.1890], "g": ["church"],
+    "s": "Where Paul preached his first recorded sermon and turned to the Gentiles.",
+    "b": [
+      "Paul preaches in the synagogue on the sabbath, retelling Israel's story up to Jesus (Acts 13:14-41).",
+      "'We now turn to the Gentiles... I have made you a light to the Gentiles' (Acts 13:46-48)."
+    ],
+    "t": [],
+    "w": "Antioch of Pisidia" },
+  { "id": "lystra", "n": "Lystra and Iconium", "a": "near Konya", "c": "TR", "ll": [37.5780, 32.4520], "g": ["church"],
+    "s": "Towns of Paul's first journey, and home of his disciple Timothy.",
+    "b": [
+      "At Iconium many believe, but Paul and Barnabas must flee (Acts 14:1-6).",
+      "At Lystra Paul heals a lame man and the crowd hails them as Zeus and Hermes (Acts 14:8-18).",
+      "Paul is stoned and left for dead, but rises and goes on (Acts 14:19-20).",
+      "Timothy, son of a believing Jewish mother, joins Paul at Lystra (Acts 16:1-3; 2 Timothy 1:5)."
+    ],
+    "t": [],
+    "w": "Lystra" },
+  { "id": "troas", "n": "Troas", "a": "Alexandria Troas", "c": "TR", "ll": [39.7520, 26.1580], "g": ["church"],
+    "s": "Port near ancient Troy, where Paul saw the vision that brought the Gospel to Europe.",
+    "b": [
+      "A Macedonian appears to Paul in a vision: 'Come over to Macedonia and help us' (Acts 16:8-10).",
+      "On the first day of the week, gathered to break bread, the young Eutychus falls from a window and Paul restores him (Acts 20:7-12).",
+      "'Bring the cloak I left with Carpus in Troas' (2 Timothy 4:13)."
+    ],
+    "t": [
+      "The Troas gathering 'on the first day of the week to break bread' is one of the earliest descriptions of Sunday Eucharist."
+    ],
+    "w": "Alexandria Troas" },
+  { "id": "ephesus", "n": "Ephesus", "a": "near Selçuk", "c": "TR", "ll": [37.9411, 27.3419], "g": ["church"],
+    "s": "Great city of the province of Asia, where Paul worked for over two years and where tradition says St John lived with Mary.",
+    "b": [
+      "Paul teaches daily in the lecture hall of Tyrannus for two years (Acts 19:8-10).",
+      "Silversmiths of Artemis riot in the theatre: 'Great is Artemis of the Ephesians!' (Acts 19:23-41).",
+      "Paul writes to the Ephesians, and Timothy leads the church here (Ephesians 1:1; 1 Timothy 1:3).",
+      "The first of the seven letters of Revelation: 'you have lost the love you had at first' (Revelation 2:1-7)."
+    ],
+    "t": [
+      "From the cross Jesus gave his mother to the beloved disciple (John 19:26-27). Tradition holds John brought her here. The House of the Virgin Mary on Bülbül Dağı has been visited by Paul VI, John Paul II and Benedict XVI.",
+      "The Council of Ephesus (431) proclaimed Mary 'Theotokos', Mother of God.",
+      "The ruins of the Basilica of St John stand over his traditional tomb."
+    ],
+    "w": "House of the Virgin Mary" },
+  { "id": "miletus", "n": "Miletus", "a": "", "c": "TR", "ll": [37.5300, 27.2780], "g": ["church"],
+    "s": "Port where Paul bade a tearful farewell to the elders of Ephesus.",
+    "b": [
+      "Paul tells the elders to shepherd the flock, quoting Jesus: 'It is more blessed to give than to receive' (Acts 20:17-38).",
+      "Paul leaves Trophimus sick at Miletus (2 Timothy 4:20)."
+    ],
+    "t": [],
+    "w": "Miletus" },
+  { "id": "smyrna", "n": "Smyrna", "a": "İzmir", "c": "TR", "ll": [38.4192, 27.1287], "g": ["church"],
+    "s": "The second church of Revelation, told to be faithful unto death.",
+    "b": [
+      "'Remain faithful until death, and I will give you the crown of life' (Revelation 2:8-11)."
+    ],
+    "t": [
+      "St Polycarp, bishop of Smyrna and a disciple of St John, was burned for the faith around 155. The account of his martyrdom is one of the oldest outside the New Testament.",
+      "The Catholic Church of St Polycarp is the oldest church building in İzmir."
+    ],
+    "w": "Smyrna" },
+  { "id": "pergamum", "n": "Pergamum", "a": "Bergama", "c": "TR", "ll": [39.1320, 27.1840], "g": ["church"],
+    "s": "Royal city of the seven churches, 'where Satan's throne is'.",
+    "b": [
+      "The church holds fast in the city 'where Satan's throne is', where the faithful Antipas was killed (Revelation 2:12-17)."
+    ],
+    "t": [],
+    "w": "Pergamon" },
+  { "id": "thyatira", "n": "Thyatira", "a": "Akhisar", "c": "TR", "ll": [38.9190, 27.8400], "g": ["church"],
+    "s": "Trading town of the seven churches, and home of Lydia, the dealer in purple cloth.",
+    "b": [
+      "Lydia, 'a dealer in purple cloth from the city of Thyatira', becomes Paul's first convert in Europe (Acts 16:14).",
+      "The risen Christ praises the church's love, faith and patient endurance (Revelation 2:18-29)."
+    ],
+    "t": [],
+    "w": "Thyatira" },
+  { "id": "sardis", "n": "Sardis", "a": "Sart", "c": "TR", "ll": [38.4880, 28.0400], "g": ["church"],
+    "s": "Old capital of Lydia, warned to wake up.",
+    "b": [
+      "'You have the reputation of being alive, but you are dead. Be watchful' (Revelation 3:1-6)."
+    ],
+    "t": [],
+    "w": "Sardis" },
+  { "id": "philadelphia", "n": "Philadelphia", "a": "Alaşehir", "c": "TR", "ll": [38.3500, 28.5170], "g": ["church"],
+    "s": "The faithful church of Revelation, given an open door.",
+    "b": [
+      "'I have left an open door before you, which no one can close' (Revelation 3:7-13)."
+    ],
+    "t": [],
+    "w": "Alaşehir" },
+  { "id": "laodicea", "n": "Laodicea and Colossae", "a": "near Denizli", "c": "TR", "ll": [37.8360, 29.1070], "g": ["church"],
+    "s": "Neighbouring cities of the Lycus valley: the lukewarm church of Revelation and the church Paul wrote to in Colossians.",
+    "b": [
+      "Paul writes to the Colossians and asks that the letter be read in Laodicea too (Colossians 1:2; Colossians 4:13-16).",
+      "Onesimus, the runaway slave of Paul's Letter to Philemon, was from Colossae (Colossians 4:9).",
+      "'Because you are lukewarm... I will spit you out of my mouth. Behold, I stand at the door and knock' (Revelation 3:14-22)."
+    ],
+    "t": [
+      "Colossae itself, a few miles east, is an unexcavated mound."
+    ],
+    "w": "Laodicea on the Lycus" },
+  { "id": "philippi", "n": "Philippi", "a": "", "c": "GR", "ll": [41.0130, 24.2860], "g": ["church"],
+    "s": "The first city in Europe to hear the Gospel from Paul.",
+    "b": [
+      "Lydia is baptized with her household by the river (Acts 16:13-15).",
+      "Paul and Silas, beaten and jailed, sing hymns at midnight; an earthquake frees them and the jailer is baptized (Acts 16:22-34).",
+      "Paul writes the joyful Letter to the Philippians: 'Rejoice in the Lord always' (Philippians 4:4)."
+    ],
+    "t": [
+      "The ruins of Philippi are a UNESCO World Heritage Site. A baptistery by the river honours St Lydia."
+    ],
+    "w": "Philippi" },
+  { "id": "thessalonica", "n": "Thessalonica", "a": "Thessaloniki", "c": "GR", "ll": [40.6401, 22.9444], "g": ["church"],
+    "s": "Capital of Macedonia, where Paul founded a church and to which he wrote his earliest surviving letters.",
+    "b": [
+      "Paul preaches three sabbaths in the synagogue and a riot follows (Acts 17:1-9).",
+      "1 Thessalonians, probably the oldest book of the New Testament: 'Pray without ceasing' (1 Thessalonians 5:17)."
+    ],
+    "t": [
+      "Sts Cyril and Methodius, apostles to the Slavs, were born here."
+    ],
+    "w": "Thessaloniki" },
+  { "id": "berea", "n": "Beroea", "a": "Veria", "c": "GR", "ll": [40.5240, 22.2030], "g": ["church"],
+    "s": "Where the Jews 'examined the Scriptures daily' to test Paul's preaching.",
+    "b": [
+      "The Beroeans receive the word eagerly and examine the Scriptures daily (Acts 17:10-12).",
+      "Sopater of Beroea later travels with Paul (Acts 20:4)."
+    ],
+    "t": [],
+    "w": "Veria" },
+  { "id": "athens", "n": "Athens", "a": "the Areopagus", "c": "GR", "ll": [37.9723, 23.7235], "g": ["church"],
+    "s": "Paul preached to the philosophers on the Areopagus about 'the unknown God'.",
+    "b": [
+      "'What you worship unknowingly, I proclaim to you.' Paul speaks of the God in whom 'we live and move and have our being' (Acts 17:22-31).",
+      "Dionysius the Areopagite and a woman named Damaris believe (Acts 17:34)."
+    ],
+    "t": [
+      "The Catholic Cathedral Basilica of St Dionysius the Areopagite is in central Athens.",
+      "St John Paul II visited the Areopagus in 2001."
+    ],
+    "w": "Areopagus" },
+  { "id": "corinth", "n": "Corinth", "a": "with its port Cenchreae", "c": "GR", "ll": [37.9060, 22.8790], "g": ["church"],
+    "s": "Busy port city where Paul worked as a tentmaker for a year and a half; the church of 1 and 2 Corinthians.",
+    "b": [
+      "Paul lives and works with Aquila and Priscilla and stays eighteen months (Acts 18:1-11). He is brought before the proconsul Gallio (Acts 18:12-17).",
+      "Paul hands on what he received: 'This is my body... Do this in remembrance of me', the earliest written account of the Eucharist (1 Corinthians 11:23-26).",
+      "'Love is patient, love is kind' (1 Corinthians 13). He lists the witnesses of the risen Christ (1 Corinthians 15:3-8).",
+      "Phoebe, a minister of the church at Cenchreae, carries Paul's letter to Rome (Romans 16:1-2)."
+    ],
+    "t": [
+      "An inscription naming Gallio fixes Paul's stay in Corinth to about AD 50-52, one of the firmest dates in his life.",
+      "Around AD 96 St Clement of Rome wrote to the Corinthians to settle a dispute, an early sign of the Roman church's care for others."
+    ],
+    "w": "Ancient Corinth" },
+  { "id": "patmos", "n": "Patmos", "a": "", "c": "GR", "ll": [37.3100, 26.5480], "g": ["church"],
+    "s": "Small Aegean island where John received the visions of the Book of Revelation.",
+    "b": [
+      "'I, John, your brother... found myself on the island called Patmos because I proclaimed God's word' (Revelation 1:9-11).",
+      "He sees 'a new heaven and a new earth' and the holy city coming down from God (Revelation 21:1-4)."
+    ],
+    "t": [
+      "The Cave of the Apocalypse and the Monastery of St John (founded 1088) are Greek Orthodox and a UNESCO World Heritage Site."
+    ],
+    "w": "Cave of the Apocalypse" },
+  { "id": "crete", "n": "Fair Havens, Crete", "a": "Kaloi Limenes", "c": "GR", "ll": [34.9330, 24.8070], "g": ["church"],
+    "s": "Bay on Crete's south coast where Paul's prison ship sheltered before the storm.",
+    "b": [
+      "The ship reaches 'a place called Fair Havens' near Lasea; Paul warns them not to sail on (Acts 27:7-12).",
+      "Paul leaves Titus in Crete to appoint elders in every town (Titus 1:5)."
+    ],
+    "t": [],
+    "w": "Kaloi Limenes" },
+  { "id": "rome", "n": "Rome", "a": "the Vatican Hill", "c": "IT", "ll": [41.9022, 12.4539], "g": ["deut", "church"],
+    "s": "Capital of the empire, where Paul preached as a prisoner and where, by tradition, Peter and Paul gave their lives. The tomb of Peter lies beneath St Peter's Basilica.",
+    "b": [
+      "Judas Maccabeus sends envoys to Rome to make an alliance (1 Maccabees 8:17-20).",
+      "Paul writes to 'all the beloved of God in Rome', whose faith 'is heralded throughout the world' (Romans 1:7-8).",
+      "Paul arrives as a prisoner and for two years welcomes all who come to him, 'proclaiming the kingdom of God' (Acts 28:16-31).",
+      "Peter sends greetings from the church 'in Babylon', which many read as Rome (1 Peter 5:13). Jesus foretells how Peter will die (John 21:18-19)."
+    ],
+    "t": [
+      "Peter was crucified on the Vatican Hill under Nero, around AD 64-67, and St Peter's Basilica rises over his tomb. Excavations under the high altar were announced by Pius XII in 1950.",
+      "Paul was beheaded on the road to Ostia. The Basilica of St Paul Outside the Walls keeps his tomb.",
+      "The Church celebrates both apostles together on 29 June."
+    ],
+    "w": "St. Peter's Basilica" },
+  { "id": "puteoli", "n": "Puteoli", "a": "Pozzuoli", "c": "IT", "ll": [40.8230, 14.1220], "g": ["church"],
+    "s": "The busy port near Naples where Paul landed in Italy and found Christians already there.",
+    "b": [
+      "At Puteoli 'we found some brothers and were urged to stay with them for seven days. And thus we came to Rome' (Acts 28:13-14).",
+      "Christians from Rome come out to meet him at the Forum of Appius and Three Taverns (Acts 28:15)."
+    ],
+    "t": [],
+    "w": "Pozzuoli" },
+  { "id": "malta", "n": "St Paul's Bay", "a": "Melite", "c": "MT", "ll": [35.9580, 14.4000], "g": ["church"],
+    "s": "Where tradition says Paul's ship ran aground on Malta.",
+    "b": [
+      "The ship strikes a sandbar and all reach land safely (Acts 27:39-44).",
+      "A viper fastens on Paul's hand as he gathers firewood, and he shakes it off unharmed (Acts 28:3-6).",
+      "Paul heals the father of Publius, the island's chief (Acts 28:7-10)."
+    ],
+    "t": [
+      "A statue of St Paul stands on St Paul's Islands in the bay. Malta keeps 10 February as the Feast of St Paul's Shipwreck."
+    ],
+    "w": "St Paul's Islands" },
+  { "id": "paphos", "n": "Paphos and Salamis", "a": "", "c": "CY", "ll": [34.7570, 32.4060], "g": ["church"],
+    "s": "The Roman capital of Cyprus, where the proconsul Sergius Paulus believed.",
+    "b": [
+      "Paul and Barnabas preach in the synagogues of Salamis (Acts 13:5).",
+      "At Paphos the magician Elymas is struck blind, and the proconsul Sergius Paulus believes (Acts 13:6-12). From here on Luke calls Saul 'Paul'."
+    ],
+    "t": [
+      "St Paul's Pillar at the church of Agia Kyriaki Chrysopolitissa is shown as the place where Paul was flogged. The church is used by Catholics and Anglicans."
+    ],
+    "w": "Agia Kyriaki Chrysopolitissa" },
+  { "id": "cyrene", "n": "Cyrene", "a": "Shahhat", "c": "LY", "ll": [32.8250, 21.8580], "g": ["deut", "jesus", "church"],
+    "s": "Greek city of Libya, home of Simon who carried Jesus' cross, and of Jason, whose history became 2 Maccabees.",
+    "b": [
+      "Simon, a Cyrenian, 'the father of Alexander and Rufus', is made to carry the cross (Mark 15:21).",
+      "2 Maccabees condenses the five books of Jason of Cyrene (2 Maccabees 2:19-32).",
+      "Men of Cyrene first preach the Lord Jesus to Greeks at Antioch (Acts 11:20)."
+    ],
+    "t": [],
+    "w": "Cyrene, Libya" },
+  { "id": "meroe", "n": "Meroë", "a": "Kingdom of Cush", "c": "SD", "ll": [16.9380, 33.7490], "g": ["ot", "church"],
+    "s": "Royal city of Nubia, whose queens bore the title Candace, like the queen served by the official Philip baptized.",
+    "b": [
+      "Tirhakah, king of Cush, marches against Sennacherib (2 Kings 19:9).",
+      "'Look, there is water. What is to prevent my being baptized?' The court official of the Candace is baptized and goes on his way rejoicing (Acts 8:26-39)."
+    ],
+    "t": [
+      "The Ethiopian official is honoured as one of the first Gentiles to be baptized, before Cornelius."
+    ],
+    "w": "Meroë" }
+]
+}
