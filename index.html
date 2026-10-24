@@ -154,7 +154,7 @@ button, input { font: inherit; color: inherit; }
 #massChips .chip[aria-pressed="true"] { border-color: color-mix(in srgb, var(--gold) 60%, transparent); color: var(--ink); background: rgba(232,184,74,0.14); }
 #massChips .tick { fill: none; stroke: currentColor; stroke-width: 2; width: 13px; height: 13px; margin: 0; }
 #massChips .lang { cursor: default; padding-right: 6px; }
-#massChips select { background: transparent; color: var(--ink); border: 0; font: inherit; font-size: 12.5px; cursor: pointer; max-width: 150px; }
+#massChips select { background: transparent; color: var(--ink); border: 0; font: inherit; font-size: 12.5px; cursor: pointer; max-width: 210px; }
 #massChips select option { background: var(--panel-solid); }
 #massChips .mass-note { color: var(--ink-faint); font-size: 11.5px; text-shadow: 0 1px 6px #000; }
 .chip i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
@@ -330,7 +330,12 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 16px; margin: 0; font-size: 13.5px; }
 .facts dt { color: var(--ink-faint); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 2px; }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
-.facts dd.wide { grid-column: 1 / -1; }
+.facts dd.addr { line-height: 1.45; }
+.facts .mini { margin-left: 8px; vertical-align: 1px; height: 22px; padding: 0 9px; border-radius: 11px; border: 1px solid var(--line); background: none; color: var(--ink-soft); font-size: 11.5px; cursor: pointer; }
+.facts .mini:hover { color: var(--ink); border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.facts dd.links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.facts dd.links a { display: inline-flex; align-items: center; gap: 6px; }
+.facts dd.links svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .facts a { color: var(--gold-soft); text-underline-offset: 3px; }
 .facts .mono { font-family: var(--font-data); font-size: 12.5px; font-variant-numeric: tabular-nums; }
 .sect h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
@@ -440,6 +445,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 
 <footer class="foot">
   <button id="aboutBtn" data-i18n="aboutData">About the data</button>
+  <button id="contactBtn" data-i18n="contact">Contact</button>
   <span data-i18n="footCredit">Places © Overture Maps Foundation · Basemap Natural Earth</span>
   <span class="coords" id="coords"></span>
 </footer>
@@ -539,7 +545,7 @@ const EN = {
   century: '{ord} century', decade: '{y}s', bc: '{y} BC',
   fact_P571: 'Founded', fact_P1619: 'Opened', fact_P825: 'Dedicated to', fact_P708: 'Diocese', fact_P84: 'Architect',
   fact_P149: 'Style', fact_P1435: 'Heritage status', fact_P5138: 'Part of',
-  dedicatedTo: 'Dedicated to', namedFor: 'Named for', aboutOnWiki: 'About {name} on Wikipedia', imageCredit: 'Image: {author} · {license}',
+  dedicatedTo: 'Dedicated to', namedFor: 'Named for', aboutOnWiki: 'About {name} on Wikipedia',
   aboutChurch: 'About this church', readMore: 'Read more on Wikipedia', readMoreLang: 'Read more on Wikipedia ({lang})',
   photos_one: '{n} photo', photos_other: '{n} photos', openGallery_one: 'Open the photo gallery, {n} photo', openGallery_other: 'Open the photo gallery, {n} photos',
   photosOfChurch: 'Photos of this church', openPhoto: 'Open photo {k} of {n}',
@@ -549,10 +555,9 @@ const EN = {
   loadingName: 'Loading name…', clickDetails: 'Click for details',
   loading: 'Loading…', detailsFailed: 'Details didn\'t load', checkConnection: 'Check your connection, then click the pin again.',
   onGlobe: 'Location on the globe', directions: 'Directions', parishSite: 'Parish website', share: 'Share', emailLink: 'Email a link',
-  copyLink: 'Copy link', moreOptions: 'More options…', flyHere: 'Fly here', address: 'Address', country: 'Country', phone: 'Phone',
-  website: 'Website', parishPage: 'Parish page', mediaTitle: 'Photos, video and history', photosLink: 'Photos', videos: 'Videos',
+  copyLink: 'Copy link', moreOptions: 'More options…', flyHere: 'Fly here', address: 'Address', phone: 'Phone',
+  website: 'Website', mediaTitle: 'Photos, video and history', photosLink: 'Photos', videos: 'Videos',
   streetView: 'Street View', history: 'History',
-  confHigh: 'High confidence', confMedium: 'Medium confidence', confLow: 'Low confidence',
   byName: 'Identified as Catholic by its name', listed: 'Listed as Roman Catholic',
   source: 'Source: Overture Maps places ({datasets}).', sourceUpdated: 'Source: Overture Maps places ({datasets}), updated {date}.',
   aChurch: 'A Catholic church', mailSubject: '{name} on Catholic Church Finder', mailBody: 'See it on the globe:',
@@ -583,13 +588,28 @@ const EN = {
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
   confSoon: 'Confession soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
-  massLang: 'Mass language', anyLang: 'Any', clear: 'Clear', signLanguage: 'Sign language',
+  anyLang: 'Any language', clear: 'Clear', signLanguage: 'Sign language',
   timesFound_one: 'Times found for {n} church', timesFound_other: 'Times found for {n} churches',
   massLangTag_one: 'Showing <b>{n}</b> church with Mass in {lang}', massLangTag_other: 'Showing <b>{n}</b> churches with Mass in {lang}',
   massSoonTag_one: 'Showing <b>{n}</b> church with Mass in the next 2 hours', massSoonTag_other: 'Showing <b>{n}</b> churches with Mass in the next 2 hours',
   massSoonLangTag_one: 'Showing <b>{n}</b> church with Mass in {lang} in the next 2 hours', massSoonLangTag_other: 'Showing <b>{n}</b> churches with Mass in {lang} in the next 2 hours',
   confSoonTag_one: 'Showing <b>{n}</b> church with Confession in the next 2 hours', confSoonTag_other: 'Showing <b>{n}</b> churches with Confession in the next 2 hours',
   confSoonLangTag_one: 'Showing <b>{n}</b> church with Confession in the next 2 hours and Mass in {lang}', confSoonLangTag_other: 'Showing <b>{n}</b> churches with Confession in the next 2 hours and Mass in {lang}',
+  contact: "Contact",
+  contactIntro: "Questions, corrections or a church that's missing from the globe? We'd love to hear from you.",
+  sendEmail: "Send an email",
+  copyEmail: "Copy email address",
+  noMailApp: "If no email app opened, write to {addr}",
+  copy: "Copy",
+  copyAddrTip: "Copy the address",
+  online: "Online",
+  unverified: "Unverified listing",
+  unverifiedTip: "The map data this listing comes from is not sure it is accurate",
+  massLangOpt_one: "{lang} · {n} church",
+  massLangOpt_other: "{lang} · {n} churches",
+  massLangTip: "Show only churches that list a Mass in this language. The number is how many churches list one.",
+  massLangAria: "Show only churches with a Mass in this language",
+  massNoteTip: "Mass and Confession times are read from parish websites, so only churches whose site lists them can be filtered",
 };
 const i18n = { code: 'en', dict: EN, locale: 'en', wiki: 'en', rtl: false };
 let plurals = new Intl.PluralRules('en');
@@ -832,14 +852,14 @@ function applyMassFilter() {
 function renderMassChips() {
   const langs = {};
   for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = v[j] >> 19; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
-  const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(massLangName(c))} (${fmt(n)})</option>`; }).join('');
+  const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
   const clock = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>';
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
     <button class="chip" data-m="mass" aria-pressed="${mf.mode === 'mass'}" title="${esc(tr('massSoonTip'))}">${clock}${esc(tr('massSoon'))}</button>
     <button class="chip" data-m="conf" aria-pressed="${mf.mode === 'conf'}" title="${esc(tr('confSoonTip'))}">${clock}${esc(tr('confSoon'))}</button>
-    ${opts ? `<label class="chip lang"><span>${esc(tr('language'))}</span><select id="massLang" aria-label="${esc(tr('massLang'))}"><option value="">${esc(tr('anyLang'))}</option>${opts}</select></label>` : ''}
+    ${opts ? `<label class="chip lang" title="${esc(tr('massLangTip'))}"><span>${esc(tr('language'))}</span><select id="massLang" aria-label="${esc(tr('massLangAria'))}"><option value="">${esc(tr('anyLang'))}</option>${opts}</select></label>` : ''}
     ${mf.mode || mf.lang ? `<button class="chip" data-m="clear">${esc(tr('clear'))}</button>` : ''}
-    <small class="mass-note">${esc(tr('timesFound', { n: Object.keys(mf.data.c).length }))}</small>`;
+    <small class="mass-note" title="${esc(tr('massNoteTip'))}">${esc(tr('timesFound', { n: Object.keys(mf.data.c).length }))}</small>`;
   $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang));
 }
 async function initMassFilters() {
@@ -1849,10 +1869,32 @@ function wireShare(i, name, place) {
 }
 addEventListener('click', (e) => { const m = $('shareMenu'); if (m && !m.hidden && !e.target.closest('.share-wrap')) { m.hidden = true; $('shareBtn').setAttribute('aria-expanded', false); } });
 
+/* postal address in each country's official layout (Google libaddressinput formats), country last.
+   %A street, %C town, %S region, %Z postcode, %n new line; name, organisation and district fields are not in our data */
+const ADDRESS_FMT = {"RE":"%O%n%N%n%A%n%Z %C %X","PG":"%N%n%O%n%A%n%C %Z %S","SA":"%N%n%O%n%A%n%C %Z","TA":"%N%n%O%n%A%n%C%n%Z","MU":"%N%n%O%n%A%n%Z%n%C","DO":"%N%n%O%n%A%n%Z %C","RU":"%N%n%O%n%A%n%C%n%S%n%Z","SV":"%N%n%O%n%A%n%Z-%C%n%S","BF":"%N%n%O%n%A%n%C %X","GB":"%N%n%O%n%A%n%C%n%Z","XK":"%N%n%O%n%A%n%Z %C","MC":"%N%n%O%n%A%nMC-%Z %C %X","PN":"%N%n%O%n%A%n%C%n%Z","AI":"%N%n%O%n%A%n%C%n%Z","SD":"%N%n%O%n%A%n%C%n%Z","BT":"%N%n%O%n%A%n%C %Z","JM":"%N%n%O%n%A%n%C%n%S %X","TV":"%N%n%O%n%A%n%C%n%S","SK":"%N%n%O%n%A%n%Z %C","ZZ":"%N%n%O%n%A%n%C","CI":"%N%n%O%n%X %A %C %X","YT":"%O%n%N%n%A%n%Z %C %X","KP":"%Z%n%S%n%C%n%A%n%O%n%N","NO":"%N%n%O%n%A%n%Z %C","PW":"%N%n%O%n%A%n%C %S %Z","SN":"%N%n%O%n%A%n%Z %C","MG":"%N%n%O%n%A%n%Z %C","IT":"%N%n%O%n%A%n%Z %C %S","RS":"%N%n%O%n%A%n%Z %C","AL":"%N%n%O%n%A%n%Z%n%C","BE":"%O%n%N%n%A%n%Z %C","MN":"%N%n%O%n%A%n%C%n%S %Z","MO":"%A%n%O%n%N","GF":"%O%n%N%n%A%n%Z %C %X","SH":"%N%n%O%n%A%n%C%n%Z","PA":"%N%n%O%n%A%n%C%n%S","HR":"%N%n%O%n%A%nHR-%Z %C","GL":"%N%n%O%n%A%n%Z %C","PF":"%N%n%O%n%A%n%Z %C %S","GE":"%N%n%O%n%A%n%Z %C","MD":"%N%n%O%n%A%nMD-%Z %C","JP":"\u3012%Z%n%S%n%A%n%O%n%N","UY":"%N%n%O%n%A%n%Z %C %S","AM":"%N%n%O%n%A%n%Z%n%C%n%S","NI":"%N%n%O%n%A%n%Z%n%C, %S","CA":"%N%n%O%n%A%n%C %S %Z","OM":"%N%n%O%n%A%n%Z%n%C","MQ":"%O%n%N%n%A%n%Z %C %X","NZ":"%N%n%O%n%A%n%D%n%C %Z","LU":"%O%n%N%n%A%nL-%Z %C","AE":"%N%n%O%n%A%n%S","IR":"%O%n%N%n%S%n%C, %D%n%A%n%Z","AZ":"%N%n%O%n%A%nAZ %Z %C","CU":"%N%n%O%n%A%n%C %S%n%Z","KG":"%N%n%O%n%A%n%Z %C","NA":"%N%n%O%n%A%n%C%n%Z","FK":"%N%n%O%n%A%n%C%n%Z","SM":"%N%n%O%n%A%n%Z %C","GP":"%O%n%N%n%A%n%Z %C %X","BL":"%O%n%N%n%A%n%Z %C %X","BM":"%N%n%O%n%A%n%C %Z","GW":"%N%n%O%n%A%n%Z %C","KH":"%N%n%O%n%A%n%C %Z","EC":"%N%n%O%n%A%n%Z%n%C","PK":"%N%n%O%n%A%n%D%n%C-%Z","MA":"%N%n%O%n%A%n%Z %C","WF":"%O%n%N%n%A%n%Z %C %X","CZ":"%N%n%O%n%A%n%Z %C","ID":"%N%n%O%n%A%n%C%n%S %Z","NR":"%N%n%O%n%A%n%S","CX":"%O%n%N%n%A%n%C %S %Z","IO":"%N%n%O%n%A%n%C%n%Z","UM":"%N%n%O%n%A%n%C %S %Z","GU":"%N%n%O%n%A%n%C %Z","MW":"%N%n%O%n%A%n%C %X","CN":"%Z%n%S%C%D%n%A%n%O%n%N","KE":"%N%n%O%n%A%n%C%n%Z","US":"%N%n%O%n%A%n%C, %S %Z","HM":"%O%n%N%n%A%n%C %S %Z","KN":"%N%n%O%n%A%n%C, %S","BR":"%O%n%N%n%A%n%D%n%C-%S%n%Z","SG":"%N%n%O%n%A%nSINGAPORE %Z","AC":"%N%n%O%n%A%n%C%n%Z","VI":"%N%n%O%n%A%n%C %S %Z","PE":"%N%n%O%n%A%n%C %Z%n%S","HK":"%S%n%C%n%A%n%O%n%N","AX":"%O%n%N%n%A%nAX-%Z %C%n\u00c5LAND","KW":"%N%n%O%n%A%n%Z %C","BA":"%N%n%O%n%A%n%Z %C","CL":"%N%n%O%n%A%n%Z %C%n%S","FR":"%O%n%N%n%A%n%Z %C","BH":"%N%n%O%n%A%n%C %Z","NC":"%O%n%N%n%A%n%Z %C %X","AU":"%O%n%N%n%A%n%C %S %Z","NE":"%N%n%O%n%A%n%Z %C","SO":"%N%n%O%n%A%n%C, %S %Z","IE":"%N%n%O%n%A%n%D%n%C%n%S%n%Z","MY":"%N%n%O%n%A%n%D%n%Z %C%n%S","LV":"%N%n%O%n%A%n%S%n%C, %Z","SC":"%N%n%O%n%A%n%C%n%S","HN":"%N%n%O%n%A%n%C, %S%n%Z","JE":"%N%n%O%n%A%n%C%nJERSEY%n%Z","IM":"%N%n%O%n%A%n%C%n%Z","FM":"%N%n%O%n%A%n%C %S %Z","TZ":"%N%n%O%n%A%n%Z %C","LS":"%N%n%O%n%A%n%C %Z","UZ":"%N%n%O%n%A%n%Z %C%n%S","BY":"%O%n%N%n%A%n%Z, %C%n%S","PT":"%N%n%O%n%A%n%Z %C","LB":"%N%n%O%n%A%n%C %Z","LI":"%O%n%N%n%A%nFL-%Z %C","BS":"%N%n%O%n%A%n%C, %S","VG":"%N%n%O%n%A%n%C%n%Z","RO":"%N%n%O%n%A%n%Z %S %C","PM":"%O%n%N%n%A%n%Z %C %X","MH":"%N%n%O%n%A%n%C %S %Z","NG":"%N%n%O%n%A%n%D%n%C %Z%n%S","IQ":"%O%n%N%n%A%n%C, %S%n%Z","LR":"%N%n%O%n%A%n%Z %C","AD":"%N%n%O%n%A%n%Z %C","DE":"%N%n%O%n%A%n%Z %C","LA":"%N%n%O%n%A%n%Z %C","GI":"%N%n%O%n%A%nGIBRALTAR%n%Z","MK":"%N%n%O%n%A%n%Z %C","MM":"%N%n%O%n%A%n%C, %Z","FI":"%O%n%N%n%A%nFI-%Z %C","TN":"%N%n%O%n%A%n%Z %C","BN":"%N%n%O%n%A%n%C %Z","FO":"%N%n%O%n%A%nFO%Z %C","TM":"%N%n%O%n%A%n%Z %C","AS":"%N%n%O%n%A%n%C %S %Z","CH":"%O%n%N%n%A%nCH-%Z %C","TH":"%N%n%O%n%A%n%D %C%n%S %Z","GG":"%N%n%O%n%A%n%C%nGUERNSEY%n%Z","LT":"%O%n%N%n%A%nLT-%Z %C %S","KY":"%N%n%O%n%A%n%S %Z","CR":"%N%n%O%n%A%n%S, %C%n%Z","TW":"%Z%n%S%C%n%A%n%O%n%N","BG":"%N%n%O%n%A%n%Z %C","TR":"%N%n%O%n%A%n%Z %C/%S","VE":"%N%n%O%n%A%n%C %Z, %S","SJ":"%N%n%O%n%A%n%Z %C","EG":"%N%n%O%n%A%n%C%n%S%n%Z","TJ":"%N%n%O%n%A%n%Z %C","ME":"%N%n%O%n%A%n%Z %C","ES":"%N%n%O%n%A%n%Z %C %S","KZ":"%Z%n%S%n%C%n%A%n%O%n%N","AT":"%O%n%N%n%A%n%Z %C","GN":"%N%n%O%n%Z %A %C","GR":"%N%n%O%n%A%n%Z %C","DZ":"%N%n%O%n%A%n%Z %C","ET":"%N%n%O%n%A%n%Z %C","BD":"%N%n%O%n%A%n%C - %Z","ZM":"%N%n%O%n%A%n%Z %C","NP":"%N%n%O%n%A%n%C %Z","VC":"%N%n%O%n%A%n%C %Z","DK":"%N%n%O%n%A%n%Z %C","KI":"%N%n%O%n%A%n%S%n%C","CY":"%N%n%O%n%A%n%Z %C","SR":"%N%n%O%n%A%n%C%n%S","BB":"%N%n%O%n%A%n%C, %S %Z","JO":"%N%n%O%n%A%n%C %Z","MT":"%N%n%O%n%A%n%C %Z","TC":"%N%n%O%n%A%n%C%n%Z","MV":"%N%n%O%n%A%n%C %Z","IL":"%N%n%O%n%A%n%C %Z","PH":"%N%n%O%n%A%n%D, %C%n%Z %S","AF":"%N%n%O%n%A%n%C%n%Z","IS":"%N%n%O%n%A%n%Z %C","CC":"%O%n%N%n%A%n%C %S %Z","UA":"%N%n%O%n%A%n%C%n%S%n%Z","LK":"%N%n%O%n%A%n%C%n%Z","NL":"%O%n%N%n%A%n%Z %C","HU":"%N%n%O%n%C%n%A%n%Z","CO":"%N%n%O%n%A%n%D%n%C, %S, %Z","MZ":"%N%n%O%n%A%n%Z %C%S","PL":"%N%n%O%n%A%n%Z %C","GS":"%N%n%O%n%A%n%n%C%n%Z","SE":"%O%n%N%n%A%nSE-%Z %C","VN":"%N%n%O%n%A%n%C%n%S %Z","AR":"%N%n%O%n%A%n%Z %C%n%S","KR":"%S %C%D%n%A%n%O%n%N%n%Z","VA":"%N%n%O%n%A%n%Z %C","CV":"%N%n%O%n%A%n%Z %C%n%S","EH":"%N%n%O%n%A%n%Z %C","GT":"%N%n%O%n%A%n%Z- %C","HT":"%N%n%O%n%A%nHT%Z %C","PY":"%N%n%O%n%A%n%Z %C","ZA":"%N%n%O%n%A%n%D%n%C%n%Z","MP":"%N%n%O%n%A%n%C %S %Z","PR":"%N%n%O%n%A%n%C PR %Z","IN":"%N%n%O%n%A%n%C %Z%n%S","EE":"%N%n%O%n%A%n%Z %C %S","MX":"%N%n%O%n%A%n%D%n%Z %C, %S","NF":"%O%n%N%n%A%n%C %S %Z","SI":"%N%n%O%n%A%nSI-%Z %C","SZ":"%N%n%O%n%A%n%C%n%Z","MF":"%O%n%N%n%A%n%Z %C %X"};
+function postalLines(street, town, region, postcode, cc) {
+  const clean = (v) => String(v || '').replace(/\\[nrt]/g, ' ').replace(/\s+/g, ' ').replace(/^[,\s]+|[,\s]+$/g, '');
+  street = clean(street); town = clean(town); region = clean(region); postcode = clean(postcode);
+  if (street && town && squash(street) === squash(town)) street = '';
+  if (postcode && street.includes(postcode)) street = clean(street.replace(postcode, ''));
+  if (region && squash(region) === squash(town)) region = '';
+  let fmt = (ADDRESS_FMT[cc] || '%A%n%C %Z').replace(/%([A-Z])(?=%[A-Z])/g, '%$1 '); // our data is romanized: space out run-together fields
+  // a country prefix such as "CH-", "HT" or 〒 only goes with a postcode, and only once
+  const pre = /(〒|[A-Z]{1,3}-?)%Z/.exec(fmt);
+  if (pre && (!postcode || postcode.toUpperCase().startsWith(pre[1].replace('-', '')))) fmt = fmt.replace(pre[0], '%Z');
+  const val = { A: street, C: town, S: region || (fmt.includes('%C') ? '' : town), Z: postcode };
+  const lines = fmt.split('%n').map(line => line
+    .replace(/%([A-Z])/g, (_, k) => val[k] || '\u0000')
+        .replace(/(\s*[,\-–]\s*)?\u0000(\s*[,\-–])?/g, (m, before, after) => (before && after ? before : ''))
+    .replace(/\u0000/g, '').replace(/^[\s,\-–]+|[\s,\-–]+$/g, '').replace(/\s{2,}/g, ' '));
+  return [...lines, countryName(cc)].filter(Boolean);
+}
 const icon = {
   photo: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>',
   video: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>',
   map: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  web: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>',
+  fb: '<svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>',
   book: '<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6"/></svg>',
 };
 
@@ -1877,6 +1919,7 @@ async function selectChurch(i, { fly = true } = {}) {
   if (state.selected !== i) return;
   const [name, street, town, region, postcode, cc, web0, phone, socials, conf, datasets, oid, how, updated] = rec;
   const web = webInfo.fix.web || web0;
+  const addr = postalLines(street, town, region, postcode, cc);
   const country = countryName(cc);
   const place = [town, region && region !== town ? region : '', country].filter(Boolean).join(', ');
   const q = encodeURIComponent([name, town, country].filter(Boolean).join(' '));
@@ -1890,7 +1933,6 @@ async function selectChurch(i, { fly = true } = {}) {
   const kind = webUrl ? linkKind(webUrl) : null;
   const pastor = pastorOf(wentry);
   const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
-  const confLabel = tr(conf >= 0.8 ? 'confHigh' : conf >= 0.55 ? 'confMedium' : 'confLow');
   $('cardBody').innerHTML = `
     <div>
       <h2 id="cName">${esc(name)}</h2>
@@ -1909,13 +1951,13 @@ async function selectChurch(i, { fly = true } = {}) {
       <button class="btn" id="flyBtn">${esc(tr('flyHere'))}</button>
     </div>
     <dl class="facts">
-      ${street ? `<dt>${esc(tr('address'))}</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
-      ${country ? `<dt>${esc(tr('country'))}</dt><dd>${esc(country)}</dd>` : ''}
+      ${addr.length ? `<dt>${esc(tr('address'))}</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="${esc(tr('copyAddrTip'))}">${esc(tr('copy'))}</button></dd>` : ''}
       ${pastor ? `<dt>${esc(roleLabel(pastor[3]))}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
       ${phone ? `<dt>${esc(tr('phone'))}</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
-      ${kind && kind.row ? `<dt>${esc(platLabel(kind.row))}</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(kind.platform ? host(webUrl) + new URL(webUrl).pathname.replace(/\/$/, '') : host(webUrl))}</a>${wentry && wentry[0] === 2 ? ` <span class="moved">${esc(tr('newAddress'))}</span>` : ''}</dd>` : ''}
-      ${webDead ? `<dt>${esc(tr('website'))}</dt><dd>${tr('webDead', { site: `<s class="dead">${esc(host(listedUrl))}</s>`, a1: `<a href="${esc(webSearch)}" target="_blank" rel="noopener">`, end: '</a>' })}</dd>` : ''}
-      ${fb && !(kind && kind.btn === 'Facebook') ? `<dd class="wide"><a href="${esc(fb)}" target="_blank" rel="noopener">${esc(tr('fbPage'))}</a></dd>` : ''}
+      ${(webUrl && kind && kind.row) || webDead || fb ? `<dt>${esc(tr('online'))}</dt><dd class="links">${
+        webUrl && kind && kind.row ? `<a href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn === 'Facebook' ? icon.fb : icon.web}${esc(kind.btn === 'Facebook' ? tr('fbPage') : kind.platform ? platLabel(kind.row) : host(webUrl))}</a>${wentry && wentry[0] === 2 ? `<span class="moved">${esc(tr('newAddress'))}</span>` : ''}` : ''}${
+        webDead ? `<span>${tr('webDead', { site: `<s class="dead">${esc(host(listedUrl))}</s>`, a1: `<a href="${esc(webSearch)}" target="_blank" rel="noopener">`, end: '</a>' })}</span>` : ''}${
+        fb && !(kind && kind.btn === 'Facebook') ? `<a href="${esc(fb)}" target="_blank" rel="noopener">${icon.fb}${esc(tr('fbPage'))}</a>` : ''}</dd>` : ''}
     </dl>
     ${scheduleHTML(wentry, webInfo.checked, host)}
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
@@ -1930,13 +1972,18 @@ async function selectChurch(i, { fly = true } = {}) {
       </div>
     </div>
     <div class="prov">
-      <span class="pill">${esc(confLabel)}</span>${how === 'name' ? `<span class="pill warn">${esc(tr('byName'))}</span>` : `<span class="pill">${esc(tr('listed'))}</span>`}
+      ${conf < 0.55 ? `<span class="pill warn" title="${esc(tr('unverifiedTip'))}">${esc(tr('unverified'))}</span>` : ''}${how === 'name' ? `<span class="pill warn">${esc(tr('byName'))}</span>` : `<span class="pill">${esc(tr('listed'))}</span>`}
       <div style="margin-top:8px">${esc(tr(updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: /^\d{4}-\d\d-\d\d$/.test(updated) ? new Date(updated + 'T12:00:00').toLocaleDateString(i18n.locale, { dateStyle: 'medium' }) : updated }))}</div>
     </div>`;
   if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
   syncSave(i);
   $('saveBtn').addEventListener('click', () => toggleFav(i, { name, place, t }));
   wireShare(i, name, place);
+  if ($('copyAddr')) $('copyAddr').addEventListener('click', async () => {
+    const b = $('copyAddr'); let ok = false;
+    try { await navigator.clipboard.writeText(addr.join('\n')); ok = true; } catch (e) {}
+    b.textContent = tr(ok ? 'copied' : 'copyFailed'); setTimeout(() => { b.textContent = tr('copy'); }, 1400);
+  });
   showAbout(i, rec);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: cardPad(wide) }));
@@ -2094,6 +2141,30 @@ $('aboutBtn').addEventListener('click', () => {
 });
 $('about').addEventListener('click', (e) => { if (e.target.id === 'about') $('about').hidden = true; });
 
+/* ---------- contact: the address is put together only when someone asks, to keep it from spam harvesters ---------- */
+const contactAddr = () => ['jjones622', ['comcast', 'net'].join('.')].join(String.fromCharCode(64));
+$('contactBtn').addEventListener('click', () => {
+  $('aboutBox').innerHTML = `
+    <h2 id="aboutTitle">${esc(tr('contact'))}</h2>
+    <p>${esc(tr('contactIntro'))}</p>
+    <div class="actions" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn primary" id="mailBtn">${esc(tr('sendEmail'))}</button>
+      <button class="btn" id="copyMail">${esc(tr('copyEmail'))}</button>
+      <button class="btn" id="contactClose">${esc(tr('close'))}</button>
+    </div>
+    <p id="mailShown" style="font-size:13px" hidden></p>`;
+  $('about').hidden = false; $('mailBtn').focus();
+  $('mailBtn').addEventListener('click', () => {
+    location.href = 'mailto:' + contactAddr() + '?subject=' + encodeURIComponent(tr('app'));
+    $('mailShown').hidden = false; $('mailShown').textContent = tr('noMailApp', { addr: contactAddr() });
+  });
+  $('copyMail').addEventListener('click', async () => {
+    let ok = false; try { await navigator.clipboard.writeText(contactAddr()); ok = true; } catch (e) {}
+    $('copyMail').textContent = ok ? tr('copied') : contactAddr();
+  });
+  $('contactClose').addEventListener('click', () => { $('about').hidden = true; });
+});
+
 /* ---------- switching language: everything on screen is drawn again in the new one ---------- */
 $('langSel').addEventListener('change', async (e) => {
   const code = e.target.value;
@@ -2103,7 +2174,7 @@ $('langSel').addEventListener('change', async (e) => {
   renderChips(); updateTagline(); renderFavs(); renderNear(); setCityLabels();
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
-  if (!$('about').hidden) $('aboutBtn').click();
+  if (!$('about').hidden) $($('mailBtn') ? 'contactBtn' : 'aboutBtn').click();
   if (!resEl.hidden && searchIdx) runSearch();
   if (state.selected >= 0) selectChurch(state.selected, { fly: false });
 });
