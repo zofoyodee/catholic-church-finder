@@ -102,11 +102,14 @@ button, input { font: inherit; color: inherit; }
 .langpick select:hover, .langpick select:focus-visible { border-color: color-mix(in srgb, var(--gold) 55%, transparent); }
 .langpick option { background: var(--panel-solid); color: var(--ink); }
 /* scripts the Latin web fonts don't cover get Noto, loaded only for that language */
-:root:lang(vi), :root:lang(uk) { --font-ui: "Noto Sans", "Segoe UI", system-ui, sans-serif; --font-display: "Noto Serif", "Times New Roman", serif; }
+:root:lang(vi), :root:lang(uk), :root:lang(ru), :root:lang(yo), :root:lang(ig) { --font-ui: "Noto Sans", "Segoe UI", system-ui, sans-serif; --font-display: "Noto Serif", "Times New Roman", serif; }
 :root:lang(ko) { --font-ui: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; --font-display: "Noto Serif KR", serif; }
 :root:lang(zh) { --font-ui: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; --font-display: "Noto Serif SC", serif; }
 :root:lang(ar) { --font-ui: "Noto Sans Arabic", "Segoe UI", system-ui, sans-serif; --font-display: "Noto Naskh Arabic", serif; }
 :root:lang(ml) { --font-ui: "Noto Sans Malayalam", system-ui, sans-serif; --font-display: "Noto Serif Malayalam", serif; }
+:root:lang(ja) { --font-ui: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif; --font-display: "Noto Serif JP", serif; }
+:root:lang(hi) { --font-ui: "Noto Sans Devanagari", system-ui, sans-serif; --font-display: "Noto Serif Devanagari", serif; }
+:root:lang(ta) { --font-ui: "Noto Sans Tamil", system-ui, sans-serif; --font-display: "Noto Serif Tamil", serif; }
 :root:is(:lang(ko), :lang(zh), :lang(ar), :lang(ml)) .brand h1, :root:is(:lang(ko), :lang(zh), :lang(ar), :lang(ml)) .chips .lbl { letter-spacing: 0; }
 /* right-to-left: text and rows flip, the globe's panels keep their places */
 [dir="rtl"] .search svg { left: auto; right: 14px; }
@@ -499,6 +502,11 @@ const LANGS = [
   ['pl', 'Polski'], ['sw', 'Kiswahili'], ['de', 'Deutsch'], ['zh', '中文', 'zh', 'zh-CN'], ['nl', 'Nederlands'], ['id', 'Bahasa Indonesia'],
   ['vi', 'Tiếng Việt'], ['ml', 'മലയാളം'], ['ko', '한국어'], ['hu', 'Magyar'], ['uk', 'Українська'], ['hr', 'Hrvatski'],
   ['ar', 'العربية', 'ar', 'ar-u-nu-latn'], ['sk', 'Slovenčina'],
+  ['ceb', 'Cebuano'], ['ig', 'Asụsụ Igbo'], ['ln', 'Lingála'], ['mg', 'Malagasy'], ['hil', 'Hiligaynon', 'en'], ['ilo', 'Ilokano'],
+  ['qu', 'Runasimi'], ['rn', 'Ikirundi'], ['ht', 'Kreyòl ayisyen'], ['rw', 'Kinyarwanda'], ['lg', 'Luganda'], ['bcl', 'Bikol'],
+  ['gn', 'Avañeʼẽ'], ['ta', 'தமிழ்'], ['ny', 'Chichewa'], ['war', 'Winaray'], ['bem', 'Ichibemba', 'en'], ['ki', 'Gĩkũyũ'],
+  ['yo', 'Yorùbá'], ['lt', 'Lietuvių'], ['sn', 'chiShona'], ['hi', 'हिन्दी'], ['sl', 'Slovenščina'], ['cs', 'Čeština'],
+  ['tet', 'Tetun'], ['gom', 'Konknni'], ['ru', 'Русский'], ['ja', '日本語'], ['sq', 'Shqip'], ['la', 'Latina'],
 ].map(([code, name, wiki, locale]) => ({ code, name, wiki: wiki || code, locale: locale || code }));
 const LANG_BY = Object.fromEntries(LANGS.map(l => [l.code, l]));
 const RTL = new Set(['ar']);
@@ -507,6 +515,9 @@ const SCRIPT_FONTS = {
   vi: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', uk: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600',
   ko: 'Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@500;600', zh: 'Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600',
   ar: 'Noto+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500;600', ml: 'Noto+Sans+Malayalam:wght@400;500;600&family=Noto+Serif+Malayalam:wght@500;600',
+  ru: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', ja: 'Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@500;600',
+  hi: 'Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600', ta: 'Noto+Sans+Tamil:wght@400;500;600&family=Noto+Serif+Tamil:wght@500;600',
+  yo: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', ig: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600',
 };
 const LANG_KEY = 'ccf-lang';
 function detectLang() {
@@ -516,6 +527,7 @@ function detectLang() {
     if (!c) continue;
     let base = String(c).toLowerCase().split(/[-_]/)[0];
     if (base === 'tl') base = 'fil';
+    if (base === 'kok') base = 'gom';
     if (LANG_BY[base]) return base;
   }
   return 'en';
@@ -633,7 +645,7 @@ function applyStatic() {
   document.querySelectorAll('[data-i18n-attr]').forEach(el => { for (const pair of el.dataset.i18nAttr.split(';')) { const [attr, key] = pair.split(':'); el.setAttribute(attr, tr(key)); } });
   document.title = tr('app');
   const sel = $('langSel');
-  if (!sel.options.length) sel.innerHTML = LANGS.map(l => `<option value="${l.code}" lang="${l.code}">${l.name}</option>`).join('');
+  if (!sel.options.length) sel.innerHTML = [...LANGS].sort((a, b) => a.name.localeCompare(b.name, 'en')).map(l => `<option value="${l.code}" lang="${l.code}">${l.name}</option>`).join('');
   sel.value = i18n.code; sel.setAttribute('aria-label', tr('language')); sel.parentNode.title = tr('language');
 }
 async function useLang(code) {
@@ -1107,12 +1119,13 @@ window.__map = map;
 
 // city names in the page language (Natural Earth); languages it lacks use the English names
 let places = null;
-const cityNames = new Map(), CITY_FILE = { fil: 'en', sw: 'en', ml: 'en', hr: 'en', sk: 'en' };
+// city names on the map: languages with their own Natural Earth column, the rest read English (Hindi and Tamil can't be drawn by the map)
+const cityNames = new Map(), CITY_FILES = new Set(['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja']);
 async function setCityLabels() {
-  const f = CITY_FILE[i18n.code] || i18n.code;
+  const f = CITY_FILES.has(i18n.code) ? i18n.code : 'en';
   if (!cityNames.has(f)) cityNames.set(f, getJSON('base/names/' + f + '.json').catch(e => { cityNames.delete(f); return []; }));
   const names = await cityNames.get(f);
-  if (f !== (CITY_FILE[i18n.code] || i18n.code) || !places) return;
+  if (f !== (CITY_FILES.has(i18n.code) ? i18n.code : 'en') || !places) return;
   places.features.forEach((ft, k) => { ft.properties.label = names[k] || ft.properties.name; });
   const src = map.getSource('places'); if (src) src.setData(places);
 }
@@ -1430,7 +1443,7 @@ async function patronLocal(title, wiki) {
   const [saints, mine] = await Promise.all([saintsFor(i18n.code), local]);
   const bio = saints && saints[base.key];
   if (bio) return { ...base, name: bio[0], feast: bio[1], text: bio[2], url: mine ? mine.url : '', wiki: true };
-  if (mine && mine.text) return { ...base, name: mine.name, feast: '', text: mine.text, url: mine.url, wiki: true };
+  if (mine && mine.text && OUTSIDER_BY[wiki]) return { ...base, name: mine.name, feast: '', text: mine.text, url: mine.url, wiki: true };
   return base;
 }
 async function patronInfo(title, wiki = 'en') {
@@ -1548,6 +1561,15 @@ const OUTSIDER_BY = {
   ko: /공경받|숭배|여겨진|간주|믿어진|믿는다|전승|전설|신화|이슬람|꾸란|코란|무슬림|개신교|정교회|루터|성공회|감리교|교파|종교|학자|역사가|역사성|외경|그리스도인|기독교/,
   ar: /يُبجّل|مبجل|يُعتبر|يعتبر|يُعتقد|يعتقد|التقليد|أسطور|خراف|الإسلام|القرآن|مسلم|بروتستانت|أرثوذكس|لوثري|أنجليكان|ميثودي|طائف|الدين|الأديان|العلماء|المؤرخ|منحول|المسيحيين|المسيحية/,
   ml: /ആദരിക്ക|വണങ്ങ|കരുതപ്പെ|വിശ്വസിക്കപ്പെ|പാരമ്പര്യ|ഐതിഹ്യ|പുരാണ|ഇസ്ലാം|ഖുർആൻ|മുസ്ലീം|പ്രൊട്ടസ്റ്റന്റ്|ഓർത്തഡോക്സ്|ലൂഥറൻ|ആംഗ്ലിക്കൻ|മതം|മതങ്ങ|പണ്ഡിത|ചരിത്രകാര|ക്രിസ്ത്യാനി|ക്രിസ്തുമത/,
+  ru: /почита|почитает|считает|считают|считался|верят|верование|предани|традици|легенд|миф|ислам|коран|мусульм|протестант|православ|лютеран|англикан|методист|конфесси|религи|учёные|ученые|историки|историчност|апокриф|христиан/i,
+  ja: /崇敬|崇拝|とされ|みなされ|信じられ|伝承|伝統|伝説|神話|イスラム|クルアーン|コーラン|ムスリム|プロテスタント|正教|ルター|聖公会|メソジスト|教派|宗教|学者|歴史家|史実性|外典|キリスト教/,
+  cs: /uctíván|uctívá|považován|věří se|věří|tradic|legend|mýtus|islám|korán|muslim|protestant|pravoslav|luterán|anglikán|metodist|denominac|nábožen|badatel|historici|historičnost|apokryf|křesťan/i,
+  sl: /časten|časti|velja za|verjamejo|verjame|izročil|tradicij|legend|mit\b|islam|koran|musliman|protestant|pravoslav|luteran|anglikan|metodist|veroizpoved|religij|učenjaki|zgodovinarji|zgodovinskost|apokrif|kristjan|krščanstv/i,
+  lt: /gerbiam|garbinam|laikom|tikima|tiki|tradicij|legend|mitas|islam|koran|musulmon|protestant|stačiatik|liuteron|anglikon|metodist|konfesij|religij|mokslinink|istorik|istoriškum|apokrif|krikščion/i,
+  sq: /nderohet|nderuar|konsiderohet|besohet|besojnë|tradit|legjend|mit\b|islam|kuran|mysliman|protestant|ortodoks|luteran|anglikan|metodist|emërtim|feja|fetë|fe\b|studiues|historian|historicitet|apokrif|krishter/i,
+  la: /veneratur|venerat|habetur|habitus|creditur|credunt|traditio|legend|fabul|mythus|islam|coran|muslim|protestant|orthodox|lutheran|anglican|methodist|religio|eruditi|historici|apocryph|christian/i,
+  hi: /पूजनीय|पूजा जाता|माना जाता|मानते|विश्वास किया|परंपरा|किंवदंती|मिथक|पौराणिक|इस्लाम|कुरान|मुस्लिम|प्रोटेस्टेंट|रूढ़िवादी|लूथर|एंग्लिकन|मेथोडिस्ट|संप्रदाय|धर्म|विद्वान|इतिहासकार|ऐतिहासिकता|ईसाई/,
+  ta: /போற்றப்ப|வணங்கப்ப|கருதப்ப|நம்பப்ப|நம்புகின்ற|மரபு|பாரம்பரிய|புராண|தொன்மம்|இசுலாம்|இஸ்லாம்|குர்ஆன்|முஸ்லிம்|சீர்திருத்த|மரபுவழி|லூதர|ஆங்கிலிக்க|மெதடிஸ்ட்|சமயப் பிரிவு|சமய|மதம்|அறிஞர்|வரலாற்றாசிரிய|கிறித்தவ|கிறிஸ்தவ/,
 };
 function faithful(text, max = 2, lang = 'en') {
   const sentences = String(text || '').match(/[^.!?。！？؟]+(?:[.!?؟]+(?:\s|$)|[。！？]+)/g) || [];

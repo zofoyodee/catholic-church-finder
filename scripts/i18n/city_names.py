@@ -8,11 +8,12 @@ usage: python3 scripts/i18n/city_names.py ne_10m_populated_places.geojson
 """
 import json, sys, os
 
-# Filipino, Swahili, Croatian, Slovak and Malayalam have no Natural Earth column and use en.json
-# (Malayalam also because MapLibre cannot shape Malayalam script)
-LANGS = ['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar']
+# Every other page language uses en.json: it has no Natural Earth column, or (Hindi, Tamil, Malayalam)
+# MapLibre cannot shape its script. The page lists these files in CITY_FILES.
+LANGS = ['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja']
 NE_COL = {'en': 'NAME_EN', 'es': 'NAME_ES', 'pt': 'NAME_PT', 'fr': 'NAME_FR', 'it': 'NAME_IT', 'pl': 'NAME_PL', 'de': 'NAME_DE',
-          'zh': 'NAME_ZH', 'nl': 'NAME_NL', 'id': 'NAME_ID', 'vi': 'NAME_VI', 'ko': 'NAME_KO', 'hu': 'NAME_HU', 'uk': 'NAME_UK', 'ar': 'NAME_AR'}
+          'zh': 'NAME_ZH', 'nl': 'NAME_NL', 'id': 'NAME_ID', 'vi': 'NAME_VI', 'ko': 'NAME_KO', 'hu': 'NAME_HU', 'uk': 'NAME_UK', 'ar': 'NAME_AR',
+          'ru': 'NAME_RU', 'ja': 'NAME_JA'}
 
 root = os.path.join(os.path.dirname(__file__), '..', '..')
 ne = json.load(open(sys.argv[1]))['features']
