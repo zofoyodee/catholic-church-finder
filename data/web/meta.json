@@ -1,0 +1,19 @@
+{
+ "checked": "2026-10-24",
+ "stats": {
+  "moved": 3495,
+  "with_mass": 14400,
+  "with_confession": 5348,
+  "with_staff": 12447,
+  "people": 32053,
+  "with_photo": 13359,
+  "dead": 14352,
+  "not_checked": 6862,
+  "unknown": 10655,
+  "ok": 38674,
+  "with_pastor": 6768,
+  "with_times": 14459,
+  "with_language": 2030,
+  "with_confession_only": 520
+ }
+}
