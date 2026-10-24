@@ -249,7 +249,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 
 /* details card */
 .card {
-  position: fixed; z-index: 10; top: max(16px, env(safe-area-inset-top, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  position: fixed; z-index: 10; top: calc(var(--search, 6px) + 10px); bottom: max(16px, env(safe-area-inset-bottom, 0px));  /* starts under the search box */
   right: max(16px, env(safe-area-inset-right, 0px)); width: min(420px, calc(100vw - 32px));
   background: var(--panel-solid); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
   box-shadow: 0 30px 80px #000c; display: flex; flex-direction: column;
@@ -393,7 +393,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   .chip { flex: none; }
   .favs { z-index: 11; top: auto; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); width: auto; bottom: max(8px, env(safe-area-inset-bottom, 0px)); max-height: 60%; }
   .favs[hidden] { transform: translateY(calc(100% + 40px)); }
-  .card { top: auto; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); width: auto; bottom: max(8px, env(safe-area-inset-bottom, 0px)); max-height: 66%; border-radius: 18px; }
+  .card { top: auto; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); width: auto; bottom: max(8px, env(safe-area-inset-bottom, 0px)); max-height: min(66%, calc(100% - var(--search, 0px) - 18px)); border-radius: 18px; }
   .card[hidden] { transform: translateY(calc(100% + 40px)); }
   .card .hero { height: 130px; }
   .ctrls { bottom: calc(40px + env(safe-area-inset-bottom, 0px)); }
@@ -1459,6 +1459,7 @@ $('nearList').addEventListener('click', (e) => {
 
 /* ---------- keep the side controls clear of open panels ---------- */
 function placeCtrls() {
+  document.documentElement.style.setProperty('--search', Math.round(document.querySelector('.search').getBoundingClientRect().bottom) + 'px');
   document.documentElement.style.setProperty('--head', Math.round(document.querySelector('header.top').getBoundingClientRect().bottom) + 'px');
   const phone = innerWidth <= 640;
   let lift = 0;
