@@ -184,6 +184,36 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .btn.save[aria-pressed="true"] svg { fill: #e0607e; stroke: #e0607e; }
 .ctrls button.fav-open svg { stroke: #f2a1b4; }
 
+/* about this church + gallery */
+.about-church .extract { margin: 0 0 6px; line-height: 1.55; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.about-church .more, .patron .more { color: var(--gold-soft); font-size: 13px; text-underline-offset: 3px; }
+.about-church .facts { margin-top: 12px; }
+.patron { display: grid; grid-template-columns: auto 1fr; gap: 12px; margin-top: 14px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.02); }
+.patron .pimg img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: top; display: block; border: 1.5px solid color-mix(in srgb, var(--gold) 55%, transparent); }
+.patron .plabel { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 2px; }
+.patron b { font-weight: 600; }
+.patron p { margin: 4px 0 6px; font-size: 13px; line-height: 1.5; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.patron small { display: block; margin-top: 4px; font-size: 11px; color: var(--ink-faint); }
+.card .body > * { min-width: 0; }
+.strip { display: flex; gap: 6px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.strip button { flex: none; width: 92px; height: 70px; padding: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; cursor: pointer; background: var(--land); scroll-snap-align: start; }
+.strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.strip button:hover { border-color: var(--gold); }
+.card .hero .gal-btn { position: absolute; right: 14px; bottom: 12px; z-index: 1; display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 14px; border: 0; background: rgba(5,7,13,.62); color: #fff; font-size: 12px; cursor: pointer; }
+.card .hero .gal-btn svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.lightbox { position: fixed; inset: 0; z-index: 40; background: rgba(2,3,8,.97); display: grid; grid-template-rows: 1fr auto; }
+.lb-stage { display: grid; place-items: center; padding: 56px 64px 8px; min-height: 0; }
+.lb-stage img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 6px; opacity: 0; transition: opacity .3s ease; user-select: none; -webkit-user-drag: none; }
+.lb-stage img.on { opacity: 1; }
+.lb-nav, .lb-close { position: absolute; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(14,20,34,.8); cursor: pointer; display: grid; place-items: center; }
+.lb-nav svg, .lb-close svg { width: 20px; height: 20px; stroke: #fff; stroke-width: 2; }
+.lb-nav { top: 50%; transform: translateY(-50%); } .lb-nav.prev { left: 12px; } .lb-nav.next { right: 12px; }
+.lb-close { top: max(12px, env(safe-area-inset-top, 0px)); right: 12px; }
+.lb-bar { display: flex; gap: 14px; align-items: center; justify-content: center; padding: 10px 16px max(14px, env(safe-area-inset-bottom, 0px)); font-size: 12.5px; color: var(--ink-soft); text-align: center; flex-wrap: wrap; }
+.lb-bar #lbCount { font-family: var(--font-data); color: var(--gold-soft); }
+.lb-bar a { color: var(--ink-soft); }
+@media (max-width: 640px) { .lb-stage { padding: 56px 8px 8px; } .lb-nav { top: auto; bottom: 64px; transform: none; } }
+
 /* tooltip */
 .tip {
   position: fixed; z-index: 6; pointer-events: none; background: var(--panel-solid); border: 1px solid var(--line);
@@ -363,6 +393,14 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
   <div class="body" id="cardBody"></div>
 </aside>
 
+<div id="lightbox" class="lightbox" hidden role="dialog" aria-label="Photo gallery">
+  <div class="lb-stage"><img id="lbImg" alt="" referrerpolicy="no-referrer"></div>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-nav next" id="lbNext" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7"/></svg></button>
+  <button class="lb-close" id="lbClose" aria-label="Close gallery"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="lb-bar"><span id="lbCount"></span><span id="lbCredit"></span></div>
+</div>
+
 <div id="about" class="about" hidden role="dialog" aria-labelledby="aboutTitle">
   <div class="box" id="aboutBox"></div>
 </div>
@@ -492,7 +530,7 @@ async function showPhoto(i) {
   const ticket = ++photoTicket, current = () => ticket === photoTicket && state.selected === i;
   const hero = $('hero');
   hero.classList.remove('has-photo');
-  hero.querySelectorAll('img.photo, .vigil, .credit').forEach(n => n.remove());
+  hero.querySelectorAll('img.photo, .vigil, .credit, .gal-btn').forEach(n => n.remove());
   hero.insertAdjacentHTML('beforeend', VIGIL);
   const vigil = hero.querySelector('.vigil');
   const done = () => { vigil.classList.add('out'); setTimeout(() => vigil.remove(), reduceMotion ? 0 : 500); };
@@ -506,7 +544,7 @@ async function showPhoto(i) {
   if (!photo) {
     let rec; try { rec = await shardFor(i); } catch (e) {}
     if (!current()) return;
-    try { photo = await lookupPhoto(i, rec); } catch (e) {}
+    try { photo = (await lookupPhoto(i, rec)).photo; } catch (e) {}
   }
   if (!current()) return;
   if (!photo) { done(); return; }
@@ -578,23 +616,24 @@ async function fromCommons(lat, lon, tokens, town) {
     else if (churchy && d < 200) score = 0.8 - d / 400 + (town && nameMatch(nameTokens(town), title) ? 0.15 : 0); // a church photo taken right here
     if (score > 0 && (!best || score > best.score)) best = { score, page: p };
   }
-  return best ? { score: best.score, photo: asPhoto(best.page) } : null;
+  // files whose titles name the church (interiors welcome) feed the gallery when there is no Commons category
+  const named = ((j.query && j.query.pages) || []).filter(p => tokens.length && nameMatch(tokens, p.title) >= 0.5 && !/\.(svg|pdf|tiff?|djvu|webm|ogv|gif)$/i.test(p.title));
+  return { score: best ? best.score : -1, photo: best ? asPhoto(best.page) : null, named };
 }
 // Wikipedia articles within ~400 m whose title names this church; their lead image is curated
 async function fromWikipedia(lang, lat, lon, tokens) {
-  const j = await api(lang + '.wikipedia.org', { generator: 'geosearch', ggscoord: lat + '|' + lon, ggsradius: 400, ggslimit: 20, prop: 'pageimages|coordinates', piprop: 'name', pilicense: 'free' });
+  const j = await api(lang + '.wikipedia.org', { generator: 'geosearch', ggscoord: lat + '|' + lon, ggsradius: 400, ggslimit: 20, prop: 'pageimages|coordinates|pageprops', piprop: 'name', pilicense: 'free', ppprop: 'wikibase_item' });
   let best = null;
   for (const p of (j.query && j.query.pages) || []) {
-    if (!p.pageimage) continue;
     const c = p.coordinates && p.coordinates[0]; const d = c ? metres(lat, lon, c.lat, c.lon) : 400;
     const nm = nameMatch(tokens, p.title), churchy = CHURCHY.test(squash(p.title));
     if (!(churchy && (nm >= 0.5 || (d < 120 && (nm > 0 || !tokens.length))))) continue;
     const score = nm * 3 + 1.5 - d / 400;
-    if (!best || score > best.score) best = { score, file: p.pageimage };
+    if (!best || score > best.score) best = { score, file: p.pageimage, qid: p.pageprops && p.pageprops.wikibase_item, wiki: { lang, title: p.title } };
   }
   if (!best) return null;
-  const photo = await fileInfo(best.file);
-  return photo ? { score: best.score, photo } : null;
+  const photo = best.file ? await fileInfo(best.file).catch(() => null) : null;
+  return { score: best.score, photo, qid: best.qid, wiki: best.wiki, sure: true };
 }
 // Wikidata: church, chapel, cathedral, basilica, shrine or abbey items with an image (P18) within 400 m
 const WD_TYPES = 'wd:Q16970 wd:Q1088552 wd:Q2977 wd:Q56242215 wd:Q163687 wd:Q120560 wd:Q108325 wd:Q317557 wd:Q1370598 wd:Q44613 wd:Q160742 wd:Q58851';
@@ -602,7 +641,7 @@ async function fromWikidata(lat, lon, tokens, cc) {
   const lang = WIKI_LANG[cc] || 'en';
   const q = `SELECT ?item ?label ?img ?dist WHERE {
     SERVICE wikibase:around { ?item wdt:P625 ?loc. bd:serviceParam wikibase:center "Point(${lon} ${lat})"^^geo:wktLiteral; wikibase:radius "0.4"; wikibase:distance ?dist. }
-    ?item wdt:P18 ?img. ?item wdt:P31/wdt:P279? ?type. VALUES ?type { ${WD_TYPES} }
+    OPTIONAL { ?item wdt:P18 ?img. } ?item wdt:P31/wdt:P279? ?type. VALUES ?type { ${WD_TYPES} }
     OPTIONAL { ?item rdfs:label ?label. FILTER(LANG(?label) IN ("${lang}", "en")) }
   } ORDER BY ?dist LIMIT 30`;
   const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 9000);
@@ -611,19 +650,20 @@ async function fromWikidata(lat, lon, tokens, cc) {
     const r = await fetch('https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(q), { signal: ctl.signal });
     if (!r.ok) throw new Error('wikidata ' + r.status); j = await r.json();
   } finally { clearTimeout(timer); }
-  let best = null;
+  let best = null, item = null;
   for (const b of j.results.bindings) {
     const d = parseFloat(b.dist.value) * 1000, label = b.label ? b.label.value : '';
-    const nm = nameMatch(tokens, label);
+    const nm = nameMatch(tokens, label), qid = b.item.value.split('/').pop();
     let score = -1;
     if (nm >= 0.5) score = 1.6 + nm * 2 - d / 400;      // named the same
     else if (d < 80) score = 1.5 - d / 200;              // the church item sits on the pin
-    else if (d < 200) score = 0.9 - d / 400;             // nearest church with a picture
-    if (score > 0 && (!best || score > best.score)) best = { score, file: decodeURIComponent(b.img.value.split('/').pop()).replace(/_/g, ' ') };
+    else if (d < 200 && b.img) score = 0.9 - d / 400;    // nearest church with a picture (photo only, not facts)
+    if (score >= 1.2 && (!item || score > item.score)) item = { score, qid };
+    if (b.img && score > 0 && (!best || score > best.score)) best = { score, file: decodeURIComponent(b.img.value.split('/').pop()).replace(/_/g, ' ') };
   }
-  if (!best) return null;
-  const photo = await fileInfo(best.file);
-  return photo ? { score: best.score, photo } : null;
+  const photo = best ? await fileInfo(best.file).catch(() => null) : null;
+  if (!photo && !item) return null;
+  return { score: best ? best.score : -1, photo, qid: item && item.qid, itemScore: item ? item.score : -1, sure: !!item };
 }
 // Last resort: Commons search by church name and town, for photos that carry no location
 async function fromCommonsSearch(name, town, tokens) {
@@ -657,8 +697,11 @@ function lookupPhoto(i, rec) {
       best = pick([best, ...more]);
       first.push(...more);
     }
-    if (!best && first.every(f => f === undefined)) live.delete(i); // offline or rate limited: try again next click
-    return best ? best.photo : null;
+    if (!best && first.every(f => f === undefined)) { live.delete(i); return { photo: null }; } // offline or rate limited: try again next click
+    // who the church is: the surest Wikidata item, and a Wikipedia article about it
+    const ids = first.filter(f => f && f.sure && f.qid).sort((a, b) => (b.itemScore || b.score) - (a.itemScore || a.score));
+    const wiki = (first.find(f => f && f.wiki && f.wiki.lang === langs[0]) || first.find(f => f && f.wiki) || {}).wiki;
+    return { photo: best ? best.photo : null, qid: ids.length ? ids[0].qid : null, wiki, named: (first[0] && first[0].named) || [] };
   })();
   live.set(i, job);
   return job;
@@ -844,6 +887,204 @@ $('favList').addEventListener('click', (e) => {
   selectChurch(+go.dataset.i, { fly: true });
 });
 renderFavs();
+
+/* ---------- about this church: history from Wikidata and Wikipedia, and a photo gallery ---------- */
+const about = new Map(); // church index -> Promise<{ facts, extract, wikiUrl, gallery }>
+async function sparql(q) {
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 9000);
+  try {
+    const r = await fetch('https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(q), { signal: ctl.signal });
+    if (!r.ok) throw new Error('wikidata ' + r.status); return (await r.json()).results.bindings;
+  } finally { clearTimeout(timer); }
+}
+function wdDate(v, precision) {
+  const m = /^([+-]?\d+)-(\d\d)-(\d\d)/.exec(v || ''); if (!m) return '';
+  const y = +m[1];
+  if (+precision >= 11 && +m[2] && +m[3]) return new Date(Date.UTC(y, +m[2] - 1, +m[3])).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+  if (+precision === 7) return `${Math.ceil(y / 100)}th century`;
+  if (+precision === 8) return `${Math.floor(y / 10) * 10}s`;
+  return y < 0 ? `${-y} BC` : String(y);
+}
+async function wikidataFacts(qid, lang) {
+  const it = 'wd:' + qid;
+  const rows = await sparql(`SELECT ?p ?v ?vLabel ?prec ?cat ?article ?dedArticle WHERE {
+    { ${it} p:P571 [ ps:P571 ?v; psv:P571 [ wikibase:timePrecision ?prec ] ]. BIND("P571" AS ?p) }
+    UNION { ${it} p:P1619 [ ps:P1619 ?v; psv:P1619 [ wikibase:timePrecision ?prec ] ]. BIND("P1619" AS ?p) }
+    UNION { VALUES (?p ?prop) { ("P84" wdt:P84) ("P149" wdt:P149) ("P825" wdt:P825) ("P708" wdt:P708) ("P1435" wdt:P1435) ("P5138" wdt:P5138) } ${it} ?prop ?v. }
+    UNION { ${it} wdt:P373 ?cat. }
+    UNION { ${it} wdt:P825 ?ded. ?dedArticle schema:about ?ded; schema:isPartOf <https://en.wikipedia.org/>. }
+    UNION { ?article schema:about ${it}; schema:isPartOf ?site. VALUES ?site { <https://en.wikipedia.org/> <https://${lang}.wikipedia.org/> } }
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en,${lang},es,pt,it,fr,de,pl". }
+  }`);
+  const facts = {}, add = (k, v) => { if (v && !(facts[k] || []).includes(v)) (facts[k] = facts[k] || []).push(v); };
+  let cat = '', articles = [], dedication = '';
+  for (const r of rows) {
+    if (r.cat) cat = r.cat.value;
+    if (r.dedArticle && !dedication) dedication = decodeURIComponent(r.dedArticle.value.split('/wiki/').pop()).replace(/_/g, ' ');
+    if (r.article) articles.push(r.article.value);
+    if (!r.p) continue;
+    const p = r.p.value;
+    if (p === 'P571' || p === 'P1619') add(p, wdDate(r.v.value, r.prec && r.prec.value));
+    else if (r.vLabel && !/^Q\d+$/.test(r.vLabel.value)) add(p, r.vLabel.value);
+  }
+  const en = articles.find(a => a.startsWith('https://en.')), local = articles.find(a => !a.startsWith('https://en.'));
+  return { facts, cat, article: en || local || '', dedication };
+}
+async function wikiExtract(url) {
+  const m = /^https:\/\/([a-z-]+)\.wikipedia\.org\/wiki\/(.+)$/.exec(url || ''); if (!m) return null;
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 9000);
+  try {
+    const r = await fetch(`https://${m[1]}.wikipedia.org/api/rest_v1/page/summary/${m[2]}`, { signal: ctl.signal });
+    if (!r.ok) return null; const j = await r.json();
+    return j.type === 'standard' && j.extract ? { text: j.extract, url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || url, lang: m[1] } : null;
+  } finally { clearTimeout(timer); }
+}
+function galleryItem(page) {
+  const ii = page && page.imageinfo && page.imageinfo[0];
+  if (!ii || !/^image\/(jpeg|png|webp)$/.test(ii.mime || '')) return null;
+  const p = asPhoto(page); if (!p) return null;
+  const big = ii.width > 1280 && ii.thumburl ? ii.thumburl.replace(/\/\d+px-/, '/1280px-') : ii.url;
+  return { ...p, thumb: ii.thumburl || ii.url, big };
+}
+const GII = { prop: 'imageinfo', iiprop: 'url|extmetadata|mime|size', iiurlwidth: 330, iiextmetadatafilter: 'Artist|LicenseShortName|Credit' };
+async function commonsGallery(cat, named) {
+  let pages = [];
+  if (cat) {
+    const j = await api('commons.wikimedia.org', { generator: 'categorymembers', gcmtitle: 'Category:' + cat, gcmtype: 'file', gcmlimit: 40, ...GII });
+    pages = (j.query && j.query.pages) || [];
+  } else if (named && named.length > 1) {
+    const j = await api('commons.wikimedia.org', { titles: named.slice(0, 30).map(p => p.title).join('|'), ...GII });
+    pages = (j.query && j.query.pages) || [];
+  }
+  return pages.map(galleryItem).filter(Boolean).slice(0, 30);
+}
+function loadAbout(i, rec) {
+  if (about.has(i)) return about.get(i);
+  const cc = rec && rec[5], lang = WIKI_LANG[cc] || 'en';
+  const job = (async () => {
+    const who = await lookupPhoto(i, rec);
+    let facts = {}, cat = '', article = '', dedication = '';
+    if (who.qid) { try { ({ facts, cat, article, dedication } = await wikidataFacts(who.qid, lang)); } catch (e) {} }
+    if (!article && who.wiki) article = `https://${who.wiki.lang}.wikipedia.org/wiki/${encodeURIComponent(who.wiki.title.replace(/ /g, '_'))}`;
+    const patronTitle = dedication || patronFromName(rec && rec[0]);
+    const [extract, gallery, patron] = await Promise.all([wikiExtract(article).catch(() => null), commonsGallery(cat, who.named).catch(() => []), patronTitle ? patronInfo(patronTitle).catch(() => null) : null]);
+    if (patron) patron.sure = !!dedication;
+    return { facts, extract, article, gallery, cat, patron };
+  })();
+  about.set(i, job);
+  job.catch(() => about.delete(i));
+  return job;
+}
+// Patron from the church's name when Wikidata doesn't say: [pattern on the folded name, English Wikipedia article]
+const PATRONS = [
+  [/guadalupe/, 'Our Lady of Guadalupe'], [/fatima/, 'Our Lady of Fátima'], [/lourdes/, 'Our Lady of Lourdes'], [/aparecida/, 'Our Lady of Aparecida'],
+  [/perpetual help|perpetuo socorro|perpetuo soccorso|bon secours/, 'Our Mother of Perpetual Help'], [/del pilar|do pilar/, 'Our Lady of the Pillar'],
+  [/carmel|del carmen|do carmo|del carmine|carmelo/, 'Our Lady of Mount Carmel'], [/rosary|rosario|rosaire|rosenkranz|rozanc/, 'Our Lady of the Rosary'],
+  [/sorrows|dolores|das dores|addolorata|douleurs|bolesn/, 'Our Lady of Sorrows'],
+  [/immaculate|inmaculada|imaculada|immacolata|immaculee|unbefleckt|niepokalan/, 'Immaculate Conception'],
+  [/assumption|asuncion|assuncao|assunta|assomption|himmelfahrt|wniebowziec/, 'Assumption of Mary'],
+  [/sacred heart|sagrado corazon|sagrado coracao|sacro cuore|sacre coeur|herz jesu|najswietszego serca/, 'Sacred Heart'],
+  [/holy family|sagrada familia|sacra famiglia|sainte famille|heilige familie|swietej rodziny/, 'Holy Family'],
+  [/trinity|trinidad|trindade|trinita|trinite|dreifaltigkeit|trojcy/, 'Trinity'],
+  [/holy spirit|holy ghost|espiritu santo|espirito santo|spirito santo|saint esprit|heiliger geist|ducha swietego/, 'Holy Spirit in Christianity'],
+  [/christ the king|cristo rey|cristo rei|cristo re\b|christ roi|christkonig|chrystusa krola/, 'Christ the King'], [/divine mercy|divina misericordia|milosierdzia/, 'Divine Mercy'],
+  [/santo nino/, 'Santo Niño de Cebú'], [/juan diego/, 'Juan Diego'], [/kateri/, 'Kateri Tekakwitha'],
+  [/martin de porres|martin de porras/, 'Martin de Porres'], [/francis xavier|francisco javier|francisco xavier|francesco saverio/, 'Francis Xavier'], [/francis de sales|francisco de sales/, 'Francis de Sales'],
+  [/(saint|st|san|sao|santo|sant|sankt|sw) (joseph|jose|giuseppe|jozef|josef)\b/, 'Saint Joseph'], [/patrick/, 'Saint Patrick'],
+  [/(saint|st|san|santo|sant|sankt|sw) (anthony|antonio|antoine|antoni|anton)\b/, 'Anthony of Padua'], [/(saint|st|san|sao|santo|sankt|sw) (francis|francisco|francesco|francois|franz|franciszk)/, 'Francis of Assisi'],
+  [/(saint|st|san|sao|santo|sankt|sw) (john the baptist|juan bautista|joao batista|giovanni battista|jean baptiste|johannes der taufer|jana chrzciciela)/, 'John the Baptist'],
+  [/(saint|st|san|sao|santo|sankt|sw) (michael|miguel|michele|michel|michal)\b/, 'Michael (archangel)'], [/(saint|st|san|sao|sankt|sw) (raphael|rafael|raffaele)\b/, 'Raphael (archangel)'], [/(saint|st|san|sao|sankt) (gabriel|gabriele)\b/, 'Gabriel'],
+  [/(saint|st|san|sao|santo|sankt|sw) (peter|pedro|pietro|pierre|petrus|piotr)\b/, 'Saint Peter'], [/(saint|st|san|sao|santo|sankt|sw) (paul|pablo|paulo|paolo|pawel)\b/, 'Paul the Apostle'],
+  [/(saint|st|santa|sainte|sankt) (anne|ann|ana|anna)\b|santana\b/, 'Saint Anne'], [/therese|teresita|little flower|teresinha/, 'Thérèse of Lisieux'], [/(saint|st|san|santa) (jude|judas tadeo)/, 'Jude the Apostle'],
+  [/vincent de paul|vicente de paul|vincenzo de paoli/, 'Vincent de Paul'], [/thomas aquinas|tomas de aquino/, 'Thomas Aquinas'], [/(saint|st|santa) rita\b/, 'Rita of Cascia'],
+  [/(saint|st|san|sao|santo|sankt) (augustine|agustin|agostinho|agostino|augustin)\b/, 'Augustine of Hippo'], [/(saint|st|santa|sankt) monica\b/, 'Saint Monica'],
+  [/(saint|st|san|sao|sankt) (sebastian|sebastiao|sebastiano)\b/, 'Saint Sebastian'], [/(saint|st|san|sao|santo|sankt) (lawrence|lorenzo|lourenco|laurent)\b/, 'Saint Lawrence'],
+  [/(saint|st|san|santo|sankt) (stephen|esteban|estevao|stefano|etienne|stephan|szczepana)\b/, 'Saint Stephen'], [/(saint|st|san|sankt|sw) (nicholas|nicolas|nicola|nikolaus|mikolaja)\b/, 'Saint Nicholas'],
+  [/(saint|st|san|sao|sankt) (george|jorge|giorgio|georges|georg)\b/, 'Saint George'], [/(saint|st|san|santiago|sankt) (james|giacomo|jacques|jakob)\b|\bsantiago apostol/, 'James the Great'],
+  [/(saint|st|san|sant|sankt|sw) (andrew|andres|andrea|andre|andreas|andrzeja)\b/, 'Andrew the Apostle'], [/(saint|st|san|sankt) (martin|martino)\b/, 'Martin of Tours'],
+  [/(saint|st|san|sankt) (benedict|benito|benedetto|benoit)\b/, 'Benedict of Nursia'], [/(saint|st|santo) (dominic|domingo|domenico)\b/, 'Saint Dominic'], [/ignatius|san ignacio|santo inacio/, 'Ignatius of Loyola'],
+  [/charles borromeo|carlos borromeo|carlo borromeo/, 'Charles Borromeo'], [/elizabeth ann seton/, 'Elizabeth Ann Seton'], [/(saint|st|san|sankt) (isidore|isidro)\b/, 'Isidore the Laborer'],
+  [/(saint|st|santa|sainte) (lucy|lucia|luzia)\b/, 'Saint Lucy'], [/(saint|st|santa|sainte) cecilia\b/, 'Saint Cecilia'], [/(saint|st|santa|sainte) (clare|clara|chiara|claire)\b/, 'Clare of Assisi'],
+  [/john paul ii|juan pablo ii|joao paulo ii|giovanni paolo ii|jana pawla ii/, 'Pope John Paul II'], [/pius x\b|pio x\b/, 'Pope Pius X'],
+  [/(saint|st|san|sao|santo) (luke|lucas|luca)\b/, 'Luke the Evangelist'], [/(saint|st|san|sao|santo) (mark|marcos|marco|marc)\b/, 'Mark the Evangelist'], [/(saint|st|san|sao) (matthew|mateo|mateus|matteo)\b/, 'Matthew the Apostle'],
+  [/(saint|st|san|sao|santo) (bartholomew|bartolome|bartolomeu|bartolomeo)\b/, 'Bartholomew the Apostle'], [/(saint|st|santa) (helen|helena|elena)\b/, 'Helena, mother of Constantine I'],
+  [/(saint|st|santa|sainte) (bridget|brigid)\b/, 'Brigid of Kildare'], [/(saint|st|san) (louis|luis)\b/, 'Louis IX of France'],
+  [/our lady|nuestra senora|nossa senhora|notre dame|nostra signora|madonna|virgen|(saint|st|santa|sainte|sankt) (mary|maria|marie)\b|mariae|mariacki|marii panny/, 'Mary, mother of Jesus'],
+];
+const patronFromName = (name) => { const n = ' ' + squash(name).replace(/\s+/g, ' ') + ' '; const hit = PATRONS.find(([re]) => re.test(n)); return hit ? hit[1] : ''; };
+async function patronInfo(title) {
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 9000);
+  try {
+    const r = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title.replace(/ /g, '_')), { signal: ctl.signal });
+    if (!r.ok) return null; const j = await r.json(); if (j.type !== 'standard') return null;
+    const out = { name: j.title, text: j.extract || '', url: (j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page) || '' };
+    // credit the picture through its Commons file page; pictures held only on Wikipedia are left out
+    const orig = j.originalimage && j.originalimage.source;
+    if (orig && /upload\.wikimedia\.org\/wikipedia\/commons\//.test(orig)) {
+      const file = decodeURIComponent(orig.split('/').pop());
+      const p = await fileInfo(file).catch(() => null);
+      if (p) out.img = { ...p, src: (j.thumbnail && j.thumbnail.source) || p.src };
+    }
+    return out;
+  } finally { clearTimeout(timer); }
+}
+const FACT_ROWS = [['P571', 'Founded'], ['P1619', 'Opened'], ['P825', 'Dedicated to'], ['P708', 'Diocese'], ['P84', 'Architect'], ['P149', 'Style'], ['P1435', 'Heritage status'], ['P5138', 'Part of']];
+async function showAbout(i, rec) {
+  let a; try { a = await loadAbout(i, rec); } catch (e) { return; }
+  const box = $('cAbout'); if (!box || state.selected !== i) return;
+  const rows = FACT_ROWS.filter(([k]) => a.facts[k] && !(k === 'P825' && a.patron && a.patron.sure)).map(([k, label]) => `<dt>${label}</dt><dd>${esc(a.facts[k].slice(0, 3).join(', '))}</dd>`);
+  gallery.items = a.gallery;
+  const hero = $('hero'); hero.querySelectorAll('.gal-btn').forEach(n => n.remove());
+  if (a.gallery.length > 1) hero.insertAdjacentHTML('beforeend', `<button class="gal-btn" data-g="0" aria-label="Open the photo gallery, ${a.gallery.length} photos">${icon.photo}<span>${a.gallery.length} photos</span></button>`);
+  const pt = a.patron;
+  const patronHTML = pt ? `<div class="patron">
+      ${pt.img ? `<a class="pimg" href="${esc(pt.img.page)}" target="_blank" rel="noopener" title="Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(pt.img.src)}" alt="${esc(pt.name)}"></a>` : ''}
+      <div><div class="plabel">${pt.sure ? 'Dedicated to' : 'Named for'}</div><b>${esc(pt.name)}</b>
+      ${pt.text ? `<p>${esc(pt.text)}</p>` : ''}
+      ${pt.url ? `<a class="more" href="${esc(pt.url)}" target="_blank" rel="noopener">About ${esc(pt.name)} on Wikipedia</a>` : ''}
+      ${pt.img ? `<small>Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}</small>` : ''}</div>
+    </div>` : '';
+  if (!rows.length && !a.extract && a.gallery.length < 2 && !pt) { box.innerHTML = ''; return; }
+  box.innerHTML = `<div class="sect about-church">
+      <h3>About this church</h3>
+      ${a.extract ? `<p class="extract">${esc(a.extract.text)}</p><a class="more" href="${esc(a.extract.url)}" target="_blank" rel="noopener">Read more on Wikipedia${a.extract.lang !== 'en' ? ` (${esc(a.extract.lang)})` : ''}</a>` : ''}
+      ${rows.length ? `<dl class="facts">${rows.join('')}</dl>` : ''}
+      ${patronHTML}
+      ${a.gallery.length > 1 ? `<div class="strip" role="list" aria-label="Photos of this church">${a.gallery.map((g, k) => `<button role="listitem" data-g="${k}" aria-label="Open photo ${k + 1} of ${a.gallery.length}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(g.thumb)}" alt=""></button>`).join('')}</div>` : ''}
+    </div>`;
+}
+
+/* gallery viewer: full screen, arrows, swipe, credit on every photo */
+const gallery = { items: [], at: 0 };
+function openGallery(k) {
+  if (!gallery.items.length) return;
+  gallery.at = (k + gallery.items.length) % gallery.items.length;
+  const g = gallery.items[gallery.at], box = $('lightbox');
+  box.hidden = false;
+  const img = $('lbImg'); img.classList.remove('on'); img.src = g.thumb; // the thumbnail shows at once, the large copy replaces it
+  const big = new Image(); big.referrerPolicy = 'no-referrer'; big.src = g.big; big.decode().then(() => { if (gallery.items[gallery.at] === g) img.src = g.big; }).catch(() => {});
+  requestAnimationFrame(() => img.classList.add('on'));
+  img.alt = g.file;
+  $('lbCount').textContent = `${gallery.at + 1} / ${gallery.items.length}`;
+  $('lbCredit').innerHTML = `<a href="${esc(g.page)}" target="_blank" rel="noopener">Photo: ${esc(g.author)} · ${esc(g.license)}</a>`;
+  $('lbClose').focus({ preventScroll: true });
+}
+const closeGallery = () => { $('lightbox').hidden = true; };
+addEventListener('click', (e) => { const b = e.target.closest('[data-g]'); if (b && (b.closest('#card'))) openGallery(+b.dataset.g); });
+$('lbPrev').addEventListener('click', () => openGallery(gallery.at - 1));
+$('lbNext').addEventListener('click', () => openGallery(gallery.at + 1));
+$('lbClose').addEventListener('click', closeGallery);
+$('lightbox').addEventListener('click', (e) => { if (e.target.id === 'lightbox' || e.target.classList.contains('lb-stage')) closeGallery(); });
+addEventListener('keydown', (e) => {
+  if ($('lightbox').hidden) return;
+  if (e.key === 'ArrowLeft') openGallery(gallery.at - 1); else if (e.key === 'ArrowRight') openGallery(gallery.at + 1);
+  else if (e.key === 'Escape') { e.stopImmediatePropagation(); closeGallery(); }
+}, true);
+{
+  let x0 = null;
+  $('lightbox').addEventListener('pointerdown', (e) => { x0 = e.clientX; });
+  $('lightbox').addEventListener('pointerup', (e) => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 50) openGallery(gallery.at + (dx < 0 ? 1 : -1)); });
+}
 
 /* ---------- near me: the closest churches to the visitor, by distance ---------- */
 const appleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
@@ -1147,6 +1388,7 @@ async function selectChurch(i, { fly = true } = {}) {
       ${webUrl ? `<dt>Website</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(host(webUrl))}</a></dd>` : ''}
       ${fb ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
     </dl>
+    <div id="cAbout"></div>
     <div class="sect">
       <h3>Photos, video and history</h3>
       <div class="media">
@@ -1164,6 +1406,7 @@ async function selectChurch(i, { fly = true } = {}) {
   syncSave(i);
   $('saveBtn').addEventListener('click', () => toggleFav(i, { name, place, t }));
   wireShare(i, name, place);
+  showAbout(i, rec);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
 }
