@@ -341,6 +341,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
   .card .hero img.photo, .card .hero .vigil { transition: none; }
 }
 </style>
+<link rel="stylesheet" href="app/engage.css">
 </head>
 <body>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches"></div></div>
@@ -1539,6 +1540,11 @@ $('about').addEventListener('click', (e) => { if (e.target.id === 'about') $('ab
 /* ---------- install as an app: offline cache ---------- */
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 
+/* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
+const hooks = {};
+window.ccf = { map, state, selectChurch, closeCard, shardFor, getJSON, countryName, esc, reduceMotion,
+  layers: new Promise(r => { hooks.layers = r; }), opened: new Promise(r => { hooks.opened = r; }) };
+
 /* ---------- boot ---------- */
 const mapReady = new Promise(res => map.once('load', res));
 (async () => {
@@ -1553,6 +1559,7 @@ const mapReady = new Promise(res => map.once('load', res));
     setProgress(0.85, 'Placing them on the globe…');
     await new Promise(r => setTimeout(r, 30));
     addChurchLayers();
+    hooks.layers();
     renderFavs();
     renderChips(); updateTagline();
     setProgress(1);
@@ -1563,6 +1570,7 @@ const mapReady = new Promise(res => map.once('load', res));
       setTimeout(() => { photoIndex().catch(() => {}); loadPhoneLib().catch(() => {}); }, 5000); // warm the small photo index and phone formats once the globe is up
       // open over the United States
       const shared = parseInt(new URLSearchParams(location.search).get('church'), 10);
+      hooks.opened({ shared: shared >= 0 && shared < state.n });
       if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link
       map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, duration: reduceMotion ? 0 : 3200, essential: true });
       map.once('moveend', () => { state.ready = true; });
@@ -1576,5 +1584,6 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
+<script src="app/engage.js"></script>
 </body>
 </html>
