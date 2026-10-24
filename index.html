@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Catholic Church Finder</title>
+<meta name="description" content="An interactive 3D globe of Catholic churches around the world. Click a pin to see a photo and details of the church.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2305070d'/%3E%3Cpath d='M16 5v22M10 11h12' stroke='%23e8b84a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one full-bleed night globe; a slim header rail, a search well, and a details card that slides in from the right (bottom sheet on phones). */
+:root {
+  --space: #05070d;
+  --ocean: #0a1a33;
+  --land: #1b2a40;
+  --land-edge: #33496a;
+  --ink: #e9e4d6;
+  --ink-soft: #a8adbb;
+  --ink-faint: #6f7689;
+  --gold: #e8b84a;
+  --gold-soft: #f3d58c;
+  --cardinal: #d2484f;
+  --marian: #6aa7ff;
+  --panel: rgba(12, 18, 32, 0.86);
+  --panel-solid: #0e1526;
+  --line: rgba(233, 228, 214, 0.12);
+  --focus: #f3d58c;
+  --font-display: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --font-ui: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+html, body { height: 100%; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+body { background: var(--space); color: var(--ink); font-family: var(--font-ui); font-size: 14px; overflow: hidden; }
+* { box-sizing: border-box; }
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+#stage { position: fixed; inset: 0; background:
+  radial-gradient(1px 1px at 12% 18%, #fff8 50%, transparent 51%),
+  radial-gradient(1px 1px at 72% 12%, #fff6 50%, transparent 51%),
+  radial-gradient(1.5px 1.5px at 85% 64%, #fff7 50%, transparent 51%),
+  radial-gradient(1px 1px at 33% 78%, #fff5 50%, transparent 51%),
+  radial-gradient(1px 1px at 55% 40%, #fff4 50%, transparent 51%),
+  radial-gradient(1px 1px at 8% 60%, #fff6 50%, transparent 51%),
+  radial-gradient(1.2px 1.2px at 92% 30%, #fff5 50%, transparent 51%),
+  radial-gradient(1px 1px at 44% 8%, #fff5 50%, transparent 51%),
+  radial-gradient(1px 1px at 64% 90%, #fff4 50%, transparent 51%),
+  radial-gradient(1px 1px at 22% 42%, #fff3 50%, transparent 51%),
+  radial-gradient(ellipse at 50% 120%, #10213f 0%, var(--space) 60%);
+}
+#map { position: absolute; inset: 0; }
+
+/* maplibre core */
+.maplibregl-map { overflow: hidden; position: relative; -webkit-tap-highlight-color: transparent; }
+.maplibregl-canvas { left: 0; position: absolute; top: 0; }
+.maplibregl-canvas-container.maplibregl-interactive { cursor: grab; user-select: none; }
+.maplibregl-canvas-container.maplibregl-interactive:active { cursor: grabbing; }
+.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan,
+.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan .maplibregl-canvas { touch-action: none; }
+.maplibregl-canvas-container.maplibregl-touch-drag-pan,
+.maplibregl-canvas-container.maplibregl-touch-drag-pan .maplibregl-canvas { touch-action: pinch-zoom; }
+.maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right, .maplibregl-ctrl-top-left, .maplibregl-ctrl-top-right { display: none; }
+
+/* header */
+.top {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 5; pointer-events: none;
+  padding-top: max(14px, env(safe-area-inset-top, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px 20px;
+}
+.top > * { pointer-events: auto; }
+.top::before { content: ""; position: absolute; inset: 0 0 -40px; z-index: -1; pointer-events: none; background: linear-gradient(to bottom, rgba(5,7,13,.82), rgba(5,7,13,.5) 60%, rgba(5,7,13,0)); }
+.foot::before { content: ""; position: absolute; inset: -24px 0 0; z-index: -1; pointer-events: none; background: linear-gradient(to top, rgba(5,7,13,.8), rgba(5,7,13,0)); }
+.brand { display: grid; gap: 2px; min-width: 0; }
+.brand h1 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: 0.08em; color: var(--ink); text-shadow: 0 2px 18px #000; line-height: 1.1; }
+.brand h1 .cross { color: var(--gold); margin-right: 8px; }
+.brand p { margin: 0; color: var(--ink-soft); font-size: 13px; text-shadow: 0 1px 8px #000; }
+.brand p b { color: var(--gold-soft); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.search { position: relative; z-index: 3; flex: 1 1 320px; max-width: 440px; margin-left: auto; }
+.search input {
+  width: 100%; height: 42px; border-radius: 21px; border: 1px solid var(--line);
+  background: var(--panel); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  padding: 0 16px 0 40px; outline: none; color: var(--ink);
+}
+.search input::placeholder { color: var(--ink-faint); }
+.search input:focus { border-color: color-mix(in srgb, var(--gold) 60%, transparent); }
+.search svg { position: absolute; left: 14px; top: 13px; width: 16px; height: 16px; stroke: var(--ink-soft); z-index: 1; pointer-events: none; }
+.results {
+  position: absolute; top: 48px; left: 0; right: 0; max-height: min(60vh, 420px); overflow-y: auto;
+  background: var(--panel-solid); border: 1px solid var(--line); border-radius: 14px; padding: 6px;
+  box-shadow: 0 20px 50px #000a; display: grid; gap: 2px;
+}
+.results button { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: center; text-align: left; width: 100%; padding: 8px 10px; border: 0; background: transparent; border-radius: 9px; cursor: pointer; }
+.results button:hover, .results button[aria-selected="true"] { background: rgba(232, 184, 74, 0.12); }
+.results .nm { display: block; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.results .loc { display: block; font-size: 12px; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.results .note { padding: 10px; color: var(--ink-soft); font-size: 13px; }
+.results div { min-width: 0; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
+.chip {
+  height: 30px; padding: 0 12px; border-radius: 15px; border: 1px solid var(--line); background: var(--panel);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); cursor: pointer; font-size: 12.5px; color: var(--ink-soft);
+  display: inline-flex; align-items: center; gap: 7px; letter-spacing: 0.01em;
+}
+.chip i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.chip[aria-pressed="true"] { color: var(--ink); border-color: color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232, 184, 74, 0.14); }
+.chip small { color: var(--ink-faint); font-variant-numeric: tabular-nums; font-size: 11.5px; }
+
+/* side controls */
+.ctrls {
+  position: fixed; z-index: 5; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(44px + env(safe-area-inset-bottom, 0px));
+  display: grid; gap: 8px;
+}
+.ctrls button {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); cursor: pointer; display: grid; place-items: center;
+}
+.ctrls button:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.ctrls button[aria-pressed="true"] { background: rgba(232, 184, 74, 0.18); }
+.ctrls svg { width: 18px; height: 18px; stroke: var(--ink); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.foot {
+  position: fixed; z-index: 4; left: 0; right: 0; bottom: 0;
+  padding-bottom: max(10px, env(safe-area-inset-bottom, 0px)); padding-top: 6px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; gap: 14px; align-items: center; font-size: 11.5px; color: var(--ink-faint); pointer-events: none; flex-wrap: wrap;
+}
+.foot > * { pointer-events: auto; }
+.foot button { background: none; border: 0; color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 0; font-size: 11.5px; }
+.foot .coords { font-family: var(--font-data); font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* tooltip */
+.tip {
+  position: fixed; z-index: 6; pointer-events: none; background: var(--panel-solid); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 10px; font-size: 12.5px; max-width: 280px; box-shadow: 0 8px 24px #0009;
+  transform: translate(-50%, calc(-100% - 14px));
+}
+.tip b { font-weight: 600; display: block; }
+.tip span { color: var(--ink-soft); font-size: 11.5px; }
+
+/* loading veil */
+.veil { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; background: var(--space); transition: opacity .9s ease; }
+.veil.gone { opacity: 0; pointer-events: none; }
+.veil div { text-align: center; display: grid; gap: 14px; justify-items: center; padding: 0 24px; }
+.veil h2 { margin: 0; font-family: var(--font-display); font-weight: 500; letter-spacing: 0.14em; font-size: 20px; }
+.veil p { margin: 0; color: var(--ink-soft); font-size: 13px; }
+.veil .bar { width: 200px; height: 2px; background: var(--line); border-radius: 1px; overflow: hidden; }
+.veil .bar i { display: block; height: 100%; width: 0; background: var(--gold); transition: width .3s; }
+
+/* details card */
+.card {
+  position: fixed; z-index: 10; top: max(16px, env(safe-area-inset-top, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  right: max(16px, env(safe-area-inset-right, 0px)); width: min(420px, calc(100vw - 32px));
+  background: var(--panel-solid); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  box-shadow: 0 30px 80px #000c; display: flex; flex-direction: column;
+  transform: translateX(0); opacity: 1; transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .3s;
+}
+.card[hidden] { display: flex !important; transform: translateX(calc(100% + 40px)); opacity: 0; pointer-events: none; }
+.card .hero { position: relative; height: 190px; flex: none; overflow: hidden; }
+.card .hero svg.scene { position: absolute; inset: 0; width: 100%; height: 100%; }
+.card .hero .badge {
+  position: absolute; left: 16px; bottom: 14px; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; background: rgba(5, 7, 13, 0.55); padding: 5px 10px; border-radius: 4px; color: var(--gold-soft);
+}
+.card .hero .suntime { position: absolute; right: 16px; bottom: 14px; font-family: var(--font-data); font-size: 11px; color: #fffc; background: rgba(5,7,13,.45); padding: 4px 8px; border-radius: 4px; }
+/* real photo: fades in over the drawn scene, which stays as the fallback */
+.card .hero img.photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .7s ease; }
+.card .hero img.photo.on { opacity: 1; }
+.card .hero.has-photo .suntime { display: none; }
+.card .hero.has-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(5,7,13,.55), transparent 32%, transparent 68%, rgba(5,7,13,.5)); }
+.card .hero .badge, .card .hero .credit { z-index: 1; }
+.card .hero .credit {
+  position: absolute; left: 14px; top: 14px; right: 60px; font-size: 11px; line-height: 1.35; color: #fffd; text-decoration: none;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-shadow: 0 1px 3px #000c;
+}
+.card .hero .credit:hover { color: var(--gold-soft); text-decoration: underline; }
+/* preloader: a votive candle that flickers while the photo loads */
+.card .hero .vigil { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; align-content: center; gap: 6px; background: rgba(5,7,13,.72); transition: opacity .5s ease; }
+.card .hero .vigil.out { opacity: 0; }
+.card .hero .vigil svg { width: 54px; height: 82px; overflow: visible; }
+.card .hero .vigil span { font-family: var(--font-display); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-soft); opacity: .85; }
+.vigil .flame { transform-origin: 30px 44px; animation: flicker 1.6s ease-in-out infinite; }
+.vigil .halo { transform-origin: 30px 30px; animation: halo 2.4s ease-in-out infinite; }
+@keyframes flicker { 0%, 100% { transform: scale(1, 1) skewX(0deg); } 25% { transform: scale(.94, 1.06) skewX(2deg); } 50% { transform: scale(1.03, .95) skewX(-2deg); } 75% { transform: scale(.97, 1.04) skewX(1deg); } }
+@keyframes halo { 0%, 100% { opacity: .65; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+.card .close {
+  position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; border: 0;
+  background: rgba(5, 7, 13, 0.6); cursor: pointer; display: grid; place-items: center; z-index: 2;
+}
+.card .close svg { width: 16px; height: 16px; stroke: #fff; stroke-width: 2; }
+.card .body { padding: 18px 20px 20px; overflow-y: auto; display: grid; gap: 18px; align-content: start; }
+.card h2 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 21px; line-height: 1.25; letter-spacing: 0.02em; text-wrap: balance; }
+.card .where { color: var(--ink-soft); margin-top: 6px; line-height: 1.45; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 16px; margin: 0; font-size: 13.5px; }
+.facts dt { color: var(--ink-faint); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 2px; }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.facts a { color: var(--gold-soft); text-underline-offset: 3px; }
+.facts .mono { font-family: var(--font-data); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.sect h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.media a {
+  display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 12px;
+  border: 1px solid var(--line); text-decoration: none; color: var(--ink); background: rgba(255,255,255,0.02); min-width: 0;
+}
+.media a:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); background: rgba(232,184,74,0.07); }
+.media a span { min-width: 0; }
+.media b { display: block; font-weight: 500; font-size: 13px; }
+.media small { display: block; color: var(--ink-faint); font-size: 11.5px; }
+.media svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.prov { font-size: 12px; color: var(--ink-faint); line-height: 1.5; border-top: 1px solid var(--line); padding-top: 12px; }
+.prov .pill { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-right: 6px; border: 1px solid var(--line); color: var(--ink-soft); }
+.prov .pill.warn { border-color: color-mix(in srgb, var(--gold) 50%, transparent); color: var(--gold-soft); }
+.card .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 13px; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; }
+.btn:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.btn.primary { background: var(--gold); color: #1a1406; border-color: var(--gold); font-weight: 600; }
+
+/* about dialog */
+.about { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; background: rgba(2,3,8,.7); padding: 16px; }
+.about .box { background: var(--panel-solid); border: 1px solid var(--line); border-radius: 18px; max-width: 600px; width: 100%; max-height: calc(100% - 32px); overflow-y: auto; padding: 24px; display: grid; gap: 14px; line-height: 1.55; }
+.about h2 { margin: 0; font-family: var(--font-display); font-weight: 600; letter-spacing: .05em; font-size: 20px; }
+.about p { margin: 0; color: var(--ink-soft); max-width: 65ch; }
+.about table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+.about td { padding: 4px 0; border-bottom: 1px solid var(--line); }
+.about td:last-child { text-align: right; font-family: var(--font-data); font-size: 12.5px; }
+.about .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.about a { color: var(--gold-soft); }
+
+@media (max-width: 640px) {
+  .brand h1 { font-size: 18px; }
+  .search { flex-basis: 100%; max-width: none; margin-left: 0; order: 3; }
+  .chips { order: 4; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .chip { flex: none; }
+  .card { top: auto; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); width: auto; bottom: max(8px, env(safe-area-inset-bottom, 0px)); max-height: 72%; border-radius: 18px; }
+  .card[hidden] { transform: translateY(calc(100% + 40px)); }
+  .card .hero { height: 130px; }
+  .ctrls { bottom: calc(40px + env(safe-area-inset-bottom, 0px)); }
+  .media { grid-template-columns: 1fr; }
+  .about .cols { grid-template-columns: 1fr; }
+  .foot .coords { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .veil { transition: none; }
+  .vigil .flame, .vigil .halo { animation: none; }
+  .card .hero img.photo, .card .hero .vigil { transition: none; }
+}
+</style>
+</head>
+<body>
+<div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches"></div></div>
+
+<header class="top">
+  <div class="brand">
+    <h1><span class="cross" aria-hidden="true">✠</span>Catholic Church Finder</h1>
+    <p id="tagline">Loading churches…</p>
+  </div>
+  <div class="search" role="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków" aria-label="Search churches by name or town" aria-controls="results">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Show church types"></div>
+</header>
+
+<div class="ctrls">
+  <button id="spin" aria-pressed="true" title="Spin the globe" aria-label="Spin the globe"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
+  <button id="zin" title="Zoom in" aria-label="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  <button id="zout" title="Zoom out" aria-label="Zoom out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
+  <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
+  <button id="rand" title="Visit a random church" aria-label="Visit a random church"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg></button>
+</div>
+
+<footer class="foot">
+  <button id="aboutBtn">About the data</button>
+  <span>Places © Overture Maps Foundation · Basemap Natural Earth</span>
+  <span class="coords" id="coords"></span>
+</footer>
+
+<div id="tip" class="tip" hidden></div>
+
+<aside id="card" class="card" hidden aria-labelledby="cName" role="dialog">
+  <div class="hero" id="hero">
+    <button class="close" id="cardClose" aria-label="Close details"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="body" id="cardBody"></div>
+</aside>
+
+<div id="about" class="about" hidden role="dialog" aria-labelledby="aboutTitle">
+  <div class="box" id="aboutBox"></div>
+</div>
+
+<div id="veil" class="veil"><div><h2>✠ Catholic Church Finder</h2><div class="bar"><i id="bar"></i></div><p id="veilMsg">Gathering churches from around the world…</p></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+<script>
+(() => {
+'use strict';
+const BASE = new URL('.', document.baseURI).href;
+const $ = (id) => document.getElementById(id);
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// type codes come from the data build: low 3 bits = kind, bit 8 = matched by name only
+const TYPES = [
+  { code: 1, key: 'cathedral', label: 'Cathedrals', one: 'Cathedral', color: '#d2484f' },
+  { code: 2, key: 'basilica', label: 'Basilicas', one: 'Basilica', color: '#f6e7b4' },
+  { code: 3, key: 'shrine', label: 'Shrines', one: 'Shrine', color: '#6aa7ff' },
+  { code: 6, key: 'parish', label: 'Parishes', one: 'Parish church', color: '#e8b84a' },
+  { code: 0, key: 'church', label: 'Churches', one: 'Church', color: '#e8b84a' },
+  { code: 5, key: 'chapel', label: 'Chapels', one: 'Chapel', color: '#c9a55e' },
+  { code: 4, key: 'abbey', label: 'Abbeys & monasteries', one: 'Abbey or monastery', color: '#9fd3b0' },
+];
+const TYPE_BY_CODE = Object.fromEntries(TYPES.map(t => [t.code, t]));
+const state = { meta: null, lon: null, lat: null, typ: null, n: 0, enabled: new Set(TYPES.map(t => t.code)), shards: new Map(), selected: -1, spinning: !reduceMotion };
+
+const setProgress = (p, msg) => { $('bar').style.width = Math.round(p * 100) + '%'; if (msg) $('veilMsg').textContent = msg; };
+const fmt = (n) => n.toLocaleString('en-US');
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+let regionNames = null; try { regionNames = new Intl.DisplayNames(['en'], { type: 'region' }); } catch (e) {}
+const countryName = (cc) => { if (!cc) return ''; try { return regionNames ? regionNames.of(cc) : cc; } catch (e) { return cc; } };
+
+async function getJSON(path) { const r = await fetch(BASE + path); if (!r.ok) throw new Error(path + ' ' + r.status); return r.json(); }
+
+function b64ToBuffer(b64) {
+  const bin = atob(b64.trim()); const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out.buffer;
+}
+// glyphs ship as base64 text beside the page; only the Latin range is bundled
+maplibregl.addProtocol('glyphs', async (params) => {
+  const m = params.url.match(/^glyphs:\/\/([^/]+)\/(\d+-\d+)$/);
+  if (!m || m[2] !== '0-255') return { data: new ArrayBuffer(0) };
+  const r = await fetch(BASE + 'fonts/' + decodeURIComponent(m[1]) + '-0-255.txt');
+  if (!r.ok) throw new Error('glyphs ' + r.status);
+  return { data: b64ToBuffer(await r.text()) };
+});
+async function loadPoints() {
+  const r = await fetch(BASE + 'data/points.txt');
+  if (!r.ok) throw new Error('points ' + r.status);
+  const total = +r.headers.get('content-length') || 0;
+  let buf;
+  if (r.body && total) {
+    const reader = r.body.getReader(); const parts = []; let got = 0;
+    for (;;) { const { done, value } = await reader.read(); if (done) break; parts.push(value); got += value.length; setProgress(0.15 + 0.6 * got / total); }
+    buf = new Uint8Array(got); let o = 0; for (const p of parts) { buf.set(p, o); o += p.length; }
+    buf = new TextDecoder().decode(buf);
+  } else buf = await r.text();
+  buf = b64ToBuffer(buf);
+  const n = buf.byteLength / 9;
+  state.n = n;
+  state.lon = new Int32Array(buf, 0, n);
+  state.lat = new Int32Array(buf, n * 4, n);
+  state.typ = new Uint8Array(buf, n * 8, n);
+}
+
+function buildGeoJSON() {
+  const feats = [];
+  const { lon, lat, typ, n, enabled } = state;
+  for (let i = 0; i < n; i++) {
+    const t = typ[i] & 7;
+    if (!enabled.has(t)) continue;
+    feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t, m: typ[i] >> 3 } });
+  }
+  return { type: 'FeatureCollection', features: feats };
+}
+function notableGeoJSON() {
+  const feats = [];
+  const { lon, lat, typ, n, enabled } = state;
+  for (let i = 0; i < n; i++) {
+    const t = typ[i] & 7;
+    if ((t === 1 || t === 2) && enabled.has(t)) feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t } });
+  }
+  return { type: 'FeatureCollection', features: feats };
+}
+
+async function shardFor(i) {
+  const s = Math.floor(i / state.meta.shardSize);
+  if (!state.shards.has(s)) state.shards.set(s, getJSON('data/d/' + s + '.json').catch(e => { state.shards.delete(s); throw e; }));
+  const recs = await state.shards.get(s);
+  return recs[i - s * state.meta.shardSize];
+}
+
+/* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
+const photos = { idx: null, loading: null, bundles: new Map(), urls: new Map() };
+function photoIndex() {
+  if (!photos.loading) photos.loading = getJSON('data/photos.json').then(j => (photos.idx = new Map(j.p.map(r => [r[0], r])))).catch(e => { photos.loading = null; throw e; });
+  return photos.loading;
+}
+async function photoURL(r) {
+  const [ci, b, off, len] = r;
+  if (photos.urls.has(ci)) return photos.urls.get(ci);
+  let part;
+  if (photos.bundles.has(b)) part = (await photos.bundles.get(b)).slice(off, off + len);
+  else {
+    // ask for just this photo's bytes; if the server sends the whole bundle, keep it for neighbours
+    const res = await fetch(BASE + 'photos/' + b + '.jpg', { headers: { Range: `bytes=${off}-${off + len - 1}` } });
+    if (!res.ok) throw new Error('photo ' + res.status);
+    if (res.status === 206) part = await res.blob();
+    else { const all = res.blob(); photos.bundles.set(b, all); part = (await all).slice(off, off + len); }
+  }
+  const url = URL.createObjectURL(new Blob([part], { type: 'image/jpeg' }));
+  photos.urls.set(ci, url);
+  return url;
+}
+const VIGIL = `<div class="vigil" role="status"><svg viewBox="0 0 60 90" aria-hidden="true">
+  <defs><radialGradient id="vglow"><stop offset="0" stop-color="#f3d58c" stop-opacity=".6"/><stop offset="1" stop-color="#e8b84a" stop-opacity="0"/></radialGradient></defs>
+  <circle class="halo" cx="30" cy="30" r="30" fill="url(#vglow)"/>
+  <g class="flame"><path d="M30 12c6 9 9 15 9 21a9 9 0 0 1-18 0c0-6 3-12 9-21z" fill="#e8b84a"/><path d="M30 24c3 5 4 8 4 10a4 4 0 0 1-8 0c0-2 1-5 4-10z" fill="#fff4d6"/></g>
+  <path d="M30 42v3" stroke="#3a2c14" stroke-width="1.6"/>
+  <rect x="20" y="45" width="20" height="40" rx="2.5" fill="#efe6cf"/><rect x="20" y="45" width="20" height="4" rx="2" fill="#fffaf0"/>
+  <path d="M30 56v16M24.5 61h11" stroke="#c99a35" stroke-width="2"/>
+</svg><span>Loading photo</span></div>`;
+let photoTicket = 0;
+async function showPhoto(i) {
+  const ticket = ++photoTicket, current = () => ticket === photoTicket && state.selected === i;
+  const hero = $('hero');
+  hero.classList.remove('has-photo');
+  hero.querySelectorAll('img.photo, .vigil, .credit').forEach(n => n.remove());
+  hero.insertAdjacentHTML('beforeend', VIGIL);
+  const vigil = hero.querySelector('.vigil');
+  const done = () => { vigil.classList.add('out'); setTimeout(() => vigil.remove(), reduceMotion ? 0 : 500); };
+  let photo = null;
+  // fast path: the few cathedral and basilica photos shipped with the site
+  try {
+    const r = (await photoIndex()).get(i);
+    if (r) { const [, , , , file, author, license] = r; photo = { src: await photoURL(r), file, author, license, page: 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(file.replace(/ /g, '_')) }; }
+  } catch (e) {}
+  if (!current()) return;
+  if (!photo) {
+    let rec; try { rec = await shardFor(i); } catch (e) {}
+    if (!current()) return;
+    try { photo = await lookupPhoto(i, rec); } catch (e) {}
+  }
+  if (!current()) return;
+  if (!photo) { done(); return; }
+  const img = new Image(); img.className = 'photo'; img.alt = 'Photograph of ' + (photo.file || 'the church'); img.referrerPolicy = 'no-referrer'; img.src = photo.src;
+  try { await img.decode(); } catch (e) { if (!img.complete || !img.naturalWidth) { if (current()) done(); return; } }
+  if (!current()) return;
+  hero.querySelector('svg.scene').after(img);
+  hero.classList.add('has-photo');
+  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="Photo by ${esc(photo.author)}, ${esc(photo.license)}. Opens the photo on Wikimedia Commons.">Photo: ${esc(photo.author)} · ${esc(photo.license)}</a>`);
+  requestAnimationFrame(() => img.classList.add('on'));
+  done();
+}
+
+/* ---------- live photos: looked up on Wikimedia when a card opens, nothing stored ----------
+   Wikipedia articles near the church (lead image, matched by name) win; otherwise the best
+   geotagged Commons file near it whose title names the church. */
+const live = new Map(); // church index -> Promise<photo|null>
+const WIKI_LANG = { BR: 'pt', PT: 'pt', AO: 'pt', MZ: 'pt', CV: 'pt', IT: 'it', SM: 'it', VA: 'it', FR: 'fr', BE: 'fr', LU: 'fr', MC: 'fr', CI: 'fr', CM: 'fr', CD: 'fr', CG: 'fr', SN: 'fr', TG: 'fr', BJ: 'fr', BF: 'fr', MG: 'fr', HT: 'fr', RE: 'fr', MQ: 'fr', GP: 'fr', GF: 'fr', PF: 'fr', NC: 'fr', GA: 'fr', BI: 'fr', RW: 'fr', DE: 'de', AT: 'de', CH: 'de', LI: 'de', PL: 'pl', NL: 'nl', HU: 'hu', CZ: 'cs', SK: 'sk', HR: 'hr', SI: 'sl', LT: 'lt', LV: 'lv', RO: 'ro', UA: 'uk', VN: 'vi', KR: 'ko', JP: 'ja', ID: 'id', TW: 'zh', HK: 'zh', MO: 'zh', CN: 'zh', MT: 'mt', IE: 'en', ...Object.fromEntries('ES MX CO AR PE CL EC VE GT CU BO DO HN PY SV NI CR PA UY PR GQ'.split(' ').map(c => [c, 'es'])) };
+const squash = (s) => String(s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[_\-.,;:()'’"\/]+/g, ' ');
+const CHURCHY = /\b(church|chapel|cathedral|basilica|shrine|parish|abbey|monastery|kirche|dom|munster|kapelle|kosciol|katedra|bazylika|iglesia|parroquia|capilla|catedral|ermita|santuario|igreja|paroquia|capela|matriz|chiesa|duomo|cattedrale|basilique|eglise|cathedrale|chapelle|kerk|templom|kostel|crkva|cerkev|baznycia|biserica|nha tho|gereja|katedral|sanctuary|minster|collegiata|pieve|oratorio)\b/;
+const GENERIC = new Set('the of and in at de del della di la le les los las da do dos das du des der die das von zu am im y e et und san santa santo sao saint sainte st ste sankt sv sw nossa nuestra senhora senora our lady notre dame church chapel cathedral basilica parish shrine catholic roman iglesia parroquia capilla catedral igreja paroquia capela matriz chiesa parrocchia eglise paroisse chapelle kirche pfarrkirche kosciol parafia rk r k'.split(' '));
+const BADFILE = /\b(interior|inside|innen|interno|interieur|altar|organ|orgel|organo|window|vitrail|stained|plan|map|mapa|carte|karte|logo|coat of arms|wappen|grave|tomb|plaque|detail|ceiling|nave|crypt|fresco|statue|painting|icon)\b|\.(svg|pdf|tif|tiff|djvu|webm|ogv|gif)$/i;
+function nameTokens(name) {
+  return [...new Set(squash(name).split(/\s+/).filter(w => w.length > 2 && !GENERIC.has(w) && !/^\d+$/.test(w)))];
+}
+function nameMatch(tokens, title) {
+  if (!tokens.length) return 0;
+  const t = ' ' + squash(title) + ' ';
+  return tokens.filter(w => t.includes(' ' + w + ' ') || t.includes(' ' + w)).length / tokens.length;
+}
+function metres(lat1, lon1, lat2, lon2) {
+  const r = Math.PI / 180, x = (lon2 - lon1) * r * Math.cos((lat1 + lat2) / 2 * r), y = (lat2 - lat1) * r;
+  return Math.hypot(x, y) * 6371000;
+}
+async function api(host, params, ms = 9000) {
+  const u = new URL('https://' + host + '/w/api.php');
+  Object.entries({ action: 'query', format: 'json', formatversion: 2, origin: '*', ...params }).forEach(([k, v]) => u.searchParams.set(k, v));
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), ms);
+  try { const r = await fetch(u, { signal: ctl.signal }); if (!r.ok) throw new Error(host + ' ' + r.status); return await r.json(); }
+  finally { clearTimeout(timer); }
+}
+const II = { prop: 'imageinfo', iiprop: 'url|extmetadata|mime', iiurlwidth: 960, iiextmetadatafilter: 'Artist|LicenseShortName|Credit' };
+const plain = (html) => { const d = document.createElement('div'); d.innerHTML = String(html || ''); return d.textContent.replace(/\s+/g, ' ').trim(); };
+function asPhoto(page) {
+  const ii = page && page.imageinfo && page.imageinfo[0];
+  if (!ii || !/^image\/(jpeg|png|webp)$/.test(ii.mime || 'image/jpeg')) return null;
+  const m = ii.extmetadata || {};
+  const author = (plain(m.Artist && m.Artist.value) || plain(m.Credit && m.Credit.value) || 'Unknown author').replace(/^(user:|creator:)\s*/i, '').slice(0, 60);
+  return { src: ii.thumburl || ii.url, file: page.title.replace(/^File:/, ''), page: ii.descriptionurl, author, license: plain(m.LicenseShortName && m.LicenseShortName.value) || 'See file page' };
+}
+// Commons files photographed within ~250 m whose titles name this church
+async function fromCommons(lat, lon, tokens) {
+  const j = await api('commons.wikimedia.org', { generator: 'geosearch', ggscoord: lat + '|' + lon, ggsradius: 250, ggslimit: 50, ggsnamespace: 6, ...II, prop: 'imageinfo|coordinates' });
+  let best = null;
+  for (const p of (j.query && j.query.pages) || []) {
+    const title = p.title.replace(/^File:/, '');
+    if (BADFILE.test(squash(title)) || BADFILE.test(title)) continue;
+    const c = p.coordinates && p.coordinates[0]; const d = c ? metres(lat, lon, c.lat, c.lon) : 250;
+    const nm = nameMatch(tokens, title), churchy = CHURCHY.test(squash(title));
+    if (!(nm >= 0.5 || (churchy && d < 90 && nm > 0) || (churchy && !tokens.length && d < 90))) continue;
+    const score = nm * 3 + (churchy ? 1 : 0) - d / 250;
+    if (!best || score > best.score) best = { score, page: p };
+  }
+  return best ? { score: best.score, photo: asPhoto(best.page) } : null;
+}
+// Wikipedia articles within ~400 m whose title names this church; their lead image is curated
+async function fromWikipedia(lang, lat, lon, tokens) {
+  const j = await api(lang + '.wikipedia.org', { generator: 'geosearch', ggscoord: lat + '|' + lon, ggsradius: 400, ggslimit: 20, prop: 'pageimages|coordinates', piprop: 'name', pilicense: 'free' });
+  let best = null;
+  for (const p of (j.query && j.query.pages) || []) {
+    if (!p.pageimage) continue;
+    const c = p.coordinates && p.coordinates[0]; const d = c ? metres(lat, lon, c.lat, c.lon) : 400;
+    const nm = nameMatch(tokens, p.title), churchy = CHURCHY.test(squash(p.title));
+    if (!(churchy && (nm >= 0.5 || (d < 120 && (nm > 0 || !tokens.length))))) continue;
+    const score = nm * 3 + 1.5 - d / 400;
+    if (!best || score > best.score) best = { score, file: p.pageimage };
+  }
+  if (!best) return null;
+  const k = await api('commons.wikimedia.org', { titles: 'File:' + best.file, ...II });
+  const photo = asPhoto(((k.query && k.query.pages) || [])[0]);
+  return photo ? { score: best.score, photo } : null;
+}
+function lookupPhoto(i, rec) {
+  if (live.has(i)) return live.get(i);
+  const lat = state.lat[i] / 1e6, lon = state.lon[i] / 1e6;
+  const [name, , , , , cc] = rec || [];
+  const tokens = nameTokens(name);
+  const langs = [...new Set([WIKI_LANG[cc] || 'en', 'en'])];
+  const tries = [fromCommons(lat, lon, tokens), ...langs.map(l => fromWikipedia(l, lat, lon, tokens))].map(p => p.catch(() => undefined));
+  const job = Promise.all(tries).then(found => {
+    if (found.every(f => f === undefined)) { live.delete(i); return null; } // offline or rate limited: try again next click
+    const ok = found.filter(f => f && f.photo).sort((a, b) => b.score - a.score);
+    return ok.length ? ok[0].photo : null;
+  });
+  live.set(i, job);
+  return job;
+}
+
+/* ---------- map ---------- */
+const glyphs = 'glyphs://{fontstack}/{range}';
+const style = {
+  version: 8,
+  projection: { type: 'globe' },
+  glyphs,
+  sources: {},
+  layers: [{ id: 'ocean', type: 'background', paint: { 'background-color': '#0a1a33' } }],
+};
+const map = new maplibregl.Map({
+  container: 'map', style, center: [-40, 20], zoom: 0.6, minZoom: 0.3, maxZoom: 18.5,
+  attributionControl: false, renderWorldCopies: false, maxPitch: 60, dragRotate: true,
+});
+window.__map = map;
+
+async function addBasemap() {
+  const files = ['land', 'urban', 'lakes', 'rivers', 'states', 'borders', 'places'];
+  const data = await Promise.all(files.map(f => getJSON('base/' + f + '.json')));
+  const src = Object.fromEntries(files.map((f, k) => [f, data[k]]));
+  for (const f of files) map.addSource(f, { type: 'geojson', data: src[f], tolerance: 0.6 });
+  map.addLayer({ id: 'land', type: 'fill', source: 'land', paint: { 'fill-color': ['interpolate', ['linear'], ['zoom'], 0, '#1b2a40', 6, '#1f3048', 12, '#24364f'] } });
+  map.addLayer({ id: 'land-edge', type: 'line', source: 'land', paint: { 'line-color': '#3a5378', 'line-width': ['interpolate', ['linear'], ['zoom'], 0, 0.5, 6, 1.2], 'line-opacity': 0.8 } });
+  map.addLayer({ id: 'urban', type: 'fill', source: 'urban', minzoom: 4, paint: { 'fill-color': '#2c3f5c', 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 4, 0, 6, 0.8] } });
+  map.addLayer({ id: 'lakes', type: 'fill', source: 'lakes', paint: { 'fill-color': '#0c2040' } });
+  map.addLayer({ id: 'rivers', type: 'line', source: 'rivers', minzoom: 3, paint: { 'line-color': '#1a3a66', 'line-width': ['interpolate', ['linear'], ['zoom'], 3, 0.4, 8, 1.6] } });
+  map.addLayer({ id: 'states', type: 'line', source: 'states', minzoom: 3.5, paint: { 'line-color': '#4a6185', 'line-width': 0.6, 'line-dasharray': [3, 2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 3.5, 0, 5, 0.6] } });
+  map.addLayer({ id: 'borders', type: 'line', source: 'borders', paint: { 'line-color': '#6b83a8', 'line-width': ['interpolate', ['linear'], ['zoom'], 0, 0.4, 6, 1.2], 'line-opacity': 0.7 } });
+  map.addLayer({
+    id: 'places', type: 'symbol', source: 'places',
+    filter: ['<=', ['get', 'scalerank'], ['step', ['zoom'], 1, 3, 3, 4, 5, 5, 7, 6, 10]],
+    layout: {
+      'text-field': ['get', 'nameascii'], 'text-font': ['NotoSansMedium'], 'text-transform': 'uppercase',
+      // bigger cities get bigger names
+      'text-size': ['interpolate', ['linear'], ['zoom'], ...[[2, 11], [6, 14], [10, 18], [14, 20]].flatMap(([z, px]) => [z, ['step', ['get', 'scalerank'], px * 1.3, 3, px * 1.12, 6, px * 0.95]])], 'text-letter-spacing': 0.12,
+      'text-variable-anchor': ['top', 'bottom', 'left', 'right'], 'text-radial-offset': 0.4, 'symbol-sort-key': ['get', 'scalerank'],
+    },
+    paint: { 'text-color': ['interpolate', ['linear'], ['zoom'], 2, '#c9d3e6', 8, '#fdf6e3'], 'text-halo-color': '#05070d', 'text-halo-width': 2, 'text-halo-blur': 0.5 },
+  });
+}
+
+function addChurchLayers() {
+  map.addSource('churches', { type: 'geojson', data: buildGeoJSON(), cluster: true, clusterRadius: 44, clusterMaxZoom: 9, maxzoom: 15, buffer: 64 });
+  map.addSource('notable', { type: 'geojson', data: notableGeoJSON() });
+  map.addSource('sel', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+
+  map.addLayer({ id: 'cl-glow', type: 'circle', source: 'churches', filter: ['has', 'point_count'], paint: {
+    'circle-color': '#e8b84a', 'circle-blur': 1,
+    'circle-radius': ['interpolate', ['linear'], ['get', 'point_count'], 2, 10, 100, 22, 1000, 34, 10000, 50],
+    'circle-opacity': 0.28,
+  } });
+  map.addLayer({ id: 'cl', type: 'circle', source: 'churches', filter: ['has', 'point_count'], paint: {
+    'circle-color': ['interpolate', ['linear'], ['get', 'point_count'], 2, '#7a5a1c', 100, '#b98a2e', 1000, '#e8b84a', 10000, '#f6dc96'],
+    'circle-radius': ['interpolate', ['linear'], ['get', 'point_count'], 2, 6, 100, 11, 1000, 17, 10000, 26],
+    'circle-stroke-color': '#f6dc96', 'circle-stroke-width': 0.8, 'circle-stroke-opacity': 0.6, 'circle-opacity': 0.92,
+  } });
+  map.addLayer({ id: 'cl-count', type: 'symbol', source: 'churches', filter: ['has', 'point_count'], layout: {
+    'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['NotoSansMedium'],
+    'text-size': ['interpolate', ['linear'], ['get', 'point_count'], 2, 9, 1000, 11, 10000, 13], 'text-allow-overlap': true,
+  }, paint: { 'text-color': '#1a1406' } });
+
+  const typeColor = ['match', ['get', 't'], 1, '#d2484f', 2, '#f6e7b4', 3, '#6aa7ff', 4, '#9fd3b0', 5, '#c9a55e', '#e8b84a'];
+  map.addLayer({ id: 'pt-halo', type: 'circle', source: 'churches', filter: ['!', ['has', 'point_count']], paint: {
+    'circle-color': typeColor, 'circle-blur': 1, 'circle-opacity': 0.35,
+    'circle-radius': ['interpolate', ['linear'], ['zoom'], 3, 8, 12, 16, 16, 22],
+  } });
+  map.addLayer({ id: 'pt', type: 'circle', source: 'churches', filter: ['!', ['has', 'point_count']], paint: {
+    'circle-color': typeColor,
+    'circle-radius': ['interpolate', ['linear'], ['zoom'], 3, 4, 10, 6.5, 13, 8, 16, 11],
+    'circle-stroke-color': '#fdf6e3', 'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 3, 0.8, 12, 1.6], 'circle-stroke-opacity': 0.85,
+    'circle-opacity': ['case', ['==', ['get', 'm'], 1], 0.75, 1],
+  } });
+  // church names under the pins once a city is in view (names arrive from the detail shards)
+  map.addSource('names', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'pt-name', type: 'symbol', source: 'names', minzoom: NAME_ZOOM, layout: {
+    'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'],
+    'text-size': ['interpolate', ['linear'], ['zoom'], NAME_ZOOM, 10.5, 14, 12, 17, 13.5],
+    'text-anchor': 'top', 'text-offset': [0, 1.1], 'text-max-width': 9, 'text-padding': 2,
+    'symbol-sort-key': ['get', 'rank'],
+  }, paint: { 'text-color': '#f3e9cf', 'text-halo-color': '#05070d', 'text-halo-width': 1.4, 'text-halo-blur': 0.4,
+  } });
+  // cathedrals and basilicas stay visible above the clusters as small stars of light
+  map.addLayer({ id: 'notable', type: 'circle', source: 'notable', minzoom: 2, maxzoom: 4.6, paint: {
+    'circle-color': ['match', ['get', 't'], 1, '#d2484f', '#f6e7b4'],
+    'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, 1.3, 4.6, 2.4],
+    'circle-opacity': ['interpolate', ['linear'], ['zoom'], 2, 0.9, 4.2, 0.9, 4.6, 0],
+    'circle-stroke-color': '#05070d', 'circle-stroke-width': 0.8,
+  } });
+  map.addSource('hover', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'hover', type: 'circle', source: 'hover', paint: {
+    'circle-color': typeColor, 'circle-radius': ['interpolate', ['linear'], ['zoom'], 3, 8, 13, 12, 16, 15],
+    'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5,
+  } });
+  map.moveLayer('places'); // city names sit above the pins and win over church names
+  map.addLayer({ id: 'sel-ring', type: 'circle', source: 'sel', paint: { 'circle-color': 'rgba(0,0,0,0)', 'circle-radius': 14, 'circle-stroke-color': '#f3d58c', 'circle-stroke-width': 2 } });
+  map.addLayer({ id: 'sel-dot', type: 'circle', source: 'sel', paint: { 'circle-color': '#f3d58c', 'circle-radius': 5, 'circle-stroke-color': '#05070d', 'circle-stroke-width': 1.5 } });
+}
+
+/* ---------- church name labels ---------- */
+const NAME_ZOOM = 10.5;
+// only the Latin glyph range ships with the page, so fold accents and drop other scripts' letters
+const latinLabel = (s) => [...s].map(c => c.charCodeAt(0) <= 255 ? c : c.normalize('NFD').replace(/[̀-ͯ]/g, '')).filter(c => c.length && c.charCodeAt(0) <= 255).join('').replace(/\s+/g, ' ').trim();
+let nameSeq = 0;
+async function updateNames() {
+  const src = map.getSource('names');
+  if (!src || map.getZoom() < NAME_ZOOM - 0.5) return;
+  const seq = ++nameSeq;
+  const ids = [...new Set(map.queryRenderedFeatures({ layers: ['pt'] }).map(f => f.id))].slice(0, 1500);
+  const shardIds = new Set(ids.map(i => Math.floor(i / state.meta.shardSize)));
+  if (shardIds.size > 20) return;
+  let recs;
+  try { recs = await Promise.all(ids.map(shardFor)); } catch (e) { return; }
+  if (seq !== nameSeq) return;
+  const rankOf = { 1: 0, 2: 1, 3: 2, 4: 3, 6: 4, 0: 4, 5: 5 };
+  const features = [];
+  ids.forEach((i, k) => {
+    const name = latinLabel(recs[k][0] || '');
+    if (name.length < 2) return;
+    features.push({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { name, rank: rankOf[state.typ[i] & 7] ?? 4 } });
+  });
+  src.setData({ type: 'FeatureCollection', features });
+}
+// wait for the pins to be drawn after a move, then label the ones in view
+map.on('moveend', () => { if (map.getZoom() >= NAME_ZOOM - 0.5) { updateNames(); map.once('idle', updateNames); } });
+
+/* ---------- spin ---------- */
+let lastInteract = 0;
+function spinStep() {
+  if (state.ready && state.spinning && !map.isMoving() && map.getZoom() < 3.2 && performance.now() - lastInteract > 2500 && $('card').hidden) {
+    const c = map.getCenter(); c.lng += 2.4 * (map.getZoom() < 2 ? 1 : 0.5);
+    map.easeTo({ center: c, duration: 1000, easing: t => t });
+  }
+}
+map.on('moveend', () => spinStep());
+for (const ev of ['mousedown', 'touchstart', 'wheel', 'dragstart']) map.on(ev, () => { lastInteract = performance.now(); });
+setInterval(spinStep, 1200);
+$('spin').addEventListener('click', () => { state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning); if (state.spinning) { lastInteract = 0; spinStep(); } else map.stop(); });
+$('zin').addEventListener('click', () => { lastInteract = performance.now(); map.zoomIn({ duration: 400 }); });
+$('zout').addEventListener('click', () => { lastInteract = performance.now(); map.zoomOut({ duration: 400 }); });
+$('home').addEventListener('click', () => { closeCard(); map.flyTo({ center: [map.getCenter().lng, 20], zoom: 1.4, pitch: 0, bearing: 0, duration: 1800 }); });
+$('rand').addEventListener('click', () => {
+  if (!state.n) return;
+  let i; do { i = Math.floor(Math.random() * state.n); } while (!state.enabled.has(state.typ[i] & 7));
+  selectChurch(i, { fly: true });
+});
+
+/* ---------- interaction ---------- */
+const tip = $('tip');
+let hoverId = -1, hoverSeq = 0;
+map.on('mousemove', (e) => {
+  const lng = e.lngLat.lng, lt = e.lngLat.lat;
+  $('coords').textContent = `${Math.abs(lt).toFixed(3)}° ${lt >= 0 ? 'N' : 'S'}  ${Math.abs(lng).toFixed(3)}° ${lng >= 0 ? 'E' : 'W'}`;
+});
+function showTip(x, y, html) { tip.innerHTML = html; tip.style.left = x + 'px'; tip.style.top = y + 'px'; tip.hidden = false; }
+// pins are picked by proximity, so a tap near a pin counts; touch gets a wider reach
+const coarse = matchMedia('(pointer: coarse)').matches;
+function pick(point, reach) {
+  const box = [[point.x - reach, point.y - reach], [point.x + reach, point.y + reach]];
+  const feats = map.queryRenderedFeatures(box, { layers: ['pt', 'notable', 'cl'] });
+  let best = null, bestD = Infinity;
+  for (const f of feats) {
+    const isCl = f.layer.id === 'cl';
+    const p = map.project(f.geometry.coordinates);
+    let d = Math.hypot(p.x - point.x, p.y - point.y);
+    if (isCl) d = Math.max(0, d - clusterRadiusPx(f.properties.point_count)) + reach * 0.6; // pins win ties over clusters
+    if (d <= reach * 1.5 && d < bestD) { bestD = d; best = f; }
+  }
+  return best;
+}
+function clusterRadiusPx(n) { return n < 100 ? 6 + 5 * (n - 2) / 98 : n < 1000 ? 11 + 6 * (n - 100) / 900 : n < 10000 ? 17 + 9 * (n - 1000) / 9000 : 26; }
+function setHover(i) {
+  const src = map.getSource('hover'); if (!src) return;
+  src.setData({ type: 'FeatureCollection', features: i < 0 ? [] : [{ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { t: state.typ[i] & 7 } }] });
+}
+map.on('mousemove', async (e) => {
+  if (!map.getLayer('pt') || coarse) return;
+  const f = pick(e.point, 14);
+  const cv = map.getCanvas();
+  if (!f) { if (hoverId !== -1) { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); } cv.style.cursor = ''; return; }
+  if (f.layer.id === 'cl') { cv.style.cursor = 'zoom-in'; if (hoverId !== -1) { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); } return; }
+  cv.style.cursor = 'pointer';
+  const id = f.id; const p = map.project(f.geometry.coordinates); const r = map.getContainer().getBoundingClientRect();
+  tip.style.left = (r.left + p.x) + 'px'; tip.style.top = (r.top + p.y) + 'px';
+  if (id === hoverId) return;
+  hoverId = id; const seq = ++hoverSeq; setHover(id);
+  showTip(r.left + p.x, r.top + p.y, `<b>${esc(TYPE_BY_CODE[state.typ[id] & 7].one)}</b><span>Loading name…</span>`);
+  try {
+    const rec = await shardFor(id);
+    if (seq !== hoverSeq) return;
+    tip.innerHTML = `<b>${esc(rec[0])}</b><span>${esc([rec[2], countryName(rec[5])].filter(Boolean).join(', '))}</span><span style="display:block;color:var(--gold-soft)">Click for details</span>`;
+  } catch (err) { /* tooltip stays generic */ }
+});
+map.getCanvas().addEventListener('mouseleave', () => { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); });
+map.on('click', async (e) => {
+  if (!map.getLayer('pt')) return;
+  const f = pick(e.point, coarse ? 26 : 16);
+  if (!f) return;
+  lastInteract = performance.now();
+  if (f.layer.id === 'cl') {
+    const z = await map.getSource('churches').getClusterExpansionZoom(f.properties.cluster_id);
+    map.easeTo({ center: f.geometry.coordinates, zoom: Math.min(z + 0.5, 16), duration: 900 });
+    return;
+  }
+  tip.hidden = true; setHover(-1);
+  selectChurch(f.id, { fly: map.getZoom() < 12 });
+});
+
+/* ---------- details card ---------- */
+function scene(t, lon, lat) {
+  // sky colour follows the sun's hour at the church (solar time from longitude)
+  const now = new Date();
+  const utcH = now.getUTCHours() + now.getUTCMinutes() / 60;
+  const h = ((utcH + lon / 15) % 24 + 24) % 24;
+  const skies = h < 5 || h >= 20.5 ? ['#060a1c', '#16224a'] : h < 7 ? ['#2a2f6b', '#e59a6a'] : h < 17.5 ? ['#3e78c4', '#a9cdf0'] : h < 20.5 ? ['#3a2c66', '#f0975a'] : ['#060a1c', '#16224a'];
+  const night = h < 5 || h >= 20.5;
+  const hh = Math.floor(h), mm = Math.floor((h - hh) * 60);
+  const ink = '#0b1222';
+  const glass = night ? '#f3d58c' : '#3b4a66';
+  const shapes = {
+    1: `<path d="M118 190V96l14-30 14 30v94zM254 190V96l14-30 14 30v94z"/><path d="M146 190v-70l54-34 54 34v70z"/><path d="M128 66l4-24 4 24M264 66l4-24 4 24"/><circle cx="200" cy="128" r="15" fill="${glass}"/><path d="M190 190v-30a10 10 0 0 1 20 0v30z" fill="${glass}"/><path d="M200 54v-18M194 42h12" stroke="${ink}" stroke-width="3"/>`,
+    2: `<path d="M120 190v-56h160v56z"/><path d="M150 134c0-34 22-56 50-56s50 22 50 56z"/><path d="M192 78v-14h16v14z"/><path d="M200 64V44M193 51h14" stroke="${ink}" stroke-width="3"/><path d="M90 190v-36h30v36zM280 190v-36h30v36z"/><g fill="${glass}"><rect x="134" y="150" width="8" height="26"/><rect x="156" y="150" width="8" height="26"/><rect x="178" y="150" width="8" height="26"/><rect x="214" y="150" width="8" height="26"/><rect x="236" y="150" width="8" height="26"/><rect x="258" y="150" width="8" height="26"/></g>`,
+    3: `<path d="M140 190v-60l60-40 60 40v60z"/><path d="M188 90V66h24v24z"/><path d="M200 66V46M193 53h14" stroke="${ink}" stroke-width="3"/><circle cx="200" cy="134" r="18" fill="${glass}"/><circle cx="200" cy="56" r="20" fill="none" stroke="${glass}" stroke-width="1.5" opacity=".7"/>`,
+    4: `<path d="M110 190v-50h180v50z"/><path d="M230 140V80l18-22 18 22v60z"/><path d="M248 58V40M241 47h14" stroke="${ink}" stroke-width="3"/><g fill="${glass}"><path d="M122 190v-22a8 8 0 0 1 16 0v22z"/><path d="M148 190v-22a8 8 0 0 1 16 0v22z"/><path d="M174 190v-22a8 8 0 0 1 16 0v22z"/><path d="M200 190v-22a8 8 0 0 1 16 0v22z"/></g>`,
+    5: `<path d="M160 190v-56l40-30 40 30v56z"/><path d="M190 104V82h20v22z"/><path d="M200 82V62M193 69h14" stroke="${ink}" stroke-width="3"/><path d="M192 190v-24a8 8 0 0 1 16 0v24z" fill="${glass}"/>`,
+    0: `<path d="M150 190v-58l50-30 50 30v58z"/><path d="M222 190V92h30v98z"/><path d="M222 92l15-40 15 40z"/><path d="M237 52V34M230 41h14" stroke="${ink}" stroke-width="3"/><path d="M180 190v-26a10 10 0 0 1 20 0v26z" fill="${glass}"/><circle cx="237" cy="112" r="6" fill="${glass}"/>`,
+  };
+  shapes[6] = shapes[0];
+  const stars = night ? Array.from({ length: 26 }, (_, k) => `<circle cx="${(k * 97) % 400}" cy="${(k * 53) % 110}" r="${k % 3 ? 0.7 : 1.2}" fill="#fff" opacity="${0.4 + (k % 4) / 8}"/>`).join('') : '';
+  const sunY = night ? 999 : 40 + Math.abs(13 - h) * 9;
+  return { svg: `<svg class="scene" viewBox="0 0 400 190" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${skies[0]}"/><stop offset="1" stop-color="${skies[1]}"/></linearGradient></defs>
+    <rect width="400" height="190" fill="url(#sk)"/>${stars}
+    <circle cx="330" cy="${sunY}" r="16" fill="#fff3c4" opacity=".85"/>
+    ${night ? '<circle cx="76" cy="40" r="12" fill="#f4efe0" opacity=".9"/><circle cx="82" cy="36" r="11" fill="' + skies[0] + '"/>' : ''}
+    <path d="M0 176c60-10 120-14 200-10s150 2 200-6v30H0z" fill="${ink}" opacity=".6"/>
+    <g fill="${ink}">${shapes[t] || shapes[0]}</g>
+    <rect y="186" width="400" height="4" fill="${ink}"/>
+  </svg>`, sun: `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}` };
+}
+
+function dms(v, pos, neg) {
+  const a = Math.abs(v); const d = Math.floor(a); const m = Math.floor((a - d) * 60); const s = ((a - d - m / 60) * 3600).toFixed(1);
+  return `${d}°${String(m).padStart(2, '0')}′${s.padStart(4, '0')}″${v >= 0 ? pos : neg}`;
+}
+const icon = {
+  photo: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>',
+  video: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>',
+  map: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  book: '<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6"/></svg>',
+};
+
+async function selectChurch(i, { fly = true } = {}) {
+  state.selected = i;
+  const lng = state.lon[i] / 1e6, lt = state.lat[i] / 1e6;
+  map.getSource('sel').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lt] }, properties: {} }] });
+  lastInteract = performance.now();
+  const wide = innerWidth > 640;
+  if (fly) map.flyTo({ center: [lng, lt], zoom: Math.max(map.getZoom(), 15), speed: 1.4, curve: 1.5, pitch: 40, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 }, essential: true });
+  const t = state.typ[i] & 7; const byName = state.typ[i] >> 3;
+  const sc = scene(t, lng, lt);
+  const hero = $('hero');
+  hero.querySelectorAll('svg.scene, .badge, .suntime').forEach(n => n.remove());
+  hero.insertAdjacentHTML('afterbegin', sc.svg);
+  hero.insertAdjacentHTML('beforeend', `<span class="badge">${esc(TYPE_BY_CODE[t].one)}</span><span class="suntime" title="Approximate sun time at this church">Sun time ${sc.sun}</span>`);
+  showPhoto(i);
+  $('cardBody').innerHTML = `<div><h2 id="cName">Loading…</h2></div>`;
+  $('card').hidden = false;
+  let rec;
+  try { rec = await shardFor(i); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">Details didn't load</h2><p class="where">Check your connection, then click the pin again.</p></div>`; return; }
+  if (state.selected !== i) return;
+  const [name, street, town, region, postcode, cc, web, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const country = countryName(cc);
+  const place = [town, region && region !== town ? region : '', country].filter(Boolean).join(', ');
+  const q = encodeURIComponent([name, town, country].filter(Boolean).join(' '));
+  const qShort = encodeURIComponent([name, town].filter(Boolean).join(' '));
+  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
+  const fb = (socials || []).find(s => /facebook\.com/.test(s));
+  const webUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
+  const confLabel = conf >= 0.8 ? 'High' : conf >= 0.55 ? 'Medium' : 'Low';
+  $('cardBody').innerHTML = `
+    <div>
+      <h2 id="cName">${esc(name)}</h2>
+      <div class="where">${esc(place || 'Location on the globe')}</div>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">Directions</a>
+      ${webUrl ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">Parish website</a>` : ''}
+      <button class="btn" id="flyBtn">Fly here</button>
+    </div>
+    <dl class="facts">
+      ${street ? `<dt>Address</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
+      ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
+      ${phone ? `<dt>Phone</dt><dd class="mono">${esc(phone)}</dd>` : ''}
+      ${webUrl ? `<dt>Website</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(host(webUrl))}</a></dd>` : ''}
+      ${fb ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
+      <dt>Position</dt><dd class="mono">${dms(lt, 'N', 'S')} ${dms(lng, 'E', 'W')}</dd>
+    </dl>
+    <div class="sect">
+      <h3>Photos, video and history</h3>
+      <div class="media">
+        <a href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span><b>Photos</b><small>Wikimedia Commons</small></span></a>
+        <a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">${icon.video}<span><b>Videos</b><small>YouTube</small></span></a>
+        <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span><b>Street View</b><small>Google Maps</small></span></a>
+        <a href="https://en.wikipedia.org/w/index.php?search=${qShort}" target="_blank" rel="noopener">${icon.book}<span><b>History</b><small>Wikipedia</small></span></a>
+      </div>
+    </div>
+    <div class="prov">
+      <span class="pill">${confLabel} confidence</span>${how === 'name' ? '<span class="pill warn">Identified as Catholic by its name</span>' : '<span class="pill">Listed as Roman Catholic</span>'}
+      <div style="margin-top:8px">Source: Overture Maps places (${esc((datasets || []).join(', ') || 'Overture')})${updated ? ', updated ' + esc(updated) : ''}.</div>
+    </div>`;
+  $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
+}
+function closeCard() {
+  $('card').hidden = true; state.selected = -1;
+  if (map.getSource('sel')) map.getSource('sel').setData({ type: 'FeatureCollection', features: [] });
+}
+$('cardClose').addEventListener('click', closeCard);
+addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (!$('about').hidden) $('about').hidden = true; else if (!$('results').hidden) $('results').hidden = true; else closeCard(); } });
+
+// gently pulse the selection ring
+let t0 = performance.now();
+function pulse(now) {
+  if (state.selected >= 0 && map.getLayer('sel-ring') && !reduceMotion) {
+    const k = ((now - t0) % 1600) / 1600;
+    map.setPaintProperty('sel-ring', 'circle-radius', 8 + k * 18);
+    map.setPaintProperty('sel-ring', 'circle-stroke-opacity', 1 - k);
+  }
+  requestAnimationFrame(pulse);
+}
+requestAnimationFrame(pulse);
+
+/* ---------- filter chips ---------- */
+function renderChips() {
+  const counts = state.meta.types;
+  const all = state.enabled.size === TYPES.length;
+  $('chips').innerHTML = `<button class="chip" data-k="all" aria-pressed="${all}">All</button>` + TYPES.filter(t => counts[t.code]).map(t =>
+    `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}"><i style="background:${t.color}"></i>${t.label} <small>${fmt(counts[t.code])}</small></button>`).join('');
+}
+$('chips').addEventListener('click', (e) => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  const k = b.dataset.k;
+  if (k === 'all') state.enabled = new Set(TYPES.map(t => t.code));
+  else {
+    const c = +k; const all = state.enabled.size === TYPES.length;
+    if (all) state.enabled = new Set([c]);
+    else if (state.enabled.has(c)) { state.enabled.delete(c); if (!state.enabled.size) state.enabled = new Set(TYPES.map(t => t.code)); }
+    else state.enabled.add(c);
+    // "Churches" and "Parishes" read as one idea to most people, so they toggle together
+    if (c === 0 || c === 6) { if (state.enabled.has(c)) { state.enabled.add(0); state.enabled.add(6); } else { state.enabled.delete(0); state.enabled.delete(6); } if (!state.enabled.size) state.enabled = new Set(TYPES.map(t => t.code)); }
+  }
+  renderChips();
+  map.getSource('churches').setData(buildGeoJSON());
+  map.getSource('notable').setData(notableGeoJSON());
+  updateTagline();
+  map.once('idle', updateNames);
+});
+function updateTagline() {
+  let n = 0; for (const t of state.enabled) n += state.meta.types[t] || 0;
+  const all = state.enabled.size === TYPES.length;
+  $('tagline').innerHTML = all ? `<b>${fmt(state.meta.count)}</b> churches in <b>${state.meta.countries.length}</b> countries and territories` : `Showing <b>${fmt(n)}</b> of ${fmt(state.meta.count)} churches`;
+}
+
+/* ---------- search ---------- */
+let searchIdx = null, searchLoading = null;
+const fold = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+function loadSearch() {
+  if (searchLoading) return searchLoading;
+  searchLoading = (async () => {
+    const parts = await Promise.all(Array.from({ length: state.meta.searchChunks }, (_, k) => fetch(BASE + 'data/search-' + k + '.txt').then(r => { if (!r.ok) throw new Error('search'); return r.text(); })));
+    const lines = parts.join('\n').split('\n');
+    const keys = new Array(lines.length);
+    for (let i = 0; i < lines.length; i++) keys[i] = fold(lines[i]);
+    searchIdx = { lines, keys };
+  })().catch(e => { searchLoading = null; throw e; });
+  return searchLoading;
+}
+const qEl = $('q'), resEl = $('results');
+let activeRes = -1;
+qEl.addEventListener('focus', () => { loadSearch().catch(() => {}); if (qEl.value.trim()) runSearch(); });
+let qTimer = 0;
+qEl.addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(runSearch, 120); });
+async function runSearch() {
+  const q = fold(qEl.value.trim());
+  if (q.length < 2) { resEl.hidden = true; return; }
+  resEl.hidden = false;
+  if (!searchIdx) { resEl.innerHTML = '<div class="note">Loading the church index…</div>'; try { await loadSearch(); } catch (e) { resEl.innerHTML = '<div class="note">The church index did not load. Check your connection and try again.</div>'; return; } }
+  const toks = q.split(/\s+/).filter(Boolean);
+  const { keys, lines } = searchIdx; const hits = [];
+  for (let i = 0; i < keys.length && hits.length < 400; i++) {
+    const k = keys[i]; let ok = true;
+    for (const t of toks) if (k.indexOf(t) < 0) { ok = false; break; }
+    if (ok && state.enabled.has(state.typ[i] & 7)) hits.push(i);
+  }
+  const score = (i) => { const k = keys[i]; const ty = state.typ[i] & 7; return (k.startsWith(toks[0]) ? 0 : 2) + (ty === 1 || ty === 2 ? -1.5 : ty === 3 ? -0.5 : 0) + (state.typ[i] >> 3) * 0.6 + k.length / 200; };
+  hits.sort((a, b) => score(a) - score(b));
+  const top = hits.slice(0, 30);
+  activeRes = -1;
+  if (!top.length) { resEl.innerHTML = `<div class="note">No churches match “${esc(qEl.value.trim())}”. Try the town name or a saint’s name.</div>`; return; }
+  resEl.innerHTML = top.map((i, k) => {
+    const [nm, town, cc] = lines[i].split('\t'); const t = TYPE_BY_CODE[state.typ[i] & 7];
+    return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(nm)}</span><span class="loc">${esc([t.one, town, countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
+  }).join('') + (hits.length > 30 ? `<div class="note">${hits.length >= 400 ? '400+' : hits.length} matches. Add a town to narrow it down.</div>` : '');
+}
+resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i]'); if (!b) return; pickResult(+b.dataset.i); });
+function pickResult(i) { resEl.hidden = true; qEl.blur(); selectChurch(i, { fly: true }); }
+qEl.addEventListener('keydown', (e) => {
+  const opts = [...resEl.querySelectorAll('button[data-i]')]; if (!opts.length) return;
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); activeRes = (activeRes + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length; opts.forEach((o, k) => o.setAttribute('aria-selected', k === activeRes)); opts[activeRes].scrollIntoView({ block: 'nearest' }); }
+  else if (e.key === 'Enter') { e.preventDefault(); pickResult(+opts[Math.max(activeRes, 0)].dataset.i); }
+});
+document.addEventListener('pointerdown', (e) => { if (!e.target.closest('.search')) resEl.hidden = true; });
+
+/* ---------- about ---------- */
+$('aboutBtn').addEventListener('click', () => {
+  const m = state.meta; if (!m) return;
+  const rows = m.countries.slice(0, 20).map(([cc, n]) => `<tr><td>${esc(countryName(cc) || 'Unknown')}</td><td>${fmt(n)}</td></tr>`);
+  const half = Math.ceil(rows.length / 2);
+  $('aboutBox').innerHTML = `
+    <h2 id="aboutTitle">About the data</h2>
+    <p>The globe shows <b>${fmt(m.count)}</b> Catholic churches, chapels, shrines, basilicas and cathedrals. They come from the <a href="https://docs.overturemaps.org/guides/places/" target="_blank" rel="noopener">Overture Maps places dataset</a> (release ${esc(m.release)}), which gathers places from Meta, Microsoft and other open sources.</p>
+    <p>${fmt(m.byMatch.category || 0)} places are listed in Overture as Roman Catholic places of worship. Another ${fmt(m.byMatch.name || 0)} are listed only as Christian places of worship, and the globe includes them because their names are clearly Catholic (for example “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Those carry a note in their details.</p>
+    <p>No open dataset lists every parish yet. Coverage is strongest in the Americas and Western Europe and thinner in parts of Africa and Asia, where many parishes are not yet mapped. Some entries may be duplicates, offices or closed buildings. When you open a church, the page looks for a photograph of it on <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> and Wikipedia, matched by location and name and credited to its photographer. Churches without a matching photo keep a drawn scene. More photos, videos and Street View open from each card.</p>
+    <div class="cols"><table>${rows.slice(0, half).join('')}</table><table>${rows.slice(half).join('')}</table></div>
+    <p style="font-size:12px">Places data © Overture Maps Foundation, CDLA Permissive 2.0. Basemap from Natural Earth (public domain). Map rendering by MapLibre.</p>
+    <div><button class="btn" id="aboutClose">Close</button></div>`;
+  $('about').hidden = false; $('aboutClose').focus();
+  $('aboutClose').addEventListener('click', () => { $('about').hidden = true; });
+});
+$('about').addEventListener('click', (e) => { if (e.target.id === 'about') $('about').hidden = true; });
+
+/* ---------- boot ---------- */
+const mapReady = new Promise(res => map.once('load', res));
+(async () => {
+  try {
+    setProgress(0.05);
+    state.meta = await getJSON('data/meta.json');
+    setProgress(0.12, `Gathering ${fmt(state.meta.count)} churches from around the world…`);
+    const pts = loadPoints();
+    await mapReady;
+    await addBasemap();
+    await pts;
+    setProgress(0.85, 'Placing them on the globe…');
+    await new Promise(r => setTimeout(r, 30));
+    addChurchLayers();
+    renderChips(); updateTagline();
+    setProgress(1);
+    let opened = false;
+    const open = () => {
+      if (opened) return; opened = true;
+      $('veil').classList.add('gone');
+      setTimeout(() => photoIndex().catch(() => {}), 5000); // warm the small photo index once the globe is up
+      // open over Rome, then let the world turn
+      map.flyTo({ center: [12.45, 30], zoom: innerWidth < 640 ? 1.35 : 2.25, duration: reduceMotion ? 0 : 3200, essential: true });
+      map.once('moveend', () => { state.ready = true; });
+    };
+    map.once('idle', open);
+    setTimeout(open, 2500);
+  } catch (err) {
+    console.error(err);
+    $('veilMsg').textContent = 'The church data did not load. Reload the page to try again.';
+  }
+})();
+})();
+</script>
+</body>
+</html>
