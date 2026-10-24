@@ -463,9 +463,9 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
     <h1><span class="cross" aria-hidden="true">✠</span><span data-i18n="app">Catholic Church Finder</span></h1>
     <p id="tagline" data-i18n="loadingChurches">Loading churches…</p>
   </div>
-  <div class="modes" role="tablist" aria-label="What the globe shows">
-    <button role="tab" id="modeChurches" aria-selected="true" aria-controls="map"><span aria-hidden="true">✠</span>Churches</button>
-    <button role="tab" id="modeBible" aria-selected="false" aria-controls="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg>Bible Places</button>
+  <div class="modes" role="tablist" aria-label="What the globe shows" data-i18n-attr="aria-label:modesLabel">
+    <button role="tab" id="modeChurches" aria-selected="true" aria-controls="map"><span aria-hidden="true">✠</span><span data-i18n="modeChurches">Churches</span></button>
+    <button role="tab" id="modeBible" aria-selected="false" aria-controls="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg><span data-i18n="modeBible">Bible Places</span></button>
   </div>
   <div class="search" role="search">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
@@ -662,6 +662,40 @@ const EN = {
   massLangOpt_other: "{lang} · {n} churches",
   massLangTip: "Show only churches that list a Mass in this language. The number is how many churches list one.",
   massLangAria: "Show only churches with a Mass in this language",
+  modesLabel: "What the globe shows",
+  modeChurches: "Churches",
+  modeBible: "Bible Places",
+  bSearchPh: "Search a Bible place or country, e.g. Persia, Nineveh, Ephesus",
+  bSearchLabel: "Search places of the Bible",
+  bLoading: "Loading places of the Bible…",
+  bFailed: "The Bible places did not load. Check your connection and try again.",
+  bTagline_one: "<b>{n}</b> place of the Bible across <b>{lands}</b> modern countries · tap a pin or a country",
+  bTagline_other: "<b>{n}</b> places of the Bible across <b>{lands}</b> modern countries · tap a pin or a country",
+  bOnly: "Show only places from {group}",
+  bSearchLoading: "Loading the Bible places…",
+  bCountryOnce: "Country · once {a}",
+  bNoMatch: "No Bible places match “{q}”. Try a city or an ancient name like Persia or Galilee.",
+  bClickRead: "Click to read about it",
+  bInBible: "In the Bible: {a}",
+  bReadRef: "Read {ref} (NABRE)",
+  bNoNear: "No Catholic church is mapped within 40 km of this place yet.",
+  awayM: "{d} m away",
+  awayKm: "{d} km away",
+  bTodayIn: "today in {land}",
+  bAbout: "About {land}",
+  bScripture: "In Scripture",
+  bTradition: "Catholic tradition",
+  bNearby: "Catholic churches nearby",
+  bLooking: "Looking on the globe…",
+  bMoreIn: "More in {land}",
+  bProvPlace: "References follow the New American Bible, Revised Edition, the Catholic translation used at Mass in the United States. Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read the chapter on the USCCB website.",
+  bProvLand: "References follow the New American Bible, Revised Edition, which includes the deuterocanonical books (Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach, Baruch). Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read it on the USCCB website.",
+  bModern: "Modern country",
+  bAlso: "Also: {x}",
+  bToday: "Today: {land}",
+  bExplore: "Places to explore ({n})",
+  bShareTitle: "{name} in the Bible",
+  bShareLand: "{land}, once {a}",
   massNoteTip: "Mass and Confession times are read from parish websites, so only churches whose site lists them can be filtered",
 };
 const i18n = { code: 'en', dict: EN, locale: 'en', wiki: 'en', rtl: false };
@@ -707,7 +741,7 @@ async function useLang(code) {
   applyStatic();
 }
 const langReady = useLang(detectLang());
-window.ccfI18n = { tr, get lang() { return i18n.code; }, get locale() { return i18n.locale; } };
+window.ccfI18n = { tr, ready: langReady, get lang() { return i18n.code; }, get locale() { return i18n.locale; } };
 
 // type codes come from the data build: low 3 bits = kind, bit 8 = matched by name only
 const TYPES = [
@@ -2239,12 +2273,15 @@ $('langSel').addEventListener('change', async (e) => {
   try { localStorage.setItem(LANG_KEY, code); } catch (err) {}
   await useLang(code);
   if (!state.meta) return;
-  renderChips(); updateTagline(); renderFavs(); renderNear(); setCityLabels();
+  searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
+  if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } if (!$('card').hidden && bible.sel) { if (bible.sel.land) openBibleLand(bible.sel.land, { fly: false }); else openBiblePlace(bible.sel.id, { fly: false }); } }
+  else { renderChips(); updateTagline(); }
+  renderFavs(); renderNear(); setCityLabels();
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
   if (!$('about').hidden) $($('mailBtn') ? 'contactBtn' : 'aboutBtn').click();
   if (!resEl.hidden && searchIdx) runSearch();
-  if (state.selected >= 0) selectChurch(state.selected, { fly: false });
+  if (state.selected >= 0 && state.mode !== 'bible') selectChurch(state.selected, { fly: false });
 });
 
 /* ---------- install as an app: offline cache ---------- */
@@ -2314,11 +2351,10 @@ async function setMode(m, { fly = true } = {}) {
   $('modeChurches').setAttribute('aria-selected', m === 'churches'); $('modeBible').setAttribute('aria-selected', m === 'bible');
   document.body.classList.toggle('bible-mode', m === 'bible');
   closeCard(); showFavs(false); resEl.hidden = true; qEl.value = ''; tip.hidden = true; setHover(-1);
-  qEl.placeholder = m === 'bible' ? 'Search a Bible place or country, e.g. Persia, Nineveh, Ephesus' : 'Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków';
-  qEl.setAttribute('aria-label', m === 'bible' ? 'Search places of the Bible' : 'Search churches by name or town');
+  searchLabels();
   if (m === 'bible') {
-    $('tagline').textContent = 'Loading places of the Bible…';
-    try { await loadBible(); } catch (e) { $('tagline').textContent = 'The Bible places did not load. Check your connection and try again.'; return; }
+    $('tagline').textContent = tr('bLoading');
+    try { await loadBible(); } catch (e) { $('tagline').textContent = tr('bFailed'); return; }
     if (state.mode !== 'bible') return;
   }
   for (const id of CHURCH_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'bible' ? 'none' : 'visible');
@@ -2332,15 +2368,19 @@ $('modeChurches').parentElement.addEventListener('keydown', (e) => {
   if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
   const next = state.mode === 'bible' ? 'churches' : 'bible'; setMode(next); $(next === 'bible' ? 'modeBible' : 'modeChurches').focus();
 });
+function searchLabels() {
+  qEl.placeholder = tr(state.mode === 'bible' ? 'bSearchPh' : 'searchPh');
+  qEl.setAttribute('aria-label', tr(state.mode === 'bible' ? 'bSearchLabel' : 'searchLabel'));
+}
 function bibleTagline() {
   const n = bibleVisible().length, lands = bible.group === 'all' ? Object.keys(bible.data.lands).length : new Set(bibleVisible().map(p => p.c)).size;
-  $('tagline').innerHTML = `<b>${n}</b> places of the Bible across <b>${lands}</b> modern countries · tap a pin or a country`;
+  $('tagline').innerHTML = tr('bTagline', { n, lands: fmt(lands) });
 }
 function renderBibleChips() {
   const d = bible.data, count = (k) => d.places.filter(p => p.g.includes(k)).length;
   $('chips').classList.remove('filtered');
-  $('chips').innerHTML = `<span class="lbl">Show</span><button class="chip" data-g="all" aria-pressed="${bible.group === 'all'}">All</button>` + d.groups.map(g =>
-    `<button class="chip" data-g="${g.k}" aria-pressed="${bible.group === g.k}" title="Show only places from ${esc(g.label)}"><i style="background:${BIBLE_COLORS[g.k]}"></i>${esc(g.label)} <small>${count(g.k)}</small></button>`).join('');
+  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-g="all" aria-pressed="${bible.group === 'all'}">${esc(tr('all'))}</button>` + d.groups.map(g =>
+    `<button class="chip" data-g="${g.k}" aria-pressed="${bible.group === g.k}" title="${esc(tr('bOnly', { group: g.label }))}"><i style="background:${BIBLE_COLORS[g.k]}"></i>${esc(g.label)} <small>${fmt(count(g.k))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'bible') return;
@@ -2351,17 +2391,17 @@ $('chips').addEventListener('click', (e) => {
 
 /* search over places and lands */
 function bibleSearch(q) {
-  const d = bible.data; if (!d) { resEl.innerHTML = '<div class="note">Loading the Bible places…</div>'; return; }
+  const d = bible.data; if (!d) { resEl.innerHTML = `<div class="note">${esc(tr('bSearchLoading'))}</div>`; return; }
   const toks = q.split(/\s+/).filter(Boolean);
   const hit = (s) => { const k = fold(s); return toks.every(t => k.includes(t)); };
   const lands = Object.entries(d.lands).filter(([k, l]) => hit([l.n, l.a, l.also].join(' ')));
   const places = d.places.filter(p => hit([p.n, p.a, d.lands[p.c].n, d.lands[p.c].a].join(' ')))
     .sort((a, b) => (fold(a.n).startsWith(toks[0]) ? 0 : 1) - (fold(b.n).startsWith(toks[0]) ? 0 : 1));
   const ico = (c) => `<i style="width:9px;height:9px;border-radius:50%;background:${c};justify-self:center"></i>`;
-  const rows = [...lands.map(([k, l]) => `<button role="option" data-l="${k}">${ico('transparent;box-shadow:inset 0 0 0 2px #e8b84a')}<div><span class="nm">${esc(l.n)}</span><span class="loc">Country · once ${esc(l.a)}</span></div></button>`),
+  const rows = [...lands.map(([k, l]) => `<button role="option" data-l="${k}">${ico('transparent;box-shadow:inset 0 0 0 2px #e8b84a')}<div><span class="nm">${esc(l.n)}</span><span class="loc">${esc(tr('bCountryOnce', { a: l.a }))}</span></div></button>`),
     ...places.slice(0, 30).map(p => `<button role="option" data-b="${p.id}">${ico(BIBLE_COLORS[mainGroup(p)])}<div><span class="nm">${esc(p.n)}</span><span class="loc">${esc([p.a, d.lands[p.c].n].filter(Boolean).join(' · '))}</span></div></button>`)];
   activeRes = -1;
-  resEl.innerHTML = rows.length ? rows.join('') : `<div class="note">No Bible places match “${esc(qEl.value.trim())}”. Try a city or an ancient name like Persia or Galilee.</div>`;
+  resEl.innerHTML = rows.length ? rows.join('') : `<div class="note">${esc(tr('bNoMatch', { q: qEl.value.trim() }))}</div>`;
 }
 
 /* map hover and click */
@@ -2382,10 +2422,10 @@ map.on('mousemove', (e) => {
   cv.style.cursor = 'pointer';
   if (h.place) {
     const p = h.place; setLandHi(p.c);
-    showTip(r.left + e.point.x, r.top + e.point.y, `<b>${esc(p.n)}</b>${p.a ? `<span>${esc(p.a)}</span>` : ''}<span style="display:block;color:var(--gold-soft)">Click to read about it</span>`);
+    showTip(r.left + e.point.x, r.top + e.point.y, `<b>${esc(p.n)}</b>${p.a ? `<span>${esc(p.a)}</span>` : ''}<span style="display:block;color:var(--gold-soft)">${esc(tr('bClickRead'))}</span>`);
   } else {
     const l = bible.data.lands[h.land]; setLandHi(h.land);
-    showTip(r.left + e.point.x, r.top + e.point.y, `<b>${esc(l.n)}</b><span>In the Bible: ${esc(l.a)}</span><span style="display:block;color:var(--gold-soft)">Click to read about it</span>`);
+    showTip(r.left + e.point.x, r.top + e.point.y, `<b>${esc(l.n)}</b><span>${esc(tr('bInBible', { a: l.a }))}</span><span style="display:block;color:var(--gold-soft)">${esc(tr('bClickRead'))}</span>`);
   }
 });
 map.on('click', (e) => {
@@ -2401,7 +2441,7 @@ const BOOKS = ['Song of Songs', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1
   'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', 'Titus', 'Philemon', 'Hebrews', 'James', 'Jude', 'Revelation'];
 const REF = new RegExp(`\\b(${BOOKS.join('|')}) (\\d+)((?::[\\d,\\-]+)?(?: ?- ?\\d+(?::\\d+)?)?)`, 'g');
 const bookSlug = (b) => b === 'Psalm' ? 'psalms' : b.toLowerCase().replace(/\s+/g, '');
-const withRefs = (text) => esc(text).replace(REF, (m, book, ch) => `<a class="ref" href="https://bible.usccb.org/bible/${bookSlug(book)}/${ch}" target="_blank" rel="noopener" title="Read ${esc(book)} ${ch} (NABRE)">${m}</a>`);
+const withRefs = (text) => esc(text).replace(REF, (m, book, ch) => `<a class="ref" href="https://bible.usccb.org/bible/${bookSlug(book)}/${ch}" target="_blank" rel="noopener" title="${esc(tr('bReadRef', { ref: book + ' ' + ch }))}">${m}</a>`);
 
 /* card hero: a drawn desert dusk with the ancient name, then the live photo if one turns up */
 function bibleScene(title, sub) {
@@ -2435,11 +2475,11 @@ async function bibleHero(title, sub, wiki) {
   if (!wiki) return;
   const photo = await wikiPhoto(wiki);
   if (!photo || ticket !== photoTicket) return;
-  const img = new Image(); img.className = 'photo'; img.alt = 'Photograph: ' + (photo.file || title); img.referrerPolicy = 'no-referrer'; img.src = photo.src;
+  const img = new Image(); img.className = 'photo'; img.alt = tr('photoOf', { name: title }); img.referrerPolicy = 'no-referrer'; img.src = photo.src;
   try { await img.decode(); } catch (e) { return; }
   if (ticket !== photoTicket) return;
   hero.querySelector('svg.scene').after(img); hero.classList.add('has-photo');
-  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="Photo by ${esc(photo.author)}, ${esc(photo.license)}">Photo: ${esc(photo.author)} · ${esc(photo.license)}</a>`);
+  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
   requestAnimationFrame(() => img.classList.add('on'));
 }
 
@@ -2456,11 +2496,11 @@ function nearestChurches(lat, lon, n = 4, maxKm = 40) {
 async function fillNearby(p) {
   const box = $('bNear'); if (!box) return;
   const near = nearestChurches(p.ll[0], p.ll[1]);
-  if (!near.length) { box.innerHTML = '<p class="muted">No Catholic church is mapped within 40 km of this place yet.</p>'; return; }
+  if (!near.length) { box.innerHTML = `<p class="muted">${esc(tr('bNoNear'))}</p>`; return; }
   const recs = await Promise.all(near.map(([, i]) => shardFor(i).catch(() => null)));
   if (bible.sel !== p || !$('bNear')) return;
   box.innerHTML = near.map(([km, i], k) => { const r = recs[k]; const t = TYPE_BY_CODE[state.typ[i] & 7];
-    return `<button class="near" data-i="${i}"><i style="background:${t.color}"></i><span><b>${esc(r ? r[0] : t.one)}</b><small>${esc([t.one, r && r[2], km < 1 ? Math.round(km * 1000) + ' m away' : km.toFixed(1) + ' km away'].filter(Boolean).join(' · '))}</small></span></button>`; }).join('');
+    return `<button class="near" data-i="${i}"><i style="background:${t.color}"></i><span><b>${esc(r ? r[0] : t.one)}</b><small>${esc([t.one, r && r[2], km < 1 ? tr('awayM', { d: fmt(Math.round(km * 1000)) }) : tr('awayKm', { d: km.toLocaleString(i18n.locale, { maximumFractionDigits: 1, minimumFractionDigits: 1 }) })].filter(Boolean).join(' · '))}</small></span></button>`; }).join('');
 }
 $('cardBody').addEventListener('click', (e) => {
   const n = e.target.closest('button.near'); if (n) { const i = +n.dataset.i; setMode('churches', { fly: false }).then(() => selectChurch(i, { fly: true })); return; }
@@ -2474,8 +2514,8 @@ function bibleShare(url, title) {
   $('bShare').addEventListener('click', async () => {
     if (coarse && navigator.share) { navigator.share({ title, url }).catch(() => {}); return; }
     let ok = false; try { await navigator.clipboard.writeText(url); ok = true; } catch (e) {}
-    $('bShare').querySelector('span').textContent = ok ? 'Link copied' : 'Copy failed';
-    setTimeout(() => { if ($('bShare')) $('bShare').querySelector('span').textContent = 'Share'; }, 1200);
+    $('bShare').querySelector('span').textContent = tr(ok ? 'copied' : 'copyFailed');
+    setTimeout(() => { if ($('bShare')) $('bShare').querySelector('span').textContent = tr('share'); }, 1200);
   });
 }
 const SHARE_ICON = '<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg>';
@@ -2491,22 +2531,22 @@ async function openBiblePlace(id, { fly = true } = {}) {
     <div>
       <div class="kicker">${p.g.map(g => `<span><i style="background:${BIBLE_COLORS[g]}"></i>${esc(groupLabel(g))}</span>`).join('')}</div>
       <h2 id="cName">${esc(p.n)}</h2>
-      <div class="where">${p.a ? esc(p.a) + ' · ' : ''}today in <button class="linkish" data-goland="${p.c}">${esc(land.n)}</button></div>
+      <div class="where">${p.a ? esc(p.a) + ' · ' : ''}${esc(tr('bTodayIn', { land: '\u0000' })).replace('\u0000', `<button class="linkish" data-goland="${p.c}">${esc(land.n)}</button>`)}</div>
     </div>
     <p class="lede">${withRefs(p.s)}</p>
     <div class="actions">
-      <button class="btn primary" id="bFly">Fly here</button>
-      <button class="btn" id="bShare">${SHARE_ICON}<span>Share</span></button>
-      <button class="btn" data-goland="${p.c}">About ${esc(land.a.replace(/\s*\(.*\)$/, '').replace(/^The /, 'the '))}</button>
+      <button class="btn primary" id="bFly">${esc(tr('flyHere'))}</button>
+      <button class="btn" id="bShare">${SHARE_ICON}<span>${esc(tr('share'))}</span></button>
+      <button class="btn" data-goland="${p.c}">${esc(tr('bAbout', { land: i18n.code === 'en' ? land.a.replace(/\s*\(.*\)$/, '').replace(/^The /, 'the ') : land.a.replace(/\s*\(.*\)$/, '') }))}</button>
     </div>
-    <div class="sect"><h3>In Scripture</h3>${list(p.b)}</div>
-    ${p.t.length ? `<div class="sect"><h3>Catholic tradition</h3>${list(p.t)}</div>` : ''}
-    <div class="sect"><h3>Catholic churches nearby</h3><div id="bNear" class="nearlist"><p class="muted">Looking on the globe…</p></div></div>
-    ${others.length ? `<div class="sect"><h3>More in ${esc(land.n)}</h3><div class="plist">${others.map(o => `<button data-goplace="${o.id}"><i style="background:${BIBLE_COLORS[mainGroup(o)]}"></i>${esc(o.n)}</button>`).join('')}</div></div>` : ''}
-    <div class="prov">References follow the New American Bible, Revised Edition, the Catholic translation used at Mass in the United States. Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read the chapter on the USCCB website.${p.ll ? '' : ''}</div>`;
+    <div class="sect"><h3>${esc(tr('bScripture'))}</h3>${list(p.b)}</div>
+    ${p.t.length ? `<div class="sect"><h3>${esc(tr('bTradition'))}</h3>${list(p.t)}</div>` : ''}
+    <div class="sect"><h3>${esc(tr('bNearby'))}</h3><div id="bNear" class="nearlist"><p class="muted">${esc(tr('bLooking'))}</p></div></div>
+    ${others.length ? `<div class="sect"><h3>${esc(tr('bMoreIn', { land: land.n }))}</h3><div class="plist">${others.map(o => `<button data-goplace="${o.id}"><i style="background:${BIBLE_COLORS[mainGroup(o)]}"></i>${esc(o.n)}</button>`).join('')}</div></div>` : ''}
+    <div class="prov">${esc(tr('bProvPlace'))}</div>`;
   $('card').hidden = false;
   $('bFly').addEventListener('click', () => map.flyTo({ center: [p.ll[1], p.ll[0]], zoom: 14, pitch: 50, bearing: map.getBearing() + 30, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
-  bibleShare(bibleLink('bible=' + p.id), p.n + ' in the Bible');
+  bibleShare(bibleLink('bible=' + p.id), tr('bShareTitle', { name: p.n }));
   try { history.replaceState(null, '', '?bible=' + p.id); } catch (e) {}
   $('cardBody').scrollTop = 0;
   fillNearby(p);
@@ -2518,22 +2558,22 @@ async function openBibleLand(k, { fly = true } = {}) {
   state.selected = -1; bibleSel({ land: k, ll: null }); map.getSource('b-sel').setData({ type: 'FeatureCollection', features: [] }); setLandHi(k);
   lastInteract = performance.now();
   if (fly) map.flyTo({ center: l.lp, zoom: k === 'IN' || k === 'SA' ? 3.6 : k === 'HL' || k === 'LB' || k === 'CY' || k === 'MT' ? 6.3 : 4.6, pitch: 0, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.5, top: 0, left: 0, right: 0 }, essential: true });
-  bibleHero(l.a.replace(/\s*\(.*\)$/, ''), 'Today: ' + l.n, l.w);
+  bibleHero(l.a.replace(/\s*\(.*\)$/, ''), tr('bToday', { land: l.n }), l.w);
   const places = d.places.filter(p => p.c === k);
   $('cardBody').innerHTML = `
     <div>
-      <div class="kicker"><span>Modern country</span></div>
+      <div class="kicker"><span>${esc(tr('bModern'))}</span></div>
       <h2 id="cName">${esc(l.n)}</h2>
-      <div class="where">In the Bible: <b class="gold">${esc(l.a)}</b>${l.also ? '<br>Also: ' + esc(l.also) : ''}</div>
+      <div class="where">${esc(tr('bInBible', { a: '\u0000' })).replace('\u0000', `<b class="gold">${esc(l.a)}</b>`)}${l.also ? '<br>' + esc(tr('bAlso', { x: l.also })) : ''}</div>
     </div>
     <p class="lede">${withRefs(l.s)}</p>
-    <div class="actions"><button class="btn" id="bShare">${SHARE_ICON}<span>Share</span></button></div>
-    <div class="sect"><h3>In Scripture</h3>${list(l.b)}</div>
-    ${l.t.length ? `<div class="sect"><h3>Catholic tradition</h3>${list(l.t)}</div>` : ''}
-    ${places.length ? `<div class="sect"><h3>Places to explore (${places.length})</h3><div class="plist">${places.map(o => `<button data-goplace="${o.id}"><i style="background:${BIBLE_COLORS[mainGroup(o)]}"></i>${esc(o.n)}</button>`).join('')}</div></div>` : ''}
-    <div class="prov">References follow the New American Bible, Revised Edition, which includes the deuterocanonical books (Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach, Baruch). Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read it on the USCCB website.</div>`;
+    <div class="actions"><button class="btn" id="bShare">${SHARE_ICON}<span>${esc(tr('share'))}</span></button></div>
+    <div class="sect"><h3>${esc(tr('bScripture'))}</h3>${list(l.b)}</div>
+    ${l.t.length ? `<div class="sect"><h3>${esc(tr('bTradition'))}</h3>${list(l.t)}</div>` : ''}
+    ${places.length ? `<div class="sect"><h3>${esc(tr('bExplore', { n: places.length }))}</h3><div class="plist">${places.map(o => `<button data-goplace="${o.id}"><i style="background:${BIBLE_COLORS[mainGroup(o)]}"></i>${esc(o.n)}</button>`).join('')}</div></div>` : ''}
+    <div class="prov">${esc(tr('bProvLand'))}</div>`;
   $('card').hidden = false;
-  bibleShare(bibleLink('land=' + k), l.n + ', once ' + l.a);
+  bibleShare(bibleLink('land=' + k), tr('bShareLand', { land: l.n, a: l.a }));
   try { history.replaceState(null, '', '?land=' + k); } catch (e) {}
   $('cardBody').scrollTop = 0;
 }
