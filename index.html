@@ -411,6 +411,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 
 <footer class="foot">
   <button id="aboutBtn">About the data</button>
+  <button id="contactBtn">Contact</button>
   <span>Places © Overture Maps Foundation · Basemap Natural Earth</span>
   <span class="coords" id="coords"></span>
 </footer>
@@ -1853,6 +1854,30 @@ $('aboutBtn').addEventListener('click', () => {
   $('aboutClose').addEventListener('click', () => { $('about').hidden = true; });
 });
 $('about').addEventListener('click', (e) => { if (e.target.id === 'about') $('about').hidden = true; });
+
+/* ---------- contact: the address is put together only when someone asks, to keep it from spam harvesters ---------- */
+const contactAddr = () => ['jjones622', ['comcast', 'net'].join('.')].join(String.fromCharCode(64));
+$('contactBtn').addEventListener('click', () => {
+  $('aboutBox').innerHTML = `
+    <h2 id="aboutTitle">Contact</h2>
+    <p>Questions, corrections or a church that's missing from the globe? We'd love to hear from you.</p>
+    <div class="actions" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn primary" id="mailBtn">Send an email</button>
+      <button class="btn" id="copyMail">Copy email address</button>
+      <button class="btn" id="contactClose">Close</button>
+    </div>
+    <p id="mailShown" style="font-size:13px" hidden></p>`;
+  $('about').hidden = false; $('mailBtn').focus();
+  $('mailBtn').addEventListener('click', () => {
+    location.href = 'mailto:' + contactAddr() + '?subject=' + encodeURIComponent('Catholic Church Finder');
+    $('mailShown').hidden = false; $('mailShown').textContent = 'If no email app opened, write to ' + contactAddr();
+  });
+  $('copyMail').addEventListener('click', async () => {
+    let ok = false; try { await navigator.clipboard.writeText(contactAddr()); ok = true; } catch (e) {}
+    $('copyMail').textContent = ok ? 'Copied' : contactAddr();
+  });
+  $('contactClose').addEventListener('click', () => { $('about').hidden = true; });
+});
 
 /* ---------- install as an app: offline cache ---------- */
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
