@@ -92,15 +92,15 @@ button, input { font: inherit; color: inherit; }
 
 .search { position: relative; z-index: 3; flex: 1 1 320px; max-width: 440px; margin-left: auto; }
 /* language picker: a native select, so phones get their own wheel or sheet */
-.lang { position: relative; flex: none; height: 42px; }
-.lang svg { position: absolute; z-index: 1; left: 12px; top: 13px; width: 16px; height: 16px; stroke: var(--ink-soft); fill: none; stroke-width: 1.7; pointer-events: none; }
-.lang select {
+.langpick { position: relative; flex: none; height: 42px; }
+.langpick svg { position: absolute; z-index: 1; left: 12px; top: 13px; width: 16px; height: 16px; stroke: var(--ink-soft); fill: none; stroke-width: 1.7; pointer-events: none; }
+.langpick select {
   height: 42px; max-width: 170px; border-radius: 21px; border: 1px solid var(--line); background: var(--panel);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: var(--ink); font: inherit; font-size: 13px;
   padding: 0 14px 0 36px; cursor: pointer; appearance: none; -webkit-appearance: none; outline: none;
 }
-.lang select:hover, .lang select:focus-visible { border-color: color-mix(in srgb, var(--gold) 55%, transparent); }
-.lang option { background: var(--panel-solid); color: var(--ink); }
+.langpick select:hover, .langpick select:focus-visible { border-color: color-mix(in srgb, var(--gold) 55%, transparent); }
+.langpick option { background: var(--panel-solid); color: var(--ink); }
 /* scripts the Latin web fonts don't cover get Noto, loaded only for that language */
 :root:lang(vi), :root:lang(uk) { --font-ui: "Noto Sans", "Segoe UI", system-ui, sans-serif; --font-display: "Noto Serif", "Times New Roman", serif; }
 :root:lang(ko) { --font-ui: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; --font-display: "Noto Serif KR", serif; }
@@ -112,8 +112,8 @@ button, input { font: inherit; color: inherit; }
 [dir="rtl"] .search svg { left: auto; right: 14px; }
 [dir="rtl"] .search input { padding: 0 40px 0 16px; }
 [dir="rtl"] .search { margin-left: 0; margin-right: auto; }
-[dir="rtl"] .lang svg { left: auto; right: 12px; }
-[dir="rtl"] .lang select { padding: 0 36px 0 14px; }
+[dir="rtl"] .langpick svg { left: auto; right: 12px; }
+[dir="rtl"] .langpick select { padding: 0 36px 0 14px; }
 [dir="rtl"] .results button { text-align: right; }
 [dir="rtl"] .brand h1 .cross { margin-right: 0; margin-left: 8px; }
 [dir="rtl"] .share-menu { left: auto; right: 0; }
@@ -377,7 +377,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
   .search { flex-basis: 100%; max-width: none; margin-left: 0; order: 3; }
   [dir="rtl"] .search { margin-right: 0; }
   .brand { flex: 1 1 0; }
-  .lang select { max-width: 132px; }
+  .langpick select { max-width: 132px; }
   .chips { order: 4; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
   .chip { flex: none; }
   .favs { z-index: 11; top: auto; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); width: auto; bottom: max(8px, env(safe-area-inset-bottom, 0px)); max-height: 60%; }
@@ -414,7 +414,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
     <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków" aria-label="Search churches by name or town" aria-controls="results" data-i18n-attr="placeholder:searchPh;aria-label:searchLabel">
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
-  <label class="lang" title="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><select id="langSel" aria-label="Language"></select></label>
+  <label class="langpick" title="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><select id="langSel" aria-label="Language"></select></label>
   <div class="chips" id="chips" role="group" aria-label="Show church types" data-i18n-attr="aria-label:chipsLabel"></div>
   <div class="chips" id="massChips" role="group" aria-label="Filter by Mass times" data-i18n-attr="aria-label:massChipsLabel" hidden></div>
 </header>
