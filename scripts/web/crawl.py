@@ -43,7 +43,9 @@ INIT = r"\p{Lu}\."
 NAME = rf"((?:{NAMEW}|{INIT})(?:[ \t]+(?:(?:de|da|do|dos|das|del|de la|di|van|von|der|le|la|y|e|mac)[ \t]+)?(?:{NAMEW}|{INIT})){{1,4}})"
 RE_PERSON = re.compile(rf"(?<![\w])({T_DEACON}|{T_PRIEST})[ \t]+{NAME}")
 # Words that end a name: a role or label written right after it ("Fr. John Smith Pastor")
-CUT = set('''co-pp pastor priest parish cure curé pretre prêtre referent référent mail email e-mail phone tel tél proboszcz wikariusz vicar vicario vigario vigário
+PAST = re.compile(r'(histor|storia|geschicht|dzieje|kronika|archiv|in memoriam|necrolog|obituar|deceased|zmarli|events?\b|news|blog)', re.I)
+ORDERS = {'conv', 'msfs', 'schr', 'cmf', 'ofm', 'sdb', 'svd', 'osb', 'op', 'sj', 'cssr', 'omi', 'ssp', 'mscc', 'ocd', 'ofmcap', 'cp', 'ic', 'cs', 'csc', 'fssp', 'lc', 'sac', 'msc', 'cm', 'mccj', 'oar', 'osa', 'cmi', 'mst', 'ofmconv', 'cfr', 'ssc', 'sma', 'mhm', 'scj', 'pime', 'orc', 'cr', 'crs', 'ocso', 'oprem', 'opraem', 'ofmcap.'}
+CUT = set('''kustosz sanktuarium road street ave avenue co-pp pastor priest parish cure curé pretre prêtre referent référent mail email e-mail phone tel tél proboszcz wikariusz vicar vicario vigario vigário
 parroco párroco pároco deacon diacono diácono diacre rector recteur administrator administrador chaplain aumonier aumônier educateur éducateur
 can ap pp cc adm do throughout father fr rev msgr pfarrer kaplan office secretary director moderator associate assistant parochial
 emeritus retired in at of and the is our will has was who from with for on to'''.split())
@@ -119,6 +121,8 @@ def clean_name(title, name):
         words.append(w.strip('-–'))
     if words:
         words[-1] = re.sub(r"[’']s$", '', words[-1])
+    while len(words) > 2 and words[-1].strip('.,').lower() in ORDERS:
+        words.pop()
     # drop trailing stubs (post-nominal letters, cut-off words) that aren't initials
     while len(words) > 2 and len(words[-1]) <= 2 and not re.fullmatch(r'\p{Lu}\.', words[-1]):
         words.pop()
@@ -268,6 +272,8 @@ def staff_links(html, base):
         if re.search(r'\.(pdf|jpe?g|png|gif|docx?|mp3|mp4|zip)$', sp.path, re.I):
             continue
         label = (a.get_text(' ', strip=True) or '')[:60] + ' ' + sp.path
+        if PAST.search(label):
+            continue  # parish history pages list past pastors
         s = 0
         if STAFF_STRONG.search(label):
             s = 3

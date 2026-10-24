@@ -22,7 +22,10 @@ DAY = re.compile(r'\b(sun|sunday|sat|saturday|mon|monday|tue|tues|tuesday|wed|we
                  r'|linggo|sabado|lunes)\b', re.I)
 MASS = re.compile(r'\b(mass|masses|eucharist\w*|liturg\w*|misas?|missas?|messes?|messa|sante messe|s\. ?messe|celebra\w*|gottesdienst\w*|eucharistiefeier|hl\.? messe|msz[ae]|msze [śs]w|nabo[żz]e\w*|mis[ae] dominical|vigil)\b', re.I)
 CONF = re.compile(r'\b(confessions?|reconciliation|penance|confesi[oó]n\w*|confiss\w*|confessioni|confessione|beicht\w*|spowied\w*|sacramento de la reconciliaci[oó]n|riconciliazione|biecht)\b', re.I)
-OTHER = re.compile(r'\b(office|oficina|secretar[íi]a|secretaria|ufficio|bureau|sekretariat|pfarrb[üu]ro|kancelari\w*|biuro|adoration|adoraci[oó]n|adora[çc][ãa]o|adorazione|anbetung|adoracj\w*|rosary|rosario|ros[áa]rio|chapelet|r[óo][żz]aniec|bingo|religious education|catequesis|catechesi|catequese|youth|j[óo]venes|choir|coro|meeting|reuni[oó]n|food pantry|thrift|gift shop|tienda|museum|museo|tours?|visit|horario de visita|opening hours|[öo]ffnungszeiten|apertura|ouverture|parking|bulletin deadline|novena|stations of the cross|via crucis|vespers|v[íi]speras|lauds|holy hour|hora santa|baptism|bautismo|batismo|wedding|boda|casamento|funeral|quincea[ñn]era)\b', re.I)
+OTHER = re.compile(r'\b(office|oficina|secretar[íi]a|secretaria|ufficio|bureau|sekretariat|pfarrb[üu]ro|kancelari\w*|biuro|adoration|adoraci[oó]n|adora[çc][ãa]o|adorazione|anbetung|adoracj\w*|rosary|rosario|ros[áa]rio|chapelet|r[óo][żz]aniec|bingo|religious education|catequesis|catechesi|catequese|youth|j[óo]venes|choir|coro|meeting|reuni[oó]n|food pantry|thrift|gift shop|tienda|museum|museo|tours?|visit|horario de visita|opening hours|[öo]ffnungszeiten|apertura|ouverture|parking|bulletin deadline|novena|stations of the cross|via crucis|vespers|v[íi]speras|lauds|holy hour|hora santa|roraty|droga krzy\w*|gorzkie|nabo[żz]e[ńn]stw\w* (?:ku|majowe|czerwcowe|fatimsk)|rosarios?|ros[áa]rio|via crucis|aanbidding|anbetung|kreuzweg|chrzest|catechism\w*|catechismo|cresima|sakrament chrztu|incontro|reunión|zoom|livestream\w*|live ?stream\w*|communion service|liturgy of the word|baptism|bautismo|batismo|wedding|boda|casamento|funeral|quincea[ñn]era)\b', re.I)
+INTENTION = re.compile(r'(^|\s)[+†]\s*\p{Lu}|\bintenc\w*|\bintenzion\w*|\bza \+|\bdo bo[żz]ej opatrzno', re.I)
+CHURCHY = re.compile(r'(church|parish|catholic|cat[óo]lic|catholique|cattolic|katholi|katolick|parroquia|par[óo]quia|parrocchia|paroisse|pfarr|parafi|iglesia|igreja|chiesa|[ée]glise|kirche|ko[śs]ci[óo][łl]|santuario|sanctuaire|catedral|cathedral|cattedrale|basilic|capela|capilla|cappella|chapel|chapelle|kaplica|\bmass\b|\bmisas?\b|\bmissas?\b|\bmesses?\b|\bmsz[ae]|eucharist)', re.I)
+DMONTH = re.compile(r'\b\d{1,2}\.?\s+(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre|janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|d[ée]cembre|januar|februar|m[äa]rz|april|juni|juli|august|september|oktober|dezember|stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|wrze[śs]nia|pa[źz]dziernika|listopada|grudnia|de \w+|janeiro|fevereiro|abril|maio|junho|julho|setembro|outubro|novembro|dezembro|januari|februari|maart|mei|augustus|oktober)\b|\b\d{1,2}\.\d{1,2}\.(\d{2,4})?(?!\d)', re.I)
 DATEY = re.compile(r'\b(20\d\d|19\d\d)\b|\b(january|february|march|april|june|july|august|september|october|november|december|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|gennaio|febbraio|aprile|maggio|giugno|luglio|settembre|ottobre|dicembre|janvier|f[ée]vrier|avril|juin|juillet|ao[ûu]t|septembre|octobre|novembre|d[ée]cembre|januar|februar|m[äa]rz|juni|juli|oktober|dezember|stycz\w+|lut\w+|kwie\w+|maj[a]?|czerw\w+|lip\w+|sierp\w+|wrze[śs]\w+|pa[źz]dziern\w+|listopad\w*|grud\w+|janeiro|fevereiro|mar[çc]o|maio|junho|julho|setembro|outubro|dezembro)\b\.?\s*\d{1,2}\b|\b\d{1,2}(st|nd|rd|th)?\s+(of\s+)?(january|february|march|april|may|june|july|august|september|october|november|december|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b|\b\d{1,2}/\d{1,2}(/\d{2,4})?\b', re.I)
 LINKS = re.compile(r'(mass|masses|schedule|liturg|horario|hor[aá]rio|misas|missas|orari|messe|horaires|gottesdienst|msz|porz[aą]dek|nabo[żz]|confess|reconcil|sacrament|worship|celebrac|celebraz|beicht|spowied|times)', re.I)
 LINKS_STRONG = re.compile(r'(mass[-_ ]?(times|schedule)|masses|horarios?|hor[aá]rios|misas|missas|orari|horaires|gottesdienst|msze|porz[aą]dek|confession|reconcil)', re.I)
@@ -74,11 +77,16 @@ def extract_schedule(html, section=None):
     soup = BeautifulSoup(html, 'lxml')
     for t in soup.find_all(SKIP):
         t.decompose()
+    text = soup.get_text(' ', strip=True)[:300000]
+    if not CHURCHY.search(text):
+        return [], []  # a town hall, school or shop page
     mass, conf = [], []
     seen = set()
+    day = ''  # a day heading ("Saturday") that applies to the time lines under it
     for ln, tag in _lines(soup):
-        if len(ln) > 180:
+        if len(ln) > 140:
             section = None if not (MASS.search(ln) or CONF.search(ln)) else section
+            day = ''
             continue
         has_time = bool(TIME.search(ln))
         if not has_time:
@@ -90,23 +98,27 @@ def extract_schedule(html, section=None):
                     section = 'm'
                 elif OTHER.search(ln):
                     section = 'x'
+                day = ln.rstrip(' :') if DAY.search(ln) and len(ln) <= 30 else ''
             continue
-        if DATEY.search(ln):
-            continue  # an event on a date, not the weekly schedule
+        if DATEY.search(ln) or DMONTH.search(ln) or INTENTION.search(ln):
+            continue  # an event on a date or a Mass intention, not the weekly schedule
         if OTHER.search(ln) and not (MASS.search(ln) or CONF.search(ln)):
             continue
         kind = 'c' if CONF.search(ln) else 'm' if MASS.search(ln) else section
         if kind not in ('m', 'c'):
             continue
-        if not DAY.search(ln) and not (kind and len(ln) <= 40):
-            continue
+        if not DAY.search(ln):
+            if day:
+                ln = f'{day}: {ln}'
+            elif not re.search(r'\b(vigil|anticip\w*|prefestiv\w*|vorabend)\b', ln, re.I):
+                continue  # a time with no day reads as noise on its own
         key = re.sub(r'\W+', '', ln.lower())
         if key in seen or any(key in s for s in seen):
             continue
         seen.add(key)
         (conf if kind == 'c' else mass).append(ln)
     # a page with dozens of matches is a calendar or bulletin archive, not a schedule
-    if len(mass) > 16:
+    if len(mass) > 14:
         mass = []
     if len(conf) > 8:
         conf = []
