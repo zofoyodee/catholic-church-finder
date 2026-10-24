@@ -1,0 +1,9756 @@
+{
+"status": {
+"dead": 13005,
+"unknown": 9906,
+"ok": 35320,
+"moved": 3109
+},
+"errors": {
+"dns": 8515,
+"404": 1047,
+"parked": 788,
+"ServerDisconnectedError": 128,
+"elsewhere": 1025,
+"500": 311,
+"cert": 582,
+"ssl": 163,
+"refused": 219,
+"timeout": 2766,
+"ClientOSError": 32,
+"530": 11,
+"522": 88,
+"526": 14,
+"InvalidUrlRedirectClientError": 5,
+"521": 18,
+"520": 28,
+"502": 50,
+"410": 57,
+"redirects": 63,
+"523": 11,
+"999": 2,
+"ClientResponseError": 17,
+"InvalidUrlClientError": 4,
+"510": 1,
+"525": 7,
+"509": 3,
+"504": 2,
+"ClientConnectionResetError": 1,
+"NonHttpUrlRedirectClientError": 1
+},
+"staff_sites": 12064,
+"people": {
+"p": 25876,
+"d": 4774
+},
+"with_photo": 12826,
+"schedule_sites": 14116,
+"schedule_sample": [
+[
+"http://www.parroquiasantotoribio.cl/",
+[
+"Martes a Viernes: 19:00 hrs.",
+"Sábado: 19:00 hrs.",
+"Domingo:10:30, 12:00 y 19:30 hrs."
+],
+[],
+"http://www.parroquiasantotoribio.cl/"
+],
+[
+"https://psmm.ca/",
+[
+"Messe dimanche 8h45",
+"Messe mardi 9h",
+"Messe dimanche 10h15",
+"mercredi 8h30"
+],
+[],
+"https://psmm.ca/"
+],
+[
+"https://parafia-grzybowice.pl/",
+[
+"Msze św. w niedziele: 7:30, 9.30, 11:30, 15:30",
+"Msze św. w niedziele: (nieszpory godz. 15.00)",
+"poniedziałki: 7:00, 18:00 (szkolna),",
+"wtorki: 18:00,",
+"środy: 7:00,",
+"czwartki: 18:00,",
+"piątki: 7:00,",
+"soboty: 17:00 (niedzielna).",
+"I-wsze piątki: 7:00, 18:00,",
+"I-wsze soboty: 7:00, 17:00 (niedzielna)."
+],
+[
+"pierwsze soboty: 6:00 - 6:45."
+],
+"https://parafia-grzybowice.pl/"
+],
+[
+"https://www.stmarymemphis.org/",
+[
+"Saturday: 4:30PM",
+"Sunday: 8:00AM and 10:30AM"
+],
+[],
+"https://www.stmarymemphis.org/"
+],
+[
+"http://winogrady.salezjanie.pl/",
+[
+"Ostatni poniedziałek miesiąca o godzinie 18.00"
+],
+[],
+"https://winogrady.salezjanie.pl/msze-sw-i-nabozenstwa/"
+],
+[
+"http://www.bayonnecentre.fr/",
+[
+"Dimanche 25/10: 09:30",
+"Dimanche 25/10: 10:30",
+"Dimanche 25/10: 11:00"
+],
+[],
+"http://www.bayonnecentre.fr/"
+],
+[
+"http://www.stmatthewridgefield.org",
+[
+"Monday - Friday at 7:30 AM",
+"Saturday Morning at 9:00 AM",
+"Saturday Mass of Anticipation: 4:00 PM",
+"Sunday Morning at 8:00 AM, 10:00 AM, 12 Noon"
+],
+[
+"Saturday: 1:00 to 1:30 P.M."
+],
+"http://www.stmatthewridgefield.org"
+],
+[
+"http://www.abbayedautrey.com",
+[
+"Du mardi au vendredi de 14h à 17h - le week-end et les jours fériés, de 14h à 18h.",
+"Vous pouvez acheter des plantes à la pépinière tous les jours de l'année de 14h à 17h, sauf le dimanche et le lundi"
+],
+[],
+"https://www.abbayedautrey.com/horaires-et-tarifs"
+],
+[
+"http://www.parrocchiasantibartolomeoegaetano.it",
+[
+"Domenica e feste: ore 9.00*, 12.00 e 18.00**",
+"Dal lunedì al venerdì: ore 7.30, 12.00 – sabato: ore 12.00 e 18.30 *** *"
+],
+[],
+"https://www.parrocchiasantibartolomeoegaetano.it/"
+],
+[
+"http://saintdavids.org.au/",
+[
+"Sunday Service Times: 10am Choral Eucharist"
+],
+[],
+"https://saintdavids.org.au/"
+],
+[
+"http://www.sdccatholic.org/",
+[
+"Monday – Friday: 6am, 8am",
+"Saturday: 8am",
+"Saturday Vigil Mass: English : 5pm",
+"Sunday: 7am (English)",
+"Sunday: 8:30am (English)",
+"Sunday: 10:15am (English)",
+"Sunday: 12pm (English)",
+"Sunday: 1:45pm (Spanish)",
+"Sunday: 6pm (Spanish)",
+"Our 6am Daily Mass & 8:30 Sunday Mass are Livestreamed"
+],
+[
+"Wednesday : 3pm",
+"Friday : 6pm"
+],
+"https://www.sdccatholic.org/"
+],
+[
+"https://www.stjoetosa.com/",
+[
+"Saturday Vigil: 4:00 p.m.",
+"Sunday: 8:00 a.m. & 10:30 a.m.",
+"Monday: 8:15 a.m.",
+"Tuesday: 8:15 a.m.",
+"Wednesday: 8:15 a.m.",
+"Friday: 8:15 a.m.",
+"First Saturday: 8:15 a.m.",
+"First Saturday: All Souls Day: Nov. 2: 8:15 a.m. and 7:00 p.m.",
+"Monday: 8:45 a.m. - 9:30 a.m., following 8:15 Mass"
+],
+[
+"Saturday: 3:00 p.m. to 3:50 p.m.",
+"Sunday: 7:00 a.m. to 7:50 a.m.",
+"Monday: 9:00 a.m. to 9:30 a.m."
+],
+"https://www.stjoetosa.com/"
+],
+[
+"http://portmarnockparish.ie",
+[
+"Mass in our Partnership on Bank Holiday Monday will be celebrated in Sacred Heart Church, Yellow Walls at 11:00 a.m.",
+"Sunday: 9:00am to conclusion of Mass and Baptisms",
+"Saturday Vigil Mass: 6:30p.m.",
+"Sunday Mass: 10:30 a.m. (Family Mass) & 12:00 noon",
+"Weekday Masses: 10:00a.m.",
+"Before Mass Monday, Wednesday, Thursday & Friday at 9:30 a.m., unless there is a funeral."
+],
+[],
+"https://www.portmarnockparish.ie/"
+],
+[
+"http://www.derriaghycatholicparish.com",
+[
+"Sunday Mass – Sunday - 12.00pm",
+"Weekday Mass – Tuesday - 10.00am"
+],
+[],
+"https://derriaghycatholicparish.com/"
+],
+[
+"https://holycrossverobeach.org/",
+[
+"Monday – Saturday: 8:00 a.m.",
+"Saturday Vigil: 4:00 p.m.",
+"Sunday: 7:30 a.m.",
+"Sunday: 9:00 a.m.",
+"Sunday: 10:45 a.m.",
+"Sunday: 12:15 p.m.",
+"Weekdays: 7:00 a.m. – 7:00 p.m.",
+"Saturday: 7:00 a.m. – 5:00 p.m.",
+"Sunday: 1:00 p.m. – 7:00 p.m."
+],
+[],
+"https://holycrossverobeach.org/"
+],
+[
+"https://subscribepage.io/eQgKrA",
+[
+"Les messes se tiennent tous les dimanches à 10h30."
+],
+[],
+"https://eqgkra.subscribepage.io"
+],
+[
+"https://mmotc.org.au/",
+[
+"Monday – 9:00 am – Macquarie Fields",
+"Tuesday – 9:00 am – Macquarie Fields",
+"Wednesday – 9:00 am – Macquarie Fields",
+"Thursday – 9:00 am – Macquarie Fields",
+"Friday – 9:00 am – Macquarie Fields",
+"Saturday – 8:30 am – Macquarie Fields",
+"Saturday – 6:00 pm – Vigil Macquarie Fields",
+"Sunday – 8:00 am – Macquarie Fields",
+"Sunday – 10:00 am – Macquarie Fields"
+],
+[],
+"https://www.mmotc.org.au/mass-times/"
+],
+[
+"http://www.emmanuel.info/",
+[
+"Chaque premier mercredi du mois de 20h à 21h30"
+],
+[],
+"https://emmanuel.info/offrir-une-messe/"
+],
+[
+"http://www.spxcatholic.org/",
+[
+"SAT: 5:30 pm",
+"SUN: 8:30 am & 10:30 am",
+"TUE, WED, FRI: 9:00 am",
+"THURS: 5:30 pm",
+"TUES: 4:00 - 10:00pm",
+"THURS: 9:00am - 5:30pm"
+],
+[
+"THURS: 4:30-5:15 pm",
+"SAT: 4:00 - 4:45 pm"
+],
+"https://spxcatholic.org/"
+],
+[
+"http://www.stalbertselu.org/",
+[
+"Sunday: Mass - 10:00am",
+"Monday: Mass - 12:30pm",
+"Tuesday: Mass - 12:30pm"
+],
+[
+"Monday: Reconciliation - 11:30am-12:25pm",
+"Tuesday: Adoration & Reconciliation - 6:30pm-8:00pm"
+],
+"https://www.stalbertselu.org/mass-services-schedule"
+],
+[
+"http://www.parafiachrusty.org/",
+[
+"Niedziele i święta: godz. 9:00 i 11:00",
+"wtorek, czwartek, sobota - godz. 17.00"
+],
+[],
+"https://www.parafiachrusty.org/index.php/o-parafii/porzadek-nabozenstw"
+],
+[
+"http://paroisse-verdun-grisolles.fr/",
+[
+"Messe tous les samedi à 18h30",
+"Messe tous les dimanche à 9h30",
+"Messe tous les dimanche à 11h00",
+"Messe à 9h du Mardi au Vendredi",
+"Tous les Vendredi: > 09:00 Messe"
+],
+[
+"Tous les Vendredi: > 09:30 Confessions & adoration"
+],
+"https://paroisse-verdun-grisolles.fr/"
+],
+[
+"http://www.parkevermillioncatholicchurches.org/",
+[
+"Mass Times: Thursday 9:00 AM, Friday 9:00 AM,",
+"Mass Times: Tuesday 5:30 PM,",
+"Wednesday 9:00 AM, Saturday (May-October) 6:30 PM, Sunday 11:15 AM"
+],
+[
+"Confession Times: Saturday 3:30-4:00 PM",
+"Confession Times: Tuesday 4:30-5:00 PM"
+],
+"https://parkevermillioncatholicchurches.org/"
+],
+[
+"http://stgeorgeswarminster.co.uk/",
+[
+"Saturday 7.00pm & Sunday 9.00am"
+],
+[],
+"https://www.stgeorgeswarminster.co.uk/"
+],
+[
+"http://www.gardolo.eu/",
+[
+"Sabato e prefestive ore 20.00 a Gardolo e Gazzadina.",
+"Domenica e festive ore 9.00 a Canova, ore 9.30 a Meano, 10.30 a Gardolo e Vigo Meano."
+],
+[],
+"https://www.gardolo.eu/category/celebrazioni/"
+],
+[
+"http://mqaftscott.com/",
+[
+"Saturday (vigil)- 5:30 PM",
+"Sunday - 8:00 AM and 10:00 AM",
+"Tuesday - 5:30 PM",
+"Wednesday - 8:00 AM",
+"Thursday - 8:00 AM",
+"Friday - 8:00 AM"
+],
+[
+"Sunday - 7:00 – 7:30 AM & 9:00 – 9:30 AM",
+"Tuesday – 4:30 – 5:20 PM",
+"Wednesday – 7:15 – 7:50 AM",
+"Thursday – 7:15 – 7:50 AM",
+"Friday – 7:15 – 7:50 AM"
+],
+"https://www.mqaftscott.com/"
+],
+[
+"https://www.standrewparish.org/",
+[
+"9:00AM English (Monday-Friday)",
+"6:00PM Spanish (Monday-Friday)",
+"9:00AM English (Saturday)",
+"Saturday Vigil Mass: 5:30PM English",
+"Saturday Vigil Mass: 7:00PM Spanish",
+"Sunday Mass: 7:30AM, 9:30AM, 11:30 AM, and 5:30PM in English",
+"Sunday Mass: 1:30PM in Spanish"
+],
+[],
+"https://www.standrewparish.org/"
+],
+[
+"http://www.mbfjarocin.letnet.pl",
+[
+"2. Nabożeństwa różańcowe – w niedzielę godz. 15.30 i Msza św., w tygodniu o",
+"godz. 18.00 - Msza św. i różaniec, a w sobotę różaniec o godz. 17.30 i Msza."
+],
+[],
+"https://mbfjarocin.letnet.pl/"
+],
+[
+"https://stclementschurch.com/",
+[
+"We will Livestream all masses Monday – Friday 8:00 AM , Sunday 8:00 AM and 10:00 AM",
+"Saturday Vigil: 4:00 PM",
+"Sunday: 10:00 AM",
+"Sunday: 11:30 AM",
+"Monday – Friday: 8:00 AM (in Church)",
+"Holy Day Masses: 8:00 AM & 6:00 pm PM"
+],
+[
+"Wednesday: 4:30 – 5:30 PM (or by appointment)",
+"Monday - Thursday 9:00 AM - 4:00 PM: Friday and Saturday 9:00 AM - Noon",
+"Sunday 8:00 AM - 1: 30 PM: Parish Center Doors open at 7:00 AM and Close at 8:00 PM every Day"
+],
+"https://stclementschurch.com/parish/mass-times/"
+],
+[
+"http://www.parafiajugow.pl/",
+[
+"Niedziela; 8.45 i 11.30",
+"Przygórze; wtorek i pi�tek godz. 17.15",
+"Niedziela; godz. 10.00"
+],
+[],
+"https://parafiajugow.pl/"
+],
+[
+"https://www.stjosaphatbethlehem.org/",
+[
+"Liturgy: Sunday 10:00 AM",
+"sATURDAY Vesperal Liturgy: 4:00 pM"
+],
+[],
+"https://www.stjosaphatbethlehem.org/"
+],
+[
+"http://www.annunciationky.org/",
+[
+"Tuesday, Thursday, Friday: 12:00 pm",
+"Wednesday: 12:00 pm",
+"Saturday: 4:00 pm Annunciation",
+"Sunday: 8:00 am Annunciation",
+"Weekend Mass: 9:30 am St. John Chrysostom",
+"Weekend Mass: 10:00 am Annunciation",
+"Weekend Mass: 12:00 pm Annunciation (Spanish)"
+],
+[
+"Saturday 3:00pm﻿"
+],
+"https://www.annunciationky.org/"
+],
+[
+"http://stanthonys-rc-church-preston.org.uk/",
+[
+"Sunday Mass: 6pm (Saturday vigil) and 9:30am"
+],
+[
+"Sacrament of Reconciliation: Saturday 5:30-5:50pm"
+],
+"https://stanthonys-rc-church-preston.org.uk/wp/"
+],
+[
+"https://www.michorzewo.archpoznan.pl/",
+[
+"raz w miesiącu, w sobotę: 10:00",
+"Niedziela – 9:00, 11:00",
+"Sobota – 17:00",
+"W dni powszednie 17:00 (we wtorki najczęściej o 9:00)"
+],
+[
+"I czwartek miesiąca – 16:00-16:45"
+],
+"https://michorzewo.archpoznan.pl/grupy-lso/"
+],
+[
+"https://stcajetanparish.com/",
+[],
+[
+"Tuesday – Friday: 5:00 p.m. – 6:00 p.m.",
+"Saturday: 1:00 p.m. and 5:00 p.m",
+"Sunday: 7:30 a.m. - 7:00 p.m."
+],
+"https://www.stcajetanparish.com/"
+],
+[
+"http://www.stjeromennva.org/",
+[
+"Saturday 5:00 p.m.",
+"Sunday 8:00 a.m. and 11:00 a.m.",
+"Daily Tuesday, Thursday and Friday at 8:00 a.m., Wednesday at 6:30 a.m."
+],
+[
+"Saturday 3:30 p.m. – 4:30 p.m. or by appointment"
+],
+"https://stjeromennva.org/"
+],
+[
+"http://www.psangregoriom.org/",
+[
+"JUEVES: 5:00 p.m.",
+"LUNES A JUEVES: 8:00 a.m. - 6:00 p.m.",
+"VIERNES: 8:00 a.m.",
+"SABADO: 5:00 p.m. - 7:00 p.m.",
+"DOMINGO: 8:00 a.m. - 12:00 m. - 5:00 p.m. - 7:00 p.m."
+],
+[],
+"http://www.psangregoriom.org/"
+],
+[
+"http://www.saintagnescatholicchurch.org/",
+[
+"Saturday: 9am",
+"Saturday: 5pm",
+"Sunday: 9am",
+"Sunday: 11am"
+],
+[
+"Saturday: followed by the Rosary (confession available from 9:30 - 10:15am)",
+"Saturday: confession available from 3:30 - 4:15pm",
+"Thursday: preceded by 6pm Holy Hour (confession is available until 6:45pm)"
+],
+"https://saintagnescatholicchurch.org/"
+],
+[
+"http://oratory-toronto.org/",
+[
+"Saturday 5:00 p.m.",
+"Sunday 8:00 a.m",
+"Sunday 9:30 a.m. (Sung English Mass)",
+"Sunday 11:00 a.m. (Solemn Latin Mass)",
+"Sunday Masses: One 11:00am Mass per month will be a sung Latin Novus Ordo Mass. Check our calendar for dates.",
+"Sunday 12:30 p.m.",
+"Sunday 8:00 p.m.",
+"Monday to Friday 7:45 a.m., 11:30 a.m. (Latin Mass), 5:30 p.m.",
+"Saturday 8:30 a.m. (Latin), 10:00 a.m.",
+"Solemn Vespers and Benediction are celebrated every Sunday at 5:00 p.m."
+],
+[],
+"https://oratory-toronto.org/holy-family-parish/"
+],
+[
+"http://www.fara.radom.pl",
+[
+"Niedziela i Uroczystości: 7:30",
+"Niedziela i Uroczystości: 9:30",
+"Niedziela i Uroczystości: 11:00",
+"Niedziela i Uroczystości: 12:30",
+"Niedziela i Uroczystości: 18:00"
+],
+[
+"Pierwszy piątek miesiąca: od godz. 17:30"
+],
+"http://fara.radom.pl/pl/liturgia/godziny_nabozenstw,194.htm"
+],
+[
+"http://swbarnaba.waw.pl/",
+[
+"Niedziele i święta nakazane: 18:00 — dzień wcześniej (wigilia)",
+"Dni powszednie: 7:00",
+"Dni powszednie: 18:00"
+],
+[],
+"https://swbarnaba.waw.pl/"
+],
+[
+"http://www.forestrc.co.uk/",
+[
+"Saturday 24th: 5pm Eve of Sunday - Our Lady of Lourdes",
+"Sunday 25th: 9am - St. Margaret Mary - live-streamed",
+"Sunday 25th: 11am - St. Joseph",
+"Tuesday 27th: 10am - St. Margaret Mary",
+"Wednesday 28th: 11am - Our Lady of Lourdes",
+"Thursday 29th: 10am - St. Joseph",
+"Saturday 31st: 5pm Eve of Sunday - Our Lady of Lourdes",
+"Sunday 1st: 9am - St. Margaret Mary - live-streamed",
+"Sunday 1st: 11am - St. Joseph"
+],
+[],
+"https://forestrc.co.uk/"
+],
+[
+"https://sacredheart1925.dudaone.com",
+[
+"Weekends: Saturday 5:00 PM Sunday 11:00 AM"
+],
+[
+"Reconciliation: Saturday: 4:00 PM or by appointment."
+],
+"https://sacredheart1925.dudaone.com"
+],
+[
+"https://www.stanthonyspicton.org.au/location.html",
+[
+"Saturday Vigil: 5.00pm Winter",
+"Sunday – 8.30am",
+"Tuesday – 5.00pm - Adoration 5.30pm - Mass",
+"Tuesday: 5.30pm - Mass",
+"Wednesday, Thursday & Friday – 8.30am",
+"Every Second Friday: 6.00pm"
+],
+[
+"Reconciliation – Saturday 5.00 pm - 5.30 pm"
+],
+"https://www.stanthonyspicton.org.au/times.html"
+],
+[
+"https://www.kewaskumcatholicparishes.org/maps--directions.html",
+[
+"Tuesday 5:00 p.m.",
+"Wednesday 7:45 a.m.",
+"Thursday 7:45 a.m.",
+"Friday 7:45 a.m.",
+"First Saturday 7:45 a.m.",
+"Saturday: 4:00 p.m. Holy Trinity Church (Sept. - Feb.)",
+"Saturday: 4:00 p.m. St. Michael's Church (March - Aug.)",
+"Sunday: 7:30 a.m. Holy Trinity Church",
+"Sunday: 9:00 a.m. St. Michael's Church",
+"Sunday: 11:00 a.m. Holy Trinity Church"
+],
+[
+"Tuesday 7:30 p.m.",
+"Friday 7:00 a.m.",
+"Saturday 3:15 p.m.",
+"Every 3rd Thursday of each month from 9:00 a.m. - 10:15 a.m. alternating between St. Michael's Church and St. Mary's Immaculate Conception.",
+"Every Second Thursday: 7:00 p.m."
+],
+"https://www.kewaskumcatholicparishes.org/"
+],
+[
+"http://www.qofhchurch.org/",
+[
+"Saturday Vigil: 4:00 PM",
+"Sunday: 8:00 AM, 9:30 AM, 11:15 AM",
+"Monday–Friday: 7:30 AM, 11:30 AM"
+],
+[
+"Saturday: 3:00 PM"
+],
+"https://www.qofhchurch.org/"
+],
+[
+"http://www.stambrose.us/fiat",
+[
+"Monday, Wednesday, Friday – 8:15 am",
+"Thursday – 5:30 pm",
+"1st Saturday of the Month – 8:15 am",
+"Saturday 4:30 pm",
+"Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 Noon, 5:00 pm"
+],
+[],
+"https://stambrose.us/ministries/fiat/"
+],
+[
+"https://www.kirche-neheim.de/",
+[
+"25.10.2026(Sonntag): 11:00 Uhr",
+"28.10.2026(Mittwoch): 15:00 Uhr",
+"28.10.2026(Mittwoch): 16:30 – 18:30 Uhr",
+"30.10.2026(Freitag): 19:00 Uhr"
+],
+[],
+"https://kirche-neheim.de/"
+],
+[
+"http://parafiaduczki.pl/",
+[
+"7:00 Msza Święta",
+"8:30 Msza Święta",
+"10:00 Msza Święta",
+"12:00 Msza Święta z udziałem dzieci",
+"18:00 Msza Święta",
+"20:15 Msza Święta",
+"06:30 Msza Święta",
+"07:00 Msza Święta",
+"I Niedziela miesiąca: po Mszy o 10:00 i o 15:00",
+"I Piątek miesiąca: 16:30"
+],
+[],
+"http://parafiaduczki.pl/nabo-e-stwa-1.html"
+],
+[
+"http://www.OLLSeaford.org/",
+[
+"*1st Saturday Only - 9 am (English)",
+"Saturday Vigil - 5 pm (English)",
+"WEEKEND MASSES: 7 pm (Spanish)",
+"Sunday - 7:30 am (English)",
+"WEEKEND MASSES: 9 am (English)",
+"WEEKEND MASSES: 12 pm (Spanish)",
+"Tue, Wed & Fri 9 am (English)",
+"Thu 7 pm (Spanish)",
+"The 9 am Mass on Sunday is live streamed on our Facebook page - (www.facebook.com/OLLSeafordDE)"
+],
+[
+"Friday 5:30 pm - 6:30 pm (Spanish)",
+"*1st Friday Only - 9:30 am",
+"Saturday - 4 pm - 4:45 pm"
+],
+"https://ollseaford.org/"
+],
+[
+"http://www.TransfigurationSC.org/",
+[
+"Saturday 4:00 pm",
+"Sunday 8:00 am and 10:30 am",
+"Monday 6:00 pm",
+"Tuesday 6:00 pm",
+"Wednesday 4:00 pm",
+"Thursday 6:00 pm",
+"Friday 6:00 pm"
+],
+[
+"Sunday Mass: Confession 3:00 pm - 3:45 pm",
+"Daily Mass: Confession 5:00 pm - 5:45 pm"
+],
+"https://www.transfigurationsc.org/"
+],
+[
+"http://www.pfarre-kahlenbergerdorf.at/",
+[
+"Dienstag: 8:00 Uhr",
+"Donnerstag: 18:00 Uhr",
+"jeweils Donnerstag: 7:00 Uhr Rorate",
+"jeweils Donnerstag: 18:30 Uhr Fastenmesse",
+"jeweils Donnerstag: 18:00 Uhr Maiandacht",
+"jeweils Donnerstag: 18:30 Uhr Heilige Messe",
+"Dienstag und Donnerstag,: 9:00 bis 11:00 Uhr"
+],
+[],
+"http://www.pfarre-kahlenbergerdorf.at/"
+],
+[
+"http://www.santuariodamisericordiarj.org.br/",
+[
+"dos homens - Segunda às 20h",
+"das mulheres - Segunda às 20h"
+],
+[],
+"https://santuariodamisericordiarj.org.br/"
+],
+[
+"http://www.gniewczyna.przemyska.pl/",
+[
+"W niedziele i święta: 7:30, 9:15, 11:00, 15:30",
+"Dni powszednie: 17:00 (zima) lub 18:00 (lato)",
+"Dni powszednie: 18:00"
+],
+[],
+"https://gniewczyna.przemyska.pl/"
+],
+[
+"http://www.stmcstx.org/",
+[
+"Monday, Wednesday and Friday: 8:00 am English",
+"​Monday, Tuesday & Thursday: 10:00 a.m. - 5:00 p.m.",
+"​Monday, Tuesday & Thursday: Lunch 12:30 pm -1:30 pm"
+],
+[],
+"http://www.stmcstx.org/"
+],
+[
+"http://www.chiesamadrecarlentini.it",
+[
+"Orario delle Sante Messe Domenica e festivi ore 19.00 Feriali   ore 19.00"
+],
+[],
+"https://www.chiesamadrecarlentini.it/chiesa_madre_carlentini_orari_messe.htm"
+],
+[
+"http://www.staugbalmain.org.au",
+[
+"Sunday: 9.00am, 5.00pm",
+"Saturday: 5.00pm Vigil Mass",
+"Tuesday: 7:30am",
+"Thursday: 9:15am",
+"Friday: 7:30",
+"Rosary: Saturday 8:00am and before Mass on weekdays",
+"Sunday: 10:30am",
+"Wednesday: 7:30am"
+],
+[],
+"https://staugbalmain.org.au/mass-times/"
+],
+[
+"http://CatholicForbes.org/",
+[
+"Mass Fri 25th 5pm (Due to Clergy Gathering)",
+"Tuesday 5:30 pm",
+"Wednesday 9:15 am",
+"Thursday 9:15 am",
+"Friday 9:15 am",
+"Sunday Mass: 8:00 am and 9:30 am"
+],
+[
+"Saturday Vigil Mass: ‍ ‍5 pm (4pm Confessions)",
+"Sunday Mass: 5 pm (4pm Confessions)"
+],
+"https://www.catholicforbes.org/"
+],
+[
+"https://jesusdeprague.be/",
+[
+"Dimanche : 10h30",
+"Mardi : 8h30",
+"Mercredi : 8h30",
+"Jeudi : 8h30",
+"Vendredi : 8h30",
+"Le 3ème dimanche du mois à 15h00 : cantiques, prières et bénédiction des pèlerins.",
+"Chaque lundi à 19h00 : Vêpres avec la communauté des religieuses et prières à l'Enfant Jésus de Prague."
+],
+[
+"Chaque premier vendredi du mois à 19h00."
+],
+"https://jesusdeprague.be/"
+],
+[
+"http://www.jan.chrzciciel.leszno.pl/",
+[
+"W lipcu i sierpniu nie ma Mszy Świętej o 15:30!",
+"Msze święte w dni powszednie: 7:00, 08:00,",
+"Msze święte w dni powszednie: 18:00",
+"Msze święte w święta zniesione: 07:00, 08:00, 09:30, 17:00, 18:00",
+"Nowenna do Matki Bożej Nieustającej Pomocy - w każdą środę, rano po mszy św. o godz. 8:00 i wieczorem po mszy św. o godz. 18:00",
+"Nabożeństwo do bł. s. Sancji Szymkowiak, serafitki- w czwartki po Mszy o godz. 18:00, następnie Adoracja do godz. 19:30.",
+"Nowenna do Matki Bożej Fatimskiej - w I sobotę rano o godz. 8:00",
+"Wymienianki roczne za zmarłych - w II i III piątek miesiąca o godz. 18:00, następnie msza święta za tych zmarłych.",
+"Msza i nabożeństwo wynagradzające Niepokalanemu Sercu NMP- każda I sobota miesiąca o godz. 7:00"
+],
+[
+"Spowiedź święta w naszej parafii codziennie między godziną 7:30 a 8:00 (z wyjątkiem poniedziałków) oraz przed wieczorną mszą świętą.",
+"W każdy piątek w godzinach od 7:00 do 19:00",
+"I piątek miesiąca: Spowiedź św. od godz. 16:30, dodatkowa Msza św. o godz. 17:00,"
+],
+"http://www.jan.chrzciciel.leszno.pl/"
+],
+[
+"http://www.parrocchiamassimina.it/",
+[
+"Lunedì 08.00 - 18.00",
+"Martedì 08.00 - 18.00",
+"Mercoledì 08.00 - 18.00",
+"Giovedì 08.00 - 18.00",
+"Venerdì 08.00 - 18.00",
+"Sabato 08.00 - 18.00",
+"Domenica 08.00 - 11.00 - 18.00"
+],
+[],
+"https://www.parrocchiamassimina.it/"
+],
+[
+"https://santaritadopari.wordpress.com",
+[
+"Quinta-feira : 19h00",
+"Sexta-feira : 15h00",
+"Sábado : 16h00",
+"Domingo : 08h00 / 10h00 / 18h00"
+],
+[],
+"https://santaritadopari.wordpress.com"
+],
+[
+"http://www.salvationchurch.in/contact.html",
+[
+"WEEKDAYS: 6.30 am, 7.30 am, 7.00 pm",
+"WEEKDAYS: On Wednesdays: 7.00 pm Mass in Konkani",
+"First Friday of the Month: after 7.00 pm Mass in English"
+],
+[],
+"https://salvationchurch.in/mass-schedule/"
+],
+[
+"http://www.stcsiena.org/",
+[
+"Sunday: 5:00 PM (Saturday",
+"vigil), 7:30, 9:00, 10:30 AM,",
+"Monday to Friday: 7:00 AM, 12:05 PM",
+"Saturday: 8:00 AM",
+"Holy Day (Observed) 7:00 AM, 12:05 PM, 7:00 PM"
+],
+[],
+"https://stcsiena.org/"
+],
+[
+"https://www.stwenceslausbaltimore.org",
+[],
+[
+"Sat 5:00 PM at St. Francis Xavier",
+"Sun 8:00 AM at St. Francis Xavier",
+"Sun 9:00 AM at St. Wenceslaus",
+"Sun 10:00 AM at St. Francis Xavier",
+"Sunday 11:00 AM at St. Ann"
+],
+"https://www.stwenceslausbaltimore.org"
+],
+[
+"https://www.cpbvcarmelo.it/",
+[
+"Giovedì: ore 08:45 lodi",
+"Sabato: ore 07:30 S. Messa",
+"ore 18:00 (dal mercoledì dopo Pasqua all'ultimo mercoledì di Ottobre a S. Mamette)",
+"Prefestive \"vigiliare\": 17.00",
+"Domenica e festivi: 07.30"
+],
+[],
+"https://www.cpbvcarmelo.it/75/orario-sante-messe"
+],
+[
+"http://www.olphaz.com",
+[
+"Saturday Vigil: 4:30pm",
+"Sunday: 6:30am, 8:30am, 10:30am and",
+"Sunday: 12:30pm (Spanish)",
+"Monday-Friday: 6:15am, 12:00pm",
+"Saturday: 6:15am",
+"Monday-Friday: 7am to 6pm",
+"Saturday: 7am to 4pm"
+],
+[
+"Monday, Wednesday & Friday: 11:00am - 11:45am",
+"Saturday 3pm-4pm"
+],
+"https://www.olphaz.org/"
+],
+[
+"https://jeffersonvillecatholic.org",
+[
+"Saturday: 4:00 p.m. | St. Augustine",
+"Sunday: 8:00 a.m. | St. Augustine",
+"Sunday: 10:00 a.m. | Sacred Heart",
+"Tuesday 5:30 p.m. | St. Augustine",
+"Wednesday | 5:30 p.m. | Sacred Heart",
+"Thursday | 8:00 a.m. | St. Augustine",
+"Friday | 8:15 a.m. | Sacred Heart"
+],
+[
+"Tuesday: 4:30-5:15 p.m. | St. Augustine",
+"Wednesday | 4:30 - 5:15 p.m. | Sacred Heart",
+"Saturday | 2:30 - 3:30 p.m. | St. Augustine"
+],
+"https://www.jeffersonvillecatholic.org/home-church"
+],
+[
+"http://www.ourladyofgoodcounselchurch.com",
+[
+"Saturday Evening Mass - 5 pm",
+"Sunday Morning Mass - 11 am"
+],
+[],
+"https://www.ourladyofgoodcounselchurch.com/"
+],
+[
+"https://www.splawie.archpoznan.pl/",
+[
+"Niedziela: 8.00, 10.00, 12.00 (z udziałem dzieci), 19.00",
+"Poniedziałek: 18.30",
+"Wtorek: 8.30",
+"Środa: 18.30",
+"Czwartek: 18.30",
+"Piątek: 18.30",
+"Sobota: 8.00 (tylko w pierwsze soboty), 18.30",
+"W czwartek o godz. 16.30 w salce katecheza dla dzieci pierwszokomunijnych – grupa z niedzieli; obecność dzieci dobrze widziana."
+],
+[
+"Poniedziałek 19.10",
+"Wtorek 20.10 Wspomn. Św. Jana Kantego, pr.",
+"Środa 21.10"
+],
+"https://www.splawie.archpoznan.pl/"
+],
+[
+"http://www.saintjosephchurch.us",
+[
+"Saturday Vigil: 4:00pm",
+"Sunday: 7:30am, 9:30am, 11:30am",
+"Daily Mass: 8am (Monday thru Saturday)",
+"Holy Days: 5:30pm Vigil, 8am, 10am, 7pm"
+],
+[
+"Confessions: Saturday 8:30 am to 9:00 am and 3:00 pm to 3:45 pm"
+],
+"https://www.saintjosephchurch.us/"
+],
+[
+"http://www.cattedraledicomo.it",
+[
+"Sante Messe con orario festivo: 09:30",
+"GIOVEDI' SANTO: 07:30",
+"LUNEDI' DELL'ANGELO: 07:30",
+"VENERDI' SANTO: 07:30",
+"DOMENICA IN ALBIS: 07:30"
+],
+[
+"SABATO SANTO: 07:30"
+],
+"https://www.cattedraledicomo.it/calendario/"
+],
+[
+"https://parishes.rcda.org/stanthonyofpadua",
+[
+"Vigil Mass, Saturday 4:30 pm",
+"Sunday Masses 9:00 am & 12:00 pm",
+"Monday - Friday 7:15am",
+"During Lent: Friday 12:10pm. Exposition of the Blessed Sacrament from 8:00-12:00pm",
+"Saturday Vigil: 4:30 pm",
+"Sunday: 9:00 am, 12:00 pm",
+"Friday: 12:10pm during Lent",
+"Mon - Thurs: 7:00 am to 2:00 pm",
+"Our Sunday 9:00am liturgy will continue to be available through our YouTube page.You can watch live, or at a later date."
+],
+[],
+"https://parishes.rcda.org/stanthonyofpadua/"
+],
+[
+"http://www.cathedrale-lyon.fr/",
+[
+"Du mardi au vendredi : 8h40",
+"Du mardi au samedi : 9h00",
+"Mercredi : 19h00, présidée par l’Archevêque"
+],
+[
+"Mercredi de 17h à 19h",
+"Vendredi de 17h à 18h45"
+],
+"https://cathedrale-lyon.fr/prier/messes-offices/"
+],
+[
+"http://www.parafiagoreczyno.pl/",
+[
+"Niedziele i święta: Goręczyno: 7:30, 9:30, 11:00",
+"Niedziele i święta: Ostrzyce: 8:30, 17:00",
+"Niedziele i święta: 7:30",
+"Niedziele i święta: 9:30",
+"Niedziele i święta: 11:00",
+"Niedziele i święta: 8:30",
+"Niedziele i święta: 17:00",
+"Dni powszednie: Goręczyno: 18.00",
+"Ostrzyce: 17.00 (raz w tygodniu - w środę)",
+"Dni powszednie: 18.00"
+],
+[
+"I czwartek miesiąca: Ostrzyce od 16:30 do 17:00.",
+"I piątek miesiąca: Goręczyno od 15:00 do 16:30 oraz od 17:30 do 18:30."
+],
+"http://parafiagoreczyno.pl/"
+],
+[
+"http://www.ascensionemonza.it/",
+[
+"Giorni feriali – 9.00; 18.00",
+"Sabato e prefestivi – 9.00; 18.00 (prefestiva)",
+"Domenica – 8:30; 10:00; 18:00",
+"Giorni feriali – 8:30",
+"Sabato e prefestivi – 18.00 (prefestiva)",
+"Domenica – 9:30; 11:00",
+"Giorni feriali – 18:00",
+"Sabato e prefestivi – 18.30 (prefestiva)",
+"Domenica – 10:30; 18:30",
+"Sabato: dalle 16:30 sino all’inizio della S. Messa prefestiva."
+],
+[],
+"https://www.ascensionemonza.it/messe-e-celebrazioni/"
+],
+[
+"http://www.sanktmarienzentrum.de",
+[
+"Unsere St.-Marien-Kirche ist dienstags bis samstags von 9:00 - 12:00 (außerhalb der Gottesdienstzeiten) für ein stilles Gebet geöffnet.",
+"18:00 jeden 2. Samstag/Monat"
+],
+[],
+"https://www.sanktmarienzentrum.de/"
+],
+[
+"http://www.stjosephchurcholney.com",
+[
+"Saturday: 5:00 p.m. Vigil",
+"Sunday: 8:00 a.m.",
+"Weekdays: 8:00 a.m. Wednesday",
+"​Saturday: 4:00 p.m. Vigil Holy Cross - Wendelin",
+"​ 5:00 p.m. Vigil St. Joseph - Olney",
+"Sunday: 8:00 a.m. St. Joseph - Stringtown",
+"Monday: 6:30 p.m. St. Joseph - Stringtown",
+"Tuesday: 6:30 p.m. St. Lawrence - Lawrenceville",
+"Wednesday: 8:00 a.m. St. Joseph - Olney",
+"Thursday: 6:30 p.m. Holy Cross - Wendelin"
+],
+[],
+"https://www.stjosephchurcholney.com/mass-times"
+],
+[
+"http://www.resurrectionparish.us/",
+[
+"Saturday Vigil Mass 5:00",
+"Sunday Mass: 8:30 am",
+"Daily Mass (E) Monday-Thursday 8:00 am",
+"Domingo Misa: 10:30 am & 1:00 pm",
+"Misa entre semana Mi�rcoles 6:00 pm"
+],
+[],
+"https://www.resurrectionparish.us/"
+],
+[
+"http://www.sa-sm.org/",
+[
+"Sunday / Domingo:10:30 a.m. (English)​12:30 p.m. (Spanish)",
+"Every Tuesday after Mass: 9:00 AM - 12:00 Nonon",
+"1st Friday of the month:​6:00 - 9:00 p.m."
+],
+[
+"Every Saturday:3:30 - 4:30 p.m.",
+"Every Wednesday:6:30 - 7:00 p.m.",
+"Every Wednesday:​6:30 - 7:30 p.m."
+],
+"http://sa-sm.org/mass-time/"
+],
+[
+"http://www.saintaldhelms.com/",
+[
+"Weekends : Saturday Vigil at 6.30 pm, Sunday at 8.30 am & 10 am,",
+"Weekdays: 10 am on Monday, Thursdays, Friday"
+],
+[],
+"https://www.saintaldhelms.com/"
+],
+[
+"http://www.stjoseph-marysville.org/",
+[
+"Tuesday-Friday @ 8:00am-English Mass",
+"Saturday @ 4:00pm-English Mass",
+"Sunday @ 8:00am and 10:00am-English Mass",
+"Sunday @ 12:00pm- Spanish Mass",
+"​Dobbins Mass is at 2:00pm the first Sunday of the month.",
+"Martes a viernes a las 8:00am - en Inglés",
+"Domingo a las 8:00am y 10:00am- en Inglés",
+"​​Domingo @ 12:00pm- en Español",
+"La misa de Dobbins es a las 2:00pm el primer domingo del mes."
+],
+[],
+"http://www.stjoseph-marysville.org/index.html"
+],
+[
+"http://saojoaobatistasc.com.br/",
+[
+"Terça a Sexta: 19h",
+"Sábado: 18h",
+"Domingo: 7h30, 9h30 e 18h",
+"1º Sábado do mês: 6h"
+],
+[],
+"https://saojoaobatistasc.com.br/"
+],
+[
+"http://parafialas.pl/",
+[
+"Niedziele i święta: 8.00",
+"Niedziele i święta: 10.00"
+],
+[],
+"https://parafialas.pl/"
+],
+[
+"http://www.sacrestimmate.org/",
+[
+"Feriali: ore 13.00 (dal lunedì al venerdì)",
+"Prefestiva (solo del sabato): ore 18.45"
+],
+[],
+"https://www.sacrestimmate.org/"
+],
+[
+"https://fara-sierpc.pl/",
+[
+"b) w niedzielę i święta: 7:00, 8:00, 9:30, 11:00, 12:30, 18:00"
+],
+[],
+"https://fara-sierpc.pl/msze-sw/msze-swiete-w-ciagu-roku-szkolnego/"
+],
+[
+"http://www.stfrancisxaviercathedral.org",
+[
+"Sunday: 8:30 AM & 11:00 AM",
+"Saturday - Vigil Mass: 6:00 PM",
+"Monday - Friday @ 7:00 AM",
+"Tuesday, Wednesday, & Thursday @ 12:10 PM"
+],
+[
+"Tuesday & Thursdays: 11:30 a.m. to 12 noon.",
+"Saturday: 5:00 p.m. to 5:45 p.m. and by appointment.",
+"Tuesday and Thursday from 3:00 PM to 6:00 PM"
+],
+"https://www.stfrancisxaviercathedral.org/church/sacraments/reconciliation"
+],
+[
+"http://www.parrocchiasantamariadelrosarioladispoli.it/",
+[
+"Lunedi – Sabato 07:00 19:00",
+"S. Messa Prefestiva 19:00",
+"Domenica e Festivi 07:00 09:00 10:30 12:00 19:00"
+],
+[],
+"https://www.parrocchiasantamariadelrosarioladispoli.it/index.php/s-messe/"
+],
+[
+"http://saintfrancisxavierchurch.com/",
+[
+"Saturday Mass of Anticipation: 4:30 PM (English)",
+"Sunday Masses: 8:00 AM (Portuguese)",
+"Sunday Masses: 9:30 AM (English)",
+"Sunday Masses: 11:45 AM (Portuguese)",
+"Monday: 6:00 PM (Portuguese)",
+"Tuesday: 12:05 PM (English)",
+"Wednesday: 6:00 PM (Portuguese)",
+"Thursday: 12:05 PM (English)",
+"Friday: 12:05 PM (English) & 6:00 PM (Portuguese)",
+"Weekday Masses: 6:00 PM"
+],
+[
+"Saturday 3:00 - 3:45 PM"
+],
+"https://saintfrancisxavierchurch.com/"
+],
+[
+"https://virgendeguadalupe.org.mx",
+[
+"Lunes a domingo: Rezo de Laudes, 8:30 h.",
+"Lunes a domingo: Misa Coral del Cabildo, 9:00 h.",
+"Lunes a domingo: Novenario, 18:00 h.",
+"Domingo: Misa Dominical del Cardenal Carlos Aguiar Retes, 12:00 h."
+],
+[],
+"https://virgendeguadalupe.org.mx"
+],
+[
+"http://www.ststephensanford.org/",
+[
+"Saturday Vigil: 5:00PM (English)",
+"Weekday Mass (Mon - Fri): 8:30AM (English)",
+"Monday - Friday, 9:00 AM – 9:00 PM (Chapel)"
+],
+[],
+"https://ststephensanford.org/"
+],
+[
+"http://radlow.diecezja.tarnow.pl/",
+[
+"Niedziela: Kościół parafialny: 6:30; 8:30; 10:00; 11:30; 16.00",
+"(Msza św. “chrzcielna”- III niedziela miesiąca) 11:30.",
+"Niedziela: Kaplica w Niwce: 7:15; 10:30.",
+"Kaplica w Niwce: piątek -16:00(zima); 17:00 (lato)"
+],
+[],
+"https://radlow.diecezjatarnow.pl/"
+],
+[
+"http://www.pfarrelockenhaus.at",
+[
+"Dienstag, 20. Okt. 17:00 Uhr hl. Messe in Glashütten",
+"Mittwoch, 21. Okt. 17:00 Uhr hl. Messe in Hammerteich",
+"Donnerstag, 22. Okt. 17:00 Uhr hl. Messe in Langeck",
+"Freitag, 23. Okt. 17:00 Uhr hl. Messe in Hochstraß",
+"Samstag, 24. Okt. 16:30 Uhr Rosenkranz",
+"Samstag, 24. Okt.: 17:00 Uhr Sonntagvorabendmesse in der Pfarrkirche",
+"Sonntag, 25. Okt. 10:00 Uhr hl. Messe in der Pfarrkirche"
+],
+[],
+"http://www.pfarrelockenhaus.at"
+],
+[
+"https://parafia-gizycko.pl/",
+[
+"w niedziele: 8.00 – 9.30 – 11.00 – 12.30 (z udziałem dzieci) – 17.30",
+"w niedziele: 9.30",
+"w niedziele: 11.00",
+"w niedziele: 12.30",
+"w niedziele: 17.30",
+"w dni powszednie: 7.00 – 17.30",
+"w dni powszednie: 17.30",
+"Msza Św. w int. Kół Żywego Różańca – I niedziela miesiąca, godz. 9.30",
+"Msza Św. w int. Ruchu Rodzin Nazaretańskich – I wtorek miesiąca, godz. 17.30",
+". – III poniedziałek miesiąca – o godz. 17.15 Koronka do Ducha Świętego;"
+],
+[],
+"https://parafia-gizycko.pl/msze-i-nabozenstwa/"
+],
+[
+"https://www.holytrinitychurch.co.in/",
+[
+"Sunday Mass: (English) 7:00 AM",
+"Sunday Mass: (Kannada) 8:30 AM",
+"Sunday Mass: (Tamil) 10:00 AM",
+"(English) 6:00 PM (On Saturday)",
+"Monday to Saturday - 6:30 AM (Except on First Firday of every Month)"
+],
+[],
+"https://www.holytrinitychurch.co.in/"
+],
+[
+"http://www.stelizcc.org/",
+[
+"Holy Thursday Mass at 7pm*",
+"Easter Vigil Mass at 8pm*",
+"Easter Sunday Mass at 9:00am* (PLEASE NOTE THERE WILL ONLY BE ONE MASS ON EASTER SUNDAY)"
+],
+[
+"Good Friday Service at 7pm*"
+],
+"https://stelizcc.org/holiday-mass-schedule/"
+],
+[
+"https://paroissealliancenouvelle-cysoing.fr/",
+[
+"La messe est célébrée tous les samedis soir à 18h30 en l’église Saint-Calixte-Saint-Évrard de Cysoing.",
+"Elle est célébrée tous les dimanches à 10h30 dans un des villages (voir planning pour le lieu).",
+"Pendant le carême et l’avent, la messe du mercredi est célébrée à la bougie à 21h à Saint-Calixte à Cysoing."
+],
+[],
+"https://paroissealliancenouvelle-cysoing.fr/infos-pratiques/nos-horaires/"
+],
+[
+"http://www.n-bvm.org/",
+[
+"Saturday Vigil: 4:00 PM",
+"Sunday: 7:30 AM, 9:00 AM, 10:45 AM (Spanish), 12:30 PM",
+"Monday–Friday: 9:00 AM﻿",
+"Tuesday: 5:30 PM"
+],
+[
+"Saturday: 3:00 PM"
+],
+"https://www.n-bvm.org/"
+],
+[
+"http://parafia-grobniki.pl/",
+[
+"* 19.00 – Msza święta, a po niej nabożeństwo różańcowe."
+],
+[
+"* 18.30 – okazja do spowiedzi świętej;",
+"w niedzielę: 8.00 Grobniki, 9.30 Debrzyca, 11.00 Grobniki",
+"w dni powszednie: Pn, śr, cz, pt, 17.00 Debrzyca , 18.00 Grobniki ; wt, sb. 7.00 Grobniki, 8.00 Debrzyca"
+],
+"http://parafia-grobniki.pl/"
+],
+[
+"http://hfcantigua.org/",
+[
+"Saturday – Cathedral: 6:00 p.m.",
+"Sunday – Cathedral: 7:00 a.m. and 9:00 a.m.; 11:00 a.m. (Hispanic)",
+"Monday – 6.00 p.m. at Holy Family Cathedral",
+"Tuesday – 6.15 a.m. at Holy Family Cathedral and 6:00 p.m. at St. Anthony's, Potters",
+"Wednesday – 6.00 p.m. at Holy Family Cathedral",
+"Thursday – 6.15 a.m. at Holy Family Cathedral 6:00 p.m. at St. Francis of Assisi",
+"Friday – 12:15 p.m. at Holy Family Cathedral",
+"Saturday – 8.00 a.m. at Holy Family Cathedral",
+"Donovan's is one of the communities (outstation) of Holy Family Cathedral Parish. Mass is celebrated on Sunday at 9:00 a.m."
+],
+[],
+"https://hfcantigua.org/index.php/church-service-schedules"
+],
+[
+"http://www.parrocchiasantagostino.eu/",
+[
+"da lunedì a venerdì: ore 18.30",
+"sabato: ore 18.00",
+"domenica: ore 8.00 / 9.45 / 11.00"
+],
+[],
+"https://www.parrocchiasantagostino.eu/parrocchia-sant-agostino/orario-sante-messe/"
+],
+[
+"http://paroquianossasenhoradagraca.blogspot.com/",
+[
+"Terça-feira: 7:30hs - missa da comunidade",
+"Primeira Sexta-feira do mês: 19:30hs - Apostolado da Oração",
+"Domingo: 8:30hs - Missa dos Idosos",
+"Domingo: 10:00hs - Missa das Crianças",
+"Quinta-feira: 18:30hs - Missa de Adoração e Benção do Santíssimo Sacramento",
+"Domingo: 19:30hs - Missa da Comunidade"
+],
+[],
+"http://paroquianossasenhoradagraca.blogspot.com/"
+],
+[
+"http://www.sacredheartgr.org/",
+[
+"5:00 PM (Vigil of Sunday)",
+"Monday - Friday: 8:00 AM",
+"SAT: 7:45 AM, 5:00 PM (Vigil)",
+"SUN: 7:45 AM, 9:30 AM (English) &",
+"MON-FRI: 8:00 AM"
+],
+[],
+"https://www.sacredheartgr.org/"
+],
+[
+"http://www.standrewkimchicago.org",
+[
+"토요 주일 미사 (Saturday) : 6 PM",
+"주일 아침 미사 (Sunday) : 7:30 AM",
+"주일 교중 미사 (Sunday): 11 AM (마지막 주일 : 성체 강복)",
+"9:30 AM (마지막 주일 : 영어미사 없음 (No English Mass on last Sunday of every month))",
+"(화 (Tue)) 7:30 PM",
+"(수,목,금 (Wed, Thu, Fri)) 10:30 AM"
+],
+[],
+"https://standrewkimchicago.org/"
+],
+[
+"http://www.stpatricksmapleridge.ca",
+[
+"SATURDAY - 5:30PM",
+"Anticipated Sunday Mass: Saturday at 5:30pm",
+"Sunday – 9am, 11:15am, 4:30pm",
+"DAILY MASS: Mondays – 8:00am Mass",
+"DAILY MASS: Wednesdays – 8:00am Mass",
+"DAILY MASS: Thursdays – 5:30pm Adoration/Benediction; 6:30pm Mass",
+"DAILY MASS: Fridays – 8:00am Mass (effective July 1st to August 31st)",
+"DAILY MASS: *On Holiday Mondays we will keep the 8am Mass Time.*",
+"Sunday Mass – 9am, 11:15am, 4:30pm"
+],
+[
+"DAILY MASS: Tuesdays – 6pm Confessions; 6:30pm Mass"
+],
+"https://stpatricksmapleridge.ca/"
+],
+[
+"http://stmichaelmulvane.org/",
+[
+"Tues- Fri.: 8:00 am in the Church",
+"Saturday: 4:00 pm",
+"Sunday: 8:30 am, 11:00 am"
+],
+[
+"Saturday: 2:30 pm to 3:30 pm",
+"7:30 - 7:50 am Tues - Friday"
+],
+"https://stmichaelmulvane.org/"
+],
+[
+"http://www.straymondmp.org/",
+[
+"Mon–Sat 8:15 am",
+"Saturday 5 pm",
+"Sunday 8 am, 10 am, 5 pm"
+],
+[
+"Wed 7-8 pm",
+"Sat. 8:45-9:15 am & 3:30-4:30 pm"
+],
+"https://straymondmp.org/"
+],
+[
+"http://www.archidiecezja.pl/parafie/sanktuaria/gniezno_-_katedra_.html",
+[
+"Gniezno – kościół św. Jerzego (obok katedry), ul. Tumska – I niedziela miesiąca, godz. 15.30 (kontakt: 607 067 187).",
+"Inowrocław – kościół Opatrzności Bożej, ul. Poznańska 332 – III niedziela miesiąca, godz. 14.00 (kontakt: 664 721 294).",
+"Pobiedziska – kościół Świętego Ducha, ul. Władysława Jagiełły 23 – III niedziela miesiąca, godz. 19.00 (kontakt: 608 303 419)."
+],
+[],
+"https://archidiecezja.pl/duszpasterstwo/msza-sw-trydencka-w-archidiecezji-gnieznienskiej/"
+],
+[
+"http://www.materdolorosa.org.za/",
+[
+"Mon – Fri: 07h00",
+"Saturday: 07h00",
+"18h00 (Vigil)",
+"Sunday: 08h00",
+"Sunday: 09h30",
+"Sunday: 11h00"
+],
+[],
+"http://www.materdolorosa.org.za/"
+],
+[
+"http://www.stmarymobile.org",
+[
+"﻿Sunday Masses: 9:30 AM",
+"﻿Sunday Masses: 11:30 AM",
+"Tuesday through Friday: 6:00 AM﻿"
+],
+[],
+"https://www.stmarymobile.org/mass-times"
+],
+[
+"http://mblzgorzelec.pl/",
+[
+"Niedzielne Msze Święte: W Zgorzelcu Msze św. o godzinie 8:30, 12:00 i 18:00. W Tylicach o godz. 10:30.",
+"Niedzielne Msze Święte: Msze św. w tygodniu tradycyjnie o godz. 18:00",
+"Link do relacji na żywo z Niedzielnej Mszy Świętej Godz. 8:30",
+"Ranna Msza św. niedzielna o godz. 8.30 jest transmitowana drogą internetową na potrzeby ludzi chorych, starszych i osób będących w podróży."
+],
+[],
+"https://mblzgorzelec.pl/"
+],
+[
+"http://www.sjkoreancatholic.org",
+[
+"Sunday Mass: Morning Mass (Korean): 7:30AM",
+"Sunday Mass: English Mass (English): 9:00AM",
+"Sunday Mass (Korean): 11:00AM",
+"Sunday Mass: Afternoon Mass (Korean): 5:00PM",
+"Vigil Mass (Korean): 5:00PM",
+"Tue: 10:00AM, 7:30PM",
+"Thu: 10:00AM (exept 1st week), 7:30PM",
+"Wed,Fri,Sat: 10:00AM"
+],
+[],
+"https://www.sjkoreancatholic.org/"
+],
+[
+"https://www.cathedralolph.org/",
+[
+"Saturday: 7:00AM | 5:30PM",
+"Saturday: 8:00AM",
+"Sunday: 5:30PM",
+"Sunday: 8:00AM | 10:30AM | 5:30PM"
+],
+[
+"Saturday: Noon - 1:00PM | 4:30PM - 5:30PM",
+"Saturday: 3:00PM - 4:00PM | 7:00PM - 8:00PM",
+"Saturday: 4:30PM - 5:30PM",
+"Saturday: 7:00PM - 8:00PM"
+],
+"https://www.cathedralolph.org/confessions"
+],
+[
+"https://www.alsace.catholique.fr/zp-thur-et-doller/cp-thann-collines-de-la-thur/thann-infos-pratiques/",
+[
+"le dimanche à 9 h 30 à la Collégiale Thann",
+"le samedi à 18 h 00 à l’église Saint Pie X une semaine sur 2",
+"le vendredi de 8h30 à 9h à la Collégiale Chapelle de la Croix"
+],
+[],
+"https://www.alsace.catholique.fr/zp-thur-et-doller/cp-thann-collines-de-la-thur/thann-infos-pratiques/"
+],
+[
+"http://www.stjosephswath.weebly.com/",
+[
+"Weekend and Weekday Masses: 9.15am Sundays at St. Joseph's, Rawmarsh",
+"Weekend and Weekday Masses: 11.15am Sundays",
+"Weekend and Weekday Masses: 10am Mondays and Thursdays at St. Joseph's, Rawmarsh"
+],
+[],
+"https://stjosephswath.weebly.com/"
+],
+[
+"http://www.pfarrei-bad-abbach.de/",
+[
+"Immer am 1. Sonntag im Monat, 11.55-12.15 Uhr, Kirche St. Nikolaus."
+],
+[],
+"https://www.pfarrei-bad-abbach.de/"
+],
+[
+"http://paroisselonguevilleannonay.fr/",
+[
+"Messe anticipée du samedi soir: Messe à 17h",
+"Messe du dimanche: Messe à 9h",
+"Messes en semaine: Messe à 8h30",
+"Le mardi à Roiffieux: Messe à 18h30"
+],
+[],
+"https://paroisselonguevilleannonay.fr/horaire-de-messe/"
+],
+[
+"http://www.liebfrauen-re.de/",
+[
+"Samstags um 17.30 Uhr feiern wir in der St. Petrus Canisius Kirche, als auch über das Internet miteinander im Gebet verbunden Gottesdienst."
+],
+[],
+"https://www.liebfrauen-re.de/aktuelles-termine/gottesdienste/live-stream"
+],
+[
+"http://www.stbonifacefortsmith.com/",
+[
+"Wednesday | 6:00pm*",
+"Saturday | 4:00pm",
+"Sunday | 8:00am*, 10:00am, 1:00pm*"
+],
+[
+"Wednesday | 5:00pm",
+"Saturday | 3:00pm"
+],
+"https://www.stbonifacefortsmith.com/"
+],
+[
+"http://www.stdidacus.org",
+[
+"Monday- Friday Spanish Mass: 6:00 p.m.",
+"Saturday Vigil Mass: English 5pm",
+"Saturday Vigil Mass: Spanish 7pm",
+"Sunday Mass English: 6:30am, 10:00am",
+"Sunday Mass English: 11:30am",
+"Sunday Mass Spanish: 8am, 1pm, 6pm"
+],
+[
+"Wednesday & Friday: 7:00 - 8:30pm",
+"Saturday 8:00am-9:00am"
+],
+"https://www.stdidacus.org/"
+],
+[
+"https://www.mariaehimmelfahrt-ffm.de",
+[
+"Sonntags 9:30 Uhr",
+"Sonntags 11:00 Uhr",
+"Sonntags 18:00 Uhr",
+"Samstags: Vorabendgottesdienst 18:00 Uhr"
+],
+[],
+"https://www.mariaehimmelfahrt-ffm.de/gottesdienstplan/"
+],
+[
+"https://santmiqueldelport.org/",
+[
+"Misa en castellano: sábados a las 10:00 y domingos a las 18:30.",
+"Misas en catalán: martes a viernes a las 10:00h.",
+"Misas bilingües: sábados a las 19:30h (predomina catalán) y domingos a las 11:00h (predomina castellano)",
+"Celebración o misa exequial: jueves a las 19:30h (sólo hay cuando se pide)"
+],
+[
+"Confesiones: jueves de 12:00 a 13:00 en la iglesia."
+],
+"https://santmiqueldelport.org/"
+],
+[
+"https://aylesfordsmcc.co.uk/",
+[
+"Holy Mass : Every Sunday 9:30am"
+],
+[],
+"https://aylesfordsmcc.co.uk/"
+],
+[
+"http://parafiamaczniki.pl/",
+[
+"DNI POWSZEDNIE: godz. 19:00",
+"godz. 18:00 (Msza niedzielna)",
+"DNI POWSZEDNIE: godz. 18:00"
+],
+[],
+"https://parafiamaczniki.pl/"
+],
+[
+"https://nsbelen.archimadrid.es/",
+[],
+[
+"Jueves de 17:30 a 18:45h."
+],
+"https://nsbelen.archimadrid.es/horarios/"
+],
+[
+"http://www.semacau.org/",
+[
+"Dias de Semana: 07:45 (C)",
+"Dias de Semana: 18:00 (P)",
+"Dias de Semana: 18:45 (C)",
+"Domingo: 07:45 (C)",
+"Domingo: 09:15 (C)",
+"Domingo: 11:00 (P)",
+"Domingo: 17:00 (T)",
+"Domingo: 18:15 (E)"
+],
+[],
+"https://www.semacau.org/"
+],
+[
+"http://swgertruda-darlowo.pl/",
+[
+"Niedziela o godz. 9.45;"
+],
+[],
+"https://swgertruda-darlowo.pl/"
+],
+[
+"https://www.saintemarthe93.fr",
+[
+"12h Messe en tamoul le 4ème dimanche du mois",
+"Mardi: messe à 12h",
+"Vendredi: messe à 12h",
+"à Notre-Dame des Vertus: messe le à 9h du mardi au samedi; et à 19h le jeudi puis l’adoration 19h30 -20h30",
+"à Saint-Paul du Montfort: messe le mardi et vendredi à 19h; le vendredi: adoration 19h30 -20h30",
+"Mardi à18h30",
+"Dimanche à 18h30"
+],
+[],
+"https://saintemarthe93.fr/"
+],
+[
+"http://www.pastoralverbund-salzkotten.de/",
+[],
+[
+"Samstag: 08:00 Uhr - Verne - Hl. Messe mit Marienlob; anschl. Beichtgelegenheit"
+],
+"https://www.pastoralverbund-salzkotten.de/gottesdienste-menu/gottesdienstordnung"
+],
+[
+"http://ipsar.org/",
+[
+"Domenica, ore 10:30 - Santa Messa in lingua portoghese."
+],
+[],
+"https://www.ipsar.org/index.php?option=com_content&view=article&id=18&Itemid=135"
+],
+[
+"https://www.stfaustina.org",
+[
+"Saturday Vigil Mass: 4:00 PM",
+"Sunday Masses: 7:30 AM",
+"Sunday Masses: 9:30 AM",
+"Sunday Masses: 11:30 AM",
+"Sunday Masses: 5:00 PM (Español)",
+"Monday - Saturday Daily Mass: 8:00 AM"
+],
+[
+"Confessions - Saturday: 3:00 PM - 3:45 PM"
+],
+"https://stfaustina.org/"
+],
+[
+"https://www.santoninodepraga.org/",
+[
+"Domingo: 9:30 am Santísima Trinidad (Celebración de la palabra)"
+],
+[
+"Jueves - 5:00 pm",
+"Viernes - 5:00 pm",
+"Sábado : 4:00 pm San Martín",
+"Domingo: 8:00 am Santo Niño",
+"Domingo: 11:00 am San Martín"
+],
+"https://www.santoninodepraga.org/"
+],
+[
+"http://www.sancarlosborromeo.es",
+[
+"Lunes a Viernes: Mañana – 7:30 h.",
+"Lunes a Viernes: 7:30 h.",
+"Lunes a Viernes: Tarde – 19:30 h.",
+"Lunes a Viernes: 19:30 h.",
+"Domingos y días de precepto: Mañana – 10:30  y  12:30 h.",
+"Domingos y días de precepto: 10:30 y 12:30 h.",
+"Domingos y días de precepto: Tarde – 19:30  y  20:30 h.",
+"Domingos y días de precepto: 19:30 y 20:30 h.",
+"Miércoles, de 8:00 a 12:00 h.",
+"Jueves, de 18:30 a 19:30 h."
+],
+[],
+"http://sancarlosborromeo.es/"
+],
+[
+"http://stmarytampa.org",
+[
+"Daily Mass: 8am /",
+"Saturday Vigil Mass: 5pm /",
+"Sunday Mass: 8am /",
+"Sunday Mass: 10am /",
+"Sunday Mass: 12pm /",
+"Mission Sunday Mass / Spanish: 10am /"
+],
+[
+"Reconciliation - Saturday: 4:00pm-450pm /"
+],
+"https://stmarytampa.org/"
+],
+[
+"http://www.geraldtondiocese.org.au/parishes/northampton-kalbarri",
+[
+"Sunday 10.30am"
+],
+[],
+"https://www.geraldtondiocese.org.au/parishes/northampton-kalbarri"
+],
+[
+"http://www.migranten-parochie.nl/",
+[
+"woensdag 09.30 uur",
+"zaterdag 18.00 uur",
+"Zondag 11.00uur",
+"Dinsdag 10.00 - 13.00",
+"Donderdag 10.00 - 13.00",
+"Zondag 10.00 - 13.00"
+],
+[],
+"https://www.migranten-parochie.nl/"
+],
+[
+"http://www.stpatrickphilly.org/",
+[],
+[
+"​​SATURDAY EVENING: 4:30 p.m. Confessions (Lower Church)",
+"SATURDAY, OCTOBER 31: ​4:30 p.m. Confessions",
+"Sunday: 10:30am Confessions",
+"Sunday: 9pm Night Prayer",
+"Mon - Wed: 5:45-8:45pm"
+],
+"https://www.stpatrickphilly.org/"
+],
+[
+"http://www.basilicadelsacrocuore.it/giovani",
+[
+"Giorni feriali: 06:30",
+"Giorni feriali: 07:00",
+"Giorni feriali: 07:30",
+"Giorni feriali: 08:00",
+"Giorni feriali: 09:00",
+"Giorni feriali: 18:00"
+],
+[],
+"https://www.basilicadelsacrocuore.it/la-basilica/orario-celebrazioni/"
+],
+[
+"https://www.stanthonychurchsiolim.com/",
+[
+"TUESDAY - 6:30 AM English, 8:00 AM., 9:30 AM. & 4:30 PM.",
+"SUNDAY - 6:30 AM. , 8:00 AM. & 9:15 AM. (Children's Mass)",
+"Mae De Deus Chapel (GAUNSAVADDO): Everyday masses: Monday, Wednesday & Friday - 6.30 A.M.",
+"Our Lady of Sorrows Chapel (PORTAVADDO): 8.30 am. only on Sunday"
+],
+[],
+"https://www.stanthonychurchsiolim.com/"
+],
+[
+"http://www.parrocchiagesudivinolavoratore.it/",
+[
+"Festivi: 7.30 – 9.00 – 10.00 – 11.30 – 18.00",
+"Feriali: 7.30 – 9.00 – 18.00"
+],
+[],
+"https://www.parrocchiagesudivinolavoratore.it/"
+],
+[
+"http://www.diocesecyangugu.com/",
+[
+"The daily programm: 11h30: The Holly Mass.",
+"The daily programm: 15h30: Eucharistic litany."
+],
+[
+"The daily programm: 12h30: The Eucharistic adoration and individual confession."
+],
+"https://www.diocesecyangugu.com/en/liturgy/"
+],
+[
+"http://www.stjames-greater.com/",
+[
+"Saturday | 4:00pm",
+"Sunday | 8:00am, 10:00am, 12:00pm (Spanish), 6:00pm",
+"Monday | 8:00am",
+"Tuesday | 8:00am",
+"Wednesday | 7:00pm",
+"Thursday | 8:00am",
+"Friday | 8:00am",
+"Saturday | 8:00am"
+],
+[
+"Saturday | 2:00 PM",
+"Wednesday | 2nd & 4th of the month 6:00pm"
+],
+"https://www.stjames-greater.com/"
+],
+[
+"https://diecezja.zamojskolubaczowska.pl/parafie/parafia-swietego-jana-nepomucena-susiec",
+[
+"Niedziele: 08:00",
+"Niedziele: 09:30 (Grabowica)",
+"Niedziele: 11:00 (z udziałem dzieci)",
+"Dni powszednie: 17:00 (czas zimowy)",
+"Dni powszednie: 18:00 (czas letni)",
+"Spotkania: I sobota mc; 19.00",
+"Spotkania: wtorek 18.30",
+"Spotkania: sobota 10.30"
+],
+[],
+"https://diecezja.zamojskolubaczowska.pl/parafie/parafia-swietego-jana-nepomucena-susiec"
+],
+[
+"http://www.smgcv.org",
+[
+"4:00 MASS SATURDAY at COAL VALLEY",
+"5:30 Mass Saturday at ORION",
+"8:30 MASS SUNDAY at ORION",
+"10:00 MASS SUNDAY at COAL VALLEY",
+"8:00am Mass Tuesday and Thursday at Orion",
+"9:00am Mass Wednesday and Friday at Coal Valley",
+"Tuesday – Hope Creek Care Center, 10:30 A.M.",
+"Wednesday – 9:00 A.M.",
+"Friday – 9:00 A.M.",
+"Saturday – 4:00 P.M."
+],
+[],
+"https://www.smgcv.org/"
+],
+[
+"https://www.sanmartinoniguarda.it/",
+[
+"Sante Messe feriali: ore 8:30 – 18:00",
+"ogni primo giovedì del mese dopo la messa serale e fino alle 19:30."
+],
+[
+"Lunedì 9:00 – 11:00",
+"Martedì 16:30 – 18:00",
+"Giovedì 9:00 – 11:00",
+"Venerdì 16:30 – 18:00"
+],
+"https://www.sanmartinoniguarda.it/"
+],
+[
+"https://parafiasheffield.org.uk/",
+[
+"Poniedziałek: Sheffield, Polski Ośrodek Katolicki, godz. 10:00",
+"Środa: Sheffield, Polski Ośrodek Katolicki, godz. 19:00",
+"Czwartek: Sheffield, Polski Ośrodek Katolicki, godz. 19:00",
+"Piątek: Sheffield, Polski Ośrodek Katolicki, godz. 19:00",
+"godz. 19:00 (Msza św. niedzielna)",
+"W pierwszą i trzecią niedzielę miesiąca o godz. 15:00.",
+"W drugą i czwartą niedzielę miesiąca o godz. 15:00."
+],
+[],
+"https://parafiasheffield.org.uk/porzadek-mszy-swietych/"
+],
+[
+"https://dioceseauxarmees.fr/messes/zone-ile-de-france/eglise-du-val-de-grace/",
+[
+"Premier samedi du mois – Messe de réparation au Cœur Immaculé de Marie : 11h00 (Paul VI, français)",
+"Troisième samedi du mois – En l’honneur de Notre-Dame de la Nativité (Prière pour le respect de la Vie) : 11h00 (Paul VI, français)"
+],
+[
+"Dimanche et fêtes: 11h00 : Messe Paul VI en français, précédée de confessions de 10h à 10h45"
+],
+"https://dioceseauxarmees.fr/messes/zone-ile-de-france/eglise-du-val-de-grace/"
+],
+[
+"https://www.dolr.org/parishes/st-scholastica-church-new-blaine",
+[
+"Sun. – 10:30 a.m.",
+"Tues. – 10:30 a.m. (Hesychia House of Prayer)",
+"Thu. – 10:30 a.m. (Hesychia House of Prayer)"
+],
+[],
+"https://www.dolr.org/parishes/st-scholastica-church-new-blaine"
+],
+[
+"http://www.diecezjaplocka.pl/parafie/janowo-sw-rocha",
+[
+"Dni powszednie: św. Urbana – Baboszewo – ul. Odrodzenia 2, 09-130 Baboszewo – 08:00; 10:00; 11:45; 17:00; – Zobacz"
+],
+[],
+"http://www.diecezjaplocka.pl/dla-wiernych/znajdz-msze-swieta"
+],
+[
+"http://www.paroissestdominique.org/",
+[
+"Dimanche: 9 h 30 St-Cyriac",
+"Dimanche: 9 h St-Gérard-Majella (Larouche)",
+"Dimanche: 10 h Parvis",
+"Dimanche: 10 h 30 St-Dominique",
+"Dimanche: 11 h St-Raphaël",
+"Lundi: 10 h Villa Jonquière",
+"Mardi: 10 h Villa des Sables",
+"Jeudi: 16 h La messe est à l’église St-Famille"
+],
+[],
+"http://paroissestdominique.org/horaire-des-messes/"
+]
+],
+"staff_sample": [
+[
+"http://www.corpuschristicalgary.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://corpuschristicalgary.org/",
+"p": [
+[
+"p",
+"Father",
+"Neville Anderson",
+"",
+""
+]
+],
+"src": "https://corpuschristicalgary.org/about/"
+}
+],
+[
+"https://www.akseas.net/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Sebastian Palepu",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.akseas.net/staff",
+"mt": [
+"Saturday Vigil: 5:30p",
+"Sunday: 8:30a, 11:30a, 5:30p",
+"Daily Mass: Monday – Thursday: 9:00a",
+"Mass: Sunday at 6:00p"
+],
+"ct": [],
+"msrc": "https://www.akseas.net/mass-times-sacraments-adoration"
+}
+],
+[
+"http://sfxjoliet.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sfxjoliet.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Karl Langsdorf",
+"Pastor",
+"https://www.sfxjoliet.org/wp-content/uploads/2024/12/SFX-Parish-Council-300x169.jpg"
+],
+[
+"p",
+"Fr.",
+"Michael Furlan",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Tom Sagenbrecht",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"John Jensen",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Terry Safko",
+"Deacon",
+""
+],
+[
+"p",
+"Father",
+"Michael J. Furlan",
+"",
+"https://www.sfxjoliet.org/wp-content/uploads/2024/12/Fr-Mike-Furlan-225x300.png"
+]
+],
+"src": "https://www.sfxjoliet.org/ourteam/",
+"mt": [
+"After 9:15am Masses on Monday and Tuesday",
+"after 9:15am Masses on Thursday and Friday",
+"Saturday 4:30pm",
+"Sunday 8:30am",
+"Sunday 10:00am",
+"Monday: 9:15am",
+"Tuesday: 9:15am",
+"Wednesday: 6:30pm",
+"Thursday: 9:15am",
+"Friday: 9:15am"
+],
+"ct": [
+"Saturday 3:30 to 4:15pm",
+"Wednesday 6:00 to 6:30pm"
+],
+"msrc": "https://www.sfxjoliet.org/sacraments/reconciliation/"
+}
+],
+[
+"http://www.pnsassuncao.org.br/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.pnsassuncao.org.br/",
+"p": [
+[
+"p",
+"Padre",
+"Henri Caffarel",
+"",
+""
+]
+],
+"src": "https://www.pnsassuncao.org.br/pastorais-e-movimentos/movimentos/ens-movimento-equipes-de-nossa-senhora"
+}
+],
+[
+"http://www.diocesisdepasto.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://diocesisdepasto.org/",
+"p": [
+[
+"p",
+"P.",
+"José Luis Ortiz López",
+"",
+""
+]
+],
+"src": "https://diocesisdepasto.org/vicaria-para-la-pastoral/"
+}
+],
+[
+"https://archedinburgh.org/news-events",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Mgr",
+"Patrick Burke",
+"",
+"https://archedinburgh.org/wp-content/uploads/Trustee-Fr-Patrick-Burke-P1110428-1-1-250x300.webp"
+],
+[
+"p",
+"Rev",
+"Ronnie Macaulay",
+"",
+""
+]
+],
+"src": "https://archedinburgh.org/vocations/priesthood/"
+}
+],
+[
+"http://www.parafia-zalesie.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Jan Twardowski",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Michała Rapacza",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Stanisława Streicha",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Władysława Findysza",
+"",
+""
+],
+[
+"p",
+"P.",
+"Jacka Soleckiego",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"K. Grzejszczyk",
+"Pastor",
+""
+]
+],
+"src": "http://www.parafia-zalesie.pl/index.php/duszpasterstwo",
+"mt": [
+"Dni powszednie: 7.15 i 18.00",
+"MSZE ŚW. NIEDZIELNE: 9.00",
+"MSZE ŚW. NIEDZIELNE: 11.00 - z udziałem dzieci",
+"MSZE ŚW. NIEDZIELNE: 12.30 - Suma za Parafian",
+"MSZE ŚW. NIEDZIELNE: 18.00 - dla młodzieży"
+],
+"ct": [
+"w środę i czwartek: od godz 17.45"
+],
+"msrc": "http://www.parafia-zalesie.pl/"
+}
+],
+[
+"http://www.SacredHeartSaukRapids.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sacredheartsaukrapids.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Tom Knoblach",
+"Pastor",
+"https://static.wixstatic.com/media/ade9f8_960da86103fc43b4aed22714af61009d~mv2.jpg/v1/crop/x_8"
+],
+[
+"p",
+"Fr.",
+"Patrick Hoeft",
+"",
+"https://static.wixstatic.com/media/29e34f_493dd743ebde48c7aabaa815bfa64175~mv2.jpg/v1/crop/x_0"
+],
+[
+"d",
+"Deacon",
+"Terry Jancik",
+"Deacon",
+"https://static.wixstatic.com/media/ade9f8_aa7653e43e3b43678aadb07dfd04e219~mv2.jpg/v1/crop/x_0"
+],
+[
+"d",
+"Deacon",
+"Joe Kresky",
+"Deacon",
+"https://static.wixstatic.com/media/ade9f8_24a5803df65842a1b82f088c8a2cae7d~mv2.jpg/v1/crop/x_0"
+]
+],
+"src": "https://www.sacredheartsaukrapids.org/staff"
+}
+],
+[
+"http://www.lourdesparish.ca/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.lourdesparish.ca/",
+"p": [
+[
+"p",
+"Rev.",
+"Ryan Holly",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Lukas Časta",
+"",
+""
+]
+],
+"src": "https://www.lourdesparish.ca/contact",
+"mt": [
+"Saturday: Mass at 4:30 PM",
+"Sunday: Mass at 9:00 AM",
+"Monday to Friday - Mass at 8:00 am",
+"Sunday - Mass at 11:00 am**",
+"Tuesday -Mass at 3:00 pm"
+],
+"ct": [
+"Saturday: Confessions at 4:00 p.m.",
+"Sunday: Confessions at 8:30 a.m.",
+"Sunday: Confessions at 7:45 a.m."
+],
+"msrc": "https://www.lourdesparish.ca/mass-times"
+}
+],
+[
+"http://www.parrocchia-colognola.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.parrocchia-colognola.it/",
+"p": [
+[
+"p",
+"Don",
+"Massimo Maffioletti",
+"",
+""
+],
+[
+"p",
+"Don",
+"Matteo Perico",
+"",
+""
+],
+[
+"p",
+"Don",
+"Renzo Caseri",
+"",
+""
+],
+[
+"p",
+"Don",
+"Giuliano Zanchi",
+"",
+""
+]
+],
+"src": "https://www.parrocchia-colognola.it/inidirizzi-utili/",
+"mt": [
+"LUNEDÌ – ore 8:00 – 17:00",
+"MARTEDÌ – ore 8:00 – 17:00",
+"MERCOLEDÌ – ore 8:00 – 17:00",
+"GIOVEDÌ – ore 8:00 – 17:00",
+"VENERDÌ – ore 8:00 – 17:00",
+"SABATO – ore 16:00 RSA Anni Azzurri ore 18:30 prefestiva",
+"DOMENICA e FESTIVO – ore 8:00 – 10:30 – 18:30"
+],
+"ct": [
+"SABATO – ore 17:30 – 18:30"
+],
+"msrc": "https://www.parrocchia-colognola.it/orari-delle-celebrazioni/"
+}
+],
+[
+"http://www.clondalkinparish.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Kieran Coghlan",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"Brian McKittrick",
+"Pastor",
+""
+],
+[
+"d",
+"Rev.",
+"Don Devaney",
+"Deacon",
+""
+]
+],
+"src": "http://www.clondalkinparish.com/?page_id=62",
+"mt": [
+"Saturday Vigil – 6.30pm",
+"Sunday – 9am (In Irish), 10.15am & 12 noon",
+"Monday to Friday – 7.30am & 10am",
+"Saturday – 10am",
+"Sunday – 11.30am",
+"Wednesday – 10am",
+"Monday and Friday – Liturgy of the Word at 10am",
+"Sunday – 10.45am"
+],
+"ct": [],
+"msrc": "http://www.clondalkinparish.com/?page_id=44"
+}
+],
+[
+"http://www.stthomasapostle.net/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stthomasapostle.net/",
+"p": [
+[
+"p",
+"Father",
+"Leonard Mukiibi",
+"",
+""
+]
+],
+"src": "https://www.stthomasapostle.net/parish-pastoral-council.html",
+"mt": [
+"SATURDAY: St. Thomas: 5:00 pm",
+"SUNDAY: St. Cecilia: 8:00 am",
+"SUNDAY: St. Thomas: 10:00 am",
+"Tuesday 7:45 am",
+"​Wednesday 7:45 am",
+"​Thursday 7:45 am",
+"Friday 7:45 am",
+"Wednesday 6:30 pm"
+],
+"ct": [
+"Saturday 4:00-4:45 pm",
+"Wednesday 5:00-6:15 pm",
+"Sunday 7:00-7:45 am"
+],
+"msrc": "https://www.stthomasapostle.net/weekly-mass-schedule.html"
+}
+],
+[
+"https://www.queenschurches.org/Directory/Congregations/DQC645.htm",
+{
+"s": "ok",
+"c": 200,
+"u": "http://www.queenschurches.org/Directory/Congregations/DQC645.htm",
+"p": [
+[
+"d",
+"Deacon",
+"Rodrigo Mendez",
+"Deacon",
+""
+]
+],
+"src": "http://www.queenschurches.org/Directory/Congregations/DQC645.htm",
+"mt": [
+"Principal Worship Service(s) – English  Su 10am; Vigil 5:30pm Italian  Su 8:30am Spanish  Su 7,11:30am,1pm; Sa 7:30pm"
+],
+"ct": [],
+"msrc": "http://www.queenschurches.org/Directory/Congregations/DQC645.htm"
+}
+],
+[
+"http://www.padroeiraperola.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://site.padroeiraperola.com.br/",
+"p": [
+[
+"p",
+"Pe.",
+"Armando Philippe",
+"Pastor",
+"https://padroeiraperola.com.br/site/wp-content/themes/perola/images/rodape-padroeira.png"
+],
+[
+"p",
+"Pe.",
+"João Daniel",
+"Pastor",
+""
+],
+[
+"p",
+"Pe.",
+"Teodoro Briend",
+"Pastor",
+""
+],
+[
+"d",
+"Diac.",
+"Antonio de Almeida Mangini",
+"Deacon",
+"https://site.padroeiraperola.com.br/wp-content/uploads/2016/10/p_batismo.jpg"
+],
+[
+"d",
+"Diac.",
+"Pedro Lopes Vieira",
+"Deacon",
+"https://site.padroeiraperola.com.br/wp-content/uploads/2016/10/p_esperan%C3%A7a.jpg"
+]
+],
+"src": "https://site.padroeiraperola.com.br/",
+"mt": [
+"Informações: Toda primeira sexta-feira do mês há a missa do Sagrado Coração de Jesus, às 19h na Igreja Matriz."
+],
+"ct": [],
+"msrc": "https://site.padroeiraperola.com.br/"
+}
+],
+[
+"http://ololpk.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.ololpk.com/",
+"p": [
+[
+"p",
+"Rev.",
+"A. Albert",
+"Pastor",
+""
+],
+[
+"d",
+"Deacon",
+"Gregory Burliuk",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Nicholas Whalen",
+"Deacon",
+""
+]
+],
+"src": "https://www.ololpk.com/",
+"mt": [
+"Tuesday, Wednesday, Thursday, and Friday | 9:30 am",
+"Saturday | 5:15 pm",
+"Sunday | 9:30 and 11:00 am"
+],
+"ct": [
+"and Saturday, 4:30 - 5:00 p.m."
+],
+"msrc": "https://www.ololpk.com/"
+}
+],
+[
+"http://santuarioboschetto.it/sito/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://santuarioboschetto.it/sito/",
+"p": [
+[
+"p",
+"Don",
+"Piero Benvenuto",
+"",
+""
+]
+],
+"src": "https://santuarioboschetto.it/sito/corale-don-piero-benvenuto/chi-siamo/",
+"mt": [
+"GIORNI FERIALI: S. Messe ore 17:00 (Estivo 17:30)",
+"S. Messa Prefestiva 17:00 (Estivo 17:30)"
+],
+"ct": [],
+"msrc": "https://santuarioboschetto.it/sito/il-santuario/orario-funzioni/"
+}
+],
+[
+"http://redevida.com.br/programacao/missa-santuario-da-vida",
+{
+"s": "ok",
+"c": 200,
+"u": "https://redevida.com.br/programa/missa-santuario-da-vida/",
+"p": [
+[
+"p",
+"Padre",
+"Marcelo Rossi",
+"",
+""
+]
+],
+"src": "https://redevida.com.br/programa/a-voz-do-pastor/",
+"mt": [
+"Dia(s) que é exibido o programa: SEGUNDA a SEXTA - 19h e DOMINGO - 08h"
+],
+"ct": [],
+"msrc": "https://redevida.com.br/programa/missa-santuario-da-vida/"
+}
+],
+[
+"http://sldm.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://sldm.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Aidan Peter Rossiter",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Aidan Peter",
+"",
+"https://sldm.org/wp-content/uploads/2015/12/rossiter_aidan_2-240x300.jpg"
+],
+[
+"p",
+"Rev.",
+"Armand Bopda",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Louis Armand Bopda Toche",
+"",
+"https://sldm.org/wp-content/uploads/2019/09/FrArmandImg.jpg"
+],
+[
+"p",
+"Rev.",
+"John Mayhew",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Alfred Verstreken",
+"",
+""
+]
+],
+"src": "https://sldm.org/parish-clergy/",
+"mt": [
+"Saturday Vigil: 5:00pm & 6:45pm (Spanish)"
+],
+"ct": [],
+"msrc": "https://sldm.org/"
+}
+],
+[
+"https://diocesitivoliepalestrina.it/parrocchie/quarta-vicaria/orvinio-s-nicola-di-bari",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Don",
+"Celestin Coomlan",
+"",
+""
+],
+[
+"p",
+"Don",
+"Paolo Ugo",
+"",
+""
+],
+[
+"p",
+"Don",
+"Jean Willy",
+"",
+""
+],
+[
+"p",
+"Don",
+"Ramon Javier",
+"",
+""
+]
+],
+"src": "https://diocesitivoliepalestrina.it/tipologia/sacerdote/",
+"mt": [
+"Lunedì ore 9.00 – 12.30",
+"Giovedì ore 9.00 – 12.30",
+"Venerdì ore 9.00 – 12.30",
+"Martedì ore 9.00 – 12.30"
+],
+"ct": [],
+"msrc": "https://diocesitivoliepalestrina.it/uffici-pastorali/ufficio-liturgico/"
+}
+],
+[
+"https://katholisch-hn.de/muensterkantor-st-peter-und-paul/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Pfarrer",
+"Manuel Hammer",
+"Pastor",
+""
+]
+],
+"src": "https://katholisch-hn.de/muensterkantor-st-peter-und-paul/",
+"mt": [],
+"ct": [
+"Mittwoch: 11.30 Uhr Beichtgelegenheit DOM",
+"Freitag: 17.45 Uhr Eucharistische Anbetung (während der österlichen Bußzeit ist Kreuzwegandacht) und Beichtgelegenheit DOM"
+],
+"msrc": "https://katholisch-hn.de/gottesdienste-st-peter-und-paul/"
+}
+],
+[
+"http://sanktuariumglogowmlp.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://sanktuariumglogowmlp.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Bpa Kazimierza Górnego",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Bpa Ignacego Tokarczuka",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Bpa Jana Wątroby",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Prałat Adam Samel",
+"",
+""
+]
+],
+"src": "https://sanktuariumglogowmlp.pl/parafia/duszpasterze/",
+"mt": [
+"Niedziele i święta: Msze Św.: 6.30, 8.00, 9.30, 10.00 – Zabajka, 10.30 (ZPO), 11.00, 12.30 (w roku szkolnym), 18.00",
+"Święta zniesione: Msze św.: 6.00, 8.00, 16.00, 18.00",
+"Dni powszednie: Msze św.: 6.30, 7.15 (w kaplicy Matki Bożej),",
+"18.00 (w środy połączona z Nowenną odprawianą przed ołtarzem Matki Bożej Głogowskiej)"
+],
+"ct": [],
+"msrc": "https://sanktuariumglogowmlp.pl/"
+}
+],
+[
+"http://www.stannkeansburg.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stannkeansburg.org/",
+"p": [
+[
+"p",
+"Rev.",
+"John E. Murray",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"John A. Carrollfirst",
+"Pastor",
+""
+]
+],
+"src": "https://www.stannkeansburg.org/",
+"mt": [
+"Saturday Vigil: 5:00pm",
+"Sunday 9:00am, 5:30pm",
+"Monday - Friday: 8:00am"
+],
+"ct": [
+"Saturday 1:00 pm - 2:00pm"
+],
+"msrc": "https://www.stannkeansburg.org/"
+}
+],
+[
+"http://holycrossmt.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.holycrossmt.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Joe Paddock",
+"Pastor",
+"https://static.wixstatic.com/media/ab1507_fd65bf4f8b934dbfa40a788656dfbc39~mv2.jpeg/v1/fill/w_186"
+]
+],
+"src": "https://www.holycrossmt.org/about",
+"mt": [
+"Wednesday 12:00 pm",
+"Thursday 12:00 pm"
+],
+"ct": [
+"Sunday 8:00 - 8:45 am",
+"Wednesday 12:45 - 1:45 pm"
+],
+"msrc": "https://www.holycrossmt.org/"
+}
+],
+[
+"https://parafiajastarnia.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Piotr Zieleziński",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Grzegorz Malinowski",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Ks.",
+"Antoni Konkel",
+"",
+""
+]
+],
+"src": "https://parafiajastarnia.pl/duszpasterze/",
+"mt": [
+"w NIEDZIELE : 8.00, 10.00, 11.30 i 16.30",
+"w dni powszednie : 7.00, 8.00 i 18.00 .",
+"w NIEDZIELE: i 18.00 ."
+],
+"ct": [],
+"msrc": "https://parafiajastarnia.pl/msze/"
+}
+],
+[
+"https://parroquialujangolf.wixsite.com/misitio",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Padre",
+"Amadeo Gambín",
+"",
+""
+],
+[
+"p",
+"Padre",
+"Saturnino del Rey",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Augusto Uriarte",
+"",
+""
+]
+],
+"src": "https://parroquialujangolf.wixsite.com/misitio/parroquia",
+"mt": [
+"Último lunes de mes: En invierno, después de la misa de las 18:30 hs.",
+"Último lunes de mes: el resto del año después de la misa de las 19:00 hs"
+],
+"ct": [
+"De lunes a sábado: 19:00",
+"Domingo: 11:30 y 19:00"
+],
+"msrc": "https://parroquialujangolf.wixsite.com/misitio"
+}
+],
+[
+"http://www.saopccfl.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://saopccfl.org/",
+"p": [
+[
+"d",
+"Deacon",
+"Frank DeSanto",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Rob Miller",
+"Deacon",
+""
+]
+],
+"src": "https://saopccfl.org/page/staff",
+"mt": [
+"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday: 8:00 am",
+"Saturday Vigil: 5:30 pm",
+"Sunday: 8:00 am, 9:30 am &11:00am"
+],
+"ct": [
+"Saturday Confession: 4:00 pm - 5-:00 pm"
+],
+"msrc": "https://saopccfl.org/"
+}
+],
+[
+"http://www.kath-oberer-hegau.de/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.kath-oberer-hegau.de/",
+"p": [
+[
+"p",
+"Pfarrer",
+"Michael Knaus",
+"Pastor",
+""
+],
+[
+"p",
+"Pfarrer",
+"Matthias Schneider",
+"Pastor",
+""
+]
+],
+"src": "https://www.kath-oberer-hegau.de/wir-fuer-sie/seelsorgeteam/"
+}
+],
+[
+"http://www.maynoothparish.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://maynoothparish.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Paul Kelly",
+"Parochial vicar",
+"https://maynoothparish.org/wp-content/uploads/2021/10/Fr-Paul-Kelly.jpg"
+]
+],
+"src": "https://maynoothparish.org/priests-of-the-parish/",
+"mt": [
+"Saturday: 5pm (Family Mass)",
+"7pm Vigil Mass",
+"Sunday: 8:45am,",
+"Mon-Sat: 10:00am",
+"First Friday: 10.00am",
+"Vigil 7:00pm, 10:00am",
+"Vigil, 8pm"
+],
+"ct": [
+"Holy Days: CONFESSIONS: Saturdays after 10am Mass in St Mary's"
+],
+"msrc": "https://maynoothparish.org/"
+}
+],
+[
+"http://maksymilian.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://maksymilian.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Ryszard Stanek",
+"",
+"https://maksymilian.pl/wp-content/uploads/2019/07/Ks.-Stanek.jpg"
+],
+[
+"p",
+"Ks.",
+"Michał Kosiński",
+"",
+"https://maksymilian.pl/wp-content/uploads/2026/09/8d3b8e43-9f57-4ea8-ab3c-e4294cf4aa5c-180x300.jpg"
+],
+[
+"p",
+"Ks.",
+"Maciej Grzelak",
+"",
+"https://maksymilian.pl/wp-content/uploads/2026/09/800214db-b07a-42dc-a1a9-3e753e941f8b-300x279.jpg"
+],
+[
+"p",
+"Ks.",
+"Stanisław Cichosz",
+"",
+"https://maksymilian.pl/wp-content/uploads/2026/09/800214db-b07a-42dc-a1a9-3e753e941f8b-300x279.jpg"
+]
+],
+"src": "https://maksymilian.pl/aktualnie-w-naszej-parafii/"
+}
+],
+[
+"http://parafia-piastow.sds.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Dariusz Partyka Sds",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Piotr Dymon Sds",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Ks.",
+"Rafał Główczyński Sds",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Konrad Nowak Sds",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Janusz Bola Sds",
+"",
+""
+]
+],
+"src": "http://parafia-piastow.sds.pl/parafia/duszpasterze/",
+"mt": [
+"Niedziela: 7.30, 9.30, 11.00 (z udziałem dzieci), 12.30, 18.00 (dla młodzieży)",
+"Niedziela: Dzień powszedni: 7.30, 18.00"
+],
+"ct": [],
+"msrc": "http://parafia-piastow.sds.pl/parafia/msze-i-nabozenstwa/"
+}
+],
+[
+"http://www.stjamesdenver.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stjamesdenver.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Angel Perez-Brown",
+"",
+"https://www.stjamesdenver.org/_media/53ac8c_f442e923f10541fe9376c6eb3d5522a9~mv2.jpg/v1/fill/w_63,h_78,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Fr_Angel.jpg"
+]
+],
+"src": "https://www.stjamesdenver.org/team",
+"mt": [
+"Saturday Anticipated Mass: 4:00 p.m.",
+"Sunday: 8:00 a.m.",
+"Sunday: 10:00 a.m.",
+"Sunday: 12:00 p.m. - Spanish",
+"Holy Days of Obligation: 8:15 a.m.",
+"Holy Days of Obligation: 5:30 p.m."
+],
+"ct": [],
+"msrc": "https://www.stjamesdenver.org/"
+}
+],
+[
+"https://ourladyofdivineprovidence.church/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Ronald Haft",
+"Administrator",
+"https://images.squarespace-cdn.com/content/v1/64a1bf2f9090725a6bae6ca7/379a4adb-4cbd-4aa7-b819-e3093d3c3532/eTf4f.jpg"
+],
+[
+"p",
+"Fr.",
+"George Jacquemin",
+"Parochial vicar",
+"https://images.squarespace-cdn.com/content/v1/64a1bf2f9090725a6bae6ca7/a0574e46-2dd0-4525-a3df-7d55c78dcbf0/P6170344-Edit.jpg"
+],
+[
+"p",
+"Fr.",
+"Henry Hoffmann",
+"",
+"https://images.squarespace-cdn.com/content/v1/64a1bf2f9090725a6bae6ca7/4c9352e2-dd5c-41cd-8827-e3be61be3c52/P6170336-Edit-Edit.jpg"
+]
+],
+"src": "https://ourladyofdivineprovidence.church/leadership",
+"mt": [
+"SUNDAY: 9:30 AM | St. Clare (Children’s Liturgy of the Word offered September-May)",
+"SUNDAY: 11:15 AM | St. Bartholomew (Children’s Liturgy of the Word offered September-May)",
+"WEDNESDAY: 8:00 AM | St. Clare & St. Vivian School Mass*",
+"THURSDAY: 9:30 AM | JPII School Mass at St. Bartholomew*",
+"Monday, November 2: 7:00 PM | St. Clare",
+"Sunday, 9:30 AM Mass at St. Clare Church",
+"Sunday, 11:15 AM Mass at St. Bartholomew"
+],
+"ct": [],
+"msrc": "https://ourladyofdivineprovidence.church/mass-times"
+}
+],
+[
+"https://newmanparish.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev Fr",
+"Glen Tattersall",
+"Pastor",
+""
+],
+[
+"p",
+"Rev Fr",
+"Brendan Arthur",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Rev Fr",
+"John McDaniels",
+"Pastor emeritus",
+""
+]
+],
+"src": "https://newmanparish.org/"
+}
+],
+[
+"https://divinemercylaredo.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Jose G. Cadena",
+"Pastor",
+"https://divinemercylaredo.com/wp-content/uploads/2018/08/1920x600_slider_1.jpg"
+]
+],
+"src": "https://divinemercylaredo.com/about-divine-mercy/",
+"mt": [
+"Sunday Mass Schedule: 10:00 am (ENG)",
+"Sunday Mass Schedule: 12:00 pm (SP)",
+"Sunday Mass Schedule: 4:00 pm (SP)",
+"Saturday Mass Schedule: 5:00 pm (ENG)",
+"Tuesday - 6:30 pm - (SP)",
+"Wednesday - 6:30 pm - (SP)",
+"Thursday - 6:30 pm - (SP)",
+"Friday - 6:30 pm - (SP)",
+"Saturday - 8:00am - (SP)",
+"Wednesday 7:15 pm -8:15 pm"
+],
+"ct": [
+"Tues., Wed., Thurs., & Fri. - 6:00 pm to 6:25 pm",
+"Wednesday - 7:15 pm to 8:15 pm",
+"Saturday - 4:00 pm to 4:50 pm"
+],
+"msrc": "https://divinemercylaredo.com/"
+}
+],
+[
+"http://HolyProtectionWV.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://holyprotectionwv.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Kyprian Wojciechowski",
+"",
+"https://img1.wsimg.com/isteam/ip/7d601ab3-d6d6-4c7a-a110-0be3485fe16b/IMG_9857.jpg/:/cr=t:3.85%25,l:0%25,w:100%25,h:88.89%25/rs=w:600,h:800,cg:true"
+]
+],
+"src": "https://holyprotectionwv.com/about"
+}
+],
+[
+"https://parafianottingham.org.uk/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ksiądz",
+"Proboszcz Krzysztof Kawczyński",
+"Pastor",
+""
+],
+[
+"p",
+"Ksiądz",
+"Wikariusz Krystian Strycharski",
+"Parochial vicar",
+""
+]
+],
+"src": "https://parafianottingham.org.uk/",
+"mt": [
+"Niedziela: 9.30 11.00 12.30 19.00",
+"Poniedziałek, Wtorek, Środa: 8.00 10.00",
+"Czwartek, Piątek: 10.00 19.00",
+"Sobota: 8.00 19.00"
+],
+"ct": [],
+"msrc": "https://parafianottingham.org.uk/"
+}
+],
+[
+"https://stleo-queens.org",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Very Rev.",
+"Carlos A. Agudelo",
+"Pastor",
+""
+],
+[
+"d",
+"Deacon",
+"Rodrigo A. Mendez",
+"Deacon",
+""
+]
+],
+"src": "https://stleo-queens.org/our-team"
+}
+],
+[
+"http://arthunkalbasilica.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://arthunkalbasilica.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Gasper Pious",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Giacomo Fenicio",
+"Parochial vicar",
+""
+]
+],
+"src": "https://arthunkalbasilica.com/",
+"mt": [
+"Sunday: 5:30am, 7:00am, 9:00am, 11:00am, 5:00pm, 6:30pm(Eng)"
+],
+"ct": [],
+"msrc": "https://arthunkalbasilica.com/"
+}
+],
+[
+"http://cabraparish.ie/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cabraparish.ie/",
+"p": [
+[
+"p",
+"Fr.",
+"Paul Thornton",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Joe Keegan",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"John Joe Spring",
+"",
+""
+]
+],
+"src": "https://cabraparish.ie/parish-ministries/"
+}
+],
+[
+"http://www.queenofangels.lk/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.queenofangels.lk/",
+"p": [
+[
+"p",
+"Rev. Fr.",
+"Edrich Rodrigo",
+"Pastor",
+"https://www.queenofangels.lk/images/popef.jpg"
+]
+],
+"src": "https://www.queenofangels.lk/",
+"mt": [
+"Sunday Masses: 6.30 AM - Lunawa (Sinhala)",
+"Sunday Masses: 7.30 AM - Angulana (Sinhala)",
+"Sunday Masses: 8.30 AM - Rawatawatte (Sinhala)",
+"Sunday Masses: 12.00 NOON - Rawatawatte (English)",
+"Sunday Masses: 6.00 PM- Rawatawatte (Sinhala)",
+"Thursday: 12.00 PM - Rawatawatte (English)",
+"8.00 AM - Angulana (1st First Friday)",
+"Friday: 12.00 NOON - Rawatawatte (English)",
+"Friday: 6.00 PM - Rawatawatte",
+"6.00 PM - Lunawa (1st Friday)"
+],
+"ct": [],
+"msrc": "https://www.queenofangels.lk/index.php?act=servicetimes"
+}
+],
+[
+"https://diocese-amos.org/fr/parish/duparquet",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Abbé",
+"Michel Rodrigue",
+"",
+""
+]
+],
+"src": "https://diocese-amos.org/fr/Pastorale/jeunesse"
+}
+],
+[
+"http://www.stwendelin.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stwendelin.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Joseph Poggemeyer",
+"Pastor",
+"https://irp.cdn-website.com/49f595da/dms3rep/multi/opt/Joseph+Poggemeyer-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Paul Feasel",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Dave Schiefer",
+"Deacon",
+"https://irp.cdn-website.com/49f595da/dms3rep/multi/opt/Dcn.+Dave+Schiefer-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Joe Hulderman",
+"Deacon",
+""
+]
+],
+"src": "https://www.stwendelin.org/staff",
+"mt": [
+"Saturday: 4:30pm",
+"Sunday: 8:00am* | 11:00am",
+"4th Sunday | 12:30pm (Spanish/Español)",
+"Tuesday | 5:15pm",
+"Wednesday | 9:00am",
+"Thursday* | 9:00am",
+"Friday | 9:00am",
+"1st Saturday | 9:00am",
+"1st Saturday | after 9:00 AM Mass or by appointment"
+],
+"ct": [
+"First Saturday | 8:15-8:50am",
+"Saturday | 3:30-4:20pm",
+"Sunday | 7:00-7:50am & 10:00-10:50am",
+"Tuesday | 4:40-5:10pm",
+"Friday | 8:20-8:50am"
+],
+"msrc": "https://www.stwendelin.org/"
+}
+],
+[
+"http://www.stjosephforce.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stjosephforce.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Mark J. Mastrian",
+"Administrator",
+""
+]
+],
+"src": "https://stjosephforce.org/contact.html",
+"mt": [
+"Monday, Tuesday, Thursday and Friday at 8:30 a.m.",
+"Saturday: 5:30 p.m.",
+"Sunday: 9:15 a.m."
+],
+"ct": [
+"Saturday from 4:45-5:15 p.m.",
+"Holy Day: 9 a.m.; 7 p.m."
+],
+"msrc": "https://stjosephforce.org/"
+}
+],
+[
+"https://waclaw.org.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ksiądz",
+"Marek Uzdowski",
+"",
+""
+],
+[
+"p",
+"Ksiądz",
+"Robert Hodyna",
+"",
+""
+],
+[
+"p",
+"Ksiądz",
+"Michał Buraczyński",
+"",
+""
+]
+],
+"src": "https://waclaw.org.pl/duszpasterze/",
+"mt": [
+"1. Dzisiaj o godzinie 16.00 Msza święta dla młodzieży przygotowującej się do sakramentu bierzmowania. Zapraszamy też rodziców."
+],
+"ct": [],
+"msrc": "https://waclaw.org.pl/"
+}
+],
+[
+"http://www.parafiazlotniki.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Marek Chmara",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Leszek Sakowski",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Roman Waszkiewicz",
+"",
+""
+],
+[
+"p",
+"O.",
+"Marcin Rosiński",
+"",
+""
+],
+[
+"p",
+"O.",
+"Daniel Szwarc",
+"",
+""
+]
+],
+"src": "http://parafiazlotniki.pl/duszpasterze/",
+"mt": [
+"Niedziele: 8.00,",
+"Niedziele: 10.00,",
+"Niedziele: 11.30,",
+"Niedziele: 17.00"
+],
+"ct": [],
+"msrc": "http://parafiazlotniki.pl/"
+}
+],
+[
+"https://www.stcolmanandstpaul.co.uk/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Innaiah Maddineni",
+"",
+"https://irp.cdn-website.com//aadf9b69/dms3rep/multi/opt/Improved+father-1680w.jpg"
+]
+],
+"src": "https://www.stcolmanandstpaul.co.uk/about-us",
+"mt": [
+"Saturday: 6:00 pm - at St Colman's",
+"Sunday: 9:30 am - at St Colman's",
+"Sunday: 11:00 am - at St Paul's",
+"Monday - Thursday: St. Colman's at 9:00am"
+],
+"ct": [
+"Confessions: Saturday: 5:30 - 5:55pm"
+],
+"msrc": "https://www.stcolmanandstpaul.co.uk/about"
+}
+],
+[
+"http://www.naplesstann.com",
+{
+"s": "moved",
+"c": 200,
+"u": "https://naplesstann.org/",
+"p": [
+[
+"d",
+"Deacon",
+"Kevin Winn",
+"Deacon",
+"https://cdn.diocesanweb.org/crossroads/naplesann/wp-content/uploads/2024/02/Winn-Image.jpg"
+],
+[
+"p",
+"Reverend",
+"Cory A. Mayer",
+"Pastor",
+"https://cdn.diocesanweb.org/crossroads/naplesann/wp-content/uploads/2026/06/Unknown-1.avif"
+],
+[
+"p",
+"Fr.",
+"Ananda A. Reddy",
+"Parochial vicar",
+"https://cdn.diocesanweb.org/crossroads/naplesann/wp-content/uploads/2026/09/9c8489e1-e230-4b19-bfaf-e67ac47ba77e-899x1024.jpg"
+]
+],
+"src": "https://naplesstann.org/staff",
+"mt": [
+"Saturday (Vigil): 4:00 pm,",
+"Sunday: 7:30 am,",
+"Sunday: 9:00 am,",
+"Sunday: 11:00 am,",
+"Sunday: 6:00 pm,",
+"Monday - Friday: 9:00 am,",
+"Saturday: 9:00 am,"
+],
+"ct": [],
+"msrc": "https://naplesstann.org/"
+}
+],
+[
+"http://krasnobrod-uducha.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Stanisława Błaszczuk",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Proboszcza Stanisława Błaszczuka",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Romanowi Sawicowi",
+"",
+""
+]
+],
+"src": "http://krasnobrod-uducha.pl/?p=main&what=15"
+}
+],
+[
+"http://www.diocesisdetabasco.org.mx/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.diocesisdetabasco.org.mx/",
+"p": [
+[
+"p",
+"Pbro.",
+"Omar Ramos Arellano",
+"Pastor",
+""
+],
+[
+"p",
+"Pbro.",
+"Guillermo Jiménez Palomera",
+"Pastor",
+""
+]
+],
+"src": "https://www.diocesisdetabasco.org.mx/"
+}
+],
+[
+"https://paroquiadebuzios.com.br/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Padre",
+"Wallace Dahan dos Santos",
+"Pastor",
+""
+],
+[
+"p",
+"Padre",
+"Wellington Dahan",
+"",
+""
+],
+[
+"p",
+"Padre",
+"Higor Santana",
+"Parochial vicar",
+""
+]
+],
+"src": "https://paroquiadebuzios.com.br/nossoparoco/"
+}
+],
+[
+"http://www.hv.ac.th/index.php/blog",
+{
+"s": "ok",
+"c": 200,
+"u": "http://www.hv.ac.th/",
+"p": [
+[
+"p",
+"Fr.",
+"John Tamayo",
+"Pastor",
+""
+]
+],
+"src": "http://www.hv.ac.th/contact-church/",
+"mt": [
+"Sunday: 09.00 Hrs.",
+"Sunday: 10.30 Hrs."
+],
+"ct": [],
+"msrc": "http://www.hv.ac.th/holy-mass-schedule/"
+}
+],
+[
+"http://www.seschurch.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://seschurch.org/",
+"p": [
+[
+"p",
+"Monsignor",
+"Alphonsus Moloney",
+"Pastor",
+""
+],
+[
+"p",
+"Reverend",
+"Donald Coleman",
+"Pastor",
+""
+],
+[
+"d",
+"Deacon",
+"Jerry Heitschmidt",
+"Deacon",
+""
+]
+],
+"src": "https://seschurch.org/about/",
+"mt": [],
+"ct": [
+"Every Saturday: from 3- 4 pm or by appointment.",
+"Holy Thursday: Penance 9am – 11:30am",
+"Every Saturday afternoon from: 3 - 4 pm or by appointment. Click here for a guide to confession."
+],
+"msrc": "https://seschurch.org/"
+}
+],
+[
+"https://www.kirche-freystadt.de/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"P.",
+"Bartimäus Trabecki",
+"",
+"https://www.kirche-freystadt.de/fileadmin/_processed_/8/1/csm_faith-3772002_640_7b26fcc141.jpg"
+],
+[
+"p",
+"P.",
+"Terencjan Wawrzonkowski",
+"",
+""
+],
+[
+"p",
+"P.",
+"Noah Majewski",
+"Parochial vicar",
+""
+],
+[
+"p",
+"P.",
+"Olaf Setlak",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.kirche-freystadt.de/pastoralraum/pastorales-team/",
+"mt": [
+"Donnerstags um 9.00 Uhr (8.45 Uhr Barmherzigkeitsrosenkranz)",
+"Donnerstags: 9.00 Uhr",
+"Sonntags um 10.00 Uhr und um 18.30 Uhr",
+"Sonntags: 10.00 Uhr",
+"Sonntags: um 18.30 Uhr",
+"Sonntags: Gottesdienste in polnischer Sprache - Alle zwei Wochen 11.30 Uhr",
+"Msze święte po polsku co drugi tydzień o godz. 11.30"
+],
+"ct": [],
+"msrc": "https://www.kirche-freystadt.de/wallfahrtskirche/gottesdienste-und-fuehrungen/"
+}
+],
+[
+"http://www.smpgilroy.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://smpgilroy.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Michael Hendrickson",
+"Pastor",
+"https://smpgilroy.org/images/fr-michael.png"
+],
+[
+"p",
+"Fr.",
+"Jose Rubio",
+"Pastor emeritus",
+""
+]
+],
+"src": "https://smpgilroy.org/leadership",
+"mt": [
+"Next livestreamed Mass: Sunday · 9:00 AM PT"
+],
+"ct": [
+"Fri, Nov 13 · 7:00 PM PT Gym/Kitchen",
+"Sun, Oct 25 · 7:00 AM–11:00 AM PT",
+"Sun, Oct 25 · 9:15 AM–10:45 AM PT",
+"Sun, Oct 25 · 1:00 PM–9:00 PM PT"
+],
+"msrc": "https://smpgilroy.org/watch"
+}
+],
+[
+"http://www.heiliggeist-ratingen.de/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://view-wp.heiliggeist-ratingen.de/",
+"p": [
+[
+"p",
+"Pfarrer",
+"Ulrich Kern",
+"",
+"https://view-wp.heiliggeist-ratingen.de/wp-content/uploads/2026/05/Kern-Zasanski-300x161.jpg"
+],
+[
+"p",
+"Pfarrer",
+"Krzysztof Zasanski",
+"",
+"https://view-wp.heiliggeist-ratingen.de/wp-content/uploads/2026/05/Kern-Zasanski-300x161.jpg"
+],
+[
+"d",
+"Diakon",
+"Hugo Hekermann",
+"Deacon",
+"https://view-wp.heiliggeist-ratingen.de/wp-content/uploads/2026/06/Uebersicht_PE-Messen_2026_vers2-212x300.jpg"
+]
+],
+"src": "https://view-wp.heiliggeist-ratingen.de/veraenderungen-im-seelsorgeteam"
+}
+],
+[
+"http://www.stannsdayton.org",
+{
+"s": "moved",
+"c": 200,
+"u": "https://stannsdayton.com/",
+"p": [
+[
+"p",
+"Father",
+"Tom Nelson",
+"Administrator",
+""
+]
+],
+"src": "https://stannsdayton.com/about",
+"mt": [
+"Saturday: 4:00 pm (English)",
+"Sunday: 8:00am (English)",
+"Sunday: 9:30am (Spanish)",
+"Sunday 5:00pm (English)",
+"Monday Tuesday & Thursday 8:00am",
+"Wednesday: 7:30am"
+],
+"ct": [
+"Confession: Sat 3-3:30 PM"
+],
+"msrc": "https://stannsdayton.com/mass-schedule"
+}
+],
+[
+"http://www.sjnparishmalibay.blogspot.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev. Fr.",
+"Edgardo C. Coroza",
+"Pastor",
+""
+]
+],
+"src": "http://sjnparishmalibay.blogspot.com/",
+"mt": [
+"Mass for the Sick: every 2nd Saturday, 9:00 am"
+],
+"ct": [
+"CONFESSION: Wed., Fri., Sat. 5:30-6:00 pm or by appointment"
+],
+"msrc": "http://sjnparishmalibay.blogspot.com/"
+}
+],
+[
+"http://www.littleflowerparish.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.littleflowerparish.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Daniel Finnerty",
+"Pastor",
+"https://irp.cdn-website.com/23ec231a/dms3rep/multi/opt/qnb69586bu2b7eqxjxbq5lhb5r-780d607b-216w.jpg"
+],
+[
+"p",
+"Rev.",
+"Edward Gretchko",
+"Parochial vicar",
+"https://irp.cdn-website.com/23ec231a/dms3rep/multi/opt/Gretchko_Edward_5260-214x300-302h.jpg"
+]
+],
+"src": "https://www.littleflowerparish.com/",
+"mt": [
+"Saturday Vigil: 4:00 PM",
+"Sunday: 10:00 AM",
+"Tuesday: 8:00 AM",
+"Friday: 8:00 AM",
+"Thursday 8:00 AM"
+],
+"ct": [
+"Saturday: 2:30 PM to 3:30 PM"
+],
+"msrc": "https://www.littleflowerparish.com/"
+}
+],
+[
+"http://www.pfarre-leithaprodersdorf.at/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://pfarre-leithaprodersdorf.at/home",
+"p": [
+[
+"p",
+"P.",
+"Anton Ratelis Omv",
+"",
+"https://pfarre-leithaprodersdorf.at/fileadmin/_processed_/e/e/csm_anton_d194064ed8.jpg"
+],
+[
+"p",
+"P.",
+"Stefan Vukits Omv",
+"",
+""
+]
+],
+"src": "https://pfarre-leithaprodersdorf.at/team/pfarrseelsorger",
+"mt": [
+"Montag: 17:30 Uhr Rosenkranz und Andacht (18:00 Uhr)",
+"Dienstag: 17:30 Uhr Rosenkranz",
+"Dienstag: 18:00 Uhr Abendmesse",
+"Mittwoch: 17:30 Uhr Rosenkranz und Andacht (18:00 Uhr)",
+"Donnerstag: 17:30 Uhr Rosenkranz",
+"Donnerstag: 18:00 Uhr Abendmesse",
+"Freitag: 17:30 Uhr Rosenkranz und Andacht (18:00 Uhr)",
+"Samstag: 17:30 Uhr Rosenkranz",
+"Samstag: 18:00 Uhr Vorabendmesse"
+],
+"ct": [],
+"msrc": "https://pfarre-leithaprodersdorf.at/termine/gottesdienstordnung"
+}
+],
+[
+"http://www.smsj.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.smsj.org/",
+"p": [
+[
+"p",
+"Father",
+"Edward C. Kucera",
+"Pastor",
+"https://www.smsj.org/storage/staff/images//01KED5GT6M4GCKQM4G1HKTWXC1.png"
+],
+[
+"d",
+"Deacon",
+"David Garvis",
+"Deacon",
+"https://www.smsj.org/storage/staff/images//01JD0P7KR0TPKG7YHA97Y47X1E.jpg"
+]
+],
+"src": "https://www.smsj.org/staff",
+"mt": [
+"Saturday: – 5:00 PM St. Mary",
+"Sunday: – 7:00 AM | 8:30 AM | 10:00 AM | 11:30 AM St. Mary 7:30 AM St. Joseph",
+"Monday - Thursday: – 9:00 AM St. Mary",
+"First Friday: – 9:00 am St. Mary",
+"After Weekend Masses – Wednesdays 10:00 AM – 2:00 PM"
+],
+"ct": [
+"1 st and 3 rd Wednesday: – 10am-noon & 5-6 pm Subject to change St. Mary"
+],
+"msrc": "https://www.smsj.org/"
+}
+],
+[
+"http://www.stadtpfarre-meran.it",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"d",
+"Diakon",
+"Walter Depaoli",
+"Deacon",
+"http://www.stadtpfarre-meran.it/wordpress/wp-content/uploads/2026/10/DSC03568-7502.jpg"
+]
+],
+"src": "http://www.stadtpfarre-meran.it",
+"mt": [
+"Mittwoch: Andacht um 9.00 Uhr",
+"Sonntag: Eucharistiefeier um 10.00 Uhr"
+],
+"ct": [],
+"msrc": "http://www.stadtpfarre-meran.it/regelmasige-gottesdienste/"
+}
+],
+[
+"http://www.diocesisdetexcoco.org/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://oficial.diocesisdetexcoco.org/",
+"p": [
+[
+"p",
+"Mons.",
+"Carlos Enrique Samaniego López",
+"Pastor",
+"https://oficial.diocesisdetexcoco.org/wp-content/uploads/2026/05/710473907_1754754099251856_5077521014298151326_n-400x250.jpg"
+]
+],
+"src": "https://oficial.diocesisdetexcoco.org/",
+"mt": [
+"Lunes, martes y viernes: 8am,12pm en Catedral",
+"Lunes, martes y viernes: 7pm en Tercera Orden.",
+"Miércoles: 8 am en Catedral",
+"Jueves y Sábado: 8 am en Catedral",
+"Jueves y Sábado: 7 pm en Tercera Orden.",
+"DOMINGO: 8AM, 10AM, 12PM, 1PM, 7PM y 8PM en Catedral",
+"2°viernes de cada mes: Misa en los Nichos 6:00 pm"
+],
+"ct": [],
+"msrc": "https://oficial.diocesisdetexcoco.org/horarios-en-catedral/"
+}
+],
+[
+"https://www.birminghamdiocese.org.uk/Pages/FAQs/Category/safeguarding",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Hudson's Caritas",
+"",
+""
+]
+],
+"src": "https://www.birminghamdiocese.org.uk/Pages/Category/find-a-priest-or-deacon"
+}
+],
+[
+"https://www.pnsg.bhz.br/igrejas",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Padre",
+"Junior Vasconcelos",
+"Pastor",
+""
+]
+],
+"src": "https://www.pnsg.bhz.br/igrejas"
+}
+],
+[
+"http://www.sacrocuore-bologna.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sacrocuore-bologna.it/",
+"p": [
+[
+"p",
+"Don",
+"Pierluigi Cameroni",
+"",
+"https://www.sacrocuore-bologna.it/wp-content/themes/sacrocuore/assets/images/aside_donazioni.jpg"
+]
+],
+"src": "https://www.sacrocuore-bologna.it/opera/contatti/",
+"mt": [
+"FERIALI: ore 7 – 8 – 9 – 18.30",
+"FERIALI: FESTIVE: ore 8 – 10 – 12 – 18.30",
+"TUTTI I VENERDÌ: Ore 18.30 Santa Messa"
+],
+"ct": [],
+"msrc": "https://www.sacrocuore-bologna.it/santuario/orari-messe/"
+}
+],
+[
+"http://www.pastoraledesio.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.pastoraledesio.it/",
+"p": [
+[
+"p",
+"Mons.",
+"Mauro Barlassina",
+"",
+"https://www.pastoraledesio.it/Objects/713_App_file/Ultra_CPDESIO-copertina.jpg"
+]
+],
+"src": "https://www.pastoraledesio.it/139/consiglio-pastorale-della-comunita",
+"mt": [],
+"ct": [
+"Parrocchia SS. Siro e Materno il sabato dalle 16:30 alle 18:30",
+"Parrocchia SS. Pietro e Paolo il sabato dalle 16:00 alle 18:00",
+"Parrocchia S. Giorgio il sabato dalle 15:00 alle 17:00",
+"Parrocchia S. Pio X il sabato dalle 16:00 alle 17.30",
+"Parrocchia S. Giovanni Battista il sabato dalle 16:30 alle 17:30"
+],
+"msrc": "https://www.pastoraledesio.it/134/confessioni"
+}
+],
+[
+"https://www.sspap.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Glen Jenson",
+"",
+"https://static.wixstatic.com/media/8284c2_8133af51c0ed431d80c54eb6026b3531~mv2.png/v1/fill/w_182"
+],
+[
+"p",
+"Fr.",
+"Sebastien Bakatu",
+"",
+"https://static.wixstatic.com/media/8284c2_f02d1e9e247d4a87aadc7b9f71734135~mv2.png/v1/fill/w_182"
+]
+],
+"src": "https://www.sspap.org/leadershipstaff",
+"mt": [],
+"ct": [
+"Saturday: 3:00 PM - 3:45 PM"
+],
+"msrc": "https://www.sspap.org/confession"
+}
+],
+[
+"http://www.kath-kirche-stuttgart.de/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.kath-kirche-stuttgart.de/",
+"p": [
+[
+"d",
+"Diakon",
+"Michael Jakob",
+"Deacon",
+"https://www.kath-kirche-stuttgart.de/fileadmin/_processed_/5/7/csm_Tiersegnung2025_quer_dff67c01e0.jpg"
+]
+],
+"src": "https://www.kath-kirche-stuttgart.de/"
+}
+],
+[
+"http://sugarlandcatholic.com/welcome/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sugarlandcatholic.com/",
+"p": [
+[
+"p",
+"Fr.",
+"David Angelino",
+"Pastor",
+"https://irp.cdn-website.com/4dd5667a/dms3rep/multi/opt/frdavid-1-scaled-e1602190086877-320x240-1920w.jpg"
+],
+[
+"p",
+"Fr.",
+"Juan Pineda",
+"Parochial vicar",
+"https://irp.cdn-website.com/4dd5667a/dms3rep/multi/opt/DSC03356-scaled-e1645640055110-320x240-1920w.jpg"
+],
+[
+"p",
+"Fr.",
+"Jose Tharayil",
+"In residence",
+"https://irp.cdn-website.com/4dd5667a/dms3rep/multi/opt/Fr.-Jose-Tharayil-3-320x240-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"James Anderson",
+"Deacon",
+"https://irp.cdn-website.com/4dd5667a/dms3rep/multi/opt/Deacon-James-Anderson-320x240-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"John Kennedy",
+"Deacon",
+"https://irp.cdn-website.com/4dd5667a/dms3rep/multi/opt/Deacon-John-Kennedy-320x240-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Gilbert Rodriguez",
+"Deacon",
+"https://irp.cdn-website.com/4dd5667a/dms3rep/multi/opt/Deacon-Gilbert-Rodriguez-320x240-1920w.jpg"
+]
+],
+"src": "https://www.sugarlandcatholic.com/newpage0bea6fe5",
+"mt": [
+"Saturday • Sábado: 8:30 a.m.",
+"5:00 p.m. (Anticipatory Sunday Mass)",
+"Sunday • Domingo: 6:30 a.m., 8:00 a.m. (español),",
+"Sunday • Domingo: 10:00 a.m., Noon, 2:00 p.m. (español),",
+"Sunday • Domingo: 5:00 p.m. (Novus Ordo in Latin)",
+"Monday—Friday: 6:45 a.m., 8:30 a.m.",
+"Miercoles: 7:00 p.m. (español)",
+"Tuesday and Thursday: 6:00 p.m.",
+"Wednesday • Miercoles: 6:00 p.m. (Español)"
+],
+"ct": [
+"Saturday: 3:15 p.m.",
+"Sunday: 4:00 p.m. – 4:45 p.m."
+],
+"msrc": "https://www.sugarlandcatholic.com/"
+}
+],
+[
+"https://www.staugie.com",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Ken Schnipke",
+"Pastor",
+"https://irp.cdn-website.com/0f60d10f/dms3rep/multi/opt/Fr.+Ken-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Roger Klosterman",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Ken Wuebker",
+"Deacon",
+""
+]
+],
+"src": "https://www.staugie.com/our-staff",
+"mt": [
+"Wednesday 8:00 AM at St. Augustine",
+"Thursday 8:00 AM at St. Joseph",
+"Friday 8:00 AM at St. Augustine",
+"Saturday 5:00 PM at St. Augustine",
+"Sunday 8:00 AM at St. Joseph"
+],
+"ct": [
+"Thursday: 8:30 am at St. Joseph",
+"Friday: 8:30 am at St. Augustine",
+"Saturday: 3:45 pm at St. Augustine"
+],
+"msrc": "https://www.staugie.com/mass-confession-times"
+}
+],
+[
+"http://www.scj.de/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.scj.de/",
+"p": [
+[
+"p",
+"Pater",
+"Stefan Tertünte",
+"",
+"https://cdn.prod.website-files.com/628b61955656fb4d96258d2f/64538b56e35ea40b45f34f58_Die-Herz-Jesu-Priester-Deutsche-Ordensprovinz-der-Dehonianer-leitungteam-pater-tertu%CC%88nte-p-500.jpg"
+],
+[
+"p",
+"Pater",
+"Volker Kreutzmann",
+"",
+"https://cdn.prod.website-files.com/628d20412974bc253084bcb1/63f34c675ce3470d1021dae2_Handrup-Volker-Kreutzmann-p-500.jpg"
+],
+[
+"p",
+"Pater",
+"Ryszard Krupa",
+"",
+"https://cdn.prod.website-files.com/628d20412974bc253084bcb1/63f34cb45ce34785a121e4b8_Martental-Ryszard-Krupa-p-500.jpg"
+],
+[
+"p",
+"Pater",
+"Markus Mönch",
+"",
+"https://cdn.prod.website-files.com/628d20412974bc253084bcb1/6915daeb535a1570dd9ca400_pater-moench_scj-web-p-500.jpg"
+],
+[
+"p",
+"Pater",
+"Marcio Auth",
+"",
+"https://cdn.prod.website-files.com/628d20412974bc253084bcb1/63f34c2eca4bd892aff38532_Freiburg-Marcio-Auth-p-500.jpg"
+],
+[
+"p",
+"Pater",
+"Ricardo Diniz",
+"",
+"https://cdn.prod.website-files.com/628d20412974bc253084bcb1/6731af5141db7c0fd41a1e95_pater-ricardo-web2-p-500.jpg"
+]
+],
+"src": "https://www.scj.de/orden/unser-leitungsteam"
+}
+],
+[
+"http://www.paroquiansdocarmo.com.br/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Padre",
+"Josival Barbosa",
+"Pastor",
+"http://www.paroquiansdocarmo.com.br/admin/modulo-imagens/imagens/Galeria_4/Galeria_182201815229_433085292551.jpg"
+]
+],
+"src": "http://www.paroquiansdocarmo.com.br/equipe-paroquial",
+"mt": [
+"* Santa Missa - Segundo e último Sábado às 18:00hs.",
+"* Santa Missa - Todo Sábado às 19:00hs.",
+"* Santa Missa - Todo Domingo às 19:00hs.",
+"* Santa Missa - Todo Domingo às 10:00hs.",
+"* Santa Missa - Terça-feira às 19:30hs.",
+"* Santa Missa - Sexta-feira às 19:30hs.",
+"* Santa Missa - Sábado às 17:00hs.",
+"* Santa Missa - Domingo às 08:00hs, 10:00hs e 18:00hs.",
+"* Grupo de Oração - Segunda-feira às 19:30hs.",
+"* Terço dos homens - Quinta-feira às 19:30hs."
+],
+"ct": [],
+"msrc": "http://www.paroquiansdocarmo.com.br/"
+}
+],
+[
+"http://www.skschurch.com/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://skschurch.wixsite.com/katherine-of-siena-r",
+"p": [
+[
+"p",
+"Rev.",
+"Joseph S. Zaleski",
+"",
+"https://static.wixstatic.com/media/7195a5_ac30b6c06979443ea99b111f6653813f~mv2.jpg/v1/crop/x_207"
+],
+[
+"p",
+"Fr.",
+"Joseph Zaleski",
+"",
+"https://static.wixstatic.com/media/7195a5_ac30b6c06979443ea99b111f6653813f~mv2.jpg/v1/crop/x_207"
+],
+[
+"p",
+"Rev.",
+"William J. Chiriaco",
+"",
+"https://static.wixstatic.com/media/7195a5_a9fb30ee6dab449c986528c1a8316042~mv2.jpg/v1/crop/x_200"
+],
+[
+"p",
+"Fr.",
+"William Chiriaco",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Rev.",
+"Michael J. Fitzpatrick",
+"",
+"https://static.wixstatic.com/media/7195a5_d94d8ed7dbad4d1fa639a5d7e171ef45~mv2.jpg/v1/crop/x_12"
+],
+[
+"p",
+"Fr.",
+"Michael Fitzpatrick",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Sunny Mathew",
+"",
+"https://static.wixstatic.com/media/7195a5_0354b1e198694dfdbe68662e8c64a680~mv2.png/v1/fill/w_328"
+],
+[
+"d",
+"Deacon",
+"James J. Duffy",
+"Deacon",
+"https://static.wixstatic.com/media/7195a5_090b5494b5504201b2191924f87b8409~mv2.jpg/v1/fill/w_403"
+],
+[
+"d",
+"Deacon",
+"Robert H. Hall",
+"Deacon",
+"https://static.wixstatic.com/media/7195a5_f33bb97285ec408ab27fe9da27b8c298~mv2.jpg/v1/fill/w_403"
+],
+[
+"d",
+"Deacon",
+"Robert Hall",
+"Deacon",
+"https://static.wixstatic.com/media/7195a5_f33bb97285ec408ab27fe9da27b8c298~mv2.jpg/v1/fill/w_403"
+]
+],
+"src": "https://skschurch.wixsite.com/katherine-of-siena-r/staff",
+"mt": [
+"Saturday 5:00 p.m.,",
+"Sunday 6:30 a.m., 8:00 a.m., 10:00 a.m. 12:00 p.m.",
+"Monday - Friday 6:30 a.m., 8:00 a.m.",
+"Saturday: 8:00 a.m."
+],
+"ct": [],
+"msrc": "https://skschurch.wixsite.com/katherine-of-siena-r"
+}
+],
+[
+"https://www.staidan-patrick.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Brian M. Sistare",
+"Pastor",
+"https://static.wixstatic.com/media/6c32dd_c9500580c4b346b5a3b00b3a47ed5c14~mv2.jpg/v1/fill/w_359"
+]
+],
+"src": "https://www.staidan-patrick.org/staff",
+"mt": [
+"Saturday Mass 8:00am, 4:00pm",
+"Sunday Mass 8:30am, 11:00am"
+],
+"ct": [],
+"msrc": "https://www.staidan-patrick.org/"
+}
+],
+[
+"http://www.stanthonysdenver.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stanthonysdenver.org/",
+"p": [
+[
+"p",
+"Father",
+"Arturo Chagala",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Miljenko Pavkovic",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.stanthonysdenver.org/",
+"mt": [
+"English Daily Mass Tuesday, Thursday, Friday 8:00 AM - English Spanish Daily Mass Monday through Friday 6:00pm - Spanish",
+"Mass on Saturday (Anticipated) 4:30pm",
+"Masses on Sunday 7:30am – Spanish 9:30am – English 11:30am – Spanish 1:30pm – Spanish 5:00pm – Spanish"
+],
+"ct": [
+"Confession Tuesday, Thursday, Friday at 6:45pm - 7:30pm Saturday 3:30pm – 4:30pm"
+],
+"msrc": "https://www.stanthonysdenver.org/liturgy-and-sacraments/"
+}
+],
+[
+"http://www.southbaltcatholic.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.southbaltcatholic.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Kevin Ewing",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"Alex Kulik",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.southbaltcatholic.org/ourteam",
+"mt": [
+"Holy Cross – 4:00 pm Vigil (van ride available)",
+"Please call the office at 410-752-8498 by Wednesday at 3pm to schedule a van ride for that weekend’s Mass (see Masses where offered above)."
+],
+"ct": [
+"Monday: Good Counsel - 6:30 pm",
+"Tuesday: Good Counsel - 6:30 pm",
+"Wednesday: Holy Cross – 7:30 am",
+"Thursday: Holy Cross – 7:30 am",
+"Friday: Holy Cross - 6:30 pm"
+],
+"msrc": "https://www.southbaltcatholic.org/mass"
+}
+],
+[
+"http://www.kath-men.de/html/st_caecilia_mosbach594.html",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.kath-men.de/kirchengemeinde/st-caecilia-mosbach/",
+"p": [
+[
+"d",
+"Diakon",
+"Andreas Wolf",
+"Deacon",
+""
+]
+],
+"src": "https://www.kath-men.de/kirchengemeinde/st-caecilia-mosbach/"
+}
+],
+[
+"https://www.ststansnewcarlisle.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Brian Carpenter",
+"Pastor",
+"https://irp.cdn-website.com/b22a4ea4/dms3rep/multi/opt/Headshot-2024-76c64c0d-1920w.jpg"
+]
+],
+"src": "https://www.ststansnewcarlisle.org/copy-of-parish-forms",
+"mt": [
+"Saturday Vigil: 4:00pm",
+"Sunday: 8:00am and 10:00am",
+"Thursday: 8:00am",
+"1st Monday of the month 10:00am at Hamilton Grove",
+"3rd Wednesday of the month 10:00am at Miller's Merry Manor",
+"Wednesday - 6:30pm"
+],
+"ct": [
+"Saturday 3:00 - 3:45pm"
+],
+"msrc": "https://www.ststansnewcarlisle.org/"
+}
+],
+[
+"http://www.sanmarcoevangelista.it/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Mons.",
+"Renzo Giuliano",
+"Pastor",
+"http://www.sanmarcoevangelista.it/images/Invito%20-%20d%20Renzo%20-%20dentro%20copia.jpg#joomlaImage://local-images/Invito%20-%20d%20Renzo%20-%20dentro%20copia.jpg?width=1994&height=1425"
+]
+],
+"src": "http://www.sanmarcoevangelista.it/"
+}
+],
+[
+"http://www.diocesidichioggia.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.diocesidichioggia.it/",
+"p": [
+[
+"p",
+"Mons.",
+"Simone Zocca",
+"Administrator",
+"https://www.diocesidichioggia.it/wp-content/uploads/sites/2/2026/07/Zocca-don.Simone-600x360-c-left.jpg"
+]
+],
+"src": "https://www.diocesidichioggia.it/"
+}
+],
+[
+"http://www.parafiastarygostyn.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://parafiastarygostyn.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Radca Józef Myśliwy",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Jan Rataj",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Leonard Tybiszewski",
+"Pastor",
+""
+]
+],
+"src": "https://parafiastarygostyn.pl/duszpasterze/",
+"mt": [
+"Niedziela i święta: Stary Gostyń: 8.00, 11.00",
+"Niedziela i święta: 8.00, 11.00",
+"Niedziela i święta: Gola: 9.30",
+"Niedziela i święta: 9.30",
+"Święta (dni pracy): Stary Gostyń: 11.00, 18.30",
+"Święta (dni pracy): 11.00, 18.30",
+"Święta (dni pracy): Gola: 17.00",
+"Święta (dni pracy): 17.00",
+"Stary Gostyń: 18.30 (wtorki: 8.00)",
+"Dni powszednie: 18.30"
+],
+"ct": [],
+"msrc": "https://parafiastarygostyn.pl/nabozenstwa/"
+}
+],
+[
+"https://www.crossrockacc.org",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Greg Paffel",
+"",
+"https://static.wixstatic.com/media/86f1bf_3745267bb2524f1c93db8b9ce1efa7c7~mv2.jpg/v1/crop/x_203"
+]
+],
+"src": "https://www.crossrockacc.org/staff",
+"mt": [
+"Saturday: 5:00 PM - Immaculate Conception - Rice, MN",
+"Sunday: 8:00 AM: Holy Trinity - Royalton, MN",
+"Tuesday: 8:00 AM - Immaculate Conception - Rice, MN",
+"Wednesday: 8:00 AM: St. Stanislaus - Bowlus, MN",
+"Thursday: 8:00 AM: Holy Trinity - Royalton, MN"
+],
+"ct": [],
+"msrc": "https://www.crossrockacc.org"
+}
+],
+[
+"http://www.cergy.catholique.fr",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cergy.catholique.fr/",
+"p": [
+[
+"p",
+"Père",
+"Bruno Guespereau",
+"Pastor",
+"https://cergy.catholique.fr/wp-content/uploads/2022/07/PereBruno-480x480.jpg"
+]
+],
+"src": "https://cergy.catholique.fr/contacts/",
+"mt": [
+"Messes dominicales : Dimanche 11h",
+"Messes en semaine : Mardi 19h* – Mercredi 19h* – Jeudi 19h",
+"Samedi 12h*",
+"Messes dominicales : (village) Dimanche 10h",
+"Messes en semaine : (village) Vendredi 8h30",
+"Messes dominicales : Samedi 18h et Dimanche 10h30",
+"Messes en semaine : Lundi 19h* – Mardi 8h30 – Mercredi 8h30",
+"Vendredi 12h30*",
+"Messe en semaine : Mercredi 19h*"
+],
+"ct": [],
+"msrc": "https://cergy.catholique.fr/"
+}
+],
+[
+"http://www.olop.org.uk/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://olop.org.uk/",
+"p": [
+[
+"p",
+"Fr.",
+"Stan Gibziński",
+"Pastor",
+"https://olop.org.uk/wp-content/uploads/2016/12/olop.png"
+]
+],
+"src": "https://olop.org.uk/",
+"mt": [
+"Sunday Mass: 8.30 am Holy Mass",
+"Sunday Mass: 11.00 am Holy Mass",
+"Sunday Mass: 5.00pm Holy Mass",
+"Weekday Mass: Monday & Friday at 6.30pm, Tuesday & *Wednesday at 8.00am. (*During Lent & Advent Wednesday Mass at 6.30am)"
+],
+"ct": [],
+"msrc": "https://olop.org.uk/"
+}
+],
+[
+"http://stpatricksblr.com",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev. Fr.",
+"Christy Raj Issac",
+"Pastor",
+"http://www.stpatricksblr.com/images/Patricks.png"
+],
+[
+"p",
+"Fr.",
+"Arul Sampath",
+"",
+"http://www.stpatricksblr.com/images/Patricks.png"
+],
+[
+"p",
+"Fr.",
+"Joe Britto",
+"",
+"http://www.stpatricksblr.com/images/Patricks.png"
+]
+],
+"src": "http://www.stpatricksblr.com/parishclergy.php"
+}
+],
+[
+"http://www.ssjpparish.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.ssjpparish.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Chris Comerford",
+"",
+""
+]
+],
+"src": "https://www.ssjpparish.com/our-staff",
+"mt": [
+"Saturday Mass | 4:30pm*",
+"Sunday Mass | 8:30am",
+"Monday | 8:00am",
+"Wednesday | 8:00am",
+"Holy Day | 6:00pm",
+"Sunday Mass | 10:30am",
+"Tuesday | 8:00am",
+"Thursday | 5:30pm",
+"Friday | 11:15am",
+"Holy Day | 8:00am & 12:10pm"
+],
+"ct": [
+"Monday | 7:30-7:45am",
+"Wednesday | 7:30-7:45am",
+"Friday | 10:30-11:00am",
+"Saturday | 10:00-11:ooam",
+"Saturday | 3:30-4;10pm"
+],
+"msrc": "https://www.ssjpparish.com/"
+}
+],
+[
+"http://www.sacredheartfrontenac.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sacredheartfrontenac.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Josh Evans",
+"",
+""
+]
+],
+"src": "https://www.sacredheartfrontenac.com/parish-staff",
+"mt": [
+"Monthly Rosary Leaders Needed: Prior to 8:00 am Mass 5th Sunday, If interested, contact the Parish Office.",
+"Tuesday: 5:30 PM",
+"Wednesday, Thursday, Friday: 7:15 AM",
+"Saturday Vigil: 5:00 PM",
+"Sunday: 8:00 am and 10:00 am",
+"Every Wednesday following 7:15 mass till 8:30 P.M."
+],
+"ct": [
+"Tuesday: 5:00 PM - 5:25 PM",
+"Wednesday, Thursday, Friday: 7:00 AM - 7:10 AM",
+"Saturday: 4:00 PM - 4:45 PM"
+],
+"msrc": "https://www.sacredheartfrontenac.com/"
+}
+],
+[
+"https://dolr.org/parishes/parish.php?id=29",
+{
+"s": "ok",
+"c": 200,
+"u": "https://dolr.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Mauricio Carrasco",
+"",
+"https://dolr.org/sites/default/files/clergy/carrasco_24.jpg"
+],
+[
+"p",
+"Fr.",
+"John Connell",
+"Parochial vicar",
+"https://dolr.org/sites/default/files/clergy/connell-24.jpg"
+],
+[
+"p",
+"Msgr.",
+"Scott Friend",
+"",
+"https://dolr.org/sites/default/files/clergy/friend-s-2017.jpg"
+],
+[
+"p",
+"Father",
+"Juan Guido",
+"",
+"https://dolr.org/sites/default/files/clergy/guido-22.jpg"
+],
+[
+"p",
+"Fr.",
+"Andrew Hart",
+"Parochial vicar",
+"https://dolr.org/sites/default/files/clergy/hart_a_23.jpg"
+],
+[
+"p",
+"Fr.",
+"Jeff Hebert",
+"",
+"https://dolr.org/sites/default/files/clergy/hebert-j-20.jpg"
+],
+[
+"p",
+"Fr.",
+"Gregory T. Luyet",
+"Parochial vicar",
+"https://dolr.org/sites/default/files/clergy/luyet_23.jpg"
+],
+[
+"p",
+"Fr.",
+"Ruben Quinteros",
+"",
+"https://dolr.org/sites/default/files/clergy/quinteros-22.jpg"
+],
+[
+"p",
+"Fr.",
+"Phillip Reaves",
+"",
+"https://dolr.org/sites/default/files/clergy/reaves_2025.jpg"
+],
+[
+"p",
+"Fr.",
+"Jason Tyler",
+"",
+"https://dolr.org/sites/default/files/clergy/tyler_2025.jpg"
+],
+[
+"p",
+"Fr.",
+"Daniel Velasco",
+"",
+"https://dolr.org/sites/default/files/staff/perez-2023.jpg"
+],
+[
+"p",
+"Fr.",
+"Jack Vu",
+"",
+"https://dolr.org/sites/default/files/clergy/vu_23.jpg"
+]
+],
+"src": "https://dolr.org/staff",
+"mt": [],
+"ct": [
+"St. Mary Church – Altus – Sat. 3 p.m.; Wed. 6:30 p.m.; or call for appointment (479) 438-3901",
+"St. Richard Church – Bald Knob – First Sat. 3 p.m.",
+"St. Mary Church – Batesville – Sat. 3 p.m.; Tues. 5:30 p.m.; Wed. 5:30 p.m.; or by appointment",
+"Our Lady of Fatima Church – Benton – Fri. 7:30 - 8 a.m., Sat. 3 - 3:45 p.m., Sun 12 p.m."
+],
+"msrc": "https://dolr.org/confession"
+}
+],
+[
+"http://www.parafiastogi.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://parafiastogi.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Mirosław Łuczkowski",
+"",
+"https://parafiastogi.pl/wp-content/uploads/2026/01/ks_Krzysztof_Nowak-200x300.jpg"
+],
+[
+"p",
+"Ks.",
+"Mikołaj Dacko",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Mateusz Warmijak",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Józef Mietła",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Tadeusz Cabała",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Roman Siudek",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Tomasz Trębacz",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Walerian Sześciuk",
+"Administrator",
+""
+]
+],
+"src": "https://parafiastogi.pl/kaplani/",
+"mt": [
+"Niedziela i uroczystości: 7:00, 9:30, 11:00, 12:30, 18:00 · Pon–sob: 7:00, 17:00, 18:00",
+"Msze Święte: 07:00",
+"Msze Święte: 09:30",
+"Msze Święte: 11:00",
+"Msze Święte: 12:30",
+"Msze Święte: 18:00",
+"Msza Święta o godz.: 11:00",
+"Msza Święta o godz.: 18:00",
+"Msze Święte: 17:00",
+"po Mszy Świętej o godz.: 18.00"
+],
+"ct": [],
+"msrc": "https://parafiastogi.pl/msze-nabozenstwa/"
+}
+],
+[
+"https://stjameshighland.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Gregory Bim-Merle",
+"Administrator",
+"https://cdn.diocesanweb.org/beacon/stjameshighland/wp-content/uploads/2022/05/17492837_10155182023842010_8305581961204859782_o-1024x1024.jpg"
+]
+],
+"src": "https://stjameshighland.org/staff/",
+"mt": [
+"Saturday: 5:00 PM",
+"Sunday: 9 AM & 11:00 AM",
+"Monday - Friday: 9:00 AM"
+],
+"ct": [],
+"msrc": "https://stjameshighland.org/"
+}
+],
+[
+"https://www.stmarysparishcp.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Stéphane Pouliot",
+"Pastor",
+""
+]
+],
+"src": "https://www.stmarysparishcp.com/",
+"mt": [
+"9:00 AM · Sunday Mass",
+"11:00 AM · Sunday Mass",
+"5:00 PM · Anticipated Sunday Mass",
+"8:00 PM · Anticipated Sunday Mass",
+"Sun · October 18: Mass is livestreamed at 11am",
+"Tue · October 20: 9:30 AM · Mass",
+"Wed · October 21: 5:00 PM · Mass",
+"Thu · October 22: 9:30 AM · Mass",
+"Fri · October 23: 9:30 AM · Mass",
+"Sun · October 25: Mass is livestreamed at 11am"
+],
+"ct": [],
+"msrc": "https://www.stmarysparishcp.com/"
+}
+],
+[
+"https://parishestogether.ie/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"d",
+"Deacon",
+"David Lane",
+"Deacon",
+"https://parishestogether.ie/images/clergy/rev-david-lane-600x400.jpg"
+]
+],
+"src": "https://parishestogether.ie/",
+"mt": [
+"Sunday – Saturday: 11:30am – -",
+"Mon – Tue – Wed – Thu – Fri: - – - – 9:00am – - – 9:00am",
+"10:30am – 5:30pm Vigil",
+"Mon – Tue – Wed – Thu – Fri: 10:00am – 10:00am – - – 10:00am – 10:00am",
+"Sunday – Saturday: 10:00am – -",
+"Sunday – Saturday: 11:00am – -",
+"- – 6:00pm Vigil",
+"Sunday – Saturday: 9:00am – -",
+"Sunday – Saturday: 12:00 noon – -",
+"Mon – Tue – Wed – Thu – Fri: 10:00am – Liturgy 10:00am – - – - – -"
+],
+"ct": [],
+"msrc": "https://parishestogether.ie/failte/mass-times"
+}
+],
+[
+"http://www.stphilipshallowater.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stphilipshallowater.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Seth Lorenz",
+"Pastor",
+"https://static.wixstatic.com/media/3d3dec_9e196c6e46f14d72bf67722cd13acfa5~mv2.jpg/v1/fill/w_201"
+],
+[
+"d",
+"Dcn.",
+"Jerry Dueñas",
+"Deacon",
+"https://static.wixstatic.com/media/f3b5bbece7fe4b3fa3a14bef6cc005df.jpg/v1/fill/w_342"
+]
+],
+"src": "https://www.stphilipshallowater.org/",
+"mt": [
+"Saturday: 6:00pm Spanish",
+"Sunday: 11:15am English",
+"Wednesday: 6:00pm",
+"Friday 8:00am"
+],
+"ct": [],
+"msrc": "https://www.stphilipshallowater.org/"
+}
+],
+[
+"http://www.labunie.zamojskolubaczowska.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://labunie.zamojskolubaczowska.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Mateusz Furmaniak",
+"",
+"https://labunie.zamojskolubaczowska.pl/wp-content/uploads/2024/09/Zrzut-ekranu-2024-09-14-o-18.34.56-204x300.png"
+],
+[
+"p",
+"Ks.",
+"Michał Kruk",
+"Parochial vicar",
+"https://labunie.zamojskolubaczowska.pl/wp-content/uploads/2024/09/Zrzut-ekranu-2024-09-14-o-18.53.02-219x300.png"
+]
+],
+"src": "https://labunie.zamojskolubaczowska.pl/?page_id=63",
+"mt": [
+"Niedziele i Uroczystości: 8.00, 10.00, 12.00 i 16.00",
+"Niedziele i Uroczystości: Majdan Ruszowski – 10.00",
+"Święta: 8.00, 10.00, 17.00 (X – IV)",
+"Święta: 8.00, 10.00, 18.00 (IV – IX)",
+"Święta: Majdan Ruszowski – 17.00",
+"Dni powszednie: 7.00 i 17.00 (październik – marzec),",
+"Dni powszednie: 18.00 (kwiecień – wrzesień)",
+"We wtorki – ok. 16.30 (październik – marzec)",
+"Środa – 16.45 (październik – marzec)",
+"W niedziele po Mszy św. o godz. 10.00, a w dni powszednie po Mszy św."
+],
+"ct": [],
+"msrc": "https://labunie.zamojskolubaczowska.pl/?page_id=78"
+}
+],
+[
+"http://www.willibaldritt-jesenwang.de",
+{
+"s": "ok",
+"c": 200,
+"u": "https://willibaldritt-jesenwang.de/",
+"p": [
+[
+"p",
+"Pfarrer",
+"Wolfgang Huber",
+"Pastor",
+"https://willibaldritt-jesenwang.de/wp-content/uploads/2022/06/DSC0365-300x200.jpg"
+]
+],
+"src": "https://willibaldritt-jesenwang.de/"
+}
+],
+[
+"http://www.ologp.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Sergio Robles",
+"Administrator",
+"https://nebula.wsimg.com/b95d24edcbee577cf86d48fa37400c9b?AccessKeyId=19F5F490F046511BF258&disposition=0&alloworigin=1"
+]
+],
+"src": "http://www.ologp.com/about-us.html",
+"mt": [
+"Weekend Masses: 7:30 a.m. Antonito",
+"Weekend Masses: 9:00 a.m. Antonito",
+"Weekend Masses: 5:00 p.m. Antonito",
+"Sunday Masses: 11:00 a.m. Our Lady of Guadalupe Church, Conejos, CO"
+],
+"ct": [],
+"msrc": "http://www.ologp.com/about-us.html"
+}
+],
+[
+"http://stmaryspittsfield.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stmaryspittsfield.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Mark A. Schulte",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Jason P. Stone",
+"",
+""
+]
+],
+"src": "https://www.stmaryspittsfield.org/about",
+"mt": [
+"Monday & Thursday: 8:00 AM - Winchester, St. Mark's",
+"Saturday: After 6:00 PM Mass at St. Mary in Pittsfield",
+"Sunday -- After 10:30 AM Mass at",
+"Every Friday after 8:00 AM Mass at St. Mary's in Pittsfield",
+"OCIA Class -- Wednesday evenings, 7:00 PM, Parish Hall",
+"PSR Classes, Wednesday evenings, 6:00 to 7:30 PM, Parish Hall",
+"That Man Is You (Men's Group) Wednesday mornings, 6:30 AM, Parish Hall"
+],
+"ct": [
+"Sunday: 8:30 AM - Pittsfield - St. Mary's",
+"Sunday: 10:30 AM - Winchester - St. Mark's"
+],
+"msrc": "https://www.stmaryspittsfield.org/"
+}
+],
+[
+"https://sacredheartwetaskiwin.caedm.ca/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Roger Rouleau",
+"Pastor",
+""
+]
+],
+"src": "https://sacredheartwetaskiwin.caedm.ca/contact/",
+"mt": [
+"Sunday Mass Times: Saturdays, 5 pm and Sundays, 9:30 am",
+"Weekday Mass: Tuesdays, 6:30 pm; Wednesdays – Fridays, 9 am",
+"Weekday Mass: Eucharistic Exposition: Fridays, 9:30-10:30 am (except July-August)",
+"Weekday Mass: First Tuesdays, 7-8 pm, First Fridays, 9:30-11:30 am"
+],
+"ct": [],
+"msrc": "https://sacredheartwetaskiwin.caedm.ca/"
+}
+],
+[
+"http://www.parroquiales.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.parroquiales.com/",
+"p": [
+[
+"p",
+"Pbro.",
+"Juan Javier Padilla",
+"",
+""
+]
+],
+"src": "https://www.parroquiales.com/contacto/"
+}
+],
+[
+"https://www.igrejacarismatica.org.br/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Padre",
+"Details Section",
+"",
+""
+],
+[
+"p",
+"Padre",
+"José Maria",
+"",
+"https://www.igrejacarismatica.org.br/img/padres/1764598470_13532b4b_padre9.jpg"
+]
+],
+"src": "https://www.igrejacarismatica.org.br/padres.php"
+}
+],
+[
+"http://www.stmarysdecatur.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stmarysdecatur.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Jake Runyon",
+"",
+"https://irp.cdn-website.com/be7b5a7b/dms3rep/multi/opt/00000228-1920w.JPG"
+],
+[
+"p",
+"Fr.",
+"Bonaventure Nwosu",
+"",
+""
+]
+],
+"src": "https://www.stmarysdecatur.org/about",
+"mt": [
+"Saturday Vigil 4:00 PM",
+"Sunday 7:00 | 8:30 | 11:00 AM",
+"Monday - Saturday 8:10 AM",
+"Monday, Tuesday, Thursday 6:00 PM",
+"Friday (Woodcrest) 1:30 PM"
+],
+"ct": [
+"Monday & Tuesday 5:00 PM",
+"Thursday 6:30 PM",
+"Friday & Saturday 8:45 AM"
+],
+"msrc": "https://www.stmarysdecatur.org/"
+}
+],
+[
+"http://www.stpaulscamden.org.au/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stpaulscamden.org.au/",
+"p": [
+[
+"p",
+"Father",
+"Michael Williams",
+"Pastor",
+"https://www.stpaulscamden.org.au/assets/Uploads/Fr-Michael3-copy.jpg"
+],
+[
+"p",
+"Father",
+"Victor Vincent",
+"Parochial vicar",
+"https://www.stpaulscamden.org.au/assets/Pictures/Fr-Victor-Vincent.jpg"
+],
+[
+"p",
+"Father",
+"Hung Tran",
+"Parochial vicar",
+"https://www.stpaulscamden.org.au/assets/Pictures/Fr-Hung-Tran.jpg"
+],
+[
+"p",
+"Father",
+"David Catterall",
+"",
+""
+],
+[
+"p",
+"Father",
+"James Arblaster",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Father",
+"Peter Caruana",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"David O'Brien",
+"Pastor emeritus",
+""
+],
+[
+"p",
+"Father",
+"Allan Hartcher",
+"Pastor emeritus",
+""
+],
+[
+"p",
+"Father",
+"Anthony Crook",
+"Chaplain",
+""
+],
+[
+"p",
+"Father",
+"John Whitty",
+"",
+"https://www.stpaulscamden.org.au/assets/Uploads/images/past-clergy.jpg"
+]
+],
+"src": "https://www.stpaulscamden.org.au/about/parish-clergy/",
+"mt": [
+"Saturday Vigil at 5:00pm",
+"Sunday 8:00am & 10:00am",
+"Sunday 5.00pm (St Clare's @ St Paul's)",
+"Weekday Masses: Tuesday - Saturday mornings 9:00am",
+"Healing Mass: The first Tuesday of every month at 9.00am."
+],
+"ct": [
+"Reconciliation: Saturday mornings 9:30am - 10:15am"
+],
+"msrc": "https://www.stpaulscamden.org.au/mass-times/"
+}
+],
+[
+"http://stmmcc.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stmmcc.org/",
+"p": [
+[
+"p",
+"Father",
+"Jimmy Drennan",
+"Pastor",
+"https://le-cdn.website-editor.net/s/72778785a246484bac07fa5032423476/dms3rep/multi/opt/St_Margaret_Marys_Team_2024-7-1920w.jpg?Expires=1795205552&Signature=KFR5BfBgnd03zG1Ry8hvTTbAbz8IN4jhV4EFkGGeplSFHGwr9R2jLCt7tLeuc5BQ9B4S45o6-aw2U7XrsvZUWrZLAp9aM~ncTdtLT-vn~8hb-0gmE94vqPThhd4J9stxlOhkOiTfMwnxGxFuwLDPW487vrqhTTGOYOdpqkIyxRrRadqQ~4mHYj9qOivxa9LcXWwjKSdIdOZ2zdGQfld87ElOcf3DyI3n-JdOu3kVg-YjIyVEtVS5ZbZ1RGiaD-~~6IXpqT60FxV2A~4wlosSCPLAKnd4P2A0pOvEd2du7ZeiMdkNus3RzdHp556GIvH2sMPzB7~D1GPOvp~15f-8iQ__&Key-Pair-Id=K2NXBXLF010TJW"
+],
+[
+"d",
+"Deacon",
+"Candelario Garcia",
+"Deacon",
+"https://le-cdn.website-editor.net/s/72778785a246484bac07fa5032423476/dms3rep/multi/opt/IMG_1292-cb79de22-1920w.JPG?Expires=1795205552&Signature=H48GFsSW2VS9-ilPxHdX0SmAeHtch~91iCd0hLA7f~gKU1wXFH-nzuCaO0TsigDllaTpIXFkRYSDfH-W57TIvxiPsiBIgSzXUIV~E3JVQclNwjJh5kUT6GXI0LdIk8ALtG3hx1BKZwc5fXpiFemY6TK8sbfVx72JJaB6I3AomqHz8xwwEP25dTFHedK4WOJxs-CXIyBG5Qh2TSXVBtKXA~kZD5ebXPimTRXkphsHLBS3RBWz7GpuMmU9IrjUhQJt3o0nEXUdtrCgI5XedSuKTy9ZdowSknpzewS~oo3SFg9aEmLaL5dsEcm4Sd9w~mX5sN9sVf6F2qWvPOvl90zwMA__&Key-Pair-Id=K2NXBXLF010TJW"
+],
+[
+"d",
+"Deacon",
+"Frank Lafuente",
+"Deacon",
+"https://le-cdn.website-editor.net/s/72778785a246484bac07fa5032423476/dms3rep/multi/opt/St_Margaret_Marys_Team_2024-4-1920w.jpg?Expires=1795205552&Signature=NhPewDMdeEciK4QjGqvaCL1BE4w4yptnoHMGPUVhU5sLpC7SzAIjhBSi3bisdQzXeuzZ9BDvQzwgMj~H2Z0gDc9MvxKuTCFl5GcyKq~cRd2PYM2o~1QtyVmmBuU8ql0flhcqecOXQDebhONbLsg40mhF00B~Tj9f6eXFPz3vBfuB-3ogWS-HyaKZS~bKLX7UPlVWWrDkthm~bvwdZ5YRm~ndKWNbyP2W05MAI2vR7zwwp0t9KZMZP8pqrbNebSBU8PvmXkR3cM0tcUQrhM-pG7LU8i23lkAEo7YOg01prDUUz5s~P4gYW3t~EWIhMvTBYdj8BTd4bx7bg2jXXTqKOw__&Key-Pair-Id=K2NXBXLF010TJW"
+],
+[
+"d",
+"Deacon",
+"Gerardo Mechler",
+"Deacon",
+"https://le-cdn.website-editor.net/s/72778785a246484bac07fa5032423476/dms3rep/multi/opt/St_Margaret_Marys_Team_2024-47-1920w.jpg?Expires=1795205552&Signature=lqlm665e6GOBv22Ht78ehcrZfOxVoq1cv6-gRORJjzMKUc70lAUUKJwoeIMhDLYLXKAmCI9-~mqIfBrGopi56DYBjF4Irh27kNUtHSD9Xtn6BwzcTbfXNwYSKmbp7JIDBgUpWbPbn3b0O8XMMkB1A9EWwoi6qyv-rU7rueD~~GQYN79T5CLSDTOoxrbzcYhZbJ~KJlf5gsYHpU~yAFG5hLeoahEB6nu5xGoqbolWNuQKiYo0twsV-NQrDfmEJa5sBftn-I0n6FfJ7rAfp0vycjCPOOTNapkkx~sNhS2txUrNxmEeeav9TsprkL7BJdmB~4ebM7vYR3jGzStDSHimSw__&Key-Pair-Id=K2NXBXLF010TJW"
+],
+[
+"d",
+"Deacon",
+"Jose Alamanza",
+"Deacon",
+"https://le-cdn.website-editor.net/s/72778785a246484bac07fa5032423476/dms3rep/multi/opt/5F1F84A2-A64C-4D78-902F-D5A31AAFE205-afdfdd09-1920w.jpeg?Expires=1795205552&Signature=AypnB6R6uTVW4Xj8zVX3NVS29JqSaf3QToWqZ-egL1uFwHqfBsdE~efK6fWsTzcelttaWdxmxyvQdTs71Ca5v-oxuQjCcASG3~GpxS2k8PfCRSuP81oolhlvBbLHOlB8ojJ36ppQLXc-u6-fEKI2fp6hj0gTrc1NfQb4l1ls2D~R514YS0apnoVUuvS2VCNUykF5DGC7bgOUzMCjsu7blgUDB2SneMGkLXX0Lb3ajlWlGzdT5b0WmXmKZtlMkMoRX4STQhjD47yhJAZp-JLr2aUYKMUCiC180LNFPbYx57Fhew3bIt0bvFRfRZotsONgb9qiba8vXB2BA2hyb1q3-g__&Key-Pair-Id=K2NXBXLF010TJW"
+],
+[
+"d",
+"Deacon",
+"Gabriel Rosas",
+"Deacon",
+"https://le-cdn.website-editor.net/s/72778785a246484bac07fa5032423476/dms3rep/multi/opt/DcnGR-1920w.JPG?Expires=1795205552&Signature=QadgIqNX~zTNT3PVl0jb9LVzmACVq6r6Kg65uJsA2qJ3rtt2BpM6qhnLeF0wV3pSDVEaQll1mk5kBLMKwThViprbJaCZpYtzC9b07LtsVsMB9gLCEhwQzRH3bFcC9yaJao1YSxTBjFWGMx~FghmTN74c-XPBLy~Y2GnvgdXCuXa-n6w5ucJNCgmZNhlVt1~BEJVLrYyxXEMZtb38lLq-gCQn~QJO-TDhaZ2nt0vFRxjdxwA1VrM7h7ZpgO8YhTT0wNN2Xa6fDZJuZcVq4q0XDzKppMMqyMaSuuprQT7nktEhuDPVksv3h0QrEX-sEmzG7up14rMV~vccty38RpiaTw__&Key-Pair-Id=K2NXBXLF010TJW"
+]
+],
+"src": "https://www.stmmcc.org/staff",
+"mt": [
+"Sunday Mass: 8:00 a.m. - English",
+"Wednesday: 6:00 p.m. - English",
+"Thurs & Fri.: 12:00 p.m. - English"
+],
+"ct": [],
+"msrc": "https://www.stmmcc.org/mass-schedule"
+}
+],
+[
+"http://www.missionparish.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.missionparish.org/",
+"p": [
+[
+"p",
+"Msgr.",
+"J. Michael McKiernan",
+"Pastor",
+"https://s3.amazonaws.com/media.cloversites.com/fd/fd9bd167-ccc1-43d1-a848-287c06fae564/site-images/067d88b1-d426-49c6-8d38-7722a310c8af.jpg"
+],
+[
+"p",
+"Reverend",
+"Randy Guillen",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Father",
+"Randy’s Favorite Scripture",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Gary Griffin",
+"Deacon",
+"https://s3.amazonaws.com/media.cloversites.com/fd/fd9bd167-ccc1-43d1-a848-287c06fae564/site-images/63d840a0-bf7b-4444-bca1-0d9bbb5ff6d4.jpg"
+]
+],
+"src": "https://www.missionparish.org/parish-office/clergy",
+"mt": [
+"Sat 6:30AM, Vigil 4:30PM, 6PM Español",
+"Sun 7:30AM, 9AM, 11AM, 1PM Español, 5PM",
+"Weekdays: 6:30AM (Serra Chapel), 7PM Español",
+"Holy Days: 6:30AM, 8:30AM, 5:30PM, 7PM Español"
+],
+"ct": [
+"Saturday 8AM or by Appointment"
+],
+"msrc": "https://www.missionparish.org/schedules-calendars/mass-schedule"
+}
+],
+[
+"https://www.parokikumba.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Mgr.",
+"Siprianus Hormat",
+"",
+"https://www.parokikumba.org/wp-content/uploads/2026/10/Foto-0-300x200.jpg"
+],
+[
+"p",
+"Pater",
+"John Suri",
+"",
+""
+]
+],
+"src": "https://www.parokikumba.org/laporan-khusus-pembangunan-rumah-pastoran-baru-paroki-kumba-resmi-dimulai/"
+}
+],
+[
+"http://www.straphael-holyangels.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://straphael-holyangels.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Genaro Daguplo",
+"Pastor",
+""
+],
+[
+"d",
+"Deacon",
+"Richard Arcari",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"David Colter",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Gregory Costa",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"John Dunn",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Thomas Lavelle",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Sal Marcelo",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Bill Palmisano",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Robert Tharp",
+"Deacon",
+""
+]
+],
+"src": "https://straphael-holyangels.com/staff/"
+}
+],
+[
+"http://www.sacricuorilastorta.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sacricuorilastorta.org/",
+"p": [
+[
+"p",
+"Don",
+"Giuseppe Colaci",
+"Pastor",
+"https://image.jimcdn.com/app/cms/image/transf/dimension=304x1024:format=jpg/path/s8ee0820187827e60/image/iaec25d1c6950a8d1/version/1663135914/image.jpg"
+]
+],
+"src": "https://www.sacricuorilastorta.org/la-parrocchia/i-sacerdoti/"
+}
+],
+[
+"https://www.sanbiagiocodogno.it",
+{
+"s": "ok",
+"c": 200,
+"u": "https://sanbiagiocodogno.it/en/",
+"p": [
+[
+"p",
+"Mons.",
+"Gabriele Bernardelli",
+"Pastor",
+"https://sanbiagiocodogno.it/images/blog/img/_324329/preview/matrimoni.jpeg"
+]
+],
+"src": "https://sanbiagiocodogno.it/en/",
+"mt": [],
+"ct": [
+"in Chiesa parrocchiale: ore 9,30 – 11.00 il martedì e il venerdì; ore 17.00 – 18.00 il sabato"
+],
+"msrc": "https://sanbiagiocodogno.it/en/"
+}
+],
+[
+"http://www.thefirstparish.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://thefirstparish.org/",
+"p": [
+[
+"p",
+"Fr.",
+"John Tetlow",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Mike Elias",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Ignatius Yeruva",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Jeff Johnston",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Doug Nullet",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Jim White",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Bryan Ott",
+"Deacon",
+""
+]
+],
+"src": "https://thefirstparish.org/about/staff/",
+"mt": [
+"Monday - Saturday: 7:00 am",
+"Sunday:7:00 am,9:00 am,11:00 am,5:00pm",
+"Saturday after the 7:00 am Mass"
+],
+"ct": [
+"The Cathedral is typically open Monday - Friday from 8am - 5pm."
+],
+"msrc": "https://thefirstparish.org/"
+}
+],
+[
+"https://lykehouse.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Urey Patrick Mark",
+"Chaplain",
+"https://lykehouse.org/wp-content/uploads/2014/10/FrMark_04-adjusted-106x150.jpg"
+]
+],
+"src": "https://lykehouse.org/about-us/staff/",
+"mt": [
+"Sunday Mass @ 10:30 – LH",
+"Daily Mass 12:15pm @ GSU",
+"Wednesday – Bible Studies 6:30 pm"
+],
+"ct": [],
+"msrc": "https://lykehouse.org/"
+}
+],
+[
+"https://holycrossverobeach.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Thomas E. Barrett",
+"Pastor",
+"https://holycrossverobeach.org/wp-content/uploads/Parish-News.png"
+],
+[
+"p",
+"Rev.",
+"Serge Dubé",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Rev.",
+"Paul Huesing",
+"Parochial vicar",
+""
+],
+[
+"d",
+"Deacon",
+"Wayne Creelman",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Martin Ervin",
+"Deacon",
+""
+]
+],
+"src": "https://holycrossverobeach.org/",
+"mt": [
+"Monday – Saturday: 8:00 a.m.",
+"Saturday Vigil: 4:00 p.m.",
+"Sunday: 7:30 a.m.",
+"Sunday: 9:00 a.m.",
+"Sunday: 10:45 a.m.",
+"Sunday: 12:15 p.m.",
+"Weekdays: 7:00 a.m. – 7:00 p.m.",
+"Saturday: 7:00 a.m. – 5:00 p.m.",
+"Sunday: 1:00 p.m. – 7:00 p.m."
+],
+"ct": [],
+"msrc": "https://holycrossverobeach.org/"
+}
+],
+[
+"http://www.sjp2.fr/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sjp2.fr/",
+"p": [
+[
+"p",
+"Père",
+"Thomas MBaye",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Père",
+"François Oliano",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.sjp2.fr/"
+}
+],
+[
+"http://stjosephcecilia.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stjosephcecilia.com/",
+"p": [
+[
+"p",
+"Father",
+"Gregory P. Cormier",
+"",
+"https://irp.cdn-website.com/248add58/dms3rep/multi/opt/Father-Greg-6-22-21-578h.png"
+],
+[
+"p",
+"Fr.",
+"Gregory Cormier",
+"",
+"https://irp.cdn-website.com/248add58/dms3rep/multi/opt/Father-Greg-6-22-21-578h.png"
+]
+],
+"src": "https://www.stjosephcecilia.com/about",
+"mt": [
+"Saturday Vigil: 4:00 pm (St. Joseph)",
+"Sunday: 7:00 am and 11:00 am (St. Joseph)",
+"Weekend Observed Masses: 9:00 am (St. Rose of Lima)",
+"​Daily Masses: Mondays and Tuesdays: 8:00 am (St. Rose of Lima)",
+"​Daily Masses: Wednesdays and Fridays: 6:30 am (St. Joseph)"
+],
+"ct": [],
+"msrc": "https://www.stjosephcecilia.com/"
+}
+],
+[
+"http://www.kath-ettlingen-stadt.de/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://kath-ettlingen.de/ettlingen-stadt",
+"p": [
+[
+"d",
+"Diakon",
+"Peter Höfer",
+"Deacon",
+""
+],
+[
+"p",
+"Pfarrer",
+"Peter Bretl",
+"Pastor",
+""
+]
+],
+"src": "https://kath-ettlingen.de/ettlingen-stadt"
+}
+],
+[
+"http://www.stpauldanville.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stpauldanville.org/",
+"p": [
+[
+"p",
+"Fr.",
+"John Cyr",
+"Pastor",
+"https://irp.cdn-website.com/d137b777/dms3rep/multi/opt/frcyr2023-1920w.jpg"
+]
+],
+"src": "https://www.stpauldanville.org/parish-staff",
+"mt": [
+"Saturday Vigil: 5:30pm",
+"Sunday: 7:30am & 10:00am"
+],
+"ct": [
+"Saturday 4:00-5:00 pm"
+],
+"msrc": "https://www.stpauldanville.org/"
+}
+],
+[
+"http://www.pfarre.auersthal.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"d",
+"Diakon",
+"Gerald Strobl",
+"Deacon",
+"http://www.auersthal.com/pfauwordpress/wp-content/uploads/2026/04/IMG_3119-300x200.jpg"
+]
+],
+"src": "http://www.pfarre.auersthal.com/"
+}
+],
+[
+"http://www.guadalupe.archibial.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Maciej Kozłowski",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Grzegorz Bolesta",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Ks.",
+"Andrzej Makaro",
+"Parochial vicar",
+""
+]
+],
+"src": "http://guadalupe.archibial.pl/duszpasterze/",
+"mt": [
+"Dni powszednie: 7:00 i 18:00",
+"Niedziele: 7:00, 8:00, 10:00, 11:30 (dla dzieci), 13:00 i 18:00",
+"Święta: 7:00, 8:00, 16:30 i 18:00"
+],
+"ct": [],
+"msrc": "http://guadalupe.archibial.pl/"
+}
+],
+[
+"http://www.stmarysparkcity.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stmarysparkcity.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Arokia Dass David",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Kenneth Rey Parsad",
+"Parochial vicar",
+""
+],
+[
+"d",
+"Deacon",
+"Tom Tosti",
+"Deacon",
+""
+]
+],
+"src": "https://www.stmarysparkcity.com/clergy-staff-leadership"
+}
+],
+[
+"http://www.stgertrudechicago.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stgertrudechicago.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Dominic Grassi",
+"Pastor emeritus",
+""
+]
+],
+"src": "https://stgertrudechicago.org/",
+"mt": [
+"Sunday: 10:30 am Mass in church (live-streamed on our parish Facebook page)",
+"Weekday Masses: Monday-Friday: 7:30 am",
+"5:00 pm – (Sunday Vigil)",
+"Saturday: Please note, there is no longer a 7:30 am mass.",
+"Every Sunday at 10:30 am, we live-stream Mass from St. Gertrude Church using Facebook Live."
+],
+"ct": [],
+"msrc": "https://stgertrudechicago.org/"
+}
+],
+[
+"http://www.sacchinesecatholic.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sacchinesecatholic.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Abraham Chiu",
+"Chaplain",
+""
+]
+],
+"src": "https://www.sacchinesecatholic.org/about-us-%E9%97%9C%E6%96%BC%E6%88%91%E5%80%91/",
+"mt": [
+"Sunday Mass: 2:00 pm,"
+],
+"ct": [],
+"msrc": "https://www.sacchinesecatholic.org/"
+}
+],
+[
+"http://cebsaopauloapostolo.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://cebsaopauloapostolo.blogspot.com/",
+"p": [
+[
+"p",
+"Pe.",
+"Fabio de Melo",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"Reginaldo Manzotti",
+"",
+""
+]
+],
+"src": "http://cebsaopauloapostolo.blogspot.com/p/vida-do-apostolo-paulo-saopaulo-nasceu.html"
+}
+],
+[
+"https://www.bistum-stgallen.ch/bistum/kathedrale-/-stiftsbezirk/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Abbé",
+"Naseem Asmaroo",
+"",
+""
+],
+[
+"p",
+"P.",
+"Christoph Albrecht",
+"",
+""
+],
+[
+"p",
+"Don",
+"Alfio Bordiga",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Zlatko Coric",
+"",
+""
+],
+[
+"p",
+"P.",
+"Julipros Dolotallas",
+"",
+""
+],
+[
+"p",
+"P.",
+"Piotr Zaba",
+"",
+""
+],
+[
+"p",
+"P.",
+"Juan José Segarra Gomez",
+"",
+""
+]
+],
+"src": "https://www.bistum-stgallen.ch/bistum/seelsorge-in-verschiedenen-sprachen/"
+}
+],
+[
+"http://www.stjoseph-alliance.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stjoseph-alliance.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Matt Humerickhouse",
+"Pastor",
+"https://static.wixstatic.com/media/5e7404_313ad1233b474f61ac4b3016b51b4a1b~mv2.jpg/v1/fill/w_259"
+],
+[
+"p",
+"Rev.",
+"Bob England",
+"Parochial vicar",
+"https://static.wixstatic.com/media/5e7404_6800e567e9c74c90b710a5dc14c738cb~mv2.png/v1/fill/w_217"
+],
+[
+"d",
+"Deacon",
+"Randy Smith",
+"Deacon",
+"https://static.wixstatic.com/media/5e7404_1ef0169cb9214aec8615672a9d9b95e2~mv2.png/v1/crop/x_12"
+],
+[
+"d",
+"Deacon",
+"Greg Wood",
+"Deacon",
+""
+]
+],
+"src": "https://www.stjoseph-alliance.org/",
+"mt": [
+"Saturday 4:00 p.m. - St. Ann Church",
+"Saturday 4:00 p.m. - Sacred Heart of Mary Church",
+"Sunday 8:30 a.m. - St. Louis Church",
+"Sunday 9:00 a.m. - St. Joseph Church, Maximo",
+"Sunday 10:30 a.m. - Regina Coeli Church",
+"Sunday 11:00 a.m. - St. Joseph Church, Alliance",
+"Monday 8:30 a.m. - Sacred Heart of Mary Church",
+"Tuesday 8:30 a.m. - Sacred Heart of Mary Church",
+"Tuesday 8:30 a.m. - St. Joseph Church, Alliance",
+"Wednesday 6:30 p.m. - St. Joseph Church, Alliance"
+],
+"ct": [
+"Wednesday 5:30 p.m. - St. Joseph Church, Alliance",
+"Wednesday 5:30 p.m. - Sacred Heart of Mary Church"
+],
+"msrc": "https://www.stjoseph-alliance.org/"
+}
+],
+[
+"http://www.upbagnolo.it/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Don",
+"Guerrino Franzoni",
+"",
+""
+]
+],
+"src": "http://www.upbagnolo.it/contatti/",
+"mt": [
+"lunedì 17:15 – 18:30",
+"mercoledì 17:15 – 18:30"
+],
+"ct": [],
+"msrc": "http://www.upbagnolo.it/evangelizzazione/celebrazioni/"
+}
+],
+[
+"https://www.diocesinardogallipoli.it/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"d",
+"Diac.",
+"Fernando Napoli",
+"Deacon",
+"https://diocesinardogallipoli.it/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-01-at-11.59.29-copia-e1788257254769-300x261.jpg"
+]
+],
+"src": "https://diocesinardogallipoli.it/"
+}
+],
+[
+"http://www.stpatrickcocathedral.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stpatrickcocathedral.org/",
+"p": [
+[
+"d",
+"Deacon",
+"Brenton Seymour",
+"Deacon",
+"https://storage1.snappages.site/PMKP5B/assets/images/25320257_1674x2166_500.jpg"
+]
+],
+"src": "https://www.stpatrickcocathedral.org/leadership-amp-staff",
+"mt": [
+"Saturday Anticipatory 5:00pm",
+"Sunday 8:00am, 10:30am",
+"12:10pm Tuesday-Friday",
+"9:00am Saturday",
+"Sat. anticipatory 5:00 pm",
+"Sun. 8 & 10:30am",
+"12:10 pm Tue. - Fri. and 9 am Sat."
+],
+"ct": [],
+"msrc": "https://www.stpatrickcocathedral.org/"
+}
+],
+[
+"http://www.iccharlescity.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.iccharlescity.com/",
+"p": [
+[
+"d",
+"Deacon",
+"Michael Ward",
+"Deacon",
+"https://uploads.weconnect.com/0ccc8d6a28254c6f29289f991de8bd67a74b3b61/dpyu3bcgmadbckk2tiun5mfbeem.jpg"
+]
+],
+"src": "https://www.iccharlescity.com/",
+"mt": [
+"Saturday 4:00 PM",
+"Sunday 8:30 AM, 10:00 AM",
+"Tuesday 12:05 PM",
+"Wednesday 8:30 AM",
+"Thursday 12:05 PM",
+"Friday 12:05PM"
+],
+"ct": [],
+"msrc": "https://www.iccharlescity.com/"
+}
+],
+[
+"http://www.basilicadelsacrocuore.it",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.basilicadelsacrocuore.it/",
+"p": [
+[
+"p",
+"Don",
+"Javier Ortiz",
+"Pastor",
+""
+],
+[
+"p",
+"Don",
+"Francesco Marcoccio Vice",
+"Pastor",
+""
+],
+[
+"p",
+"Don",
+"Sanjay Aind Vice",
+"Pastor",
+""
+],
+[
+"p",
+"Don",
+"Renato DiFuria Vice",
+"Pastor",
+""
+]
+],
+"src": "https://www.basilicadelsacrocuore.it/chi-siamo/salesiani/",
+"mt": [
+"Giorni feriali: 06:30",
+"Giorni feriali: 07:00",
+"Giorni feriali: 07:30",
+"Giorni feriali: 08:00",
+"Giorni feriali: 09:00",
+"Giorni feriali: 18:00"
+],
+"ct": [],
+"msrc": "https://www.basilicadelsacrocuore.it/la-basilica/orario-celebrazioni/"
+}
+],
+[
+"http://www.dominicains.ca",
+{
+"s": "ok",
+"c": 200,
+"u": "https://dominicains.ca/",
+"p": [
+[
+"p",
+"Fr.",
+"José Apolinário Kahombo",
+"",
+"https://dominicains.ca/wp-content/uploads/2026/10/Fr.-Jose-Apolinario-o.p1.jpg"
+],
+[
+"p",
+"Fr.",
+"Gustave Ineza",
+"",
+"https://dominicains.ca/wp-content/uploads/2026/10/Fr.-Gustave-Ineza-o.p1.jpg"
+],
+[
+"p",
+"Fr.",
+"David Bellusci",
+"",
+"https://dominicains.ca/wp-content/uploads/2024/09/Fr.-Davide-Bellusci-o.p.jpg"
+],
+[
+"p",
+"Fr.",
+"Gustave Nsengiyumva",
+"",
+"https://dominicains.ca/wp-content/uploads/2026/10/Fr.-Gustave-Nsengiyumva-o.p1.jpg"
+],
+[
+"p",
+"Fr.",
+"Lamphone Phonevilay",
+"",
+"https://dominicains.ca/wp-content/uploads/2026/10/Fr.-Lamphone-Phonevilay-o.p1.jpg"
+],
+[
+"p",
+"Fr.",
+"Jean-Paul Tagheu",
+"",
+"https://dominicains.ca/wp-content/uploads/2026/09/Fr.-Jean-Paul-Tagheu-o.p.jpg"
+],
+[
+"p",
+"Fr.",
+"Sato Antonio-Ryo",
+"",
+"https://dominicains.ca/wp-content/uploads/2024/09/Fr.-Sato-Antonio-Ryo-3.jpg"
+]
+],
+"src": "https://dominicains.ca/contact/"
+}
+],
+[
+"http://www.mbnp-pruszcz.diecezja.gda.pl",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"P.",
+"Monika Szweda",
+"",
+""
+]
+],
+"src": "http://www.mbnp-pruszcz.diecezja.gda.pl/duszpasterstwa-27375",
+"mt": [
+"Nowenna do Matki Bożej Nieustającej Pomocy: środa po Mszy Świetej o godz. 7.00 i o godz. 17.00",
+"w środę o godz. 17.30 w połączeniu z Nowenną do MBNP",
+"w niedzielę o godz. 20.30 na Wzgórzu Maryjnym"
+],
+"ct": [
+"WTOREK: 17.00 - 18.00",
+"SOBOTA: 8.00 - 9.00",
+"I piątek miesiąca: spowiedź w godz. 17.00-18.30"
+],
+"msrc": "http://www.mbnp-pruszcz.diecezja.gda.pl/liturgie-i-nabozenstwa-12604"
+}
+],
+[
+"https://ariege-catholique.fr/paroisse/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://ariege-catholique.fr/paroisses-ariege/",
+"p": [
+[
+"p",
+"Mgr",
+"Benoît Gschwind",
+"",
+"https://ariege-catholique.fr/wp-content/uploads/eveque-pamiers-profil-150x150.jpg"
+]
+],
+"src": "https://ariege-catholique.fr/mouvement-groupe-service/pasto-jeunes/",
+"mt": [
+"Du lundi au vendredi : 17h45, vêpres (sauf le lundi),18h15, messe."
+],
+"ct": [],
+"msrc": "https://ariege-catholique.fr/paroisses-ariege/"
+}
+],
+[
+"http://www.catholique-nancy.fr/pres-de-chez-vous/etre-accueilli-en-paroisse/paroisses/pays-mussipontain/saint-pierre-fourier-en-pays-mussipontain",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.catholique-nancy.fr/sites/secteur-pastoral-du-pays-mussipontain/presentation/saint-pierre-fourier-en-pays-mussipontain/",
+"p": [
+[
+"p",
+"Mgr",
+"Jean-Paul Jaeger",
+"",
+""
+],
+[
+"p",
+"Père",
+"Philippe Gauer",
+"Pastor",
+""
+]
+],
+"src": "https://www.catholique-nancy.fr/sites/secteur-pastoral-du-pays-mussipontain/presentation/notre-dame-du-rupt-de-mad/",
+"mt": [
+"Mardi: Louange et laudes à 8h à l’église Saint-Laurent de Pont-à-Mousson, avant la Messe de 8h30.",
+"Mercredi: Louange et laudes à 8h30 à l’église Saint-Sébastien de Dieulouard, avant la Messe de 9h.",
+"Jeudi: Louange et laudes à 8h à l’église Saint-Laurent ;",
+"Jeudi: à 8h40 à l’oratoire de Champigneulles avant la Messe de 9h ;",
+"Jeudi: à 8h40 à Pagny-sur-Moselle avant la Messe de 9h.",
+"Vendredi: Louange et laudes à 8h à l’église Saint-Laurent.",
+"Samedi: Louange et laudes à 9h30 à l’église Saint-Laurent."
+],
+"ct": [],
+"msrc": "https://www.catholique-nancy.fr/sites/secteur-pastoral-du-pays-mussipontain/agenda/72430-priere-adoration-reconciliation-au-fil-des-jours-2/"
+}
+],
+[
+"http://www.adalbertchurch.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.adalbertchurch.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Boleslaus Puchalaski July-Nov",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Josaphat Piasta August",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Michael Slonecki",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Miroslaw Podymniak",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Herman Czaster",
+"",
+""
+]
+],
+"src": "https://www.adalbertchurch.org/pr",
+"mt": [
+"Saturday: 9:00 AM, 5:00 PM",
+"Sunday: 8:30 AM, 10:00 AM (Polish), 11:30 AM",
+"Last Sunday: 1:00 PM",
+"Monday–Friday: 6:45 AM, 9:00 AM",
+"Wednesday: 7:00 PM (Polish)",
+"First Friday: 7:00 PM (Polish)"
+],
+"ct": [
+"Saturday: 4:00 PM to 5:00 PM"
+],
+"msrc": "https://www.adalbertchurch.org/"
+}
+],
+[
+"https://stpatricksph.archtoronto.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Ricardo Quinones Sanchez",
+"Pastor",
+""
+]
+],
+"src": "https://stpatricksph.archtoronto.org/",
+"mt": [
+"Every 4th Saturday of every month from 10:00 p.m. to..."
+],
+"ct": [],
+"msrc": "https://stpatricksph.archtoronto.org/"
+}
+],
+[
+"https://www.holyangelschurchri.org/contactregister.html",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Marcel Taillon",
+"",
+""
+],
+[
+"p",
+"Father",
+"Mateusz Puzanowski",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Raymond J. Ferrick",
+"Pastor emeritus",
+""
+]
+],
+"src": "https://www.holyangelschurchri.org/meet-our-staff.html",
+"mt": [
+"Saturday Vigil: 4pm",
+"Daily Mass: Tuesday & Thursday: 12:05pm"
+],
+"ct": [],
+"msrc": "https://www.holyangelschurchri.org/mass-schedule.html"
+}
+],
+[
+"http://www.staroftheseachurch.org.au/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://staroftheseachurch.org.au/",
+"p": [
+[
+"p",
+"Rev Fr",
+"Marcelo Parra",
+"Pastor",
+""
+]
+],
+"src": "https://staroftheseachurch.org.au/contact/",
+"mt": [
+"Saturday: 5:30 pm",
+"Sunday: 10:00 am",
+"Sunday: 12:00 pm",
+"Sunday: 5:00 pm"
+],
+"ct": [
+"Tues to Fri: 9:00 am",
+"Tuesday: 8:15 am",
+"Saturday: 12:00 pm",
+"Saturday: 5:00 pm"
+],
+"msrc": "https://staroftheseachurch.org.au/"
+}
+],
+[
+"http://www.notredamedelorette.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.notredamedelorette.org/",
+"p": [
+[
+"p",
+"Père",
+"Geoffroy de Talhouët",
+"Pastor",
+"https://www.notredamedelorette.org/wp-content/uploads/2023/09/Diners-A-300x157.jpg"
+]
+],
+"src": "https://www.notredamedelorette.org/",
+"mt": [
+"Samedi 31 octobre 2026: Messe anticipée à 18h30",
+"Dimanche 1er novembre 2026: Messes à 9h30, 11h et 18h30 : Fête de Tous les Saints",
+"Dimanche 1er novembre 2026: La commémoration des défunts de l’année aura lieu lors de la messe de 19h"
+],
+"ct": [],
+"msrc": "https://www.notredamedelorette.org/"
+}
+],
+[
+"http://sjccc.net/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://sjccc.net/",
+"p": [
+[
+"p",
+"Fr.",
+"Gregory Villaescusa",
+"Administrator",
+""
+]
+],
+"src": "https://sjccc.net/",
+"mt": [
+"First Saturday Mass: 9:00 AM to 10:00 AM",
+"First Saturday Mass: 10:00 AM",
+"First Saturday Mass: 4:00 PM",
+"Vigil Mass (English): 5:00 PM to 6:00 PM"
+],
+"ct": [
+"First Saturday Confession, following 9 am mass"
+],
+"msrc": "https://sjccc.net/"
+}
+],
+[
+"http://www.stjosephcougars.com/church-bulletin.html",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stjosephcougars.com/church-bulletin.html",
+"p": [
+[
+"p",
+"Fr.",
+"Greg Oligschlaeger",
+"Pastor",
+""
+],
+[
+"p",
+"Msgr.",
+"Marion Makarewicz",
+"",
+""
+]
+],
+"src": "https://www.stjosephcougars.com/contact-us.html"
+}
+],
+[
+"http://www.mci-saar.de/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.mci-saar.de/start/",
+"p": [
+[
+"p",
+"Don",
+"Georges Atsou Akotia",
+"Pastor",
+"https://www.mci-saar.de/export/sites/pfarreien/italienische-katholische-mission-saarbruecken-/.galleries/bilder/20260320_122726.jpg_1551549087.jpg"
+]
+],
+"src": "https://www.mci-saar.de/ueber-uns/seelsorgeteam/",
+"mt": [
+"Sonntag, 25. Oktober 2026: 11:00",
+"Sonntag, 25. Oktober 2026: 17:00",
+"Dienstag, 27. Oktober 2026: 18:00"
+],
+"ct": [],
+"msrc": "https://www.mci-saar.de/start/"
+}
+],
+[
+"http://www.saintritas.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.saintritas.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Michael Reinhardt",
+"Pastor",
+"https://irp.cdn-website.com/a08b71a6/dms3rep/multi/opt/Fr.+Mike+Reinhardt-1920w.png"
+],
+[
+"d",
+"Deacon",
+"Jack Nicklay",
+"Deacon",
+"https://irp.cdn-website.com/a08b71a6/dms3rep/multi/opt/wb5z1qhxyns08hjpi5dqypqilkm-1920w.jpg"
+]
+],
+"src": "https://www.saintritas.org/staff-listing",
+"mt": [
+"Saturday: 5:00 PM",
+"Sunday: 8:30 AM, 10:30 AM",
+"Tuesday: 5:00 PM",
+"Wednesday: 8:30 AM",
+"Thursday: 5:00 PM",
+"Friday: 8:30 AM",
+"Thursday: 8:00 AM -5:00 PM"
+],
+"ct": [
+"Saturday: 4 PM or by appointment"
+],
+"msrc": "https://www.saintritas.org/"
+}
+],
+[
+"http://www.assumptionparishwr.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.assumptionparishwr.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Ronnie Nombre",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"George Gillen",
+"Pastor emeritus",
+""
+],
+[
+"d",
+"Deacon",
+"Jorge Ochoa",
+"Deacon",
+""
+]
+],
+"src": "https://www.assumptionparishwr.org/staff",
+"mt": [
+"Saturday Vigil: 5:30 PM",
+"Sunday: 8:00 AM, 9:30 AM, 11:00 AM*",
+"Monday - Saturday: 7:30 AM",
+"WEEKDAY MASS: 12:10PM (Lent Only)",
+"Saturday: 5:30 PM",
+"WEEKDAY MASS: 12:10 PM During Lent"
+],
+"ct": [
+"Saturday: 4:00 PM - 5:00 PM"
+],
+"msrc": "https://www.assumptionparishwr.org/"
+}
+],
+[
+"https://santuariodeguadalu0.wixsite.com/santuariodeguadalupe",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Pbro.",
+"Óscar Jaime García",
+"Pastor",
+"https://static.wixstatic.com/media/deba2c_2ed8235dda70439f9c4f55a98954d7e8~mv2.jpg/v1/fill/w_86,h_57,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/deba2c_2ed8235dda70439f9c4f55a98954d7e8~mv2.jpg"
+],
+[
+"p",
+"Padre",
+"Marco Antonio Mora",
+"",
+""
+]
+],
+"src": "https://santuariodeguadalu0.wixsite.com/santuariodeguadalupe/about-1",
+"mt": [
+"Asistir al catecismo cada sábado a las 04:30 p.m. en la cancha parroquial."
+],
+"ct": [
+"Asistir a las confesiones los días jueves en la Hora Santa en el Santuario (06:30 p.m.) o en horarios de oficina a la Notaria Parroquial."
+],
+"msrc": "https://santuariodeguadalu0.wixsite.com/santuariodeguadalupe/services-3"
+}
+],
+[
+"http://www.cmckalyan.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.cmckalyan.com/",
+"p": [
+[
+"p",
+"Canon",
+"J. W. S. David",
+"Chaplain",
+""
+]
+],
+"src": "https://www.cmckalyan.com/"
+}
+],
+[
+"http://www.diocese-annecy.fr/diocese/les-paroisses/doyenne-dannecy/paroisse-sainte-jeanne-de-chantal",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.diocese-annecy.fr/le-diocese/les-paroisses",
+"p": [
+[
+"p",
+"P.",
+"Stéphane Raux",
+"",
+""
+]
+],
+"src": "https://www.diocese-annecy.fr/grandir-dans-la-foi/pastorale-du-tourisme"
+}
+],
+[
+"http://www.stjohntheevangelistcarrollton.com/all-saints.html",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stjohntheevangelistcarrollton.com/all-saints.html",
+"p": [
+[
+"p",
+"Fr.",
+"Callistus Onumah",
+"Pastor",
+"https://www.stjohntheevangelistcarrollton.com/uploads/8/4/7/1/84712626/all-saints-day_1.jpg?214"
+]
+],
+"src": "https://www.stjohntheevangelistcarrollton.com/all-saints.html",
+"mt": [
+"Saturday: 4:00 Mass at St. Michael’s",
+"Saturday: 6:00 Mass at St. John’s",
+"Sunday: 8:00 Mass at St. John’s",
+"Sunday: 10:00 Mass at All Saints"
+],
+"ct": [],
+"msrc": "https://www.stjohntheevangelistcarrollton.com/all-saints.html"
+}
+],
+[
+"http://stpeterscornwall.ca/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stpeterscornwall.ca/",
+"p": [
+[
+"p",
+"Father",
+"Theo Nnorom",
+"Administrator",
+""
+],
+[
+"p",
+"Fr.",
+"Theodore Nnorom",
+"Administrator",
+""
+]
+],
+"src": "https://stpeterscornwall.ca/about-st-peters-parish-cornwall/",
+"mt": [
+"Saturday – 4:00 PM",
+"Sunday – 9:30 and 11:15 AM",
+"Tuesday – 6:00PM",
+"Wednesday – 9:00 AM",
+"Thursday – 9:00 AM",
+"Friday – 9:00 AM"
+],
+"ct": [],
+"msrc": "https://stpeterscornwall.ca/"
+}
+],
+[
+"http://www.mbszkaplerznej.sandomierz.opoka.org.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Augustyn Łyko",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Piotr Madej",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Dariusz Cichoń",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Wilhelm Gaj-Piotrowski",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Kazimierz Nawrocki",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Bogusław Wermiński",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Ryszard Dominik",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Zdzisław Janiec",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Piotr Mierzwa",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Andrzej Nowak",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Jacek Łapiński",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Jerzy Kułaczkowski",
+"",
+""
+]
+],
+"src": "http://www.mbszkaplerznej.sandomierz.opoka.org.pl/index.php?file=ksiez",
+"mt": [
+"Niedziele i święta: 7:30; 9:30; 11:00; 18:00",
+"Święta państwowo zniesione: 7:30; 9:30; 18:00",
+"Dni powszednie: 7:00; 18:00"
+],
+"ct": [],
+"msrc": "http://www.mbszkaplerznej.sandomierz.opoka.org.pl/index.php?file=liturg"
+}
+],
+[
+"http://www.sangerolamo.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sangerolamo.org/",
+"p": [
+[
+"p",
+"Don",
+"Andrea Russi",
+"Pastor",
+""
+],
+[
+"p",
+"Don",
+"Josef Haddad Imad",
+"Pastor",
+""
+]
+],
+"src": "https://www.sangerolamo.org/presbiteri/",
+"mt": [],
+"ct": [
+"Venerdì: 16.30 – 18.30;"
+],
+"msrc": "https://www.sangerolamo.org/orari/"
+}
+],
+[
+"https://arquidiocesejuizdefora.org.br/paroquia-santo-antonio-goiana-mg/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Padre",
+"João Emílio",
+"",
+""
+],
+[
+"p",
+"Frei",
+"Clóvis Frainer",
+"",
+"https://arquidiocesejuizdefora.org.br/wp-content/uploads/2021/03/Dom-Clovis-Frainer.jpg"
+]
+],
+"src": "https://arquidiocesejuizdefora.org.br/categorias/clero-diocesano/bispos-falecidos/"
+}
+],
+[
+"http://www.stannes-bristol.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stannes-bristol.org/",
+"p": [
+[
+"p",
+"Very Reverend",
+"Tom Lawrence",
+"Pastor",
+""
+]
+],
+"src": "https://stannes-bristol.org/clergy-staff/",
+"mt": [
+"Saturday (Anticipation of Sunday): 5:30pm",
+"Monday: 6:00pm (except first Monday of the Month when there is no Mass; in chapel)",
+"Tuesday: 8:30am",
+"Wednesday: 8:30am",
+"Thursday: 6:00pm",
+"Friday: 8:30am in English & 6:00pm Misa en Español",
+"Tuesday: ~9:15am – 10:00am (Following Daily Mass)(First Tuesdays, until 9:00pm)"
+],
+"ct": [
+"Tuesday, Wednesday, Thursday: 5:00pm – ~6:00pm",
+"Wednesday: ~6:00pm – 7:00pm (Following Confessions) – “Simple” Exposition in Chapel"
+],
+"msrc": "https://stannes-bristol.org/"
+}
+],
+[
+"https://www.lincolndiocese.org/directory/parishes/667-st-germanus-arapahoe",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Kenneth Wehrs",
+"",
+"https://d1sg70fmcyms0v.cloudfront.net/images/stories/people/priests2025/Wehrs-K.jpg?1788456191"
+]
+],
+"src": "https://www.lincolndiocese.org/directory/priests/498-wehrs-rev-kenneth",
+"mt": [
+"Sunday – 9:00 a.m. (1st, 3rd, 4th, 5th Sun.), 11 a.m. (2nd Sun.)"
+],
+"ct": [],
+"msrc": "https://www.lincolndiocese.org/directory/parishes/667-st-germanus-arapahoe"
+}
+],
+[
+"http://sacredheart-stcornelius.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.sacredheart-stcornelius.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Charles Altermatt",
+"Pastor",
+"https://irp.cdn-website.com/02fb404f/dms3rep/multi/opt/Fr-Charles-photo-1920w.jpg"
+],
+[
+"d",
+"Rev. Mr.",
+"Lenard Butler",
+"Deacon",
+"https://irp.cdn-website.com/02fb404f/dms3rep/multi/opt/Deacon-Len-1920w.JPG"
+]
+],
+"src": "https://www.sacredheart-stcornelius.org/our-staff",
+"mt": [
+"Sunday: 10:00 AM & 12:00 PM (Spanish)",
+"Tuesday: 6:00 PM (Spanish)",
+"Thursday: 9:00 AM",
+"Friday: 6:30 PM Rosary and Adoration | 7:00 PM Mass (Bilingual | First Friday of the month)",
+"Saturday Vigil: 4:00 PM",
+"Sunday: 8:00 AM",
+"Wednesday: 9:00 AM",
+"Friday: 9:00 AM",
+"Monday, November 2, 2026: 6:00 pm",
+"Sunday, November 22, 2026: 11:00 AM - 2:00 PM"
+],
+"ct": [
+"Sunday: 11:00 AM - 11:45 AM",
+"Saturday: 3:00 PM - 3:45 PM"
+],
+"msrc": "https://www.sacredheart-stcornelius.org/"
+}
+],
+[
+"https://www.igrejasirianortodoxa.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"d",
+"Diácono",
+"Vicente Padilha",
+"Deacon",
+""
+],
+[
+"p",
+"Pe.",
+"José Maria Mourão",
+"",
+""
+],
+[
+"d",
+"Diácono",
+"Claude Loureiro",
+"Deacon",
+""
+],
+[
+"d",
+"Diácono",
+"Samuel Siqueira",
+"Deacon",
+""
+],
+[
+"d",
+"Diácono",
+"Tuan Emanuell",
+"Deacon",
+""
+],
+[
+"d",
+"Diácono",
+"Wanderson Marquez",
+"Deacon",
+""
+],
+[
+"d",
+"Diácono",
+"Philipe Rabelo",
+"Deacon",
+""
+],
+[
+"d",
+"Diácono",
+"José Nilton dos Santos",
+"Deacon",
+""
+],
+[
+"d",
+"Diácono",
+"Alino Neves",
+"Deacon",
+""
+]
+],
+"src": "https://www.igrejasirianortodoxa.org/arquidiocese/clero"
+}
+],
+[
+"http://www.corpuschristi-mineola.net/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://corpuschristi-mineola.net/",
+"p": [
+[
+"p",
+"Rev.",
+"Malcolm J. Burns",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"Ken Grooms",
+"Parochial vicar",
+""
+],
+[
+"d",
+"Deacon",
+"Brian J. Mannix",
+"Deacon",
+""
+],
+[
+"p",
+"Rev.",
+"James C. Bowman",
+"Pastor emeritus",
+""
+],
+[
+"p",
+"Rev.",
+"Malcolm Burns",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Tomaz Gomide",
+"",
+""
+]
+],
+"src": "https://corpuschristi-mineola.net/staff/",
+"mt": [
+"Saturday: 5pm",
+"Sunday: 7am, 8:30am (Portuguese),",
+"Sunday: 10:00am, 11:30am, 5pm (Spanish), 7pm",
+"Monday through Friday: 7:30 am & 12:30 pm"
+],
+"ct": [],
+"msrc": "https://corpuschristi-mineola.net/"
+}
+],
+[
+"http://www.shimogadiocese.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.shimogadiocese.org/",
+"p": [
+[
+"p",
+"Msgr",
+"Stanish D’Souza",
+"",
+""
+],
+[
+"p",
+"Msgr",
+"Felix Joseph Noronha",
+"",
+""
+],
+[
+"p",
+"Rev. Fr",
+"Stany Mariappa",
+"",
+""
+],
+[
+"p",
+"Rev. Fr",
+"Balthazar Castelino",
+"",
+""
+],
+[
+"p",
+"Rev. Fr",
+"Valerian Mascarenhas",
+"",
+""
+],
+[
+"p",
+"Rev. Fr",
+"Richard Pais",
+"",
+""
+],
+[
+"p",
+"Rev. Fr",
+"Venus Praveen Colaço",
+"",
+""
+],
+[
+"p",
+"Rev. Fr",
+"Nishanth Anthony D'Costa",
+"",
+""
+],
+[
+"p",
+"Rev. Fr",
+"William Winnifred",
+"",
+""
+]
+],
+"src": "https://www.shimogadiocese.org/about-us/diocesan-priests"
+}
+],
+[
+"http://www.stfran.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stfran.org/",
+"p": [
+[
+"p",
+"Msgr.",
+"Patrick Leddy",
+"",
+""
+],
+[
+"p",
+"Rev. Dr.",
+"Theophane Antony",
+"Pastor",
+""
+],
+[
+"d",
+"Deacon",
+"Henry Tran",
+"Deacon",
+"https://stfran.org/wp-content/uploads/2025/09/Deacon-Henry-Tran-Profile-Picture-389x700.jpeg"
+]
+],
+"src": "https://stfran.org/our-parish/",
+"mt": [
+"Saturday Mass: 8:00 AM (Honoring Mary) ***Please note November 7th 8AM Mass cancelled due to Reconsecration of the Church Mass at 10:30AM***",
+"5:00 PM (Vigil)",
+"Saturday Mass: 7:00 PM (Vietnamese)",
+"Sunday Mass: 6:45 AM (English)",
+"Sunday Mass: 8:30 AM (English)",
+"Sunday Mass: 12:30 PM (Spanish)",
+"Sunday Mass: 5:00 PM (English)",
+"Weekdays: 6:30 AM",
+"Weekdays: 12:10 PM",
+"On the first Friday of each month immediately following the 12:10 PM Mass."
+],
+"ct": [],
+"msrc": "https://stfran.org/mass-information/"
+}
+],
+[
+"http://www.stbonifacestuart.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stbonifacestuart.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Bernard G. Starman",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Ross Burkhalter",
+"Pastor",
+""
+]
+],
+"src": "https://www.stbonifacestuart.com/",
+"mt": [
+"Saturday: @ 5:00 p.m.",
+"Sunday: @ 9:00 a.m.",
+"Monday and Tuesday: 5:30 p.m."
+],
+"ct": [],
+"msrc": "https://www.stbonifacestuart.com/"
+}
+],
+[
+"http://saintfrancisxavierchurch.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://saintfrancisxavierchurch.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Jorge Rocha",
+"Pastor",
+"https://images.squarespace-cdn.com/content/v1/5ba4ffa3348cd97a795ec922/1543520006840-046C9FOTOZNZG73RM3HI/staff+-+Fr.+Jorge+Rocha.JPG"
+],
+[
+"p",
+"Rev.",
+"Nuno Rodrigues",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Douglas Grant",
+"",
+""
+],
+[
+"p",
+"Rev. Msgr.",
+"Victor M. Vieira",
+"",
+""
+]
+],
+"src": "https://saintfrancisxavierchurch.com/parish/priests",
+"mt": [
+"Saturday Mass of Anticipation: 4:30 PM (English)",
+"Sunday Masses: 8:00 AM (Portuguese)",
+"Sunday Masses: 9:30 AM (English)",
+"Sunday Masses: 11:45 AM (Portuguese)",
+"Monday: 6:00 PM (Portuguese)",
+"Tuesday: 12:05 PM (English)",
+"Wednesday: 6:00 PM (Portuguese)",
+"Thursday: 12:05 PM (English)",
+"Friday: 12:05 PM (English) & 6:00 PM (Portuguese)",
+"Weekday Masses: 6:00 PM"
+],
+"ct": [
+"Saturday 3:00 - 3:45 PM"
+],
+"msrc": "https://saintfrancisxavierchurch.com/"
+}
+],
+[
+"http://diocesegfb.org/Parishes/Great",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.diocesegfb.org/",
+"p": [
+[
+"p",
+"Msgr.",
+"Daniel Wathen",
+"Parochial vicar",
+"https://irp.cdn-website.com/e7e54836/dms3rep/multi/opt/Monsigner+Daniel+Wathen-1920w.jpg"
+],
+[
+"p",
+"Fr.",
+"Samuel Spiering",
+"Parochial vicar",
+"https://irp.cdn-website.com/e7e54836/dms3rep/multi/opt/Father+Samuel+Spiering-1920w.jpg"
+],
+[
+"d",
+"Dcn",
+"Peter Woelkers",
+"Deacon",
+"https://irp.cdn-website.com/e7e54836/dms3rep/multi/opt/Kylie+Caranzza-1920w.jpg"
+],
+[
+"p",
+"Fr.",
+"David P. Wilkins",
+"Parochial vicar",
+"https://irp.cdn-website.com/e7e54836/dms3rep/multi/opt/Father+Dave-1920w.jpg"
+]
+],
+"src": "https://www.diocesegfb.org/team"
+}
+],
+[
+"http://www.parrocchiadifiorano.it/santuario/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Don",
+"Roberto Montecchi",
+"Rector",
+""
+],
+[
+"p",
+"Don",
+"Giuseppe Albicini",
+"Pastor",
+""
+],
+[
+"p",
+"Don",
+"Valter Tardini",
+"",
+""
+]
+],
+"src": "http://www.parrocchiadifiorano.it/sacerdoti/",
+"mt": [
+"Santuario – 17.30 (Prefestiva – 19,00) – 19.00",
+"(Prefestiva – 19,00): Chiesa Parrocchiale – 8.00 9.30 11.00 – 8.30",
+"S.Messa – 20.30 (solo feriali) prefestiva 19,00 – 8.30 (giorni feriali)"
+],
+"ct": [],
+"msrc": "http://www.parrocchiadifiorano.it/celebrazioni/"
+}
+],
+[
+"http://www.diocese-annecy.fr/diocese/les-paroisses/doyenne-de-la-moyenne-vallee-de-larve/sanctuaire-de-la-benite-fontaine",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.diocese-annecy.fr/le-diocese/les-paroisses",
+"p": [
+[
+"p",
+"P.",
+"Stéphane Raux",
+"",
+""
+]
+],
+"src": "https://www.diocese-annecy.fr/grandir-dans-la-foi/pastorale-du-tourisme"
+}
+],
+[
+"http://www.diocesidifoligno.it/pls/foligno/v3_s2ew_CONSULTAZIONE.mostra_pagina?id_pagina=22406",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.diocesidifoligno.it/",
+"p": [
+[
+"p",
+"Mons.",
+"Domenico Sorrentino",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"Giovanni Nizzi",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Paolo Maria Barducci",
+"",
+""
+],
+[
+"d",
+"Diac.",
+"Mauro Masciotti",
+"Deacon",
+""
+],
+[
+"d",
+"Diac.",
+"Piergiorgio Selvi",
+"Deacon",
+""
+],
+[
+"p",
+"Mons.",
+"Luigi Filippucci",
+"",
+""
+],
+[
+"p",
+"Padre",
+"Daniele Sciacca",
+"",
+""
+],
+[
+"d",
+"Diac.",
+"Tommaso Calderini",
+"Deacon",
+""
+],
+[
+"p",
+"Mons.",
+"Giuseppe Bertini",
+"",
+""
+]
+],
+"src": "https://www.diocesidifoligno.it/curia-vescovile/consiglio-pastorale/componenti-2016-2020/"
+}
+],
+[
+"https://www.olvsj.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Ronald A. Antinarelli",
+"Pastor",
+"https://www.olvsj.org/img/restoration_snip.png"
+]
+],
+"src": "https://www.olvsj.org/",
+"mt": [
+"Weekend Masses: Saturday: 4:30 PM, Sundays 10:00 AM",
+"Weekday Masses: Mon-Wed & Fri 12:10 PM"
+],
+"ct": [
+"Confessions: Before all weekday Masses - Mon-Wed & Fri 11:30 AM",
+"Confessions only: Sat 11:30 AM - 12:00 PM (or anytime by appointment)"
+],
+"msrc": "https://www.olvsj.org/"
+}
+],
+[
+"http://lincoln.ourchurchweb.org.uk/fenandhill/about-us/page2/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://lincoln.ourchurchweb.org.uk/",
+"p": [
+[
+"p",
+"Rev.",
+"Peter Liley",
+"",
+"https://www.alfordgroup.org.uk/wp-content/uploads/2019/04/st-wilfrids-church-hall-alford-1024x683.jpg"
+]
+],
+"src": "https://lincoln.ourchurchweb.org.uk/mablethorpesutton/"
+}
+],
+[
+"http://www.parrocchiesondrio.it/it/chiese/collegiata",
+{
+"s": "ok",
+"c": 200,
+"u": "http://www.parrocchiesondrio.it/",
+"p": [
+[
+"p",
+"Don",
+"Christian Bricola",
+"Pastor",
+"http://www.parrocchiesondrio.it/files/styles/medium/public/sacerdoti/don%20Christian%20Bricola%20copia.jpeg?itok=ZkiTkvpL"
+],
+[
+"p",
+"Monsignor",
+"Valerio Modenesi",
+"",
+"http://www.parrocchiesondrio.it/files/styles/medium/public/sacerdoti/don%20Valerio%20Modenesi_0.jpg?itok=jECrgINI"
+],
+[
+"p",
+"Don",
+"Remo Bracelli",
+"Parochial vicar",
+"http://www.parrocchiesondrio.it/files/styles/medium/public/sacerdoti/73342_0.jpg?itok=DVPl3EaQ"
+],
+[
+"p",
+"Don",
+"Alessandro Di Pascale",
+"",
+"http://www.parrocchiesondrio.it/files/styles/medium/public/sacerdoti/73338.jpg?itok=cJZ4MZu9"
+],
+[
+"p",
+"Don",
+"Mirco Sosio",
+"",
+"http://www.parrocchiesondrio.it/files/styles/medium/public/sacerdoti/73341.jpg?itok=7MdRcUWc"
+]
+],
+"src": "http://www.parrocchiesondrio.it/sacerdoti",
+"mt": [
+"Domenica e festivi: ore 8.00 - 10.30 - 18.00 - 20.00",
+"Sabato e prefestivi: ore 7.15 - 18.00",
+"Feriali: ore 7.15 - 18.00"
+],
+"ct": [],
+"msrc": "http://www.parrocchiesondrio.it/orari-celebrazioni"
+}
+],
+[
+"http://www.cpsfermonerviano.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.cpsfermonerviano.it/",
+"p": [
+[
+"p",
+"Don",
+"Daniele Gandini",
+"",
+""
+],
+[
+"p",
+"Don",
+"Marco Sala",
+"",
+""
+],
+[
+"p",
+"Don",
+"Claudio Franchi",
+"",
+""
+],
+[
+"p",
+"Don",
+"Andrea Tosca",
+"",
+""
+]
+],
+"src": "https://www.cpsfermonerviano.it/consiglio-pastorale-e-affari-economici/"
+}
+],
+[
+"http://www.chiesadibologna.it/orari-apertura-confessioni-110.html",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.chiesadibologna.it/",
+"p": [
+[
+"p",
+"Mons.",
+"Roberto Parisini",
+"",
+""
+]
+],
+"src": "https://www.chiesadibologna.it/dedicazione-della-cattedrale-ritiro-del-clero-e-messa-in-cattedrale/"
+}
+],
+[
+"http://www.holyspiritparish.com.au/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Anthony Mellor",
+"Administrator",
+""
+],
+[
+"p",
+"Father",
+"Bradley Davies",
+"",
+""
+]
+],
+"src": "http://www.holyspiritparish.com.au/our-priests",
+"mt": [
+"Weekdays Wed 5.30pm, Thurs 9.00am, Fri 7.00am",
+"Weekends Sat 5.00pm Vigil Mass, Sun 7.30am & 9.30am"
+],
+"ct": [
+"Reconciliation Sat 4.30 - 4.45pm"
+],
+"msrc": "http://www.holyspiritparish.com.au/standard-mass-times"
+}
+],
+[
+"http://www.comunitasantiapostoli.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://comunitasantiapostoli.it/",
+"p": [
+[
+"p",
+"Don",
+"Carlo Aresi",
+"",
+""
+]
+],
+"src": "https://comunitasantiapostoli.it/contatti"
+}
+],
+[
+"https://psdgdiogo.wixsite.com/diogodevasconcelos",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Pe.",
+"Domingos Pinto Coelho da Rocha",
+"",
+"https://static.wixstatic.com/media/74aef5_f1d6004f41cd413193c1e11ceb820049~mv2.jpg/v1/fill/w_147,h_83,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/74aef5_f1d6004f41cd413193c1e11ceb820049~mv2.jpg"
+],
+[
+"p",
+"Pe.",
+"José Maria Portas Crespo",
+"Pastor",
+"https://static.wixstatic.com/media/74aef5_f1d6004f41cd413193c1e11ceb820049~mv2.jpg/v1/fill/w_147,h_83,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/74aef5_f1d6004f41cd413193c1e11ceb820049~mv2.jpg"
+],
+[
+"p",
+"Pe.",
+"Geraldo Bráz de Oliveira",
+"Pastor",
+"https://static.wixstatic.com/media/74aef5_f1d6004f41cd413193c1e11ceb820049~mv2.jpg/v1/fill/w_147,h_83,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/74aef5_f1d6004f41cd413193c1e11ceb820049~mv2.jpg"
+]
+],
+"src": "https://psdgdiogo.wixsite.com/diogodevasconcelos/quem-somos",
+"mt": [
+"Sábado às19:00h",
+"Domingo às11:00h",
+"De Segunda à Domingo: De 7:30h às 18:00h"
+],
+"ct": [],
+"msrc": "https://psdgdiogo.wixsite.com/diogodevasconcelos"
+}
+],
+[
+"http://www.sacredheartcocathedral.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://sacredheartcocathedral.com/",
+"p": [
+[
+"p",
+"Very Reverend Fr.",
+"Donald X. Higgs",
+"Rector",
+"https://sacredheartcocathedral.com/wp-content/uploads/sites/38/2016/07/Fr.-Don-400x499.jpg"
+],
+[
+"p",
+"Reverend",
+"Prakash Kerketta",
+"Rector",
+""
+]
+],
+"src": "https://sacredheartcocathedral.com/",
+"mt": [
+"Saturday – 8:15am & Vigil 5:30pm",
+"Sunday – 8:00am, 10:30am, 5:00pm",
+"Monday – 8:15am",
+"Tuesday – 12:00pm",
+"Wednesday – 12:00pm",
+"Thursday – 12:00pm",
+"Friday – 12:00pm"
+],
+"ct": [],
+"msrc": "https://sacredheartcocathedral.com/"
+}
+],
+[
+"http://www.saintjosephjasper.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://saintjosephjasper.org/",
+"p": [
+[
+"p",
+"Fr.",
+"John Brosmer",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Keith Hart",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Juan Ramirez",
+"Parochial vicar",
+""
+]
+],
+"src": "https://saintjosephjasper.org/connect/parish-staff",
+"mt": [
+"Saturday: 4:30 p.m. (Vigil)",
+"Sunday: 6:00 a.m., 7:30 a.m., 9:00 a.m., 10:30 a.m. (Spanish), 6:00 p.m.",
+"Monday-Friday: 8:00 a.m.",
+"Tuesday: 6:30 p.m. (Spanish)",
+"Wednesday: 12:05 p.m.",
+"Thursday: 6:30 p.m.",
+"Saturday: 8:00 a.m.",
+"1st Tuesday: 7:00 p.m. - 8:00 p.m.",
+"Wednesday: 12:30 p.m. - 7:00 p.m."
+],
+"ct": [
+"Wednesday: 7:30 a.m.-7:50 a.m.",
+"Thursday: 7:00 p.m.- 8:00 p.m.",
+"Saturday: 8:30 a.m. - 9:30 a.m."
+],
+"msrc": "https://saintjosephjasper.org/"
+}
+],
+[
+"http://www.saintpaulhague.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.saintpaulhague.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Andrew Heintz",
+"Parochial vicar",
+"https://www.saintpaulhague.com/wp-content/uploads/2013/01/father-heintz.jpg"
+],
+[
+"p",
+"Reverend",
+"Andrew J. Heintz",
+"Parochial vicar",
+"https://www.saintpaulhague.com/wp-content/uploads/2013/01/father-heintz.jpg"
+]
+],
+"src": "https://www.saintpaulhague.com/contact-us/",
+"mt": [
+"Saturday: 5:00 pm - Vigil Mass",
+"Sunday: 9:00 am | 12:00 pm - Misa en Español",
+"Monday, Tuesday, Wednesday and Friday: 8:30 am",
+"Immediately following 8:30 am Mass on Monday, Wednesday and Friday",
+"First Friday Mass: 8:30 am on the 1st Friday of each month followed by Holy Hour, Exposition & Benediction"
+],
+"ct": [
+"Saturday: 4:15 - 4:45 pm",
+"Sunday: 8:15 - 8:45 am | 11:30 - 11:45 am en Español"
+],
+"msrc": "https://www.saintpaulhague.com/"
+}
+],
+[
+"https://holyspirit-tempe-az.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Long Phi Nguyen",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Toàn Vũ",
+"Parochial vicar",
+""
+],
+[
+"d",
+"Dcn.",
+"Gary Johnson",
+"Deacon",
+""
+],
+[
+"d",
+"Dcn.",
+"Mark Lishko",
+"Deacon",
+""
+]
+],
+"src": "https://holyspirit-tempe-az.org/staff",
+"mt": [
+"Sat Vigil – 4:30pm",
+"Sun – 7:00am 9:00am 11:00am 5:30pm (Vietnamese)",
+"Mon - Sat – 8:00am in Main Church",
+"Fri – 7:30pm (Vietnamese)",
+"Daily – 6:30am-8:00pm",
+"Mon, Oct 26 @ 6:00 PM - 8:30 PM"
+],
+"ct": [
+"Mon - Fri – 8:45-9:30am",
+"Sat – 3:00-4:15pm",
+"Sun – 4:30-5:15pm (Vietnamese/English)"
+],
+"msrc": "https://holyspirit-tempe-az.org/"
+}
+],
+[
+"https://ckcocatholics.org/saint-rose-columbus-kansas",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Luke Carroll",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Robert Pepe",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Jeremy Huser",
+"Pastor",
+""
+]
+],
+"src": "https://ckcocatholics.org/saint-rose-columbus-kansas/",
+"mt": [
+"Sunday, July 19th at 2:00 p.m.",
+"Wednesday, July 22nd at 6:00 p.m."
+],
+"ct": [],
+"msrc": "https://ckcocatholics.org/holy-mass-live/"
+}
+],
+[
+"http://saintfds.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://saintfds.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Jorge Rocha",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"Bertrand L. Theroux",
+"Pastor emeritus",
+""
+],
+[
+"d",
+"Deacon",
+"Ron H. De Pietro",
+"Deacon",
+""
+]
+],
+"src": "https://saintfds.org/meet-the-team/",
+"mt": [
+"Saturday (Sunday Vigil) – 5:00 pm",
+"Sunday – 7:30 am | 9:00 am | 11:30 am",
+"Monday-Friday – 8:00 am"
+],
+"ct": [
+"Saturday – 3:30-4:15 pm, or by appointment anytime"
+],
+"msrc": "https://saintfds.org/"
+}
+],
+[
+"http://www.holyredeemerparish.ca/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Monsignor",
+"Walter Brennan",
+"Pastor",
+"http://www.holyredeemerparish.ca/index.1.jpg"
+],
+[
+"p",
+"Father",
+"Charles Costello",
+"Rector",
+""
+]
+],
+"src": "http://www.holyredeemerparish.ca/"
+}
+],
+[
+"https://www.santamariadomenicamazzarello.it/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Don",
+"Claudio Fabbri",
+"Pastor",
+""
+]
+],
+"src": "https://www.santamariadomenicamazzarello.it/",
+"mt": [
+"» Sabato: Ore 8:30 e 18:30",
+"» Domenica e Festivi: Ore 10:00, 11:30 e 18:30",
+"Giorni Feriali (dal lunedì al venerdì): ore 08:30 e 18:30;",
+"Sabato: ore 08:30 e 18:30 (Santa Messa prefestiva);",
+"Domenica e Festivi: ore 10:00, 11:30 e 18:30. (continua a leggere)...",
+"Dal lunedì al venerdì: ore 8:30 e 18:30",
+"Domenica: ore 10:00, 11:30 e 18:30"
+],
+"ct": [],
+"msrc": "https://www.santamariadomenicamazzarello.it/"
+}
+],
+[
+"http://www.senhoradaluzirati.com.br",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"d",
+"Diácono",
+"Luciano Ferreira da Silva",
+"Deacon",
+"https://senhoradaluzirati.com.br/wp-content/uploads/2025/01/diacono_luciano.jpeg"
+]
+],
+"src": "http://senhoradaluzirati.com.br/clero/"
+}
+],
+[
+"https://www.zasow.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Proboszcz Paweł Skraba",
+"Pastor",
+""
+]
+],
+"src": "https://www.zasow.pl/duszpasterstwo/kancelaria-parafialna.html"
+}
+],
+[
+"http://www.thecatholiccommunities.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.thecatholiccommunities.org/",
+"p": [
+[
+"p",
+"Father",
+"Gerald Schweitzer",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Paul Quanz",
+"Administrator",
+""
+]
+],
+"src": "https://www.thecatholiccommunities.org/",
+"mt": [
+"Monday : 8:00 AM",
+"Wednesday : 8:00 AM",
+"Friday : 8:00 AM",
+"Saturday: 4:00 PM",
+"Sunday : 10:00 AM",
+"Sunday : 8:00 AM",
+"Tuesday : 8:00 AM",
+"Thursday : 8:00 AM"
+],
+"ct": [],
+"msrc": "https://www.thecatholiccommunities.org/mass-schedules"
+}
+],
+[
+"https://diocesisdedavid.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Pbro.",
+"Rory Gutiérrez",
+"",
+""
+]
+],
+"src": "https://diocesisdedavid.org/quienes-somos/"
+}
+],
+[
+"http://www.stolivers.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stolivers.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Cyriac Mattathilanickal",
+"Pastor",
+"https://irp.cdn-website.com/74266298/dms3rep/multi/opt/Fr.+Cyriac+staff-1920w.jpg"
+],
+[
+"d",
+"Rev. Mr.",
+"Mike Chavez",
+"Deacon",
+"https://irp.cdn-website.com/74266298/dms3rep/multi/opt/Deacon+Mike+staff-1920w.jpg"
+],
+[
+"d",
+"Rev. Mr.",
+"Jaime Agudelo",
+"Deacon",
+"https://irp.cdn-website.com/74266298/dms3rep/multi/opt/Deacon+Jaime+Agudelo-1920w.jpg"
+]
+],
+"src": "https://www.stolivers.com/about",
+"mt": [
+"Saturday Vigil Mass 5:00pm in English; 7:00pm in Spanish",
+"Sunday: 8:00am, 9:30am, 11:15am, 1:15pm in Spanish and 5:00pm LifeTeen",
+"Weekdays: M-F 9:00AM in English",
+"Sunday: Saturdays 9:00AM",
+"Sunday Live-Stream Masses: 11:15am and 5:00pm in English 1:15pm Mass in Spanish"
+],
+"ct": [
+"Saturday 3:30pm-4:30pm"
+],
+"msrc": "https://www.stolivers.com/"
+}
+],
+[
+"https://www.diocesedivinopolis.org.br/paroquias.asp?ss=53",
+{
+"s": "ok",
+"c": 200,
+"u": "https://diocesedivinopolis.org.br/",
+"p": [
+[
+"p",
+"Padre",
+"José Belvino",
+"",
+"https://diocesedivinopolis.org.br/wp-content/uploads/2013/09/IMG_6621-scaled-1.jpg"
+]
+],
+"src": "https://diocesedivinopolis.org.br/clero/dom-jose-belvino-do-nascimento/"
+}
+],
+[
+"http://www.parrocchiasanleopoldo.it/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Don",
+"Daniele Cognolato",
+"Pastor",
+""
+]
+],
+"src": "http://www.parrocchiasanleopoldo.it/contatti.html"
+}
+],
+[
+"https://paroisse-poissy.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Père",
+"Matthieu Berger",
+"Pastor",
+"https://paroisse-poissy.com/wp-content/uploads/2026/09/mb2-01.webp"
+],
+[
+"p",
+"Père",
+"Joseph Vu",
+"Parochial vicar",
+"https://paroisse-poissy.com/wp-content/uploads/2026/09/joseph-vu-01.webp"
+],
+[
+"p",
+"Père",
+"Pierre Hoffmann",
+"",
+"https://paroisse-poissy.com/wp-content/uploads/2026/09/hoffmann-01-150x150.webp"
+],
+[
+"p",
+"Père",
+"Willy Jeudy",
+"Parochial vicar",
+"https://paroisse-poissy.com/wp-content/uploads/2026/09/pere-willy-jeudy-01.webp"
+],
+[
+"p",
+"P.",
+"Frédérik de Moucheron",
+"",
+""
+]
+],
+"src": "https://paroisse-poissy.com/les-pretres-et-diacre/",
+"mt": [
+"Samedi à 18h : église Sainte-Anne de Poissy, 130 avenue Foch, Poissy",
+"Mardi : messe à 12h15",
+"Vendredi : laudes à 8h40, messe à 9h, adoration après la messe jusqu’à 10h30",
+"Mercredi : laudes à 8h40, messe à 9h (sauf le 1er mercredi du mois), adoration de 9h30 à 10h",
+"Jeudi : laudes à 8h40, messe à 9h, café après la messe",
+"Du mardi au samedi : de 9h30 à 12h (toute l’année)",
+"Du mardi au jeudi : de 14h à 16h (sauf vacances scolaires)",
+"Vendredi : de 14h à 19h30 (sauf vacances scolaires)"
+],
+"ct": [
+"Samedi : laudes à 8h40, messe à 9h, adoration et confessions après la messe jusqu’à 10h30 (sauf vacances scolaires)",
+"Mardi, de 18h à 19h, Collégiale Notre-Dame : P. Willy Jeudy (toute l’année)",
+"Mercredi, de 18h à 19h, Collégiale Notre-Dame : P. Joseph Vu The Ky (toute l’année)",
+"Jeudi, de 18h à 19h, Collégiale Notre-Dame : P. Joseph Vu The Ky (sauf vacances scolaires)",
+"Vendredi, de 18h à 19h30, presbytère : P. Matthieu Berger / P. Willy Jeudy (toute l’année)"
+],
+"msrc": "https://paroisse-poissy.com/les-horaires/"
+}
+],
+[
+"https://www.grcathedral.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Very Rev.",
+"Dat Tran",
+"",
+"https://grcathedral.org/wp-content/uploads/2023/11/Tran_Dat_web-150x150.jpg"
+],
+[
+"p",
+"Rev.",
+"Mike Cruickshank",
+"",
+"https://grcathedral.org/wp-content/uploads/2023/11/Cruickshank_Mike_web-150x150.jpg"
+],
+[
+"p",
+"Rev.",
+"Ryan Casey",
+"",
+"https://grcathedral.org/wp-content/uploads/2024/07/Casey_Ryan-for-web-150x150.jpg"
+],
+[
+"p",
+"Rev.",
+"Bill Edens",
+"",
+"https://grcathedral.org/wp-content/uploads/2023/11/Edens_Bill_web-150x150.jpg"
+],
+[
+"p",
+"Rev.",
+"Joachim Lally",
+"",
+"https://grcathedral.org/wp-content/uploads/2023/11/Lally_Joachim_web-150x150.jpg"
+],
+[
+"p",
+"Rev.",
+"Ken Boyack",
+"",
+"https://grcathedral.org/wp-content/uploads/2024/07/Boyack_Ken-for-web-150x150.jpg"
+],
+[
+"d",
+"Dcn.",
+"Christian Cifuentes",
+"Deacon",
+"https://grcathedral.org/wp-content/uploads/2026/03/Cifuentes_Christian_web-150x150.jpg"
+],
+[
+"d",
+"Dcn.",
+"Dennis Rybicki",
+"Deacon",
+"https://grcathedral.org/wp-content/uploads/2023/11/Rybicki_Dennis-web-150x150.jpg"
+]
+],
+"src": "https://grcathedral.org/contact/",
+"mt": [
+"Saturday Vigil Mass: 4:30 p.m. English Mass",
+"Sunday Masses: 10:00 a.m. English Mass (televised/livestreamed)",
+"Sunday Masses: 12:00 p.m. Spanish Mass (livestreamed)",
+"Sunday Masses: 5:30 p.m. English Mass",
+"Sunday Masses: 7:30 p.m. English Mass",
+"Monday through Friday: 7:00 a.m. English Mass",
+"Monday through Friday: 12:05 p.m. English Mass",
+"Saturday: 8:00 a.m. Spanish Mass",
+"Young Adults: Every Tuesday meet up for 7am Mass followed by Coffee at Wealthy Street Bakery...",
+"This sacrament of healing is available every first Friday in the chapel before the 12:05pm daily Mass."
+],
+"ct": [
+"Monday through Friday: 7:30 a.m. Confessions",
+"Monday through Friday: 12:35 p.m. Confessions",
+"Saturday: 11:00 a.m. Confessions"
+],
+"msrc": "https://grcathedral.org/"
+}
+],
+[
+"https://www.diocesedeassis.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Pe.",
+"José David Espessotti",
+"",
+"https://www.diocesedeassis.org/uploads/clero/9928606032018142619.jpg"
+],
+[
+"p",
+"Pe.",
+"Jonathas Alfredo Zakir Pereira",
+"",
+"https://www.diocesedeassis.org/uploads/clero/2037812032018103136.jpg"
+],
+[
+"p",
+"Pe.",
+"David José Martins",
+"",
+"https://www.diocesedeassis.org/uploads/clero/5797509032018101837.jpg"
+],
+[
+"p",
+"Pe.",
+"José Martins Cardoso",
+"",
+"https://www.diocesedeassis.org/uploads/clero/6036106032018161631.jpg"
+],
+[
+"p",
+"Pe.",
+"Ronaldo Vieira Gonçalves de Passos",
+"",
+"https://www.diocesedeassis.org/uploads/clero/4959430012024191351.png"
+]
+],
+"src": "https://www.diocesedeassis.org/clero-diocesano"
+}
+],
+[
+"http://www.stjohnvianneyvashon.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stjohnvianneyvashon.com/",
+"p": [
+[
+"p",
+"Fr.",
+"David Mulholland",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"David Mayovsky",
+"Parochial vicar",
+""
+]
+],
+"src": "https://stjohnvianneyvashon.com/about/",
+"mt": [
+"Saturday 5:00pm",
+"Sunday 8:15am",
+"Thursday & Friday: 12:00noon"
+],
+"ct": [
+"Saturday: 4:00 PM to 4:30 PM"
+],
+"msrc": "https://stjohnvianneyvashon.com/"
+}
+],
+[
+"http://www.stedward.net/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stedward.net/",
+"p": [
+[
+"p",
+"Rev.",
+"Albert Lahens",
+"",
+"https://irp.cdn-website.com/d8a3c93c/dms3rep/multi/opt/Lahens-1920w.jpg"
+],
+[
+"p",
+"Rev.",
+"Ivan Toledo",
+"",
+"https://irp.cdn-website.com/d8a3c93c/dms3rep/multi/opt/20251217_toledo_ivan-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Carl Cramer",
+"Deacon",
+"https://irp.cdn-website.com/d8a3c93c/dms3rep/multi/opt/Cramer-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Ramon Palacio",
+"Deacon",
+"https://irp.cdn-website.com/d8a3c93c/dms3rep/multi/opt/PalacioRamon-1920w.jpg"
+],
+[
+"p",
+"Rev. Msgr.",
+"Michael J. Eivers",
+"Parochial vicar",
+"https://irp.cdn-website.com/d8a3c93c/dms3rep/multi/opt/Lahens1-1920w.jpg"
+],
+[
+"p",
+"Rev.",
+"John Peloso",
+"",
+"https://irp.cdn-website.com/d8a3c93c/dms3rep/multi/opt/Lahens1-1920w.jpg"
+],
+[
+"p",
+"Rev.",
+"Ivan Toledo Dominguez",
+"",
+"https://irp.cdn-website.com/d8a3c93c/dms3rep/multi/opt/20251217_toledo_ivan-1920w.jpg"
+]
+],
+"src": "https://www.stedward.net/clergy-staff",
+"mt": [
+"5:00pm (Anticipated Sunday Mass)",
+"Saturday Mass: 5:00pm",
+"Sunday Mass: 7:30am",
+"Sunday Mass: 9:00am",
+"Sunday Mass: 11:00am",
+"Monday - Friday: 8:00am"
+],
+"ct": [
+"Thursday: 8:30am",
+"Saturday: 4:00pm",
+"Monday - Tuesday: 8:30am - 4:00pm",
+"Wednesday - Thursday: 8:30am - 8:30pm﻿",
+"Friday: 8:30am - 2:00pm"
+],
+"msrc": "https://www.stedward.net/"
+}
+],
+[
+"http://www.saintpatricks.org.uk/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.saintpatricks.org.uk/",
+"p": [
+[
+"p",
+"Canon",
+"Gregory Grant",
+"",
+"https://www.saintpatricks.org.uk/wp-content/uploads/2021/04/3R4A0327-Edit-300x229.jpg"
+],
+[
+"d",
+"Deacon",
+"Denis Deasey",
+"Deacon",
+"https://www.saintpatricks.org.uk/wp-content/uploads/2021/04/photo-coming-soon-180x180.jpg"
+],
+[
+"d",
+"Deacon",
+"Robert Easton",
+"Deacon",
+"https://www.saintpatricks.org.uk/wp-content/uploads/2021/04/photo-coming-soon-180x180.jpg"
+]
+],
+"src": "https://www.saintpatricks.org.uk/parish-team/",
+"mt": [
+"Saturday – 6.30 p.m.",
+"Sunday – 8.30 a.m. and 10.00 a.m.",
+"Tuesday – 7.30 p.m.",
+"Wednesday – 9.15 a.m.",
+"Thursday – 9.15 a.m.",
+"Friday – 12.00 noon",
+"Thursday, 2nd April 2026: 7.30pm – Mass of The Last Supper",
+"3.00pm – Good Friday Service",
+"Saturday, 4th April 2026: 11.00am – Blessing of the Polish Baskets",
+"6.30pm – Easter Vigil Mass"
+],
+"ct": [
+"Friday, 3rd April 2026: 10.45am – Confessions"
+],
+"msrc": "https://www.saintpatricks.org.uk/mass-times/"
+}
+],
+[
+"https://ourladyoflourdesnewlondon.weebly.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Ron Brickner",
+"Pastor",
+"https://ourladyoflourdesnewlondon.weebly.com/uploads/7/7/1/5/77158409/our-church_orig.jpg"
+]
+],
+"src": "https://ourladyoflourdesnewlondon.weebly.com/",
+"mt": [
+"All Saints Feast Day Mass: Sunday, November 1st, at the 8:30AM Mass",
+"Saturday Vigil 6 pm",
+"Sunday 8:30 am",
+"Tuesday 7 pm",
+"Wednesday 8 am - Eucharistic Adoration",
+"Thursday 9 am",
+"Friday 9 am",
+"Saturday Vigil 4 pm",
+"Sunday 11 am",
+"Eucharistic Adoration: Beginning after Wednesday 8AM Mass through 11PM Eucharistic Adoration printable"
+],
+"ct": [
+"Confession: Tuesday-6:30PM, Wednesday-7:30AM, Saturday-5:30PM, Sunday-8AM"
+],
+"msrc": "https://ourladyoflourdesnewlondon.weebly.com/"
+}
+],
+[
+"http://www.saintvincentparish.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Jeeson V. Stephan",
+"Pastor",
+"http://saintvincentparish.org/wp-content/uploads/sites/24/2022/08/IMG_2016-Fr.-Jeeson-Headshot-400x500.jpg"
+],
+[
+"d",
+"Deacon",
+"Tom McFadden",
+"Deacon",
+""
+],
+[
+"p",
+"Fr.",
+"Larry Wrenn",
+"",
+""
+],
+[
+"p",
+"Father",
+"Charles McGinnis",
+"",
+""
+]
+],
+"src": "http://saintvincentparish.org/staff/",
+"mt": [
+"Sunday – 9:00 am  /  11:00 am",
+"Tuesday – 5:30 pm",
+"Wednesday – 5:30 pm",
+"Thursday – 9:00 am (School Mass) / * When school is not in session, Mass will be at 8:00 am",
+"Friday – 8:00 am",
+"Saturday – 8:00 am  /  5:00 pm (Vigil)",
+"1st Sunday of the Month / Mass at 10:15 am @ Our Lady of Seven Dolors",
+"Friday at 4:00 pm"
+],
+"ct": [
+"The Sacrament of Reconciliation is offered every Saturday from 4:00 – 4:30 pm",
+"every Saturday: 4:00 – 4:30 pm"
+],
+"msrc": "http://saintvincentparish.org/"
+}
+],
+[
+"https://ndp92.fr/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Mgr",
+"Hugues de Woillemont",
+"Parochial vicar",
+"https://ndp92.fr/wp-content/uploads/yootheme/cache/d7/image-d7e60f45.jpeg"
+]
+],
+"src": "https://ndp92.fr/",
+"mt": [
+"Mercredi: 12h20 – repas à 13h15",
+"Jeudi: 12h20",
+"Vendredi: 8h",
+"Lundi: 13h-14h : Groupe Louange",
+"jeudi 15 octobre: Vernissage de l’exposition « Murmures » de Sophie Villoutreix Brajeux – 13h",
+"Mardi 24 novembre: Conférence Littéraire avec Monseigneur Matthieu Rougé, évêque de Nanterre – 13h",
+"Jeudi 3 décembre: Méditation à partir de l’art chrétien avec le père Bernard Klasen – 13h",
+"Jeudi 10 décembre: Salon du livre – 13h",
+"Jeudi 17 décembre: Méditation biblique avec Arnaud de Chaisemartin – 13h",
+"le mardi – Sacrement de réconciliation 12h – 14h"
+],
+"ct": [
+"Mardi: 12h-14h : Confessions"
+],
+"msrc": "https://ndp92.fr/"
+}
+],
+[
+"http://www.mostholyname.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.mostholyname.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Pedro Camilo Simoes",
+"",
+""
+]
+],
+"src": "https://www.mostholyname.org/our-staff",
+"mt": [
+"Saturday Vigil | 4:30 pm (EN)",
+"Sunday | 8:00 am & 10:00 am (EN), 12:30 pm (SP)",
+"Monday-Friday | 8:00 am",
+"Saturday | 9:00 am"
+],
+"ct": [
+"Saturday | 3:30 pm - 4:15 pm"
+],
+"msrc": "https://www.mostholyname.org/"
+}
+],
+[
+"http://parafiawielopole.r-ce.pl/?page_id=77",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ksiądz",
+"Mariusz Siniak",
+"Pastor",
+""
+],
+[
+"p",
+"Ksiądz",
+"Arkadiusz Puzio",
+"Parochial vicar",
+""
+]
+],
+"src": "http://parafiawielopole.r-ce.pl/?page_id=77"
+}
+],
+[
+"http://stjosephlincoln.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stjosephlincoln.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Karun Kumar Gade",
+"Parochial vicar",
+"https://files.ecatholic.com/25453/pictures-thumb/2026/7/IMG_7411.JPG?t=1782933168000"
+],
+[
+"d",
+"Dcn.",
+"Paul DeVito",
+"Deacon",
+"https://files.ecatholic.com/25453/pictures-thumb/2026/7/IMG_5312.JPG?t=1782933745000"
+],
+[
+"d",
+"Dcn.",
+"Roberto Ruiz",
+"Deacon",
+"https://files.ecatholic.com/25453/pictures-thumb/2026/7/IMG_4554.JPG?t=1782933768000"
+],
+[
+"d",
+"Dcn.",
+"Emmett Pogue",
+"Deacon",
+"https://files.ecatholic.com/25453/pictures-thumb/2026/7/IMG_7114.JPG?t=1782933328000"
+]
+],
+"src": "https://stjosephlincoln.com/staff",
+"mt": [
+"Saturday: 5:00 PM",
+"Sunday: 8:00 AM",
+"Monday: 8:30 AM",
+"Thursday: 8:30 AM",
+"Friday: 8:30 AM",
+"Thursday, September 17, 2026: Rosary 10:30AM | Mass 11AM"
+],
+"ct": [
+"Saturday: 9:00 AM"
+],
+"msrc": "https://stjosephlincoln.com/"
+}
+],
+[
+"https://www.sydneycatholic.org/parishes_list/listing/st-finbar-sans-souci",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev",
+"Falakiko Afu",
+"",
+""
+],
+[
+"p",
+"Rev",
+"Majid Al Hanna",
+"",
+""
+],
+[
+"p",
+"Rev",
+"Thomas Alukka",
+"Pastor",
+""
+],
+[
+"p",
+"Rev",
+"John Andersen",
+"",
+""
+],
+[
+"p",
+"Rev",
+"Mark Anderson",
+"",
+""
+],
+[
+"p",
+"Rev",
+"Simon Apablaza",
+"Pastor",
+""
+],
+[
+"p",
+"Rev",
+"Joseph Armah",
+"",
+""
+],
+[
+"p",
+"Rev",
+"John Armstrong",
+"",
+""
+],
+[
+"p",
+"Rev",
+"Abraham Augusthy",
+"Pastor",
+""
+],
+[
+"p",
+"Rev",
+"Gabriel Ballawig",
+"",
+""
+],
+[
+"p",
+"Rev",
+"Lewi Barakat",
+"",
+""
+],
+[
+"p",
+"Rev",
+"Yacub Barkat",
+"Pastor",
+""
+]
+],
+"src": "https://www.sydneycatholic.org/our-people/",
+"mt": [
+"Saturday 6pm (2)",
+"English Saturday Saturday 6pm",
+"Mon: 7am",
+"Sat: 9am. On first Saturdays, Mass is followed by the Novena to Our Lady of Perpetual Succour.",
+"Sun: 8:30am Low Mass, 10:30am High Mass",
+"Mass Saturday 6pm",
+"Sun: 9.00a.m. Mass (Also 9.00am Italian Mass & 10.30am English Mass at Rockdale)"
+],
+"ct": [],
+"msrc": "https://www.sydneycatholic.org/parishes_list/categories/mass"
+}
+],
+[
+"http://www.psase.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.psase.it/",
+"p": [
+[
+"p",
+"Padre",
+"Ferdinando Colombo",
+"",
+""
+],
+[
+"p",
+"Don",
+"Luigi Fari",
+"",
+""
+]
+],
+"src": "https://www.psase.it/index.php/vivere-la-chiesa/catechesi/pastorale-giovanile",
+"mt": [
+"Lunedì, Martedì, Mercoledì e Venerdì non festivi (o prefestivi) ore 8.30",
+"Giovedì ore 18.00",
+"Sabato ore 18.00 vigiliare",
+"Domenica e festività ore 8.30 - 10.30 - 20.30 (sospesa nei giorni di Natale e Pasqua)"
+],
+"ct": [
+"Orario confessioni : Sabato 15.30 - 17.00"
+],
+"msrc": "https://www.psase.it/"
+}
+]
+],
+"dead_sample": [
+[
+"http://www.temploelcalvario.com/",
+"dns"
+],
+[
+"http://www.OLOWpreschool.com",
+"elsewhere"
+],
+[
+"https://giaoxuhoacuong.weebly.com/",
+"404"
+],
+[
+"http://www.santuarioangelina.com.br/",
+"dns"
+],
+[
+"http://iglesiasagradaeucaristia.placeweb.site",
+"parked"
+],
+[
+"http://www.prolocoerice.it/chiese.php",
+"520"
+],
+[
+"http://www.colegiocatarinense.g12.br",
+"redirects"
+],
+[
+"http://www.stboscorob.co.za/",
+"dns"
+],
+[
+"http://www.sintmaartentrinitas.nl/",
+"dns"
+],
+[
+"http://www.parrocchiatiriolo.it/",
+"dns"
+],
+[
+"http://accioncatolicasalta.com.ar/",
+"dns"
+],
+[
+"http://www.donboscoparrocchia.sdbitalia.org",
+"502"
+],
+[
+"http://iglesiasangerardo.placeweb.site/",
+"parked"
+],
+[
+"http://www.festapatronaleputignano.it/",
+"elsewhere"
+],
+[
+"http://www.stjoseph-salzgitter.de",
+"dns"
+],
+[
+"http://nghetinhlands.com/",
+"dns"
+],
+[
+"http://www.iglesia-sanfrancisco.es/",
+"dns"
+],
+[
+"http://www.parroquiadelujan.com/",
+"dns"
+],
+[
+"https://aparoquiacristorei.org/",
+"dns"
+],
+[
+"https://www.st-nikolaus-clausthal.de",
+"refused"
+],
+[
+"http://www.ourjo.org.uk",
+"dns"
+],
+[
+"http://www.ucbscz.edu.bo/",
+"dns"
+],
+[
+"http://www.capillasanblascde.py/",
+"dns"
+],
+[
+"http://www.arquidiocesis.net",
+"dns"
+],
+[
+"http://www.st-leo-st-peter.de",
+"dns"
+],
+[
+"http://www.saofranciscodeassisserra.com.br/",
+"dns"
+],
+[
+"http://www.paroquiasantaineslauzane.com.br/",
+"dns"
+],
+[
+"http://www.olapqc.com",
+"elsewhere"
+],
+[
+"http://www.cmfp.org",
+"elsewhere"
+],
+[
+"https://www.tarnogora.diecezja.lublin.pl/",
+"cert"
+],
+[
+"http://www.mbmilosierdzia-ruciane.pl",
+"dns"
+],
+[
+"http://www.arcidiocesiurbino.org",
+"ssl"
+],
+[
+"http://www.pg-fronleichnam.de",
+"dns"
+],
+[
+"http://www.colegiosantiagoapostol.net",
+"dns"
+],
+[
+"http://www.barquisimeto.arquidiocesis.info/",
+"dns"
+],
+[
+"https://www.propstei-meppen.de/Propsteigemeinde/vitus.3/index.html",
+"refused"
+],
+[
+"http://ststephencem.tripod.com/",
+"dns"
+],
+[
+"http://www.princeofpeacecafb14.flocknote.com/",
+"cert"
+],
+[
+"http://www.basilicaosservanza.it",
+"530"
+],
+[
+"http://osjph.org/",
+"dns"
+],
+[
+"http://www.paroquiasaogabriel.org.br/",
+"dns"
+],
+[
+"http://parrocchiaditrevignanoromano.com",
+"dns"
+],
+[
+"http://www.vidadefe.it/",
+"dns"
+],
+[
+"https://sanpedritocentro.com/",
+"elsewhere"
+],
+[
+"https://www.parrocchiemolfetta.it/santachillemolfetta/",
+"500"
+],
+[
+"http://stfrancisofassisi.moonfruit.com/",
+"elsewhere"
+],
+[
+"http://www.abbaye-aiguebelle.cef.fr",
+"dns"
+],
+[
+"http://www.jbjsaints.com/",
+"dns"
+],
+[
+"http://www.ac-ascoli.it/",
+"500"
+],
+[
+"https://GroveportStMary.org/",
+"dns"
+],
+[
+"http://stgregorydetroit.org",
+"dns"
+],
+[
+"http://www.catedralsanmiguel.com.ar/",
+"dns"
+],
+[
+"https://m.me/101974992968909?ref=pg--SY",
+"elsewhere"
+],
+[
+"http://www.stjosephschooldsm.org/",
+"elsewhere"
+],
+[
+"http://www.stjosephparishschool.us",
+"dns"
+],
+[
+"http://www.stsebastiancathedral.org/",
+"dns"
+],
+[
+"http://www.stmaryschurchcollingwood.ca",
+"dns"
+],
+[
+"http://www.santissimoredentor.com.br/",
+"521"
+],
+[
+"http://www.holycrosscatholicchurch.net",
+"dns"
+],
+[
+"http://stmalachychurch.faith/",
+"dns"
+]
+],
+"moved_sample": [
+[
+"http://www.monumentos.pt/site/app_pagesuser/sipa.aspx?id=6640",
+"http://www.monumentos.gov.pt/site/app_pagesuser/sipa.aspx?id=6640"
+],
+[
+"http://www.stbc.es/",
+"https://stbc.archimadrid.es/"
+],
+[
+"http://www.pv-lichtenau.de",
+"https://www.pr-wl.de/"
+],
+[
+"http://www.bridgeportdiocese.com/danbury.shtml",
+"https://www.bridgeportdiocese.org/"
+],
+[
+"http://paroquiadasmerces.blogspot.com.br/",
+"http://paroquiadasmerces.blogspot.com/"
+],
+[
+"http://www.frankfurt-katholisch.de/",
+"https://frankfurt.bistumlimburg.de/"
+],
+[
+"http://www.stjohnevang.co.uk",
+"https://stjohnnewferry.wordpress.com/"
+],
+[
+"http://stlawrenceotoole.org",
+"https://stlawrence-sacredheart.org/"
+],
+[
+"http://www.kathedrale-dresden.de",
+"https://www.bistum-dresden-meissen.de/wir-sind/kathedrale"
+],
+[
+"http://www.archdiocese.la/directories/parishes/info.php?parish_id=37",
+"https://lacatholics.org"
+],
+[
+"http://www.mitranh.org.br/s1/index.php/paroquias/136-rea-de-sleopoldo/1066-para-nossa-senhora-da-concei-sl",
+"https://diocesenh.org.br/"
+],
+[
+"http://www.edmontoneparchy.com/",
+"https://eeparchy.com"
+],
+[
+"http://www.saintpatrickmilfordnh.org",
+"https://www.spccnh.org/"
+],
+[
+"http://www.edmontoneparchy.com",
+"https://eeparchy.com"
+],
+[
+"https://www.st-michael.de",
+"https://www.katholische-kirche-in-bergkamen.de/"
+],
+[
+"http://stmichael-muenster.de/",
+"https://bistummainz.de/region-suedhessen/pfarrei/dieburger-land/ort/muenster/"
+],
+[
+"https://washington.igivecatholic.org/organizations/our-lady-star-of-sea-catholic-church",
+"https://www.igivecatholic.org/community/washington"
+],
+[
+"http://saintpeterschurch.us",
+"https://expireddomains.com/domain/saintpeterschurch.us?utm_source=redi"
+],
+[
+"http://www.jugendstelle-kaufbeuren.de/",
+"https://www.bja-augsburg.de/Jugendstellen/Jugendstelle-Kaufbeuren"
+],
+[
+"http://www.pscmi.com/",
+"https://www.oratoriogasparebertoni.org/2021/"
+],
+[
+"http://aspajapi.blogspot.com.br/",
+"http://aspajapi.blogspot.com/"
+],
+[
+"https://parohiapadrepio.blogspot.ro/",
+"https://parohiapadrepio.blogspot.com/"
+],
+[
+"http://www.pmap.it/parrocchiemap/consultazione/parrocchie/scheda.jsp?icsc=5000251",
+"https://orarimesse.it/icsc/5000251"
+],
+[
+"http://paroissestgermainderimouski.wordpress.com/",
+"https://paroisse-st-germain-de-rimouski.org/"
+],
+[
+"http://www.heilig-geist-braunschweig.de",
+"https://www.hl-geist-bs.de/"
+],
+[
+"http://www.diocese-chartres.com/paroisses/paroisse-notre-dame-du-combray",
+"https://diocesechartres.fr/annuaire-paroisses/paroisse-notre-dame-du-combray/"
+],
+[
+"http://www.ourladyofmercyleroy.org/",
+"https://www.the12apostles.org/"
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-jesus-cristo-libertador",
+"https://www.arquidiocesecampinas.com.br/location/paroquia-jesus-cristo-libertador/"
+],
+[
+"http://www.st-marien-menden.de",
+"https://www.pv-menden.de/gemeinden/st-marien-platte-heide/"
+],
+[
+"http://www.parrocchiemap.it/parrocchiemap/consultazione/parrocchie/scheda.jsp?icsc=6680030",
+"https://orarimesse.it/icsc/6680030"
+],
+[
+"https://share.google/jqlPktFfpnSRTQZ2a",
+"https://www.google.com/search?client=safari&sa=X&sca_esv=edb9f998570affa4&hl=it-it&biw=390&bih=745&kgmid=/g/12hkmwfvx&q=Chiesa%20di%20Santa%20Maria%20del%20Carmine&shndl=30&shem=lccpse,lsptb1,sdl1p&source=sh/x/loc/act/m1/3&kgs=afb67533fff418af"
+],
+[
+"http://www.st-josef-hausen.de",
+"https://bistummainz.de/region-mainlinie/pfarrei/muehlheim-obertshausen/start/"
+],
+[
+"http://www.johannbaptist.de/pfarr-gemeindebueros/",
+"https://www.cosmas-damian.de"
+],
+[
+"http://www.malankaraorthodoxchurch.in/",
+"https://mosc.in/"
+],
+[
+"http://catedraldejujuy.blogspot.com.ar/",
+"http://catedraldejujuy.blogspot.com/"
+],
+[
+"http://www.ruahwoods.org/",
+"https://www.ruahwoodsinstitute.org/"
+],
+[
+"https://iglesiaelsantuario.com/",
+"https://elsantuario.org/"
+],
+[
+"http://www.diocesejoinville.com.br/paroquias/paroquia-nossa-senhora-do-rosario--guanabara",
+"https://www.arquidiocesejoinville.com.br/paroquias/paroquia-nossa-senhora-do-rosario--guanabara"
+],
+[
+"http://www.basilicacateriniana.com",
+"https://www.basilicacateriniana.it/"
+],
+[
+"http://www.pfarrei-suhr.ch/de/home",
+"https://www.pastoralraum-aarau.ch/suhr/"
+],
+[
+"https://www.giaoxuphulong.org/",
+"https://giaophanphucuong.org/nha-tho/43cd97df-6599-4d75-a890-c06eb0434a13"
+],
+[
+"http://www.jugendkirche-jona.de/",
+"https://jugendkirche-frankfurt.bistumlimburg.de/"
+],
+[
+"http://gioitrevanphuc.forum-viet.net",
+"https://gioitrevanphuc.forumvi.com/"
+],
+[
+"https://forms.gle/dL3rF4xLqwS2NKYF9",
+"https://docs.google.com/forms/d/e/1FAIpQLSdESgmQX6Y4xLgnYKzyIT38_U0mHgLhVVhRxIzEccseKx0DhQ/viewform?usp=send_form"
+],
+[
+"https://cutt.ly/sanpedronolasco",
+"https://www.youtube.com/channel/UCTP_PhIs0BCUNmEHOqw2BAw"
+],
+[
+"http://www.parrocchiemap.it/parrocchiemap/consultazione/parrocchie/scheda.jsp?icsc=6680008",
+"https://orarimesse.it/icsc/6680008"
+],
+[
+"http://capelapaieterno.blogspot.com.br/p/site-da-capela-divino-pai-eterno.html",
+"http://capelapaieterno.blogspot.com/p/site-da-capela-divino-pai-eterno.html"
+],
+[
+"http://www.kkg-herrenberg.de",
+"https://kkg-herrenberg.drs.de"
+],
+[
+"http://www.kath-frick.ch",
+"https://www.kath-oberesfricktal.ch/"
+],
+[
+"http://www.stcasimir.ca",
+"https://casimirs.webflow.io/"
+],
+[
+"http://santuarimisericordiareus.blogspot.com.es",
+"https://santuarimisericordiareus.blogspot.com/"
+],
+[
+"http://santamariareinadeloscorazones.blogspot.ie/2",
+"http://santamariareinadeloscorazones.blogspot.com/"
+],
+[
+"https://marseille.catholique.fr/Saint-Just,306",
+"https://diocese-marseille.fr/"
+],
+[
+"http://www.wloclawek.franciszkanie.pl/",
+"https://wloofm.webd.pl"
+],
+[
+"http://escntrasradelvalle.blogspot.com.ar/",
+"http://escntrasradelvalle.blogspot.com/"
+],
+[
+"https://www.svcelkhart.org",
+"https://www.stvincentelkhart.org/"
+],
+[
+"https://sacredheartcroydon.org",
+"https://sacredheartcroydon.au/"
+],
+[
+"http://www.seobwi.de",
+"https://kath-w3.de/"
+],
+[
+"http://capeladesantoantoniobaguim.blogspot.pt/",
+"http://capeladesantoantoniobaguim.blogspot.com/"
+],
+[
+"http://ic-church.com",
+"https://icspcatholic.com/"
+]
+]
+}

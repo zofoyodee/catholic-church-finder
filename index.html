@@ -122,6 +122,12 @@ button, input { font: inherit; color: inherit; }
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); cursor: pointer; font-size: 12.5px; color: var(--ink-soft);
   display: inline-flex; align-items: center; gap: 7px; letter-spacing: 0.01em;
 }
+#massChips .chip[aria-pressed="true"] { border-color: color-mix(in srgb, var(--gold) 60%, transparent); color: var(--ink); background: rgba(232,184,74,0.14); }
+#massChips .tick { fill: none; stroke: currentColor; stroke-width: 2; width: 13px; height: 13px; margin: 0; }
+#massChips .lang { cursor: default; padding-right: 6px; }
+#massChips select { background: transparent; color: var(--ink); border: 0; font: inherit; font-size: 12.5px; cursor: pointer; max-width: 150px; }
+#massChips select option { background: var(--panel-solid); }
+#massChips .mass-note { color: var(--ink-faint); font-size: 11.5px; text-shadow: 0 1px 6px #000; }
 .chip i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
 .chip[aria-pressed="true"] { color: var(--ink); border-color: color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232, 184, 74, 0.14); }
 .chip small { color: var(--ink-faint); font-variant-numeric: tabular-nums; font-size: 11.5px; }
@@ -295,6 +301,19 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .facts a { color: var(--gold-soft); text-underline-offset: 3px; }
 .facts .mono { font-family: var(--font-data); font-size: 12.5px; font-variant-numeric: tabular-nums; }
 .sect h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.staff { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.staff li { display: flex; align-items: center; gap: 11px; font-size: 13.5px; }
+.staff .ph { flex: none; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; display: grid; place-items: center; background: rgba(232,184,74,0.1); border: 1px solid var(--line); color: var(--gold-soft); font-weight: 600; font-size: 14px; }
+.staff .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
+.staff b { display: block; font-weight: 600; }
+.staff small { color: var(--ink-soft); font-size: 12px; }
+.staff-src { margin: 9px 0 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
+.staff-src a { color: var(--gold-soft); text-underline-offset: 3px; }
+.sched { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 13.5px; }
+.sched li { padding-left: 12px; position: relative; }
+.sched li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.7; }
+.facts .dead { color: var(--ink-faint); }
+.facts .moved { color: var(--ink-faint); font-size: 12px; }
 .media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .media a {
   display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 12px;
@@ -369,6 +388,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
   <div class="chips" id="chips" role="group" aria-label="Show church types"></div>
+  <div class="chips" id="massChips" role="group" aria-label="Filter by Mass times" hidden></div>
 </header>
 
 <div class="ctrls">
@@ -488,6 +508,7 @@ function buildGeoJSON() {
   for (let i = 0; i < n; i++) {
     const t = typ[i] & 7;
     if (!enabled.has(t)) continue;
+    if (state.only && !state.only.has(i)) continue;
     feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t, m: typ[i] >> 3 } });
   }
   return { type: 'FeatureCollection', features: feats };
@@ -497,7 +518,7 @@ function notableGeoJSON() {
   const { lon, lat, typ, n, enabled } = state;
   for (let i = 0; i < n; i++) {
     const t = typ[i] & 7;
-    if ((t === 1 || t === 2) && enabled.has(t)) feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t } });
+    if ((t === 1 || t === 2) && enabled.has(t) && !(state.only && !state.only.has(i))) feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t } });
   }
   return { type: 'FeatureCollection', features: feats };
 }
@@ -507,6 +528,135 @@ async function shardFor(i) {
   if (!state.shards.has(s)) state.shards.set(s, getJSON('data/d/' + s + '.json').catch(e => { state.shards.delete(s); throw e; }));
   const recs = await state.shards.get(s);
   return recs[i - s * state.meta.shardSize];
+}
+
+/* ---------- website checks and parish staff (data/web, built by scripts/web in GitHub Actions) ---------- */
+const web = { shards: new Map(), meta: null };
+let overrides = null;  // data/overrides.json: hand corrections, keyed by church index
+async function webFor(i) {
+  if (!overrides) overrides = getJSON('data/overrides.json').catch(() => ({}));
+  const s = Math.floor(i / state.meta.shardSize);
+  if (!web.meta) web.meta = getJSON('data/web/meta.json').catch(() => ({}));
+  if (!web.shards.has(s)) web.shards.set(s, getJSON('data/web/' + s + '.json').catch(() => { web.shards.delete(s); return {}; }));
+  const [sh, meta] = await Promise.all([web.shards.get(s), web.meta]);
+  return { entry: sh[i - s * state.meta.shardSize] || null, checked: meta.checked || '', fix: (await overrides)[i] || {} };
+}
+// Many listed "websites" are profiles on big platforms; name them for what they are
+const PLATFORMS = [
+  [/(^|\.)(facebook|fb)\.com$/, 'Facebook', 'Facebook page'], [/(^|\.)instagram\.com$/, 'Instagram', 'Instagram'],
+  [/(^|\.)(youtube\.com|youtu\.be)$/, 'YouTube', 'YouTube channel'], [/(^|\.)tiktok\.com$/, 'TikTok', 'TikTok'],
+  [/(^|\.)(twitter|x)\.com$/, 'X', 'X (Twitter)'], [/(^|\.)(whatsapp\.com|wa\.me)$/, 'WhatsApp', 'WhatsApp'],
+  [/(^|\.)linktr\.ee$/, 'Links', 'Links page'], [/(^|\.)wikipedia\.org$/, 'Wikipedia', 'Wikipedia article'],
+  [/(^|\.)(maps\.app\.goo\.gl|goo\.gl)$|^maps\.google\./, null, null],
+];
+function linkKind(u) {
+  let h = ''; try { h = new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return null; }
+  for (const [rx, btn, row] of PLATFORMS) if (rx.test(h)) return { btn, row, platform: true };
+  return { btn: 'Parish website', row: 'Website', platform: false };
+}
+const ROLE_ORDER = ['Pastor', 'Administrator', 'Rector', 'Parochial vicar', 'Chaplain', 'In residence', '', 'Pastor emeritus', 'Deacon'];
+function initials(n) { return n.split(/\s+/).filter(w => /^[A-ZÀ-Þ]/.test(w)).map(w => w[0]).slice(0, 2).join('') || '✝'; }
+function pastorOf(entry) {
+  const staff = (entry && entry[2]) || [];
+  return staff.find(p => p[0] === 'p' && /^(Pastor|Administrator|Rector)$/.test(p[3])) || null;
+}
+function scheduleHTML(entry, checked, host) {
+  const mass = (entry && entry[4]) || [], conf = (entry && entry[5]) || [], src = entry && entry[6];
+  if (!mass.length && !conf.length) return '';
+  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) : '';
+  const list = (rows) => `<ul class="sched">${rows.map(r => `<li>${esc(r)}</li>`).join('')}</ul>`;
+  return `<div class="sect">${mass.length ? `<h3>Mass times</h3>${list(mass)}` : ''}${conf.length ? `<h3${mass.length ? ' style="margin-top:14px"' : ''}>Confession</h3>${list(conf)}` : ''}
+    <p class="staff-src">From <a href="${esc(src)}" target="_blank" rel="noopener">${esc(host(src))}</a>${when ? `, checked ${esc(when)}` : ''}. Times change for holidays and seasons, so check with the parish.</p></div>`;
+}
+function staffHTML(entry, checked, webUrl, host) {
+  const staff = (entry && entry[2]) || [];
+  const src = (entry && entry[3]) || webUrl;
+  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) : '';
+  if (!staff.length) return '';  // only show Staff when the parish site named its clergy
+  // "Father Vu Lam" and "Fr. Peter Vu Lam" on one page are the same man: keep the fuller entry
+  const words = (n) => n.toLowerCase().replace(/\./g, '').split(/\s+/);
+  const dup = (a, b) => a !== b && a[2].length <= b[2].length && words(a[2]).every(w => words(b[2]).includes(w));
+  const rows = staff.filter(p => !staff.some(q => dup(p, q) && (q[2].length > p[2].length || staff.indexOf(q) < staff.indexOf(p))))
+    .map(([k, title, nm, role, img]) => ({ k, title, nm, role: role || (k === 'd' ? 'Deacon' : 'Priest'), img }))
+    .sort((a, b) => (a.k === 'd') - (b.k === 'd') || ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role));
+  return `<div class="sect"><h3>Staff</h3><ul class="staff">${rows.map(p => `
+      <li><span class="ph">${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode('${esc(initials(p.nm))}'))">` : esc(initials(p.nm))}</span>
+        <span><b>${esc(p.title)} ${esc(p.nm)}</b><small>${esc(p.role)}</small></span></li>`).join('')}</ul>
+    <p class="staff-src">From <a href="${esc(src)}" target="_blank" rel="noopener">${esc(host(src))}</a>${when ? `, checked ${esc(when)}` : ''}. Assignments change, so confirm with the parish.</p></div>`;
+}
+
+/* ---------- Mass filters: "Mass soon", "Confession soon" and Mass language, from data/web/sched.json ---------- */
+// Each church: [time zone index, slot...]; slot = kind (0 Mass, 1 Confession) | day mask << 1 (bit 0 = Sunday) | minutes << 8 | language << 19
+const LANG_NAMES = { es: 'Spanish', la: 'Latin', vi: 'Vietnamese', pl: 'Polish', pt: 'Portuguese', it: 'Italian', fr: 'French', ko: 'Korean', tl: 'Tagalog', zh: 'Chinese',
+  ht: 'Haitian Creole', de: 'German', en: 'English', ga: 'Irish', ar: 'Arabic', uk: 'Ukrainian', hu: 'Hungarian', hr: 'Croatian', sw: 'Swahili', ig: 'Igbo', ml: 'Malayalam', ta: 'Tamil', asl: 'Sign language' };
+const SOON_MIN = 120;
+const mf = { data: null, mode: '', lang: '', timer: 0, fmts: new Map() };
+function localNow(tz) {
+  let f = mf.fmts.get(tz);
+  if (!f) { try { f = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }); } catch (e) { f = null; } mf.fmts.set(tz, f); }
+  if (!f) return null;
+  const p = Object.fromEntries(f.formatToParts(new Date()).map(x => [x.type, x.value]));
+  return { day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), min: (+p.hour % 24) * 60 + +p.minute };
+}
+function soonSet(kind) {
+  const out = new Set(), now = new Map();
+  for (const [k, v] of Object.entries(mf.data.c)) {
+    const tz = mf.data.tz[v[0]];
+    if (!now.has(tz)) now.set(tz, localNow(tz));
+    const t = now.get(tz); if (!t) continue;
+    for (let j = 1; j < v.length; j++) {
+      const s = v[j];
+      if ((s & 1) !== kind || !((s >> 1) & 127 & (1 << t.day))) continue;
+      const d = ((s >> 8) & 2047) - t.min;
+      if (d >= -10 && d <= SOON_MIN) { out.add(+k); break; }
+    }
+  }
+  return out;
+}
+function langSet(code) {
+  const li = mf.data.langs.indexOf(code), out = new Set();
+  for (const [k, v] of Object.entries(mf.data.c)) for (let j = 1; j < v.length; j++) if ((v[j] & 1) === 0 && (v[j] >> 19) === li) { out.add(+k); break; }
+  return out;
+}
+function applyMassFilter() {
+  let only = null;
+  if (mf.mode) only = soonSet(mf.mode === 'mass' ? 0 : 1);
+  if (mf.lang) { const l = langSet(mf.lang); only = only ? new Set([...only].filter(i => l.has(i))) : l; }
+  state.only = only;
+  map.getSource('churches').setData(buildGeoJSON());
+  map.getSource('notable').setData(notableGeoJSON());
+  renderMassChips();
+  if (only) $('tagline').innerHTML = `Showing <b>${fmt(only.size)}</b> ${only.size === 1 ? 'church' : 'churches'} with ${mf.mode === 'conf' ? 'Confession' : 'Mass'}${mf.mode ? ' in the next 2 hours' : ''}${mf.lang ? ' in ' + esc(LANG_NAMES[mf.lang] || mf.lang) : ''}`;
+  else updateTagline();
+  clearInterval(mf.timer);
+  if (mf.mode) mf.timer = setInterval(applyMassFilter, 5 * 60 * 1000);  // "soon" moves with the clock
+  map.once('idle', updateNames);
+}
+function renderMassChips() {
+  const langs = {};
+  for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = v[j] >> 19; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
+  const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(LANG_NAMES[c] || c)} (${fmt(n)})</option>`; }).join('');
+  const clock = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>';
+  $('massChips').innerHTML = `<span class="lbl">Mass</span>
+    <button class="chip" data-m="mass" aria-pressed="${mf.mode === 'mass'}" title="Churches with a Mass starting in the next 2 hours, local time">${clock}Mass soon</button>
+    <button class="chip" data-m="conf" aria-pressed="${mf.mode === 'conf'}" title="Churches with Confession in the next 2 hours, local time">${clock}Confession soon</button>
+    ${opts ? `<label class="chip lang"><span>Language</span><select id="massLang" aria-label="Mass language"><option value="">Any</option>${opts}</select></label>` : ''}
+    ${mf.mode || mf.lang ? '<button class="chip" data-m="clear">Clear</button>' : ''}
+    <small class="mass-note">Times found for ${fmt(Object.keys(mf.data.c).length)} churches</small>`;
+  $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang));
+}
+async function initMassFilters() {
+  try { mf.data = await getJSON('data/web/sched.json'); } catch (e) { return; }
+  if (!mf.data || !Object.keys(mf.data.c || {}).length) return;
+  renderMassChips();
+  $('massChips').hidden = false;
+  $('massChips').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-m]'); if (!b) return;
+    const m = b.dataset.m;
+    if (m === 'clear') { mf.mode = ''; mf.lang = ''; } else mf.mode = mf.mode === m ? '' : m;
+    applyMassFilter();
+  });
+  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; applyMassFilter(); } });
 }
 
 /* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
@@ -1199,6 +1349,7 @@ function nearest(lat, lon, k) {
   let worst = Infinity;
   for (let i = 0; i < n; i++) {
     if (!enabled.has(typ[i] & 7)) continue;
+    if (state.only && !state.only.has(i)) continue;
     const dx = (L[i] / 1e6 - lon) * cos, dy = A[i] / 1e6 - lat, d = dx * dx + dy * dy;
     if (best.length < k || d < worst) {
       best.push([d, i]); best.sort((a, b) => a[0] - b[0]); if (best.length > k) best.pop();
@@ -1425,19 +1576,25 @@ function wireShare(i, name, place) {
 }
 addEventListener('click', (e) => { const m = $('shareMenu'); if (m && !m.hidden && !e.target.closest('.share-wrap')) { m.hidden = true; $('shareBtn').setAttribute('aria-expanded', false); } });
 
-/* postal address in the order each country writes it, country last */
-const POST_BEFORE_TOWN = new Set('DE AT CH FR BE NL LU IT ES PT PL CZ SK HU HR SI DK NO SE FI IS GR RO BG LT LV EE MX AR CL CO PE EC UY PY VE BO GT CR PA DO SV HN NI CU MA TN DZ SN CI CM VN ID PH TR IL'.split(' '));
-const POST_AFTER_REGION = new Set('US CA AU PR'.split(' '));
+/* postal address in each country's official layout (Google libaddressinput formats), country last.
+   %A street, %C town, %S region, %Z postcode, %n new line; name, organisation and district fields are not in our data */
+const ADDRESS_FMT = {"RE":"%O%n%N%n%A%n%Z %C %X","PG":"%N%n%O%n%A%n%C %Z %S","SA":"%N%n%O%n%A%n%C %Z","TA":"%N%n%O%n%A%n%C%n%Z","MU":"%N%n%O%n%A%n%Z%n%C","DO":"%N%n%O%n%A%n%Z %C","RU":"%N%n%O%n%A%n%C%n%S%n%Z","SV":"%N%n%O%n%A%n%Z-%C%n%S","BF":"%N%n%O%n%A%n%C %X","GB":"%N%n%O%n%A%n%C%n%Z","XK":"%N%n%O%n%A%n%Z %C","MC":"%N%n%O%n%A%nMC-%Z %C %X","PN":"%N%n%O%n%A%n%C%n%Z","AI":"%N%n%O%n%A%n%C%n%Z","SD":"%N%n%O%n%A%n%C%n%Z","BT":"%N%n%O%n%A%n%C %Z","JM":"%N%n%O%n%A%n%C%n%S %X","TV":"%N%n%O%n%A%n%C%n%S","SK":"%N%n%O%n%A%n%Z %C","ZZ":"%N%n%O%n%A%n%C","CI":"%N%n%O%n%X %A %C %X","YT":"%O%n%N%n%A%n%Z %C %X","KP":"%Z%n%S%n%C%n%A%n%O%n%N","NO":"%N%n%O%n%A%n%Z %C","PW":"%N%n%O%n%A%n%C %S %Z","SN":"%N%n%O%n%A%n%Z %C","MG":"%N%n%O%n%A%n%Z %C","IT":"%N%n%O%n%A%n%Z %C %S","RS":"%N%n%O%n%A%n%Z %C","AL":"%N%n%O%n%A%n%Z%n%C","BE":"%O%n%N%n%A%n%Z %C","MN":"%N%n%O%n%A%n%C%n%S %Z","MO":"%A%n%O%n%N","GF":"%O%n%N%n%A%n%Z %C %X","SH":"%N%n%O%n%A%n%C%n%Z","PA":"%N%n%O%n%A%n%C%n%S","HR":"%N%n%O%n%A%nHR-%Z %C","GL":"%N%n%O%n%A%n%Z %C","PF":"%N%n%O%n%A%n%Z %C %S","GE":"%N%n%O%n%A%n%Z %C","MD":"%N%n%O%n%A%nMD-%Z %C","JP":"\u3012%Z%n%S%n%A%n%O%n%N","UY":"%N%n%O%n%A%n%Z %C %S","AM":"%N%n%O%n%A%n%Z%n%C%n%S","NI":"%N%n%O%n%A%n%Z%n%C, %S","CA":"%N%n%O%n%A%n%C %S %Z","OM":"%N%n%O%n%A%n%Z%n%C","MQ":"%O%n%N%n%A%n%Z %C %X","NZ":"%N%n%O%n%A%n%D%n%C %Z","LU":"%O%n%N%n%A%nL-%Z %C","AE":"%N%n%O%n%A%n%S","IR":"%O%n%N%n%S%n%C, %D%n%A%n%Z","AZ":"%N%n%O%n%A%nAZ %Z %C","CU":"%N%n%O%n%A%n%C %S%n%Z","KG":"%N%n%O%n%A%n%Z %C","NA":"%N%n%O%n%A%n%C%n%Z","FK":"%N%n%O%n%A%n%C%n%Z","SM":"%N%n%O%n%A%n%Z %C","GP":"%O%n%N%n%A%n%Z %C %X","BL":"%O%n%N%n%A%n%Z %C %X","BM":"%N%n%O%n%A%n%C %Z","GW":"%N%n%O%n%A%n%Z %C","KH":"%N%n%O%n%A%n%C %Z","EC":"%N%n%O%n%A%n%Z%n%C","PK":"%N%n%O%n%A%n%D%n%C-%Z","MA":"%N%n%O%n%A%n%Z %C","WF":"%O%n%N%n%A%n%Z %C %X","CZ":"%N%n%O%n%A%n%Z %C","ID":"%N%n%O%n%A%n%C%n%S %Z","NR":"%N%n%O%n%A%n%S","CX":"%O%n%N%n%A%n%C %S %Z","IO":"%N%n%O%n%A%n%C%n%Z","UM":"%N%n%O%n%A%n%C %S %Z","GU":"%N%n%O%n%A%n%C %Z","MW":"%N%n%O%n%A%n%C %X","CN":"%Z%n%S%C%D%n%A%n%O%n%N","KE":"%N%n%O%n%A%n%C%n%Z","US":"%N%n%O%n%A%n%C, %S %Z","HM":"%O%n%N%n%A%n%C %S %Z","KN":"%N%n%O%n%A%n%C, %S","BR":"%O%n%N%n%A%n%D%n%C-%S%n%Z","SG":"%N%n%O%n%A%nSINGAPORE %Z","AC":"%N%n%O%n%A%n%C%n%Z","VI":"%N%n%O%n%A%n%C %S %Z","PE":"%N%n%O%n%A%n%C %Z%n%S","HK":"%S%n%C%n%A%n%O%n%N","AX":"%O%n%N%n%A%nAX-%Z %C%n\u00c5LAND","KW":"%N%n%O%n%A%n%Z %C","BA":"%N%n%O%n%A%n%Z %C","CL":"%N%n%O%n%A%n%Z %C%n%S","FR":"%O%n%N%n%A%n%Z %C","BH":"%N%n%O%n%A%n%C %Z","NC":"%O%n%N%n%A%n%Z %C %X","AU":"%O%n%N%n%A%n%C %S %Z","NE":"%N%n%O%n%A%n%Z %C","SO":"%N%n%O%n%A%n%C, %S %Z","IE":"%N%n%O%n%A%n%D%n%C%n%S%n%Z","MY":"%N%n%O%n%A%n%D%n%Z %C%n%S","LV":"%N%n%O%n%A%n%S%n%C, %Z","SC":"%N%n%O%n%A%n%C%n%S","HN":"%N%n%O%n%A%n%C, %S%n%Z","JE":"%N%n%O%n%A%n%C%nJERSEY%n%Z","IM":"%N%n%O%n%A%n%C%n%Z","FM":"%N%n%O%n%A%n%C %S %Z","TZ":"%N%n%O%n%A%n%Z %C","LS":"%N%n%O%n%A%n%C %Z","UZ":"%N%n%O%n%A%n%Z %C%n%S","BY":"%O%n%N%n%A%n%Z, %C%n%S","PT":"%N%n%O%n%A%n%Z %C","LB":"%N%n%O%n%A%n%C %Z","LI":"%O%n%N%n%A%nFL-%Z %C","BS":"%N%n%O%n%A%n%C, %S","VG":"%N%n%O%n%A%n%C%n%Z","RO":"%N%n%O%n%A%n%Z %S %C","PM":"%O%n%N%n%A%n%Z %C %X","MH":"%N%n%O%n%A%n%C %S %Z","NG":"%N%n%O%n%A%n%D%n%C %Z%n%S","IQ":"%O%n%N%n%A%n%C, %S%n%Z","LR":"%N%n%O%n%A%n%Z %C","AD":"%N%n%O%n%A%n%Z %C","DE":"%N%n%O%n%A%n%Z %C","LA":"%N%n%O%n%A%n%Z %C","GI":"%N%n%O%n%A%nGIBRALTAR%n%Z","MK":"%N%n%O%n%A%n%Z %C","MM":"%N%n%O%n%A%n%C, %Z","FI":"%O%n%N%n%A%nFI-%Z %C","TN":"%N%n%O%n%A%n%Z %C","BN":"%N%n%O%n%A%n%C %Z","FO":"%N%n%O%n%A%nFO%Z %C","TM":"%N%n%O%n%A%n%Z %C","AS":"%N%n%O%n%A%n%C %S %Z","CH":"%O%n%N%n%A%nCH-%Z %C","TH":"%N%n%O%n%A%n%D %C%n%S %Z","GG":"%N%n%O%n%A%n%C%nGUERNSEY%n%Z","LT":"%O%n%N%n%A%nLT-%Z %C %S","KY":"%N%n%O%n%A%n%S %Z","CR":"%N%n%O%n%A%n%S, %C%n%Z","TW":"%Z%n%S%C%n%A%n%O%n%N","BG":"%N%n%O%n%A%n%Z %C","TR":"%N%n%O%n%A%n%Z %C/%S","VE":"%N%n%O%n%A%n%C %Z, %S","SJ":"%N%n%O%n%A%n%Z %C","EG":"%N%n%O%n%A%n%C%n%S%n%Z","TJ":"%N%n%O%n%A%n%Z %C","ME":"%N%n%O%n%A%n%Z %C","ES":"%N%n%O%n%A%n%Z %C %S","KZ":"%Z%n%S%n%C%n%A%n%O%n%N","AT":"%O%n%N%n%A%n%Z %C","GN":"%N%n%O%n%Z %A %C","GR":"%N%n%O%n%A%n%Z %C","DZ":"%N%n%O%n%A%n%Z %C","ET":"%N%n%O%n%A%n%Z %C","BD":"%N%n%O%n%A%n%C - %Z","ZM":"%N%n%O%n%A%n%Z %C","NP":"%N%n%O%n%A%n%C %Z","VC":"%N%n%O%n%A%n%C %Z","DK":"%N%n%O%n%A%n%Z %C","KI":"%N%n%O%n%A%n%S%n%C","CY":"%N%n%O%n%A%n%Z %C","SR":"%N%n%O%n%A%n%C%n%S","BB":"%N%n%O%n%A%n%C, %S %Z","JO":"%N%n%O%n%A%n%C %Z","MT":"%N%n%O%n%A%n%C %Z","TC":"%N%n%O%n%A%n%C%n%Z","MV":"%N%n%O%n%A%n%C %Z","IL":"%N%n%O%n%A%n%C %Z","PH":"%N%n%O%n%A%n%D, %C%n%Z %S","AF":"%N%n%O%n%A%n%C%n%Z","IS":"%N%n%O%n%A%n%Z %C","CC":"%O%n%N%n%A%n%C %S %Z","UA":"%N%n%O%n%A%n%C%n%S%n%Z","LK":"%N%n%O%n%A%n%C%n%Z","NL":"%O%n%N%n%A%n%Z %C","HU":"%N%n%O%n%C%n%A%n%Z","CO":"%N%n%O%n%A%n%D%n%C, %S, %Z","MZ":"%N%n%O%n%A%n%Z %C%S","PL":"%N%n%O%n%A%n%Z %C","GS":"%N%n%O%n%A%n%n%C%n%Z","SE":"%O%n%N%n%A%nSE-%Z %C","VN":"%N%n%O%n%A%n%C%n%S %Z","AR":"%N%n%O%n%A%n%Z %C%n%S","KR":"%S %C%D%n%A%n%O%n%N%n%Z","VA":"%N%n%O%n%A%n%Z %C","CV":"%N%n%O%n%A%n%Z %C%n%S","EH":"%N%n%O%n%A%n%Z %C","GT":"%N%n%O%n%A%n%Z- %C","HT":"%N%n%O%n%A%nHT%Z %C","PY":"%N%n%O%n%A%n%Z %C","ZA":"%N%n%O%n%A%n%D%n%C%n%Z","MP":"%N%n%O%n%A%n%C %S %Z","PR":"%N%n%O%n%A%n%C PR %Z","IN":"%N%n%O%n%A%n%C %Z%n%S","EE":"%N%n%O%n%A%n%Z %C %S","MX":"%N%n%O%n%A%n%D%n%Z %C, %S","NF":"%O%n%N%n%A%n%C %S %Z","SI":"%N%n%O%n%A%nSI-%Z %C","SZ":"%N%n%O%n%A%n%C%n%Z","MF":"%O%n%N%n%A%n%Z %C %X"};
 function postalLines(street, town, region, postcode, cc) {
   const clean = (v) => String(v || '').replace(/\\[nrt]/g, ' ').replace(/\s+/g, ' ').replace(/^[,\s]+|[,\s]+$/g, '');
   street = clean(street); town = clean(town); region = clean(region); postcode = clean(postcode);
   if (street && town && squash(street) === squash(town)) street = '';
   if (postcode && street.includes(postcode)) street = clean(street.replace(postcode, ''));
-  let line2;
-  if (POST_AFTER_REGION.has(cc)) line2 = [town, [region, postcode].filter(Boolean).join(' ')].filter(Boolean).join(', ');
-  else if (POST_BEFORE_TOWN.has(cc)) line2 = [postcode, town].filter(Boolean).join(' ') + (region && region !== town && !/^\d/.test(region) ? ', ' + region : '');
-  else line2 = [town, postcode].filter(Boolean).join(' ');
-  return [street, line2, countryName(cc)].filter(Boolean);
+  if (region && squash(region) === squash(town)) region = '';
+  let fmt = (ADDRESS_FMT[cc] || '%A%n%C %Z').replace(/%([A-Z])(?=%[A-Z])/g, '%$1 '); // our data is romanized: space out run-together fields
+  // a country prefix such as "CH-", "HT" or 〒 only goes with a postcode, and only once
+  const pre = /(〒|[A-Z]{1,3}-?)%Z/.exec(fmt);
+  if (pre && (!postcode || postcode.toUpperCase().startsWith(pre[1].replace('-', '')))) fmt = fmt.replace(pre[0], '%Z');
+  const val = { A: street, C: town, S: region || (fmt.includes('%C') ? '' : town), Z: postcode };
+  const lines = fmt.split('%n').map(line => line
+    .replace(/%([A-Z])/g, (_, k) => val[k] || '\u0000')
+        .replace(/(\s*[,\-–]\s*)?\u0000(\s*[,\-–])?/g, (m, before, after) => (before && after ? before : ''))
+    .replace(/\u0000/g, '').replace(/^[\s,\-–]+|[\s,\-–]+$/g, '').replace(/\s{2,}/g, ' '));
+  return [...lines, countryName(cc)].filter(Boolean);
 }
 const icon = {
   photo: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>',
@@ -1464,9 +1621,11 @@ async function selectChurch(i, { fly = true } = {}) {
   $('cardBody').innerHTML = `<div><h2 id="cName">Loading…</h2></div>`;
   $('card').hidden = false;
   let rec;
-  try { rec = await shardFor(i); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">Details didn't load</h2><p class="where">Check your connection, then click the pin again.</p></div>`; return; }
+  let webInfo;
+  try { [rec, webInfo] = await Promise.all([shardFor(i), webFor(i)]); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">Details didn't load</h2><p class="where">Check your connection, then click the pin again.</p></div>`; return; }
   if (state.selected !== i) return;
-  const [name, street, town, region, postcode, cc, web, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const [name, street, town, region, postcode, cc, web0, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const web = webInfo.fix.web || web0;
   const addr = postalLines(street, town, region, postcode, cc);
   const country = countryName(cc);
   const place = [town, region && region !== town ? region : '', country].filter(Boolean).join(', ');
@@ -1474,8 +1633,13 @@ async function selectChurch(i, { fly = true } = {}) {
   const qShort = encodeURIComponent([name, town].filter(Boolean).join(' '));
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
   const fb = (socials || []).find(s => /facebook\.com/.test(s));
-  const webUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
-  const confLabel = conf >= 0.8 ? 'High' : conf >= 0.55 ? 'Medium' : 'Low';
+  const listedUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
+  const wentry = webInfo.entry;
+  const webDead = !!(listedUrl && wentry && wentry[0] === 3);
+  const webUrl = webDead ? '' : (wentry && wentry[1]) || listedUrl;
+  const kind = webUrl ? linkKind(webUrl) : null;
+  const pastor = pastorOf(wentry);
+  const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   $('cardBody').innerHTML = `
     <div>
       <h2 id="cName">${esc(name)}</h2>
@@ -1483,7 +1647,7 @@ async function selectChurch(i, { fly = true } = {}) {
     </div>
     <div class="actions">
       <a class="btn primary" href="${directionsURL(lt, lng, name)}" target="_blank" rel="noopener">Directions</a>
-      ${webUrl ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">Parish website</a>` : ''}
+      ${kind && kind.btn ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn}</a>` : ''}
       <button class="btn save" id="saveBtn" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span>Save</span></button>
       <span class="share-wrap"><button class="btn" id="shareBtn" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Share</span></button>
         <span class="share-menu" id="shareMenu" role="menu" hidden>
@@ -1495,9 +1659,15 @@ async function selectChurch(i, { fly = true } = {}) {
     </div>
     <dl class="facts">
       ${addr.length ? `<dt>Address</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="Copy the address">Copy</button></dd>` : ''}
+      ${pastor ? `<dt>${esc(pastor[3])}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
       ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
-      ${webUrl || fb ? `<dt>Online</dt><dd class="links">${webUrl ? `<a href="${esc(webUrl)}" target="_blank" rel="noopener">${icon.web}${esc(host(webUrl))}</a>` : ''}${fb ? `<a href="${esc(fb)}" target="_blank" rel="noopener">${icon.fb}Facebook Page</a>` : ''}</dd>` : ''}
+      ${(webUrl && kind && kind.row) || webDead || fb ? `<dt>Online</dt><dd class="links">${
+        webUrl && kind && kind.row ? `<a href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn === 'Facebook' ? icon.fb : icon.web}${esc(kind.btn === 'Facebook' ? 'Facebook Page' : kind.platform ? kind.row.replace(/^./, c => c.toUpperCase()) : host(webUrl))}</a>${wentry && wentry[0] === 2 ? '<span class="moved">(new address)</span>' : ''}` : ''}${
+        webDead ? `<span><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></span>` : ''}${
+        fb && !(kind && kind.btn === 'Facebook') ? `<a href="${esc(fb)}" target="_blank" rel="noopener">${icon.fb}Facebook Page</a>` : ''}</dd>` : ''}
     </dl>
+    ${scheduleHTML(wentry, webInfo.checked, host)}
+    ${staffHTML(wentry, webInfo.checked, webUrl, host)}
     <div id="cAbout"></div>
     <div class="sect">
       <h3>Photos, video and history</h3>
@@ -1509,7 +1679,7 @@ async function selectChurch(i, { fly = true } = {}) {
       </div>
     </div>
     <div class="prov">
-      <span class="pill">${confLabel} confidence</span>${how === 'name' ? '<span class="pill warn">Identified as Catholic by its name</span>' : '<span class="pill">Listed as Roman Catholic</span>'}
+      ${conf < 0.55 ? '<span class="pill warn" title="The map data this listing comes from is not sure it is accurate">Unverified listing</span>' : ''}${how === 'name' ? '<span class="pill warn">Identified as Catholic by its name</span>' : '<span class="pill">Listed as Roman Catholic</span>'}
       <div style="margin-top:8px">Source: Overture Maps places (${esc((datasets || []).join(', ') || 'Overture')})${updated ? ', updated ' + esc(updated) : ''}.</div>
     </div>`;
   if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
@@ -1693,7 +1863,7 @@ const mapReady = new Promise(res => map.once('load', res));
     await new Promise(r => setTimeout(r, 30));
     addChurchLayers();
     renderFavs();
-    renderChips(); updateTagline();
+    renderChips(); updateTagline(); initMassFilters();
     setProgress(1);
     let opened = false;
     const open = () => {
