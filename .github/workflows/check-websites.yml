@@ -21,7 +21,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  wikidata:
+    # websites for churches that have none, from Wikidata's "official website"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: mkdir -p data/web && python scripts/web/wikidata.py || echo '{}' > data/web/wikidata_sites.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wikidata
+          path: data/web/wikidata_sites.json
+          retention-days: 14
+
   crawl:
+    needs: wikidata
     runs-on: ubuntu-latest
     timeout-minutes: 120
     strategy:
@@ -33,9 +49,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install aiohttp==3.10.10 beautifulsoup4==4.12.3 lxml==5.3.0
+      - run: pip install aiohttp==3.10.10 beautifulsoup4==4.12.3 lxml==5.3.0 regex==2024.9.11
+      - uses: actions/download-artifact@v4
+        with:
+          name: wikidata
+          path: data/web
       - name: Crawl
-        run: python scripts/web/crawl.py ${{ matrix.part }} 16 part-${{ matrix.part }}.json ${{ inputs.limit || vars.CRAWL_LIMIT || '150' }}
+        run: python scripts/web/crawl.py ${{ matrix.part }} 16 part-${{ matrix.part }}.json ${{ inputs.limit || vars.CRAWL_LIMIT || '0' }}
       - uses: actions/upload-artifact@v4
         with:
           name: part-${{ matrix.part }}
@@ -43,8 +63,8 @@ jobs:
           retention-days: 14
 
   build:
-    needs: crawl
-    if: always()
+    needs: [wikidata, crawl]
+    if: always() && needs.wikidata.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,8 +73,13 @@ jobs:
           python-version: '3.12'
       - uses: actions/download-artifact@v4
         with:
+          pattern: part-*
           path: parts
           merge-multiple: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: wikidata
+          path: data/web
       - name: Build data/web
         run: |
           python scripts/web/build.py parts/*.json

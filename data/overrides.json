@@ -1,0 +1,4 @@
+{
+ "_note": "Corrections to the Overture data, keyed by church index (position in data/points.txt). Fields: web = website URL. Applied by the page and by scripts/web.",
+ "68540": {"name": "Our Lady of Fatima Catholic Church, Albuquerque", "web": "https://fatimachurchabq.org/"}
+}

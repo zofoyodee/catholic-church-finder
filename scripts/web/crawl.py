@@ -11,11 +11,12 @@ sites). For each unique website URL in data/d/*.json it:
 
 Usage: python crawl.py PART PARTS OUT.json [LIMIT]
 """
-import asyncio, json, re, sys, time, collections
+import asyncio, json, sys, time, collections
 from urllib.parse import urljoin, urlsplit
 from urllib import robotparser
 
 import aiohttp
+import regex as re  # Unicode classes (\p{Lu}) for names in any Latin script
 from bs4 import BeautifulSoup, NavigableString
 
 UA = 'CatholicChurchFinderBot/1.0 (+https://github.com/zofoyodee/catholic-church-finder)'
@@ -24,8 +25,9 @@ MAX_BYTES = 1_500_000
 
 # Links that are profiles on big platforms, not a parish's own site. The page
 # labels these by platform; checking them is pointless (they block crawlers).
-PLATFORM = re.compile(r'(^|\.)(facebook|fb|instagram|youtube|youtu|tiktok|twitter|x|linktr|whatsapp|wa|t|threads|wikipedia|google|goo|bit|tinyurl|maps\.app\.goo|cafe\.daum|blog\.naver|band|line|vk|ok|pinterest|flickr|spotify|soundcloud|linkedin)\.(com|me|ee|ly|gl|net|org|be|co|ru|us)$')
+PLATFORM = re.compile(r'(^|\.)(facebook|fb|instagram|youtube|youtu|tiktok|twitter|x|linktr|whatsapp|wa|t|threads|wikipedia|google|goo|bit|tinyurl|maps\.app\.goo|cafe\.daum|blog\.naver|band|line|vk|ok|pinterest|flickr|spotify|soundcloud|linkedin)\.(com|me|ee|ly|gl|net|org|be|co|ru|us)(\.[a-z]{2})?$')
 
+CHURCHY = re.compile(r'(church|parish|catholic|cat[óo]lic|catholique|cattolic|katholi|katolick|parroquia|par[óo]quia|parrocchia|paroisse|pfarr|parafi|iglesia|igreja|chiesa|[ée]glise|kirche|ko[śs]ci[óo][łl]|diocese|di[óo]cesis|diocesi|santuario|sanctuaire|catedral|cathedral|cattedrale|basilic|capela|capilla|cappella|chapel|chapelle|kaplica|\bmass\b|\bmisa|\bmissa|\bmesse|\bmsze|eucharist|sacrament)', re.I)
 PARKED = re.compile(r'(domain (name )?(is |may be )?for sale|buy this domain|this domain (has expired|is parked|is available)|parked (free|domain)|domain parking|sedoparking|hugedomains|dan\.com|afternic|godaddy\.com/domains|this site can.t be reached|account (has been )?suspended|website (is )?(expired|suspended)|hosting (account )?(has )?expired|future home of|coming soon|under construction|default web site page|welcome to nginx|apache2 (ubuntu|debian) default page|it works!)', re.I)
 
 STAFF_STRONG = re.compile(r'(staff|clergy|priest|pastor|deacon|our-team|parish-team|pastoral-team|leadership|equipe|équipe|clero|sacerdot|padres|presbit|curas|personale|sacerdoti|seelsorge|pfarrteam|seelsorgeteam|ansprechpartner|duszpaster|kaplan|ksieza|księża|duchowni|kapłani|zesp[oó]ł|parocco|parroco|párroco|pároco|vigario|vicari|cure-|curé|pretre|prêtre|pfarrer|team|who-we-are|quienes-somos|quem-somos|chi-siamo|qui-sommes|o-nas|wir-ueber-uns|uber-uns|über-uns|meet-)', re.I)
@@ -33,11 +35,19 @@ STAFF_WEAK = re.compile(r'(about|contact|parish-office|office|nosotros|parroquia
 
 T_DEACON = r"(?:Deacon|Dcn\.?|Deac\.|Rev(?:erend|\.)?\s+Mr\.|Di[aá]cono|Diac\.|Diacre|Diakon|Dk\.|Diac\b)"
 T_PRIEST = (r"(?:(?:The\s+)?(?:Very|Most|Right|Rt\.?|V\.)\s+Rev(?:erend|\.)?(?:\s+(?:Msgr\.?|Monsignor|Fr\.?|Father|Dr\.))?|Rev(?:erend|\.)?(?:\s+(?:Msgr\.?|Monsignor|Fr\.?|Father|Dr\.|Canon))?|"
-            r"Fr\.|Father|Msgr\.?|Monsignor|Mons\.|Mgr\.?|Padre|Pe\.|Pbro\.?|Presb\.|Sac\.|Sacerdote|Don|Abb[eé]|P[eè]re|Pfarrer|Kaplan|Pater|P\.|Ks\.|Ksi[aą]dz|O\.|Cônego|C[oó]n\.|Canon|Frei|Fray|Fra|Dom)")
-NAMEW = r"[A-ZÀ-ÖØ-Þ][a-zà-öø-ÿA-ZÀ-ÖØ-Þ'’\-]+\.?"
-INIT = r"[A-Z]\."
-NAME = rf"((?:{NAMEW}|{INIT})(?:\s+(?:de|da|do|dos|das|del|de la|di|van|von|der|le|la|y|e|mac|st\.)?\s*(?:{NAMEW}|{INIT})){{1,4}})"
-RE_PERSON = re.compile(rf"(?<![\w])({T_DEACON}|{T_PRIEST})\s+{NAME}")
+            r"Fr\.|Father|Msgr\.?|Monsignor|Mons\.|Mgr\.?|Padre|Pe\.|Pbro\.?|Presb\.|Sac\.|Sacerdote|Don|Abb[eé]|P[eè]re|Pfarrer|Kaplan|Pater|P\.|Ks\.|Ksi[aą]dz|O\.|Cônego|C[oó]n\.|Canon|Frei|Fray|Fra)")
+NAMEW = r"\p{Lu}[\p{L}'’\-]*\p{L}"
+INIT = r"\p{Lu}\."
+NAME = rf"((?:{NAMEW}|{INIT})(?:[ \t]+(?:(?:de|da|do|dos|das|del|de la|di|van|von|der|le|la|y|e|mac)[ \t]+)?(?:{NAMEW}|{INIT})){{1,4}})"
+RE_PERSON = re.compile(rf"(?<![\w])({T_DEACON}|{T_PRIEST})[ \t]+{NAME}")
+# Words that end a name: a role or label written right after it ("Fr. John Smith Pastor")
+CUT = set('''co-pp pastor priest parish cure curé pretre prêtre referent référent mail email e-mail phone tel tél proboszcz wikariusz vicar vicario vigario vigário
+parroco párroco pároco deacon diacono diácono diacre rector recteur administrator administrador chaplain aumonier aumônier educateur éducateur
+can ap pp cc adm do throughout father fr rev msgr pfarrer kaplan office secretary director moderator associate assistant parochial
+emeritus retired in at of and the is our will has was who from with for on to'''.split())
+BISHOP = re.compile(r'\b(bishop|archbishop|[ée]v[êe]que|archev[êe]que|obispo|arzobispo|bispo|arcebispo|vescovo|arcivescovo|bischof|erzbischof|biskup|arcybiskup|cardinal|cardeal|cardenal|pope|nuncio|nunzio|eparch|metropolitan)', re.I)
+HISTORY = re.compile(r'\b(1[6-9]\d\d|20[0-2]\d)\s*[-–—]\s*(1[6-9]\d\d|20[0-2]\d|\d\d)\b|\((1[6-9]\d\d|20[0-2]\d)\)|†|\b(died|deceased|former|formerly|founding|founder|history|historia|história|storia|histoire|fallecido|falecido|zmar[łl]|r\.?i\.?p\.?)\b', re.I)
+NOT_CLERGY = {'sr', 'sister', 'sor', 'irmã', 'irma', 'hna', 'mother', 'madre', 'soeur', 'sœur', 'siostra', 'mr', 'mrs', 'ms', 'miss'}
 SUFFIX = re.compile(r",?\s*(?:O\.?F\.?M\.?(?:\s*Cap\.?)?|S\.?J\.?|O\.?P\.?|C\.?S\.?C\.?|O\.?S\.?B\.?|C\.?S\.?s\.?R\.?|S\.?D\.?B\.?|O\.?Carm\.?|C\.?M\.?|M\.?S\.?F\.?|S\.?V\.?D\.?|O\.?S\.?A\.?|C\.?P\.?|O\.?M\.?I\.?|J\.?C\.?L\.?|S\.?T\.?L\.?|S\.?T\.?D\.?|Ph\.?D\.?|D\.?Min\.?|V\.?F\.?)\b")
 
 DEACON_ROLE = re.compile(r'\b(deacon|di[aá]cono|diacre|diakon|diakoni|diacon)', re.I)
@@ -100,10 +110,18 @@ def img_src(img, base):
 
 def clean_name(title, name):
     name = SUFFIX.sub('', name).strip(' ,.;:-–')
-    words = name.split()
-    # drop trailing words that look like the next sentence
-    while words and words[-1].lower() in ('is', 'the', 'and', 'our', 'will', 'has', 'was'):
+    words = []
+    for w in name.split():
+        if w.strip('.-–’\'').lower() in CUT and words:
+            break
+        words.append(w.strip('-–'))
+    if words:
+        words[-1] = re.sub(r"[’']s$", '', words[-1])
+    # drop trailing stubs (post-nominal letters, cut-off words) that aren't initials
+    while len(words) > 2 and len(words[-1]) <= 2 and not re.fullmatch(r'\p{Lu}\.', words[-1]):
         words.pop()
+    if words and words[0].strip('.').lower() in NOT_CLERGY:
+        return None
     if len(words) < 2 or len(words) > 5:
         return None
     if sum(1 for w in words if len(w.rstrip('.')) > 1) < 2 and not re.match(r'^[A-Z]\.$', words[0]):
@@ -111,8 +129,8 @@ def clean_name(title, name):
     name = ' '.join(words)
     if STOP.search(name) or STOP.search(words[0]):
         return None
-    if name.isupper() and len(name) > 4:
-        name = name.title()
+    # SMITH -> Smith, but keep short all-caps like "J." or "MC"
+    name = ' '.join(w.title() if w.isupper() and len(w) > 2 else w for w in name.split())
     return name
 
 
@@ -122,12 +140,17 @@ def kind_of(title, ctx):
     return 'priest'
 
 
-def role_of(kind, ctx):
+IRISH = [(re.compile(r'\b(PP|Co-PP|Adm)\b'), 'Pastor'), (re.compile(r'\b(CC|AP|CF)\b'), 'Parochial vicar')]
+
+
+def role_of(kind, texts):
+    """Role from the text right after the name, then before it, then around it."""
     if kind == 'deacon':
         return 'Deacon'
-    for rx, label in ROLES:
-        if rx.search(ctx):
-            return label
+    for t in texts:
+        for rx, label in ROLES + IRISH:
+            if rx.search(t):
+                return label
     return ''
 
 
@@ -142,10 +165,16 @@ def extract_people(html, base, church_name=''):
         txt = re.sub(r'[ \t\xa0]+', ' ', text_of(el)).strip()
         if not txt or len(txt) > 4000:
             continue
-        for m in RE_PERSON.finditer(txt):
+        ms = list(RE_PERSON.finditer(txt))
+        for mi, m in enumerate(ms):
             title, raw = m.group(1), m.group(2)
             # "Don" and "P." and "O." and "Dom" are ambiguous; only accept them in short lines (lists, captions)
-            if title in ('Don', 'P.', 'O.', 'Dom', 'Fra', 'Pater', 'Sac.') and len(txt) > 160:
+            if title in ('Don', 'P.', 'O.', 'Fra', 'Pater', 'Sac.') and len(txt) > 160:
+                continue
+            if re.match(r'(The\s+)?(Most|Right|Rt\.?)\s', title):
+                continue  # bishops and abbots
+            near = txt[max(0, m.start() - 60):m.end() + 60]
+            if BISHOP.search(near) or HISTORY.search(near):
                 continue
             name = clean_name(title, raw)
             if not name:
@@ -153,10 +182,9 @@ def extract_people(html, base, church_name=''):
             nw = set(re.findall(r'\w+', name.lower()))
             if nw and nw <= church_words:
                 continue  # the church's own patron (e.g. "Padre Pio" in "Parroquia Padre Pio")
-            start = max(0, m.start() - 120)
-            ctx = txt[start:m.end() + 140]
-            if len(txt) < 120:
-                ctx += ' ' + near_text(el)
+            after = txt[m.end():ms[mi + 1].start() if mi + 1 < len(ms) else m.end() + 100][:100]
+            before = txt[ms[mi - 1].end() if mi else 0:m.start()][-60:]
+            ctx = [raw + ' ' + after, before] + ([near_text(el)] if len(txt) < 120 else [])
             kind = kind_of(title, ctx)
             if kind == 'priest' and DEACON_ROLE.search(txt[max(0, m.start() - 25):m.start()]):
                 kind = 'deacon'
@@ -313,6 +341,13 @@ class Crawler:
                 st, final, html, err = await self.get(url, timeout=30)
                 if not err and st < 400:
                     return await self._ok(url, final, html, name, shared, res)
+            sp = urlsplit(url)
+            if st in (404, 410) and sp.path.strip('/'):
+                root = f'{sp.scheme}://{sp.netloc}/'
+                st2, f2, h2, err2 = await self.get(root)
+                if not err2 and st2 < 400 and not PARKED.search(h2[:20000]):
+                    res['c'] = st2
+                    return await self._ok(url, f2, h2, name, shared, res, force_new=True)
             res['s'] = 'dead'
             res['e'] = 'parked' if st < 400 else str(st)
             return res
@@ -320,19 +355,31 @@ class Crawler:
             return res  # 401/403/429/503: the site is up but turned us away
         return await self._ok(url, final, html, name, shared, res)
 
-    async def _ok(self, url, final, html, name, shared, res):
+    async def _ok(self, url, final, html, name, shared, res, force_new=False):
         a, b = urlsplit(url), urlsplit(final)
-        if norm_host(a.hostname) != norm_host(b.hostname):
+        ha, hb = norm_host(a.hostname), norm_host(b.hostname)
+        if ha != hb:
+            # a domain that now redirects to a login wall or an unrelated business is not the parish's site
+            if hb.startswith('accounts.') or 'signin' in b.path.lower() or 'login' in b.path.lower() or not CHURCHY.search(html[:200000]):
+                res['s'] = 'dead'
+                res['e'] = 'elsewhere'
+                res['to'] = final
+                return res
             res['s'] = 'moved'
             res['u'] = final
+            # same parish under a new domain is fine, but a redirect to a diocese or directory
+            # means the clergy found there aren't this parish's
+            if ha.split('.')[0] not in hb and hb.split('.')[0] not in ha:
+                return res
         else:
             res['s'] = 'ok'
-            if b.scheme != a.scheme or b.path.rstrip('/') != a.path.rstrip('/'):
+            if force_new or b.scheme != a.scheme or b.path.rstrip('/') != a.path.rstrip('/'):
                 res['u'] = final
         if shared:
             return res  # a diocese or directory site shared by many churches: its clergy aren't this parish's
         try:
-            people = extract_people(html, final, name)
+            # on a home page, only trust names that come with a role (otherwise it's often news or a guest)
+            people = [p for p in extract_people(html, final, name) if p['role']]
             src = final if people else ''
             if len(people) < 2:
                 for link in staff_links(html, final):
@@ -349,27 +396,47 @@ class Crawler:
         except Exception as e:  # noqa: BLE001
             res['x'] = type(e).__name__
             return res
-        if 0 < len(people) <= 25:
+        if 0 < len(people) <= 14:
             res['p'] = [[p['kind'][0], p['title'], p['name'], p['role'], p['img']] for p in people[:12]]
             res['src'] = src
         return res
 
 
-def load_urls():
-    count = collections.Counter()
-    names = {}
-    for k in range(10_000):
+def records():
+    """(shard, index in shard, record, website was added) with data/overrides.json
+    and Wikidata websites (data/web/wikidata_sites.json, for churches without one) applied."""
+    ov = json.load(open('data/overrides.json'))
+    try:
+        wd = json.load(open('data/web/wikidata_sites.json'))
+    except FileNotFoundError:
+        wd = {}
+    k = 0
+    while True:
         try:
             recs = json.load(open(f'data/d/{k}.json'))
         except FileNotFoundError:
-            break
-        for r in recs:
-            u = r[6]
-            if not u:
-                continue
-            u = u if re.match(r'^https?://', u) else 'https://' + u
-            count[u] += 1
-            names.setdefault(u, r[0])
+            return
+        for j, r in enumerate(recs):
+            i = str(k * 2000 + j)
+            added = False
+            if ov.get(i, {}).get('web'):
+                r[6], added = ov[i]['web'], True
+            elif not r[6] and i in wd:
+                r[6], added = wd[i], True
+            yield k, j, r, added
+        k += 1
+
+
+def load_urls():
+    count = collections.Counter()
+    names = {}
+    for _, _, r, _ in records():
+        u = r[6]
+        if not u:
+            continue
+        u = u if re.match(r'^https?://', u) else 'https://' + u
+        count[u] += 1
+        names.setdefault(u, r[0])
     return count, names
 
 

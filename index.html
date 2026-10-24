@@ -205,6 +205,17 @@ button, input { font: inherit; color: inherit; }
 .facts a { color: var(--gold-soft); text-underline-offset: 3px; }
 .facts .mono { font-family: var(--font-data); font-size: 12.5px; font-variant-numeric: tabular-nums; }
 .sect h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.staff { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.staff li { display: flex; align-items: center; gap: 11px; font-size: 13.5px; }
+.staff .ph { flex: none; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; display: grid; place-items: center; background: rgba(232,184,74,0.1); border: 1px solid var(--line); color: var(--gold-soft); font-weight: 600; font-size: 14px; }
+.staff .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
+.staff b { display: block; font-weight: 600; }
+.staff small { color: var(--ink-soft); font-size: 12px; }
+.staff-src, .staff-none { margin: 9px 0 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
+.staff-none { margin: 0; }
+.staff-src a, .staff-none a { color: var(--gold-soft); text-underline-offset: 3px; }
+.facts .dead { color: var(--ink-faint); }
+.facts .moved { color: var(--ink-faint); font-size: 12px; }
 .media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .media a {
   display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 12px;
@@ -385,6 +396,48 @@ async function shardFor(i) {
   if (!state.shards.has(s)) state.shards.set(s, getJSON('data/d/' + s + '.json').catch(e => { state.shards.delete(s); throw e; }));
   const recs = await state.shards.get(s);
   return recs[i - s * state.meta.shardSize];
+}
+
+/* ---------- website checks and parish staff (data/web, built by scripts/web in GitHub Actions) ---------- */
+const web = { shards: new Map(), meta: null };
+let overrides = null;  // data/overrides.json: hand corrections, keyed by church index
+async function webFor(i) {
+  if (!overrides) overrides = getJSON('data/overrides.json').catch(() => ({}));
+  const s = Math.floor(i / state.meta.shardSize);
+  if (!web.meta) web.meta = getJSON('data/web/meta.json').catch(() => ({}));
+  if (!web.shards.has(s)) web.shards.set(s, getJSON('data/web/' + s + '.json').catch(() => { web.shards.delete(s); return {}; }));
+  const [sh, meta] = await Promise.all([web.shards.get(s), web.meta]);
+  return { entry: sh[i - s * state.meta.shardSize] || null, checked: meta.checked || '', fix: (await overrides)[i] || {} };
+}
+// Many listed "websites" are profiles on big platforms; name them for what they are
+const PLATFORMS = [
+  [/(^|\.)(facebook|fb)\.com$/, 'Facebook', 'Facebook page'], [/(^|\.)instagram\.com$/, 'Instagram', 'Instagram'],
+  [/(^|\.)(youtube\.com|youtu\.be)$/, 'YouTube', 'YouTube channel'], [/(^|\.)tiktok\.com$/, 'TikTok', 'TikTok'],
+  [/(^|\.)(twitter|x)\.com$/, 'X', 'X (Twitter)'], [/(^|\.)(whatsapp\.com|wa\.me)$/, 'WhatsApp', 'WhatsApp'],
+  [/(^|\.)linktr\.ee$/, 'Links', 'Links page'], [/(^|\.)wikipedia\.org$/, 'Wikipedia', 'Wikipedia article'],
+  [/(^|\.)(maps\.app\.goo\.gl|goo\.gl)$|^maps\.google\./, null, null],
+];
+function linkKind(u) {
+  let h = ''; try { h = new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return null; }
+  for (const [rx, btn, row] of PLATFORMS) if (rx.test(h)) return { btn, row, platform: true };
+  return { btn: 'Parish website', row: 'Website', platform: false };
+}
+const ROLE_ORDER = ['Pastor', 'Administrator', 'Rector', 'Parochial vicar', 'Chaplain', 'In residence', '', 'Pastor emeritus', 'Deacon'];
+function initials(n) { return n.split(/\s+/).filter(w => /^[A-ZÀ-Þ]/.test(w)).map(w => w[0]).slice(0, 2).join('') || '✝'; }
+function staffHTML(entry, checked, name, town, webUrl, host) {
+  const staff = (entry && entry[2]) || [];
+  const src = (entry && entry[3]) || webUrl;
+  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) : '';
+  if (!staff.length) {
+    const q = encodeURIComponent([name, town, 'pastor priest deacon'].filter(Boolean).join(' '));
+    return `<div class="sect"><h3>Staff</h3><p class="staff-none">No priests or deacons are listed for this church yet${webUrl ? ' on its website' : ''}. <a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener">Search for its clergy</a></p></div>`;
+  }
+  const rows = staff.map(([k, title, nm, role, img]) => ({ k, title, nm, role: role || (k === 'd' ? 'Deacon' : 'Priest'), img }))
+    .sort((a, b) => (a.k === 'd') - (b.k === 'd') || ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role));
+  return `<div class="sect"><h3>Staff</h3><ul class="staff">${rows.map(p => `
+      <li><span class="ph">${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode('${esc(initials(p.nm))}'))">` : esc(initials(p.nm))}</span>
+        <span><b>${esc(p.title)} ${esc(p.nm)}</b><small>${esc(p.role)}</small></span></li>`).join('')}</ul>
+    <p class="staff-src">From <a href="${esc(src)}" target="_blank" rel="noopener">${esc(host(src))}</a>${when ? `, checked ${esc(when)}` : ''}. Assignments change, so confirm with the parish.</p></div>`;
 }
 
 /* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
@@ -883,16 +936,23 @@ async function selectChurch(i, { fly = true } = {}) {
   $('cardBody').innerHTML = `<div><h2 id="cName">Loading…</h2></div>`;
   $('card').hidden = false;
   let rec;
-  try { rec = await shardFor(i); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">Details didn't load</h2><p class="where">Check your connection, then click the pin again.</p></div>`; return; }
+  let webInfo;
+  try { [rec, webInfo] = await Promise.all([shardFor(i), webFor(i)]); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">Details didn't load</h2><p class="where">Check your connection, then click the pin again.</p></div>`; return; }
   if (state.selected !== i) return;
-  const [name, street, town, region, postcode, cc, web, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const [name, street, town, region, postcode, cc, web0, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const web = webInfo.fix.web || web0;
   const country = countryName(cc);
   const place = [town, region && region !== town ? region : '', country].filter(Boolean).join(', ');
   const q = encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   const qShort = encodeURIComponent([name, town].filter(Boolean).join(' '));
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
   const fb = (socials || []).find(s => /facebook\.com/.test(s));
-  const webUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
+  const listedUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
+  const wentry = webInfo.entry;
+  const webDead = !!(listedUrl && wentry && wentry[0] === 3);
+  const webUrl = webDead ? '' : (wentry && wentry[1]) || listedUrl;
+  const kind = webUrl ? linkKind(webUrl) : null;
+  const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   const confLabel = conf >= 0.8 ? 'High' : conf >= 0.55 ? 'Medium' : 'Low';
   $('cardBody').innerHTML = `
     <div>
@@ -901,16 +961,18 @@ async function selectChurch(i, { fly = true } = {}) {
     </div>
     <div class="actions">
       <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">Directions</a>
-      ${webUrl ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">Parish website</a>` : ''}
+      ${kind && kind.btn ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn}</a>` : ''}
       <button class="btn" id="flyBtn">Fly here</button>
     </div>
     <dl class="facts">
       ${street ? `<dt>Address</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
       ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
       ${phone ? `<dt>Phone</dt><dd class="mono" id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
-      ${webUrl ? `<dt>Website</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(host(webUrl))}</a></dd>` : ''}
-      ${fb ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
+      ${kind && kind.row ? `<dt>${kind.row}</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(kind.platform ? host(webUrl) + new URL(webUrl).pathname.replace(/\/$/, '') : host(webUrl))}</a>${wentry && wentry[0] === 2 ? ' <span class="moved">(new address)</span>' : ''}</dd>` : ''}
+      ${webDead ? `<dt>Website</dt><dd><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></dd>` : ''}
+      ${fb && !(kind && kind.btn === 'Facebook') ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
     </dl>
+    ${staffHTML(wentry, webInfo.checked, name, town, webUrl && !kind.platform ? webUrl : '', host)}
     <div class="sect">
       <h3>Photos, video and history</h3>
       <div class="media">

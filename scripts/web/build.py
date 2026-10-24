@@ -19,31 +19,35 @@ for old in glob.glob('data/web/[0-9]*.json'):
     os.remove(old)
 CODE = {'ok': 1, 'moved': 2, 'dead': 3}
 stats = collections.Counter()
-k = 0
-while os.path.exists(f'data/d/{k}.json'):
-    out = {}
-    for j, r in enumerate(json.load(open(f'data/d/{k}.json'))):
-        u = r[6]
-        if not u:
-            continue
-        u = u if re.match(r'^https?://', u) else 'https://' + u
-        x = res.get(u)
-        if not x:
-            stats['not_checked'] += 1
-            continue
-        stats[x['s']] += 1
-        code = CODE.get(x['s'], 0)
-        new = x.get('u', '')
-        staff = x.get('p') or []
-        if staff:
-            stats['with_staff'] += 1
-            stats['people'] += len(staff)
-            stats['with_photo'] += sum(1 for p in staff if p[4])
-        if code == 3 or new or staff:
-            out[j] = [code, new, staff, x.get('src', '')] if staff else [code, new]
+sys.path.insert(0, os.path.dirname(__file__))
+from crawl import records
+
+shards = collections.defaultdict(dict)
+for k, j, r, added in records():
+    out = shards[k]
+    u = r[6]
+    if not u:
+        continue
+    u = u if re.match(r'^https?://', u) else 'https://' + u
+    x = res.get(u)
+    if not x:
+        stats['not_checked'] += 1
+        if added:
+            out[j] = [0, u]
+        continue
+    stats[x['s']] += 1
+    code = CODE.get(x['s'], 0)
+    new = x.get('u', '') or (u if added else '')
+    staff = x.get('p') or []
+    if staff:
+        stats['with_staff'] += 1
+        stats['people'] += len(staff)
+        stats['with_photo'] += sum(1 for p in staff if p[4])
+    if code == 3 or new or staff:
+        out[j] = [code, new, staff, x.get('src', '')] if staff else [code, new]
+for k, out in shards.items():
     with open(f'data/web/{k}.json', 'w') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
-    k += 1
 
 meta = {'checked': datetime.date.today().isoformat(), 'stats': dict(stats)}
 json.dump(meta, open('data/web/meta.json', 'w'), indent=1)
