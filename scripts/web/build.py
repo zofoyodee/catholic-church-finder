@@ -21,8 +21,17 @@ CODE = {'ok': 1, 'moved': 2, 'dead': 3}
 stats = collections.Counter()
 sys.path.insert(0, os.path.dirname(__file__))
 from crawl import records
+from times import slots, LANGS
+from tz import tz_of
+import base64, struct
 
 shards = collections.defaultdict(dict)
+sched = {}
+TZ = {}
+_raw = base64.b64decode(open('data/points.txt').read())
+_n = json.load(open('data/meta.json'))['count']
+LON, LAT = struct.unpack_from(f'<{_n}i', _raw, 0), struct.unpack_from(f'<{_n}i', _raw, 4 * _n)
+LANG_IDX = {c: i + 1 for i, (c, _) in enumerate(LANGS)}
 for k, j, r, added in records():
     out = shards[k]
     u = r[6]
@@ -49,6 +58,15 @@ for k, j, r, added in records():
         stats['with_confession'] += bool(conf)
     if any(p[3] in ('Pastor', 'Administrator', 'Rector') for p in staff):
         stats['with_pastor'] += 1
+    sl = slots(mass, 0) + slots(conf, 1)
+    if sl:
+        # one int per slot: kind | day mask << 1 | minutes << 8 | language << 19
+        i = k * 2000 + j
+        tz = tz_of(r[5], LON[i] / 1e6, LAT[i] / 1e6)
+        tzi = TZ.setdefault(tz, len(TZ))
+        sched[i] = [tzi] + sorted({kd | m << 1 | t << 8 | (LANG_IDX[lg] if lg else 0) << 19 for kd, m, t, lg in sl})
+        stats['with_times'] += 1
+        stats['with_language'] += any(lg for *_, lg in sl)
     if code == 3 or new or staff or mass or conf:
         e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', '')]
         while e and not e[-1] and len(e) > 2:
@@ -58,6 +76,7 @@ for k, out in shards.items():
     with open(f'data/web/{k}.json', 'w') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
 
+json.dump({'langs': [''] + [c for c, _ in LANGS], 'tz': list(TZ), 'c': sched}, open('data/web/sched.json', 'w'), separators=(',', ':'))
 meta = {'checked': datetime.date.today().isoformat(), 'stats': dict(stats)}
 json.dump(meta, open('data/web/meta.json', 'w'), indent=1)
 print(meta)
