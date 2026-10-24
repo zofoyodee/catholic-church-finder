@@ -6,15 +6,19 @@ An interactive 3D globe of about 184,000 Catholic churches, chapels, shrines, ba
 
 - Drag to spin the globe, scroll or pinch to zoom. Pins cluster when zoomed out; church names appear under pins once you zoom into a city.
 - Search by church name or town.
+- Save favorite churches. Sign in (or create an account) to keep them on every device; see [docs/ACCOUNTS.md](docs/ACCOUNTS.md).
 - Click a pin to open its details card. The card looks up a photograph of the church live on Wikimedia Commons and Wikipedia (matched by location and name, credited to its photographer). A gold votive candle shows while it loads; churches without a matching photo keep a drawn scene.
 
 ## How it works
 
-It is a static site with no build step and no server.
+It is a static site with no build step and no server. Optional accounts use Supabase for sign-in and saved favorites.
 
 | Path | What it holds |
 | --- | --- |
 | `index.html` | The whole app (MapLibre GL globe, search, details card, live photo lookup) |
+| `login.html`, `signup.html`, `reset.html` | Sign in, create an account, reset a password |
+| `config.js`, `account/` | Supabase settings (public URL and anon key only) and the shared sign-in code |
+| `supabase/schema.sql` | The favorites table and its row-level security rules |
 | `data/points.txt` | Base64 positions and types of every church |
 | `data/d/N.json` | Details for churches, 2,000 per file, loaded on click |
 | `data/search-*.txt` | Search index, loaded on first search |

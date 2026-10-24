@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Create an account · Catholic Church Finder</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2305070d'/%3E%3Cpath d='M16 5v22M10 11h12' stroke='%23e8b84a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="account/account.css">
+</head>
+<body>
+<main class="wrap">
+  <a class="brand" href="./"><span class="cross" aria-hidden="true">✠</span>Catholic Church Finder</a>
+
+  <section class="panel" id="signup">
+    <h1>Create an account</h1>
+    <p class="lede">Your favorite churches will follow you to your phone, tablet and computer. Any favorites already saved in this browser come with you.</p>
+    <form id="form" novalidate>
+      <label>Your name <span class="hint">shown at the top of the page</span>
+        <input id="name" type="text" autocomplete="name" maxlength="60" required>
+      </label>
+      <label>Email
+        <input id="email" type="email" autocomplete="email" required>
+      </label>
+      <label>Password <span class="hint">at least 8 characters</span>
+        <span class="field"><input id="password" type="password" autocomplete="new-password" minlength="8" required><button type="button" class="show" aria-label="Show password" aria-pressed="false">Show</button></span>
+      </label>
+      <p class="msg" id="msg" aria-live="polite"></p>
+      <button class="primary" id="go" type="submit">Create account</button>
+    </form>
+  </section>
+
+  <section class="panel done" id="check" hidden>
+    <div class="icon" aria-hidden="true">✉</div>
+    <h1>Check your email</h1>
+    <p class="lede">We sent a link to <b id="sentTo"></b>. Open it to confirm your account, and you will be signed in.</p>
+    <p class="lede">Nothing there after a few minutes? Look in your spam folder.</p>
+  </section>
+
+  <p class="alt">Already have an account? <a href="login.html" id="toLogin">Sign in</a></p>
+  <p class="back"><a href="./">Back to the globe</a></p>
+</main>
+
+<script src="config.js"></script>
+<script src="account/auth.js"></script>
+<script src="account/pages.js"></script>
+<script>
+(function () {
+  const { $, say, busy, next } = CCFPage;
+  $('toLogin').search = location.search;
+
+  $('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = $('name').value.trim().replace(/\s+/g, ' '), email = $('email').value.trim(), password = $('password').value;
+    if (!name) return say('Please tell us your name.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return say('Please enter a valid email address.');
+    if (password.length < 8) return say('Please use a password of at least 8 characters.');
+    busy($('go'), 'Creating your account…', async () => {
+      const db = await CCFAuth.client();
+      const { data, error } = await db.auth.signUp({
+        email, password,
+        options: { data: { name }, emailRedirectTo: CCFAuth.home + 'login.html' }
+      });
+      if (error) throw error;
+      // Supabase hides whether an email is taken; an existing account comes back with no identities
+      if (data.user && Array.isArray(data.user.identities) && !data.user.identities.length) throw new Error('already registered');
+      if (data.session) { location.replace(next()); return; } // email confirmation is switched off
+      $('sentTo').textContent = email;
+      $('signup').hidden = true;
+      $('check').hidden = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* Sign-in pages: one centered card over the same night sky as the globe. */
+:root {
+  --space: #05070d;
+  --ink: #e9e4d6;
+  --ink-soft: #a8adbb;
+  --ink-faint: #6f7689;
+  --gold: #e8b84a;
+  --gold-soft: #f3d58c;
+  --danger: #ff8f8f;
+  --ok: #8fd6a5;
+  --panel: rgba(12, 18, 32, 0.9);
+  --line: rgba(233, 228, 214, 0.14);
+  --focus: #f3d58c;
+  --font-display: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --font-ui: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { min-height: 100%; margin: 0; }
+body {
+  font-family: var(--font-ui); font-size: 15px; color: var(--ink);
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff8 50%, transparent 51%),
+    radial-gradient(1px 1px at 72% 12%, #fff6 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 85% 64%, #fff7 50%, transparent 51%),
+    radial-gradient(1px 1px at 33% 78%, #fff5 50%, transparent 51%),
+    radial-gradient(1px 1px at 8% 60%, #fff6 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 92% 30%, #fff5 50%, transparent 51%),
+    radial-gradient(ellipse at 50% 120%, #10213f 0%, var(--space) 60%) fixed;
+  background-color: var(--space);
+  display: grid; place-items: center; min-height: 100vh;
+  padding: max(24px, env(safe-area-inset-top, 0px)) 16px 32px;
+}
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+a { color: var(--gold-soft); text-underline-offset: 3px; }
+
+.wrap { width: 100%; max-width: 400px; display: grid; gap: 18px; animation: rise .5s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+.brand { text-align: center; text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 600; font-size: 20px; letter-spacing: .08em; }
+.brand .cross { color: var(--gold); margin-right: 8px; }
+
+.panel {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 28px 24px 24px;
+  box-shadow: 0 24px 60px #000a; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+h1 { margin: 0 0 6px; font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: .05em; }
+.lede { margin: 0 0 20px; color: var(--ink-soft); line-height: 1.5; font-size: 14px; }
+
+form { display: grid; gap: 14px; }
+label { display: grid; gap: 6px; font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+.field { position: relative; }
+input[type=email], input[type=password], input[type=text] {
+  width: 100%; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,.04);
+  padding: 0 14px; outline: none; color: var(--ink); font-size: 15px;
+}
+.field input { padding-right: 64px; }
+input:focus { border-color: color-mix(in srgb, var(--gold) 60%, transparent); background: rgba(255,255,255,.06); }
+.show { position: absolute; right: 6px; top: 6px; height: 32px; padding: 0 10px; border: 0; border-radius: 8px; background: none; color: var(--ink-soft); font-size: 12.5px; cursor: pointer; }
+.show:hover { color: var(--ink); background: rgba(255,255,255,.06); }
+.hint { font-size: 12px; color: var(--ink-faint); font-weight: 400; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px; }
+
+.primary {
+  height: 46px; border-radius: 23px; border: 0; cursor: pointer; margin-top: 4px;
+  background: linear-gradient(180deg, var(--gold-soft), var(--gold)); color: #1a1406; font-weight: 600; font-size: 15px;
+  box-shadow: 0 8px 24px rgba(232,184,74,.25); transition: transform .15s ease, filter .15s ease;
+}
+.primary:hover { filter: brightness(1.05); }
+.primary:active { transform: translateY(1px); }
+.primary[disabled] { opacity: .6; cursor: progress; }
+
+.msg { margin: 0; padding: 10px 12px; border-radius: 10px; font-size: 13.5px; line-height: 1.45; }
+.msg.err { background: rgba(255, 110, 110, .1); border: 1px solid rgba(255, 110, 110, .3); color: var(--danger); }
+.msg.ok { background: rgba(120, 210, 150, .1); border: 1px solid rgba(120, 210, 150, .3); color: var(--ok); }
+.msg:empty { display: none; }
+
+.alt { text-align: center; color: var(--ink-soft); font-size: 14px; margin: 0; }
+.back { text-align: center; font-size: 13px; }
+.back a { color: var(--ink-soft); }
+.done { text-align: center; }
+.done .icon { font-size: 34px; color: var(--gold); margin-bottom: 8px; }
+
+@media (prefers-reduced-motion: reduce) { .wrap { animation: none; } }

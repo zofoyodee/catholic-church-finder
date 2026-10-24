@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Reset password · Catholic Church Finder</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2305070d'/%3E%3Cpath d='M16 5v22M10 11h12' stroke='%23e8b84a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="account/account.css">
+</head>
+<body>
+<main class="wrap">
+  <a class="brand" href="./"><span class="cross" aria-hidden="true">✠</span>Catholic Church Finder</a>
+
+  <!-- step 1: ask for the email -->
+  <section class="panel" id="ask">
+    <h1>Reset your password</h1>
+    <p class="lede">Enter the email you signed up with and we will send you a link to choose a new password.</p>
+    <form id="askForm" novalidate>
+      <label>Email
+        <input id="email" type="email" autocomplete="email" required>
+      </label>
+      <p class="msg" id="msg" aria-live="polite"></p>
+      <button class="primary" id="askGo" type="submit">Send reset link</button>
+    </form>
+  </section>
+
+  <section class="panel done" id="sent" hidden>
+    <div class="icon" aria-hidden="true">✉</div>
+    <h1>Check your email</h1>
+    <p class="lede">If an account uses <b id="sentTo"></b>, a reset link is on its way. Open it on this device to choose a new password.</p>
+  </section>
+
+  <!-- step 2: opened from the email link -->
+  <section class="panel" id="choose" hidden>
+    <h1>Choose a new password</h1>
+    <p class="lede" id="chooseFor">Pick a new password for your account.</p>
+    <form id="chooseForm" novalidate>
+      <label>New password <span class="hint">at least 8 characters</span>
+        <span class="field"><input id="password" type="password" autocomplete="new-password" minlength="8" required><button type="button" class="show" aria-label="Show password" aria-pressed="false">Show</button></span>
+      </label>
+      <p class="msg" id="msg2" aria-live="polite"></p>
+      <button class="primary" id="chooseGo" type="submit">Save new password</button>
+    </form>
+  </section>
+
+  <p class="alt"><a href="login.html">Back to sign in</a></p>
+  <p class="back"><a href="./">Back to the globe</a></p>
+</main>
+
+<script src="config.js"></script>
+<script src="account/auth.js"></script>
+<script src="account/pages.js"></script>
+<script>
+(function () {
+  const { $, say, busy } = CCFPage;
+  const fromEmail = /type=recovery|access_token=/.test(location.hash);
+
+  if (/error_description=/.test(location.hash)) {
+    const p = new URLSearchParams(location.hash.slice(1));
+    say((p.get('error_description') || 'That link did not work.').replace(/\+/g, ' ') + ' Ask for a new link below.');
+    history.replaceState(null, '', location.pathname);
+  } else if (CCFAuth.configured && fromEmail) {
+    $('ask').hidden = true;
+    $('choose').hidden = false;
+    // the second form reports into its own message line
+    $('msg').id = 'msg-ask'; $('msg2').id = 'msg';
+    CCFAuth.session().then((s) => {
+      if (s) $('chooseFor').textContent = 'Pick a new password for ' + s.user.email + '.';
+      else say('This reset link has expired. Go back to sign in and ask for a new one.');
+    }).catch((err) => say(CCFAuth.friendly(err)));
+  }
+
+  $('askForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = $('email').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return say('Please enter a valid email address.');
+    busy($('askGo'), 'Sending…', async () => {
+      const db = await CCFAuth.client();
+      const { error } = await db.auth.resetPasswordForEmail(email, { redirectTo: CCFAuth.home + 'reset.html' });
+      if (error) throw error;
+      $('sentTo').textContent = email;
+      $('ask').hidden = true;
+      $('sent').hidden = false;
+    });
+  });
+
+  $('chooseForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const password = $('password').value;
+    if (password.length < 8) return say('Please use a password of at least 8 characters.');
+    busy($('chooseGo'), 'Saving…', async () => {
+      const db = await CCFAuth.client();
+      const { error } = await db.auth.updateUser({ password });
+      if (error) throw error;
+      say('Your password is changed and you are signed in. Taking you to the globe…', 'ok');
+      setTimeout(() => location.replace(CCFAuth.home), 1400);
+    });
+  });
+})();
+</script>
+</body>
+</html>
