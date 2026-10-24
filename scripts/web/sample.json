@@ -1,0 +1,6218 @@
+{
+"status": {
+"dead": 915,
+"unknown": 294,
+"ok": 977,
+"moved": 214
+},
+"errors": {
+"dns": 412,
+"404": 193,
+"410": 3,
+"parked": 239,
+"refused": 12,
+"ssl": 11,
+"cert": 17,
+"timeout": 60,
+"500": 15,
+"522": 4,
+"ServerDisconnectedError": 7,
+"520": 4,
+"ClientOSError": 2,
+"redirects": 2,
+"526": 1,
+"521": 1,
+"523": 1
+},
+"staff_sites": 203,
+"people": {
+"p": 451,
+"d": 57
+},
+"with_photo": 195,
+"staff_sample": [
+[
+"http://canadianmartyrs.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://canadianmartyrs.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Frank Kuczera",
+"Pastor",
+""
+]
+],
+"src": "https://canadianmartyrs.org/"
+}
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-sao-miguel-arcanjo",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-sao-miguel-arcanjo/",
+"p": [
+[
+"p",
+"Padre",
+"Luan Flávio de Oliveira",
+"Pastor",
+""
+],
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-sao-miguel-arcanjo/"
+}
+],
+[
+"http://cloynediocese.ie",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cloynediocese.ie/",
+"p": [
+[
+"p",
+"Fr.",
+"Roman Biletskyy's",
+"",
+"https://cloynediocese.ie/images/01news/26-10-15/Pic_4.jpg"
+],
+[
+"p",
+"Fr.",
+"Eamon Roche",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"John McCarthy",
+"Deacon",
+""
+]
+],
+"src": "https://cloynediocese.ie/"
+}
+],
+[
+"http://bakhitacolumbus.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.bakhitacolumbus.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Anthony J. Davis",
+"Pastor",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/OT8A6779-1920w.JPG"
+],
+[
+"p",
+"Fr.",
+"Serro Michel",
+"Parochial vicar",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/August+16-+2026-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Jason Nguyen",
+"Deacon",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/Deacon+Jason+_3x4_smugmud_smile2_713523194450934-1920w.jpg"
+],
+[
+"d",
+"Deacon",
+"Dean Racine",
+"Deacon",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/IMG_0281-1920w.jpeg"
+],
+[
+"p",
+"Fr.",
+"Elias Udeh",
+"",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/IMG_0282-1920w.jpeg"
+],
+[
+"p",
+"Fr.",
+"Ramon Owera",
+"",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/Fr+Ramon+Owera-1920w.jpg"
+],
+[
+"p",
+"Fr.",
+"Milton Kiocha",
+"",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/Fr.+Milton+Kiocha_3x4+-+PhotoByCedricSze-1920w.jpg"
+],
+[
+"p",
+"Fr.",
+"Thomas Kamau",
+"",
+"https://irp.cdn-website.com/b9f68c1b/dms3rep/multi/opt/Fr.+Thomas+_3x4_PhotoByCedricSze-+OT8A3179A-1920w.jpg"
+]
+],
+"src": "https://www.bakhitacolumbus.org/our-staff"
+}
+],
+[
+"http://basilicaaquino.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.basilicaaquino.it/home/",
+"p": [
+[
+"p",
+"Mons.",
+"Biagio Musto",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"Enrico Romolo Compagnone",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"Reginaldo Addazzi",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"Carlo Minchiatti",
+"",
+""
+]
+],
+"src": "https://www.basilicaaquino.it/home/"
+}
+],
+[
+"http://capeladobompastor.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://capeladobompastor.blogspot.com/",
+"p": [
+[
+"p",
+"Dom",
+"Orani João Tempesta",
+"Pastor",
+""
+],
+[
+"p",
+"Padre",
+"Lazaro Aparecida Diogo",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiFod_lQVykxQKluGbNtcDeol0ldjlfLpVyM3autNqcPUIi0Sb-Dn5AIXmPyxLdvIAkDraBS_UOWtq3jQ9NApXGGwNpGa1oCMmr0o5Pj7bjArXa5idB9NH0JrePBwXNaTY1xYlmOb44kw/s320/_MG_2179.JPG"
+]
+],
+"src": "http://capeladobompastor.blogspot.com/p/presbiterio.html"
+}
+],
+[
+"http://aparecidasorocaba.blogspot.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Padre",
+"Rodolfo Gasparini Morbiolo",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhENnaRmIVM18JMpZO23tDcc_sfb8-Af_z2EMCN6MgaTXTXdkjKXZ81CEos_iMakWDKckuYCcEiHFomIbQ8PPtGmfiGHiw3CVUDYCUwIC-jh2vwDO0zz6GPZvlx4YX4Bo8u_gbLWuIvYCs/s320/IMG_20211231_095121_359-737697.jpg"
+]
+],
+"src": "http://aparecidasorocaba.blogspot.com/"
+}
+],
+[
+"http://centralvacatholiccluster.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://centralvacatholiccluster.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Chris Hess",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Matthew Kelly",
+"Parochial vicar",
+""
+]
+],
+"src": "https://centralvacatholiccluster.org/our-priests"
+}
+],
+[
+"http://baguiocathedral.blogspot.com",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev. Fr.",
+"Oktaaf Vandelwalle",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Serafin Devesse",
+"Rector",
+""
+],
+[
+"p",
+"Fr.",
+"Henry Verbeck",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Florimund Carlu",
+"Rector",
+""
+],
+[
+"p",
+"Fr.",
+"Adolph Cansse",
+"",
+""
+]
+],
+"src": "http://baguiocathedral.blogspot.com"
+}
+],
+[
+"http://cabrinichurch.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cabrinichurch.com/",
+"p": [
+[
+"p",
+"Father",
+"Chad Partain- Pastor Father Joseph",
+"Parochial vicar",
+"https://cabrinichurch.com/wp-content/uploads/2013/08/Fr-Chad-202x300.jpg"
+]
+],
+"src": "https://cabrinichurch.com/staff/"
+}
+],
+[
+"http://catholictripp.org",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Zane Pekron",
+"Pastor",
+""
+]
+],
+"src": "http://catholictripp.org/contact.php"
+}
+],
+[
+"http://catholique-polenemours.blogspot.fr/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://catholique-polenemours.blogspot.com/",
+"p": [
+[
+"p",
+"Mgr",
+"Jean-Yves Nahmias",
+"",
+""
+],
+[
+"p",
+"Abbé",
+"Maurice Rondeau. Educateur",
+"",
+""
+],
+[
+"p",
+"Père",
+"Donat RUSENGAMIHIGO Mail",
+"",
+""
+],
+[
+"p",
+"Père",
+"Frédéric Desquilbet Curé",
+"Pastor",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHBepEOWm6XMcd5vM379pUpcVrO2l2OAdUsE3k4xzNjXoaBv8XqQuwB0hjCO1Yv_2P831iFCsz4AJimlk7ui3ciSO9nMj4yvXxafVR15bhauHlKDN4UOxk3maO2N7fohYJmo4jZeukKyw/"
+],
+[
+"p",
+"Père",
+"Aubin RAKOTOSON Référent",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHBepEOWm6XMcd5vM379pUpcVrO2l2OAdUsE3k4xzNjXoaBv8XqQuwB0hjCO1Yv_2P831iFCsz4AJimlk7ui3ciSO9nMj4yvXxafVR15bhauHlKDN4UOxk3maO2N7fohYJmo4jZeukKyw/"
+],
+[
+"p",
+"Père",
+"Donat RUSENGAMIHIGO Référent",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHBepEOWm6XMcd5vM379pUpcVrO2l2OAdUsE3k4xzNjXoaBv8XqQuwB0hjCO1Yv_2P831iFCsz4AJimlk7ui3ciSO9nMj4yvXxafVR15bhauHlKDN4UOxk3maO2N7fohYJmo4jZeukKyw/"
+],
+[
+"p",
+"Père",
+"Jean-José RAKOTONDRAZAFINDRAIBÉ Référent",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHBepEOWm6XMcd5vM379pUpcVrO2l2OAdUsE3k4xzNjXoaBv8XqQuwB0hjCO1Yv_2P831iFCsz4AJimlk7ui3ciSO9nMj4yvXxafVR15bhauHlKDN4UOxk3maO2N7fohYJmo4jZeukKyw/"
+],
+[
+"p",
+"Père",
+"Henri DALLIER Prêtre",
+"Chaplain",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHBepEOWm6XMcd5vM379pUpcVrO2l2OAdUsE3k4xzNjXoaBv8XqQuwB0hjCO1Yv_2P831iFCsz4AJimlk7ui3ciSO9nMj4yvXxafVR15bhauHlKDN4UOxk3maO2N7fohYJmo4jZeukKyw/"
+]
+],
+"src": "http://catholique-polenemours.blogspot.com/"
+}
+],
+[
+"http://arras.catholique.fr/stefamilleenbaspays",
+{
+"s": "ok",
+"c": 200,
+"u": "https://arras.catholique.fr/le-diocese/les-paroisses/",
+"p": [
+[
+"p",
+"Mgr",
+"Olivier Leborgne",
+"",
+"https://arras.catholique.fr/app/uploads/2026/09/Couverture-Lettre-pastorale-de-Mgr-Leborgne-2026-300x280.png"
+]
+],
+"src": "https://arras.catholique.fr/le-diocese/transformation-dio/"
+}
+],
+[
+"http://Holyfamilycatholicchurch2.godaddysites.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://holyfamilycatholicchurch2.godaddysites.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Bill Hodgson",
+"Pastor",
+""
+]
+],
+"src": "https://holyfamilycatholicchurch2.godaddysites.com/"
+}
+],
+[
+"http://catholicdirectory.org/catholic_information.asp?id=53051",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.catholicdirectory.org/Catholic-Information.asp?id=53051&",
+"p": [
+[
+"p",
+"Canon",
+"Michael Smith Priest",
+"",
+"https://www.catholicdirectory.org/mobile/images/Catholic-Masses-Broadcast-Online.png"
+]
+],
+"src": "https://www.catholicdirectory.org/Catholic-Information.asp?id=53051&"
+}
+],
+[
+"http://bergen.katolsk.no/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://bergen.katolsk.no/",
+"p": [
+[
+"p",
+"Dom",
+"Alois Arnstein Brodersen Can",
+"",
+""
+]
+],
+"src": "https://bergen.katolsk.no/?page_id=905"
+}
+],
+[
+"http://blessedsacrament.caedm.ca/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blessedsacrament.caedm.ca/",
+"p": [
+[
+"p",
+"Most Rev.",
+"Stephen A. Hero",
+"",
+""
+]
+],
+"src": "https://blessedsacrament.caedm.ca/"
+}
+],
+[
+"http://catholicdirectory.org/Catholic_Information.asp?ID=63290",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.catholicdirectory.org/Catholic-Information.asp?ID=63290&",
+"p": [
+[
+"p",
+"Rev",
+"Arthur-Marie Matip Priest",
+"",
+"https://www.diocese.cc/filesystem/11/Private/f/images/A_42980/CD-Side-2025-exp.jpg"
+],
+[
+"p",
+"Rev",
+"Chris Lepaty Priest",
+"",
+"https://www.diocese.cc/filesystem/11/Private/f/images/A_42980/CD-Side-2025-exp.jpg"
+],
+[
+"p",
+"Rev",
+"Joseph Kiwango Priest",
+"",
+"https://www.diocese.cc/filesystem/11/Private/f/images/A_42980/CD-Side-2025-exp.jpg"
+]
+],
+"src": "https://www.catholicdirectory.org/Catholic-Information.asp?ID=63289"
+}
+],
+[
+"http://arthunkalbasilica.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://arthunkalbasilica.com/",
+"p": [
+[
+"p",
+"Msgr.",
+"Joy Puthenveetil",
+"",
+"https://arthunkalbasilica.com/images/mnsgr.webp"
+],
+[
+"p",
+"Fr.",
+"Joseph Alphonse",
+"",
+"https://arthunkalbasilica.com/images/fr-joseph-home.jpg"
+],
+[
+"p",
+"Fr.",
+"Jeeson Jose",
+"",
+"https://arthunkalbasilica.com/images/fr-jeeson-home.jpg"
+],
+[
+"p",
+"Fr.",
+"Gasper Pious",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Giacomo Fenicio S",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Joseph Alphone",
+"",
+"https://arthunkalbasilica.com/images/fr-joseph-home.jpg"
+]
+],
+"src": "https://arthunkalbasilica.com/"
+}
+],
+[
+"http://SaintMaryPokrova.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev. Fr.",
+"Ivan Volansky. Throughout",
+"",
+""
+]
+],
+"src": "http://saintmarypokrova.com/"
+}
+],
+[
+"http://catedraldejujuy.blogspot.com.ar/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://catedraldejujuy.blogspot.com/",
+"p": [
+[
+"p",
+"Mons.",
+"Daniel Fernández",
+"",
+""
+]
+],
+"src": "http://catedraldejujuy.blogspot.com/"
+}
+],
+[
+"http://STLRespectLife.org/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://www.archstl.org/about/offices-and-agencies/respect-life-apostolate/",
+"p": [
+[
+"p",
+"Very Reverend",
+"Carl Scheble",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Very Reverend",
+"Chris Martin",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Very Reverend",
+"John Brockland",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Very Reverend",
+"Scott Jones",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Very Reverend",
+"Mike Lydon",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Very Reverend",
+"William Kempf",
+"",
+""
+],
+[
+"p",
+"Very Reverend",
+"Craig T. Holway",
+"",
+""
+],
+[
+"p",
+"Very Reverend",
+"Thomas C. Miller",
+"",
+""
+],
+[
+"p",
+"Very Reverend",
+"Joseph C. Geders",
+"",
+""
+],
+[
+"p",
+"Very Reverend",
+"Edward J. Stanger",
+"",
+""
+],
+[
+"p",
+"Very Reverend",
+"Nick Kastenholz",
+"",
+""
+]
+],
+"src": "https://www.archstl.org/about/leadership/"
+}
+],
+[
+"http://Stbrendanmiami.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stbrendanmiami.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Miguel Sepúlveda",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Pierre Listo Charles",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Fr.",
+"Pedro Corces",
+"Pastor emeritus",
+""
+],
+[
+"d",
+"Rev. Mr.",
+"Bill Lannon",
+"Deacon",
+""
+]
+],
+"src": "https://www.stbrendanmiami.org/church/about/clergy"
+}
+],
+[
+"http://btccjax.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://btccjax.org/",
+"p": [
+[
+"p",
+"Rev. Father",
+"Matt King",
+"Pastor",
+"https://cdn.diocesanweb.org/crossroads/btccjax/wp-content/uploads/2019/05/headshotMattKing.jpg"
+],
+[
+"p",
+"Fr.",
+"Marlon Velázquez",
+"Parochial vicar",
+"https://cdn.diocesanweb.org/crossroads/btccjax/wp-content/uploads/2022/11/P.-Marlon-Velazquez_Headshot--scaled.png"
+],
+[
+"p",
+"Fr.",
+"Steven Stillmunks",
+"In residence",
+"https://cdn.diocesanweb.org/crossroads/btccjax/wp-content/uploads/2021/06/Steven_STILLMUNKS.jpg"
+]
+],
+"src": "https://btccjax.org/about-us/our-staff/"
+}
+],
+[
+"http://capela.ufv.br/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.capela.ufv.br/",
+"p": [
+[
+"p",
+"Padre",
+"Francys Silvestrini",
+"",
+"https://www.capela.ufv.br/wp-content/uploads/nivoslider4wp_files/55_s.jpeg"
+]
+],
+"src": "https://www.capela.ufv.br/"
+}
+],
+[
+"http://WWW.SSJMNJ.ORG/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.ssjmnj.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Fernando Echeverri",
+"Parochial vicar",
+"https://uploads.weconnect.com/67d62f588156e7ac5ac87601ff282634a4a0952d/rxmmgwo1nnovqxsn626jcswsmym.jpg"
+]
+],
+"src": "https://www.ssjmnj.org/"
+}
+],
+[
+"http://chrystuskrol.org.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://chrystuskrol.org.pl/",
+"p": [
+[
+"p",
+"Ksiądz",
+"Proboszcz. Do",
+"Pastor",
+"https://chrystuskrol.org.pl/storage/ParishGroups/1729620091-6a1812436f38ef15733280a7b7f0d451.jpg"
+]
+],
+"src": "https://chrystuskrol.org.pl/grupy_duszpasterskie/krag-biblijny,1"
+}
+],
+[
+"http://clonakiltyparish.ie",
+{
+"s": "moved",
+"c": 200,
+"u": "https://onefaith.ie/clonakilty",
+"p": [
+[
+"d",
+"Deacon",
+"Paul Ryan",
+"Deacon",
+"https://onefaith.ie/images/parish/timoleague/Paul-Ryan-600x400.jpg"
+],
+[
+"p",
+"Canon",
+"John Kingston AP",
+"",
+"https://onefaith.ie/images/parish/timoleague/fr-john-kingston-600x400.jpg"
+],
+[
+"p",
+"Canon",
+"Martin O’Driscoll Co-PP",
+"",
+"https://onefaith.ie/images/parish/rosscarbery/fr-martin-odriscoll-600x400.jpg"
+]
+],
+"src": "https://onefaith.ie/clergy"
+}
+],
+[
+"http://cebnsps.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://cebnsps.blogspot.com/",
+"p": [
+[
+"p",
+"Cônego",
+"Matias Freire",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpwRVCoR0cd6QoBKj0WjzQHah8u0YZb1u1XQrq-jeSx00cVbQWYV7TXY_GxSwqdK-4Ri5DBlGSoi5WXkFQBMN9Q27vm9-zDymDpI3CJyattq7jN0UCVGGw_Q00wdHf_aVSlZbLzwTIqrc/s320/cmf1.jpg"
+]
+],
+"src": "http://cebnsps.blogspot.com/"
+}
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-santa-edwiges",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-santa-edwiges/",
+"p": [
+[
+"p",
+"Padre",
+"José Tadeu Aguiar Lima",
+"Pastor",
+""
+],
+[
+"p",
+"Padre",
+"Vanderlei Carlos",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Pe.",
+"Osvaldo Missoni",
+"Pastor",
+""
+],
+[
+"p",
+"Pe.",
+"Joaquim Alberto Rodrigues",
+"Pastor",
+""
+],
+[
+"p",
+"Pe.",
+"Santi Capriotti",
+"Pastor",
+""
+],
+[
+"p",
+"Pe.",
+"Pedro Favoretto",
+"Pastor",
+""
+],
+[
+"p",
+"Pe.",
+"José Gessy Cippiciani",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"Geraldo Antonio Bassi",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"João Carlos Nogueira",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"Valdir Antonio Stolf",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"José Antonio Mainardi",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"José Carlos Stival",
+"",
+""
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-santa-edwiges/"
+}
+],
+[
+"http://antoni-reda.pl/wp/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://antoni-reda.pl/wp/",
+"p": [
+[
+"p",
+"Ks.",
+"Mariusz Kohnke",
+"",
+"https://antoni-reda.pl/wp-content/uploads/2025/08/kohnke-m.png"
+],
+[
+"p",
+"Ks.",
+"Piotr Wiecki",
+"Pastor",
+"https://antoni-reda.pl/wp-content/uploads/2025/08/wiecki-p.png"
+],
+[
+"p",
+"Ks.",
+"Kanonik Mgr Jan Kowalski",
+"Pastor",
+"https://antoni-reda.pl/wp-content/uploads/2025/08/kowalski-j.png"
+]
+],
+"src": "https://antoni-reda.pl/duszpasterze/"
+}
+],
+[
+"http://christsauveur64.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.christsauveur64.org/",
+"p": [
+[
+"p",
+"Abbé",
+"Jacques DE MESMAY",
+"Pastor",
+""
+],
+[
+"p",
+"Abbé",
+"René-Sébastien FOURNIÉ",
+"",
+""
+],
+[
+"p",
+"Abbé",
+"Pricet SAMBA",
+"Chaplain",
+""
+],
+[
+"p",
+"Abbé",
+"Alfred SMITH",
+"",
+""
+]
+],
+"src": "https://www.christsauveur64.org/la-paroisse/equipe-des-pretres"
+}
+],
+[
+"http://Spcccdetroit.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://spcccdetroit.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Augustus Tolton. Father John",
+"",
+""
+]
+],
+"src": "https://spcccdetroit.org/"
+}
+],
+[
+"http://assumptionlauderdale.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://assumptionlauderdale.org/",
+"p": [
+[
+"p",
+"Father",
+"John Cotter",
+"",
+""
+],
+[
+"p",
+"Father",
+"M. J. Fogarty",
+"",
+""
+],
+[
+"p",
+"Father",
+"Patrick D. O’Brien",
+"",
+""
+],
+[
+"p",
+"Msgr.",
+"Thomas O’Donavan",
+"",
+""
+],
+[
+"p",
+"Msgr.",
+"Robert W. Schiefen",
+"",
+""
+],
+[
+"p",
+"Msgr.",
+"Martin J. Cassidy",
+"",
+""
+],
+[
+"p",
+"Very Rev.",
+"Michael J. Greer",
+"",
+""
+],
+[
+"p",
+"Rev. Fr.",
+"Lazarus Govin",
+"",
+""
+],
+[
+"p",
+"Father",
+"Xavier Morras",
+"",
+""
+],
+[
+"p",
+"Reverend",
+"Edward A. McCarthy",
+"Pastor",
+""
+],
+[
+"p",
+"The Most Reverend",
+"Joseph Cassidy",
+"Pastor",
+""
+]
+],
+"src": "https://assumptionlauderdale.org/about/"
+}
+],
+[
+"http://ccvidanova.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://ccvidanova.blogspot.com/",
+"p": [
+[
+"p",
+"Dom",
+"Orlando Brandes",
+"",
+""
+]
+],
+"src": "http://ccvidanova.blogspot.com/"
+}
+],
+[
+"http://catholicottawa.ca/portuguese-senhor-santo-cristo",
+{
+"s": "ok",
+"c": 200,
+"u": "https://catholicottawa.ca",
+"p": [
+[
+"p",
+"Fr.",
+"Benjamin Davis",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"James Atkinson",
+"",
+""
+]
+],
+"src": "https://catholicottawa.ca/about/"
+}
+],
+[
+"http://StFrancisCatholic.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stfranciscatholic.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Michael Casey",
+"",
+"https://cdn.diocesanweb.org/beacon/francisnb/wp-content/uploads/2025/03/michael_casey-e1769098416835.jpg"
+],
+[
+"p",
+"Rev.",
+"Sean Yates",
+"",
+"https://cdn.diocesanweb.org/beacon/francisnb/wp-content/uploads/2026/01/yates.png"
+],
+[
+"d",
+"Deacon",
+"Alan Bielawski",
+"Deacon",
+"https://cdn.diocesanweb.org/beacon/francisnb/wp-content/uploads/2026/01/deacon.jpg"
+]
+],
+"src": "https://stfranciscatholic.org/staff/"
+}
+],
+[
+"http://angouleme.catholique.fr",
+{
+"s": "moved",
+"c": 200,
+"u": "https://charente.catholique.fr/",
+"p": [
+[
+"p",
+"Mgr",
+"Hervé Gosselin",
+"",
+""
+],
+[
+"p",
+"Père",
+"Justin Bationo",
+"",
+""
+],
+[
+"p",
+"P.",
+"Louis Lochet",
+"",
+""
+]
+],
+"src": "https://charente.catholique.fr/"
+}
+],
+[
+"http://archidiecezja.lodz.pl/parafia/nim/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.archidiecezja.lodz.pl/parafia/nim",
+"p": [
+[
+"p",
+"Ks.",
+"Ignacego Skorupki",
+"",
+""
+]
+],
+"src": "https://www.archidiecezja.lodz.pl/strona/osrodki-duszpasterskie"
+}
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-nossa-senhora-de-fatima",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-nossa-senhora-de-fatima/",
+"p": [
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-nossa-senhora-de-fatima/"
+}
+],
+[
+"http://churchofstpatrick.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.churchofstpatrick.com/",
+"p": [
+[
+"p",
+"Father",
+"Brian Fier",
+"Pastor",
+"https://irp.cdn-website.com/f218fe6c/dms3rep/multi/opt/qnshum0x00l3jtbo9vl1owgtug-1920w.png"
+]
+],
+"src": "https://www.churchofstpatrick.com/our-staff"
+}
+],
+[
+"http://archeparchy.ca",
+{
+"s": "ok",
+"c": 200,
+"u": "https://archeparchy.ca/",
+"p": [
+[
+"p",
+"Most Rev.",
+"Michael KWIATKOWSKI",
+"",
+"https://archeparchy.ca/wp-content/uploads/2026/09/Bishop_Michael_Kwiatkowski-237x300.jpg"
+],
+[
+"p",
+"Most Rev.",
+"Andriy RABIY",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/12/Дизайн-без-назви-1-150x150.png"
+],
+[
+"p",
+"Very Rev.",
+"Volodymyr BASHUTSKYY",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Башуцький-qxiunioj0k062cxmtc1iuu2i57u3z544vnr2ecq3dk.jpg"
+],
+[
+"p",
+"Very Rev.",
+"Oleg BODNARSKI",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Боднарський-qxivg9ku15cv516dy9drm2x06g58dw8lty0ns03n2w.jpg"
+],
+[
+"p",
+"Rev.",
+"Yaroslav BUDUYKEVYCH",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Будуйкевич-qxiwcawsyv7oukn3vlx03hvl288lqif98ihfmill08.jpg"
+],
+[
+"p",
+"Rev.",
+"Walter DUDYCH",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Дудич-qxiwp94r4oxwt5tw97fyg887pcensdu4cm29nreba0.jpg"
+],
+[
+"p",
+"Very Rev.",
+"Mark GNUTEL",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Ґнутел-qxiwo2u0l5c0apjc475qu0wgz07560676spf2b5120.jpg"
+],
+[
+"p",
+"Rev.",
+"Ivan HNATIV",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Гнатів-qxiwlocv4e1mml0y55s2gmq2bk1dhumw6woqwup8yg.jpg"
+],
+[
+"p",
+"Rev.",
+"Vasyl HOI",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Гой-qxiwmvlfurotgna54ogwnbt9na49bxejoup2zkx508.jpg"
+],
+[
+"p",
+"Rev.",
+"Darren KAWIUK",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Кавюк-qxm4f9lhmfwdvigpnzlfiy6tsinr6kmaggn5xaepp4.jpg"
+],
+[
+"p",
+"Rev.",
+"Mykhaylo KHOMITSKYY",
+"",
+"https://archeparchy.ca/wp-content/uploads/2024/11/elementor/thumbs/Хоміцький-qxm4zajp8dbb8fdhq58a5e9df1ya6f4evl0l0ipr4o.jpg"
+]
+],
+"src": "https://archeparchy.ca/clergy-and-religious/"
+}
+],
+[
+"http://3saintsparishes.ca/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"Brady Lane Fort Augustus",
+"",
+"http://3saintsparishes.ca/img/st_patricks1.jpg"
+]
+],
+"src": "http://3saintsparishes.ca/"
+}
+],
+[
+"http://amistadcw.wordpress.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://amistadcw.wordpress.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Steve Kelly",
+"",
+""
+]
+],
+"src": "https://amistadcw.wordpress.com/"
+}
+],
+[
+"http://52.catholique.fr/St-Jean-Baptiste-Chaumont",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.diocesedelangres.fr",
+"p": [
+[
+"p",
+"P.",
+"Stéphane Bredelet",
+"",
+""
+]
+],
+"src": "https://www.diocesedelangres.fr"
+}
+],
+[
+"http://Www.sjecm.org/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://www.stjohntheevangelistcm.com",
+"p": [
+[
+"p",
+"Reverend",
+"Patrick M. Riegger",
+"Pastor",
+""
+],
+[
+"p",
+"Reverend",
+"Charlince Vendredy",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Reverend Monsignor",
+"Ellsworth R. Walden",
+"Pastor emeritus",
+""
+],
+[
+"p",
+"Reverend",
+"Jerry DiSpigno",
+"",
+""
+],
+[
+"p",
+"Reverend",
+"Peter D’Abele",
+"",
+""
+]
+],
+"src": "http://www.stjohntheevangelistcm.com/sjecm/contact-sje"
+}
+],
+[
+"http://Butteccn.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://butteccn.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Patrick Beretta",
+"Pastor",
+"https://butteccn.org/wp-content/uploads/Fr.-Patrick-266x300.jpg"
+]
+],
+"src": "https://butteccn.org/"
+}
+],
+[
+"http://cdwiawso.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cdwiawso.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Sr. Felicia Yawson",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Sr. Martha Tsetsewa",
+"",
+""
+]
+],
+"src": "https://cdwiawso.org/priests-religious-and-seminarians/"
+}
+],
+[
+"http://Saint-Lawrence-Church.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://saint-lawrence-church.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Walter J. Benn",
+"",
+"https://img1.wsimg.com/isteam/ip/5f7d4b64-aed9-4c06-9603-9f147e46a35a/Father%20Benn%20Door-0001.jpg/:/cr=t:10.78%25,l:0%25,w:100%25,h:89.22%25/rs=w:600,h:800,cg:true"
+]
+],
+"src": "https://saint-lawrence-church.org/"
+}
+],
+[
+"http://christourhopecluster.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.christourhopecluster.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Tyler Raymond",
+"Parochial vicar",
+"https://www.christourhopecluster.com/uploads/7/2/8/7/7287310/published/calmar-area-pastorate.jpg?1784222016"
+],
+[
+"p",
+"Rev.",
+"Thiet Hoang",
+"Parochial vicar",
+"https://www.christourhopecluster.com/uploads/7/2/8/7/7287310/published/calmar-area-pastorate.jpg?1784222016"
+]
+],
+"src": "https://www.christourhopecluster.com/"
+}
+],
+[
+"http://StStephenMPk.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.ststephenmpk.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Joseph Magdaong",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Ali Kanissius",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.ststephenmpk.org/staff"
+}
+],
+[
+"http://Blessedsacrament.church/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blessedsacrament.church/",
+"p": [
+[
+"p",
+"Rev.",
+"Charles J. Drees",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Ralph J. Smith",
+"",
+""
+],
+[
+"p",
+"Father",
+"Michael O’Gorman",
+"",
+""
+],
+[
+"p",
+"Father",
+"John O’Donoghue",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Christopher Munoz",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Johnson Le",
+"",
+""
+]
+],
+"src": "https://blessedsacrament.church/about-our-parish/"
+}
+],
+[
+"http://abadiamontserrat.net",
+{
+"s": "moved",
+"c": 200,
+"u": "https://abadiamontserrat.cat/",
+"p": [
+[
+"p",
+"P.",
+"Valentí Tenas",
+"",
+"https://montserrat.sobrevia.net/gestiobeta/../gestiobeta/arxius/montserrat/imatges/202610/1620_1792392641Edici_3-34.jpg"
+]
+],
+"src": "https://abadiamontserrat.cat/"
+}
+],
+[
+"http://christthekingeastbourne.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://christthekingeastbourne.org/",
+"p": [
+[
+"p",
+"Rev",
+"Con Foley",
+"Pastor",
+""
+]
+],
+"src": "https://christthekingeastbourne.org/about-us/sacraments/"
+}
+],
+[
+"http://assumption.rcec.london.on.ca",
+{
+"s": "moved",
+"c": 200,
+"u": "https://assumptionparish.ca",
+"p": [
+[
+"p",
+"Fr.",
+"Timothy Scott",
+"Pastor",
+"https://assumptionparish.ca/wp-content/uploads/2024/07/20240630-1B2A6869-1-150x150.jpg"
+],
+[
+"p",
+"Fr.",
+"Kevin Mannara",
+"Parochial vicar",
+"https://assumptionparish.ca/wp-content/uploads/2026/06/kevinsq.jpg"
+],
+[
+"p",
+"Fr.",
+"David Basil",
+"Parochial vicar",
+"https://assumptionparish.ca/wp-content/uploads/2026/06/davidsq.jpg"
+],
+[
+"p",
+"Fr.",
+"Gabriel Eneke",
+"Parochial vicar",
+"https://assumptionparish.ca/wp-content/uploads/2026/07/473894785_122208496454088177_402799466875445547_n.png"
+],
+[
+"d",
+"Deacon",
+"Paul Bezaire",
+"Deacon",
+"https://assumptionparish.ca/wp-content/uploads/2020/08/iryedd4d-150x150.jpg"
+],
+[
+"d",
+"Deacon",
+"Edward Czilli",
+"Deacon",
+""
+]
+],
+"src": "https://assumptionparish.ca/about/staff/"
+}
+],
+[
+"http://StPancras-queens.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stpancras-queens.org/",
+"p": [
+[
+"p",
+"Father",
+"Christopher Heanue",
+"",
+"https://files-prod.tilmaplatform.com/cdn-cgi/image/gravity=0.5x0.5,fit=cover,width=500/2026/10/23/16/47/08/905dde04-f323-48c6-b6cd-9a3827241572/c1a-z4n6q-kpp4q807tz61-o2qpmf.jpeg"
+],
+[
+"p",
+"Fr.",
+"Mike Schmitz",
+"",
+"https://files-prod.tilmaplatform.com/cdn-cgi/image/gravity=0.5x0.5,fit=cover,width=500/2026/10/21/13/49/37/6d99d67c-ab87-415b-8396-3f15cc8b1c68/ahmed-WfxxYVh_T_A-unsplash.jpg"
+]
+],
+"src": "https://stpancras-queens.org/"
+}
+],
+[
+"http://bogusza.diecezjatarnow.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://bogusza.diecezjatarnow.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Marian Duda Proboszcz",
+"Pastor",
+"https://bogusza.diecezjatarnow.pl/images/61/6ac301b8541d450833bd54ea9f96e03c.webp"
+]
+],
+"src": "https://bogusza.diecezjatarnow.pl/duszpasterze"
+}
+],
+[
+"http://blessedsacramentchurch.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blessedsacramentchurch.org/",
+"p": [
+[
+"p",
+"Very Rev.",
+"Timothy S. Hoag J",
+"",
+"https://img1.wsimg.com/isteam/ip/ea33f33c-7dfd-45e8-9910-948378b61b67/FR-TIM.jpg/:/cr=t:0%25"
+]
+],
+"src": "https://blessedsacramentchurch.org/clergy-and-staff"
+}
+],
+[
+"http://bazylikamikolow.pl",
+{
+"s": "ok",
+"c": 200,
+"u": "https://bazylikamikolow.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Grzegorz Borg",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Tomasz Kaba",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Arkadiusz Ksi",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Dr Sebastian Mandrysz",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Józef Bryzik",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Krzysztof Grabiec",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Sebastian Niemczy",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Grzegorz Warwas",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Alojzy Sznapka",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"August Schumann",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Aleksander Skowro",
+"Administrator",
+""
+],
+[
+"p",
+"Ks.",
+"Jan Janota",
+"Administrator",
+""
+]
+],
+"src": "https://bazylikamikolow.pl/parafia/duszpasterze"
+}
+],
+[
+"http://blesseds.weebly.com",
+{
+"s": "moved",
+"c": 200,
+"u": "http://www.blessedsacramentwpg.ca/",
+"p": [
+[
+"p",
+"Fr.",
+"Gerry Sembrano",
+"",
+"http://www.blessedsacramentwpg.ca/uploads/1/1/2/0/11200452/img-5061_orig.jpg"
+],
+[
+"d",
+"Deacon",
+"Joe Simangan",
+"Deacon",
+"http://www.blessedsacramentwpg.ca/uploads/1/1/2/0/11200452/dscf4993_orig.jpg"
+]
+],
+"src": "http://www.blessedsacramentwpg.ca/parish-contacts.html"
+}
+],
+[
+"http://catho94-fontenay.cef.fr",
+{
+"s": "ok",
+"c": 200,
+"u": "https://catho94-fontenay.cef.fr/",
+"p": [
+[
+"p",
+"Père",
+"Benoît-Marie Jourjon Doyen de Fontenay-sous-Bois",
+"",
+"https://catho94-fontenay.cef.fr/wp-content/uploads/2022/09/pere-benoit-marie-rounded-90x90.jpg"
+]
+],
+"src": "https://catho94-fontenay.cef.fr/"
+}
+],
+[
+"http://Www.sacredheartofcamden.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://sacredheartofcamden.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Vincent G. Guest",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"Dalton Reyes",
+"Parochial vicar",
+""
+],
+[
+"d",
+"Deacon",
+"Otilio Peguero",
+"Deacon",
+""
+],
+[
+"p",
+"Fr.",
+"Vince Guest",
+"",
+""
+]
+],
+"src": "https://sacredheartofcamden.com/staff"
+}
+],
+[
+"http://avozdaparoquiasaofranciscodeassis.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://avozdaparoquiasaofranciscodeassis.blogspot.com/",
+"p": [
+[
+"p",
+"Frei",
+"Wilton Nossa Senhora das Graças",
+"",
+""
+],
+[
+"p",
+"Frei",
+"Valdo Tarde Matriz",
+"",
+""
+],
+[
+"p",
+"Frei",
+"Raimundo QUARTA-FEIRA Atendimento",
+"",
+""
+],
+[
+"p",
+"Frei",
+"Wilton QUINTA-FEIRA Manhã Matriz",
+"Pastor",
+""
+],
+[
+"p",
+"Frei",
+"Raimundo Tarde Bom Pastor",
+"Pastor",
+""
+],
+[
+"p",
+"Frei",
+"Wilton Matriz",
+"Pastor",
+""
+],
+[
+"p",
+"Frei",
+"Valdo SEXTA-FEIRA Manhã Matriz",
+"Pastor",
+""
+],
+[
+"p",
+"Frei",
+"Raimundo Obras Sociais",
+"Pastor",
+""
+],
+[
+"p",
+"Frei",
+"Wilton Tarde Matriz",
+"Pastor",
+""
+],
+[
+"p",
+"Frei",
+"Valdo SÁBADO Manhã Matriz",
+"",
+""
+]
+],
+"src": "http://avozdaparoquiasaofranciscodeassis.blogspot.com/2012/06/pastoral-da-sobriedade.html"
+}
+],
+[
+"http://catholicchurchrhodes.com/default.asp?id=1",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Father",
+"John Luke Gregory",
+"Pastor",
+"http://catholicchurchrhodes.com/img/home/1.jpg"
+]
+],
+"src": "http://catholicchurchrhodes.com/default.asp?id=1"
+}
+],
+[
+"http://cabraparish.ie/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cabraparish.ie/",
+"p": [
+[
+"p",
+"Fr.",
+"Valentine Burke",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Paul Thornton Phone",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Joe Keegan Phone",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"John Joe Spring Phone",
+"Pastor",
+""
+]
+],
+"src": "https://cabraparish.ie/our-story/"
+}
+],
+[
+"http://ascensionclairton.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.ascensionclairton.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Cornelius Laurisin. Under Rev. Irenaeus",
+"Pastor",
+"https://www.ascensionclairton.com/wp-content/uploads/2014/12/4298192_orig.jpg"
+],
+[
+"p",
+"Rev.",
+"Michael Rapach",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Andrew Dzmura",
+"",
+""
+],
+[
+"p",
+"Msgr.",
+"Michael Hrebin",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Ivan Mina",
+"",
+""
+]
+],
+"src": "https://www.ascensionclairton.com/about-us/"
+}
+],
+[
+"http://christourlightmn.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.christourlightmn.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Kevin Anderson",
+"Pastor",
+"https://irp.cdn-website.com/36d94e3a/import/clib/christourlightmn_org/dms3rep/multi/opt/v9t0dtodq0i9uas4z7ohdfjawvm-200x300-1920w.jpeg"
+],
+[
+"d",
+"Deacon",
+"Mark Barder",
+"Deacon",
+""
+]
+],
+"src": "https://www.christourlightmn.org/parish-staff---council"
+}
+],
+[
+"http://SaintJohnChurchMiddletown.com/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://saintjohnmiddletownct.weebly.com/",
+"p": [
+[
+"p",
+"Reverend Father",
+"Gregory P. Galvin",
+"Pastor",
+"https://saintjohnmiddletownct.weebly.com/uploads/1/1/2/9/112952891/saint-john-staff-2026_orig.png"
+],
+[
+"p",
+"Father",
+"Gregory Galvin",
+"",
+"https://saintjohnmiddletownct.weebly.com/uploads/1/1/2/9/112952891/profile-of-a-priest_orig.jpg"
+]
+],
+"src": "https://saintjohnmiddletownct.weebly.com/parish-staff.html"
+}
+],
+[
+"http://basilique-ndps.fr/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://basilique-ndps.fr/",
+"p": [
+[
+"p",
+"Père",
+"Yannick ANDRÉ",
+"Rector",
+""
+],
+[
+"p",
+"Père",
+"Gabriel SAMPRÉ",
+"",
+""
+]
+],
+"src": "https://basilique-ndps.fr/la-paroisse/lequipe-paroissiale/"
+}
+],
+[
+"http://Www.holytrinityutica.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.holytrinityutica.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Mark P. Kaminski",
+"Pastor",
+""
+],
+[
+"d",
+"Deacon",
+"Rev. Canon John E. Mikalajunas",
+"Deacon",
+""
+],
+[
+"p",
+"Rev.",
+"Joseph E. Moskal",
+"Pastor",
+""
+],
+[
+"p",
+"Canon",
+"Father John Mikalajunas",
+"",
+""
+]
+],
+"src": "https://www.holytrinityutica.com/"
+}
+],
+[
+"http://caballerosdelavirgen.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://caballerosdelavirgen.org/",
+"p": [
+[
+"p",
+"Mons.",
+"João S. Clá Dias",
+"",
+""
+]
+],
+"src": "https://caballerosdelavirgen.org/"
+}
+],
+[
+"http://blessedsacramentqcy.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blessedsacramentqcy.org/",
+"p": [
+[
+"d",
+"Deacon",
+"Terry Ellerman",
+"Deacon",
+"https://blessedsacramentqcy.org/wp-content/uploads/2025/07/Deacon-Terry-Ellerman.jpg"
+],
+[
+"d",
+"Deacon",
+"Mike Ellerman",
+"Deacon",
+"https://blessedsacramentqcy.org/wp-content/uploads/2025/08/deacon-mike-ellerman.jpg"
+]
+],
+"src": "https://blessedsacramentqcy.org/join/meet-our-parish-staff/"
+}
+],
+[
+"http://bazylika.net/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://bazylika.net/",
+"p": [
+[
+"p",
+"Ks.",
+"Bp Adam Bab",
+"",
+"https://bazylika.net/images/wydarzenia/2026/ogolne/rozpoczecie-roku-szkolnego.jpg"
+],
+[
+"p",
+"Ks.",
+"Andrzej Sternik",
+"",
+""
+]
+],
+"src": "https://bazylika.net/"
+}
+],
+[
+"http://berlim.catolicos.de/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"P.",
+"Júlio Ferreira",
+"",
+""
+]
+],
+"src": "https://berlim.catolicos.de/contatos/"
+}
+],
+[
+"http://agnesandrose.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://agnesandrose.org/",
+"p": [
+[
+"p",
+"Father",
+"Daniel Hennessey",
+"Pastor",
+"https://agnesandrose.org/sites/christinit/files/fr._dan_hennessey_2019.jpg"
+],
+[
+"p",
+"Father",
+"Karlo Hocurscak",
+"Parochial vicar",
+"https://agnesandrose.org/sites/christinit/files/frhocurscak.jpg"
+],
+[
+"p",
+"Father",
+"Maiyele Romaric",
+"Parochial vicar",
+"https://agnesandrose.org/sites/christinit/files/njuakom-romaric-1.png"
+]
+],
+"src": "https://agnesandrose.org/info/pastoral-team"
+}
+],
+[
+"http://blessedmotherchurch.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.blessedmotherchurch.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Brandon Williams",
+"Pastor",
+"https://irp.cdn-website.com/b4d78649/dms3rep/multi/opt/Fr.-Brandon-1920w.png"
+],
+[
+"p",
+"Fr.",
+"Ramesh Kattermetla",
+"",
+"https://irp.cdn-website.com/b4d78649/dms3rep/multi/opt/Fr.-Ram2-a7bd6196-1920w.png"
+],
+[
+"p",
+"Fr.",
+"Lourdu Peddakotla",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.blessedmotherchurch.com/our-staff"
+}
+],
+[
+"http://catholique.fr",
+{
+"s": "moved",
+"c": 200,
+"u": "https://eglise.catholique.fr/",
+"p": [
+[
+"p",
+"P.",
+"J. Fournier",
+"",
+""
+],
+[
+"p",
+"P.",
+"Xavier Cormary",
+"",
+""
+]
+],
+"src": "https://eglise.catholique.fr/sengager-dans-la-societe/patrimoine-et-art-sacre/pastorale-du-tourisme/"
+}
+],
+[
+"http://ciezkowice.diecezjatarnow.pl/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://parafiaciezkowice.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Sylwester Brze",
+"Pastor",
+"https://parafiaciezkowice.pl/images/730/6727458fec54a52216ac5886e4d2877d.webp"
+]
+],
+"src": "https://parafiaciezkowice.pl/duszpasterze"
+}
+],
+[
+"http://cmfwn.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cmfwn.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Tom Florek",
+"",
+""
+]
+],
+"src": "https://cmfwn.org/pastoral-courses/calendar/"
+}
+],
+[
+"http://catho94-fontenay.cef.fr/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://catho94-fontenay.cef.fr/",
+"p": [
+[
+"p",
+"Père",
+"Benoît-Marie Jourjon Doyen de Fontenay-sous-Bois",
+"",
+"https://catho94-fontenay.cef.fr/wp-content/uploads/2022/09/pere-benoit-marie-rounded-90x90.jpg"
+]
+],
+"src": "https://catho94-fontenay.cef.fr/"
+}
+],
+[
+"http://capillagpecholul.wordpress.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://capillagpecholul.wordpress.com/",
+"p": [
+[
+"p",
+"Fray",
+"Juan de Zumárraga",
+"",
+"https://capillagpecholul.wordpress.com/wp-content/uploads/2020/12/covers_blog_6-2.png?w=300"
+]
+],
+"src": "https://capillagpecholul.wordpress.com/"
+}
+],
+[
+"http://churchofthemagdalene.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://churchofthemagdalene.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Tim’s Story",
+"",
+""
+]
+],
+"src": "https://churchofthemagdalene.org/"
+}
+],
+[
+"http://Www.parrocchiafontanellato.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.parrocchiafontanellato.it/",
+"p": [
+[
+"p",
+"Don",
+"Orlando Ruiz Mesa",
+"Pastor",
+""
+],
+[
+"p",
+"Padre",
+"Michele Parrino",
+"",
+""
+]
+],
+"src": "https://www.parrocchiafontanellato.it/"
+}
+],
+[
+"http://cabriniparrish.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.cabriniparrish.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Joseph Gates",
+"Pastor",
+""
+]
+],
+"src": "https://www.cabriniparrish.org/"
+}
+],
+[
+"http://StPaulsLhp.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stpaulslhp.org/",
+"p": [
+[
+"p",
+"Father",
+"Mathew Thomas",
+"",
+"https://stpaulslhp.org/wp-content/uploads/2026/04/IMG_5006-2-scaled-e1775576298347-300x273.webp"
+]
+],
+"src": "https://stpaulslhp.org/"
+}
+],
+[
+"http://annababice.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.annababice.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Antoniego Chlondowskiego",
+"",
+"https://www.annababice.pl/images/zaproszenia/2026-07-26-koncert-small.jpg"
+],
+[
+"p",
+"Ks.",
+"Marek Olekszyk",
+"Pastor",
+""
+]
+],
+"src": "https://www.annababice.pl/"
+}
+],
+[
+"http://catholicpreacher.blogspot.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Todd Scull",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn89YnRpy53abWTPVJzwNYRk8_g2RcUKDe1p8gPJzgewlMTYs_-wGXqSosA7J8MN5wk5MJ48LTBiQplkXr_xu52bwML1cjiixGXN2xgxO-YurdODJc84QRK2am7uxoj1d1yRrf2R7rjW6x/s400/Caesar-Augustus1.jpg"
+]
+],
+"src": "http://catholicpreacher.blogspot.com/"
+}
+],
+[
+"http://Transfiguration.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://transfiguration.com/",
+"p": [
+[
+"p",
+"Father",
+"Eric Hill",
+"Pastor",
+"https://cdn.diocesanweb.org/crossroads/transfig2/wp-content/uploads/2024/04/Fr.-Eric.png"
+],
+[
+"p",
+"Fr.",
+"Rafael Ángel Carballo-Arroyo",
+"Parochial vicar",
+"https://cdn.diocesanweb.org/crossroads/transfig2/wp-content/uploads/2024/04/Untitled-design-55.png"
+],
+[
+"d",
+"Deacon",
+"David Fragale",
+"Deacon",
+"https://cdn.diocesanweb.org/crossroads/transfig2/wp-content/uploads/2024/04/Untitled-design-25.png"
+],
+[
+"d",
+"Deacon",
+"Paul Franklin",
+"Deacon",
+"https://cdn.diocesanweb.org/crossroads/transfig2/wp-content/uploads/2024/04/Untitled-design-50.png"
+],
+[
+"d",
+"Deacon",
+"Peter Harris",
+"Deacon",
+"https://cdn.diocesanweb.org/crossroads/transfig2/wp-content/uploads/2024/04/Untitled-design-39-1.png"
+]
+],
+"src": "https://transfiguration.com/staff"
+}
+],
+[
+"http://chiesasantantoniolentini.blogspot.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Sac.",
+"Antonino Cascio Diacono",
+"Pastor",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc4YWhO2T9icyRJBZwg4xGRK67oov861dYsNtDIysdlzeeT5AkUDwPEf94tB9wfJMs25b8WZ8N4B0BQQazk6QgqHttE9bO6Btt6e1SqlYfCGxowY77oGgpJ7U8usnqovdXQxcohLNJ7geA/s150/papa-francesco-1-620x480.jpg"
+],
+[
+"p",
+"Mons.",
+"Francesco Lomanto",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcrvOSAOaMWBZhOPu6eDfkf8LGf4cWbbZ3R_fbghBtmg_248ghkwWo8Dexq-WnonjhUYHLPP4q61ewTDQMG1ZjXhGShrLygueea2v0Jbz32kOgqCAxGFWUQl6IMgPPn0qAc-Wu7tNaoNfe/s170/Arcivescovo-Lomanto-Francesco-foto-UFFICIALE1.jpeg"
+],
+[
+"p",
+"Padre",
+"Benedetto XVI",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4flvfeHnYJkB0YCy-bdo8zCYRB1vjJlel3WbKQjDzs1mcF7qkHUHY7F6hhgxKcTcfMqO2iFa4JWwrZlB4NK3ULiQ0rVBJ4S_iamwTuTU5afktk6WBPDk1s2ZvbNnt63rlWWgDRrSMi8Z-/s190/S5002908.jpg"
+]
+],
+"src": "http://chiesasantantoniolentini.blogspot.com/"
+}
+],
+[
+"http://archwarmia.pl/parafie/bartoszyce-swietego-brata-alberta/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://archwarmia.pl/parafie/bartoszyce-swietego-brata-alberta/",
+"p": [
+[
+"p",
+"Dom",
+"Rekolekcyjny Domus Mariae",
+"",
+""
+]
+],
+"src": "https://archwarmia.pl/parafie/bartoszyce-swietego-brata-alberta/"
+}
+],
+[
+"http://btsp.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.btsp.org",
+"p": [
+[
+"p",
+"Father",
+"Wayne C. Genereux",
+"Pastor",
+""
+]
+],
+"src": "https://www.btsp.org"
+}
+],
+[
+"http://clarape.be/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Fr.",
+"Kenny Brack",
+"",
+""
+]
+],
+"src": "http://clarape.be/contactgegevens/"
+}
+],
+[
+"http://Stannedenton.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stannedenton.com/",
+"p": [
+[
+"p",
+"Fr.",
+"Anit Augustine Jacob",
+"Pastor",
+""
+],
+[
+"d",
+"Rev. Mr.",
+"Frank Jones",
+"Deacon",
+""
+]
+],
+"src": "https://www.stannedenton.com/"
+}
+],
+[
+"http://chrystusnauczyciel.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://chrystusnauczyciel.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Kan. Piotr Ja",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Kan. Kazimierz Marchewka",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Kan. Maciej Pachnik",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Kan. Ryszard Szcz",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Kan. Stanis",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Karol Adamczyk",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Janusz Wach",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Leszek Sokó",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Artur Kowalczyk",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Zbigniew Cie",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Dariusz Pater",
+"",
+""
+],
+[
+"p",
+"Ks.",
+"Medard Kusiak",
+"",
+""
+]
+],
+"src": "https://chrystusnauczyciel.pl/parafia/kaplani"
+}
+],
+[
+"http://bowenhillsparish.org.au/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://bowenhillsparish.org.au/",
+"p": [
+[
+"p",
+"Rev.",
+"Dr Cattaneo",
+"",
+""
+],
+[
+"p",
+"Father",
+"Edward Sarsfield Barry",
+"Chaplain",
+""
+]
+],
+"src": "https://bowenhillsparish.org.au/about/white-temple-of-peace/"
+}
+],
+[
+"http://cdh.org.nz/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.cdh.org.nz/",
+"p": [
+[
+"p",
+"Msgr",
+"Leonard Danvers",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Msgr",
+"Frank Eggleton",
+"Chaplain",
+""
+],
+[
+"p",
+"Msgr",
+"Trevor Murray",
+"Chaplain",
+""
+]
+],
+"src": "https://www.cdh.org.nz/priests/"
+}
+],
+[
+"http://ascensionchinesemission.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.ascensionchinesemission.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Louis Zee",
+"Pastor emeritus",
+""
+],
+[
+"p",
+"Fr.",
+"Roger Shuxin Zhang",
+"Pastor",
+""
+]
+],
+"src": "https://www.ascensionchinesemission.org/about.html"
+}
+],
+[
+"http://catholicdirectory.org/Catholic_Information.asp?ID=32731",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.catholicdirectory.org/Catholic-Information.asp?ID=32731&",
+"p": [
+[
+"p",
+"Rev",
+"James Kay Deacon",
+"",
+""
+]
+],
+"src": "https://www.catholicdirectory.org/Catholic-Information.asp?ID=32731&"
+}
+],
+[
+"http://blog.cancaonova.com/conquista",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blog.cancaonova.com/conquista/",
+"p": [
+[
+"p",
+"Padre",
+"Gilmar Soares",
+"",
+"https://blog.cancaonova.com/conquista/files/2020/02/card-no-combate-da-oração-BLOG-384x216.jpeg"
+]
+],
+"src": "https://blog.cancaonova.com/conquista/"
+}
+],
+[
+"http://blessedsacramentamherstview.org",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev.",
+"Charles Ogbuagu",
+"Pastor",
+"http://blessedsacramentamherstview.org/ImagesGlobal/Charles_Ogbuagu-current.jpg"
+]
+],
+"src": "http://blessedsacramentamherstview.org/bls_contacts.html"
+}
+],
+[
+"http://catedral.org.br",
+{
+"s": "ok",
+"c": 200,
+"u": "https://catedral.org.br/",
+"p": [
+[
+"p",
+"Padre",
+"Eduardo Dougherty",
+"",
+""
+],
+[
+"p",
+"Padre",
+"João Henrique",
+"",
+""
+],
+[
+"p",
+"Padre",
+"José Eduardo",
+"",
+""
+]
+],
+"src": "https://catedral.org.br/"
+}
+],
+[
+"http://aumoneriedesgrandsmoulins.fr/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://aumoneriedesgrandsmoulins.fr/",
+"p": [
+[
+"p",
+"Père",
+"Pierre Labaste",
+"",
+""
+]
+],
+"src": "https://aumoneriedesgrandsmoulins.fr/"
+}
+],
+[
+"http://cattedralemelfi.weebly.com/storia.html",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Mons.",
+"Ciro Fanelli",
+"",
+""
+]
+],
+"src": "http://cattedralemelfi.weebly.com/storia.html"
+}
+],
+[
+"http://blessedsacramentpoth.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blessedsacramentpoth.org/",
+"p": [
+[
+"p",
+"Father",
+"Damian Jaje",
+"Pastor",
+""
+],
+[
+"d",
+"Deacon",
+"Alan Crosby",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Jesse Nunez",
+"Deacon",
+""
+]
+],
+"src": "https://blessedsacramentpoth.org/about-us"
+}
+],
+[
+"http://arras.catholique.fr/ans-eglise-wizernes.html",
+{
+"s": "ok",
+"c": 200,
+"u": "https://arras.catholique.fr/",
+"p": [
+[
+"p",
+"Mgr",
+"Olivier Leborgne",
+"",
+"https://arras.catholique.fr/app/uploads/2026/09/Couverture-Lettre-pastorale-de-Mgr-Leborgne-2026-300x280.png"
+]
+],
+"src": "https://arras.catholique.fr/le-diocese/transformation-dio/"
+}
+],
+[
+"http://church.stthomasphilo.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"d",
+"Deacon",
+"Don Koeberlein",
+"Deacon",
+""
+]
+],
+"src": "http://church.stthomasphilo.org/"
+}
+],
+[
+"http://comunidadeascensaodosenhor.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://comunidadeascensaodosenhor.blogspot.com/",
+"p": [
+[
+"p",
+"Dom",
+"Gilson Andrade",
+"",
+""
+]
+],
+"src": "http://comunidadeascensaodosenhor.blogspot.com/"
+}
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-santa-margarida-maria-alacoque",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-santa-margarida-maria-alacoque/",
+"p": [
+[
+"p",
+"Padre",
+"Gian Carlos Pereira",
+"Pastor",
+""
+],
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-santa-margarida-maria-alacoque/"
+}
+],
+[
+"http://blog.cancaonova.com/saojosedoscampos/2009/10/05/ritos-bizantinos-catolicos-na-igreja-de-santana-em-taubate/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blog.cancaonova.com/saojosedoscampos/espiritualidade/ritos-bizantinos-catolicos-na-igreja-de-santana-em-taubate/",
+"p": [
+[
+"p",
+"Dom",
+"Moacir Silva",
+"",
+""
+]
+],
+"src": "https://blog.cancaonova.com/saojosedoscampos/espiritualidade/aplicativo-permite-que-padres-usem-ipad-para-celebrar-missa/"
+}
+],
+[
+"http://byzantinekc.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://byzantinekc.org/",
+"p": [
+[
+"p",
+"Most Reverend",
+"Metropolitan William",
+"",
+"https://img1.wsimg.com/isteam/ip/4c4babef-7d5c-4ebf-a130-de467f4af2e0/Metropolitan%20William%20Skurla.png/:/cr=t:0%25"
+],
+[
+"p",
+"Rev.",
+"John Russell",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Deacon Nicholas Szilagye",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Deacon John Harden",
+"",
+""
+]
+],
+"src": "https://byzantinekc.org/about-us"
+}
+],
+[
+"http://assumptiongranger.com/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.assumptiongranger.org/",
+"p": [
+[
+"p",
+"Don",
+"Justo Coffee",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Dominic Assim",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"John Ludwig",
+"",
+""
+]
+],
+"src": "https://www.assumptiongranger.org/"
+}
+],
+[
+"http://catholique-montauban.cef.fr/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.diocese-montauban.fr/",
+"p": [
+[
+"p",
+"Mgr",
+"Alain Guellec",
+"",
+"https://www.diocese-montauban.fr/wp-content/uploads/2026/10/img_7813-scaled.jpg"
+]
+],
+"src": "https://www.diocese-montauban.fr/"
+}
+],
+[
+"http://aica.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://aica.org/",
+"p": [
+[
+"p",
+"Fray",
+"Mamerto Esquiú",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"Virginio Bressanelli",
+"",
+"https://aica.org/images/vacio-mini.png"
+]
+],
+"src": "https://aica.org/"
+}
+],
+[
+"http://catholique-hautemarne.cef.fr/fiche1213876780.php",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.diocesedelangres.fr",
+"p": [
+[
+"p",
+"P.",
+"Stéphane Bredelet",
+"",
+""
+]
+],
+"src": "https://www.diocesedelangres.fr"
+}
+],
+[
+"http://arquidiocesedepalmas.org.br/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://arquidiocesedepalmas.org.br/",
+"p": [
+[
+"p",
+"Dom",
+"Pedro Brito",
+"",
+""
+],
+[
+"p",
+"Dom",
+"Alberto Taveira Corrêa",
+"",
+""
+]
+],
+"src": "https://arquidiocesedepalmas.org.br/"
+}
+],
+[
+"http://capelasaosebastiaoflorianopolis.blogspot.in",
+{
+"s": "moved",
+"c": 200,
+"u": "http://capelasaosebastiaoflorianopolis.blogspot.com/",
+"p": [
+[
+"p",
+"Padre",
+"Vilson Groh",
+"",
+""
+]
+],
+"src": "http://capelasaosebastiaoflorianopolis.blogspot.com/"
+}
+],
+[
+"http://catholiccongress.org/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Rev. Fr.",
+"Dr. Philip Kaviyil",
+"",
+"https://catholiccongress.org/uploads/admin/1740035184.png"
+]
+],
+"src": "http://catholiccongress.org/"
+}
+],
+[
+"http://barbercountycatholic.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://barbercountycatholic.org/",
+"p": [
+[
+"p",
+"Father",
+"Bernard Schmiehausen",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"John Vesecky",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Bernard Groome",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Anthony Suellentrop",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Francesco Lombardi",
+"Pastor",
+""
+],
+[
+"p",
+"Father",
+"Wenzel Birzer",
+"Pastor",
+""
+]
+],
+"src": "https://barbercountycatholic.org/about-us/history"
+}
+],
+[
+"http://catholique.fr/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://eglise.catholique.fr/",
+"p": [
+[
+"p",
+"P.",
+"J. Fournier",
+"",
+""
+],
+[
+"p",
+"P.",
+"Xavier Cormary",
+"",
+""
+]
+],
+"src": "https://eglise.catholique.fr/sengager-dans-la-societe/patrimoine-et-art-sacre/pastorale-du-tourisme/"
+}
+],
+[
+"http://annunciationmsp.org",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.annunciationmsp.org/",
+"p": [
+[
+"p",
+"Father",
+"Dennis Zehren",
+"Pastor",
+"https://www.annunciationmsp.org/application/files/thumbnails/small/2817/6858/5192/Copy_of_2026-1.5_-_Open_House_Flyer.png"
+],
+[
+"d",
+"Deacon",
+"Kevin Conneely",
+"Deacon",
+"https://www.annunciationmsp.org/application/files/thumbnails/small/2817/6858/5192/Copy_of_2026-1.5_-_Open_House_Flyer.png"
+]
+],
+"src": "https://www.annunciationmsp.org/contact/staff-directory"
+}
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-nossa-senhora-da-piedade",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-nossa-senhora-da-piedade/",
+"p": [
+[
+"p",
+"Padre",
+"Florentino Antonio dos Santos Júnior",
+"Pastor",
+""
+],
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-nossa-senhora-da-piedade/"
+}
+],
+[
+"http://assumption.dol.ca/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://assumptionparish.ca",
+"p": [
+[
+"p",
+"Fr.",
+"Timothy Scott",
+"Pastor",
+"https://assumptionparish.ca/wp-content/uploads/2024/07/20240630-1B2A6869-1-150x150.jpg"
+],
+[
+"p",
+"Fr.",
+"Kevin Mannara",
+"Parochial vicar",
+"https://assumptionparish.ca/wp-content/uploads/2026/06/kevinsq.jpg"
+],
+[
+"p",
+"Fr.",
+"David Basil",
+"Parochial vicar",
+"https://assumptionparish.ca/wp-content/uploads/2026/06/davidsq.jpg"
+],
+[
+"p",
+"Fr.",
+"Gabriel Eneke",
+"Parochial vicar",
+"https://assumptionparish.ca/wp-content/uploads/2026/07/473894785_122208496454088177_402799466875445547_n.png"
+],
+[
+"d",
+"Deacon",
+"Paul Bezaire",
+"Deacon",
+"https://assumptionparish.ca/wp-content/uploads/2020/08/iryedd4d-150x150.jpg"
+],
+[
+"d",
+"Deacon",
+"Edward Czilli",
+"Deacon",
+""
+]
+],
+"src": "https://assumptionparish.ca/about/staff/"
+}
+],
+[
+"http://Www.stmaryoftheassumption.org.au/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://melbcatholic.org/keilordowns",
+"p": [
+[
+"p",
+"Monsignor",
+"Charles Portelli Farwell",
+"",
+"https://pacem-public.s3.ap-southeast-2.amazonaws.com/00D2w000003z27wEAA/v1/assets/00adafda-e8df-5238-8220-95e813566fc2/image.png"
+],
+[
+"p",
+"Rev Fr",
+"James Baptist",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Rev",
+"Fr Vinh",
+"Administrator",
+""
+]
+],
+"src": "https://melbcatholic.org/keilordowns"
+}
+],
+[
+"http://capuchinhosmg.org.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.capuchinhos.org.br/regiao/mg",
+"p": [
+[
+"p",
+"Frei",
+"Adilson Donderi",
+"",
+""
+],
+[
+"p",
+"Frei",
+"Thiago Emanuel Assunção Jordão",
+"",
+""
+],
+[
+"d",
+"Frei",
+"Marco Túlio Alves da Silva",
+"Deacon",
+""
+],
+[
+"p",
+"Frei",
+"Gabriel de Frazzanò",
+"",
+"https://cdn.prod.website-files.com/5f80b5b96808b50b617d59f2/630a35df4a92cbc38bb1ba0c_Frei-gabriel-de-frazzano-2.avif"
+],
+[
+"p",
+"Frei",
+"Paulo Castagna",
+"",
+""
+],
+[
+"p",
+"Frei",
+"Antonino Plugisi",
+"",
+""
+]
+],
+"src": "https://www.capuchinhos.org.br/regiao/mg"
+}
+],
+[
+"http://clearfieldcatholic.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://clearfieldcatholic.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Bill Explains",
+"",
+""
+]
+],
+"src": "https://clearfieldcatholic.org/"
+}
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-jesus-cristo-libertador",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-jesus-cristo-libertador/",
+"p": [
+[
+"p",
+"Padre",
+"Tiago Sebastião de Brito",
+"Administrator",
+""
+],
+[
+"p",
+"Padre",
+"Rafael Capelato",
+"",
+""
+],
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-jesus-cristo-libertador/"
+}
+],
+[
+"http://arquidiocesecampinas.com/location/paroquia-nossa-senhora-de-lourdes-3/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-nossa-senhora-de-lourdes-3/",
+"p": [
+[
+"p",
+"Padre",
+"Luiz Antônio do Canto Neto",
+"Pastor",
+""
+],
+[
+"p",
+"Mons.",
+"Joaquim Mamede da Silva Leite",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"Lauro Sigrist",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"Luiz de Abreu",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"Bruno Nardini",
+"",
+""
+],
+[
+"p",
+"Mons.",
+"José Machado Couto",
+"",
+""
+],
+[
+"p",
+"Pe.",
+"Luiz Antonio do Canto Neto",
+"",
+""
+],
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-nossa-senhora-de-lourdes-3/"
+}
+],
+[
+"http://arquidiocesisdeyucatan.org.mx/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://arquidiocesisdeyucatan.org.mx/",
+"p": [
+[
+"p",
+"Mons.",
+"Fabio Martínez Castilla",
+"",
+"https://arquidiocesisdeyucatan.org.mx/wp-content/uploads/2023/11/IMG_9055.jpg"
+],
+[
+"d",
+"Diac.",
+"Edwin Trejo Escaroz",
+"Deacon",
+"https://arquidiocesisdeyucatan.org.mx/wp-content/uploads/2020/10/WhatsApp-Image-2020-10-08-at-10.32.17-AM.jpeg"
+]
+],
+"src": "https://arquidiocesisdeyucatan.org.mx/"
+}
+],
+[
+"http://Stbrigidcc.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stbrigidcc.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Gilberto Vallejo",
+"Pastor",
+"https://stbrigidcc.org/wp-content/uploads/2021/07/father-gilberto.jpg"
+]
+],
+"src": "https://stbrigidcc.org/meet-the-staff/"
+}
+],
+[
+"http://churchofsaintmarks.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.churchofsaintmarks.org/",
+"p": [
+[
+"p",
+"Father",
+"Nelson Javier T",
+"Pastor",
+"https://www.churchofsaintmarks.org/uploads/1/1/9/3/1193679/2023-st-mark-s-church-by-shelly-frank.jpg"
+],
+[
+"p",
+"Father",
+"Nelson Javier",
+"Pastor",
+"https://www.churchofsaintmarks.org/uploads/1/1/9/3/1193679/2024-easter-father-nelson-tor_orig.jpg"
+]
+],
+"src": "https://www.churchofsaintmarks.org/"
+}
+],
+[
+"http://StLawrenceMission.org/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.stmarysparkcity.com/stl",
+"p": [
+[
+"p",
+"Fr.",
+"Arokia Dass David",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Kenneth Rey Parsad",
+"Parochial vicar",
+""
+],
+[
+"d",
+"Deacon",
+"Tom Tosti",
+"Deacon",
+""
+]
+],
+"src": "https://www.stmarysparkcity.com/clergy-staff-leadership"
+}
+],
+[
+"http://basilicasm-loretto.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.basilicasm-loretto.org/",
+"p": [
+[
+"p",
+"Father",
+"Demetrius Gallitzin",
+"",
+""
+],
+[
+"p",
+"Very Rev. Father",
+"John David Byrnes",
+"Rector",
+""
+],
+[
+"p",
+"Father",
+"Demetrius Augustine Gallitzin",
+"",
+""
+]
+],
+"src": "https://www.basilicasm-loretto.org/"
+}
+],
+[
+"http://blessedsacramentqcy.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://blessedsacramentqcy.org/",
+"p": [
+[
+"d",
+"Deacon",
+"Terry Ellerman",
+"Deacon",
+"https://blessedsacramentqcy.org/wp-content/uploads/2025/07/Deacon-Terry-Ellerman.jpg"
+],
+[
+"d",
+"Deacon",
+"Mike Ellerman",
+"Deacon",
+"https://blessedsacramentqcy.org/wp-content/uploads/2025/08/deacon-mike-ellerman.jpg"
+]
+],
+"src": "https://blessedsacramentqcy.org/join/meet-our-parish-staff/"
+}
+],
+[
+"http://Stjosephstranraer.org.uk/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stjosephstranraer.org.uk/",
+"p": [
+[
+"p",
+"Fr.",
+"William McFadden",
+"Pastor",
+"https://irp.cdn-website.com//51f9fead/dms3rep/multi/opt/churchlinedrawing-443h.jpg"
+]
+],
+"src": "https://stjosephstranraer.org.uk/"
+}
+],
+[
+"http://catholicparishongar.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://catholicparishongar.org/",
+"p": [
+[
+"p",
+"Father",
+"Frank. You",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Frank Westcott",
+"Administrator",
+""
+]
+],
+"src": "https://catholicparishongar.org/"
+}
+],
+[
+"http://APDMadisonDiocese.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://apdmadisondiocese.com/",
+"p": [
+[
+"p",
+"Rev. Msgr.",
+"Larry Bakke",
+"Chaplain",
+""
+],
+[
+"p",
+"Father",
+"Thomas Campion",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Jim Hoegemeier",
+"Deacon",
+""
+]
+],
+"src": "https://apdmadisondiocese.com/about-us/"
+}
+],
+[
+"http://basilica.nd.edu/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://basilica.nd.edu/",
+"p": [
+[
+"p",
+"Fr.",
+"Brian Ching",
+"Rector",
+"https://basilica.nd.edu/assets/472625/600x600/brianching.jpg"
+]
+],
+"src": "https://basilica.nd.edu/about/contact/"
+}
+],
+[
+"http://SouthSiouxCatholic.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://southsiouxcatholic.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Matthew Niggemeyer Pastor",
+"Pastor",
+"https://southsiouxcatholic.org/wp-content/uploads/2026/05/a2ee901feb0b4d02bd20753666e14dac-259x300.jpg"
+],
+[
+"p",
+"Rev.",
+"Bill Cremers Associate Pastor",
+"Parochial vicar",
+"https://southsiouxcatholic.org/wp-content/uploads/2026/07/Fr.-Bill-Cremers-no-pins-57-214x300.jpg"
+]
+],
+"src": "https://southsiouxcatholic.org/staff/"
+}
+],
+[
+"http://assumptionchurch.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://assumptionchurch.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Lijo Thomas",
+"Administrator",
+""
+],
+[
+"d",
+"Deacon",
+"John Mordecai",
+"Deacon",
+""
+]
+],
+"src": "https://assumptionchurch.com/staff/"
+}
+],
+[
+"http://alesund-katolsk.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://alesund-katolsk.org/",
+"p": [
+[
+"p",
+"Pater",
+"Waldemar Jachymczak Epost",
+"",
+"https://usercontent.one/wp/alesund-katolsk.org/wp-content/uploads/2024/10/Waldemar-251x300.png"
+],
+[
+"p",
+"Pater",
+"Dariusz Buras Epost",
+"",
+"https://usercontent.one/wp/alesund-katolsk.org/wp-content/uploads/2024/10/Dariusz-203x300.png"
+],
+[
+"d",
+"Diakon",
+"Svein Kvamsdal Epost",
+"Deacon",
+"https://usercontent.one/wp/alesund-katolsk.org/wp-content/uploads/2021/10/SveinKvamsdal-e1729439262561.jpeg"
+]
+],
+"src": "https://alesund-katolsk.org/kontakt/"
+}
+],
+[
+"http://OLGCENDICOTT.ORG/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.olgcendicott.org/",
+"p": [
+[
+"d",
+"Dcn.",
+"Paul Heiland",
+"Deacon",
+""
+]
+],
+"src": "https://www.olgcendicott.org/"
+}
+],
+[
+"http://anunciaijesusdenazare.blogspot.com",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Pe.",
+"Julio Cesar de Mello Almo",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibS_72rpc9qw7hxwJ8LA2mXYxYqOf7mre4Go-3kg4o2TePU_nGAhGspEAJSi3HVVNCMFpEHecr8f5ZjjiriGprC1lcD9vFlxHhLFJ1dRv3y_gUt9iD9o8EMeBPZwKr10okTENIYC8BjRd-/s640/Crisma+005.jpg"
+],
+[
+"p",
+"Dom",
+"Josafá Menezes da Silva",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9zJUn9zzJEw2fdqNiMtk1bOdNBGu76Vbzxm87Aq63lbgAf63mqNmom3co2UXxfe9VLnzVKBIIJDSEV4OinTU_WYKpFfDYNPHH0bqujw7oXH1GKXZ_OnXo2sUZmKLJYmi_6bpwKbvfMKOQ/s320/Crisma+001.jpg"
+]
+],
+"src": "http://anunciaijesusdenazare.blogspot.com"
+}
+],
+[
+"http://arzobispadosantiagodecuba.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.arzobispadosantiagodecuba.org/",
+"p": [
+[
+"p",
+"P.",
+"Rafael Ángel López Silvero",
+"Pastor",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/MODELO-1.png"
+],
+[
+"p",
+"P.",
+"Rogelio Deán Puerta",
+"Pastor",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2021/05/Pastoral-Familiar-150x150.jpg"
+],
+[
+"p",
+"Mons.",
+"Dionisio G. García Ibáñez",
+"",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/PHOTO-2026-10-09-17-40-22.jpg"
+],
+[
+"p",
+"Mons.",
+"Dionisio García",
+"",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/Presentation1.jpg"
+],
+[
+"p",
+"Mons.",
+"Dionisio G. García Ibáñez Homilía",
+"",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/PHOTO-2026-10-15-23-37-03-7.jpg"
+],
+[
+"p",
+"Mons.",
+"Dionisio García Ibáñez",
+"",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/PHOTO-2026-10-09-17-40-52.jpg"
+],
+[
+"p",
+"Mons.",
+"Dionisio Guillermo García Ibáñez Irradia",
+"",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/MODELO-1.png"
+],
+[
+"p",
+"Mons.",
+"Dionisio G. García Ibáñez Mons",
+"",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/PHOTO-2026-10-09-17-40-52.jpg"
+],
+[
+"p",
+"Mons.",
+"Dionisio García Ibáñez Mons. Dionisio",
+"",
+"https://www.arzobispadosantiagodecuba.org/wp-content/uploads/2026/10/PHOTO-2026-10-09-17-40-52.jpg"
+]
+],
+"src": "https://www.arzobispadosantiagodecuba.org/category/vida-pastoral/"
+}
+],
+[
+"http://assumptionansonia.church/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://olvansonia.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Melbin Joseph",
+"Parochial vicar",
+"https://cdn.diocesanweb.org/beacon/ansonia/wp-content/uploads/2026/07/Fr.-Melbin.jpg"
+],
+[
+"p",
+"Rev.",
+"Dominic Thomas",
+"Pastor",
+"https://cdn.diocesanweb.org/beacon/ansonia/wp-content/uploads/2025/06/fr-dominic-thomas-pilgrimages-2.jpg"
+]
+],
+"src": "https://olvansonia.org/staff/"
+}
+],
+[
+"http://augustowbazylika.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://augustowbazylika.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Wojciech Jab",
+"Pastor",
+"https://augustowbazylika.pl/storage/ParishGroups/lso.jpg"
+]
+],
+"src": "https://augustowbazylika.pl/grupy_duszpasterskie/liturgiczna-sluzba-oltarza,11"
+}
+],
+[
+"http://borgiaparish.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.borgiaparish.org/",
+"p": [
+[
+"p",
+"Father",
+"Jeff Maassen",
+"Pastor",
+"https://irp.cdn-website.com/6b600409/dms3rep/multi/opt/PadreM-1920w.jpeg"
+],
+[
+"p",
+"Father",
+"Tim Henderson",
+"Parochial vicar",
+"https://irp.cdn-website.com/6b600409/dms3rep/multi/opt/FrTim-1920w.webp"
+],
+[
+"d",
+"Deacon",
+"Dennis Meinert",
+"Deacon",
+"https://irp.cdn-website.com/6b600409/dms3rep/multi/opt/Deacon+Dennis+Meinert-1920w.webp"
+],
+[
+"d",
+"Deacon",
+"Dave Tobben",
+"Deacon",
+"https://irp.cdn-website.com/6b600409/dms3rep/multi/opt/DcnDave-1920w.webp"
+],
+[
+"d",
+"Deacon",
+"Tim Reis",
+"Deacon",
+"https://irp.cdn-website.com/6b600409/dms3rep/multi/opt/Photo-Coming-Soon-1920w.jpg"
+]
+],
+"src": "https://www.borgiaparish.org/our-clergy---staff"
+}
+],
+[
+"http://STLukeCT.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stlukect.org/",
+"p": [
+[
+"p",
+"Rev.",
+"James T. Gregory",
+"Pastor",
+"https://cdn.diocesanweb.org/beacon/stlukect/wp-content/uploads/2025/06/fr_gregory_resized.jpg"
+],
+[
+"p",
+"Rev.",
+"Jeremy Wagner",
+"",
+"https://cdn.diocesanweb.org/beacon/stlukect/wp-content/uploads/2026/09/Rev-Jeremy-Wagner-B.jpg"
+]
+],
+"src": "https://stlukect.org/staff/"
+}
+],
+[
+"http://arquidiocesecampinas.com/location/paroquia-sagrado-coracao-de-jesus-sumare/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-sagrado-coracao-de-jesus-sumare/",
+"p": [
+[
+"p",
+"Padre",
+"César Divino de Souza",
+"Pastor",
+""
+],
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-sagrado-coracao-de-jesus-sumare/"
+}
+],
+[
+"http://borgiachicago.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://borgiachicago.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Marek M. Smolka",
+"Pastor",
+""
+],
+[
+"p",
+"Fr.",
+"Joseph Mulcrone",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Irek Mocarski",
+"Deacon",
+""
+]
+],
+"src": "https://borgiachicago.org/parish-staff/"
+}
+],
+[
+"http://cgcatholic.org.au/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cgcatholic.org.au/",
+"p": [
+[
+"p",
+"Dom",
+"Christopher Jamison",
+"",
+"http://www.catholicvoice.org.au/wp-content/uploads/2026/10/IMG_4735-1-400x384.jpg"
+]
+],
+"src": "https://cgcatholic.org.au/"
+}
+],
+[
+"http://bistummainz.de/pfarrgruppe/alzey-land-st-hildegard/wir/unsere-kirchen",
+{
+"s": "ok",
+"c": 200,
+"u": "https://bistummainz.de/pfarrgruppe/alzey-land-st-hildegard/wir/unsere-kirchen",
+"p": [
+[
+"p",
+"Pfarrer",
+"Kai Rudolf Wornath",
+"Pastor",
+""
+],
+[
+"d",
+"Diakon",
+"Martin Springorum",
+"Deacon",
+""
+]
+],
+"src": "https://bistummainz.de/pfarrgruppe/alzey-land-st-hildegard/wir/kontakt/"
+}
+],
+[
+"http://Stjosephparishhardin.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://stjosephparishhardin.org/",
+"p": [
+[
+"p",
+"Father",
+"Cally Birthday",
+"",
+""
+],
+[
+"p",
+"Father",
+"Mathew Nicks",
+"",
+""
+]
+],
+"src": "https://stjosephparishhardin.org/"
+}
+],
+[
+"http://Stjosephdyer.org/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://dyercatholic.org/",
+"p": [
+[
+"d",
+"Deacon",
+"Gary Blue",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Daniel Ratliff",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Paul Wilk",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Phillip Muvich",
+"Deacon",
+""
+]
+],
+"src": "https://dyercatholic.org/staff"
+}
+],
+[
+"http://cathedralecoutances.free.fr",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Mgr",
+"Le Boulc'h",
+"",
+""
+]
+],
+"src": "http://cathedralecoutances.free.fr"
+}
+],
+[
+"http://annunciationbrazil.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://annunciationbrazil.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Suresh Edward",
+"Pastor",
+"https://cdn.diocesanweb.org/crossroads/annunciationbr/wp-content/uploads/2023/12/IMG_2962-scaled.jpg"
+]
+],
+"src": "https://annunciationbrazil.org/staff/"
+}
+],
+[
+"http://blessedsacramentwv.org",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Most Rev.",
+"Evelio Menjívar Statement Regarding",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Larry Wrenn",
+"",
+""
+],
+[
+"p",
+"Father",
+"Charles McGinnis",
+"",
+""
+]
+],
+"src": "http://blessedsacramentwv.org/parish-life/"
+}
+],
+[
+"http://catholiclakescluster.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.catholiclakescluster.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Chandra Ery",
+"",
+""
+]
+],
+"src": "https://www.catholiclakescluster.org/staff"
+}
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-imaculado-coracao-de-maria",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.arquidiocesecampinas.com.br/location/paroquia-imaculado-coracao-de-maria/",
+"p": [
+[
+"p",
+"Padre",
+"Diego Nogueira Scarano",
+"Pastor",
+""
+],
+[
+"p",
+"Padre",
+"Norberto Tortorelo Bonfim",
+"Administrator",
+""
+],
+[
+"p",
+"Dom",
+"João Inácio Müller",
+"",
+"https://www.arquidiocesecampinas.com.br/wp-content/themes/Arquidiocese%20de%20Campinas/img/domjoaomuller.jpg"
+]
+],
+"src": "https://www.arquidiocesecampinas.com.br/location/paroquia-imaculado-coracao-de-maria/"
+}
+],
+[
+"http://chrystusakrola.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://chrystusakrola.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Roman Banasiewicz",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Damian Koryci",
+"Parochial vicar",
+""
+]
+],
+"src": "https://chrystusakrola.pl/kontakt/"
+}
+],
+[
+"http://cebsaopauloapostolo.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://cebsaopauloapostolo.blogspot.com/",
+"p": [
+[
+"p",
+"Pe.",
+"Carlos Gomes",
+"Pastor",
+""
+]
+],
+"src": "http://cebsaopauloapostolo.blogspot.com/"
+}
+],
+[
+"http://aparecidasorocaba.blogspot.com.br/",
+{
+"s": "moved",
+"c": 200,
+"u": "http://aparecidasorocaba.blogspot.com/",
+"p": [
+[
+"p",
+"Padre",
+"Rodolfo Gasparini Morbiolo",
+"",
+"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhENnaRmIVM18JMpZO23tDcc_sfb8-Af_z2EMCN6MgaTXTXdkjKXZ81CEos_iMakWDKckuYCcEiHFomIbQ8PPtGmfiGHiw3CVUDYCUwIC-jh2vwDO0zz6GPZvlx4YX4Bo8u_gbLWuIvYCs/s320/IMG_20211231_095121_359-737697.jpg"
+]
+],
+"src": "http://aparecidasorocaba.blogspot.com/"
+}
+],
+[
+"http://WWW.STMICHAELMEMPHIS.ORG/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stmichaelmemphis.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Ben Bradshaw",
+"Pastor",
+"https://irp.cdn-website.com/fd9c8708/dms3rep/multi/opt/Ben-a3d7bb43-6f48332a-1920w.png"
+],
+[
+"p",
+"Fr.",
+"Johnathan Perez",
+"Parochial vicar",
+"https://irp.cdn-website.com/fd9c8708/dms3rep/multi/opt/IMG_3290-1920w.png"
+]
+],
+"src": "https://www.stmichaelmemphis.org/our-staff"
+}
+],
+[
+"http://ccwoodsideny.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://ccwoodsideny.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Patrick J. West",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"Mintu Rozario",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Rev.",
+"Callistus Ibeh",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Rev.",
+"Carlos Goris",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Rev.",
+"John O’Neill",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Juan J. Zhagñay",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Marciel Cordon",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Robert Cruz",
+"Deacon",
+""
+]
+],
+"src": "https://ccwoodsideny.org/about-us/staff/"
+}
+],
+[
+"http://KristusRajaSurabaya.org/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://paroki.kristusrajasurabaya.org/",
+"p": [
+[
+"p",
+"Mgr.",
+"Dr. Th. de Backere",
+"",
+"https://paroki.kristusrajasurabaya.org/wp-content/uploads/2024/04/DSC0298-300x200.jpg"
+]
+],
+"src": "https://paroki.kristusrajasurabaya.org/about-us/"
+}
+],
+[
+"http://Www.Olas.org.uk/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.olas.org.uk/",
+"p": [
+[
+"p",
+"Rev. Fr",
+"Philip Griffin",
+"",
+"https://www.olas.org.uk/wp-content/uploads/2023/11/thumbnail_image0-1.jpg"
+],
+[
+"p",
+"Rev.",
+"Mr Tom Tranter",
+"",
+""
+]
+],
+"src": "https://www.olas.org.uk/home/our-clergy/"
+}
+],
+[
+"http://cdl.org",
+{
+"s": "moved",
+"c": 200,
+"u": "https://www.mycll.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Lawrence Houston",
+"",
+""
+]
+],
+"src": "https://www.mycll.org/about-us"
+}
+],
+[
+"http://churchofthedivinechild.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.churchofthedivinechild.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Robert J. McCabe",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Ryan Asher",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"Dan Whalen",
+"",
+""
+],
+[
+"d",
+"Rev. Mr.",
+"Robert Calleja",
+"Deacon",
+""
+]
+],
+"src": "https://www.churchofthedivinechild.org/"
+}
+],
+[
+"http://ascensionparishelmhurst.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://ascensionparishelmhurst.org/",
+"p": [
+[
+"p",
+"Father",
+"Christopher Heanue",
+"",
+"https://files-prod.tilmaplatform.com/cdn-cgi/image/gravity=0.5x0.5,fit=cover,width=500/2026/10/23/16/47/08/905dde04-f323-48c6-b6cd-9a3827241572/c1a-z4n6q-kpp4q807tz61-o2qpmf.jpeg"
+],
+[
+"p",
+"Rev.",
+"Anacleto S. Asebias",
+"Pastor",
+"https://files-prod.tilmaplatform.com/cdn-cgi/image/gravity=0.5x0.5,fit=cover,width=500/2025/06/16/17/24/01/e090d50d-7b4e-44d0-9977-082974089a1f/83sbw36xmm_From_the_Pastor_s_Desk.jpg"
+],
+[
+"p",
+"Fr.",
+"Mike Schmitz",
+"",
+"https://files-prod.tilmaplatform.com/cdn-cgi/image/gravity=0.5x0.5,fit=cover,width=500/2026/10/21/13/49/37/6d99d67c-ab87-415b-8396-3f15cc8b1c68/ahmed-WfxxYVh_T_A-unsplash.jpg"
+]
+],
+"src": "https://ascensionparishelmhurst.org/"
+}
+],
+[
+"http://allsaintsperth.org.au/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://allsaintsperth.org.au/",
+"p": [
+[
+"p",
+"Fr.",
+"Elver Delicano",
+"Pastor",
+"https://allsaintsperth.org.au/wp-content/uploads/2022/04/FrElverProfile-200x171.jpg"
+]
+],
+"src": "https://allsaintsperth.org.au/"
+}
+],
+[
+"http://Stmartindeporrescc.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stmartindeporrescc.org/",
+"p": [
+[
+"p",
+"Rev. Fr.",
+"Luís Rivera.",
+"Pastor",
+""
+],
+[
+"p",
+"Rev. Fr.",
+"Rolando García",
+"Pastor",
+""
+],
+[
+"p",
+"Rev. Fr.",
+"Carlos Vega",
+"",
+""
+],
+[
+"p",
+"Rev. Fr.",
+"Joaquín Rodríguez",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"P. Luís Rivera. Las",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"P. Rolando García",
+"Pastor",
+""
+],
+[
+"p",
+"Rev.",
+"P. Carlos Vega",
+"",
+""
+],
+[
+"p",
+"Rev.",
+"P. Joaquín Rodríguez",
+"",
+""
+]
+],
+"src": "https://www.stmartindeporrescc.org/about-our-parish"
+}
+],
+[
+"http://churchofthesacredheart.net",
+{
+"s": "ok",
+"c": 200,
+"u": "https://churchofthesacredheart.net/",
+"p": [
+[
+"p",
+"Rev.",
+"Edmund Luciano",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Gregory Caruso",
+"Deacon",
+""
+],
+[
+"d",
+"Deacon",
+"Ketan Christian",
+"Deacon",
+""
+]
+],
+"src": "https://churchofthesacredheart.net/parish-staff/"
+}
+],
+[
+"http://annunciationofthelordparish.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.annunciationofthelordparish.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Craig Carolan",
+"Pastor",
+""
+],
+[
+"p",
+"Most Rev.",
+"Robert D. Gruss",
+"",
+"https://www.annunciationofthelordparish.org/uploads/1/5/2/2/152233192/bishop_orig.jpg"
+],
+[
+"p",
+"Father",
+"Craig G. Carolan",
+"Pastor",
+"https://www.annunciationofthelordparish.org/uploads/1/5/2/2/152233192/published/fr-craig.jpg?1749000588"
+]
+],
+"src": "https://www.annunciationofthelordparish.org/"
+}
+],
+[
+"http://arras.catholique.fr/stwulmer",
+{
+"s": "ok",
+"c": 200,
+"u": "https://arras.catholique.fr/le-diocese/les-paroisses/",
+"p": [
+[
+"p",
+"Mgr",
+"Olivier Leborgne",
+"",
+"https://arras.catholique.fr/app/uploads/2026/09/Couverture-Lettre-pastorale-de-Mgr-Leborgne-2026-300x280.png"
+]
+],
+"src": "https://arras.catholique.fr/le-diocese/transformation-dio/"
+}
+],
+[
+"http://cef.fr",
+{
+"s": "moved",
+"c": 200,
+"u": "https://eglise.catholique.fr/",
+"p": [
+[
+"p",
+"P.",
+"J. Fournier",
+"",
+""
+],
+[
+"p",
+"P.",
+"Xavier Cormary",
+"",
+""
+]
+],
+"src": "https://eglise.catholique.fr/sengager-dans-la-societe/patrimoine-et-art-sacre/pastorale-du-tourisme/"
+}
+],
+[
+"http://Www.salesianivercelli.it/",
+{
+"s": "moved",
+"c": 200,
+"u": "https://salesianipiemonte.info/case-salesiane/vercelli/",
+"p": [
+[
+"p",
+"Don",
+"Claudio Giovannini",
+"",
+""
+]
+],
+"src": "https://salesianipiemonte.info/case-salesiane/vercelli/"
+}
+],
+[
+"http://allsaintscathcom.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://allsaintscathcom.com/",
+"p": [
+[
+"p",
+"Father",
+"William Felix",
+"Pastor",
+"https://allsaintscathcom.com/wp-content/uploads/2021/03/felix-400.jpg"
+],
+[
+"d",
+"Deacon",
+"Ned Willkom",
+"Deacon",
+"https://allsaintscathcom.com/wp-content/uploads/2021/03/willkom-ned-137-240x300.jpg"
+]
+],
+"src": "https://allsaintscathcom.com/about/contact-us/our-parish-staff/"
+}
+],
+[
+"http://accatholic.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://accatholic.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Kevin Mohan",
+"Pastor",
+"https://accatholic.org/wp-content/uploads/2024/12/Fr.-Kevin-J.-Mohan-150x150.jpg"
+]
+],
+"src": "https://accatholic.org/about-us/"
+}
+],
+[
+"http://OLSanJuanDallas.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.olsanjuandallas.org/",
+"p": [
+[
+"p",
+"Father",
+"Angel Rios",
+"Administrator",
+""
+]
+],
+"src": "https://www.olsanjuandallas.org/staff"
+}
+],
+[
+"http://Www.santuarioconsolazione.it/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Mons.",
+"Carmelo Patanè",
+"",
+""
+],
+[
+"p",
+"Don",
+"Vito Mandarano",
+"Rector",
+""
+],
+[
+"p",
+"Mons.",
+"Andrea Gemma",
+"",
+""
+]
+],
+"src": "http://www.santuarioconsolazione.it/"
+}
+],
+[
+"http://casasanjuanbautista.blogspot.com.ar/2007/06/la-parroquia-de-la-santa-cruz-tambin.html",
+{
+"s": "moved",
+"c": 200,
+"u": "http://casasanjuanbautista.blogspot.com/2007/06/la-parroquia-de-la-santa-cruz-tambin.html",
+"p": [
+[
+"p",
+"P.",
+"Agustin DJ",
+"",
+"http://4.bp.blogspot.com/_0AK0PDegFzA/S-hRxTBkS0I/AAAAAAAABL0/T35iUitZyxw/S240/Copia+de+Copia+de+orando+1.jpg"
+]
+],
+"src": "http://casasanjuanbautista.blogspot.com/2007/06/la-parroquia-de-la-santa-cruz-tambin.html"
+}
+],
+[
+"http://bagnolet.paris.parafia.info.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ks.",
+"Proboszcz Jaros",
+"Pastor",
+""
+],
+[
+"p",
+"Ks.",
+"Zdzislaw Poczatek",
+"",
+""
+]
+],
+"src": "http://bagnolet.paris.parafia.info.pl/?p=main&what=4"
+}
+],
+[
+"http://Holycrosscatholicchurchtn.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://holycrosscatholicchurchtn.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Michael Hendershott",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Stephen May",
+"Deacon",
+""
+]
+],
+"src": "https://holycrosscatholicchurchtn.org/staff"
+}
+],
+[
+"http://catequesegaula.wordpress.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://catequesegaula.wordpress.com/",
+"p": [
+[
+"p",
+"Padre",
+"Hélder Gonçalves",
+"Pastor",
+"https://catequesegaula.wordpress.com/wp-content/uploads/2016/02/12646961_1669307646640850_5994425452098729123_n.jpg?w=300&h=225"
+]
+],
+"src": "https://catequesegaula.wordpress.com/"
+}
+],
+[
+"http://WWW.CSCVBROOKLYN.ORG/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cscvbrooklyn.org/",
+"p": [
+[
+"p",
+"Padre",
+"Emiliano Tardif",
+"",
+"https://cscvbrooklyn.org/images/comunidad.jpeg"
+],
+[
+"d",
+"Diácono",
+"Evaristo Guzmán Hilario",
+"Deacon",
+"https://cscvbrooklyn.org/images/comunidad.jpeg"
+]
+],
+"src": "https://cscvbrooklyn.org/"
+}
+],
+[
+"http://Www.parrocchiasacrafamiglia.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.parrocchiasacrafamiglia.org/",
+"p": [
+[
+"p",
+"P.",
+"Affari Economici",
+"",
+""
+],
+[
+"p",
+"Don",
+"Fernando Cianfriglia Parroco",
+"Pastor",
+"https://www.parrocchiasacrafamiglia.org/wp-content/uploads/2020/06/donfernando-e1591371179261.jpg"
+],
+[
+"p",
+"Don",
+"Jean Willy Bomoi Vicario Parrocchiale",
+"Parochial vicar",
+"https://www.parrocchiasacrafamiglia.org/wp-content/uploads/2020/06/donjean-e1727777005381.jpg"
+]
+],
+"src": "https://www.parrocchiasacrafamiglia.org/"
+}
+],
+[
+"http://WWW.PAROQUIADEMIGUELOPOLIS.COM.BR/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Pe.",
+"Evandro Antonio de Souza",
+"",
+"http://www.paroquiademiguelopolis.com.br/img/padre-evandro.jpg"
+]
+],
+"src": "http://www.paroquiademiguelopolis.com.br/"
+}
+],
+[
+"http://bonpasteurparis11.free.fr",
+{
+"s": "moved",
+"c": 200,
+"u": "https://dioceseparis.fr/-bon-pasteur-",
+"p": [
+[
+"p",
+"Mgr",
+"Laurent Ulrich",
+"",
+""
+]
+],
+"src": "https://dioceseparis.fr/-bon-pasteur-"
+}
+],
+[
+"http://Www.mikolaj.szczecin.pl/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Ksiądz",
+"Arcybiskup Wies",
+"",
+"http://www.mikolaj.szczecin.pl/images/photos/small/otwarta-spolecznosc-spotkanie-z-abp-wieslawem-smiglem-w-ksiaznicy.jpg"
+]
+],
+"src": "http://www.mikolaj.szczecin.pl/"
+}
+],
+[
+"http://Stjudethaddeus.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stjudethaddeus.org/",
+"p": [
+[
+"p",
+"Fr.",
+"Matt Email Deacon Tim",
+"",
+""
+],
+[
+"p",
+"Fr.",
+"Matt Federico",
+"",
+""
+],
+[
+"d",
+"Deacon",
+"Tim Hartwig",
+"Deacon",
+""
+]
+],
+"src": "https://www.stjudethaddeus.org/staff"
+}
+],
+[
+"http://christthekingjackson.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.christthekingjackson.org/",
+"p": [
+[
+"d",
+"Deacon",
+"Denzil Lobo",
+"Deacon",
+"https://www.christthekingjackson.org/wp-content/uploads/2026/02/dlobo2-square.jpg"
+],
+[
+"p",
+"Rev.",
+"Joseph Dyer",
+"",
+"https://www.christthekingjackson.org/wp-content/uploads/2026/02/JoeDyer1-copy-100x100.jpeg"
+]
+],
+"src": "https://www.christthekingjackson.org/people/"
+}
+],
+[
+"http://arcipreturalinera.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.arcipreturalinera.it/",
+"p": [
+[
+"p",
+"Mons.",
+"Antonino RASPANTI",
+"Pastor",
+"https://www.arcipreturalinera.it/wp-content/uploads/2021/09/IMG-20210905-WA0001-209x335.jpg"
+]
+],
+"src": "https://www.arcipreturalinera.it/il-parroco/"
+}
+],
+[
+"http://StVolodymyrUkrainianCatholicChurch.com/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.stvolodymyrukrainiancatholicchurch.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Yaroslav Kostyk",
+"",
+""
+]
+],
+"src": "https://www.stvolodymyrukrainiancatholicchurch.com/"
+}
+],
+[
+"http://catholiccharitiesny.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://catholiccharitiesny.org/",
+"p": [
+[
+"p",
+"Monsignor",
+"Kevin Sullivan",
+"",
+""
+]
+],
+"src": "https://catholiccharitiesny.org/"
+}
+],
+[
+"http://cityofstjude.org/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.cityofstjude.org/",
+"p": [
+[
+"p",
+"Rev.",
+"Andrew B. Jones",
+"Pastor",
+"https://irp.cdn-website.com/6b759972/dms3rep/multi/opt/Father+Andrew+Jones-1920w.JPG"
+],
+[
+"d",
+"Dcn.",
+"Deo McMeans",
+"Deacon",
+"https://irp.cdn-website.com/6b759972/dms3rep/multi/opt/Deacon+Deo+McMeans-1920w.JPG"
+],
+[
+"d",
+"Dcn.",
+"Clarence Darrington",
+"Deacon",
+"https://irp.cdn-website.com/6b759972/dms3rep/multi/opt/Deacon+Clarence+Darrington-1920w.JPG"
+]
+],
+"src": "https://www.cityofstjude.org/about-us"
+}
+],
+[
+"http://cherryorchardparish.com",
+{
+"s": "ok",
+"c": 200,
+"u": "https://cherryorchardparish.com/",
+"p": [
+[
+"p",
+"Rev.",
+"Michael Murtagh",
+"",
+""
+]
+],
+"src": "https://cherryorchardparish.com/contact/"
+}
+],
+[
+"http://christthekingbromborough.co.uk/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://christthekingbromborough.co.uk/",
+"p": [
+[
+"d",
+"Deacon",
+"Tony Hunt",
+"Deacon",
+""
+]
+],
+"src": "https://christthekingbromborough.co.uk/"
+}
+],
+[
+"http://ascensioncatholicparish.ca/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.ascensioncatholicparish.ca/",
+"p": [
+[
+"p",
+"Fr.",
+"Kevin Gillis",
+"",
+"https://static.wixstatic.com/media/546104_b5aa3a0857b34801bcef3510eb2d2d70~mv2.png/v1/crop/x_0"
+],
+[
+"d",
+"Deacon",
+"Andrew Ross",
+"Deacon",
+"https://static.wixstatic.com/media/52eac1_b885ec33ff0e4010925a072c34daad4c~mv2.jpg/v1/crop/x_0"
+]
+],
+"src": "https://www.ascensioncatholicparish.ca/parish-staff"
+}
+],
+[
+"http://bustoredentore.it/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.bustoredentore.it/",
+"p": [
+[
+"p",
+"Don",
+"Gaudenzio Santambrogio",
+"",
+""
+],
+[
+"p",
+"Don",
+"Sergio Perego",
+"",
+""
+]
+],
+"src": "https://www.bustoredentore.it/chi-siamo/"
+}
+],
+[
+"http://SaintJohnByzantine.com/",
+{
+"s": "ok",
+"c": 200,
+"p": [
+[
+"p",
+"Most Reverend",
+"William C. Skurla",
+"",
+"http://saintjohnbyzantine.com/img/metropolitan-william-skurla.png"
+],
+[
+"p",
+"Most Reverend",
+"Kurt R. Burnette",
+"",
+"http://saintjohnbyzantine.com/img/bishop-kurt-burnette.png"
+]
+],
+"src": "http://saintjohnbyzantine.com/"
+}
+],
+[
+"http://bazylika.pl/",
+{
+"s": "ok",
+"c": 200,
+"u": "https://www.bazylika.pl/",
+"p": [
+[
+"p",
+"Ks.",
+"Tomasz Kara",
+"Parochial vicar",
+""
+],
+[
+"p",
+"Ks.",
+"Grzegorz Woszczek",
+"Parochial vicar",
+""
+]
+],
+"src": "https://www.bazylika.pl/duszpasterze.html"
+}
+]
+],
+"dead_sample": [
+[
+"http://churchoftheannunciation2.placeweb.site",
+"parked"
+],
+[
+"http://ch.catholic.or.kr/hongeun3/",
+"404"
+],
+[
+"http://archdiocesesantafe.org",
+"dns"
+],
+[
+"http://catholic-caveman.blogspot.com/2009/...foul-is-afoot-in-red-spring.html",
+"404"
+],
+[
+"http://InmaculadoCorazonDMaria.com.mx/",
+"dns"
+],
+[
+"http://capmarko1.wixsite.com/romaspqr/resurrezione-di-nostro-signore",
+"404"
+],
+[
+"http://abvm-ugcc.com/",
+"404"
+],
+[
+"http://OllPellcity.org/",
+"dns"
+],
+[
+"http://Xuquanlacvn.com/",
+"dns"
+],
+[
+"http://capilla-de-la-virgen-de-guadalupe-de-ciruelos-guapocingo-2020.webnode.es/",
+"404"
+],
+[
+"http://chapelle-notre-dame-du-roc-vignonnet.placestars.com/",
+"dns"
+],
+[
+"http://catolicosribeiraopreto.com/",
+"dns"
+],
+[
+"http://burrillvillecatholic.org/about-our-shrine",
+"404"
+],
+[
+"http://aktualizacja.onet.pl/zumi/1630272,zglos_blad.html",
+"404"
+],
+[
+"http://blessedjp2parish.org",
+"dns"
+],
+[
+"http://capelanossasenhoradefatima18.placeweb.site/",
+"parked"
+],
+[
+"http://annunciationcatholicchurch.org/wp",
+"dns"
+],
+[
+"http://church.catholic.or.kr/suyu1",
+"404"
+],
+[
+"http://DTBTX.org/",
+"dns"
+],
+[
+"http://blessedsacramentushers.org",
+"dns"
+],
+[
+"http://catedraldiocesanadesantoantonio1.placeweb.site",
+"parked"
+],
+[
+"http://catedralquadrangular1.placeweb.site/",
+"parked"
+],
+[
+"http://capmarko1.wix.com/romaspqr#!ss-nome-di-maria/c12gu",
+"404"
+],
+[
+"http://ParokiSPPMmedan.id/",
+"dns"
+],
+[
+"http://accioncatolicasalta.com.ar/",
+"dns"
+],
+[
+"http://capelasantaefigenia1.placeweb.site/",
+"parked"
+],
+[
+"http://apsantarita.blogspot.com.br/",
+"404"
+],
+[
+"http://chapelstjoseph10.placeweb.site",
+"parked"
+],
+[
+"http://allsoulschurchssf.org/content/religious-education",
+"dns"
+],
+[
+"http://annunziatasturla.it",
+"dns"
+],
+[
+"http://arzmadrid.es/svsc",
+"404"
+],
+[
+"http://birhen-sa-barangay-parish.placestars.com/",
+"dns"
+],
+[
+"http://capelasantoantonio9.placeweb.site/",
+"parked"
+],
+[
+"http://catho.stgaud.pagesperso-orange.fr",
+"dns"
+],
+[
+"http://changanchurch.weebly.com/",
+"404"
+],
+[
+"http://cathedrale-angers.fr/presentation/notre-dame-de-victoire",
+"dns"
+],
+[
+"http://capelanossasenhoraaparecida33.placeweb.site",
+"parked"
+],
+[
+"http://capillanuestrasenoradelcarmen.negocio.site/",
+"404"
+],
+[
+"http://capelasantoantonio7.placeweb.site",
+"parked"
+],
+[
+"http://cathobordeauxboulevards.fr/",
+"dns"
+],
+[
+"http://capeladenossasenhoradorosario5.placeweb.site",
+"parked"
+],
+[
+"http://aos.catholic.or.kr/daehung",
+"500"
+],
+[
+"http://3parishfamilies.com",
+"dns"
+],
+[
+"http://bucjouylesloges.cef.fr",
+"dns"
+],
+[
+"http://Httpwatsapp.com/",
+"dns"
+],
+[
+"http://catholicchurch8.placeweb.site/",
+"parked"
+],
+[
+"http://catedralsenhordobonfim1.placeweb.site",
+"parked"
+],
+[
+"http://arcangelsanmiguelpochuta.com/",
+"dns"
+],
+[
+"http://anredunglactx.org/",
+"dns"
+],
+[
+"http://christthepriest.org",
+"dns"
+],
+[
+"http://armidale.catholic.org.au/moree-parish-details",
+"404"
+],
+[
+"http://catholique-evry.cef.fr/Athis-Mons-Saint-Denis",
+"404"
+],
+[
+"http://carmelhillmonasterytvm.net/?utm_source=gmb&utm_medium=referral",
+"dns"
+],
+[
+"http://blteresaparish.org",
+"520"
+],
+[
+"http://catholique-paris.cef.fr/spip.php?page=activites&id_rubrique=1194",
+"404"
+],
+[
+"http://Stjohnspiermont.myownparish.com/",
+"refused"
+],
+[
+"http://102fmnatal.com.br/site/",
+"dns"
+],
+[
+"http://arcidiocesispoletonorcia1.placeweb.site",
+"parked"
+],
+[
+"http://arquidiocesedecuritiba.org.br/paroquias/nossa-senhora-de-nazare-boa-vista/",
+"404"
+],
+[
+"http://catholic-iwaki.com/",
+"dns"
+]
+],
+"moved_sample": [
+[
+"http://alora.diocesismalaga.es/",
+"https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/diocesisdemalaga.es/parroquia-de-lora/inicio&followup=https://sites.google.com/diocesisdemalaga.es/parroquia-de-lora/inicio&osid=1&passive=1209600&service=wise&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S-701021590:1792875730969946"
+],
+[
+"http://camsvi.com/",
+"https://www.camsvi.com.mx/"
+],
+[
+"http://capuchinhosmg.org.br/",
+"https://www.capuchinhos.org.br/regiao/mg"
+],
+[
+"http://blackwoodcatholicparish.org.au/",
+"https://www.holyfamilyparish.org.au/"
+],
+[
+"http://arnoschurchvelur.com/",
+"https://cafeteriaremango.es/home/"
+],
+[
+"http://bisbatdemallorca.com/",
+"https://www.bisbatdemallorca.org/ca/"
+],
+[
+"http://ci-git-benoit-mention.fr/",
+"https://cigitbenoitmention.wordpress.com/"
+],
+[
+"http://castelocomunicacao.blogspot.com.br/2010_05_01_archive.html",
+"http://castelocomunicacao.blogspot.com/2010_05_01_archive.html"
+],
+[
+"http://arquidiocesepoa.org.br/",
+"https://www.arquipoa.com"
+],
+[
+"http://chofu-church.ciao.jp/",
+"https://www.chofu-church.com/"
+],
+[
+"http://catholique-hautemarne.cef.fr/fiche1213876780.php",
+"https://www.diocesedelangres.fr"
+],
+[
+"http://Santuariocamarin.blogspot.com.es/",
+"https://santuariocamarin.blogspot.com/"
+],
+[
+"http://arquidiocesismorelia.mx/",
+"https://altototalsecurity.mx/contacto/"
+],
+[
+"http://arquimoc.com/",
+"https://arquimoc.org/"
+],
+[
+"http://Www.facebook.com.br/ssantissimatrindade",
+"https://pt-br.facebook.com/ssantissimatrindade"
+],
+[
+"http://artestirpe.blogspot.com.br/2012/10/igreja-sao-geraldo-porto-alegre-rs.html",
+"http://artestirpe.blogspot.com/2012/10/igreja-sao-geraldo-porto-alegre-rs.html"
+],
+[
+"http://app.vc/igrejavivasantuariodalibertacao",
+"https://galeria.fabricadeaplicativos.com.br/igrejavivasantuariodalibertacao"
+],
+[
+"http://assumption.dol.ca/",
+"https://assumptionparish.ca"
+],
+[
+"http://avozdaparoquiasaofranciscodeassis.blogspot.com.br/",
+"http://avozdaparoquiasaofranciscodeassis.blogspot.com/"
+],
+[
+"http://adoremustechriste.pl/pl/mlawa",
+"https://adoracja24.pl/miejsce-adoracji/mlawa"
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-sao-paulo-apostolo-campinas",
+"https://www.arquidiocesecampinas.com.br/location/paroquia-sao-paulo-apostolo-campinas/"
+],
+[
+"http://capelapaieterno.blogspot.com.br/p/site-da-capela-divino-pai-eterno.html",
+"http://capelapaieterno.blogspot.com/p/site-da-capela-divino-pai-eterno.html"
+],
+[
+"http://cebnsps.blogspot.com.br/",
+"http://cebnsps.blogspot.com/"
+],
+[
+"http://archottawa.ca",
+"https://ottawacornwall.ca"
+],
+[
+"http://ccsaobernardo.blogspot.com.br/",
+"http://ccsaobernardo.blogspot.com/"
+],
+[
+"http://capeladesantoantoniobaguim.blogspot.pt/",
+"http://capeladesantoantoniobaguim.blogspot.com/"
+],
+[
+"http://Soundclound.com/comunidadefilhosdeisrael",
+"https://soundcloud.com/comunidadefilhosdeisrael"
+],
+[
+"http://clonakiltyparish.ie",
+"https://onefaith.ie/clonakilty"
+],
+[
+"http://aups.frejustoulon.fr",
+"https://paroisses.frejustoulon.fr/"
+],
+[
+"http://catholique.fr/",
+"https://eglise.catholique.fr/"
+],
+[
+"http://catholique.fr",
+"https://eglise.catholique.fr/"
+],
+[
+"http://celina-ic.org/",
+"https://www.stisidorefamily.org/"
+],
+[
+"http://catholicukes.org.au/",
+"https://catholicukes.au/"
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-nossa-senhora-do-rosario-de-pompeia",
+"https://www.arquidiocesecampinas.com.br/location/paroquia-nossa-senhora-do-rosario-de-pompeia/"
+],
+[
+"http://angouleme.catholique.fr",
+"https://charente.catholique.fr/"
+],
+[
+"http://Www.stmaryoftheassumption.org.au/",
+"https://melbcatholic.org/keilordowns"
+],
+[
+"http://Bronchocatholic.com/",
+"https://www.bronchocatholic.org/"
+],
+[
+"http://arquidiocesecampinas.com/",
+"https://www.arquidiocesecampinas.com.br/"
+],
+[
+"http://bonpasteurparis11.free.fr",
+"https://dioceseparis.fr/-bon-pasteur-"
+],
+[
+"http://Www.salesianivercelli.it/",
+"https://salesianipiemonte.info/case-salesiane/vercelli/"
+],
+[
+"http://capelaanarech.blogspot.com.br/",
+"http://capelaanarech.blogspot.com/"
+],
+[
+"http://comunidadeascensaodosenhor.blogspot.com.br/",
+"http://comunidadeascensaodosenhor.blogspot.com/"
+],
+[
+"http://basilicadelpi.com",
+"https://basilicadelpi.cat/en/home/"
+],
+[
+"http://ajdiocese.org/node/89",
+"https://www.dioceseaj.org"
+],
+[
+"http://catedraldejujuy.blogspot.com.ar/",
+"http://catedraldejujuy.blogspot.com/"
+],
+[
+"http://capeladenossasenhoradelourdes.blogspot.com.br/",
+"http://capeladenossasenhoradelourdes.blogspot.com/"
+],
+[
+"http://arquidiocesecampinas.com/local/paroquia-santa-ines",
+"https://www.arquidiocesecampinas.com.br/wp-content/uploads/2012/08/Par%C3%B3quia-Santa-In%C3%AAs.jpg"
+],
+[
+"http://cathoblaye.fr/",
+"https://www.paroisseblayebourg.fr/"
+],
+[
+"http://anglicanchurchinnorthamerica.org/",
+"https://www.suzukijimnypickups.co.uk/contact"
+],
+[
+"http://bispado.org.br/",
+"https://arquidiocesesjrp.org.br/"
+],
+[
+"http://capelasantoantoniovne.blogspot.com.br/",
+"http://capelasantoantoniovne.blogspot.com/"
+],
+[
+"http://basilicamenordelasvictorias.blogspot.com.co/",
+"http://basilicamenordelasvictorias.blogspot.com/"
+],
+[
+"http://archicofradiarosariocoronada.blogspot.com.es/",
+"http://archicofradiarosariocoronada.blogspot.com/"
+],
+[
+"http://catholiccharities-md.org",
+"https://cc-md.org/"
+],
+[
+"http://catholique-lille.cef.fr/page/cartediocese.php?id=P3727",
+"https://www.lille.catholique.fr/page/cartediocese.php?id=P3727"
+],
+[
+"http://aparecidajandira.com.br",
+"https://nsaparecidajandira.wixsite.com/nsaparecida"
+],
+[
+"http://blogdabandaterrasanta.blogspot.com.br/",
+"http://blogdabandaterrasanta.blogspot.com/"
+],
+[
+"http://capuchinpoorclares.org/page110.html",
+"https://fins88help1.com"
+],
+[
+"http://ascensaoieab.blogspot.com.br/",
+"https://www.ascensao.org.br/"
+],
+[
+"http://christthekingknanaya.org",
+"https://www.facebook.com/ctkkna"
+]
+]
+}
