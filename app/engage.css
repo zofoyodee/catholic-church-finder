@@ -1,0 +1,106 @@
+/* Guided tours, church of the day, globe view switches and the liturgical season accent.
+   --lit is the colour of the liturgical day; it falls back to gold when the season colours are off. */
+:root { --lit: var(--gold); --lit-soft: var(--gold-soft); --lit-ink: #1a1406; }
+
+/* starfield behind the globe: one tile of stars that drifts as the globe turns */
+#stage { background: radial-gradient(ellipse at 50% 120%, #10213f 0%, var(--space) 62%); }
+#stars { position: absolute; inset: -25%; pointer-events: none; opacity: 1; transition: opacity .8s ease; background-repeat: repeat; will-change: transform, background-position; }
+#stars.off { opacity: 0; }
+#stars i { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff; box-shadow: 0 0 6px 1px #fff8; animation: twinkle 4s ease-in-out infinite; }
+@keyframes twinkle { 0%, 100% { opacity: .25; transform: scale(.7); } 50% { opacity: 1; transform: scale(1); } }
+
+/* the season in the header: a small pill under the tagline, which also opens today's card */
+.season { margin-top: 6px; justify-self: start; display: inline-flex; align-items: center; gap: 7px; height: 24px; padding: 0 10px 0 8px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--lit) 45%, transparent); background: color-mix(in srgb, var(--lit) 12%, rgba(12,18,32,.7)); color: var(--ink); font-size: 11.5px; letter-spacing: .02em; cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); max-width: 100%; }
+.season i { width: 8px; height: 8px; border-radius: 50%; background: var(--lit); box-shadow: 0 0 8px var(--lit); flex: none; }
+.season span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.season:hover { border-color: var(--lit); }
+.brand h1 .cross { color: var(--lit); transition: color .6s ease; }
+.card { border-top: 3px solid var(--lit); }
+.btn.primary { background: var(--lit); border-color: var(--lit); color: var(--lit-ink); }
+.chip[aria-pressed="true"] { border-color: color-mix(in srgb, var(--lit) 60%, transparent); background: color-mix(in srgb, var(--lit) 16%, transparent); }
+:focus-visible { outline-color: var(--lit-soft); }
+
+body.bible-mode .ctrls #tourBtn, body.bible-mode #today { display: none !important; }
+
+/* extra side controls stay out of the way on small screens */
+.ctrls button.lit-on { background: color-mix(in srgb, var(--lit) 22%, transparent); }
+@media (max-width: 640px) {
+  .ctrls #zin, .ctrls #zout { display: none; } /* pinch to zoom on phones */
+  body.sheet-up .ctrls .xtra { display: none; }
+}
+
+/* small floating cards in the bottom-left corner: church of the day and the tour guide */
+.float-card {
+  position: fixed; z-index: 7; left: max(16px, env(safe-area-inset-left, 0px)); bottom: calc(40px + env(safe-area-inset-bottom, 0px)); width: 360px;
+  background: var(--panel-solid); border: 1px solid var(--line); border-top: 3px solid var(--lit); border-radius: 16px; box-shadow: 0 18px 50px #000b;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
+}
+.float-card[hidden] { display: block !important; transform: translateY(calc(100% + 60px)); opacity: 0; pointer-events: none; }
+.float-card .x { position: absolute; top: 8px; right: 8px; width: 30px; height: 30px; border-radius: 50%; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.float-card .x:hover { background: rgba(255,255,255,.06); }
+.float-card .x svg { width: 15px; height: 15px; stroke: var(--ink-soft); stroke-width: 2; fill: none; }
+.float-card .kick { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); padding-right: 30px; }
+.float-card .kick b { color: var(--lit-soft); font-weight: 600; }
+body:has(#favs:not([hidden])) .float-card, body:has(#near:not([hidden])) .float-card, body:has(#tours:not([hidden])) .float-card { opacity: 0; pointer-events: none; }
+
+#today { padding: 14px 16px 14px; display: grid; gap: 10px; }
+#today .saint { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; }
+#today .saint img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: top; border: 1.5px solid color-mix(in srgb, var(--lit) 60%, transparent); }
+#today .saint .ph { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--lit) 14%, transparent); color: var(--lit-soft); font-family: var(--font-display); font-size: 20px; }
+#today h2 { margin: 2px 0 0; font-family: var(--font-display); font-weight: 600; font-size: 16px; line-height: 1.25; letter-spacing: .02em; }
+#today .rank { font-size: 12px; color: var(--ink-soft); }
+#today .cotd { display: grid; gap: 2px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,.025); cursor: pointer; text-align: left; color: var(--ink); width: 100%; }
+#today .cotd:hover { border-color: color-mix(in srgb, var(--lit) 55%, transparent); background: color-mix(in srgb, var(--lit) 8%, transparent); }
+#today .cotd small { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--lit-soft); }
+#today .cotd b { font-weight: 600; font-size: 14px; line-height: 1.3; }
+#today .cotd span { font-size: 12px; color: var(--ink-soft); }
+#today .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+#today .row a { color: var(--ink-soft); font-size: 12.5px; text-underline-offset: 3px; }
+
+/* tour list and tour guide */
+#tours .tour { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: center; width: 100%; text-align: left; padding: 10px 10px; border-radius: 12px; border: 0; background: none; cursor: pointer; color: var(--ink); }
+#tours .tour:hover { background: rgba(232, 184, 74, 0.1); }
+#tours .tour .ic { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid var(--c); color: var(--c); font-family: var(--font-display); font-size: 15px; box-shadow: 0 0 14px color-mix(in srgb, var(--c) 35%, transparent); }
+#tours .tour b { display: block; font-weight: 600; font-size: 14px; }
+#tours .tour small { display: block; font-size: 12px; color: var(--ink-soft); line-height: 1.4; }
+#tours .note { padding: 0 18px 16px; margin: 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
+#tourCard { padding: 14px 16px 12px; display: grid; gap: 8px; }
+#tourCard h2 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 18px; line-height: 1.25; letter-spacing: .02em; padding-right: 24px; }
+#tourCard .where { color: var(--ink-soft); font-size: 12.5px; }
+#tourCard p { margin: 0; line-height: 1.55; font-size: 13.5px; color: var(--ink); }
+#tourCard .dots { display: flex; gap: 4px; flex-wrap: wrap; }
+#tourCard .dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 0; background: rgba(233,228,214,.2); cursor: pointer; }
+#tourCard .dots button[aria-current="true"] { background: var(--tc, var(--gold)); box-shadow: 0 0 8px var(--tc, var(--gold)); }
+#tourCard .nav { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 2px; }
+#tourCard .nav .btn { height: 32px; padding: 0 12px; }
+#tourCard .nav .icon { width: 32px; padding: 0; justify-content: center; }
+#tourCard .nav .grow { flex: 1; }
+#tourCard .timer { height: 2px; border-radius: 1px; background: var(--line); overflow: hidden; }
+#tourCard .timer i { display: block; height: 100%; width: 0; background: var(--tc, var(--gold)); }
+
+/* globe view switches */
+.viewmenu { position: fixed; z-index: 9; width: 250px; padding: 8px; background: var(--panel-solid); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 48px #000b; display: grid; gap: 2px; }
+.viewmenu h3 { margin: 6px 10px 6px; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.viewmenu label { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center; padding: 8px 10px; border-radius: 9px; cursor: pointer; }
+.viewmenu label:hover { background: rgba(255,255,255,.04); }
+.viewmenu label span { font-size: 13.5px; }
+.viewmenu label small { grid-column: 1; font-size: 11.5px; color: var(--ink-faint); line-height: 1.35; }
+.viewmenu input { grid-row: 1 / span 2; grid-column: 2; appearance: none; -webkit-appearance: none; width: 34px; height: 20px; border-radius: 10px; background: rgba(233,228,214,.18); position: relative; cursor: pointer; transition: background .2s; margin: 0; }
+.viewmenu input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform .2s; }
+.viewmenu input:checked { background: var(--lit); }
+.viewmenu input:checked::after { transform: translateX(14px); }
+.foot .imagery[hidden] { display: none; }
+
+@media (max-width: 640px) {
+  .float-card { left: max(8px, env(safe-area-inset-left, 0px)); right: calc(max(16px, env(safe-area-inset-right, 0px)) + 52px); width: auto; bottom: calc(36px + env(safe-area-inset-bottom, 0px)); }
+  #tourCard { right: max(8px, env(safe-area-inset-right, 0px)); }
+  body.tour-on .ctrls { bottom: calc(var(--tour-h, 0px) + 46px + env(safe-area-inset-bottom, 0px)); }
+  body.card-open .float-card { opacity: 0; pointer-events: none; }
+  #tourCard p { font-size: 13px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .season { height: 22px; font-size: 11px; }
+  .viewmenu { left: 8px; right: 8px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .float-card, #stars { transition: none; }
+  #stars i { animation: none; }
+}

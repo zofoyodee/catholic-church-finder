@@ -409,6 +409,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   .card .hero img.photo, .card .hero .vigil { transition: none; }
 }
 </style>
+<link rel="stylesheet" href="app/engage.css">
 </head>
 <body>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches"></div></div>
@@ -2206,6 +2207,11 @@ async function openBibleLand(k, { fly = true } = {}) {
   $('cardBody').scrollTop = 0;
 }
 
+/* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
+const hooks = {};
+window.ccf = { map, state, selectChurch, closeCard, shardFor, getJSON, countryName, esc, reduceMotion,
+  layers: new Promise(r => { hooks.layers = r; }), opened: new Promise(r => { hooks.opened = r; }) };
+
 /* ---------- boot ---------- */
 const mapReady = new Promise(res => map.once('load', res));
 (async () => {
@@ -2220,6 +2226,7 @@ const mapReady = new Promise(res => map.once('load', res));
     setProgress(0.85, 'Placing them on the globe…');
     await new Promise(r => setTimeout(r, 30));
     addChurchLayers();
+    hooks.layers();
     renderFavs();
     renderChips(); updateTagline(); initMassFilters();
     setProgress(1);
@@ -2230,6 +2237,7 @@ const mapReady = new Promise(res => map.once('load', res));
       setTimeout(() => { photoIndex().catch(() => {}); loadPhoneLib().catch(() => {}); }, 5000); // warm the small photo index and phone formats once the globe is up
       // open over the United States
       const shared = parseInt(new URLSearchParams(location.search).get('church'), 10);
+      hooks.opened({ shared: shared >= 0 && shared < state.n });
       if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link
       const sp = new URLSearchParams(location.search);
       if (sp.has('bible') || sp.has('land') || sp.get('mode') === 'bible') { state.ready = true; setMode('bible', { fly: !sp.has('bible') && !sp.has('land') }).then(() => { if (sp.get('bible')) openBiblePlace(sp.get('bible')); else if (sp.get('land')) openBibleLand(sp.get('land')); }); return; }
@@ -2245,5 +2253,6 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
+<script src="app/engage.js"></script>
 </body>
 </html>

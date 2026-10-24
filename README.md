@@ -7,6 +7,9 @@ An interactive 3D globe of about 184,000 Catholic churches, chapels, shrines, ba
 - Drag to spin the globe, scroll or pinch to zoom. Pins cluster when zoomed out; church names appear under pins once you zoom into a city.
 - Search by church name or town.
 - Click a pin to open its details card. The card looks up a photograph of the church live on Wikimedia Commons and Wikipedia (matched by location and name, credited to its photographer). A gold votive candle shows while it loads; churches without a matching photo keep a drawn scene.
+- **Guided tours**: the globe flies through Marian shrines, the Camino de Santiago, the great basilicas or the great cathedrals, with a card at each stop. Link straight to one with `?tour=marian`, `camino`, `basilicas` or `cathedrals`.
+- **Church of the day**: a card names today's saint or feast and a church dedicated to it. The pill under the title shows the liturgical season, and the page's accent colour follows the colour of the day.
+- **Globe view** (layers button): satellite imagery, day and night shading, stars and atmosphere, a density glow, and liturgical colours can each be switched on or off.
 
 ## How it works
 
@@ -18,6 +21,8 @@ It is a static site with no build step and no server.
 | `data/points.txt` | Base64 positions and types of every church |
 | `data/d/N.json` | Details for churches, 2,000 per file, loaded on click |
 | `data/search-*.txt` | Search index, loaded on first search |
+| `app/engage.js`, `app/engage.css` | Tours, church of the day, liturgical calendar, globe view (stars, night, satellite, density glow, golden cathedral pins) |
+| `data/tours.json`, `data/calendar.json` | Tour stops and the saints calendar, built by `scripts/engage/` |
 | `data/photos.json`, `photos/N.jpg` | ~80 pre-matched cathedral and basilica photos, used before the live lookup |
 | `base/*.json` | Natural Earth basemap (land, borders, cities, rivers) |
 | `fonts/*.txt` | Map label glyphs (Latin range) |
@@ -26,6 +31,7 @@ It is a static site with no build step and no server.
 ## Data
 
 - Places: [Overture Maps](https://docs.overturemaps.org/guides/places/) release 2026-10-21.0, © Overture Maps Foundation, CDLA Permissive 2.0. Places tagged as Roman Catholic places of worship, plus Christian places whose names are clearly Catholic.
+- Satellite imagery: [Sentinel-2 cloudless](https://s2maps.eu) by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2020), CC BY-NC-SA 4.0.
 - Basemap: [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 - Photos: [Wikimedia Commons](https://commons.wikimedia.org/), each under the license shown on the photo's credit.
 
