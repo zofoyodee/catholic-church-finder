@@ -280,6 +280,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 16px; margin: 0; font-size: 13.5px; }
 .facts dt { color: var(--ink-faint); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 2px; }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.facts dd.wide { grid-column: 1 / -1; }
 .facts a { color: var(--gold-soft); text-underline-offset: 3px; }
 .facts .mono { font-family: var(--font-data); font-size: 12.5px; font-variant-numeric: tabular-nums; }
 .sect h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
@@ -1468,7 +1469,7 @@ async function selectChurch(i, { fly = true } = {}) {
       ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
       ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
       ${webUrl ? `<dt>Website</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(host(webUrl))}</a></dd>` : ''}
-      ${fb ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
+      ${fb ? `<dd class="wide"><a href="${esc(fb)}" target="_blank" rel="noopener">Facebook Page</a></dd>` : ''}
     </dl>
     <div id="cAbout"></div>
     <div class="sect">
