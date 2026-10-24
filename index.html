@@ -211,9 +211,8 @@ button, input { font: inherit; color: inherit; }
 .staff .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
 .staff b { display: block; font-weight: 600; }
 .staff small { color: var(--ink-soft); font-size: 12px; }
-.staff-src, .staff-none { margin: 9px 0 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
-.staff-none { margin: 0; }
-.staff-src a, .staff-none a { color: var(--gold-soft); text-underline-offset: 3px; }
+.staff-src { margin: 9px 0 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
+.staff-src a { color: var(--gold-soft); text-underline-offset: 3px; }
 .facts .dead { color: var(--ink-faint); }
 .facts .moved { color: var(--ink-faint); font-size: 12px; }
 .media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -424,14 +423,11 @@ function linkKind(u) {
 }
 const ROLE_ORDER = ['Pastor', 'Administrator', 'Rector', 'Parochial vicar', 'Chaplain', 'In residence', '', 'Pastor emeritus', 'Deacon'];
 function initials(n) { return n.split(/\s+/).filter(w => /^[A-ZÀ-Þ]/.test(w)).map(w => w[0]).slice(0, 2).join('') || '✝'; }
-function staffHTML(entry, checked, name, town, webUrl, host) {
+function staffHTML(entry, checked, webUrl, host) {
   const staff = (entry && entry[2]) || [];
   const src = (entry && entry[3]) || webUrl;
   const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', year: 'numeric' }) : '';
-  if (!staff.length) {
-    const q = encodeURIComponent([name, town, 'pastor priest deacon'].filter(Boolean).join(' '));
-    return `<div class="sect"><h3>Staff</h3><p class="staff-none">No priests or deacons are listed for this church yet${webUrl ? ' on its website' : ''}. <a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener">Search for its clergy</a></p></div>`;
-  }
+  if (!staff.length) return '';  // only show Staff when the parish site named its clergy
   const rows = staff.map(([k, title, nm, role, img]) => ({ k, title, nm, role: role || (k === 'd' ? 'Deacon' : 'Priest'), img }))
     .sort((a, b) => (a.k === 'd') - (b.k === 'd') || ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role));
   return `<div class="sect"><h3>Staff</h3><ul class="staff">${rows.map(p => `
@@ -972,7 +968,7 @@ async function selectChurch(i, { fly = true } = {}) {
       ${webDead ? `<dt>Website</dt><dd><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></dd>` : ''}
       ${fb && !(kind && kind.btn === 'Facebook') ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
     </dl>
-    ${staffHTML(wentry, webInfo.checked, name, town, webUrl && !kind.platform ? webUrl : '', host)}
+    ${staffHTML(wentry, webInfo.checked, webUrl, host)}
     <div class="sect">
       <h3>Photos, video and history</h3>
       <div class="media">
