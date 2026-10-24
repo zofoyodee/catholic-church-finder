@@ -1594,7 +1594,7 @@ async function openBiblePlace(id, { fly = true } = {}) {
     ${p.t.length ? `<div class="sect"><h3>Catholic tradition</h3>${list(p.t)}</div>` : ''}
     <div class="sect"><h3>Catholic churches nearby</h3><div id="bNear" class="nearlist"><p class="muted">Looking on the globe…</p></div></div>
     ${others.length ? `<div class="sect"><h3>More in ${esc(land.n)}</h3><div class="plist">${others.map(o => `<button data-goplace="${o.id}"><i style="background:${BIBLE_COLORS[mainGroup(o)]}"></i>${esc(o.n)}</button>`).join('')}</div></div>` : ''}
-    <div class="prov">References follow the New American Bible, Revised Edition, the translation used at Mass in the United States. Tap one to read the chapter on the USCCB website.${p.ll ? '' : ''}</div>`;
+    <div class="prov">References follow the New American Bible, Revised Edition, the Catholic translation used at Mass in the United States. Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read the chapter on the USCCB website.${p.ll ? '' : ''}</div>`;
   $('card').hidden = false;
   $('bFly').addEventListener('click', () => map.flyTo({ center: [p.ll[1], p.ll[0]], zoom: 14, pitch: 50, bearing: map.getBearing() + 30, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
   bibleShare(bibleLink('bible=' + p.id), p.n + ' in the Bible');
@@ -1622,7 +1622,7 @@ async function openBibleLand(k, { fly = true } = {}) {
     <div class="sect"><h3>In Scripture</h3>${list(l.b)}</div>
     ${l.t.length ? `<div class="sect"><h3>Catholic tradition</h3>${list(l.t)}</div>` : ''}
     ${places.length ? `<div class="sect"><h3>Places to explore (${places.length})</h3><div class="plist">${places.map(o => `<button data-goplace="${o.id}"><i style="background:${BIBLE_COLORS[mainGroup(o)]}"></i>${esc(o.n)}</button>`).join('')}</div></div>` : ''}
-    <div class="prov">References follow the New American Bible, Revised Edition, which includes the deuterocanonical books (Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach, Baruch). Tap one to read it on the USCCB website.</div>`;
+    <div class="prov">References follow the New American Bible, Revised Edition, which includes the deuterocanonical books (Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach, Baruch). Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read it on the USCCB website.</div>`;
   $('card').hidden = false;
   bibleShare(bibleLink('land=' + k), l.n + ', once ' + l.a);
   try { history.replaceState(null, '', '?land=' + k); } catch (e) {}
