@@ -65,13 +65,13 @@ for k, j, r, added in records():
         stats['with_pastor'] += 1
     sl = slots(mass, 0) + slots(conf, 1)
     if sl:
-        # one int per slot: kind | day mask << 1 | minutes << 8 | language << 19
+        # one int per slot: kind | day mask << 1 | minutes << 8 | language << 19 | week of month << 24
         i = k * 2000 + j
         tz = tz_of(r[5], LON[i] / 1e6, LAT[i] / 1e6)
         tzi = TZ.setdefault(tz, len(TZ))
-        sched[i] = [tzi] + sorted({kd | m << 1 | t << 8 | (LANG_IDX[lg] if lg else 0) << 19 for kd, m, t, lg in sl})
+        sched[i] = [tzi] + sorted({kd | m << 1 | t << 8 | (LANG_IDX[lg] if lg else 0) << 19 | wk << 24 for kd, m, t, lg, wk in sl})
         stats['with_times'] += 1
-        stats['with_language'] += any(lg for *_, lg in sl)
+        stats['with_language'] += any(x[3] for x in sl)
     if code == 3 or new or staff or mass or conf:
         e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', '')]
         while e and not e[-1] and len(e) > 2:
