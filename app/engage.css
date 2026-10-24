@@ -20,6 +20,8 @@
 .chip[aria-pressed="true"] { border-color: color-mix(in srgb, var(--lit) 60%, transparent); background: color-mix(in srgb, var(--lit) 16%, transparent); }
 :focus-visible { outline-color: var(--lit-soft); }
 
+body.bible-mode .ctrls #tourBtn, body.bible-mode #today { display: none !important; }
+
 /* extra side controls stay out of the way on small screens */
 .ctrls button.lit-on { background: color-mix(in srgb, var(--lit) 22%, transparent); }
 @media (max-width: 640px) {

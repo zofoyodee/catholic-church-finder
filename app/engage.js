@@ -526,7 +526,7 @@ function applyDensity() {
       'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 0, 0.9, 4.5, 0.7, 6.5, 0],
     } }, 'cl-glow');
   }
-  map.setLayoutProperty('density', 'visibility', view.density ? 'visible' : 'none');
+  map.setLayoutProperty('density', 'visibility', view.density && !bibleMode() ? 'visible' : 'none');
 }
 
 // golden cathedrals: cathedrals and basilicas glow larger than other churches at every zoom
@@ -571,6 +571,15 @@ function applyView(k) {
   if (!k || k === 'liturgical') applySeason();
 }
 
+/* ---------- Bible Places mode: the church-only extras step aside ---------- */
+const bibleMode = () => document.body.classList.contains('bible-mode');
+new MutationObserver(() => {
+  const on = bibleMode();
+  if (on) { endTour(); showTours(false); showToday(false, true); }
+  for (const id of ['notable-glow', 'notable-pin']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'none' : 'visible');
+  if (map.getLayer('density')) map.setLayoutProperty('density', 'visibility', !on && view.density ? 'visible' : 'none');
+}).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
 /* ---------- start ---------- */
 drawStars(); moveStars();
 ccf.layers.then(() => {
@@ -580,10 +589,10 @@ ccf.layers.then(() => {
 const todayReady = initToday().catch((e) => console.warn('today', e));
 ccf.opened.then(async ({ shared }) => {
   const tourId = new URLSearchParams(location.search).get('tour');
-  if (tourId) { startTour(tourId); return; }
+  if (tourId && !bibleMode()) { startTour(tourId); return; }
   await todayReady;
   let closed = null; try { closed = localStorage.getItem(TODAY_KEY); } catch (e) {}
   // church of the day slides in once the globe has settled over the United States, unless closed earlier today
-  if (!shared && cotd && closed !== String(today.n)) setTimeout(() => { if (!tour.t && $('card').hidden) showToday(true, true); }, reduceMotion ? 300 : 3600);
+  if (!shared && !bibleMode() && cotd && closed !== String(today.n)) setTimeout(() => { if (!tour.t && $('card').hidden) showToday(true, true); }, reduceMotion ? 300 : 3600);
 });
 })();
