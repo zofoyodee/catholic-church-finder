@@ -21,6 +21,9 @@ from bs4 import BeautifulSoup, NavigableString
 
 from schedule import extract_schedule, schedule_links, LINKS_STRONG
 
+# Where parish sites usually keep the schedule, tried when no link to it is found
+GUESS_PATHS = ['/mass-times', '/mass-schedule', '/masses']
+
 UA = 'CatholicChurchFinderBot/1.0 (+https://github.com/zofoyodee/catholic-church-finder)'
 HEADERS = {'User-Agent': UA, 'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.5', 'Accept-Language': 'en,es;q=0.8,pt;q=0.7,it;q=0.6,fr;q=0.5,de;q=0.4,pl;q=0.3'}
 MAX_BYTES = 1_500_000
@@ -33,6 +36,7 @@ CHURCHY = re.compile(r'(church|parish|catholic|cat[óo]lic|catholique|cattolic|k
 PARKED = re.compile(r'(domain (name )?(is |may be )?for sale|buy this domain|this domain (has expired|is parked|is available)|parked (free|domain)|domain parking|sedoparking|hugedomains|dan\.com|afternic|godaddy\.com/domains|this site can.t be reached|account (has been )?suspended|website (is )?(expired|suspended)|hosting (account )?(has )?expired|future home of|coming soon|under construction|default web site page|welcome to nginx|apache2 (ubuntu|debian) default page|it works!)', re.I)
 
 STAFF_STRONG = re.compile(r'(staff|clergy|priest|pastor|deacon|our-team|parish-team|pastoral-team|leadership|equipe|équipe|clero|sacerdot|padres|presbit|curas|personale|sacerdoti|seelsorge|pfarrteam|seelsorgeteam|ansprechpartner|duszpaster|kaplan|ksieza|księża|duchowni|kapłani|zesp[oó]ł|parocco|parroco|párroco|pároco|vigario|vicari|cure-|curé|pretre|prêtre|pfarrer|team|who-we-are|quienes-somos|quem-somos|chi-siamo|qui-sommes|o-nas|wir-ueber-uns|uber-uns|über-uns|meet-)', re.I)
+STAFF_PATH = re.compile(r'(staff|clergy|priests|our-team|parish-team|pastoral-team|leadership|equipe|clero|sacerdotes|seelsorge|pfarrteam|duszpasterze|kaplani)', re.I)
 STAFF_WEAK = re.compile(r'(about|contact|parish-office|office|nosotros|parroquia|parish|kontakt|contatti|contacto|contato)', re.I)
 
 T_DEACON = r"(?:Deacon|Dcn\.?|Deac\.|Rev(?:erend|\.)?\s+Mr\.|Di[aá]cono|Diac\.|Diacre|Diakon|Dk\.|Diac\b)"
@@ -290,6 +294,7 @@ class Crawler:
     def __init__(self, session):
         self.s = session
         self.robots = {}
+        self.sitemaps = {}
 
     async def get(self, url, timeout=20):
         try:
@@ -318,6 +323,29 @@ class Crawler:
             return 0, url, '', 'redirects'
         except Exception as e:  # noqa: BLE001 - every odd failure becomes "unknown"
             return 0, url, '', type(e).__name__
+
+    async def sitemap_links(self, base, rx):
+        """Same-site pages from sitemap.xml (one level of sitemap index) whose address matches rx."""
+        sp = urlsplit(base)
+        root = f'{sp.scheme}://{sp.netloc}'
+        if root in self.sitemaps:
+            urls = self.sitemaps[root]
+        else:
+            urls = []
+            st, _, xml, err = await self.get(root + '/sitemap.xml', timeout=15)
+            if not err and st < 400 and '<loc>' in xml:
+                locs = re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', xml)
+                subs = [u for u in locs if u.endswith('.xml')][:3]
+                urls = [u for u in locs if not u.endswith('.xml')]
+                for sub in subs:
+                    if re.search(r'(page|post_type_page|pages)', sub) or len(subs) == 1:
+                        st2, _, x2, e2 = await self.get(sub, timeout=15)
+                        if not e2 and st2 < 400:
+                            urls += re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', x2)
+            self.sitemaps[root] = urls = urls[:3000]
+        host = norm_host(sp.hostname)
+        hits = [u for u in urls if norm_host(urlsplit(u).hostname) == host and rx.search(urlsplit(u).path) and not PAST.search(urlsplit(u).path)]
+        return sorted(hits, key=len)[:3]
 
     async def allowed(self, url):
         sp = urlsplit(url)
@@ -390,7 +418,10 @@ class Crawler:
             people = [p for p in extract_people(html, final, name) if p['role']]
             src = final if people else ''
             if len(people) < 2:
-                for link in staff_links(html, final):
+                slinks = staff_links(html, final)
+                if not any(STAFF_STRONG.search(urlsplit(u).path) for u in slinks):
+                    slinks = (await self.sitemap_links(final, STAFF_PATH)) + slinks
+                for link in slinks[:3]:
                     if not await self.allowed(link):
                         continue
                     st, f2, h2, err = await self.get(link)
@@ -411,7 +442,14 @@ class Crawler:
             mass, conf = extract_schedule(html)
             msrc = final if mass or conf else ''
             if not mass:
-                for link in schedule_links(html, final):
+                links = schedule_links(html, final)
+                if not links:
+                    # menus built by JavaScript hide the links: try the sitemap, then the usual addresses
+                    links = await self.sitemap_links(final, LINKS_STRONG)
+                if not links:
+                    root = f'{urlsplit(final).scheme}://{urlsplit(final).netloc}'
+                    links = [root + p for p in GUESS_PATHS]
+                for link in links[:3]:
                     if not await self.allowed(link):
                         continue
                     st, f2, h2, err = await self.get(link)
