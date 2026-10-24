@@ -75,6 +75,7 @@ button, input { font: inherit; color: inherit; }
   display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px 20px;
 }
 .top > * { pointer-events: auto; }
+.top:has(.results:not([hidden])) { z-index: 12; } /* search results float over an open card */
 .top::before { content: ""; position: absolute; inset: 0 0 -40px; z-index: -1; pointer-events: none; background: linear-gradient(to bottom, rgba(5,7,13,.82), rgba(5,7,13,.5) 60%, rgba(5,7,13,0)); }
 .foot::before { content: ""; position: absolute; inset: -24px 0 0; z-index: -1; pointer-events: none; background: linear-gradient(to top, rgba(5,7,13,.8), rgba(5,7,13,0)); }
 .brand { display: grid; gap: 2px; min-width: 0; }
@@ -104,7 +105,12 @@ button, input { font: inherit; color: inherit; }
 .results .note { padding: 10px; color: var(--ink-soft); font-size: 13px; }
 .results div { min-width: 0; }
 
-.chips { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; align-items: center; }
+.chips .lbl { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-right: 2px; text-shadow: 0 1px 6px #000; flex: none; }
+.chips.filtered .chip[aria-pressed="false"] { opacity: .5; }
+.chips.filtered .chip[aria-pressed="false"] i { background: transparent !important; box-shadow: inset 0 0 0 1.5px var(--ink-faint); }
+.chip .tick { display: none; width: 12px; height: 12px; stroke: var(--gold-soft); fill: none; stroke-width: 2.4; margin-left: -2px; }
+.chips.filtered .chip[aria-pressed="true"] .tick { display: inline-block; }
 .chip {
   height: 30px; padding: 0 12px; border-radius: 15px; border: 1px solid var(--line); background: var(--panel);
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); cursor: pointer; font-size: 12.5px; color: var(--ink-soft);
@@ -136,6 +142,38 @@ button, input { font: inherit; color: inherit; }
 .foot > * { pointer-events: auto; }
 .foot button { background: none; border: 0; color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 0; font-size: 11.5px; }
 .foot .coords { font-family: var(--font-data); font-variant-numeric: tabular-nums; margin-left: auto; }
+
+/* favorites */
+.ctrls button.fav-open { position: relative; }
+.ctrls .count { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--gold); color: #1a1406; font-size: 11px; font-weight: 600; line-height: 18px; text-align: center; font-variant-numeric: tabular-nums; }
+.ctrls .count:empty { display: none; }
+.favs {
+  position: fixed; z-index: 9; left: max(16px, env(safe-area-inset-left, 0px)); top: 132px; max-height: calc(100% - 190px); width: 320px;
+  display: flex; flex-direction: column; background: var(--panel-solid); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 48px #000a;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
+}
+.favs[hidden] { display: flex !important; transform: translateX(calc(-100% - 40px)); opacity: 0; pointer-events: none; }
+.favs header { display: flex; align-items: center; gap: 10px; padding: 16px 12px 10px 18px; }
+.favs h2 { margin: 0; flex: 1; font-family: var(--font-display); font-weight: 600; font-size: 16px; letter-spacing: .06em; }
+.favs h2 small { font-family: var(--font-ui); font-weight: 500; font-size: 12px; color: var(--ink-faint); letter-spacing: 0; margin-left: 6px; }
+.favs .x { width: 32px; height: 32px; border-radius: 50%; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.favs .x svg { width: 16px; height: 16px; stroke: var(--ink-soft); stroke-width: 2; }
+.favs ul { list-style: none; margin: 0; padding: 0 8px 10px; overflow-y: auto; flex: 1; }
+.favs li { display: grid; grid-template-columns: 1fr auto; align-items: center; border-radius: 10px; }
+.favs li:hover { background: rgba(232, 184, 74, 0.1); }
+.favs li button.go { text-align: left; background: none; border: 0; cursor: pointer; padding: 9px 10px; min-width: 0; color: var(--ink); display: grid; grid-template-columns: 10px 1fr; gap: 10px; align-items: center; }
+.favs li .nm { display: block; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.favs li .loc { display: block; font-size: 12px; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.favs li i { width: 9px; height: 9px; border-radius: 50%; }
+.favs li button.rm { width: 32px; height: 32px; margin-right: 4px; border-radius: 50%; border: 0; background: none; cursor: pointer; display: grid; place-items: center; color: var(--ink-faint); }
+.favs li button.rm:hover { color: var(--ink); background: rgba(255,255,255,.06); }
+.favs li button.rm svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; }
+.favs .empty { padding: 4px 18px 18px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; margin: 0; }
+.favs .empty svg { width: 14px; height: 14px; vertical-align: -2px; fill: #e0607e; stroke: none; }
+.btn.save svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; }
+.btn.save[aria-pressed="true"] { border-color: #e0607e; color: #ffd3dd; }
+.btn.save[aria-pressed="true"] svg { fill: #e0607e; stroke: #e0607e; }
+.ctrls button.fav-open svg { stroke: #f2a1b4; }
 
 /* tooltip */
 .tip {
@@ -232,6 +270,11 @@ button, input { font: inherit; color: inherit; }
 .prov .pill { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-right: 6px; border: 1px solid var(--line); color: var(--ink-soft); }
 .prov .pill.warn { border-color: color-mix(in srgb, var(--gold) 50%, transparent); color: var(--gold-soft); }
 .card .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.share-wrap { position: relative; }
+.share-menu { position: absolute; z-index: 3; top: calc(100% + 6px); left: 0; min-width: 170px; display: grid; padding: 6px; background: var(--panel-solid); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px #000b; }
+.share-menu a, .share-menu button { text-align: left; padding: 8px 10px; border-radius: 8px; border: 0; background: none; color: var(--ink); font: inherit; font-size: 13px; text-decoration: none; cursor: pointer; }
+.share-menu a:hover, .share-menu button:hover { background: rgba(232, 184, 74, 0.12); }
 .btn { height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 13px; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; }
 .btn:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
 .btn.primary { background: var(--gold); color: #1a1406; border-color: var(--gold); font-weight: 600; }
@@ -252,6 +295,8 @@ button, input { font: inherit; color: inherit; }
   .search { flex-basis: 100%; max-width: none; margin-left: 0; order: 3; }
   .chips { order: 4; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
   .chip { flex: none; }
+  .favs { top: auto; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); width: auto; bottom: max(8px, env(safe-area-inset-bottom, 0px)); max-height: 60%; }
+  .favs[hidden] { transform: translateY(calc(100% + 40px)); }
   .card { top: auto; left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); width: auto; bottom: max(8px, env(safe-area-inset-bottom, 0px)); max-height: 72%; border-radius: 18px; }
   .card[hidden] { transform: translateY(calc(100% + 40px)); }
   .card .hero { height: 130px; }
@@ -284,7 +329,8 @@ button, input { font: inherit; color: inherit; }
 </header>
 
 <div class="ctrls">
-  <button id="spin" aria-pressed="true" title="Spin the globe" aria-label="Spin the globe"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
+  <button id="favOpen" class="fav-open" aria-expanded="false" aria-controls="favs" title="Your favorite churches" aria-label="Your favorite churches"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span class="count" id="favCount"></span></button>
+  <button id="spin" aria-pressed="false" title="Spin the globe" aria-label="Spin the globe"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
   <button id="zin" title="Zoom in" aria-label="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
   <button id="zout" title="Zoom out" aria-label="Zoom out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
   <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
@@ -298,6 +344,11 @@ button, input { font: inherit; color: inherit; }
 </footer>
 
 <div id="tip" class="tip" hidden></div>
+
+<aside id="favs" class="favs" hidden aria-labelledby="favTitle">
+  <header><h2 id="favTitle">Favorites<small id="favN"></small></h2><button class="x" id="favClose" aria-label="Close favorites"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <ul id="favList"></ul>
+</aside>
 
 <aside id="card" class="card" hidden aria-labelledby="cName" role="dialog">
   <div class="hero" id="hero">
@@ -331,7 +382,7 @@ const TYPES = [
   { code: 4, key: 'abbey', label: 'Abbeys & monasteries', one: 'Abbey or monastery', color: '#9fd3b0' },
 ];
 const TYPE_BY_CODE = Object.fromEntries(TYPES.map(t => [t.code, t]));
-const state = { meta: null, lon: null, lat: null, typ: null, n: 0, enabled: new Set(TYPES.map(t => t.code)), shards: new Map(), selected: -1, spinning: !reduceMotion };
+const state = { meta: null, lon: null, lat: null, typ: null, n: 0, enabled: new Set(TYPES.map(t => t.code)), shards: new Map(), selected: -1, spinning: false };
 
 const setProgress = (p, msg) => { $('bar').style.width = Math.round(p * 100) + '%'; if (msg) $('veilMsg').textContent = msg; };
 const fmt = (n) => n.toLocaleString('en-US');
@@ -750,6 +801,12 @@ function addChurchLayers() {
     'circle-color': typeColor, 'circle-radius': ['interpolate', ['linear'], ['zoom'], 3, 8, 13, 12, 16, 15],
     'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5,
   } });
+  // saved churches wear a rose ring at every zoom
+  map.addSource('favs', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'fav-ring', type: 'circle', source: 'favs', paint: {
+    'circle-color': 'rgba(0,0,0,0)', 'circle-radius': ['interpolate', ['linear'], ['zoom'], 1, 4, 8, 9, 14, 13],
+    'circle-stroke-color': '#e0607e', 'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 1, 1.5, 10, 2.5],
+  } });
   map.moveLayer('places'); // city names sit above the pins and win over church names
   map.addLayer({ id: 'sel-ring', type: 'circle', source: 'sel', paint: { 'circle-color': 'rgba(0,0,0,0)', 'circle-radius': 14, 'circle-stroke-color': '#f3d58c', 'circle-stroke-width': 2 } });
   map.addLayer({ id: 'sel-dot', type: 'circle', source: 'sel', paint: { 'circle-color': '#f3d58c', 'circle-radius': 5, 'circle-stroke-color': '#05070d', 'circle-stroke-width': 1.5 } });
@@ -759,7 +816,7 @@ function addChurchLayers() {
 const NAME_ZOOM = 8;
 // only the Latin glyph range ships with the page, so fold accents and drop other scripts' letters
 const latinLabel = (s) => [...s].map(c => c.charCodeAt(0) <= 255 ? c : c.normalize('NFD').replace(/[̀-ͯ]/g, '')).filter(c => c.length && c.charCodeAt(0) <= 255).join('').replace(/\s+/g, ' ').trim();
-let nameSeq = 0;
+let nameSeq = 0, nameFeatures = [];
 async function updateNames() {
   const src = map.getSource('names');
   if (!src || map.getZoom() < NAME_ZOOM - 0.5) return;
@@ -782,12 +839,51 @@ async function updateNames() {
   ids.forEach((i, k) => {
     const name = latinLabel(recs[k][0] || '');
     if (name.length < 2) return;
-    features.push({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { name, rank: rank(i) } });
+    features.push({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { name, rank: rank(i), i } });
   });
+  nameFeatures = features;
   src.setData({ type: 'FeatureCollection', features });
 }
 // wait for the pins to be drawn after a move, then label the ones in view
 map.on('moveend', () => { if (map.getZoom() >= NAME_ZOOM - 0.5) { updateNames(); map.once('idle', updateNames); } });
+
+/* ---------- favorites: kept in this browser ---------- */
+const FAV_KEY = 'ccf-favorites';
+let favs = [];
+try { favs = JSON.parse(localStorage.getItem(FAV_KEY) || '[]').filter(f => f && Number.isInteger(f.i)); } catch (e) {}
+const isFav = (i) => favs.some(f => f.i === i);
+function saveFavs() { try { localStorage.setItem(FAV_KEY, JSON.stringify(favs)); } catch (e) {} renderFavs(); }
+function toggleFav(i, info) {
+  if (isFav(i)) favs = favs.filter(f => f.i !== i);
+  else favs.unshift({ i, name: info.name || 'Church', place: info.place || '', t: info.t });
+  saveFavs(); syncSave(i);
+}
+function syncSave(i) {
+  const b = $('saveBtn'); if (!b || state.selected !== i) return;
+  const on = isFav(i); b.setAttribute('aria-pressed', on); b.querySelector('span').textContent = on ? 'Saved' : 'Save';
+  b.title = on ? 'Remove from your favorites' : 'Add to your favorites';
+}
+function renderFavs() {
+  $('favCount').textContent = favs.length || '';
+  $('favN').textContent = favs.length ? favs.length : '';
+  $('favList').innerHTML = favs.length ? favs.map(f => `<li><button class="go" data-i="${f.i}"><i style="background:${(TYPE_BY_CODE[f.t] || TYPES[4]).color}"></i><div><span class="nm">${esc(f.name)}</span><span class="loc">${esc(f.place)}</span></div></button><button class="rm" data-i="${f.i}" aria-label="Remove ${esc(f.name)} from favorites" title="Remove"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>`).join('')
+    : `<p class="empty">No favorites yet. Open a church and tap <b><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg> Save</b> to keep it here.</p>`;
+  let src = null; try { src = map.getSource('favs'); } catch (e) {}
+  if (src && state.lon) src.setData({ type: 'FeatureCollection', features: favs.filter(f => f.i < state.n).map(f => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[f.i] / 1e6, state.lat[f.i] / 1e6] }, properties: {} })) });
+}
+function showFavs(open) {
+  $('favs').hidden = !open; $('favOpen').setAttribute('aria-expanded', open); $('favOpen').setAttribute('aria-pressed', open);
+}
+$('favOpen').addEventListener('click', () => showFavs($('favs').hidden));
+$('favClose').addEventListener('click', () => showFavs(false));
+$('favList').addEventListener('click', (e) => {
+  const rm = e.target.closest('button.rm');
+  if (rm) { const i = +rm.dataset.i; favs = favs.filter(f => f.i !== i); saveFavs(); syncSave(i); return; }
+  const go = e.target.closest('button.go'); if (!go) return;
+  if (innerWidth <= 640) showFavs(false); // the card takes the bottom of the screen on phones
+  selectChurch(+go.dataset.i, { fly: true });
+});
+renderFavs();
 
 /* ---------- spin ---------- */
 let lastInteract = 0;
@@ -924,6 +1020,35 @@ function phoneHTML(raw, cc) {
   } catch (e) {}
   return `<a href="tel:${esc(tel)}">${esc(text)}</a>`;
 }
+/* ---------- sharing: the phone's own share sheet, or email and copy on a computer ---------- */
+const churchLink = (i) => location.origin + location.pathname + '?church=' + i;
+function wireShare(i, name, place) {
+  const btn = $('shareBtn'), menu = $('shareMenu'), url = churchLink(i);
+  const title = name || 'A Catholic church';
+  const text = [title, place].filter(Boolean).join(', ');
+  const mobile = coarse && navigator.share;
+  const setOpen = (o) => { menu.hidden = !o; btn.setAttribute('aria-expanded', o); };
+  $('shareMail').href = `mailto:?subject=${encodeURIComponent(title + ' on Catholic Church Finder')}&body=${encodeURIComponent(text + '\n\nSee it on the globe:\n' + url + '\n')}`;
+  $('shareMail').addEventListener('click', () => setOpen(false));
+  $('shareMore').hidden = !navigator.share;
+  $('shareMore').addEventListener('click', () => { setOpen(false); navigator.share({ title, text, url }).catch(() => {}); });
+  $('shareCopy').addEventListener('click', async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText(url); ok = true; } catch (e) {
+      const ta = document.createElement('textarea'); ta.value = url; document.body.appendChild(ta); ta.select();
+      try { ok = document.execCommand('copy'); } catch (e2) {} ta.remove();
+    }
+    $('shareCopy').textContent = ok ? 'Link copied' : 'Copy failed';
+    setTimeout(() => { setOpen(false); $('shareCopy').textContent = 'Copy link'; }, 1100);
+  });
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (mobile) { navigator.share({ title, text, url }).catch(() => {}); return; }
+    setOpen(menu.hidden);
+  });
+}
+addEventListener('click', (e) => { const m = $('shareMenu'); if (m && !m.hidden && !e.target.closest('.share-wrap')) { m.hidden = true; $('shareBtn').setAttribute('aria-expanded', false); } });
+
 const icon = {
   photo: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>',
   video: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>',
@@ -974,13 +1099,20 @@ async function selectChurch(i, { fly = true } = {}) {
     <div class="actions">
       <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">Directions</a>
       ${kind && kind.btn ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn}</a>` : ''}
+      <button class="btn save" id="saveBtn" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span>Save</span></button>
+      <span class="share-wrap"><button class="btn" id="shareBtn" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Share</span></button>
+        <span class="share-menu" id="shareMenu" role="menu" hidden>
+          <a role="menuitem" id="shareMail" href="#">Email a link</a>
+          <button role="menuitem" id="shareCopy">Copy link</button>
+          <button role="menuitem" id="shareMore" hidden>More options…</button>
+        </span></span>
       <button class="btn" id="flyBtn">Fly here</button>
     </div>
     <dl class="facts">
       ${street ? `<dt>Address</dt><dd>${esc(street)}${postcode ? ', ' + esc(postcode) : ''}${town ? '<br>' + esc(town) : ''}</dd>` : ''}
       ${country ? `<dt>Country</dt><dd>${esc(country)}</dd>` : ''}
       ${pastor ? `<dt>${esc(pastor[3])}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
-      ${phone ? `<dt>Phone</dt><dd class="mono" id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
+      ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
       ${kind && kind.row ? `<dt>${kind.row}</dt><dd><a href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(kind.platform ? host(webUrl) + new URL(webUrl).pathname.replace(/\/$/, '') : host(webUrl))}</a>${wentry && wentry[0] === 2 ? ' <span class="moved">(new address)</span>' : ''}</dd>` : ''}
       ${webDead ? `<dt>Website</dt><dd><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></dd>` : ''}
       ${fb && !(kind && kind.btn === 'Facebook') ? `<dt>Facebook</dt><dd><a href="${esc(fb)}" target="_blank" rel="noopener">Parish page</a></dd>` : ''}
@@ -1001,14 +1133,19 @@ async function selectChurch(i, { fly = true } = {}) {
       <div style="margin-top:8px">Source: Overture Maps places (${esc((datasets || []).join(', ') || 'Overture')})${updated ? ', updated ' + esc(updated) : ''}.</div>
     </div>`;
   if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
+  syncSave(i);
+  $('saveBtn').addEventListener('click', () => toggleFav(i, { name, place, t }));
+  wireShare(i, name, place);
+  try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
 }
 function closeCard() {
   $('card').hidden = true; state.selected = -1;
+  try { history.replaceState(null, '', location.pathname); } catch (e) {}
   if (map.getSource('sel')) map.getSource('sel').setData({ type: 'FeatureCollection', features: [] });
 }
 $('cardClose').addEventListener('click', closeCard);
-addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (!$('about').hidden) $('about').hidden = true; else if (!$('results').hidden) $('results').hidden = true; else closeCard(); } });
+addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (!$('about').hidden) $('about').hidden = true; else if (!$('favs').hidden) showFavs(false); else if (!$('results').hidden) $('results').hidden = true; else closeCard(); } });
 
 // gently pulse the selection ring
 let t0 = performance.now();
@@ -1026,8 +1163,11 @@ requestAnimationFrame(pulse);
 function renderChips() {
   const counts = state.meta.types;
   const all = state.enabled.size === TYPES.length;
-  $('chips').innerHTML = `<button class="chip" data-k="all" aria-pressed="${all}">All</button>` + TYPES.filter(t => counts[t.code]).map(t =>
-    `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}"><i style="background:${t.color}"></i>${t.label} <small>${fmt(counts[t.code])}</small></button>`).join('');
+  const tick = '<svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  const tipFor = (t) => all ? `Show only ${t.label.toLowerCase()}` : state.enabled.has(t.code) ? `Hide ${t.label.toLowerCase()}` : `Also show ${t.label.toLowerCase()}`;
+  $('chips').classList.toggle('filtered', !all);
+  $('chips').innerHTML = `<span class="lbl">Show</span><button class="chip" data-k="all" aria-pressed="${all}" title="${all ? 'Showing every kind of church' : 'Show every kind of church again'}">All</button>` + TYPES.filter(t => counts[t.code]).map(t =>
+    `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${tipFor(t)}">${tick}<i style="background:${t.color}"></i>${t.label} <small>${fmt(counts[t.code])}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b) return;
@@ -1042,6 +1182,10 @@ $('chips').addEventListener('click', (e) => {
     if (c === 0 || c === 6) { if (state.enabled.has(c)) { state.enabled.add(0); state.enabled.add(6); } else { state.enabled.delete(0); state.enabled.delete(6); } if (!state.enabled.size) state.enabled = new Set(TYPES.map(t => t.code)); }
   }
   renderChips();
+  // whatever the filter now hides leaves the screen at once: its name label and, if open, its card
+  nameFeatures = nameFeatures.filter(f => state.enabled.has(state.typ[f.properties.i] & 7));
+  map.getSource('names').setData({ type: 'FeatureCollection', features: nameFeatures });
+  if (state.selected >= 0 && !state.enabled.has(state.typ[state.selected] & 7)) closeCard();
   map.getSource('churches').setData(buildGeoJSON());
   map.getSource('notable').setData(notableGeoJSON());
   updateTagline();
@@ -1135,6 +1279,7 @@ const mapReady = new Promise(res => map.once('load', res));
     setProgress(0.85, 'Placing them on the globe…');
     await new Promise(r => setTimeout(r, 30));
     addChurchLayers();
+    renderFavs();
     renderChips(); updateTagline();
     setProgress(1);
     let opened = false;
@@ -1142,8 +1287,10 @@ const mapReady = new Promise(res => map.once('load', res));
       if (opened) return; opened = true;
       $('veil').classList.add('gone');
       setTimeout(() => { photoIndex().catch(() => {}); loadPhoneLib().catch(() => {}); }, 5000); // warm the small photo index and phone formats once the globe is up
-      // open over Rome, then let the world turn
-      map.flyTo({ center: [12.45, 30], zoom: innerWidth < 640 ? 1.35 : 2.25, duration: reduceMotion ? 0 : 3200, essential: true });
+      // open over the United States
+      const shared = parseInt(new URLSearchParams(location.search).get('church'), 10);
+      if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link
+      map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, duration: reduceMotion ? 0 : 3200, essential: true });
       map.once('moveend', () => { state.ready = true; });
     };
     map.once('idle', open);
