@@ -283,6 +283,15 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
   transform: translateX(0); opacity: 1; transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .3s;
 }
 .card[hidden] { display: flex !important; transform: translateX(calc(100% + 40px)); opacity: 0; pointer-events: none; }
+/* right-to-left: the card, its controls and the favorites panel swap sides */
+@media (min-width: 641px) {
+  [dir="rtl"] .card { right: auto; left: max(16px, env(safe-area-inset-left, 0px)); }
+  [dir="rtl"] .card[hidden] { transform: translateX(calc(-100% - 40px)); }
+  [dir="rtl"] .ctrls { right: auto; left: max(16px, env(safe-area-inset-left, 0px)); transition: left .35s cubic-bezier(.2,.8,.2,1), bottom .35s cubic-bezier(.2,.8,.2,1); }
+  [dir="rtl"] body.card-open .ctrls { right: auto; left: calc(max(16px, env(safe-area-inset-left, 0px)) + min(420px, calc(100vw - 32px)) + 12px); }
+  [dir="rtl"] .favs { left: auto; right: max(16px, env(safe-area-inset-right, 0px)); }
+  [dir="rtl"] .favs[hidden] { transform: translateX(calc(100% + 40px)); }
+}
 .card .hero { position: relative; height: 190px; flex: none; overflow: hidden; }
 .card .hero svg.scene { position: absolute; inset: 0; width: 100%; height: 100%; }
 .card .hero .badge {
@@ -582,7 +591,7 @@ const EN = {
   confSoonTag_one: 'Showing <b>{n}</b> church with Confession in the next 2 hours', confSoonTag_other: 'Showing <b>{n}</b> churches with Confession in the next 2 hours',
   confSoonLangTag_one: 'Showing <b>{n}</b> church with Confession in the next 2 hours and Mass in {lang}', confSoonLangTag_other: 'Showing <b>{n}</b> churches with Confession in the next 2 hours and Mass in {lang}',
 };
-const i18n = { code: 'en', dict: EN, locale: 'en', wiki: 'en' };
+const i18n = { code: 'en', dict: EN, locale: 'en', wiki: 'en', rtl: false };
 let plurals = new Intl.PluralRules('en');
 // tr('photos', { n: 3 }) -> "3 photos"; {n} is formatted for the language, other values go in as given
 function tr(key, v) {
@@ -611,7 +620,7 @@ async function useLang(code) {
   let dict;
   try { dict = await loadDict(code); } catch (e) { code = 'en'; dict = EN; }
   const l = LANG_BY[code];
-  Object.assign(i18n, { code, dict, locale: l.locale, wiki: l.wiki });
+  Object.assign(i18n, { code, dict, locale: l.locale, wiki: l.wiki, rtl: RTL.has(code) });
   plurals = new Intl.PluralRules(l.locale);
   try { regionNames = new Intl.DisplayNames([l.locale, 'en'], { type: 'region' }); } catch (e) {}
   try { langNames = new Intl.DisplayNames([l.locale, 'en'], { type: 'language' }); } catch (e) {}
@@ -1536,7 +1545,7 @@ async function showAbout(i, rec) {
   const pt = a.patron;
   const patronHTML = pt ? `<div class="patron">
       ${pt.img ? `<a class="pimg" href="${esc(pt.img.page)}" target="_blank" rel="noopener" title="Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(pt.img.src)}" alt="${esc(pt.name)}"></a>` : ''}
-      <div><div class="plabel">${pt.sure ? 'Dedicated to' : 'Named for'}</div><b>${esc(pt.name)}</b>
+      <div><div class="plabel">${esc(tr(pt.sure ? 'dedicatedTo' : 'namedFor'))}</div><b>${esc(pt.name)}</b>
       ${pt.feast ? `<div class="feast">${esc(tr('feastDay', { feast: pt.feast }))}</div>` : ''}
       ${pt.text ? `<p>${esc(pt.text)}</p>` : ''}
       ${pt.url ? `<a class="more" href="${esc(pt.url)}" target="_blank" rel="noopener">${esc(pt.wiki ? tr('aboutOnWiki', { name: pt.name }) : tr('learnMoreFM'))}</a>` : ''}
@@ -1811,6 +1820,8 @@ function phoneHTML(raw, cc) {
 }
 /* ---------- sharing: the phone's own share sheet, or email and copy on a computer ---------- */
 const churchLink = (i) => location.origin + location.pathname + '?church=' + i;
+// keep the church clear of the details card, which sits on the left in right-to-left languages
+const cardPad = (wide) => wide ? { top: 0, bottom: 0, left: i18n.rtl ? 440 : 0, right: i18n.rtl ? 0 : 440 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 };
 function wireShare(i, name, place) {
   const btn = $('shareBtn'), menu = $('shareMenu'), url = churchLink(i);
   const title = name || tr('aChurch');
@@ -1851,7 +1862,7 @@ async function selectChurch(i, { fly = true } = {}) {
   map.getSource('sel').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lt] }, properties: {} }] });
   lastInteract = performance.now();
   const wide = innerWidth > 640;
-  if (fly) map.flyTo({ center: [lng, lt], zoom: Math.max(map.getZoom(), 15), speed: 1.4, curve: 1.5, pitch: 40, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 }, essential: true });
+  if (fly) map.flyTo({ center: [lng, lt], zoom: Math.max(map.getZoom(), 15), speed: 1.4, curve: 1.5, pitch: 40, padding: cardPad(wide), essential: true });
   const t = state.typ[i] & 7; const byName = state.typ[i] >> 3;
   const sc = scene(t, lng, lt);
   const hero = $('hero');
@@ -1920,7 +1931,7 @@ async function selectChurch(i, { fly = true } = {}) {
     </div>
     <div class="prov">
       <span class="pill">${esc(confLabel)}</span>${how === 'name' ? `<span class="pill warn">${esc(tr('byName'))}</span>` : `<span class="pill">${esc(tr('listed'))}</span>`}
-      <div style="margin-top:8px">${esc(tr(updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: updated }))}</div>
+      <div style="margin-top:8px">${esc(tr(updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: /^\d{4}-\d\d-\d\d$/.test(updated) ? new Date(updated + 'T12:00:00').toLocaleDateString(i18n.locale, { dateStyle: 'medium' }) : updated }))}</div>
     </div>`;
   if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
   syncSave(i);
@@ -1928,7 +1939,7 @@ async function selectChurch(i, { fly = true } = {}) {
   wireShare(i, name, place);
   showAbout(i, rec);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
-  $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
+  $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: cardPad(wide) }));
 }
 function closeCard() {
   $('card').hidden = true; state.selected = -1;
