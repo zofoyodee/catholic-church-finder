@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Catholic Church Finder</title>
 <meta name="description" content="An interactive 3D globe of Catholic churches around the world. Click a pin to see a photo and details of the church.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#05070d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Church Finder">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2305070d'/%3E%3Cpath d='M16 5v22M10 11h12' stroke='%23e8b84a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,8 +167,9 @@ button, input { font: inherit; color: inherit; }
 .favs ul { list-style: none; margin: 0; padding: 0 8px 10px; overflow-y: auto; flex: 1; }
 .favs li { display: grid; grid-template-columns: 1fr auto; align-items: center; border-radius: 10px; }
 .favs li:hover { background: rgba(232, 184, 74, 0.1); }
-.favs li button.go { text-align: left; background: none; border: 0; cursor: pointer; padding: 9px 10px; min-width: 0; color: var(--ink); display: grid; grid-template-columns: 10px 1fr; gap: 10px; align-items: center; }
+.favs li button.go { text-align: left; background: none; border: 0; cursor: pointer; padding: 9px 10px; min-width: 0; color: var(--ink); display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 10px; align-items: center; }
 .favs li .nm { display: block; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.favs li .dist { font-family: var(--font-data); font-size: 11.5px; color: var(--gold-soft); padding-right: 12px; font-variant-numeric: tabular-nums; }
 .favs li .loc { display: block; font-size: 12px; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .favs li i { width: 9px; height: 9px; border-radius: 50%; }
 .favs li button.rm { width: 32px; height: 32px; margin-right: 4px; border-radius: 50%; border: 0; background: none; cursor: pointer; display: grid; place-items: center; color: var(--ink-faint); }
@@ -316,6 +323,7 @@ button, input { font: inherit; color: inherit; }
 </header>
 
 <div class="ctrls">
+  <button id="nearBtn" aria-expanded="false" aria-controls="near" title="Churches near me" aria-label="Churches near me"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/></svg></button>
   <button id="favOpen" class="fav-open" aria-expanded="false" aria-controls="favs" title="Your favorite churches" aria-label="Your favorite churches"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span class="count" id="favCount"></span></button>
   <button id="spin" aria-pressed="false" title="Spin the globe" aria-label="Spin the globe"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
   <button id="zin" title="Zoom in" aria-label="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
@@ -331,6 +339,11 @@ button, input { font: inherit; color: inherit; }
 </footer>
 
 <div id="tip" class="tip" hidden></div>
+
+<aside id="near" class="favs" hidden aria-labelledby="nearTitle">
+  <header><h2 id="nearTitle">Near you<small id="nearN"></small></h2><button class="x" id="nearClose" aria-label="Close nearby churches"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <ul id="nearList"></ul>
+</aside>
 
 <aside id="favs" class="favs" hidden aria-labelledby="favTitle">
   <header><h2 id="favTitle">Favorites<small id="favN"></small></h2><button class="x" id="favClose" aria-label="Close favorites"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
@@ -737,6 +750,10 @@ function addChurchLayers() {
     'circle-color': typeColor, 'circle-radius': ['interpolate', ['linear'], ['zoom'], 3, 8, 13, 12, 16, 15],
     'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5,
   } });
+  // your position, after "near me"
+  map.addSource('me', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'me-halo', type: 'circle', source: 'me', paint: { 'circle-color': '#4f9dff', 'circle-opacity': 0.22, 'circle-radius': 16 } });
+  map.addLayer({ id: 'me', type: 'circle', source: 'me', paint: { 'circle-color': '#4f9dff', 'circle-radius': 6, 'circle-stroke-color': '#fff', 'circle-stroke-width': 2 } });
   // saved churches wear a rose ring at every zoom
   map.addSource('favs', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   map.addLayer({ id: 'fav-ring', type: 'circle', source: 'favs', paint: {
@@ -808,6 +825,7 @@ function renderFavs() {
   if (src && state.lon) src.setData({ type: 'FeatureCollection', features: favs.filter(f => f.i < state.n).map(f => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[f.i] / 1e6, state.lat[f.i] / 1e6] }, properties: {} })) });
 }
 function showFavs(open) {
+  if (open) showNear(false);
   $('favs').hidden = !open; $('favOpen').setAttribute('aria-expanded', open); $('favOpen').setAttribute('aria-pressed', open);
 }
 $('favOpen').addEventListener('click', () => showFavs($('favs').hidden));
@@ -820,6 +838,71 @@ $('favList').addEventListener('click', (e) => {
   selectChurch(+go.dataset.i, { fly: true });
 });
 renderFavs();
+
+/* ---------- near me: the closest churches to the visitor, by distance ---------- */
+const appleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+function directionsURL(lat, lng, name) {
+  const at = lat.toFixed(6) + ',' + lng.toFixed(6);
+  return appleDevice ? `https://maps.apple.com/?daddr=${at}&q=${encodeURIComponent(name || 'Church')}` : `https://www.google.com/maps/dir/?api=1&destination=${at}`;
+}
+const miles = /^en-(US|GB|LR|MM)/i.test(navigator.language || '');
+const fmtDist = (m) => miles ? (m < 160 ? Math.round(m * 3.281) + ' ft' : (m / 1609.34).toFixed(m < 16093 ? 1 : 0) + ' mi') : (m < 1000 ? Math.round(m) + ' m' : (m / 1000).toFixed(m < 10000 ? 1 : 0) + ' km');
+function showNear(open) {
+  if (open && !$('favs').hidden) showFavs(false);
+  $('near').hidden = !open; $('nearBtn').setAttribute('aria-expanded', open); $('nearBtn').setAttribute('aria-pressed', open);
+}
+function nearest(lat, lon, k) {
+  const { lon: L, lat: A, typ, n, enabled } = state;
+  const cos = Math.cos(lat * Math.PI / 180), best = []; // keep the k closest by a flat-earth distance, fine at these ranges
+  let worst = Infinity;
+  for (let i = 0; i < n; i++) {
+    if (!enabled.has(typ[i] & 7)) continue;
+    const dx = (L[i] / 1e6 - lon) * cos, dy = A[i] / 1e6 - lat, d = dx * dx + dy * dy;
+    if (best.length < k || d < worst) {
+      best.push([d, i]); best.sort((a, b) => a[0] - b[0]); if (best.length > k) best.pop();
+      worst = best[best.length - 1][0];
+    }
+  }
+  return best.map(([, i]) => ({ i, m: metres(lat, lon, A[i] / 1e6, L[i] / 1e6) }));
+}
+let here = null;
+async function findNear() {
+  showNear(true);
+  const list = $('nearList'); $('nearN').textContent = '';
+  if (!navigator.geolocation) { list.innerHTML = '<p class="empty">This browser can\'t share your location.</p>'; return; }
+  list.innerHTML = '<p class="empty">Finding where you are…</p>';
+  let pos;
+  try { pos = await new Promise((res, rej) => navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 })); }
+  catch (e) {
+    list.innerHTML = `<p class="empty">${e && e.code === 1 ? 'Location is turned off for this site. Allow location in your browser settings, then tap the button again.' : 'Your location could not be found. Try again in a moment.'}</p>`;
+    return;
+  }
+  const lat = pos.coords.latitude, lon = pos.coords.longitude;
+  here = [lon, lat];
+  map.getSource('me').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: here }, properties: {} }] });
+  const near = nearest(lat, lon, 25);
+  if (!near.length) { list.innerHTML = '<p class="empty">No churches found. Check the filters across the top.</p>'; return; }
+  // frame you and the closest few churches
+  const pts = [here, ...near.slice(0, 6).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
+  const b = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
+  closeCard();
+  map.fitBounds(b, { padding: innerWidth > 640 ? { left: 380, right: 80, top: 150, bottom: 80 } : { top: 140, bottom: innerHeight * 0.62, left: 40, right: 40 }, maxZoom: 15, duration: reduceMotion ? 0 : 2200 });
+  $('nearN').textContent = near.length;
+  let recs = [];
+  try { recs = await Promise.all(near.map(r => shardFor(r.i))); } catch (e) {}
+  list.innerHTML = near.map((r, k) => {
+    const rec = recs[k] || [], t = state.typ[r.i] & 7;
+    const place = [rec[1], rec[2]].filter(Boolean).join(', ');
+    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc(place)}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+  }).join('');
+}
+$('nearBtn').addEventListener('click', () => { if ($('near').hidden) findNear(); else showNear(false); });
+$('nearClose').addEventListener('click', () => showNear(false));
+$('nearList').addEventListener('click', (e) => {
+  const go = e.target.closest('button.go'); if (!go) return;
+  if (innerWidth <= 640) showNear(false);
+  selectChurch(+go.dataset.i, { fly: true });
+});
 
 /* ---------- spin ---------- */
 let lastInteract = 0;
@@ -1025,7 +1108,7 @@ async function selectChurch(i, { fly = true } = {}) {
       <div class="where">${esc(place || 'Location on the globe')}</div>
     </div>
     <div class="actions">
-      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">Directions</a>
+      <a class="btn primary" href="${directionsURL(lt, lng, name)}" target="_blank" rel="noopener">Directions</a>
       ${webUrl ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">Parish website</a>` : ''}
       <button class="btn save" id="saveBtn" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span>Save</span></button>
       <span class="share-wrap"><button class="btn" id="shareBtn" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Share</span></button>
@@ -1069,7 +1152,7 @@ function closeCard() {
   if (map.getSource('sel')) map.getSource('sel').setData({ type: 'FeatureCollection', features: [] });
 }
 $('cardClose').addEventListener('click', closeCard);
-addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (!$('about').hidden) $('about').hidden = true; else if (!$('favs').hidden) showFavs(false); else if (!$('results').hidden) $('results').hidden = true; else closeCard(); } });
+addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (!$('about').hidden) $('about').hidden = true; else if (!$('favs').hidden) showFavs(false); else if (!$('near').hidden) showNear(false); else if (!$('results').hidden) $('results').hidden = true; else closeCard(); } });
 
 // gently pulse the selection ring
 let t0 = performance.now();
@@ -1188,6 +1271,9 @@ $('aboutBtn').addEventListener('click', () => {
   $('aboutClose').addEventListener('click', () => { $('about').hidden = true; });
 });
 $('about').addEventListener('click', (e) => { if (e.target.id === 'about') $('about').hidden = true; });
+
+/* ---------- install as an app: offline cache ---------- */
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 
 /* ---------- boot ---------- */
 const mapReady = new Promise(res => map.once('load', res));
