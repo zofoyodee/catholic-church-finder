@@ -306,5 +306,13 @@
   "bg_jesus": "Leben Jesu",
   "bg_church": "Apostel und Urkirche",
   "parishSitePhoto": "Website der Pfarrei",
-  "photoFromSite": "Foto von der Website der Pfarrei, {site}. Öffnet die Website."
+  "photoFromSite": "Foto von der Website der Pfarrei, {site}. Öffnet die Website.",
+  "aramaic": "Aramäisch",
+  "everyDay": "Täglich",
+  "monthlyDay_1": "1. {day} im Monat",
+  "monthlyDay_2": "2. {day} im Monat",
+  "monthlyDay_3": "3. {day} im Monat",
+  "monthlyDay_4": "4. {day} im Monat",
+  "monthlyDay_5": "5. {day} im Monat",
+  "monthlyDay_6": "Letzter {day} im Monat"
 }

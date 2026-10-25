@@ -306,5 +306,13 @@
   "bg_jesus": "Buhay ni Hesus",
   "bg_church": "Mga Apostol at unang Simbahan",
   "parishSitePhoto": "website ng parokya",
-  "photoFromSite": "Larawan mula sa website ng parokya, {site}. Binubuksan ang site."
+  "photoFromSite": "Larawan mula sa website ng parokya, {site}. Binubuksan ang site.",
+  "aramaic": "Arameo",
+  "everyDay": "Araw-araw",
+  "monthlyDay_1": "Unang {day} ng buwan",
+  "monthlyDay_2": "Ikalawang {day} ng buwan",
+  "monthlyDay_3": "Ikatlong {day} ng buwan",
+  "monthlyDay_4": "Ikaapat na {day} ng buwan",
+  "monthlyDay_5": "Ikalimang {day} ng buwan",
+  "monthlyDay_6": "Huling {day} ng buwan"
 }

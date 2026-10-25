@@ -292,5 +292,13 @@
   "bg_jesus": "Cuộc đời Chúa Giê-su",
   "bg_church": "Các Tông đồ và Giáo Hội sơ khai",
   "parishSitePhoto": "trang web giáo xứ",
-  "photoFromSite": "Ảnh từ trang web giáo xứ, {site}. Mở trang web."
+  "photoFromSite": "Ảnh từ trang web giáo xứ, {site}. Mở trang web.",
+  "aramaic": "Tiếng A-ram",
+  "everyDay": "Hằng ngày",
+  "monthlyDay_1": "{day} đầu tiên của tháng",
+  "monthlyDay_2": "{day} thứ hai của tháng",
+  "monthlyDay_3": "{day} thứ ba của tháng",
+  "monthlyDay_4": "{day} thứ tư của tháng",
+  "monthlyDay_5": "{day} thứ năm của tháng",
+  "monthlyDay_6": "{day} cuối cùng của tháng"
 }

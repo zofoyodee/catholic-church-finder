@@ -306,5 +306,13 @@
   "bg_jesus": "Vie de Jésus",
   "bg_church": "Apôtres et Église primitive",
   "parishSitePhoto": "site de la paroisse",
-  "photoFromSite": "Photo du site de la paroisse, {site}. Ouvre le site."
+  "photoFromSite": "Photo du site de la paroisse, {site}. Ouvre le site.",
+  "aramaic": "Araméen",
+  "everyDay": "Tous les jours",
+  "monthlyDay_1": "1er {day} du mois",
+  "monthlyDay_2": "2e {day} du mois",
+  "monthlyDay_3": "3e {day} du mois",
+  "monthlyDay_4": "4e {day} du mois",
+  "monthlyDay_5": "5e {day} du mois",
+  "monthlyDay_6": "Dernier {day} du mois"
 }

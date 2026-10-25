@@ -306,5 +306,13 @@
   "bg_jesus": "Maisha ya Yesu",
   "bg_church": "Mitume na Kanisa la mwanzo",
   "parishSitePhoto": "tovuti ya parokia",
-  "photoFromSite": "Picha kutoka tovuti ya parokia, {site}. Hufungua tovuti."
+  "photoFromSite": "Picha kutoka tovuti ya parokia, {site}. Hufungua tovuti.",
+  "aramaic": "Kiaramu",
+  "everyDay": "Kila siku",
+  "monthlyDay_1": "{day} ya kwanza ya mwezi",
+  "monthlyDay_2": "{day} ya pili ya mwezi",
+  "monthlyDay_3": "{day} ya tatu ya mwezi",
+  "monthlyDay_4": "{day} ya nne ya mwezi",
+  "monthlyDay_5": "{day} ya tano ya mwezi",
+  "monthlyDay_6": "{day} ya mwisho ya mwezi"
 }

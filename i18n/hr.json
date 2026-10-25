@@ -320,5 +320,13 @@
   "bg_jesus": "Isusov život",
   "bg_church": "Apostoli i prva Crkva",
   "parishSitePhoto": "mrežna stranica župe",
-  "photoFromSite": "Fotografija s mrežne stranice župe, {site}. Otvara stranicu."
+  "photoFromSite": "Fotografija s mrežne stranice župe, {site}. Otvara stranicu.",
+  "aramaic": "Aramejski",
+  "everyDay": "Svaki dan",
+  "monthlyDay_1": "{day} (1. u mjesecu)",
+  "monthlyDay_2": "{day} (2. u mjesecu)",
+  "monthlyDay_3": "{day} (3. u mjesecu)",
+  "monthlyDay_4": "{day} (4. u mjesecu)",
+  "monthlyDay_5": "{day} (5. u mjesecu)",
+  "monthlyDay_6": "{day} (zadnji u mjesecu)"
 }

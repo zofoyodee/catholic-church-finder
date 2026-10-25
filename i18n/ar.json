@@ -329,5 +329,13 @@
   "bg_jesus": "حياة يسوع",
   "bg_church": "الرسل والكنيسة الأولى",
   "parishSitePhoto": "موقع الرعية",
-  "photoFromSite": "صورة من موقع الرعية، {site}. يفتح الموقع."
+  "photoFromSite": "صورة من موقع الرعية، {site}. يفتح الموقع.",
+  "aramaic": "الآرامية",
+  "everyDay": "كل يوم",
+  "monthlyDay_1": "{day} الأول من الشهر",
+  "monthlyDay_2": "{day} الثاني من الشهر",
+  "monthlyDay_3": "{day} الثالث من الشهر",
+  "monthlyDay_4": "{day} الرابع من الشهر",
+  "monthlyDay_5": "{day} الخامس من الشهر",
+  "monthlyDay_6": "{day} الأخير من الشهر"
 }

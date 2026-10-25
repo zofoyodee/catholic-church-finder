@@ -290,5 +290,13 @@
   "bg_jesus": "耶稣的生平",
   "bg_church": "宗徒与初期教会",
   "parishSitePhoto": "堂区网站",
-  "photoFromSite": "图片来自堂区网站 {site}。点击打开该网站。"
+  "photoFromSite": "图片来自堂区网站 {site}。点击打开该网站。",
+  "aramaic": "阿拉美语",
+  "everyDay": "每天",
+  "monthlyDay_1": "每月第一个{day}",
+  "monthlyDay_2": "每月第二个{day}",
+  "monthlyDay_3": "每月第三个{day}",
+  "monthlyDay_4": "每月第四个{day}",
+  "monthlyDay_5": "每月第五个{day}",
+  "monthlyDay_6": "每月最后一个{day}"
 }
