@@ -1,6 +1,6 @@
 // Offline support: every file the site loads is kept after its first use and served from the
 // cache while a fresh copy is fetched in the background. The page itself prefers the network.
-const CACHE = 'ccf-v42';
+const CACHE = 'ccf-v43';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'data/meta.json', 'icons/icon-192.png'];
 const CDN = /^https:\/\/cdn\.jsdelivr\.net\/npm\//;
 
@@ -15,6 +15,7 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET' || req.headers.has('range')) return; // photo slices are byte ranges; let them through
   const mine = url.origin === location.origin;
   if (!mine && !CDN.test(req.url)) return; // Wikimedia lookups and fonts go straight to the network
+  if (/\/admin\.html$/.test(url.pathname)) return; // the stats page is never kept offline or mistaken for the globe
   if (req.mode === 'navigate') {
     e.respondWith(fetch(req.url, { cache: 'no-cache', credentials: 'same-origin' }).then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put('index.html', copy)); return res; })
       .catch(() => caches.match('index.html')));

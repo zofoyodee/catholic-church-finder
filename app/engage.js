@@ -302,6 +302,7 @@ function markStop(k) {
 const tourPad = () => phone() ? { top: 120, bottom: (tourCard.offsetHeight || 260) + 40, left: 20, right: 20 } : { left: 400, right: 80, top: 120, bottom: 60 };
 async function startTour(id) {
   const list = await loadTours(); const t = list.find(x => x.id === id); if (!t) return;
+  ccf.track('tour/' + id);
   showTours(false); ccf.closeCard(); showToday(false, true);
   tour.spinWas = tour.t ? tour.spinWas : state.spinning;
   state.spinning = false; $('spin').setAttribute('aria-pressed', 'false');

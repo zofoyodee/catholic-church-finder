@@ -925,6 +925,9 @@ async function useLang(code) {
   applyStatic();
 }
 const langReady = useLang(detectLang());
+/* ---------- usage counts: anonymous GoatCounter events (no cookies), read on admin.html ---------- */
+// track('tab/bible') counts one use of a feature; the counter script loads at the end of the page
+function track(name, title) { try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: name, title: title || name, event: true }); } catch (e) {} }
 window.ccfI18n = { tr, ready: langReady, get lang() { return i18n.code; }, get locale() { return i18n.locale; } };
 
 // type codes come from the data build: low 3 bits = kind, bit 8 = matched by name only
@@ -1239,6 +1242,7 @@ async function hereOrCenter() {
 }
 // kind 0 = Mass near me, 1 = Confession near me (within the chosen distance); 2 = every church with Mass in the chosen language, worldwide
 async function massNear(kind) {
+  if (mn.kind !== kind || kind === 2) track(kind === 2 ? 'mass-in-language/' + mf.lang : kind ? 'confession-near-me' : 'mass-near-me');
   mn.kind = kind; mf.mode = '';
   if (kind < 2) mf.lang = '';  // the three are separate questions
   showNear(true);
@@ -1897,6 +1901,7 @@ try { favs = JSON.parse(localStorage.getItem(FAV_KEY) || '[]').filter(f => f && 
 const isFav = (i) => favs.some(f => f.i === i);
 function saveFavs() { try { localStorage.setItem(FAV_KEY, JSON.stringify(favs)); } catch (e) {} renderFavs(); }
 function toggleFav(i, info) {
+  track(isFav(i) ? 'favorite-removed' : 'favorite-added');
   if (isFav(i)) favs = favs.filter(f => f.i !== i);
   else favs.unshift({ i, name: info.name || tr('one_church'), place: info.place || '', t: info.t });
   saveFavs(); syncSave(i);
@@ -2348,6 +2353,13 @@ addEventListener('keydown', (e) => {
 
 /* ---------- near me: the closest churches to the visitor, by distance ---------- */
 const appleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+// links out of a details card: Directions, the parish website, social pages, Wikipedia and the like
+$('card').addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="http"]'); if (!a) return;
+  if (/maps\.apple\.com\/\?daddr|google\.com\/maps\/dir/.test(a.href)) { track('directions'); return; }
+  if (a.title === tr('parishSite')) { track('parish-website'); return; }
+  try { track('link/' + new URL(a.href).hostname.split('.').slice(-2).join('.')); } catch (err) {}  // en.wikipedia.org counts as wikipedia.org
+});
 function directionsURL(lat, lng, name) {
   const at = lat.toFixed(6) + ',' + lng.toFixed(6);
   return appleDevice ? `https://maps.apple.com/?daddr=${at}&q=${encodeURIComponent(name || 'Church')}` : `https://www.google.com/maps/dir/?api=1&destination=${at}`;
@@ -2377,6 +2389,7 @@ function nearest(lat, lon, k) {
 }
 let here = null;
 async function findNear() {
+  track('churches-near-me');
   if (mn.kind >= 0) { endMassNear(); applyMassFilter(); }
   showNear(true);
   const list = $('nearList'); $('nearN').textContent = ''; nearRows = null;
@@ -2659,6 +2672,7 @@ const icon = {
 };
 
 async function selectChurch(i, { fly = true } = {}) {
+  if (state.selected !== i) shardFor(i).then(r => track('church/' + ([r[0], r[2]].filter(Boolean).join(', ') || i), [r[0], r[2], countryName(r[5])].filter(Boolean).join(' · '))).catch(() => {});
   state.selected = i;
   const lng = state.lon[i] / 1e6, lt = state.lat[i] / 1e6;
   map.getSource('sel').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lt] }, properties: {} }] });
@@ -2918,7 +2932,7 @@ async function runSearch() {
 }
 resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-b],button[data-l],button[data-jp],button[data-je]'); if (!b) return; pickResult(b); });
 function pickResult(b) {
-  resEl.hidden = true; qEl.blur();
+  resEl.hidden = true; qEl.blur(); track('search');
   if (b.dataset.jp) openLifePlace(b.dataset.jp); else if (b.dataset.je) { lifePause(); goEvent(+b.dataset.je); } else if (b.dataset.b) openBiblePlace(b.dataset.b); else if (b.dataset.l) openBibleLand(b.dataset.l); else selectChurch(+b.dataset.i, { fly: true });
 }
 qEl.addEventListener('keydown', (e) => {
@@ -2972,7 +2986,7 @@ $('contactBtn').addEventListener('click', () => {
 
 /* ---------- switching language: everything on screen is drawn again in the new one ---------- */
 $('langSel').addEventListener('change', async (e) => {
-  const code = e.target.value;
+  const code = e.target.value; track('language/' + code);
   try { localStorage.setItem(LANG_KEY, code); } catch (err) {}
   await useLang(code);
   if (!state.meta) return;
@@ -3054,7 +3068,7 @@ function bibleOverview() {
 const MODE_TABS = [['modeChurches', 'churches'], ['modeJesus', 'jesus'], ['modeBible', 'bible']];
 async function setMode(m, { fly = true } = {}) {
   if (m === state.mode && (m === 'churches' || (m === 'bible' ? bible.data : life.data))) return;
-  state.mode = m;
+  state.mode = m; track('tab/' + m);
   for (const [id, k] of MODE_TABS) $(id).setAttribute('aria-selected', m === k);
   document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
   document.body.classList.toggle('jesus-mode', m === 'jesus');
@@ -3243,6 +3257,7 @@ const SHARE_ICON = '<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><ci
 async function openBiblePlace(id, { fly = true } = {}) {
   if (state.mode !== 'bible') await setMode('bible', { fly: false });
   const d = bible.data, p = d && d.byId[id]; if (!p) return;
+  if (!bible.sel || bible.sel.id !== id) track('bible-place/' + (p.n || id));
   const land = d.lands[p.c], wide = innerWidth > 640;
   state.selected = -1; bibleSel(p); setLandHi(p.c); lastInteract = performance.now();
   if (fly) map.flyTo({ center: [p.ll[1], p.ll[0]], zoom: Math.max(map.getZoom(), 9.5), pitch: 30, speed: 1.3, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 }, essential: true });
@@ -3467,7 +3482,7 @@ $('lifeNow').addEventListener('click', (e) => {
   if (b.id === 'lifePrev') { lifePause(); lifeStep(-1); }
   else if (b.id === 'lifeNext') { lifePause(); lifeStep(1); }
   else if (b.id === 'lifePlay') {
-    life.auto = !life.auto;
+    life.auto = !life.auto; if (life.auto) track('life-of-jesus-play');
     if (!life.auto) { clearLifeTimer(); map.stop(); renderNow(); return; }
     const evs = lifeEvents(), pos = evs.indexOf(life.data.events[life.k]);
     if (pos < 0 || pos >= evs.length - 1) goEvent(evs[0].i); else { renderNow(); lifeStep(1); }
@@ -3643,14 +3658,14 @@ function renderThemes() {
 $('themeSel').addEventListener('change', (e) => {
   theme = e.target.value in THEMES ? e.target.value : 'night';
   try { localStorage.setItem(THEME_KEY, theme); } catch (err) {}
-  document.documentElement.dataset.theme = theme;
+  document.documentElement.dataset.theme = theme; track('theme/' + theme);
   paintTheme();
 });
 document.addEventListener('ccf-lang', renderThemes);
 
 /* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
 const hooks = {};
-window.ccf = { map, state, selectChurch, closeCard, shardFor, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
+window.ccf = { track, map, state, selectChurch, closeCard, shardFor, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
   layers: new Promise(r => { hooks.layers = r; }), opened: new Promise(r => { hooks.opened = r; }) };
 
 /* ---------- boot ---------- */
@@ -3700,5 +3715,7 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 </script>
 <script src="app/engage.js"></script>
+<script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
+<script data-goatcounter="https://catholicchurchfinder.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
