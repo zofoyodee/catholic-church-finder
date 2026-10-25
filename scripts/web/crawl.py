@@ -297,6 +297,36 @@ def social_links(html, base):
     return [out[k] for k, _ in SOCIAL if k in out]
 
 
+PHOTO_SKIP = re.compile(r'(logo|favicon|icon|crest|coat[-_]?of[-_]?arms|seal|escudo|placeholder|default|no[-_]?image|blank|avatar|banner[-_]?ad|sprite|\.svg|\.gif|wp-includes|gravatar|facebook\.com/tr|pixel)', re.I)
+
+
+def main_photo(html, base):
+    """The page's share picture (og:image / twitter:image) when it looks like a real photo, else ''."""
+    soup = BeautifulSoup(html[:300000], 'lxml')
+    meta = {}
+    for m in soup.find_all('meta'):
+        k = (m.get('property') or m.get('name') or '').lower()
+        if k and m.get('content') and k not in meta:
+            meta[k] = m['content'].strip()
+    for key in ('og:image:secure_url', 'og:image', 'twitter:image', 'twitter:image:src'):
+        u = meta.get(key)
+        if not u:
+            continue
+        u = urljoin(base, u)
+        if u.startswith('http://'):
+            u = 'https://' + u[7:]
+        if not u.startswith('https://') or PHOTO_SKIP.search(u):
+            return ''
+        w = meta.get('og:image:width', '')
+        if w.isdigit() and int(w) < 600:
+            return ''
+        sz = re.search(r'[-_](\d{2,4})x(\d{2,4})\.(?:jpe?g|png|webp)', u, re.I)  # WordPress size suffix
+        if sz and int(sz.group(1)) < 600:
+            return ''
+        return u
+    return ''
+
+
 def staff_links(html, base):
     soup = BeautifulSoup(html, 'lxml')
     host = norm_host(urlsplit(base).hostname)
@@ -453,6 +483,9 @@ class Crawler:
             so = social_links(html, final)
             if so:
                 res['so'] = so
+            img = main_photo(html, final)
+            if img:
+                res['img'] = img
         except Exception as e:  # noqa: BLE001
             res['x'] = type(e).__name__
         try:

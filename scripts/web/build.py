@@ -1,7 +1,7 @@
 """Merge crawl parts into data/web/N.json, one file per detail shard.
 
 Each file maps a record's index within its shard to
-  [status, url, staff, staffSource, massLines, confessionLines, scheduleSource, socials]
+  [status, url, staff, staffSource, massLines, confessionLines, scheduleSource, socials, photoUrl]
 status: 2 = moved (url is the new address), 3 = dead, 1 = ok but at a new path (url).
 staff:  [[kind "p"|"d", title, name, role, photoUrl], ...]
 Records whose link works unchanged and have no staff are left out.
@@ -35,6 +35,8 @@ from tz import tz_of
 import base64, struct
 
 shards = collections.defaultdict(dict)
+# a picture used by several parish sites is a template or diocese image, not this church
+IMG_USE = collections.Counter(x.get('img') for x in res.values() if x.get('img'))
 sched = {}
 TZ = {}
 _raw = base64.b64decode(open('data/points.txt').read())
@@ -86,6 +88,8 @@ for k, j, r, added in records():
             stats['times_kept'] += 1
         if not x.get('so') and len(old) > 7 and old[7]:
             x['so'] = old[7]
+        if not x.get('img') and len(old) > 8 and old[8]:
+            x['img'] = old[8]
     if o.get('mass') or o.get('confession'):
         # hand-entered times for parishes whose sites turn crawlers away
         x = dict(x or {'s': 'unknown'}, mt=o.get('mass', []), ct=o.get('confession', []), msrc=o.get('times_source', u))
@@ -120,8 +124,10 @@ for k, j, r, added in records():
         stats['with_language'] += any(x[3] for x in sl)
     so = socials(x.get('so'), k * 2000 + j)
     stats['with_social'] += bool(so)
-    if code == 3 or new or staff or mass or conf or so:
-        e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', ''), so]
+    img = x.get('img', '') if code != 3 and IMG_USE[x.get('img')] <= 2 else ''
+    stats['with_photo_url'] += bool(img)
+    if code == 3 or new or staff or mass or conf or so or img:
+        e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', ''), so, img]
         while e and not e[-1] and len(e) > 2:
             e.pop()
         out[j] = e
