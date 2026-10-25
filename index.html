@@ -730,8 +730,8 @@ const EN = {
   massTimes: 'Mass times', confession: 'Confession', checkedOn: ', checked {date}',
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
-  massNear: 'Mass Near Me', confNear: 'Confession Near Me', massNearTip: 'Churches within 20 miles of you, soonest Mass first', confNearTip: 'Churches within 20 miles of you, soonest Confession first',
-  massNearTitle: 'Masses near you, soonest first', confNearTitle: 'Confession near you, soonest first', massNearIntro: 'Churches within 20 miles that post their Mass times, ordered by the next Mass. Tap one for details.', confNearIntro: 'Churches within 20 miles that post their Confession times, ordered by the next one. Tap one for details.', massNearTag: 'Showing {n} nearby churches with Mass times', confNearTag: 'Showing {n} nearby churches with Confession times', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
+  massNear: 'Mass Near Me', confNear: 'Confession Near Me', massNearTip: 'Churches within 20 miles of you, nearest first, with their next Mass', confNearTip: 'Churches within 20 miles of you, nearest first, with their next Confession',
+  massNearTitle: 'Masses near you', langListTitle: 'Mass in {lang}, nearest first', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession near you', massNearIntro: 'Churches within 20 miles that post their Mass times, nearest first, with the next Mass. Tap one for details.', confNearIntro: 'Churches within 20 miles that post their Confession times, nearest first, with the next time. Tap one for details.', massNearTag: 'Showing {n} nearby churches with Mass times', confNearTag: 'Showing {n} nearby churches with Confession times', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
   noTimesWeek: 'No time listed this week', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church within 20 miles lists its times yet. Here is the nearest one that does.',
   seeWorldwide: 'See all {n} churches with Mass in {lang} worldwide', timesCheck: 'Times come from parish websites. Check with the parish before you go.',
   confSoon: 'Confession soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
@@ -1181,66 +1181,76 @@ async function hereOrCenter() {
   } catch (e) { const c = map.getCenter(); mn.guessed = true; mn.at = [c.lng, c.lat]; }
   return mn.at;
 }
+// kind 0 = Mass near me, 1 = Confession near me (within 20 miles); 2 = every church with Mass in the chosen language, worldwide
 async function massNear(kind) {
   mn.kind = kind; mf.mode = '';
+  if (kind < 2) mf.lang = '';  // the three are separate questions
   showNear(true);
-  const title = document.querySelector('#nearTitle span'); title.dataset.i18n = kind ? 'confNearTitle' : 'massNearTitle'; title.textContent = tr(title.dataset.i18n);
-  const list = $('nearList'); $('nearN').textContent = ''; nearRows = null;
+  const list = $('nearList'); $('nearN').textContent = ''; nearRows = null; mn.rows = null;
+  setNearTitle();
   list.innerHTML = `<p class="empty">${esc(tr('finding'))}</p>`;
   renderMassChips();
   const [lon, lat] = await hereOrCenter();
   if (mn.kind !== kind) return;
-  // the nearest churches that list a time of this kind (and language), then the soonest among those close by
-  const li = mf.lang ? mf.data.langs.indexOf(mf.lang) : -1, cos = Math.cos(lat * Math.PI / 180), cand = [];
+  const li = kind === 2 ? mf.data.langs.indexOf(mf.lang) : -1, inLang = kind === 2 ? langSet(mf.lang) : null;
+  const cos = Math.cos(lat * Math.PI / 180), cand = [];
   for (const [k, v] of Object.entries(mf.data.c)) {
-    const i = +k; if (i >= state.n) continue;
+    const i = +k; if (i >= state.n || (inLang && !inLang.has(i))) continue;
     const dx = (state.lon[i] / 1e6 - lon) * cos, dy = state.lat[i] / 1e6 - lat;
     cand.push([dx * dx + dy * dy, i, v]);
   }
-  cand.sort((a, b) => a[0] - b[0]);
+  cand.sort((a, b) => a[0] - b[0]);  // closest first
   const rows = [];
   for (const [, i, v] of cand) {
-    const n = nextTime(v, kind, li); if (!n) continue;
-    rows.push({ i, n, m: metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6) });
-    if (rows.length >= 60 || rows[rows.length - 1].m > NEAR_M) break;  // the list stops at 20 miles
+    const n = nextTime(v, kind === 1 ? 1 : 0, li), m = metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6);
+    if (kind < 2 && !n) continue;
+    if (kind < 2 && m > NEAR_M && rows.length) break;  // near me stops at 20 miles
+    rows.push({ i, n, m });
+    if (kind < 2 && m > NEAR_M) break;  // nothing within 20 miles: keep just the nearest one
+    if (rows.length >= 300) break;
   }
-  const near = rows.filter(r => r.m <= NEAR_M);  // within 20 miles
-  mn.far = !near.length && rows.length > 0;
-  mn.rows = (near.length ? near : rows.slice(0, 1)).sort((a, b) => a.n.d - b.n.d || a.m - b.m).slice(0, 30);
-  state.only = new Set(mn.rows.map(r => r.i));
+  mn.far = kind < 2 && rows.length === 1 && rows[0].m > NEAR_M;
+  mn.rows = rows;
+  state.only = kind === 2 ? inLang : new Set(rows.map(r => r.i));
   map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
   map.once('idle', updateNames);
-  $('tagline').textContent = tr(kind ? 'confNearTag' : 'massNearTag', { n: mn.rows.length });
-  if (mn.rows.length) {
-    const pts = [[lon, lat], ...mn.rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
-    const b = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
-    closeCard();
-    map.fitBounds(b, { padding: innerWidth > 640 ? { left: 380, right: 80, top: 190, bottom: 80 } : { top: 190, bottom: innerHeight * 0.62, left: 40, right: 40 }, maxZoom: 14, duration: reduceMotion ? 0 : 2000 });
+  $('tagline').innerHTML = kind === 2 ? tr('massLangTag', { n: inLang.size, lang: esc(massLangName(mf.lang)) }) : esc(tr(kind ? 'confNearTag' : 'massNearTag', { n: rows.length }));
+  closeCard();
+  const wide = innerWidth > 640, pad = wide ? { left: 380, right: 80, top: 190, bottom: 80 } : { top: 190, bottom: innerHeight * 0.62, left: 40, right: 40 };
+  if (kind === 2) {
+    // pull back to show every church with Mass in this language, wherever they are
+    const pts = [...inLang].map(i => [state.lon[i] / 1e6, state.lat[i] / 1e6]);
+    if (pts.length) map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 9, pitch: 0, duration: reduceMotion ? 0 : 2000 });
+  } else if (rows.length) {
+    const pts = [[lon, lat], ...rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
+    map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 14, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   }
   renderMassNear();
 }
+function setNearTitle() {
+  const title = document.querySelector('#nearTitle span');
+  title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : mn.kind === 1 ? 'confNearTitle' : mn.kind === 0 ? 'massNearTitle' : 'nearYou';
+  title.textContent = mn.kind === 2 ? tr('langListTitle', { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
+}
 async function renderMassNear() {
   const rows = mn.rows, list = $('nearList'); if (!rows) return;
-  $('nearN').textContent = rows.length ? fmt(rows.length) : '';
-  let recs = []; try { recs = await Promise.all(rows.map(r => shardFor(r.i))); } catch (e) {}
+  setNearTitle();
+  $('nearN').textContent = rows.length ? fmt(mn.kind === 2 ? state.only.size : rows.length) : '';
+  let recs = []; try { recs = await Promise.all(rows.slice(0, 60).map(r => shardFor(r.i))); } catch (e) {}
   if (rows !== mn.rows) return;
-  const world = mf.lang ? langSet(mf.lang).size : 0;
-  list.innerHTML = `<p class="note">${esc(tr(mn.kind ? 'confNearIntro' : 'massNearIntro'))}</p>` + (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear'))}</p>` : '') + (rows.length ? rows.map((r, k) => {
-    const rec = recs[k] || [], t = state.typ[r.i] & 7, lang = r.n.lang ? mf.data.langs[r.n.lang] : '';
-    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc"><b class="when">${esc(whenText(r.n))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+  const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : 'massNearIntro';
+  list.innerHTML = `<p class="note">${esc(tr(intro))}</p>` + (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear'))}</p>` : '') + (rows.length ? rows.slice(0, 60).map((r, k) => {
+    const rec = recs[k] || [], t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
+    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc"><b class="when">${esc(r.n ? whenText(r.n) : tr('noTimesWeek'))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
   }).join('') : `<p class="empty">${esc(tr('noMassNear'))}</p>`)
-    + (world ? `<p class="note"><button class="linkish" id="seeWorld">${esc(tr('seeWorldwide', { n: world, lang: massLangName(mf.lang) }))}</button></p>` : '')
     + `<p class="note">${esc(tr('timesCheck'))}</p>`;
 }
 function endMassNear() {
   if (mn.kind < 0) return;
   mn.kind = -1; mn.rows = null; state.only = null;
-  const title = document.querySelector('#nearTitle span'); title.dataset.i18n = 'nearYou'; title.textContent = tr('nearYou');
+  setNearTitle();
 }
-$('nearList').addEventListener('click', (e) => {
-  if (!e.target.closest('#seeWorld')) return;
-  endMassNear(); showNear(false); applyMassFilter(true);  // every church with Mass in that language, worldwide
-});
+
 async function initMassFilters() {
   try { mf.data = await getJSON('data/web/sched.json'); } catch (e) { return; }
   if (!mf.data || !Object.keys(mf.data.c || {}).length) return;
@@ -1254,7 +1264,11 @@ async function initMassFilters() {
     if (mn.kind === kind) { endMassNear(); showNear(false); applyMassFilter(); } else massNear(kind);
   });
   // a language narrows the nearby list; the worldwide view is one link away inside it
-  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; massNear(mn.kind === 1 ? 1 : 0); } });
+  $('massChips').addEventListener('change', (e) => {
+    if (e.target.id !== 'massLang') return;
+    mf.lang = e.target.value;
+    if (mf.lang) massNear(2); else { endMassNear(); showNear(false); applyMassFilter(); }
+  });
 }
 
 /* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
@@ -2692,7 +2706,7 @@ $('langSel').addEventListener('change', async (e) => {
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
   if (life.data && state.mode !== 'jesus') buildTimeline();
-  renderFavs(); if (mn.kind >= 0) { const t = document.querySelector('#nearTitle span'); t.textContent = tr(t.dataset.i18n); renderMassNear(); } else renderNear(); setCityLabels();
+  renderFavs(); if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels();
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
   if (!$('about').hidden) $($('mailBtn') ? 'contactBtn' : 'aboutBtn').click();
