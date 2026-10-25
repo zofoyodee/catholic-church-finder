@@ -306,5 +306,12 @@
   "color_violet": "kakobe",
   "color_rose": "pinka",
   "color_white": "njeru ne zaabu",
-  "color_red": "myufu"
+  "color_red": "myufu",
+  "startOver": "Tandika buggya",
+  "desc_cathedral": "Ekkanisa ya Bishopu yennyini, ekkanisa nnyina ey'essaza ly'eddiini.",
+  "desc_basilica": "Ekkanisa Paapa gye yawa ekitiibwa ky'erinnya basilika.",
+  "desc_shrine": "Ekifo eky'okulamaga n'okusinza.",
+  "desc_church": "Ekkanisa za pariisi n'ez'ebitundu eza bulijjo: buli kkanisa etali katederaali, basilika, kiggwa, ssabo wadde abbey.",
+  "desc_chapel": "Ssabo oba ekifo eky'okusabiramu ekitono, emirundi mingi ekiweerezebwa pariisi eriraanyeewo.",
+  "desc_abbey": "Ekkanisa y'ekibiina ky'abamonaki, ababiikira, ab'oluganda oba bannaddiini abakazi."
 }

@@ -313,5 +313,12 @@
   "stops_one": "{n} stotelė",
   "stops_few": "{n} stotelės",
   "bTagline_one": "<b>{n}</b> Biblijos vieta <b>{lands}</b> dabartinėse šalyse · bakstelėkite smeigtuką ar šalį",
-  "bTagline_few": "<b>{n}</b> Biblijos vietos <b>{lands}</b> dabartinėse šalyse · bakstelėkite smeigtuką ar šalį"
+  "bTagline_few": "<b>{n}</b> Biblijos vietos <b>{lands}</b> dabartinėse šalyse · bakstelėkite smeigtuką ar šalį",
+  "startOver": "Pradėti iš naujo",
+  "desc_cathedral": "Paties vyskupo bažnyčia, vyskupijos motininė bažnyčia.",
+  "desc_basilica": "Bažnyčia, kurią Popiežius pagerbė bazilikos titulu.",
+  "desc_shrine": "Piligrimystės ir pamaldumo vieta.",
+  "desc_church": "Įprastos parapijų ir vietos bažnyčios: kiekviena bažnyčia, kuri nėra katedra, bazilika, šventovė, koplyčia ar abatija.",
+  "desc_chapel": "Mažesnė koplyčia ar oratorija, dažnai aptarnaujama netolimos parapijos.",
+  "desc_abbey": "Vienuolių, vienuolių moterų, brolių ar seserų bendruomenės bažnyčia."
 }

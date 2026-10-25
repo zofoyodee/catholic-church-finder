@@ -306,5 +306,12 @@
   "color_violet": "volomparasy",
   "color_rose": "mavokely",
   "color_white": "fotsy sy volamena",
-  "color_red": "mena"
+  "color_red": "mena",
+  "startOver": "Manomboka indray",
+  "desc_cathedral": "Ny fiangonan'ny eveka manokana, fiangonana renin'ny diosezy.",
+  "desc_basilica": "Fiangonana nomen'ny Papa ny anaram-boninahitra hoe basilika.",
+  "desc_shrine": "Toerana fivahinianana masina sy fanompoam-pivavahana.",
+  "desc_church": "Ireo fiangonana paroasy sy fiangonana eo an-tanàna mahazatra: ny fiangonana rehetra izay tsy katedraly, basilika, toerana masina, sapely na abbaye.",
+  "desc_chapel": "Sapely na oratoara kely kokoa, matetika ikarakaran'ny paroasy akaiky.",
+  "desc_abbey": "Ny fiangonan'ny vondrom-piarahamonina moanina, masera, frera na masera."
 }

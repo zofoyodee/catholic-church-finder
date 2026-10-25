@@ -306,5 +306,12 @@
   "color_violet": "biyoleta",
   "color_rose": "rosas",
   "color_white": "busag ngan bulawan",
-  "color_red": "pula"
+  "color_red": "pula",
+  "startOver": "Magtikang utro",
+  "desc_cathedral": "An kalugaringon nga simbahan han obispo, an iroy nga simbahan han usa nga diyosesis.",
+  "desc_basilica": "Usa nga simbahan nga ginpasidunggan han Papa han titulo nga basilika.",
+  "desc_shrine": "Usa nga lugar han peregrinasyon ngan debosyon.",
+  "desc_church": "An mga ordinaryo nga simbahan han parokya ngan han komunidad: kada simbahan nga diri katedral, basilika, dambana, kapilya o abadiya.",
+  "desc_chapel": "Usa nga mas gutiay nga kapilya o oratoryo, agsob ginsisirbihan han hirani nga parokya.",
+  "desc_abbey": "An simbahan han usa nga komunidad han mga monghe, madre, prayle o sister."
 }

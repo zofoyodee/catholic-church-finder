@@ -306,5 +306,12 @@
   "color_violet": "odo-uhie",
   "color_rose": "pink",
   "color_white": "ọcha na ọlaedo",
-  "color_red": "uhie"
+  "color_red": "uhie",
+  "startOver": "Malite ọzọ",
+  "desc_cathedral": "Ụka nke bishọp n'onwe ya, ụka nne nke dayọsis.",
+  "desc_basilica": "Ụka Pope sọpụrụ n'aha basilika.",
+  "desc_shrine": "Ebe njem nsọ na nraranye.",
+  "desc_church": "Ụka parish na ụka obodo nkịtị: ụka ọ bụla na-abụghị katidral, basilika, ebe nsọ, ụlọ ekpere ma ọ bụ ebe obibi ndị mọnk.",
+  "desc_chapel": "Obere ụlọ ekpere, nke parish dị nso na-elekọta mgbe ụfọdụ.",
+  "desc_abbey": "Ụka nke otu ndị mọnk, ndị nwanyị nsọ, ndị nwanne nwoke ma ọ bụ ndị sista."
 }

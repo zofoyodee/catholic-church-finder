@@ -306,5 +306,12 @@
   "color_violet": "vyolèt",
   "color_rose": "woz",
   "color_white": "blan ak lò",
-  "color_red": "wouj"
+  "color_red": "wouj",
+  "startOver": "Rekòmanse",
+  "desc_cathedral": "Pwòp legliz evèk la, legliz manman yon dyosèz.",
+  "desc_basilica": "Yon legliz Pap la onore ak tit bazilik.",
+  "desc_shrine": "Yon kote pou pelerinaj ak devosyon.",
+  "desc_church": "Legliz pawas ak legliz katye òdinè yo: tout legliz ki pa katedral, bazilik, sanktyè, chapèl oswa abei.",
+  "desc_chapel": "Yon chapèl oswa oratwa ki pi piti, souvan yon pawas toupre ap sèvi l.",
+  "desc_abbey": "Legliz yon kominote mwàn, mè, frè oswa sè."
 }

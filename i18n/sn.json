@@ -306,5 +306,12 @@
   "color_violet": "pepuru",
   "color_rose": "pinki",
   "color_white": "chena negoridhe",
-  "color_red": "tsvuku"
+  "color_red": "tsvuku",
+  "startOver": "Tangazve",
+  "desc_cathedral": "Chechi yaBhishopi pachake, chechi amai yedhiocese.",
+  "desc_basilica": "Chechi yakakudzwa naPapa nezita rokuti basilica.",
+  "desc_shrine": "Nzvimbo yokufamba kutsvene nokunamata.",
+  "desc_church": "Machechi akajairika eparishi nenharaunda: chechi ipi neipi isiri katedhiral, basilica, nzvimbo tsvene, chapel kana abbey.",
+  "desc_chapel": "Chapel kana nzvimbo yokunamatira duku, kazhinji inoshandirwa neparishi iri pedyo.",
+  "desc_abbey": "Chechi yenharaunda yemamonki, masista, mabhurazi kana masista."
 }

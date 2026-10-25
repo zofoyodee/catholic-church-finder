@@ -306,5 +306,12 @@
   "color_violet": "wofiirira",
   "color_rose": "pinki",
   "color_white": "woyera ndi golide",
-  "color_red": "wofiira"
+  "color_red": "wofiira",
+  "startOver": "Yambanso",
+  "desc_cathedral": "Tchalitchi cha bishopu mwini, tchalitchi la amayi la dayosizi.",
+  "desc_basilica": "Tchalitchi limene Papa analemekeza ndi dzina la basilika.",
+  "desc_shrine": "Malo a maulendo opatulika ndi kudzipereka.",
+  "desc_church": "Matchalitchi wamba a parishi ndi a m'madera: tchalitchi lililonse limene si katedrali, basilika, malo opatulika, chapeli kapena nyumba ya amonke.",
+  "desc_chapel": "Chapeli kapena malo opemphereramo ang'onoang'ono, nthawi zambiri otumikiridwa ndi parishi yapafupi.",
+  "desc_abbey": "Tchalitchi la gulu la amonke, masisitere, abulazala kapena asisitere."
 }

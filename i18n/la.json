@@ -304,5 +304,12 @@
   "color_violet": "violaceus",
   "color_rose": "rosaceus",
   "color_white": "albus et aureus",
-  "color_red": "ruber"
+  "color_red": "ruber",
+  "startOver": "Rursus incipe",
+  "desc_cathedral": "Ecclesia ipsius episcopi, mater ecclesia dioecesis.",
+  "desc_basilica": "Ecclesia a Papa titulo basilicae honorata.",
+  "desc_shrine": "Locus peregrinationis et devotionis.",
+  "desc_church": "Ecclesiae paroeciales et vicinales communes: omnis ecclesia quae non est cathedralis, basilica, sanctuarium, sacellum aut abbatia.",
+  "desc_chapel": "Sacellum vel oratorium minus, saepe a paroecia vicina curatum.",
+  "desc_abbey": "Ecclesia communitatis monachorum, monialium, fratrum aut sororum."
 }
