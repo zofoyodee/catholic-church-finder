@@ -315,6 +315,7 @@
   "monthlyDay_4": "4.º {day} del mes",
   "monthlyDay_5": "5.º {day} del mes",
   "monthlyDay_6": "Último {day} del mes",
+  "startOver": "Empezar de nuevo",
   "modeJesus": "Vida de Jesús",
   "jSearchPh": "Busca en la vida de Jesús, p. ej. Caná, Transfiguración",
   "jSearchLabel": "Buscar lugares y momentos de la vida de Jesús",
@@ -346,6 +347,5 @@
   "jInGospels": "En los Evangelios",
   "jShareTitle": "{name} en la vida de Jesús",
   "jNoMatch": "Ningún lugar ni momento de la vida de Jesús coincide con «{q}».",
-  "jProv": "Las citas siguen la New American Bible, Revised Edition, la traducción católica que se usa en la Misa en Estados Unidos. El orden sigue una concordancia tradicional de los cuatro Evangelios; cuando los evangelistas difieren o un lugar es incierto, la tarjeta lo indica. Toca una cita para leerla en el sitio de la USCCB.",
-  "startOver": "Empezar de nuevo"
+  "jProv": "Las citas siguen la New American Bible, Revised Edition, la traducción católica que se usa en la Misa en Estados Unidos. El orden sigue una concordancia tradicional de los cuatro Evangelios; cuando los evangelistas difieren o un lugar es incierto, la tarjeta lo indica. Toca una cita para leerla en el sitio de la USCCB."
 }

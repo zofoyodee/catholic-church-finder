@@ -315,6 +315,7 @@
   "monthlyDay_4": "4e {day} du mois",
   "monthlyDay_5": "5e {day} du mois",
   "monthlyDay_6": "Dernier {day} du mois",
+  "startOver": "Recommencer",
   "modeJesus": "Vie de Jésus",
   "jSearchPh": "Chercher dans la vie de Jésus, p. ex. Cana, Transfiguration",
   "jSearchLabel": "Chercher des lieux et des moments de la vie de Jésus",
@@ -346,6 +347,5 @@
   "jInGospels": "Dans les Évangiles",
   "jShareTitle": "{name} dans la vie de Jésus",
   "jNoMatch": "Aucun lieu ni moment de la vie de Jésus ne correspond à « {q} ».",
-  "jProv": "Les références suivent la New American Bible, Revised Edition, la traduction catholique utilisée à la messe aux États-Unis. L’ordre suit une harmonie traditionnelle des quatre Évangiles ; quand les évangélistes diffèrent ou qu’un lieu est incertain, la fiche le dit. Touchez une référence pour la lire sur le site de l’USCCB.",
-  "startOver": "Recommencer"
+  "jProv": "Les références suivent la New American Bible, Revised Edition, la traduction catholique utilisée à la messe aux États-Unis. L’ordre suit une harmonie traditionnelle des quatre Évangiles ; quand les évangélistes diffèrent ou qu’un lieu est incertain, la fiche le dit. Touchez une référence pour la lire sur le site de l’USCCB."
 }

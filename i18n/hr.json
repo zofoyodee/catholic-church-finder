@@ -329,6 +329,7 @@
   "monthlyDay_4": "{day} (4. u mjesecu)",
   "monthlyDay_5": "{day} (5. u mjesecu)",
   "monthlyDay_6": "{day} (zadnji u mjesecu)",
+  "startOver": "Počni ispočetka",
   "modeJesus": "Isusov život",
   "jSearchPh": "Pretraži Isusov život, npr. Kana, Preobraženje",
   "jSearchLabel": "Pretraži mjesta i događaje iz Isusova života",
@@ -362,6 +363,5 @@
   "jInGospels": "U Evanđeljima",
   "jShareTitle": "{name} u Isusovu životu",
   "jNoMatch": "Nijedno mjesto ni događaj iz Isusova života ne odgovara „{q}”.",
-  "jProv": "Navodi slijede New American Bible, Revised Edition, katolički prijevod koji se koristi na misi u SAD-u. Redoslijed slijedi tradicionalno usklađivanje četiriju Evanđelja; gdje se evanđelisti razlikuju ili je mjesto nesigurno, kartica to navodi. Dodirni navod da ga pročitaš na mrežnoj stranici USCCB-a.",
-  "startOver": "Kreni ispočetka"
+  "jProv": "Navodi slijede New American Bible, Revised Edition, katolički prijevod koji se koristi na misi u SAD-u. Redoslijed slijedi tradicionalno usklađivanje četiriju Evanđelja; gdje se evanđelisti razlikuju ili je mjesto nesigurno, kartica to navodi. Dodirni navod da ga pročitaš na mrežnoj stranici USCCB-a."
 }

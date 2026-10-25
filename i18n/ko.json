@@ -299,6 +299,7 @@
   "monthlyDay_4": "매월 넷째 {day}",
   "monthlyDay_5": "매월 다섯째 {day}",
   "monthlyDay_6": "매월 마지막 {day}",
+  "startOver": "처음부터 다시",
   "modeJesus": "예수님의 생애",
   "jSearchPh": "예수님의 생애에서 검색 (예: 카나, 거룩한 변모)",
   "jSearchLabel": "예수님의 생애 속 장소와 사건 검색",
@@ -328,6 +329,5 @@
   "jInGospels": "복음서에서",
   "jShareTitle": "예수님의 생애 속 {name}",
   "jNoMatch": "“{q}”와 일치하는 예수님 생애의 장소나 순간이 없습니다.",
-  "jProv": "성경 구절은 미국 미사에서 쓰이는 가톨릭 영어 번역본 New American Bible, Revised Edition을 따릅니다. 순서는 네 복음서의 전통적인 대조를 따르며, 복음사가들의 기록이 다르거나 장소가 불확실하면 카드에 표시합니다. 구절을 누르면 USCCB 웹사이트에서 읽을 수 있습니다.",
-  "startOver": "처음부터 다시"
+  "jProv": "성경 구절은 미국 미사에서 쓰이는 가톨릭 영어 번역본 New American Bible, Revised Edition을 따릅니다. 순서는 네 복음서의 전통적인 대조를 따르며, 복음사가들의 기록이 다르거나 장소가 불확실하면 카드에 표시합니다. 구절을 누르면 USCCB 웹사이트에서 읽을 수 있습니다."
 }

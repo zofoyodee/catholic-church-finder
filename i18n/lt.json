@@ -313,5 +313,6 @@
   "stops_one": "{n} stotelė",
   "stops_few": "{n} stotelės",
   "bTagline_one": "<b>{n}</b> Biblijos vieta <b>{lands}</b> dabartinėse šalyse · bakstelėkite smeigtuką ar šalį",
-  "bTagline_few": "<b>{n}</b> Biblijos vietos <b>{lands}</b> dabartinėse šalyse · bakstelėkite smeigtuką ar šalį"
+  "bTagline_few": "<b>{n}</b> Biblijos vietos <b>{lands}</b> dabartinėse šalyse · bakstelėkite smeigtuką ar šalį",
+  "startOver": "Pradėti iš naujo"
 }

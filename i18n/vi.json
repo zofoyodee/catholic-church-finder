@@ -301,6 +301,7 @@
   "monthlyDay_4": "{day} thứ tư của tháng",
   "monthlyDay_5": "{day} thứ năm của tháng",
   "monthlyDay_6": "{day} cuối cùng của tháng",
+  "startOver": "Bắt đầu lại",
   "modeJesus": "Cuộc đời Chúa Giêsu",
   "jSearchPh": "Tìm trong cuộc đời Chúa Giêsu, vd. Cana, Biến Hình",
   "jSearchLabel": "Tìm nơi chốn và biến cố trong cuộc đời Chúa Giêsu",
@@ -330,6 +331,5 @@
   "jInGospels": "Trong Tin Mừng",
   "jShareTitle": "{name} trong cuộc đời Chúa Giêsu",
   "jNoMatch": "Không có nơi hay biến cố nào trong cuộc đời Chúa Giêsu khớp với “{q}”.",
-  "jProv": "Các trích dẫn theo New American Bible, Revised Edition, bản dịch Công giáo dùng trong Thánh Lễ tại Hoa Kỳ. Thứ tự theo cách hòa hợp truyền thống của bốn sách Tin Mừng; khi các thánh sử khác nhau hoặc vị trí chưa chắc chắn, thẻ sẽ ghi rõ. Chạm vào trích dẫn để đọc trên trang web của USCCB.",
-  "startOver": "Bắt đầu lại"
+  "jProv": "Các trích dẫn theo New American Bible, Revised Edition, bản dịch Công giáo dùng trong Thánh Lễ tại Hoa Kỳ. Thứ tự theo cách hòa hợp truyền thống của bốn sách Tin Mừng; khi các thánh sử khác nhau hoặc vị trí chưa chắc chắn, thẻ sẽ ghi rõ. Chạm vào trích dẫn để đọc trên trang web của USCCB."
 }

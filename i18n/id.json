@@ -301,6 +301,7 @@
   "monthlyDay_4": "{day} keempat setiap bulan",
   "monthlyDay_5": "{day} kelima setiap bulan",
   "monthlyDay_6": "{day} terakhir setiap bulan",
+  "startOver": "Mulai ulang",
   "modeJesus": "Hidup Yesus",
   "jSearchPh": "Cari dalam hidup Yesus, mis. Kana, Transfigurasi",
   "jSearchLabel": "Cari tempat dan peristiwa dalam hidup Yesus",
@@ -330,6 +331,5 @@
   "jInGospels": "Dalam Injil",
   "jShareTitle": "{name} dalam hidup Yesus",
   "jNoMatch": "Tidak ada tempat atau peristiwa dalam hidup Yesus yang cocok dengan “{q}”.",
-  "jProv": "Rujukan mengikuti New American Bible, Revised Edition, terjemahan Katolik yang digunakan dalam Misa di Amerika Serikat. Urutannya mengikuti harmoni tradisional keempat Injil; bila para penginjil berbeda atau tempatnya tidak pasti, kartu menyebutkannya. Ketuk rujukan untuk membacanya di situs USCCB.",
-  "startOver": "Mulai lagi"
+  "jProv": "Rujukan mengikuti New American Bible, Revised Edition, terjemahan Katolik yang digunakan dalam Misa di Amerika Serikat. Urutannya mengikuti harmoni tradisional keempat Injil; bila para penginjil berbeda atau tempatnya tidak pasti, kartu menyebutkannya. Ketuk rujukan untuk membacanya di situs USCCB."
 }

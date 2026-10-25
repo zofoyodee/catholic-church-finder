@@ -315,6 +315,7 @@
   "monthlyDay_4": "4. {day} im Monat",
   "monthlyDay_5": "5. {day} im Monat",
   "monthlyDay_6": "Letzter {day} im Monat",
+  "startOver": "Neu beginnen",
   "modeJesus": "Leben Jesu",
   "jSearchPh": "Im Leben Jesu suchen, z. B. Kana, Verklärung",
   "jSearchLabel": "Orte und Ereignisse im Leben Jesu suchen",
@@ -346,6 +347,5 @@
   "jInGospels": "In den Evangelien",
   "jShareTitle": "{name} im Leben Jesu",
   "jNoMatch": "Kein Ort und kein Ereignis im Leben Jesu passt zu „{q}“.",
-  "jProv": "Die Stellenangaben folgen der New American Bible, Revised Edition, der katholischen Übersetzung, die in den USA in der Messe verwendet wird. Die Reihenfolge folgt einer überlieferten Harmonie der vier Evangelien; wo die Evangelisten voneinander abweichen oder ein Ort unsicher ist, sagt es die Karte. Tippe auf eine Stelle, um sie auf der Website der USCCB zu lesen.",
-  "startOver": "Neu beginnen"
+  "jProv": "Die Stellenangaben folgen der New American Bible, Revised Edition, der katholischen Übersetzung, die in den USA in der Messe verwendet wird. Die Reihenfolge folgt einer überlieferten Harmonie der vier Evangelien; wo die Evangelisten voneinander abweichen oder ein Ort unsicher ist, sagt es die Karte. Tippe auf eine Stelle, um sie auf der Website der USCCB zu lesen."
 }

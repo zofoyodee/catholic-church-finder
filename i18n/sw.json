@@ -315,6 +315,7 @@
   "monthlyDay_4": "{day} ya nne ya mwezi",
   "monthlyDay_5": "{day} ya tano ya mwezi",
   "monthlyDay_6": "{day} ya mwisho ya mwezi",
+  "startOver": "Anza upya",
   "modeJesus": "Maisha ya Yesu",
   "jSearchPh": "Tafuta katika maisha ya Yesu, k.m. Kana, Kugeuka sura",
   "jSearchLabel": "Tafuta mahali na matukio katika maisha ya Yesu",
@@ -346,6 +347,5 @@
   "jInGospels": "Katika Injili",
   "jShareTitle": "{name} katika maisha ya Yesu",
   "jNoMatch": "Hakuna mahali wala tukio katika maisha ya Yesu linalolingana na “{q}”.",
-  "jProv": "Marejeo yanafuata New American Bible, Revised Edition, tafsiri ya Kikatoliki inayotumika katika Misa nchini Marekani. Mpangilio unafuata ulinganifu wa mapokeo wa Injili nne; pale wainjilisti wanapotofautiana au mahali hapajulikani kwa hakika, kadi inasema hivyo. Gusa rejeo kulisoma kwenye tovuti ya USCCB.",
-  "startOver": "Anza upya"
+  "jProv": "Marejeo yanafuata New American Bible, Revised Edition, tafsiri ya Kikatoliki inayotumika katika Misa nchini Marekani. Mpangilio unafuata ulinganifu wa mapokeo wa Injili nne; pale wainjilisti wanapotofautiana au mahali hapajulikani kwa hakika, kadi inasema hivyo. Gusa rejeo kulisoma kwenye tovuti ya USCCB."
 }

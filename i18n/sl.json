@@ -318,5 +318,6 @@
   "color_red": "rdeča",
   "stops_one": "{n} postaja",
   "stops_two": "{n} postaji",
-  "stops_few": "{n} postaje"
+  "stops_few": "{n} postaje",
+  "startOver": "Začni znova"
 }
