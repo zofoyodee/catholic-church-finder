@@ -402,5 +402,11 @@
   "areaTag": "{n} églises à {place}",
   "areaTagView": "{n} églises dans cette vue",
   "areaTip": "Cliquez pour lister les églises de cette ville",
-  "noneInRange": "Aucune église des types choisis à moins de {dist}. Essayez une distance plus grande ou affichez plus de types ci-dessus."
+  "noneInRange": "Aucune église des types choisis à moins de {dist}. Essayez une distance plus grande ou affichez plus de types ci-dessus.",
+  "loadingMassNear": "Recherche des Messes près de vous…",
+  "loadingConfNear": "Recherche de la Confession près de vous…",
+  "loadingLangList": "Recherche des églises avec Messe en {lang}…",
+  "loadingArea": "Recherche des églises à {place}…",
+  "loadingView": "Recherche des églises dans cette vue…",
+  "loadingMore": "Chargement d'autres églises…"
 }

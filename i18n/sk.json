@@ -423,5 +423,11 @@
   "areaTag": "Kostoly: {place} ({n})",
   "areaTagView": "Kostoly v tomto zobrazení: {n}",
   "areaTip": "Kliknite pre zoznam kostolov tohto mesta",
-  "noneInRange": "Do {dist} nie je žiadny kostol zvolených druhov. Skúste väčšiu vzdialenosť alebo hore zobrazte viac druhov."
+  "noneInRange": "Do {dist} nie je žiadny kostol zvolených druhov. Skúste väčšiu vzdialenosť alebo hore zobrazte viac druhov.",
+  "loadingMassNear": "Hľadám sväté omše v blízkosti…",
+  "loadingConfNear": "Hľadám spoveď v blízkosti…",
+  "loadingLangList": "Hľadám kostoly so svätou omšou v jazyku {lang}…",
+  "loadingArea": "Hľadám kostoly: {place}…",
+  "loadingView": "Hľadám kostoly v tomto zobrazení…",
+  "loadingMore": "Načítavam ďalšie kostoly…"
 }

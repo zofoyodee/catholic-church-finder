@@ -384,5 +384,11 @@
   "areaTag": "显示{place}的 {n} 座教堂",
   "areaTagView": "显示此视图中的 {n} 座教堂",
   "areaTip": "点击列出这座城市的教堂",
-  "noneInRange": "{dist}内没有你所选类型的教堂。请尝试更远的距离，或在上方显示更多类型。"
+  "noneInRange": "{dist}内没有你所选类型的教堂。请尝试更远的距离，或在上方显示更多类型。",
+  "loadingMassNear": "正在查找你附近的弥撒…",
+  "loadingConfNear": "正在查找你附近的告解…",
+  "loadingLangList": "正在查找有{lang}弥撒的教堂…",
+  "loadingArea": "正在查找{place}的教堂…",
+  "loadingView": "正在查找此视图中的教堂…",
+  "loadingMore": "正在加载更多教堂…"
 }

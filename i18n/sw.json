@@ -402,5 +402,11 @@
   "areaTag": "Inaonyesha makanisa {n} ya {place}",
   "areaTagView": "Inaonyesha makanisa {n} katika mwonekano huu",
   "areaTip": "Bofya kuorodhesha makanisa ya mji huu",
-  "noneInRange": "Hakuna kanisa la aina ulizochagua ndani ya {dist}. Jaribu umbali mrefu zaidi au onyesha aina zaidi hapo juu."
+  "noneInRange": "Hakuna kanisa la aina ulizochagua ndani ya {dist}. Jaribu umbali mrefu zaidi au onyesha aina zaidi hapo juu.",
+  "loadingMassNear": "Inatafuta Misa karibu nawe…",
+  "loadingConfNear": "Inatafuta Kitubio karibu nawe…",
+  "loadingLangList": "Inatafuta makanisa yenye Misa kwa {lang}…",
+  "loadingArea": "Inatafuta makanisa ya {place}…",
+  "loadingView": "Inatafuta makanisa katika mwonekano huu…",
+  "loadingMore": "Inapakia makanisa zaidi…"
 }

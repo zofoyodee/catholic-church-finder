@@ -394,5 +394,11 @@
   "areaTag": "Gipakita ang {n} ka simbahan sa {place}",
   "areaTagView": "Gipakita ang {n} ka simbahan niini nga view",
   "areaTip": "I-klik aron ilista ang mga simbahan niini nga siyudad",
-  "noneInRange": "Walay simbahan sa mga matang nga imong gipili sulod sa {dist}. Sulayi ang mas layo nga distansya o ipakita ang dugang matang sa ibabaw."
+  "noneInRange": "Walay simbahan sa mga matang nga imong gipili sulod sa {dist}. Sulayi ang mas layo nga distansya o ipakita ang dugang matang sa ibabaw.",
+  "loadingMassNear": "Gipangita ang mga Misa duol nimo…",
+  "loadingConfNear": "Gipangita ang Kumpisal duol nimo…",
+  "loadingLangList": "Gipangita ang mga simbahan nga adunay Misa sa {lang}…",
+  "loadingArea": "Gipangita ang mga simbahan sa {place}…",
+  "loadingView": "Gipangita ang mga simbahan niini nga view…",
+  "loadingMore": "Nagkarga og dugang simbahan…"
 }

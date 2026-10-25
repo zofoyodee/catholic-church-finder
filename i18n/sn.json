@@ -394,5 +394,11 @@
   "areaTag": "Kuratidza machechi {n} muna {place}",
   "areaTagView": "Kuratidza machechi {n} mumufananidzo uyu",
   "areaTip": "Dzvanya kuti uone machechi eguta iri",
-  "noneInRange": "Hapana chechi yemhando dzawasarudza iri mukati me{dist}. Edza chinhambwe chirefu kana kuratidza mhando dzakawanda kumusoro."
+  "noneInRange": "Hapana chechi yemhando dzawasarudza iri mukati me{dist}. Edza chinhambwe chirefu kana kuratidza mhando dzakawanda kumusoro.",
+  "loadingMassNear": "Tiri kutsvaga Misa pedyo newe…",
+  "loadingConfNear": "Tiri kutsvaga Kureurura pedyo newe…",
+  "loadingLangList": "Tiri kutsvaga machechi ane Misa mu{lang}…",
+  "loadingArea": "Tiri kutsvaga machechi muna {place}…",
+  "loadingView": "Tiri kutsvaga machechi mumufananidzo uyu…",
+  "loadingMore": "Tiri kuisa mamwe machechi…"
 }

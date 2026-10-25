@@ -394,5 +394,11 @@
   "areaTag": "Ukulangisha amacalici {n} mu {place}",
   "areaTagView": "Ukulangisha amacalici {n} mu cimonwa ici",
   "areaTip": "Tinikeni pa kumona amacalici ya muno musumba",
-  "noneInRange": "Tapali icalici ca misango iyo musalile mu {dist}. Eseshenipo ubutali ubukalamba nangu langisheni imisango iingi pa mulu."
+  "noneInRange": "Tapali icalici ca misango iyo musalile mu {dist}. Eseshenipo ubutali ubukalamba nangu langisheni imisango iingi pa mulu.",
+  "loadingMassNear": "Tulefwaya Misa mupepi nankwe…",
+  "loadingConfNear": "Tulefwaya Ukulapila mupepi nankwe…",
+  "loadingLangList": "Tulefwaya amacalici ayakwata Misa mu {lang}…",
+  "loadingArea": "Tulefwaya amacalici mu {place}…",
+  "loadingView": "Tulefwaya amacalici mu cimonwa ici…",
+  "loadingMore": "Tuleleta amacalici yambi…"
 }

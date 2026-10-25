@@ -394,5 +394,11 @@
   "areaTag": "Kiraga ekkanisa {n} mu {place}",
   "areaTagView": "Kiraga ekkanisa {n} mu kifaananyi kino",
   "areaTip": "Nyiga olabe ekkanisa z'ekibuga kino",
-  "noneInRange": "Tewali kkanisa ya bika by'olonze mu {dist}. Gezaako ebanga eddene oba laga ebika ebirala waggulu."
+  "noneInRange": "Tewali kkanisa ya bika by'olonze mu {dist}. Gezaako ebanga eddene oba laga ebika ebirala waggulu.",
+  "loadingMassNear": "Tunoonya Mmisa okumpi naawe…",
+  "loadingConfNear": "Tunoonya okwenenya okumpi naawe…",
+  "loadingLangList": "Tunoonya ekkanisa ezirina Mmisa mu {lang}…",
+  "loadingArea": "Tunoonya ekkanisa mu {place}…",
+  "loadingView": "Tunoonya ekkanisa mu kifaananyi kino…",
+  "loadingMore": "Tutikka ekkanisa endala…"
 }

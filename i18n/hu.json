@@ -402,5 +402,11 @@
   "areaTag": "{n} templom: {place}",
   "areaTagView": "{n} templom ebben a nézetben",
   "areaTip": "Kattints a város templomainak listájáért",
-  "noneInRange": "A választott fajtájú templomok közül egy sincs {dist} körzetben. Próbálj nagyobb távolságot, vagy jeleníts meg fent több fajtát."
+  "noneInRange": "A választott fajtájú templomok közül egy sincs {dist} körzetben. Próbálj nagyobb távolságot, vagy jeleníts meg fent több fajtát.",
+  "loadingMassNear": "Szentmisék keresése a közeledben…",
+  "loadingConfNear": "Gyónás keresése a közeledben…",
+  "loadingLangList": "{lang} nyelvű szentmisés templomok keresése…",
+  "loadingArea": "Templomok keresése: {place}…",
+  "loadingView": "Templomok keresése ebben a nézetben…",
+  "loadingMore": "További templomok betöltése…"
 }

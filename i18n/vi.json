@@ -386,5 +386,11 @@
   "areaTag": "Đang hiện {n} nhà thờ ở {place}",
   "areaTagView": "Đang hiện {n} nhà thờ trong khung nhìn này",
   "areaTip": "Bấm để liệt kê nhà thờ của thành phố này",
-  "noneInRange": "Không có nhà thờ thuộc loại bạn chọn trong vòng {dist}. Hãy thử khoảng cách xa hơn hoặc hiện thêm loại ở trên."
+  "noneInRange": "Không có nhà thờ thuộc loại bạn chọn trong vòng {dist}. Hãy thử khoảng cách xa hơn hoặc hiện thêm loại ở trên.",
+  "loadingMassNear": "Đang tìm Thánh lễ gần bạn…",
+  "loadingConfNear": "Đang tìm giờ Giải tội gần bạn…",
+  "loadingLangList": "Đang tìm nhà thờ có Thánh lễ bằng {lang}…",
+  "loadingArea": "Đang tìm nhà thờ ở {place}…",
+  "loadingView": "Đang tìm nhà thờ trong khung nhìn này…",
+  "loadingMore": "Đang tải thêm nhà thờ…"
 }

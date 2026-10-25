@@ -410,5 +410,11 @@
   "areaTag": "Cerkve: {place} ({n})",
   "areaTagView": "Cerkve v tem pogledu: {n}",
   "areaTip": "Kliknite za seznam cerkva tega mesta",
-  "noneInRange": "V razdalji {dist} ni cerkve izbranih vrst. Poskusite večjo razdaljo ali zgoraj prikažite več vrst."
+  "noneInRange": "V razdalji {dist} ni cerkve izbranih vrst. Poskusite večjo razdaljo ali zgoraj prikažite več vrst.",
+  "loadingMassNear": "Iščem maše v bližini…",
+  "loadingConfNear": "Iščem spoved v bližini…",
+  "loadingLangList": "Iščem cerkve z mašo v jeziku {lang}…",
+  "loadingArea": "Iščem cerkve: {place}…",
+  "loadingView": "Iščem cerkve v tem pogledu…",
+  "loadingMore": "Nalagam več cerkva…"
 }

@@ -394,5 +394,11 @@
   "areaTag": "Ezali kolakisa ba ndako-Nzambe {n} na {place}",
   "areaTagView": "Ezali kolakisa ba ndako-Nzambe {n} na botali oyo",
   "areaTip": "Finá mpo na komona ba ndako-Nzambe ya engumba oyo",
-  "noneInRange": "Ndako-Nzambe moko te ya ndenge oyo oponi na kati ya {dist}. Meka mosika koleka to lakisa ndenge mingi na likolo."
+  "noneInRange": "Ndako-Nzambe moko te ya ndenge oyo oponi na kati ya {dist}. Meka mosika koleka to lakisa ndenge mingi na likolo.",
+  "loadingMassNear": "Ezali koluka Misa pene na yo…",
+  "loadingConfNear": "Ezali koluka Botubeli pene na yo…",
+  "loadingLangList": "Ezali koluka ba ndako-Nzambe oyo ezali na Misa na {lang}…",
+  "loadingArea": "Ezali koluka ba ndako-Nzambe na {place}…",
+  "loadingView": "Ezali koluka ba ndako-Nzambe na botali oyo…",
+  "loadingMore": "Ezali kokotisa ba ndako-Nzambe mosusu…"
 }

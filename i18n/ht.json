@@ -394,5 +394,11 @@
   "areaTag": "N ap montre {n} legliz nan {place}",
   "areaTagView": "N ap montre {n} legliz nan vi sa a",
   "areaTip": "Klike pou wè lis legliz vil sa a",
-  "noneInRange": "Pa gen legliz nan kalite ou chwazi yo nan {dist}. Eseye yon distans pi long oswa montre plis kalite anwo a."
+  "noneInRange": "Pa gen legliz nan kalite ou chwazi yo nan {dist}. Eseye yon distans pi long oswa montre plis kalite anwo a.",
+  "loadingMassNear": "N ap chèche Lamès toupre w…",
+  "loadingConfNear": "N ap chèche Konfesyon toupre w…",
+  "loadingLangList": "N ap chèche legliz ki gen Lamès an {lang}…",
+  "loadingArea": "N ap chèche legliz nan {place}…",
+  "loadingView": "N ap chèche legliz nan vi sa a…",
+  "loadingMore": "N ap chaje plis legliz…"
 }

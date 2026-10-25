@@ -392,5 +392,11 @@
   "areaTag": "{n} ecclesiae in {place}",
   "areaTagView": "{n} ecclesiae in hoc conspectu",
   "areaTip": "Preme ut ecclesias huius urbis enumeres",
-  "noneInRange": "Nulla ecclesia generum quae elegisti intra {dist} est. Maius spatium tempta aut plura genera supra ostende."
+  "noneInRange": "Nulla ecclesia generum quae elegisti intra {dist} est. Maius spatium tempta aut plura genera supra ostende.",
+  "loadingMassNear": "Missas prope te quaerimus…",
+  "loadingConfNear": "Confessionem prope te quaerimus…",
+  "loadingLangList": "Ecclesias cum Missa {lang} quaerimus…",
+  "loadingArea": "Ecclesias in {place} quaerimus…",
+  "loadingView": "Ecclesias in hoc conspectu quaerimus…",
+  "loadingMore": "Plures ecclesias oneramus…"
 }

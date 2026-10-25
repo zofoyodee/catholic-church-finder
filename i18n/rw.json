@@ -394,5 +394,11 @@
   "areaTag": "Hagaragara kiliziya {n} zo muri {place}",
   "areaTagView": "Hagaragara kiliziya {n} ziri muri iyi shusho",
   "areaTip": "Kanda urebe kiliziya z'uyu mujyi",
-  "noneInRange": "Nta kiliziya yo mu bwoko wahisemo iri muri {dist}. Gerageza intera ndende cyangwa werekane ubwoko bwinshi hejuru."
+  "noneInRange": "Nta kiliziya yo mu bwoko wahisemo iri muri {dist}. Gerageza intera ndende cyangwa werekane ubwoko bwinshi hejuru.",
+  "loadingMassNear": "Turashaka Misa hafi yawe…",
+  "loadingConfNear": "Turashaka Penetensiya hafi yawe…",
+  "loadingLangList": "Turashaka kiliziya zifite Misa mu {lang}…",
+  "loadingArea": "Turashaka kiliziya zo muri {place}…",
+  "loadingView": "Turashaka kiliziya ziri muri iyi shusho…",
+  "loadingMore": "Turazana izindi kiliziya…"
 }

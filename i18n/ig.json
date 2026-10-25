@@ -394,5 +394,11 @@
   "areaTag": "Na-egosi ụka {n} dị na {place}",
   "areaTagView": "Na-egosi ụka {n} dị n'ihe nlele a",
   "areaTip": "Pịa ka ịhụ ụka dị n'obodo a",
-  "noneInRange": "Ọ dịghị ụka nke ụdị ị họọrọ n'ime {dist}. Nwalee ebe dị anya karịa ma ọ bụ gosi ụdị ndị ọzọ n'elu."
+  "noneInRange": "Ọ dịghị ụka nke ụdị ị họọrọ n'ime {dist}. Nwalee ebe dị anya karịa ma ọ bụ gosi ụdị ndị ọzọ n'elu.",
+  "loadingMassNear": "Na-achọ Mas dị gị nso…",
+  "loadingConfNear": "Na-achọ Nkwupụta dị gị nso…",
+  "loadingLangList": "Na-achọ ụka nwere Mas n'asụsụ {lang}…",
+  "loadingArea": "Na-achọ ụka dị na {place}…",
+  "loadingView": "Na-achọ ụka dị n'ihe nlele a…",
+  "loadingMore": "Na-ebu ụka ndị ọzọ…"
 }
