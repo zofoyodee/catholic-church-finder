@@ -564,6 +564,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <button id="zin" title="Zoom in" aria-label="Zoom in" data-i18n-attr="title:zoomIn;aria-label:zoomIn"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
   <button id="zout" title="Zoom out" aria-label="Zoom out" data-i18n-attr="title:zoomOut;aria-label:zoomOut"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
   <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe" data-i18n-attr="title:home;aria-label:home"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
+  <button id="listHere" title="List Churches Here" aria-label="List Churches Here" data-i18n-attr="title:listHere;aria-label:listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg></button>
   <button id="rand" title="Visit a random church" aria-label="Visit a random church" data-i18n-attr="title:random;aria-label:random"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg></button>
 </div>
 
@@ -664,7 +665,7 @@ function detectLang() {
 // English is built in; every other language is i18n/<code>.json with the same keys, missing keys fall back to English.
 // Plural forms are key_one, key_few, key_many, key_other (Intl.PluralRules categories) and are picked by vars.n.
 const EN = {
-  startOver: 'Start over', youAreHere: 'You Are Here',
+  startOver: 'Start over', listHere: 'List Churches Here', churchesIn: 'Churches in {place}', churchesInView: 'Churches in This View', areaIntro: 'Nearest to you first. Tap one for details.', areaIntroCenter: 'Nearest to the middle first. Tap one for details.', areaMore: 'Showing the {k} nearest of {n}. Zoom in to see the rest.', areaNone: 'No churches are mapped here yet.', areaTag: 'Showing {n} churches in {place}', areaTagView: 'Showing {n} churches in this view', areaTip: 'Click to list this city\'s churches', youAreHere: 'You Are Here',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
   loadingChurches: 'Loading churches…', gathering: 'Gathering churches from around the world…',
   gatheringN: 'Gathering {n} churches from around the world…', placing: 'Placing them on the globe…',
@@ -1248,8 +1249,56 @@ async function massNear(kind) {
   }
   renderMassNear();
 }
+/* ---------- list the churches in a city (click its name) or in the whole view ---------- */
+async function listArea({ name, center, pop, bounds }) {
+  if (state.mode !== 'churches') return;
+  if (mn.kind >= 0) endMassNear();
+  mf.lang = ''; renderMassChips();
+  const inView = !!bounds;
+  // a city reaches further the bigger it is
+  const radius = pop > 3e6 ? 30000 : pop > 1e6 ? 22000 : pop > 3e5 ? 14000 : pop > 5e4 ? 8000 : 5000;
+  const [clon, clat] = center, cos = Math.cos(clat * Math.PI / 180);
+  const { lon: L, lat: A, typ, n, enabled } = state, hits = [];
+  for (let i = 0; i < n; i++) {
+    if (!enabled.has(typ[i] & 7)) continue;
+    const lo = L[i] / 1e6, la = A[i] / 1e6;
+    if (inView ? !bounds.contains([lo, la]) : metres(clat, clon, la, lo) > radius) continue;
+    hits.push(i);
+  }
+  const from = here || center;  // nearest to you when we know where you are
+  const rows = hits.map(i => ({ i, m: metres(from[1], from[0], A[i] / 1e6, L[i] / 1e6) })).sort((a, b) => a.m - b.m);
+  mn.kind = 3; mn.rows = rows.slice(0, 300); mn.area = { name: inView ? '' : name, total: rows.length, fromYou: !!here };
+  state.only = new Set(hits);
+  map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
+  map.once('idle', updateNames);
+  const ring = [];
+  if (!inView) for (let k = 0; k <= 64; k++) { const t = k / 64 * 2 * Math.PI; ring.push([clon + Math.cos(t) * radius / (111320 * cos), clat + Math.sin(t) * radius / 110540]); }
+  map.getSource('area').setData({ type: 'FeatureCollection', features: ring.length ? [{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [ring] }, properties: {} }] : [] });
+  $('tagline').textContent = inView ? tr('areaTagView', { n: fmt(rows.length) }) : tr('areaTag', { n: fmt(rows.length), place: name });
+  closeCard(); showNear(true); renderMassChips();
+  if (!inView && ring.length) {
+    const wide = innerWidth > 640;
+    map.fitBounds(ring.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(ring[0], ring[0])), { padding: wide ? { left: 380, right: 80, top: 190, bottom: 60 } : { top: 190, bottom: innerHeight * 0.62, left: 30, right: 30 }, pitch: 0, duration: reduceMotion ? 0 : 1600 });
+  }
+  renderArea();
+}
+async function renderArea() {
+  const rows = mn.rows, a = mn.area, list = $('nearList'); if (!rows || !a) return;
+  setNearTitle();
+  $('nearN').textContent = fmt(a.total);
+  list.innerHTML = `<p class="empty">${esc(tr('finding'))}</p>`;
+  let recs = []; try { recs = await Promise.all(rows.map(r => shardFor(r.i))); } catch (e) {}
+  if (rows !== mn.rows) return;
+  list.innerHTML = (rows.length ? `<p class="note">${esc(tr(a.fromYou ? 'areaIntro' : 'areaIntroCenter'))}</p>` : `<p class="empty">${esc(tr('areaNone'))}</p>`)
+    + rows.map((r, k) => {
+      const rec = recs[k] || [], t = state.typ[r.i] & 7;
+      return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc([TYPE_BY_CODE[t].one, rec[2]].filter(Boolean).join(' · '))}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+    }).join('')
+    + (a.total > rows.length ? `<p class="note">${esc(tr('areaMore', { k: fmt(rows.length), n: fmt(a.total) }))}</p>` : '');
+}
 function setNearTitle() {
   const title = document.querySelector('#nearTitle span');
+  if (mn.kind === 3) { title.dataset.i18n = mn.area.name ? 'churchesIn' : 'churchesInView'; title.textContent = mn.area.name ? tr('churchesIn', { place: mn.area.name }) : tr('churchesInView'); return; }
   title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : mn.kind === 1 ? 'confNearTitle' : mn.kind === 0 ? 'massNearTitle' : 'nearYou';
   title.textContent = mn.kind === 2 ? tr('langListTitle', { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
 }
@@ -1268,7 +1317,8 @@ async function renderMassNear() {
 }
 function endMassNear() {
   if (mn.kind < 0) return;
-  mn.kind = -1; mn.rows = null; state.only = null;
+  mn.kind = -1; mn.rows = null; mn.area = null; state.only = null;
+  if (map.getSource('area')) map.getSource('area').setData({ type: 'FeatureCollection', features: [] });
   setNearTitle();
 }
 
@@ -1589,6 +1639,9 @@ async function addBasemap() {
 }
 
 function addChurchLayers() {
+  map.addSource('area', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'area-fill', type: 'fill', source: 'area', paint: { 'fill-color': '#e8b84a', 'fill-opacity': 0.07 } });
+  map.addLayer({ id: 'area-line', type: 'line', source: 'area', paint: { 'line-color': '#e8b84a', 'line-width': 1.5, 'line-opacity': 0.6, 'line-dasharray': [3, 2] } });
   map.addSource('churches', { type: 'geojson', data: buildGeoJSON(), cluster: true, clusterRadius: 44, clusterMaxZoom: 7, maxzoom: 15, buffer: 64 });
   map.addSource('notable', { type: 'geojson', data: notableGeoJSON() });
   map.addSource('sel', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
@@ -2214,7 +2267,7 @@ async function renderNear() {
   }).join('');
 }
 $('nearBtn').addEventListener('click', () => { if ($('near').hidden) findNear(); else showNear(false); });
-$('nearClose').addEventListener('click', () => showNear(false));
+$('nearClose').addEventListener('click', () => { showNear(false); if (mn.kind === 3) { endMassNear(); applyMassFilter(); } });  // closing a city list brings every church back
 $('nearList').addEventListener('click', (e) => {
   const go = e.target.closest('button.go'); if (!go) return;
   if (innerWidth <= 640) showNear(false);
@@ -2312,10 +2365,22 @@ map.on('mousemove', async (e) => {
   } catch (err) { /* tooltip stays generic */ }
 });
 map.getCanvas().addEventListener('mouseleave', () => { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); });
+map.on('mouseenter', 'places', () => { if (state.mode === 'churches') map.getCanvas().style.cursor = 'pointer'; });
+map.on('mouseleave', 'places', () => { map.getCanvas().style.cursor = ''; });
+$('listHere').addEventListener('click', () => {
+  if (state.mode !== 'churches') return;
+  const b = map.getBounds(), c = map.getCenter();
+  listArea({ bounds: b, center: [c.lng, c.lat] });
+});
 map.on('click', async (e) => {
   if (!map.getLayer('pt') || state.mode !== 'churches') return;
   const f = pick(e.point, coarse ? 26 : 16);
-  if (!f) return;
+  if (!f) {
+    // a city name: list that city's churches
+    const c = map.queryRenderedFeatures([[e.point.x - 6, e.point.y - 6], [e.point.x + 6, e.point.y + 6]], { layers: ['places'] })[0];
+    if (c) listArea({ name: c.properties.label || c.properties.name, center: c.geometry.coordinates, pop: c.properties.pop_max || 0 });
+    return;
+  }
   lastInteract = performance.now();
   if (f.layer.id === 'cl') {
     const z = await map.getSource('churches').getClusterExpansionZoom(f.properties.cluster_id);
@@ -2765,7 +2830,7 @@ $('langSel').addEventListener('change', async (e) => {
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
   if (life.data && state.mode !== 'jesus') buildTimeline();
-  renderFavs(); if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels();
+  renderFavs(); if (mn.kind === 3) renderArea(); else if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels();
   if (map.getLayer('me-label')) map.setLayoutProperty('me-label', 'text-field', tr('youAreHere'));
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
