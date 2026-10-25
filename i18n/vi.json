@@ -331,5 +331,10 @@
   "jInGospels": "Trong Tin Mừng",
   "jShareTitle": "{name} trong cuộc đời Chúa Giêsu",
   "jNoMatch": "Không có nơi hay biến cố nào trong cuộc đời Chúa Giêsu khớp với “{q}”.",
-  "jProv": "Các trích dẫn theo New American Bible, Revised Edition, bản dịch Công giáo dùng trong Thánh Lễ tại Hoa Kỳ. Thứ tự theo cách hòa hợp truyền thống của bốn sách Tin Mừng; khi các thánh sử khác nhau hoặc vị trí chưa chắc chắn, thẻ sẽ ghi rõ. Chạm vào trích dẫn để đọc trên trang web của USCCB."
+  "jProv": "Các trích dẫn theo New American Bible, Revised Edition, bản dịch Công giáo dùng trong Thánh Lễ tại Hoa Kỳ. Thứ tự theo cách hòa hợp truyền thống của bốn sách Tin Mừng; khi các thánh sử khác nhau hoặc vị trí chưa chắc chắn, thẻ sẽ ghi rõ. Chạm vào trích dẫn để đọc trên trang web của USCCB.",
+  "jMore": "Đọc thêm",
+  "jReadIt": "Đọc trong Tin Mừng",
+  "jThePlace": "Nơi chốn",
+  "jAlsoHere": "Cũng tại đây",
+  "jShareMoment": "{name}, trong cuộc đời Chúa Giêsu"
 }

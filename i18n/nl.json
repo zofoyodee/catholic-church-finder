@@ -347,5 +347,10 @@
   "jInGospels": "In de Evangeliën",
   "jShareTitle": "{name} in het leven van Jezus",
   "jNoMatch": "Geen plaats of moment uit het leven van Jezus komt overeen met ‘{q}’.",
-  "jProv": "De verwijzingen volgen de New American Bible, Revised Edition, de katholieke vertaling die in de Verenigde Staten in de Mis wordt gebruikt. De volgorde volgt een traditionele harmonie van de vier Evangeliën; waar de evangelisten verschillen of een plaats onzeker is, zegt de kaart dat. Tik op een verwijzing om die op de website van de USCCB te lezen."
+  "jProv": "De verwijzingen volgen de New American Bible, Revised Edition, de katholieke vertaling die in de Verenigde Staten in de Mis wordt gebruikt. De volgorde volgt een traditionele harmonie van de vier Evangeliën; waar de evangelisten verschillen of een plaats onzeker is, zegt de kaart dat. Tik op een verwijzing om die op de website van de USCCB te lezen.",
+  "jMore": "Lees meer",
+  "jReadIt": "Lees het in de Evangeliën",
+  "jThePlace": "De plaats",
+  "jAlsoHere": "Ook hier",
+  "jShareMoment": "{name}, uit het leven van Jezus"
 }

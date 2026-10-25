@@ -347,5 +347,10 @@
   "jInGospels": "En los Evangelios",
   "jShareTitle": "{name} en la vida de Jesús",
   "jNoMatch": "Ningún lugar ni momento de la vida de Jesús coincide con «{q}».",
-  "jProv": "Las citas siguen la New American Bible, Revised Edition, la traducción católica que se usa en la Misa en Estados Unidos. El orden sigue una concordancia tradicional de los cuatro Evangelios; cuando los evangelistas difieren o un lugar es incierto, la tarjeta lo indica. Toca una cita para leerla en el sitio de la USCCB."
+  "jProv": "Las citas siguen la New American Bible, Revised Edition, la traducción católica que se usa en la Misa en Estados Unidos. El orden sigue una concordancia tradicional de los cuatro Evangelios; cuando los evangelistas difieren o un lugar es incierto, la tarjeta lo indica. Toca una cita para leerla en el sitio de la USCCB.",
+  "jMore": "Leer más",
+  "jReadIt": "Léelo en los Evangelios",
+  "jThePlace": "El lugar",
+  "jAlsoHere": "También aquí",
+  "jShareMoment": "{name}, de la vida de Jesús"
 }

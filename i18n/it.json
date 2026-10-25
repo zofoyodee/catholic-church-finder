@@ -347,5 +347,10 @@
   "jInGospels": "Nei Vangeli",
   "jShareTitle": "{name} nella vita di Gesù",
   "jNoMatch": "Nessun luogo o momento della vita di Gesù corrisponde a «{q}».",
-  "jProv": "I riferimenti seguono la New American Bible, Revised Edition, la traduzione cattolica usata nella Messa negli Stati Uniti. L’ordine segue un’armonia tradizionale dei quattro Vangeli; dove gli evangelisti differiscono o un luogo è incerto, la scheda lo dice. Tocca un riferimento per leggerlo sul sito della USCCB."
+  "jProv": "I riferimenti seguono la New American Bible, Revised Edition, la traduzione cattolica usata nella Messa negli Stati Uniti. L’ordine segue un’armonia tradizionale dei quattro Vangeli; dove gli evangelisti differiscono o un luogo è incerto, la scheda lo dice. Tocca un riferimento per leggerlo sul sito della USCCB.",
+  "jMore": "Leggi di più",
+  "jReadIt": "Leggilo nei Vangeli",
+  "jThePlace": "Il luogo",
+  "jAlsoHere": "Anche qui",
+  "jShareMoment": "{name}, dalla vita di Gesù"
 }
