@@ -1891,7 +1891,7 @@ function flyToMatches(only) {
     bump(cells.all, k);
     if (b.contains(p)) { inView++; bump(cells.view, k); }
   }
-  toast(total ? $('tagline').textContent : 'No churches match right now');
+  toast(total ? $('tagline').textContent : 'No churches match right now', 6000);  // long enough to read
   if (!total) return;
   let bestK = '', bestN = -1;
   for (const [k, v] of inView >= 5 ? cells.view : cells.all) if (v > bestN) { bestN = v; bestK = k; }
@@ -1904,9 +1904,9 @@ function flyToMatches(only) {
   map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: 11, pitch: 0, duration: reduceMotion ? 0 : 1600 });
 }
 let toastTimer = 0;
-function toast(text) {
+function toast(text, ms = 2600) {
   const el = $('toast'); el.textContent = text; el.classList.add('on');
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), 2600);
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), ms);
 }
 function updateTagline() {
   let n = 0; for (const t of state.enabled) n += state.meta.types[t] || 0;

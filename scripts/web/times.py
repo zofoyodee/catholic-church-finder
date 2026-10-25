@@ -39,7 +39,7 @@ LANGS = [
     ('zh', r'chinese|mandarin|cantonese|中文|華語|國語|粵語'),
     ('ht', r'haitian|creole|kr[ée]y[òo]l|cr[ée]ole'),
     ('de', r'\bgerman\b|deutsch|auf deutsch'),
-    ('en', r'\benglish\b|ingl[ée]s|in inglese|en anglais|auf englisch'),
+    ('en', r'\benglish\b|ingl[ée]s|in inglese|en anglais|auf englisch|angielsk\w*|ingl[êe]s|anglais|englisch'),
     ('ga', r'\birish\b|gaeilge'),
     ('arc', r'chaldean|aramaic|sureth|syriac|assyrian'),
     ('ar', r'arabic|[àa]rabe|maronite'),
