@@ -129,6 +129,8 @@ function churchOfDay(day, cal) {
 let today = null;
 function applySeason() {
   const root = document.documentElement.style;
+  // the Liturgical Season theme borrows the day's colour for its accents, whether or not the season tint is on
+  if (today) { const s = COLORS[today.color] || COLORS.green; root.setProperty('--season', s.lit); root.setProperty('--season-soft', s.soft); }
   if (!view.liturgical || !today) { root.removeProperty('--lit'); root.removeProperty('--lit-soft'); root.removeProperty('--lit-ink'); return; }
   const c = COLORS[today.color] || COLORS.green;
   root.setProperty('--lit', c.lit); root.setProperty('--lit-soft', c.soft); root.setProperty('--lit-ink', c.ink);
@@ -457,12 +459,14 @@ function moveStars() {
   stars.classList.toggle('off', !view.sky || z > 5.5);
 }
 map.on('move', () => { if (!starRaf) starRaf = requestAnimationFrame(moveStars); });
+document.addEventListener('ccf-theme', () => { applySky(); if (map.getLayer('night') && ccf.nightOpacity) map.setPaintProperty('night', 'raster-opacity', ccf.nightOpacity()); });
 
 // the atmosphere: a blue halo around the globe that thins out as you zoom into a city
 function applySky() {
   try {
+    const [sky, horizon, fog] = ccf.sky ? ccf.sky() : ['#0b1a36', '#2b4c80', '#0a1a33'];
     map.setSky(view.sky ? {
-      'sky-color': '#0b1a36', 'horizon-color': '#2b4c80', 'fog-color': '#0a1a33',
+      'sky-color': sky, 'horizon-color': horizon, 'fog-color': fog,
       'sky-horizon-blend': 0.7, 'horizon-fog-blend': 0.6, 'fog-ground-blend': 0.9,
       'atmosphere-blend': ['interpolate', ['linear'], ['zoom'], 0, 1, 5, 1, 7, 0],
     } : { 'atmosphere-blend': 0, 'sky-color': '#05070d', 'horizon-color': '#05070d', 'fog-color': '#05070d' });
@@ -510,7 +514,7 @@ function applyNight() {
   const url = drawNight();
   if (!map.getSource('night')) {
     map.addSource('night', { type: 'image', url, coordinates: NIGHT_COORDS });
-    map.addLayer({ id: 'night', type: 'raster', source: 'night', paint: { 'raster-opacity': 1, 'raster-fade-duration': 0, 'raster-resampling': 'linear' } }, 'rivers');
+    map.addLayer({ id: 'night', type: 'raster', source: 'night', paint: { 'raster-opacity': ccf.nightOpacity ? ccf.nightOpacity() : 1, 'raster-fade-duration': 0, 'raster-resampling': 'linear' } }, 'rivers');
   } else { map.getSource('night').updateImage({ url, coordinates: NIGHT_COORDS }); map.setLayoutProperty('night', 'visibility', 'visible'); }
   nightTimer = setInterval(() => { if (map.getSource('night') && !document.hidden) map.getSource('night').updateImage({ url: drawNight(), coordinates: NIGHT_COORDS }); }, 120000);
 }
