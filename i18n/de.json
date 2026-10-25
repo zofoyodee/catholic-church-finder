@@ -347,5 +347,10 @@
   "jInGospels": "In den Evangelien",
   "jShareTitle": "{name} im Leben Jesu",
   "jNoMatch": "Kein Ort und kein Ereignis im Leben Jesu passt zu „{q}“.",
-  "jProv": "Die Stellenangaben folgen der New American Bible, Revised Edition, der katholischen Übersetzung, die in den USA in der Messe verwendet wird. Die Reihenfolge folgt einer überlieferten Harmonie der vier Evangelien; wo die Evangelisten voneinander abweichen oder ein Ort unsicher ist, sagt es die Karte. Tippe auf eine Stelle, um sie auf der Website der USCCB zu lesen."
+  "jProv": "Die Stellenangaben folgen der New American Bible, Revised Edition, der katholischen Übersetzung, die in den USA in der Messe verwendet wird. Die Reihenfolge folgt einer überlieferten Harmonie der vier Evangelien; wo die Evangelisten voneinander abweichen oder ein Ort unsicher ist, sagt es die Karte. Tippe auf eine Stelle, um sie auf der Website der USCCB zu lesen.",
+  "jMore": "Mehr lesen",
+  "jReadIt": "Im Evangelium lesen",
+  "jThePlace": "Der Ort",
+  "jAlsoHere": "Auch hier",
+  "jShareMoment": "{name} – aus dem Leben Jesu"
 }

@@ -347,5 +347,10 @@
   "jInGospels": "Katika Injili",
   "jShareTitle": "{name} katika maisha ya Yesu",
   "jNoMatch": "Hakuna mahali wala tukio katika maisha ya Yesu linalolingana na “{q}”.",
-  "jProv": "Marejeo yanafuata New American Bible, Revised Edition, tafsiri ya Kikatoliki inayotumika katika Misa nchini Marekani. Mpangilio unafuata ulinganifu wa mapokeo wa Injili nne; pale wainjilisti wanapotofautiana au mahali hapajulikani kwa hakika, kadi inasema hivyo. Gusa rejeo kulisoma kwenye tovuti ya USCCB."
+  "jProv": "Marejeo yanafuata New American Bible, Revised Edition, tafsiri ya Kikatoliki inayotumika katika Misa nchini Marekani. Mpangilio unafuata ulinganifu wa mapokeo wa Injili nne; pale wainjilisti wanapotofautiana au mahali hapajulikani kwa hakika, kadi inasema hivyo. Gusa rejeo kulisoma kwenye tovuti ya USCCB.",
+  "jMore": "Soma zaidi",
+  "jReadIt": "Lisome katika Injili",
+  "jThePlace": "Mahali",
+  "jAlsoHere": "Pia hapa",
+  "jShareMoment": "{name}, kutoka maisha ya Yesu"
 }

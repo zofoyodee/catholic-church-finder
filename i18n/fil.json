@@ -347,5 +347,10 @@
   "jInGospels": "Sa mga Ebanghelyo",
   "jShareTitle": "{name} sa buhay ni Hesus",
   "jNoMatch": "Walang lugar o sandali sa buhay ni Hesus na tumutugma sa “{q}”.",
-  "jProv": "Ang mga sanggunian ay mula sa New American Bible, Revised Edition, ang saling Katoliko na ginagamit sa Misa sa Estados Unidos. Ang pagkakasunod ay ayon sa tradisyonal na pagsasaayos ng apat na Ebanghelyo; kapag nagkakaiba ang mga ebanghelista o hindi tiyak ang lugar, sinasabi ito ng card. I-tap ang sanggunian upang basahin ito sa website ng USCCB."
+  "jProv": "Ang mga sanggunian ay mula sa New American Bible, Revised Edition, ang saling Katoliko na ginagamit sa Misa sa Estados Unidos. Ang pagkakasunod ay ayon sa tradisyonal na pagsasaayos ng apat na Ebanghelyo; kapag nagkakaiba ang mga ebanghelista o hindi tiyak ang lugar, sinasabi ito ng card. I-tap ang sanggunian upang basahin ito sa website ng USCCB.",
+  "jMore": "Basahin pa",
+  "jReadIt": "Basahin sa mga Ebanghelyo",
+  "jThePlace": "Ang lugar",
+  "jAlsoHere": "Dito rin",
+  "jShareMoment": "{name}, mula sa buhay ni Hesus"
 }

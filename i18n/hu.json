@@ -347,5 +347,10 @@
   "jInGospels": "Az evangéliumokban",
   "jShareTitle": "{name} Jézus életében",
   "jNoMatch": "Jézus életéből egyetlen hely vagy esemény sem felel meg ennek: „{q}”.",
-  "jProv": "A hivatkozások a New American Bible, Revised Edition szerintiek, amely az Egyesült Államokban a szentmisén használt katolikus fordítás. A sorrend a négy evangélium hagyományos összhangját követi; ahol az evangélisták eltérnek vagy a hely bizonytalan, a kártya jelzi. Koppints egy hivatkozásra, hogy elolvasd az USCCB honlapján."
+  "jProv": "A hivatkozások a New American Bible, Revised Edition szerintiek, amely az Egyesült Államokban a szentmisén használt katolikus fordítás. A sorrend a négy evangélium hagyományos összhangját követi; ahol az evangélisták eltérnek vagy a hely bizonytalan, a kártya jelzi. Koppints egy hivatkozásra, hogy elolvasd az USCCB honlapján.",
+  "jMore": "Tovább",
+  "jReadIt": "Olvasd el az evangéliumban",
+  "jThePlace": "A hely",
+  "jAlsoHere": "Itt történt még",
+  "jShareMoment": "{name} – Jézus életéből"
 }

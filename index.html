@@ -447,6 +447,9 @@ body.bible-mode .ctrls .fav-open, body.bible-mode #massChips { display: none; }
 .cert { display: inline-flex; align-items: center; height: 20px; padding: 0 8px; border-radius: 10px; border: 1px solid var(--line); letter-spacing: .06em; }
 .cert.trad { color: var(--gold-soft); border-color: color-mix(in srgb, var(--gold) 45%, transparent); }
 .cert.debated { color: #f2b38c; border-color: #f2b38c66; }
+.readref { display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px; border-radius: 16px; border: 1px solid color-mix(in srgb, var(--gold) 40%, transparent); background: rgba(232,184,74,.06); font-size: 13px; }
+.readref svg { width: 15px; height: 15px; fill: none; stroke: var(--gold); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.readref a.ref { text-decoration: none; }
 ol.jev { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
 ol.jev li { padding-left: 12px; border-left: 2px solid var(--c); display: grid; gap: 3px; }
 ol.jev li[aria-current="true"] { background: color-mix(in srgb, var(--c) 10%, transparent); border-radius: 0 8px 8px 0; padding: 6px 8px 6px 12px; }
@@ -797,7 +800,8 @@ const EN = {
   jIntro: "Press play to follow Our Lord through the Gospels in order, or tap any moment on the timeline to fly there.",
   jEventOf: "{k} of {n}",
   jPrev: "Previous moment", jNext: "Next moment", jPlay: "Play the journey", jPause: "Pause the journey",
-  jDetails: "About this place", jPlayHere: "Play from here", jInBible: "In Bible Places", jInGospels: "In the Gospels",
+  jDetails: "About this place", jMore: "Read more", jReadIt: "Read it in the Gospels", jThePlace: "The place", jAlsoHere: "Also here",
+  jShareMoment: "{name}, from the life of Jesus", jPlayHere: "Play from here", jInBible: "In Bible Places", jInGospels: "In the Gospels",
   jShareTitle: "{name} in the life of Jesus",
   jNoMatch: "No place or moment in the life of Jesus matches “{q}”.",
   jProv: "Gospel references follow the New American Bible, Revised Edition, the Catholic translation used at Mass in the United States. The order follows a traditional harmony of the four Gospels; where the evangelists differ or a site is uncertain, the card says so. Tap a reference to read it on the USCCB website.",
@@ -2355,7 +2359,7 @@ async function selectChurch(i, { fly = true } = {}) {
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: cardPad(wide) }));
 }
 function closeCard() {
-  $('card').hidden = true; state.selected = -1; if (window.__bibleSel) window.__bibleSel(null); delete $('cardBody').dataset.jplace;
+  $('card').hidden = true; state.selected = -1; if (window.__bibleSel) window.__bibleSel(null); delete $('cardBody').dataset.jplace; delete $('cardBody').dataset.jk;
   if (state.mode === 'jesus' && window.__lifeSel) window.__lifeSel(life.k >= 0 ? life.data.byId[life.data.events[life.k].p] : null);
   try { history.replaceState(null, '', location.pathname); } catch (e) {}
   if (map.getSource('sel')) map.getSource('sel').setData({ type: 'FeatureCollection', features: [] });
@@ -2572,7 +2576,7 @@ $('langSel').addEventListener('change', async (e) => {
   if (!state.meta) return;
   searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
   if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } if (!$('card').hidden && bible.sel) { if (bible.sel.land) openBibleLand(bible.sel.land, { fly: false }); else openBiblePlace(bible.sel.id, { fly: false }); } }
-  else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && life.sel) openLifePlace(life.sel.id, { fly: false }); }
+  else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
   if (life.data && state.mode !== 'jesus') buildTimeline();
   renderFavs(); renderNear(); setCityLabels();
@@ -2816,7 +2820,8 @@ async function fillNearby(p) {
 }
 $('cardBody').addEventListener('click', (e) => {
   const n = e.target.closest('button.near'); if (n) { const i = +n.dataset.i; setMode('churches', { fly: false }).then(() => selectChurch(i, { fly: true })); return; }
-  const j = e.target.closest('[data-golife]'); if (j) { lifePause(); goEvent(+j.dataset.golife); return; }
+  const j = e.target.closest('[data-golife]'); if (j) { lifePause(); goEvent(+j.dataset.golife, { card: true }); return; }
+  const jp = e.target.closest('[data-jplace]'); if (jp) { lifePause(); openLifePlace(jp.dataset.jplace, { fly: false }); return; }
   const b = e.target.closest('[data-goplace]'); if (b) { openBiblePlace(b.dataset.goplace); return; }
   const l = e.target.closest('[data-goland]'); if (l) openBibleLand(l.dataset.goland);
 });
@@ -3001,12 +3006,12 @@ function renderNow() {
     </div>
     <div class="ln-txt" aria-live="polite">${e ? `
       <div class="kick"><i style="background:${d.color[e.e]}"></i>${esc(tr('jEra_' + e.e))} · ${esc(tr('jEventOf', { k: fmt(e.i + 1), n: d.events.length }))}</div>
-      <h2><button class="linkish" data-jplace="${p.id}" style="text-decoration:none;color:inherit">${esc(e.t)}</button> <small>· ${esc(p.n)}</small></h2>
+      <h2><button class="linkish" data-jk="${e.i}" style="text-decoration:none;color:inherit">${esc(e.t)}</button> <small>· ${esc(p.n)}</small></h2>
       <p>${withRefs(e.s)} <span class="refs">(${withRefs(e.r)})</span></p>${e.u ? `<p class="u">${withRefs(e.u)}</p>` : ''}` : `
       <div class="kick">${esc(tr('modeJesus'))} · ${esc(tr('jMoments', { n: evs.length }))}</div>
       <h2>${esc(tr('jIntroTitle'))}</h2><p>${esc(tr('jIntro'))}</p>`}
     </div>
-    ${e ? `<button class="btn ln-open" data-jplace="${p.id}">${esc(tr('jDetails'))}</button>` : ''}`;
+    ${e ? `<button class="btn ln-open" data-jk="${e.i}">${esc(tr('jMore'))}</button>` : ''}`;
 }
 function markTrack() {
   let cur = null;
@@ -3027,14 +3032,15 @@ function lifeSchedule(ms) {
   life.raf = requestAnimationFrame(tick);
   life.timer = setTimeout(() => { if (life.auto && state.mode === 'jesus') goEvent(evs[pos + 1].i); }, ms);
 }
-async function goEvent(k, { fly = true } = {}) {
+async function goEvent(k, { fly = true, card } = {}) {
   if (state.mode !== 'jesus') await setMode('jesus', { fly: false });
   const d = life.data, e = d && d.events[k]; if (!e) return;
   if (life.era !== 'all' && e.e !== life.era) $('chips').querySelector('[data-era="all"]').click();
   clearLifeTimer(); life.k = k;
   const p = d.byId[e.p];
   renderNow(); markTrack(); lifeSel(p); lastInteract = performance.now();
-  if (!$('card').hidden) openLifePlace(p.id, { fly: false });
+  // the details panel follows the timeline: always beside the globe on wide screens, on phones only when asked for
+  if (card ?? (!$('card').hidden || innerWidth > 640)) openLifeMoment(k);
   try { history.replaceState(null, '', '?life=' + (k + 1)); } catch (err) {}
   if (!fly) { lifeSchedule(LIFE_DWELL); return; }
   const bearing = ((k * 37) % 80) - 40;
@@ -3061,9 +3067,10 @@ $('lifeNow').addEventListener('click', (e) => {
     const evs = lifeEvents(), pos = evs.indexOf(life.data.events[life.k]);
     if (pos < 0 || pos >= evs.length - 1) goEvent(evs[0].i); else { renderNow(); lifeStep(1); }
   }
+  else if (b.dataset.jk) { lifePause(); openLifeMoment(+b.dataset.jk); }
   else if (b.dataset.jplace) { lifePause(); openLifePlace(b.dataset.jplace, { fly: false }); }
 });
-$('lifeTrack').addEventListener('click', (e) => { const b = e.target.closest('button.ev'); if (b) { lifePause(); goEvent(+b.dataset.k); } });
+$('lifeTrack').addEventListener('click', (e) => { const b = e.target.closest('button.ev'); if (b) { lifePause(); goEvent(+b.dataset.k, { card: true }); } });
 // dragging or zooming the globe pauses the journey; it waits until asked to go on
 for (const ev of ['mousedown', 'touchstart', 'wheel']) map.on(ev, () => { if (state.mode === 'jesus' && life.auto && !life.flying) { lifePause(); map.stop(); } });
 addEventListener('keydown', (e) => {
@@ -3114,6 +3121,7 @@ async function openLifePlace(id, { fly = true } = {}) {
   const d = life.data, p = d && d.byId[id]; if (!p) return;
   state.selected = -1; lifeSel(p); lastInteract = performance.now();
   const sameCard = !$('card').hidden && $('cardBody').dataset.jplace === id;
+  delete $('cardBody').dataset.jk;
   $('card').hidden = false; placeCtrls();
   if (fly) map.flyTo({ center: lifeLL(p), zoom: Math.max(map.getZoom(), p.z), pitch: 35, speed: 1.3, padding: lifePad(), essential: true });
   if (!sameCard) bibleHero(p.n, p.m, p.w);
@@ -3143,6 +3151,47 @@ async function openLifePlace(id, { fly = true } = {}) {
   $('cardBody').scrollTop = scroll;
   fillNearby(p);
 }
+
+/* the moment card: one event from the Gospels, with its passage, its place and what else happened there */
+const refList = (r) => r.split(';').map(x => x.trim()).filter(Boolean);
+function openLifeMoment(k) {
+  const d = life.data, e = d && d.events[k]; if (!e) return;
+  const p = d.byId[e.p], evs = lifeEvents(), pos = evs.indexOf(e);
+  lifeSel(p); state.selected = -1;
+  const samePlace = !$('card').hidden && $('cardBody').dataset.jplace === p.id;
+  $('card').hidden = false; placeCtrls();
+  if (!samePlace) bibleHero(p.n, p.m, p.w);
+  $('cardBody').dataset.jplace = p.id; $('cardBody').dataset.jk = k;
+  const others = p.ev.filter(x => x !== e);
+  const prev = evs[pos - 1], next = evs[pos + 1];
+  $('cardBody').innerHTML = `
+    <div>
+      <div class="kicker"><span><i style="background:${d.color[e.e]}"></i>${esc(tr('jEra_' + e.e))}</span><span>${esc(tr('jEventOf', { k: fmt(k + 1), n: d.events.length }))}</span></div>
+      <h2 id="cName">${esc(e.t)}</h2>
+      <div class="where"><button class="linkish" data-jplace="${p.id}">${esc(p.n)}</button> · ${esc(p.m)}</div>
+    </div>
+    <p class="lede">${withRefs(e.s)}</p>
+    ${e.u ? `<p class="muted"><i>${withRefs(e.u)}</i></p>` : ''}
+    <div class="actions">
+      <button class="btn icon" id="jPrevM" aria-label="${esc(tr('jPrev'))}" title="${esc(prev ? prev.t : tr('jPrev'))}" ${prev ? '' : 'disabled'}>${ICON_PREV}</button>
+      <button class="btn icon" id="jNextM" aria-label="${esc(tr('jNext'))}" title="${esc(next ? next.t : tr('jNext'))}" ${next ? '' : 'disabled'}>${ICON_NEXT}</button>
+      <button class="btn primary" id="jPlayHere">${esc(tr(life.auto ? 'jPause' : 'jPlayHere'))}</button>
+      <button class="btn" id="bShare">${SHARE_ICON}<span>${esc(tr('share'))}</span></button>
+    </div>
+    <div class="sect"><h3>${esc(tr('jReadIt'))}</h3><div class="plist">${refList(e.r).map(r => `<span class="readref">${SCROLL_ICON}${withRefs(r)}</span>`).join('')}</div></div>
+    <div class="sect"><h3>${esc(tr('jThePlace'))} <span class="cert ${p.cert}">${esc(tr(CERT[p.cert]))}</span></h3><p class="muted" style="font-size:13.5px;line-height:1.55;color:var(--ink)">${withRefs(p.s)}</p>
+      ${p.bp ? `<div class="actions" style="margin-top:10px"><button class="btn" data-jplace="${p.id}">${esc(tr('jDetails'))}</button><button class="btn" data-goplace="${p.bp}">${esc(tr('jInBible'))}</button></div>` : `<div class="actions" style="margin-top:10px"><button class="btn" data-jplace="${p.id}">${esc(tr('jDetails'))}</button></div>`}</div>
+    ${others.length ? `<div class="sect"><h3>${esc(tr('jAlsoHere'))}</h3><ol class="jev">${others.map(x => `<li style="--c:${d.color[x.e]}"><button class="linkish" data-golife="${x.i}">${fmt(x.i + 1)}. ${esc(x.t)}</button><span class="refs">${withRefs(x.r)}</span></li>`).join('')}</ol></div>` : ''}
+    <div class="sect"><h3>${esc(tr('bNearby'))}</h3><div id="bNear" class="nearlist"><p class="muted">${esc(tr('bLooking'))}</p></div></div>
+    <div class="prov">${esc(tr('jProv'))}</div>`;
+  $('jPrevM').addEventListener('click', () => { lifePause(); if (prev) goEvent(prev.i, { card: true }); });
+  $('jNextM').addEventListener('click', () => { lifePause(); if (next) goEvent(next.i, { card: true }); });
+  $('jPlayHere').addEventListener('click', () => { if (life.auto) { lifePause(); map.stop(); openLifeMoment(k); return; } life.auto = true; renderNow(); if (next) goEvent(next.i, { card: true }); else goEvent(k, { card: true }); });
+  bibleShare(bibleLink('life=' + (k + 1)), tr('jShareMoment', { name: e.t }));
+  $('cardBody').scrollTop = 0;
+  fillNearby(p);
+}
+const SCROLL_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5"/><path d="M9 9h7M9 13h7"/></svg>';
 
 /* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
 const hooks = {};
@@ -3180,7 +3229,7 @@ const mapReady = new Promise(res => map.once('load', res));
       if (innerWidth > 640 || !(shared >= 0 && shared < state.n)) openFavsOnLoad();  // on phones a shared church's card gets the bottom of the screen
       if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link
       const sp = new URLSearchParams(location.search);
-      if (sp.has('jesus') || sp.has('life') || sp.get('mode') === 'jesus') { state.ready = true; setMode('jesus', { fly: !sp.has('jesus') && !sp.has('life') }).then(() => { if (sp.get('jesus')) openLifePlace(sp.get('jesus')); else if (sp.get('life')) goEvent(parseInt(sp.get('life'), 10) - 1); }); return; }
+      if (sp.has('jesus') || sp.has('life') || sp.get('mode') === 'jesus') { state.ready = true; setMode('jesus', { fly: !sp.has('jesus') && !sp.has('life') }).then(() => { if (sp.get('jesus')) openLifePlace(sp.get('jesus')); else if (sp.get('life')) goEvent(parseInt(sp.get('life'), 10) - 1, { card: true }); }); return; }
       if (sp.has('bible') || sp.has('land') || sp.get('mode') === 'bible') { state.ready = true; setMode('bible', { fly: !sp.has('bible') && !sp.has('land') }).then(() => { if (sp.get('bible')) openBiblePlace(sp.get('bible')); else if (sp.get('land')) openBibleLand(sp.get('land')); }); return; }
       map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, duration: reduceMotion ? 0 : 3200, essential: true });
       map.once('moveend', () => { state.ready = true; });
