@@ -692,7 +692,7 @@ const EN = {
   type_church: 'Parish Churches', one_church: 'Church', type_chapel: 'Chapels', one_chapel: 'Chapel',
   type_abbey: 'Abbeys & Monasteries', one_abbey: 'Abbey or Monastery',
   loadingPhoto: 'Loading photo', photoOf: 'Photograph of {name}', theChurch: 'the church',
-  photoBy: 'Photo by {author}, {license}. Opens the photo on Wikimedia Commons.', photoCredit: 'Photo: {author} · {license}', parishSitePhoto: 'parish website', photoFromSite: 'Photo from the parish website, {site}. Opens the site.',
+  photoBy: 'Photo by {author}, {license}. Opens the photo on Wikimedia Commons.', photoCredit: 'Photo: {author} · {license}', parishSitePhoto: 'parish website', photoFromSite: 'Photo from the parish website, {site}. Opens the site.', photoMapillary: 'Street photo by {author} on Mapillary, CC BY-SA 4.0. Opens it on Mapillary.',
   unknownAuthor: 'Unknown author', seeFilePage: 'See file page',
   save: 'Save', saved: 'Saved', favAdd: 'Add to your favorites', favRemove: 'Remove from your favorites',
   favRemoveName: 'Remove {name} from favorites', remove: 'Remove', favEmpty: 'No favorites yet. Open a church and tap {save} to keep it here.',
@@ -1453,6 +1453,30 @@ const VIGIL = () => `<div class="vigil" role="status">${CANDLE()}<span>${tr('loa
 // the same candle with a line saying what is on its way; 'big' for an empty panel, 'inline' inside a sentence
 const LOADER = (text, cls = '') => `<span class="loader vigil ${cls}" role="status">${CANDLE()}<span>${esc(text)}</span></span>`;
 const nextFrame = () => new Promise(r => requestAnimationFrame(() => setTimeout(r)));
+/* Mapillary: free, openly licensed street-level photos (CC BY-SA). The client token is public by design;
+   get one free at mapillary.com/dashboard/developers. Empty leaves the drawing when nothing else is found. */
+const MAPILLARY_TOKEN = '';
+async function streetPhoto(i, rec) {
+  const lat = state.lat[i] / 1e6, lng = state.lon[i] / 1e6, r = Math.PI / 180;
+  const dLat = 80 / 110540, dLng = 80 / (111320 * Math.cos(lat * r));  // look within about 80 m
+  const u = `https://graph.mapillary.com/images?access_token=${encodeURIComponent(MAPILLARY_TOKEN)}&fields=id,thumb_1024_url,computed_compass_angle,compass_angle,computed_geometry,geometry,is_pano,creator&bbox=${[lng - dLng, lat - dLat, lng + dLng, lat + dLat].map(v => v.toFixed(6)).join(',')}&limit=200`;
+  const res = await fetch(u); if (!res.ok) return null;
+  const imgs = (await res.json()).data || [];
+  let best = null, bestScore = Infinity;
+  for (const m of imgs) {
+    const g = (m.computed_geometry || m.geometry || {}).coordinates, ang = m.computed_compass_angle ?? m.compass_angle;
+    if (!g || !m.thumb_1024_url || m.is_pano || ang == null) continue;
+    const dist = metres(g[1], g[0], lat, lng); if (dist < 8 || dist > 80) continue;  // too close shows a wall, too far shows the street
+    // which way the church lies from where the photo was taken, and how far the camera was turned from it
+    const y = Math.sin((lng - g[0]) * r) * Math.cos(lat * r), x = Math.cos(g[1] * r) * Math.sin(lat * r) - Math.sin(g[1] * r) * Math.cos(lat * r) * Math.cos((lng - g[0]) * r);
+    const off = Math.abs(((Math.atan2(y, x) / r - ang) % 360 + 540) % 360 - 180); if (off > 35) continue;
+    const score = dist + off * 1.5;
+    if (score < bestScore) { bestScore = score; best = m; }
+  }
+  if (!best) return null;
+  const who = (best.creator && best.creator.username) || 'Mapillary';
+  return { src: best.thumb_1024_url, file: rec && rec[0], author: who, license: 'Mapillary · CC BY-SA 4.0', page: 'https://www.mapillary.com/app/?pKey=' + best.id, street: true };
+}
 let photoTicket = 0;
 async function showPhoto(i) {
   const ticket = ++photoTicket, current = () => ticket === photoTicket && state.selected === i;
@@ -1478,6 +1502,8 @@ async function showPhoto(i) {
       const w = await webFor(i), u = w.entry && w.entry[8], site = (w.entry && w.entry[1]) || (rec && rec[6]) || u;
       if (u && /^https:\/\//.test(u)) { const h = new URL(/^https?:/.test(site) ? site : 'https://' + site).hostname.replace(/^www\./, ''); photo = { src: u, file: rec && rec[0], author: h, license: tr('parishSitePhoto'), page: /^https?:/.test(site) ? site : 'https://' + h, own: true }; }
     } catch (e) {}
+    // still nothing: a street-level photo from Mapillary taken near the church and facing it
+    if (!photo && MAPILLARY_TOKEN && current()) try { photo = await streetPhoto(i, rec); } catch (e) {}
   }
   if (!current()) return;
   if (!photo) { done(); return; }
@@ -1486,7 +1512,7 @@ async function showPhoto(i) {
   if (!current()) return;
   hero.querySelector('svg.scene').after(img);
   hero.classList.add('has-photo');
-  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(photo.own ? tr('photoFromSite', { site: photo.author }) : tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
+  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(photo.street ? tr('photoMapillary', { author: photo.author }) : photo.own ? tr('photoFromSite', { site: photo.author }) : tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
   requestAnimationFrame(() => img.classList.add('on'));
   done();
 }
