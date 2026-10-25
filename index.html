@@ -1155,7 +1155,7 @@ function applyMassFilter(fly) {
 function renderMassChips() {
   const langs = {};
   for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = (v[j] >> 19) & 31; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
-  const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
+  const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => massLangName(mf.data.langs[a[0]]).localeCompare(massLangName(mf.data.langs[b[0]]), document.documentElement.lang || undefined)).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
   const pin = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/></svg>';
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
     <button class="chip" data-m="massNear" aria-pressed="${mn.kind === 0}" title="${esc(tr('massNearTip', { dist: nearDist(nearMiles) }))}">${pin}${esc(tr('massNear'))}</button>
@@ -1262,14 +1262,30 @@ async function massNear(kind) {
   closeCard();
   const wide = innerWidth > 640, pad = wide ? { left: 380, right: 80, top: 190, bottom: 80 } : { top: 190, bottom: innerHeight * 0.62, left: 40, right: 40 };
   if (kind === 2) {
-    // pull back to show every church with Mass in this language, wherever they are
-    const pts = [...inLang].map(i => [state.lon[i] / 1e6, state.lat[i] / 1e6]);
+    // go to where most of these churches are; pull back to the whole world only when they really are spread across it
+    const pts = mainCluster([...inLang].map(i => [state.lon[i] / 1e6, state.lat[i] / 1e6]));
     if (pts.length) map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 9, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   } else if (rows.length) {
     const pts = [[lon, lat], ...rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
     map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 14, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   }
   renderMassNear();
+}
+// the part of the world holding most of these points: the busiest 25° square and its neighbours when it
+// holds at least 60% of them, otherwise all of them; either way without the farthest 5% at each edge
+function mainCluster(pts) {
+  const cell = (p) => [Math.floor(p[0] / 25), Math.floor(p[1] / 25)], count = new Map();
+  for (const p of pts) { const k = cell(p).join(); count.set(k, (count.get(k) || 0) + 1); }
+  let best = null, top = 0;
+  for (const [k, n] of count) if (n > top) { top = n; best = k.split(',').map(Number); }
+  const near = best ? pts.filter(p => { const [x, y] = cell(p); return Math.abs(x - best[0]) <= 1 && Math.abs(y - best[1]) <= 1; }) : pts;
+  let out = near.length >= pts.length * 0.6 ? near : pts;
+  if (out.length >= 20) {
+    const cut = (j) => { const v = out.map(p => p[j]).sort((a, b) => a - b); return [v[Math.floor(v.length * 0.05)], v[Math.ceil(v.length * 0.95) - 1]]; };
+    const [x0, x1] = cut(0), [y0, y1] = cut(1);
+    out = out.filter(p => p[0] >= x0 && p[0] <= x1 && p[1] >= y0 && p[1] <= y1);
+  }
+  return out;
 }
 // listings that slipped into the data but are businesses or groups, not churches: kept off the lists
 const NOT_CHURCH = /\b(servpro|plumbing|roofing|insurance|realty|real estate|law (office|firm)|attorney|dental|dentist|clinic|restaurant|cafe|catering|thrift|food bank|food pantry|catholic worker|charities|school|academy|college|university|bookstore|gift shop|cemetery|funeral|mortuary|office|center for|knights of columbus)\b/i;
