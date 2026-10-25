@@ -570,7 +570,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <footer class="foot">
   <button id="aboutBtn" data-i18n="aboutData">About the data</button>
   <button id="contactBtn" data-i18n="contact">Contact</button>
-  <span data-i18n="footCredit">Places © Overture Maps Foundation · Basemap Natural Earth</span>
+  <span data-i18n="footCredit">Places © Overture Maps Foundation · Basemap Natural Earth, streets © OpenStreetMap contributors via OpenFreeMap</span>
   <span class="coords" id="coords"></span>
 </footer>
 
@@ -672,7 +672,7 @@ const EN = {
   searchPh: 'Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków', searchLabel: 'Search churches by name or town',
   chipsLabel: 'Show church types', nearMe: 'Churches near me', yourFavs: 'Your favorite churches', spin: 'Spin the globe',
   zoomIn: 'Zoom in', zoomOut: 'Zoom out', home: 'Back to the whole globe', random: 'Visit a random church',
-  aboutData: 'About the Data', footCredit: 'Places © Overture Maps Foundation · Basemap Natural Earth',
+  aboutData: 'About the Data', footCredit: 'Places © Overture Maps Foundation · Basemap Natural Earth, streets © OpenStreetMap contributors via OpenFreeMap',
   nearYou: 'Near You', closeNear: 'Close nearby churches', favorites: 'Favorites', closeFavs: 'Close favorites',
   closeDetails: 'Close details', gallery: 'Photo gallery', prevPhoto: 'Previous photo', nextPhoto: 'Next photo', closeGallery: 'Close gallery',
   type_cathedral: 'Cathedrals', one_cathedral: 'Cathedral', type_basilica: 'Basilicas', one_basilica: 'Basilica',
@@ -1533,6 +1533,26 @@ window.__map = map;
 let places = null;
 // city names on the map: languages with their own Natural Earth column, the rest read English (Hindi and Tamil can't be drawn by the map)
 const cityNames = new Map(), CITY_FILES = new Set(['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja']);
+/* ---------- streets once you zoom into a town: OpenStreetMap vector tiles from OpenFreeMap (free, no key) ---------- */
+function addStreets() {
+  map.addSource('osm', { type: 'vector', url: 'https://tiles.openfreemap.org/planet', minzoom: 0, maxzoom: 14 });
+  const fade = (from, to = from + 1.5, max = 1) => ['interpolate', ['linear'], ['zoom'], from, 0, to, max];
+  const w = (pairs) => ['interpolate', ['exponential', 1.6], ['zoom'], ...pairs];
+  const roads = (id, classes, minzoom, color, widths) => map.addLayer({ id, type: 'line', source: 'osm', 'source-layer': 'transportation', minzoom,
+    filter: ['in', ['get', 'class'], ['literal', classes]], layout: { 'line-cap': 'round', 'line-join': 'round' },
+    paint: { 'line-color': color, 'line-width': w(widths), 'line-opacity': fade(minzoom) } });
+  map.addLayer({ id: 'st-water', type: 'fill', source: 'osm', 'source-layer': 'water', minzoom: 9, paint: { 'fill-color': '#1a2433', 'fill-opacity': fade(9) } });
+  map.addLayer({ id: 'st-park', type: 'fill', source: 'osm', 'source-layer': 'park', minzoom: 10, paint: { 'fill-color': '#2c3a30', 'fill-opacity': fade(10, 11.5, 0.8) } });
+  map.addLayer({ id: 'st-green', type: 'fill', source: 'osm', 'source-layer': 'landcover', minzoom: 10, filter: ['in', ['get', 'class'], ['literal', ['grass', 'wood']]], paint: { 'fill-color': '#2c3a30', 'fill-opacity': fade(10, 11.5, 0.5) } });
+  map.addLayer({ id: 'st-building', type: 'fill', source: 'osm', 'source-layer': 'building', minzoom: 14, paint: { 'fill-color': '#36373d', 'fill-opacity': fade(14, 15, 0.8) } });
+  roads('st-minor', ['minor', 'service'], 12.5, '#3e3f45', [12.5, 0.4, 16, 4, 18, 12]);
+  roads('st-mid', ['secondary', 'tertiary'], 10, '#4b4a4c', [10, 0.4, 14, 2.2, 16, 6, 18, 16]);
+  roads('st-major', ['primary', 'trunk'], 8, '#5c564b', [8, 0.5, 14, 3, 16, 8, 18, 20]);
+  roads('st-motorway', ['motorway'], 7, '#7a6644', [7, 0.5, 14, 3.5, 16, 10, 18, 24]);
+  map.addLayer({ id: 'st-names', type: 'symbol', source: 'osm', 'source-layer': 'transportation_name', minzoom: 14,
+    layout: { 'symbol-placement': 'line', 'text-field': ['coalesce', ['get', 'name:latin'], ['get', 'name']], 'text-font': ['NotoSansMedium'], 'text-size': 11, 'text-max-angle': 30 },
+    paint: { 'text-color': '#a3a19a', 'text-halo-color': '#26282e', 'text-halo-width': 1.4 } });
+}
 async function setCityLabels() {
   const f = CITY_FILES.has(i18n.code) ? i18n.code : 'en';
   if (!cityNames.has(f)) cityNames.set(f, getJSON('base/names/' + f + '.json').catch(e => { cityNames.delete(f); return []; }));
@@ -1547,12 +1567,13 @@ async function addBasemap() {
   const src = Object.fromEntries(files.map((f, k) => [f, data[k]]));
   places = src.places;
   for (const f of files) map.addSource(f, { type: 'geojson', data: src[f], tolerance: 0.6 });
-  map.addLayer({ id: 'land', type: 'fill', source: 'land', paint: { 'fill-color': ['interpolate', ['linear'], ['zoom'], 0, '#1b2a40', 6, '#1f3048', 12, '#24364f'] } });
+  map.addLayer({ id: 'land', type: 'fill', source: 'land', paint: { 'fill-color': ['interpolate', ['linear'], ['zoom'], 0, '#1b2a40', 6, '#1f3048', 9, '#262f3d', 12, '#2b2e35'] } });  // warms toward slate in a city
   map.addLayer({ id: 'land-edge', type: 'line', source: 'land', paint: { 'line-color': '#3a5378', 'line-width': ['interpolate', ['linear'], ['zoom'], 0, 0.5, 6, 1.2], 'line-opacity': 0.8 } });
-  map.addLayer({ id: 'urban', type: 'fill', source: 'urban', minzoom: 4, paint: { 'fill-color': '#2c3f5c', 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 4, 0, 6, 0.8] } });
+  map.addLayer({ id: 'urban', type: 'fill', source: 'urban', minzoom: 4, paint: { 'fill-color': '#2c3f5c', 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 4, 0, 6, 0.8, 9, 0.8, 11, 0] } });
   map.addLayer({ id: 'lakes', type: 'fill', source: 'lakes', paint: { 'fill-color': '#0c2040' } });
   map.addLayer({ id: 'rivers', type: 'line', source: 'rivers', minzoom: 3, paint: { 'line-color': '#1a3a66', 'line-width': ['interpolate', ['linear'], ['zoom'], 3, 0.4, 8, 1.6] } });
   map.addLayer({ id: 'states', type: 'line', source: 'states', minzoom: 3.5, paint: { 'line-color': '#4a6185', 'line-width': 0.6, 'line-dasharray': [3, 2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 3.5, 0, 5, 0.6] } });
+  addStreets();
   map.addLayer({ id: 'borders', type: 'line', source: 'borders', paint: { 'line-color': '#6b83a8', 'line-width': ['interpolate', ['linear'], ['zoom'], 0, 0.4, 6, 1.2], 'line-opacity': 0.7 } });
   map.addLayer({
     id: 'places', type: 'symbol', source: 'places',
