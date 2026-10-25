@@ -672,6 +672,9 @@ const EN = {
   closeDetails: 'Close details', gallery: 'Photo gallery', prevPhoto: 'Previous photo', nextPhoto: 'Next photo', closeGallery: 'Close gallery',
   type_cathedral: 'Cathedrals', one_cathedral: 'Cathedral', type_basilica: 'Basilicas', one_basilica: 'Basilica',
   type_shrine: 'Shrines', one_shrine: 'Shrine', type_parish: 'Parishes', one_parish: 'Parish church',
+  desc_cathedral: "A bishop's own church, the mother church of a diocese.", desc_basilica: 'A church honored by the Pope with the title of basilica.',
+  desc_shrine: 'A place of pilgrimage and devotion.', desc_church: 'The ordinary parish and neighborhood churches: every church that is not a cathedral, basilica, shrine, chapel or abbey.',
+  desc_chapel: 'A smaller chapel or oratory, often served from a nearby parish.', desc_abbey: 'The home church of a community of monks, nuns, friars or sisters.',
   type_church: 'Parish churches', one_church: 'Church', type_chapel: 'Chapels', one_chapel: 'Chapel',
   type_abbey: 'Abbeys & monasteries', one_abbey: 'Abbey or monastery',
   loadingPhoto: 'Loading photo', photoOf: 'Photograph of {name}', theChurch: 'the church',
@@ -2385,7 +2388,7 @@ function renderChips() {
   const all = state.enabled.size === TYPES.length;
   const tick = '<svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   const low = (s) => i18n.code === 'de' ? s : s.toLocaleLowerCase(i18n.locale); // German nouns keep their capital
-  const tipFor = (t) => tr(all ? 'onlyType' : state.enabled.has(t.code) ? 'hideType' : 'alsoType', { type: low(t.label) });
+  const tipFor = (t) => tr('desc_' + t.key) + '\n' + tr(all ? 'onlyType' : state.enabled.has(t.code) ? 'hideType' : 'alsoType', { type: low(t.label) });
   $('chips').classList.toggle('filtered', !all);
   const n = (t) => (counts[t.code] || 0) + (t.with ? counts[t.with] || 0 : 0);
   $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-k="all" aria-pressed="${all}" title="${esc(tr(all ? 'allOn' : 'allAgain'))}">${esc(tr('all'))}</button>` + TYPES.filter(t => t.chip !== false && n(t)).map(t =>
