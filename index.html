@@ -564,6 +564,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <button id="zin" title="Zoom in" aria-label="Zoom in" data-i18n-attr="title:zoomIn;aria-label:zoomIn"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
   <button id="zout" title="Zoom out" aria-label="Zoom out" data-i18n-attr="title:zoomOut;aria-label:zoomOut"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
   <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe" data-i18n-attr="title:home;aria-label:home"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
+  <button id="listHere" title="List Churches Here" aria-label="List Churches Here" data-i18n-attr="title:listHere;aria-label:listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg></button>
   <button id="rand" title="Visit a random church" aria-label="Visit a random church" data-i18n-attr="title:random;aria-label:random"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg></button>
 </div>
 
@@ -664,7 +665,7 @@ function detectLang() {
 // English is built in; every other language is i18n/<code>.json with the same keys, missing keys fall back to English.
 // Plural forms are key_one, key_few, key_many, key_other (Intl.PluralRules categories) and are picked by vars.n.
 const EN = {
-  startOver: 'Start over', youAreHere: 'You Are Here',
+  startOver: 'Start over', listHere: 'List Churches Here', churchesIn: 'Churches in {place}', churchesInView: 'Churches in This View', areaIntro: 'Nearest to you first. Tap one for details.', areaIntroCenter: 'Nearest to the middle first. Tap one for details.', areaMore: 'Showing the {k} nearest of {n}. Zoom in to see the rest.', areaNone: 'No churches are mapped here yet.', areaTag: 'Showing {n} churches in {place}', areaTagView: 'Showing {n} churches in this view', areaTip: 'Click to list this city\'s churches', youAreHere: 'You Are Here',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
   loadingChurches: 'Loading churches…', gathering: 'Gathering churches from around the world…',
   gatheringN: 'Gathering {n} churches from around the world…', placing: 'Placing them on the globe…',
@@ -734,7 +735,7 @@ const EN = {
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass Soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
   massNear: 'Mass Near Me', confNear: 'Confession Near Me', massNearTip: 'Churches within {dist} of you, nearest first, with their next Mass', confNearTip: 'Churches within {dist} of you, nearest first, with their next Confession',
   massNearTitle: 'Masses Near You', langListTitle: 'Mass in {lang}, Nearest First', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession Near You', massNearIntro: 'Churches within {dist}, nearest first, with the next Mass when the parish posts it online. Tap one for details.', confNearIntro: 'Churches within {dist}, nearest first, with the next Confession when the parish posts it online. Tap one for details.', massNearTag: 'Showing {n} churches within {dist}', confNearTag: 'Showing {n} churches within {dist}', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
-  noTimesWeek: 'No time listed this week', timesUnknown: 'Times not listed, check the parish website', websiteShort: 'Website', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church is within {dist}. Here is the nearest one.', nearDistLabel: 'How far to look',
+  noTimesWeek: 'No time listed this week', timesUnknown: 'Times not listed, check the parish website', websiteShort: 'Website', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church is within {dist}. Here is the nearest one.', nearDistLabel: 'How far to look', noneInRange: 'No church of the kinds you have chosen is within {dist}. Try a longer distance or show more kinds above.',
   seeWorldwide: 'See all {n} churches with Mass in {lang} worldwide', timesCheck: 'Times come from parish websites. Check with the parish before you go.',
   confSoon: 'Confession Soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
   anyLang: 'Any Language', clear: 'Clear', signLanguage: 'Sign Language', aramaic: 'Aramaic',
@@ -960,6 +961,7 @@ function buildGeoJSON() {
     if (state.only && !state.only.has(i)) continue;
     feats.push({ type: 'Feature', id: i, geometry: { type: 'Point', coordinates: [lon[i] / 1e6, lat[i] / 1e6] }, properties: { t, m: typ[i] >> 3 } });
   }
+  queueMicrotask(syncFavRings);
   return { type: 'FeatureCollection', features: feats };
 }
 function notableGeoJSON() {
@@ -1211,12 +1213,12 @@ async function massNear(kind) {
   const li = kind === 2 ? mf.data.langs.indexOf(mf.lang) : -1, inLang = kind === 2 ? langSet(mf.lang) : null;
   const cos = Math.cos(lat * Math.PI / 180), cand = [];
   for (const [k, v] of Object.entries(mf.data.c)) {
-    const i = +k; if (i >= state.n || (inLang && !inLang.has(i))) continue;
+    const i = +k; if (i >= state.n || (inLang && !inLang.has(i)) || !state.enabled.has(state.typ[i] & 7)) continue;
     const dx = (state.lon[i] / 1e6 - lon) * cos, dy = state.lat[i] / 1e6 - lat;
     cand.push([dx * dx + dy * dy, i, v]);
   }
   cand.sort((a, b) => a[0] - b[0]);  // closest first
-  const rows = [];
+  let rows = [];
   if (kind < 2) {
     // every church within the chosen distance, nearest first; the ones whose websites we could read also show their next time
     state.only = null;
@@ -1230,6 +1232,10 @@ async function massNear(kind) {
     rows.push({ i, n: nextTime(v, 0, li), m: metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6) });
     if (rows.length >= 300) break;
   }
+  // leave out listings that are businesses or offices rather than churches
+  const named = await Promise.all(rows.map(r => shardFor(r.i).catch(() => null)));
+  if (mn.kind !== kind) return;
+  rows = rows.filter((r, k) => !notChurch(named[k] && named[k][0]));
   mn.far = kind < 2 && rows.length === 1 && rows[0].m > nearM();
   mn.rows = rows;
   state.only = kind === 2 ? inLang : new Set(rows.map(r => r.i));
@@ -1248,8 +1254,66 @@ async function massNear(kind) {
   }
   renderMassNear();
 }
+// listings that slipped into the data but are businesses or groups, not churches: kept off the lists
+const NOT_CHURCH = /\b(servpro|plumbing|roofing|insurance|realty|real estate|law (office|firm)|attorney|dental|dentist|clinic|restaurant|cafe|catering|thrift|food bank|food pantry|catholic worker|charities|school|academy|college|university|bookstore|gift shop|cemetery|funeral|mortuary|office|center for|knights of columbus)\b/i;
+const CHURCHY_NAME = /\b(church|parish|chapel|cathedral|basilica|shrine|mission|iglesia|parroquia|capilla|igreja|chiesa|eglise|église|kirche|santuario|abbey|monastery|priory|oratory)\b/i;
+const NEVER_CHURCH = /\b(servpro|plumbing|roofing|insurance|realty|attorney|dental|dentist|youth office|parish office|business office|thrift store|gift shop|bookstore|food pantry|food bank)\b/i;
+const notChurch = (name) => !!name && (NEVER_CHURCH.test(name) || (NOT_CHURCH.test(name) && !CHURCHY_NAME.test(name)));
+/* ---------- list the churches in a city (click its name) or in the whole view ---------- */
+async function listArea(args) {
+  const { name, center, pop, bounds } = args;
+  if (state.mode !== 'churches') return;
+  if (mn.kind >= 0) endMassNear();
+  mf.lang = ''; renderMassChips();
+  const inView = !!bounds;
+  // a city reaches further the bigger it is
+  const radius = pop > 3e6 ? 30000 : pop > 1e6 ? 22000 : pop > 3e5 ? 14000 : pop > 5e4 ? 8000 : 5000;
+  const [clon, clat] = center, cos = Math.cos(clat * Math.PI / 180);
+  const { lon: L, lat: A, typ, n, enabled } = state, hits = [];
+  for (let i = 0; i < n; i++) {
+    if (!enabled.has(typ[i] & 7)) continue;
+    const lo = L[i] / 1e6, la = A[i] / 1e6;
+    if (inView ? !bounds.contains([lo, la]) : metres(clat, clon, la, lo) > radius) continue;
+    hits.push(i);
+  }
+  const from = here || center;  // nearest to you when we know where you are
+  let rows = hits.map(i => ({ i, m: metres(from[1], from[0], A[i] / 1e6, L[i] / 1e6) })).sort((a, b) => a.m - b.m);
+  const named = await Promise.all(rows.slice(0, 300).map(r => shardFor(r.i).catch(() => null)));
+  const junk = new Set(rows.slice(0, 300).filter((r, k) => notChurch(named[k] && named[k][0])).map(r => r.i));
+  if (junk.size) { rows = rows.filter(r => !junk.has(r.i)); for (const i of junk) hits.splice(hits.indexOf(i), 1); }
+  mn.kind = 3; mn.areaArgs = args; mn.rows = rows.slice(0, 300); mn.area = { name: inView ? '' : name, total: rows.length, fromYou: !!here };
+  state.only = new Set(hits);
+  map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
+  map.once('idle', updateNames);
+  const ring = [];
+  if (!inView) for (let k = 0; k <= 64; k++) { const t = k / 64 * 2 * Math.PI; ring.push([clon + Math.cos(t) * radius / (111320 * cos), clat + Math.sin(t) * radius / 110540]); }
+  map.getSource('area').setData({ type: 'FeatureCollection', features: ring.length ? [{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [ring] }, properties: {} }] : [] });
+  $('tagline').textContent = inView ? tr('areaTagView', { n: fmt(rows.length) }) : tr('areaTag', { n: fmt(rows.length), place: name });
+  closeCard(); showNear(true); renderMassChips();
+  if (!inView && ring.length) {
+    const wide = innerWidth > 640;
+    map.fitBounds(ring.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(ring[0], ring[0])), { padding: wide ? { left: 380, right: 80, top: 190, bottom: 60 } : { top: 190, bottom: innerHeight * 0.62, left: 30, right: 30 }, pitch: 0, duration: reduceMotion ? 0 : 1600 });
+  }
+  renderArea();
+}
+async function renderArea() {
+  const rows = mn.rows, a = mn.area, list = $('nearList'); if (!rows || !a) return;
+  setNearTitle();
+  $('nearN').textContent = fmt(a.total);
+  list.innerHTML = `<p class="empty">${esc(tr('finding'))}</p>`;
+  let recs = []; try { recs = await Promise.all(rows.map(r => shardFor(r.i))); } catch (e) {}
+  if (rows !== mn.rows) return;
+  list.innerHTML = (rows.length ? `<p class="note">${esc(tr(a.fromYou ? 'areaIntro' : 'areaIntroCenter'))}</p>` : `<p class="empty">${esc(tr('areaNone'))}</p>`)
+    + rows.map((r, k) => {
+      const rec = recs[k] || [], t = state.typ[r.i] & 7;
+      if (notChurch(rec[0])) return '';
+      return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc([TYPE_BY_CODE[t].one, rec[2]].filter(Boolean).join(' · '))}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+    }).join('')
+    + (a.total > rows.length ? `<p class="note">${esc(tr('areaMore', { k: fmt(rows.length), n: fmt(a.total) }))}</p>` : '');
+}
 function setNearTitle() {
   const title = document.querySelector('#nearTitle span');
+  if (mn.kind === 3) { title.dataset.i18n = mn.area.name ? 'churchesIn' : 'churchesInView'; title.textContent = mn.area.name ? tr('churchesIn', { place: mn.area.name }) : tr('churchesInView'); return; }
   title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : mn.kind === 1 ? 'confNearTitle' : mn.kind === 0 ? 'massNearTitle' : 'nearYou';
   title.textContent = mn.kind === 2 ? tr('langListTitle', { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
 }
@@ -1262,13 +1326,15 @@ async function renderMassNear() {
   const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : 'massNearIntro';
   list.innerHTML = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear', { dist: nearDist(nearMiles) }))}</p>` : '') + (rows.length ? rows.slice(0, 150).map((r, k) => {
     const rec = recs[k] || [], unknown = mn.kind < 2 && !r.n && !mf.data.c[r.i], site = rec[6] ? (/^https?:/.test(rec[6]) ? rec[6] : 'https://' + rec[6]) : '', t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
+    if (notChurch(rec[0])) return '';
     return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span>${unknown ? `<span class="loc wrap">${esc(tr('timesUnknown'))}</span>` : `<span class="loc"><b class="when">${esc(r.n ? whenText(r.n) : tr('noTimesWeek'))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span>`}</div></button><span class="dist">${fmtDist(r.m)}${unknown && site ? `<a class="site" href="${esc(site)}" target="_blank" rel="noopener">${esc(tr('websiteShort'))}</a>` : ''}</span></li>`;
-  }).join('') : `<p class="empty">${esc(tr('noMassNear'))}</p>`)
+  }).join('') : `<p class="empty">${esc(tr('noneInRange', { dist: nearDist(nearMiles) }))}</p>`)
     + `<p class="note">${esc(tr('timesCheck'))}</p>`;
 }
 function endMassNear() {
   if (mn.kind < 0) return;
-  mn.kind = -1; mn.rows = null; state.only = null;
+  mn.kind = -1; mn.rows = null; mn.area = null; state.only = null;
+  if (map.getSource('area')) map.getSource('area').setData({ type: 'FeatureCollection', features: [] });
   setNearTitle();
 }
 
@@ -1589,6 +1655,9 @@ async function addBasemap() {
 }
 
 function addChurchLayers() {
+  map.addSource('area', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'area-fill', type: 'fill', source: 'area', paint: { 'fill-color': '#e8b84a', 'fill-opacity': 0.07 } });
+  map.addLayer({ id: 'area-line', type: 'line', source: 'area', paint: { 'line-color': '#e8b84a', 'line-width': 1.5, 'line-opacity': 0.6, 'line-dasharray': [3, 2] } });
   map.addSource('churches', { type: 'geojson', data: buildGeoJSON(), cluster: true, clusterRadius: 44, clusterMaxZoom: 7, maxzoom: 15, buffer: 64 });
   map.addSource('notable', { type: 'geojson', data: notableGeoJSON() });
   map.addSource('sel', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
@@ -1726,8 +1795,12 @@ function renderFavs() {
   $('favN').textContent = favs.length ? favs.length : '';
   $('favList').innerHTML = favs.length ? favs.map(f => `<li><button class="go" data-i="${f.i}"><i style="background:${(TYPE_BY_CODE[f.t] || TYPE_BY_CODE[0]).color}"></i><div><span class="nm">${esc(f.name)}</span><span class="loc">${esc(f.place)}</span></div></button><button class="rm" data-i="${f.i}" aria-label="${esc(tr('favRemoveName', { name: f.name }))}" title="${esc(tr('remove'))}"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>`).join('')
     : `<p class="empty">${tr('favEmpty', { save: `<b><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg> ${esc(tr('save'))}</b>` })}</p>`;
+  syncFavRings();
+}
+// the pink favorite rings follow the filters: no ring is left standing where its church is hidden
+function syncFavRings() {
   let src = null; try { src = map.getSource('favs'); } catch (e) {}
-  if (src && state.lon) src.setData({ type: 'FeatureCollection', features: favs.filter(f => f.i < state.n).map(f => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[f.i] / 1e6, state.lat[f.i] / 1e6] }, properties: {} })) });
+  if (src && state.lon) src.setData({ type: 'FeatureCollection', features: favs.filter(f => f.i < state.n && state.enabled.has(state.typ[f.i] & 7) && (!state.only || state.only.has(f.i))).map(f => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[f.i] / 1e6, state.lat[f.i] / 1e6] }, properties: {} })) });
 }
 function showFavs(open) {
   if (open) showNear(false);
@@ -2214,7 +2287,7 @@ async function renderNear() {
   }).join('');
 }
 $('nearBtn').addEventListener('click', () => { if ($('near').hidden) findNear(); else showNear(false); });
-$('nearClose').addEventListener('click', () => showNear(false));
+$('nearClose').addEventListener('click', () => { showNear(false); if (mn.kind === 3) { endMassNear(); applyMassFilter(); } });  // closing a city list brings every church back
 $('nearList').addEventListener('click', (e) => {
   const go = e.target.closest('button.go'); if (!go) return;
   if (innerWidth <= 640) showNear(false);
@@ -2312,10 +2385,22 @@ map.on('mousemove', async (e) => {
   } catch (err) { /* tooltip stays generic */ }
 });
 map.getCanvas().addEventListener('mouseleave', () => { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); });
+map.on('mouseenter', 'places', () => { if (state.mode === 'churches') map.getCanvas().style.cursor = 'pointer'; });
+map.on('mouseleave', 'places', () => { map.getCanvas().style.cursor = ''; });
+$('listHere').addEventListener('click', () => {
+  if (state.mode !== 'churches') return;
+  const b = map.getBounds(), c = map.getCenter();
+  listArea({ bounds: b, center: [c.lng, c.lat] });
+});
 map.on('click', async (e) => {
   if (!map.getLayer('pt') || state.mode !== 'churches') return;
   const f = pick(e.point, coarse ? 26 : 16);
-  if (!f) return;
+  if (!f) {
+    // a city name: list that city's churches
+    const c = map.queryRenderedFeatures([[e.point.x - 6, e.point.y - 6], [e.point.x + 6, e.point.y + 6]], { layers: ['places'] })[0];
+    if (c) listArea({ name: c.properties.label || c.properties.name, center: c.geometry.coordinates, pop: c.properties.pop_max || 0 });
+    return;
+  }
   lastInteract = performance.now();
   if (f.layer.id === 'cl') {
     const z = await map.getSource('churches').getClusterExpansionZoom(f.properties.cluster_id);
@@ -2596,6 +2681,9 @@ $('chips').addEventListener('click', (e) => {
   if (state.selected >= 0 && !state.enabled.has(state.typ[state.selected] & 7)) closeCard();
   map.getSource('churches').setData(buildGeoJSON());
   map.getSource('notable').setData(notableGeoJSON());
+  // an open Near Me, language or city list is redrawn for the new filter instead of going stale
+  if (mn.kind === 3 && mn.areaArgs) { listArea(mn.areaArgs); return; }
+  if (mn.kind >= 0) { massNear(mn.kind); return; }
   updateTagline();
   map.once('idle', updateNames);
   revealMatches();
@@ -2765,7 +2853,7 @@ $('langSel').addEventListener('change', async (e) => {
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
   if (life.data && state.mode !== 'jesus') buildTimeline();
-  renderFavs(); if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels();
+  renderFavs(); if (mn.kind === 3) renderArea(); else if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels();
   if (map.getLayer('me-label')) map.setLayoutProperty('me-label', 'text-field', tr('youAreHere'));
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
