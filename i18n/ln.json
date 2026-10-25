@@ -350,5 +350,20 @@
   "jInGospels": "Na Nsango Malamu",
   "jShareTitle": "{name} na bomoi ya Yesu",
   "jNoMatch": "Esika to ntango moko te na bomoi ya Yesu ekokani na “{q}”.",
-  "jProv": "Ba vèrse ya Nsango Malamu elandi New American Bible, Revised Edition, libongoli ya katolike oyo esalelamaka na Misa na Amerika. Molongo elandi boyokani ya bonkoko ya Nsango Malamu minei; soki ba evanjeliste bakeseni to esika eyebani malamu te, karte elobaka yango. Finá vèrse mpo na kotanga yango na site ya USCCB."
+  "jProv": "Ba vèrse ya Nsango Malamu elandi New American Bible, Revised Edition, libongoli ya katolike oyo esalelamaka na Misa na Amerika. Molongo elandi boyokani ya bonkoko ya Nsango Malamu minei; soki ba evanjeliste bakeseni to esika eyebani malamu te, karte elobaka yango. Finá vèrse mpo na kotanga yango na site ya USCCB.",
+  "massNear": "Misa pene na ngai",
+  "confNear": "Botubeli pene na ngai",
+  "massNearTip": "Ba ndako-Nzambe pene na yo, Misa ya liboso",
+  "confNearTip": "Ba ndako-Nzambe pene na yo, Botubeli ya liboso",
+  "massNearTitle": "Misa pene na yo",
+  "confNearTitle": "Botubeli pene na yo",
+  "whenNow": "Sikoyo",
+  "whenToday": "Lelo {time}",
+  "whenTomorrow": "Lobi {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Ngonga moko te na pɔsɔ oyo",
+  "usingMapCenter": "Esika na yo ekangami, yango wana oyo ezali pene na katikati ya karte.",
+  "noMassNear": "Ndako-Nzambe moko te pene akomi naino bangonga na yango.",
+  "seeWorldwide": "Tala ba ndako-Nzambe nyonso {n} oyo ezali na Misa na {lang} na mokili mobimba",
+  "timesCheck": "Bangonga euti na ba site ya ba paroisi. Tuna paroisi liboso ya kokende."
 }

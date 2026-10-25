@@ -350,5 +350,20 @@
   "jInGospels": "Sa mga Ebanghelyo",
   "jShareTitle": "{name} sa kabuhi ni Jesus",
   "jNoMatch": "Wala sing lugar ukon hitabo sa kabuhi ni Jesus nga nagaangot sa “{q}”.",
-  "jProv": "Ang mga kinutlo sa Ebanghelyo nagasunod sa New American Bible, Revised Edition, ang Katoliko nga badbad nga ginagamit sa Misa sa Estados Unidos. Ang han-ay nagasunod sa tradisyonal nga paghiliuyon sang apat ka Ebanghelyo; kon nagalain ang mga ebanghelista ukon indi sigurado ang lugar, ginasiling ini sang kard. Tandluma ang kinutlo agod basahon ini sa website sang USCCB."
+  "jProv": "Ang mga kinutlo sa Ebanghelyo nagasunod sa New American Bible, Revised Edition, ang Katoliko nga badbad nga ginagamit sa Misa sa Estados Unidos. Ang han-ay nagasunod sa tradisyonal nga paghiliuyon sang apat ka Ebanghelyo; kon nagalain ang mga ebanghelista ukon indi sigurado ang lugar, ginasiling ini sang kard. Tandluma ang kinutlo agod basahon ini sa website sang USCCB.",
+  "massNear": "Misa malapit sa akon",
+  "confNear": "Kumpisal malapit sa akon",
+  "massNearTip": "Mga simbahan malapit sa imo, ang pinakamadali nga Misa una",
+  "confNearTip": "Mga simbahan malapit sa imo, ang pinakamadali nga Kumpisal una",
+  "massNearTitle": "Misa malapit sa imo",
+  "confNearTitle": "Kumpisal malapit sa imo",
+  "whenNow": "Subong",
+  "whenToday": "Subong nga adlaw {time}",
+  "whenTomorrow": "Buwas {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Wala sing oras sini nga semana",
+  "usingMapCenter": "Ginpatay ang lokasyon, gani malapit ini sa tunga sang mapa.",
+  "noMassNear": "Wala pa sing malapit nga simbahan nga naglista sang ila oras.",
+  "seeWorldwide": "Tan-awa ang {n} ka simbahan nga may Misa sa {lang} sa bug-os nga kalibutan",
+  "timesCheck": "Ang mga oras halin sa mga website sang parokya. Pamangkuta ang parokya antes magkadto."
 }

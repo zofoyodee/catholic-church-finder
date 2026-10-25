@@ -350,5 +350,20 @@
   "jInGospels": "N'Oziọma",
   "jShareTitle": "{name} na ndụ Jizọs",
   "jNoMatch": "Ọ dịghị ebe ma ọ bụ oge na ndụ Jizọs dabara na “{q}”.",
-  "jProv": "Amaokwu Oziọma na-eso New American Bible, Revised Edition, ntụgharị Katọlik a na-eji na Mas na United States. Usoro ahụ na-eso nchikọta ọdịnala nke Oziọma anọ; ebe ndị dere Oziọma dị iche ma ọ bụ ebe a maghị nke ọma, kaadị na-ekwu ya. Pịa amaokwu ka ịgụọ ya na weebụsaịtị USCCB."
+  "jProv": "Amaokwu Oziọma na-eso New American Bible, Revised Edition, ntụgharị Katọlik a na-eji na Mas na United States. Usoro ahụ na-eso nchikọta ọdịnala nke Oziọma anọ; ebe ndị dere Oziọma dị iche ma ọ bụ ebe a maghị nke ọma, kaadị na-ekwu ya. Pịa amaokwu ka ịgụọ ya na weebụsaịtị USCCB.",
+  "massNear": "Mas dị nso n'ebe m nọ",
+  "confNear": "Nkwupụta dị nso n'ebe m nọ",
+  "massNearTip": "Ụka dị gị nso, Mas nke na-abịa ngwa ngwa buru ụzọ",
+  "confNearTip": "Ụka dị gị nso, Nkwupụta nke na-abịa ngwa ngwa buru ụzọ",
+  "massNearTitle": "Mas dị gị nso",
+  "confNearTitle": "Nkwupụta dị gị nso",
+  "whenNow": "Ugbu a",
+  "whenToday": "Taa {time}",
+  "whenTomorrow": "Echi {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Enweghị oge n'izu a",
+  "usingMapCenter": "Ọnọdụ gị gbanyụrụ, ya mere ndị a dị nso n'etiti maapụ.",
+  "noMassNear": "O nweghị ụka dị nso depụtara oge ha ugbu a.",
+  "seeWorldwide": "Hụ ụka {n} niile nwere Mas n'asụsụ {lang} n'ụwa niile",
+  "timesCheck": "Oge ndị a si na weebụsaịtị parish. Jụọ parish tupu ịga."
 }

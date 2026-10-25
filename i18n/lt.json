@@ -361,5 +361,20 @@
   "jTagline_few": "<b>{n}</b> mūsų Viešpaties gyvenimo akimirkos <b>{p}</b> vietose · bakstelėkite laiko juostą arba žymeklį",
   "jMoments_few": "{n} akimirkos",
   "jTagline_many": "<b>{n}</b> mūsų Viešpaties gyvenimo akimirkos <b>{p}</b> vietose · bakstelėkite laiko juostą arba žymeklį",
-  "jMoments_many": "{n} akimirkos"
+  "jMoments_many": "{n} akimirkos",
+  "massNear": "Mišios netoliese",
+  "confNear": "Išpažintis netoliese",
+  "massNearTip": "Bažnyčios netoliese, artimiausios Mišios pirmos",
+  "confNearTip": "Bažnyčios netoliese, artimiausia išpažintis pirma",
+  "massNearTitle": "Mišios netoli jūsų",
+  "confNearTitle": "Išpažintis netoli jūsų",
+  "whenNow": "Dabar",
+  "whenToday": "Šiandien {time}",
+  "whenTomorrow": "Rytoj {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Šią savaitę laiko nėra",
+  "usingMapCenter": "Vieta išjungta, todėl rodomos bažnyčios prie žemėlapio vidurio.",
+  "noMassNear": "Jokia netoliese esanti bažnyčia dar nenurodė laikų.",
+  "seeWorldwide": "Žiūrėti visas bažnyčias ({n}) su Mišiomis kalba {lang} pasaulyje",
+  "timesCheck": "Laikai paimti iš parapijų svetainių. Prieš eidami pasitikslinkite parapijoje."
 }

@@ -350,5 +350,20 @@
   "jInGospels": "Sa mga Ebanghelyo",
   "jShareTitle": "{name} sa kinabuhi ni Hesus",
   "jNoMatch": "Walay dapit o higayon sa kinabuhi ni Hesus nga mohaom sa “{q}”.",
-  "jProv": "Ang mga kinutlo sa Ebanghelyo nagsunod sa New American Bible, Revised Edition, ang Katolikong hubad nga gigamit sa Misa sa Estados Unidos. Ang han-ay nagsunod sa tradisyonal nga panag-uyon sa upat ka Ebanghelyo; kon managlahi ang mga ebanghelista o dili sigurado ang dapit, isulti kini sa kard. Tuploka ang kinutlo aron basahon kini sa website sa USCCB."
+  "jProv": "Ang mga kinutlo sa Ebanghelyo nagsunod sa New American Bible, Revised Edition, ang Katolikong hubad nga gigamit sa Misa sa Estados Unidos. Ang han-ay nagsunod sa tradisyonal nga panag-uyon sa upat ka Ebanghelyo; kon managlahi ang mga ebanghelista o dili sigurado ang dapit, isulti kini sa kard. Tuploka ang kinutlo aron basahon kini sa website sa USCCB.",
+  "massNear": "Misa duol nako",
+  "confNear": "Kumpisal duol nako",
+  "massNearTip": "Mga simbahan duol nimo, ang labing hapit nga Misa una",
+  "confNearTip": "Mga simbahan duol nimo, ang labing hapit nga Kumpisal una",
+  "massNearTitle": "Misa duol nimo",
+  "confNearTitle": "Kumpisal duol nimo",
+  "whenNow": "Karon",
+  "whenToday": "Karong adlawa {time}",
+  "whenTomorrow": "Ugma {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Walay oras karong semanaha",
+  "usingMapCenter": "Gipalong ang lokasyon, busa duol kini sa tunga sa mapa.",
+  "noMassNear": "Wala pay simbahan nga duol nga naglista sa ilang oras.",
+  "seeWorldwide": "Tan-awa ang {n} ka simbahan nga adunay Misa sa {lang} sa tibuok kalibutan",
+  "timesCheck": "Ang mga oras gikan sa mga website sa parokya. Susiha sa parokya sa dili pa moadto."
 }

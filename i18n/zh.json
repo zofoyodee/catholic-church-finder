@@ -340,5 +340,20 @@
   "desc_shrine": "朝圣与敬礼的地方。",
   "desc_church": "普通的堂区和社区教堂：所有不属于主教座堂、圣殿、朝圣地、小堂或隐修院的教堂。",
   "desc_chapel": "较小的小堂或祈祷所，常由附近的堂区照管。",
-  "desc_abbey": "隐修士、修女、会士或修女团体的本院教堂。"
+  "desc_abbey": "隐修士、修女、会士或修女团体的本院教堂。",
+  "massNear": "我附近的弥撒",
+  "confNear": "我附近的告解",
+  "massNearTip": "附近的教堂，最近的弥撒在前",
+  "confNearTip": "附近的教堂，最近的告解在前",
+  "massNearTitle": "你附近的弥撒",
+  "confNearTitle": "你附近的告解",
+  "whenNow": "现在",
+  "whenToday": "今天 {time}",
+  "whenTomorrow": "明天 {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "本周没有列出时间",
+  "usingMapCenter": "定位已关闭，所以这些教堂靠近地图中心。",
+  "noMassNear": "附近还没有教堂列出时间。",
+  "seeWorldwide": "查看全世界 {n} 座有{lang}弥撒的教堂",
+  "timesCheck": "时间来自堂区网站。前往前请向堂区确认。"
 }

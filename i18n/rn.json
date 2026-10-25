@@ -350,5 +350,20 @@
   "jInGospels": "Mu Njili",
   "jShareTitle": "{name} mu buzima bwa Yezu",
   "jNoMatch": "Nta hantu canke ikiringo mu buzima bwa Yezu gihuye na “{q}”.",
-  "jProv": "Imirongo y'Injili ikurikiza New American Bible, Revised Edition, ubuhinduzi gatolika bukoreshwa mu Misa muri Amerika. Uko bikurikirana bikurikiza uburyo bwa kera bwo guhuza Injili zine; aho abanditsi b'Injili batandukanye canke ahantu hatazwi neza, ikarata irabivuga. Fyonda ku murongo uwusome ku rubuga rwa USCCB."
+  "jProv": "Imirongo y'Injili ikurikiza New American Bible, Revised Edition, ubuhinduzi gatolika bukoreshwa mu Misa muri Amerika. Uko bikurikirana bikurikiza uburyo bwa kera bwo guhuza Injili zine; aho abanditsi b'Injili batandukanye canke ahantu hatazwi neza, ikarata irabivuga. Fyonda ku murongo uwusome ku rubuga rwa USCCB.",
+  "massNear": "Misa hafi yanje",
+  "confNear": "Kwicuza hafi yanje",
+  "massNearTip": "Ingoro z'Imana hafi yawe, Misa ya vuba imbere",
+  "confNearTip": "Ingoro z'Imana hafi yawe, Kwicuza kwa vuba imbere",
+  "massNearTitle": "Misa hafi yawe",
+  "confNearTitle": "Kwicuza hafi yawe",
+  "whenNow": "Ubu",
+  "whenToday": "Uyu musi {time}",
+  "whenTomorrow": "Ejo {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Nta saha muri iyi ndwi",
+  "usingMapCenter": "Ikibanza cawe kirazimye, ni co gituma izi ziri hafi y'agati k'ikarata.",
+  "noMassNear": "Nta ngoro y'Imana iri hafi irashira amasaha yayo.",
+  "seeWorldwide": "Raba ingoro z'Imana {n} zose zifise Misa mu {lang} kw'isi yose",
+  "timesCheck": "Amasaha ava ku mbuga za paruwasi. Baza paruwasi imbere yo kugenda."
 }

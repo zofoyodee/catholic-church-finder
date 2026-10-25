@@ -356,5 +356,20 @@
   "jInGospels": "Në Ungjij",
   "jShareTitle": "{name} në jetën e Jezusit",
   "jNoMatch": "Asnjë vend apo çast në jetën e Jezusit nuk përputhet me “{q}”.",
-  "jProv": "Referencat e Ungjillit ndjekin New American Bible, Revised Edition, përkthimin katolik që përdoret në Meshë në SHBA. Rendi ndjek harmoninë tradicionale të katër Ungjijve; ku ungjilltarët ndryshojnë ose vendi është i pasigurt, karta e thotë. Prekni një referencë për ta lexuar në faqen e USCCB."
+  "jProv": "Referencat e Ungjillit ndjekin New American Bible, Revised Edition, përkthimin katolik që përdoret në Meshë në SHBA. Rendi ndjek harmoninë tradicionale të katër Ungjijve; ku ungjilltarët ndryshojnë ose vendi është i pasigurt, karta e thotë. Prekni një referencë për ta lexuar në faqen e USCCB.",
+  "massNear": "Meshë pranë meje",
+  "confNear": "Rrëfim pranë meje",
+  "massNearTip": "Kisha pranë jush, mesha më e afërt e para",
+  "confNearTip": "Kisha pranë jush, rrëfimi më i afërt i pari",
+  "massNearTitle": "Meshë pranë jush",
+  "confNearTitle": "Rrëfim pranë jush",
+  "whenNow": "Tani",
+  "whenToday": "Sot {time}",
+  "whenTomorrow": "Nesër {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Asnjë orar këtë javë",
+  "usingMapCenter": "Vendndodhja është e fikur, ndaj këto janë pranë mesit të hartës.",
+  "noMassNear": "Asnjë kishë aty pranë nuk ka shënuar ende oraret.",
+  "seeWorldwide": "Shih të gjitha {n} kishat me Meshë në {lang} në mbarë botën",
+  "timesCheck": "Oraret vijnë nga faqet e famullive. Pyesni famullinë para se të shkoni."
 }

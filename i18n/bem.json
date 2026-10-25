@@ -350,5 +350,20 @@
   "jInGospels": "Mu Mbila Nsuma",
   "jShareTitle": "{name} mu bumi bwa kwa Yesu",
   "jNoMatch": "Tapali incende nangu inshita mu bumi bwa kwa Yesu iilingana na “{q}”.",
-  "jProv": "Amalembo ya Mbila Nsuma yakonka New American Bible, Revised Edition, ukupilibula kwa Katolika ukubomfiwa pa Misa mu America. Ukukonkana kukonka ukulinganya kwa ntambi ukwa Mbila Nsuma shine; apo bakalemba ba Mbila Nsuma bapusana nangu incende tayaishibikwa bwino, kaadi kalanda. Tinikeni ilembo pa kulibelenga pa website ya USCCB."
+  "jProv": "Amalembo ya Mbila Nsuma yakonka New American Bible, Revised Edition, ukupilibula kwa Katolika ukubomfiwa pa Misa mu America. Ukukonkana kukonka ukulinganya kwa ntambi ukwa Mbila Nsuma shine; apo bakalemba ba Mbila Nsuma bapusana nangu incende tayaishibikwa bwino, kaadi kalanda. Tinikeni ilembo pa kulibelenga pa website ya USCCB.",
+  "massNear": "Misa mupepi na ine",
+  "confNear": "Ukulapila mupepi na ine",
+  "massNearTip": "Amacalici ayali mupepi nankwe, Misa iya mupepi ibalilepo",
+  "confNearTip": "Amacalici ayali mupepi nankwe, Ukulapila kwa mupepi kubalilepo",
+  "massNearTitle": "Misa mupepi nankwe",
+  "confNearTitle": "Ukulapila mupepi nankwe",
+  "whenNow": "Nomba",
+  "whenToday": "Lelo {time}",
+  "whenTomorrow": "Mailo {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Tapali nshita uyu mulungu",
+  "usingMapCenter": "Incende yenu yalisalwa, e ico aya yaba mupepi na pakati pa mapu.",
+  "noMassNear": "Tapali icalici ca mupepi icalembapo inshita shaco.",
+  "seeWorldwide": "Moneni amacalici yonse {n} ayakwata Misa mu {lang} mu calo conse",
+  "timesCheck": "Inshita shifuma pa ma website ya parishi. Ipusheni parishi ilyo tamulaya."
 }

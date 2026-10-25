@@ -342,5 +342,20 @@
   "desc_shrine": "Nơi hành hương và tôn kính.",
   "desc_church": "Các nhà thờ giáo xứ và khu xóm thông thường: mọi nhà thờ không phải nhà thờ chính tòa, vương cung thánh đường, đền thánh, nhà nguyện hay đan viện.",
   "desc_chapel": "Nhà nguyện hoặc nhà cầu nguyện nhỏ hơn, thường do một giáo xứ gần đó coi sóc.",
-  "desc_abbey": "Nhà thờ của một cộng đoàn đan sĩ, nữ đan sĩ, tu huynh hoặc nữ tu."
+  "desc_abbey": "Nhà thờ của một cộng đoàn đan sĩ, nữ đan sĩ, tu huynh hoặc nữ tu.",
+  "massNear": "Thánh lễ gần tôi",
+  "confNear": "Giải tội gần tôi",
+  "massNearTip": "Nhà thờ gần bạn, Thánh lễ sớm nhất trước",
+  "confNearTip": "Nhà thờ gần bạn, giờ Giải tội sớm nhất trước",
+  "massNearTitle": "Thánh lễ gần bạn",
+  "confNearTitle": "Giải tội gần bạn",
+  "whenNow": "Bây giờ",
+  "whenToday": "Hôm nay {time}",
+  "whenTomorrow": "Ngày mai {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Tuần này không có giờ",
+  "usingMapCenter": "Vị trí đang tắt nên đây là các nhà thờ gần giữa bản đồ.",
+  "noMassNear": "Chưa có nhà thờ nào gần đây ghi giờ.",
+  "seeWorldwide": "Xem tất cả {n} nhà thờ có Thánh lễ bằng {lang} trên thế giới",
+  "timesCheck": "Giờ lấy từ trang web giáo xứ. Hãy hỏi lại giáo xứ trước khi đi."
 }

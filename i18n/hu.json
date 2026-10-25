@@ -358,5 +358,20 @@
   "desc_shrine": "Zarándoklat és áhítat helye.",
   "desc_church": "A szokásos plébánia- és lakóhelyi templomok: minden templom, amely nem székesegyház, bazilika, kegyhely, kápolna vagy apátság.",
   "desc_chapel": "Kisebb kápolna vagy oratórium, gyakran egy közeli plébánia látja el.",
-  "desc_abbey": "Szerzetesek, apácák, barátok vagy nővérek közösségének temploma."
+  "desc_abbey": "Szerzetesek, apácák, barátok vagy nővérek közösségének temploma.",
+  "massNear": "Szentmise a közelemben",
+  "confNear": "Gyónás a közelemben",
+  "massNearTip": "Közeli templomok, a legközelebbi szentmise elöl",
+  "confNearTip": "Közeli templomok, a legközelebbi gyónás elöl",
+  "massNearTitle": "Szentmise a közeledben",
+  "confNearTitle": "Gyónás a közeledben",
+  "whenNow": "Most",
+  "whenToday": "Ma {time}",
+  "whenTomorrow": "Holnap {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Ezen a héten nincs időpont",
+  "usingMapCenter": "A helymeghatározás ki van kapcsolva, ezért ezek a térkép közepéhez közeliek.",
+  "noMassNear": "A közeli templomok még nem adták meg az időpontjaikat.",
+  "seeWorldwide": "Mind a(z) {n} templom megtekintése, ahol {lang} nyelvű szentmise van",
+  "timesCheck": "Az időpontok a plébániák honlapjairól származnak. Indulás előtt érdeklődj a plébánián."
 }

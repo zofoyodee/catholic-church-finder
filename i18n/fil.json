@@ -358,5 +358,20 @@
   "desc_shrine": "Isang lugar ng peregrinasyon at debosyon.",
   "desc_church": "Ang mga karaniwang simbahan ng parokya at ng pamayanan: bawat simbahang hindi katedral, basilika, dambana, kapilya o abadiya.",
   "desc_chapel": "Isang mas maliit na kapilya o oratoryo, kadalasang pinaglilingkuran ng kalapit na parokya.",
-  "desc_abbey": "Ang simbahan ng isang pamayanan ng mga monghe, madre, prayle o sister."
+  "desc_abbey": "Ang simbahan ng isang pamayanan ng mga monghe, madre, prayle o sister.",
+  "massNear": "Misa malapit sa akin",
+  "confNear": "Kumpisal malapit sa akin",
+  "massNearTip": "Mga simbahang malapit sa iyo, pinakamalapit na Misa muna",
+  "confNearTip": "Mga simbahang malapit sa iyo, pinakamalapit na Kumpisal muna",
+  "massNearTitle": "Misa malapit sa iyo",
+  "confNearTitle": "Kumpisal malapit sa iyo",
+  "whenNow": "Ngayon",
+  "whenToday": "Ngayong araw {time}",
+  "whenTomorrow": "Bukas {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Walang oras ngayong linggo",
+  "usingMapCenter": "Naka-off ang lokasyon, kaya malapit ang mga ito sa gitna ng mapa.",
+  "noMassNear": "Wala pang kalapit na simbahang naglilista ng oras.",
+  "seeWorldwide": "Tingnan ang {n} simbahang may Misa sa {lang} sa buong mundo",
+  "timesCheck": "Galing sa mga website ng parokya ang mga oras. Tiyakin sa parokya bago pumunta."
 }

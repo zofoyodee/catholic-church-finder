@@ -350,5 +350,20 @@
   "jInGospels": "Ha mga Ebanghelyo",
   "jShareTitle": "{name} ha kinabuhi ni Jesus",
   "jNoMatch": "Waray lugar o panhitabo ha kinabuhi ni Jesus nga naangay ha “{q}”.",
-  "jProv": "An mga reperensya han Ebanghelyo nasunod ha New American Bible, Revised Edition, an Katoliko nga paghubad nga gingagamit ha Misa ha Estados Unidos. An han-ay nasunod ha tradisyonal nga pagkaurusa han upat nga Ebanghelyo; kon nagkakaiba an mga ebanghelista o diri sigurado an lugar, ginsisiring ini han kard. Pindota an reperensya basi basahon ini ha website han USCCB."
+  "jProv": "An mga reperensya han Ebanghelyo nasunod ha New American Bible, Revised Edition, an Katoliko nga paghubad nga gingagamit ha Misa ha Estados Unidos. An han-ay nasunod ha tradisyonal nga pagkaurusa han upat nga Ebanghelyo; kon nagkakaiba an mga ebanghelista o diri sigurado an lugar, ginsisiring ini han kard. Pindota an reperensya basi basahon ini ha website han USCCB.",
+  "massNear": "Misa hirani ha akon",
+  "confNear": "Kumpisal hirani ha akon",
+  "massNearTip": "Mga simbahan hirani ha imo, an pinakahirani nga Misa siyahan",
+  "confNearTip": "Mga simbahan hirani ha imo, an pinakahirani nga Kumpisal siyahan",
+  "massNearTitle": "Misa hirani ha imo",
+  "confNearTitle": "Kumpisal hirani ha imo",
+  "whenNow": "Yana",
+  "whenToday": "Yana nga adlaw {time}",
+  "whenTomorrow": "Buwas {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Waray oras hini nga semana",
+  "usingMapCenter": "Patay an lokasyon, salit hirani ini ha butnga han mapa.",
+  "noMassNear": "Waray pa hirani nga simbahan nga naglista han ira oras.",
+  "seeWorldwide": "Kitaa an {n} nga simbahan nga may Misa ha {lang} ha bug-os nga kalibutan",
+  "timesCheck": "An mga oras tikang ha mga website han parokya. Pakianhi an parokya antes kumadto."
 }

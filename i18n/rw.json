@@ -350,5 +350,20 @@
   "jInGospels": "Mu Ivanjili",
   "jShareTitle": "{name} mu buzima bwa Yezu",
   "jNoMatch": "Nta hantu cyangwa igihe mu buzima bwa Yezu gihuye na “{q}”.",
-  "jProv": "Imirongo y'Ivanjili ikurikiza New American Bible, Revised Edition, ubusobanuro gatolika bukoreshwa mu Misa muri Leta Zunze Ubumwe za Amerika. Uko bikurikirana bikurikiza uburyo gakondo bwo guhuza Ivanjili enye; aho abanditsi b'Ivanjili batandukanye cyangwa ahantu hatazwi neza, ikarita irabivuga. Kanda ku murongo uwusome ku rubuga rwa USCCB."
+  "jProv": "Imirongo y'Ivanjili ikurikiza New American Bible, Revised Edition, ubusobanuro gatolika bukoreshwa mu Misa muri Leta Zunze Ubumwe za Amerika. Uko bikurikirana bikurikiza uburyo gakondo bwo guhuza Ivanjili enye; aho abanditsi b'Ivanjili batandukanye cyangwa ahantu hatazwi neza, ikarita irabivuga. Kanda ku murongo uwusome ku rubuga rwa USCCB.",
+  "massNear": "Misa hafi yanjye",
+  "confNear": "Penetensiya hafi yanjye",
+  "massNearTip": "Kiliziya ziri hafi yawe, Misa ya vuba mbere",
+  "confNearTip": "Kiliziya ziri hafi yawe, Penetensiya ya vuba mbere",
+  "massNearTitle": "Misa hafi yawe",
+  "confNearTitle": "Penetensiya hafi yawe",
+  "whenNow": "Ubu",
+  "whenToday": "Uyu munsi {time}",
+  "whenTomorrow": "Ejo {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Nta saha muri iki cyumweru",
+  "usingMapCenter": "Aho uri harazimye, ni yo mpamvu izi ziri hafi y'agati k'ikarita.",
+  "noMassNear": "Nta kiliziya iri hafi irashyiraho amasaha yayo.",
+  "seeWorldwide": "Reba kiliziya {n} zose zifite Misa mu {lang} ku isi yose",
+  "timesCheck": "Amasaha ava ku mbuga za paruwasi. Baza paruwasi mbere yo kujyayo."
 }

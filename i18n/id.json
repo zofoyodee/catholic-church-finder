@@ -342,5 +342,20 @@
   "desc_shrine": "Tempat ziarah dan devosi.",
   "desc_church": "Gereja paroki dan lingkungan biasa: setiap gereja yang bukan katedral, basilika, tempat ziarah, kapel, atau biara.",
   "desc_chapel": "Kapel atau oratorium yang lebih kecil, sering dilayani oleh paroki terdekat.",
-  "desc_abbey": "Gereja sebuah komunitas rahib, rubiah, frater, atau suster."
+  "desc_abbey": "Gereja sebuah komunitas rahib, rubiah, frater, atau suster.",
+  "massNear": "Misa di dekat saya",
+  "confNear": "Pengakuan Dosa di dekat saya",
+  "massNearTip": "Gereja di dekat Anda, Misa terdekat lebih dulu",
+  "confNearTip": "Gereja di dekat Anda, Pengakuan Dosa terdekat lebih dulu",
+  "massNearTitle": "Misa di dekat Anda",
+  "confNearTitle": "Pengakuan Dosa di dekat Anda",
+  "whenNow": "Sekarang",
+  "whenToday": "Hari ini {time}",
+  "whenTomorrow": "Besok {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Tidak ada jadwal minggu ini",
+  "usingMapCenter": "Lokasi mati, jadi ini dekat bagian tengah peta.",
+  "noMassNear": "Belum ada gereja terdekat yang mencantumkan jadwalnya.",
+  "seeWorldwide": "Lihat semua {n} gereja dengan Misa berbahasa {lang} di seluruh dunia",
+  "timesCheck": "Jadwal diambil dari situs web paroki. Pastikan dengan paroki sebelum berangkat."
 }

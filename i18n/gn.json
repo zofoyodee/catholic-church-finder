@@ -350,5 +350,20 @@
   "jInGospels": "Evangelio-kuérape",
   "jShareTitle": "{name} Jesús rekovépe",
   "jNoMatch": "Ndaipóri tenda térã ára Jesús rekovépe ojojoguáva “{q}” ndive.",
-  "jProv": "Evangelio jehechaukarã osegui New American Bible, Revised Edition, ñeʼẽasa católica ojepuruva Misa-pe Estados Unidos-pe. Pe ñemohendaha osegui irundy Evangelio ñembojoja ymaguare; evangelista-kuéra ndojojoguáiramo térã tenda ndojeikuaa porãiramo, tarjeta heʼi. Ejopy jehechaukarã remoñeʼẽ hag̃ua USCCB kuatiañeʼẽme."
+  "jProv": "Evangelio jehechaukarã osegui New American Bible, Revised Edition, ñeʼẽasa católica ojepuruva Misa-pe Estados Unidos-pe. Pe ñemohendaha osegui irundy Evangelio ñembojoja ymaguare; evangelista-kuéra ndojojoguáiramo térã tenda ndojeikuaa porãiramo, tarjeta heʼi. Ejopy jehechaukarã remoñeʼẽ hag̃ua USCCB kuatiañeʼẽme.",
+  "massNear": "Misa che ypýpe",
+  "confNear": "Ñembojeroviapy che ypýpe",
+  "massNearTip": "Tupao nde ypýpe, Misa ag̃ui ypyvéva raẽ",
+  "confNearTip": "Tupao nde ypýpe, Ñembojeroviapy ag̃ui ypyvéva raẽ",
+  "massNearTitle": "Misa nde ypýpe",
+  "confNearTitle": "Ñembojeroviapy nde ypýpe",
+  "whenNow": "Ko'ág̃a",
+  "whenToday": "Ko árape {time}",
+  "whenTomorrow": "Ko'ẽrõ {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Ndaipóri aravo ko arapokõindýpe",
+  "usingMapCenter": "Ubicación oñembogue, upévare ko'ãva oĩ mapa mbytégui ag̃ui.",
+  "noMassNear": "Ndaipóriva gueteri tupao ag̃uigua ohaíva iaravokuéra.",
+  "seeWorldwide": "Ehecha opa {n} tupao orekóva Misa {lang}-pe opa yvy ape ári",
+  "timesCheck": "Aravokuéra ou parroquia kuatiañeʼẽgui. Eporandu parroquiape reho mboyve."
 }

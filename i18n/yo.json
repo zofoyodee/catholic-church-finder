@@ -350,5 +350,20 @@
   "jInGospels": "Nínú àwọn Ìhìnrere",
   "jShareTitle": "{name} nínú ìgbésí ayé Jésù",
   "jNoMatch": "Kò sí ibi tàbí àsìkò nínú ìgbésí ayé Jésù tó bá “{q}” mu.",
-  "jProv": "Àwọn ẹsẹ Ìhìnrere tẹ̀lé New American Bible, Revised Edition, ìtúmọ̀ Kátólíìkì tí a ń lò nínú Mísà ní United States. Ìtẹ̀léra náà tẹ̀lé ìṣọ̀kan àṣà ti Ìhìnrere mẹ́rin; níbi tí àwọn ajíhìnrere bá yàtọ̀ tàbí tí ibi kò dájú, káàdì náà sọ bẹ́ẹ̀. Tẹ ẹsẹ kan láti kà á lórí ojú-òpó USCCB."
+  "jProv": "Àwọn ẹsẹ Ìhìnrere tẹ̀lé New American Bible, Revised Edition, ìtúmọ̀ Kátólíìkì tí a ń lò nínú Mísà ní United States. Ìtẹ̀léra náà tẹ̀lé ìṣọ̀kan àṣà ti Ìhìnrere mẹ́rin; níbi tí àwọn ajíhìnrere bá yàtọ̀ tàbí tí ibi kò dájú, káàdì náà sọ bẹ́ẹ̀. Tẹ ẹsẹ kan láti kà á lórí ojú-òpó USCCB.",
+  "massNear": "Mísà nítòsí mi",
+  "confNear": "Ìjẹ́wọ́ nítòsí mi",
+  "massNearTip": "Àwọn ilé ìjọsìn nítòsí rẹ, Mísà tó súnmọ́ jùlọ ní àkọ́kọ́",
+  "confNearTip": "Àwọn ilé ìjọsìn nítòsí rẹ, Ìjẹ́wọ́ tó súnmọ́ jùlọ ní àkọ́kọ́",
+  "massNearTitle": "Mísà nítòsí rẹ",
+  "confNearTitle": "Ìjẹ́wọ́ nítòsí rẹ",
+  "whenNow": "Nísinsìnyí",
+  "whenToday": "Lónìí {time}",
+  "whenTomorrow": "Lọ́la {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Kò sí àkókò ní ọ̀sẹ̀ yìí",
+  "usingMapCenter": "Ipò rẹ ti pa, nítorí náà ìwọ̀nyí wà nítòsí àárín máàpù.",
+  "noMassNear": "Kò sí ilé ìjọsìn nítòsí tí ó ti kọ àkókò rẹ̀ sílẹ̀.",
+  "seeWorldwide": "Wo gbogbo ilé ìjọsìn {n} tí ó ní Mísà ní {lang} kárí ayé",
+  "timesCheck": "Àkókò wá láti ojú-òpó parish. Bèèrè lọ́wọ́ parish kí o tó lọ."
 }
