@@ -400,5 +400,6 @@
   "loadingLangList": "Agsapsapul kadagiti simbaan nga addaan Misa iti {lang}…",
   "loadingArea": "Agsapsapul kadagiti simbaan iti {place}…",
   "loadingView": "Agsapsapul kadagiti simbaan iti daytoy a view…",
-  "loadingMore": "Ikarkarga ti ad-adu pay a simbaan…"
+  "loadingMore": "Ikarkarga ti ad-adu pay a simbaan…",
+  "noParishSite": "Awan ti nasarakan a website ti parokia"
 }

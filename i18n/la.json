@@ -398,5 +398,6 @@
   "loadingLangList": "Ecclesias cum Missa {lang} quaerimus…",
   "loadingArea": "Ecclesias in {place} quaerimus…",
   "loadingView": "Ecclesias in hoc conspectu quaerimus…",
-  "loadingMore": "Plures ecclesias oneramus…"
+  "loadingMore": "Plures ecclesias oneramus…",
+  "noParishSite": "Pagina paroeciae non inventa"
 }

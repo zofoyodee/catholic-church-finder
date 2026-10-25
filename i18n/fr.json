@@ -408,5 +408,6 @@
   "loadingLangList": "Recherche des églises avec Messe en {lang}…",
   "loadingArea": "Recherche des églises à {place}…",
   "loadingView": "Recherche des églises dans cette vue…",
-  "loadingMore": "Chargement d'autres églises…"
+  "loadingMore": "Chargement d'autres églises…",
+  "noParishSite": "Aucun site paroissial trouvé"
 }

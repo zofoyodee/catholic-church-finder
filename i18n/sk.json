@@ -429,5 +429,6 @@
   "loadingLangList": "Hľadám kostoly so svätou omšou v jazyku {lang}…",
   "loadingArea": "Hľadám kostoly: {place}…",
   "loadingView": "Hľadám kostoly v tomto zobrazení…",
-  "loadingMore": "Načítavam ďalšie kostoly…"
+  "loadingMore": "Načítavam ďalšie kostoly…",
+  "noParishSite": "Web farnosti sa nenašiel"
 }

@@ -408,5 +408,6 @@
   "loadingLangList": "{lang} nyelvű szentmisés templomok keresése…",
   "loadingArea": "Templomok keresése: {place}…",
   "loadingView": "Templomok keresése ebben a nézetben…",
-  "loadingMore": "További templomok betöltése…"
+  "loadingMore": "További templomok betöltése…",
+  "noParishSite": "Nem található plébániai honlap"
 }

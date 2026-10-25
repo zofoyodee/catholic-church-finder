@@ -392,5 +392,6 @@
   "loadingLangList": "Đang tìm nhà thờ có Thánh lễ bằng {lang}…",
   "loadingArea": "Đang tìm nhà thờ ở {place}…",
   "loadingView": "Đang tìm nhà thờ trong khung nhìn này…",
-  "loadingMore": "Đang tải thêm nhà thờ…"
+  "loadingMore": "Đang tải thêm nhà thờ…",
+  "noParishSite": "Không tìm thấy trang web giáo xứ"
 }

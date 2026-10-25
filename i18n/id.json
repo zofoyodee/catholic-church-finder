@@ -392,5 +392,6 @@
   "loadingLangList": "Mencari gereja dengan Misa berbahasa {lang}…",
   "loadingArea": "Mencari gereja di {place}…",
   "loadingView": "Mencari gereja di tampilan ini…",
-  "loadingMore": "Memuat gereja lainnya…"
+  "loadingMore": "Memuat gereja lainnya…",
+  "noParishSite": "Situs web paroki tidak ditemukan"
 }

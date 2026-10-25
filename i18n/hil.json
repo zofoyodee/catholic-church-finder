@@ -400,5 +400,6 @@
   "loadingLangList": "Ginapangita ang mga simbahan nga may Misa sa {lang}…",
   "loadingArea": "Ginapangita ang mga simbahan sa {place}…",
   "loadingView": "Ginapangita ang mga simbahan sa sini nga view…",
-  "loadingMore": "Ginakarga ang dugang nga simbahan…"
+  "loadingMore": "Ginakarga ang dugang nga simbahan…",
+  "noParishSite": "Wala sing nakita nga website sang parokya"
 }

@@ -411,5 +411,6 @@
   "loadingLangList": "Ieškoma bažnyčių su Mišiomis kalba {lang}…",
   "loadingArea": "Ieškoma bažnyčių: {place}…",
   "loadingView": "Ieškoma bažnyčių šiame vaizde…",
-  "loadingMore": "Įkeliama daugiau bažnyčių…"
+  "loadingMore": "Įkeliama daugiau bažnyčių…",
+  "noParishSite": "Parapijos svetainė nerasta"
 }

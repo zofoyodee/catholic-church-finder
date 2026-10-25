@@ -400,5 +400,6 @@
   "loadingLangList": "Tikufufuza matchalitchi okhala ndi Misa mu {lang}…",
   "loadingArea": "Tikufufuza matchalitchi a ku {place}…",
   "loadingView": "Tikufufuza matchalitchi m'chithunzi ichi…",
-  "loadingMore": "Tikutsitsa matchalitchi ena…"
+  "loadingMore": "Tikutsitsa matchalitchi ena…",
+  "noParishSite": "Webusaiti ya parishi sinapezeke"
 }

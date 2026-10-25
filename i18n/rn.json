@@ -400,5 +400,6 @@
   "loadingLangList": "Turarondera ingoro z'Imana zifise Misa mu {lang}…",
   "loadingArea": "Turarondera ingoro z'Imana zo muri {place}…",
   "loadingView": "Turarondera ingoro z'Imana ziri muri iyi shusho…",
-  "loadingMore": "Turazana izindi ngoro z'Imana…"
+  "loadingMore": "Turazana izindi ngoro z'Imana…",
+  "noParishSite": "Urubuga rwa paruwasi ntirwabonetse"
 }
