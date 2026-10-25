@@ -403,5 +403,12 @@
   "loadingMore": "Turazana izindi ngoro z'Imana…",
   "noParishSite": "Urubuga rwa paruwasi ntirwabonetse",
   "photoStreetView": "Ishusho ya Street View ivuye kuri Google. Ifungura Street View.",
-  "photoMapillary": "Ifoto y'ibarabara ya {author} kuri Mapillary, CC BY-SA 4.0. Ifungurirwa kuri Mapillary."
+  "photoMapillary": "Ifoto y'ibarabara ya {author} kuri Mapillary, CC BY-SA 4.0. Ifungurirwa kuri Mapillary.",
+  "themeLabel": "Isura",
+  "theme_night": "Ijuru ry'Ijoro",
+  "theme_marian": "Ubururu bwa Mariya",
+  "theme_stone": "Ibuye rya Katedrali",
+  "theme_parchment": "Uruhu rwo Kwandikako",
+  "theme_liturgical": "Igihe ca Liturujiya",
+  "theme_contrast": "Itandukaniro Rikomeye"
 }

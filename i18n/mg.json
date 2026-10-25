@@ -403,5 +403,12 @@
   "loadingMore": "Mampiditra fiangonana fanampiny…",
   "noParishSite": "Tsy hita ny tranonkalan'ny paroasy",
   "photoStreetView": "Sary Street View avy amin'i Google. Manokatra Street View.",
-  "photoMapillary": "Sarin'arabe nalain'i {author} ao amin'ny Mapillary, CC BY-SA 4.0. Sokafana ao amin'ny Mapillary."
+  "photoMapillary": "Sarin'arabe nalain'i {author} ao amin'ny Mapillary, CC BY-SA 4.0. Sokafana ao amin'ny Mapillary.",
+  "themeLabel": "Endrika",
+  "theme_night": "Lanitra Alina",
+  "theme_marian": "Manga an'i Maria",
+  "theme_stone": "Vato Katedraly",
+  "theme_parchment": "Hoditra Fanoratana",
+  "theme_liturgical": "Fotoam-pitondrana Litorjika",
+  "theme_contrast": "Fifanoherana Avo"
 }

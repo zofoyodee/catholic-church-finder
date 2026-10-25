@@ -411,5 +411,12 @@
   "loadingMore": "Meer kerken laden…",
   "noParishSite": "Geen parochiewebsite gevonden",
   "photoStreetView": "Street View-beeld van Google. Opent Street View.",
-  "photoMapillary": "Straatfoto door {author} op Mapillary, CC BY-SA 4.0. Opent op Mapillary."
+  "photoMapillary": "Straatfoto door {author} op Mapillary, CC BY-SA 4.0. Opent op Mapillary.",
+  "themeLabel": "Thema",
+  "theme_night": "Nachthemel",
+  "theme_marian": "Mariablauw",
+  "theme_stone": "Kathedraalsteen",
+  "theme_parchment": "Perkament",
+  "theme_liturgical": "Liturgische tijd",
+  "theme_contrast": "Hoog contrast"
 }

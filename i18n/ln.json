@@ -403,5 +403,12 @@
   "loadingMore": "Ezali kokotisa ba ndako-Nzambe mosusu…",
   "noParishSite": "Site ya paroisi emonani te",
   "photoStreetView": "Elili ya Street View euti na Google. Efungolaka Street View.",
-  "photoMapillary": "Foto ya balabala ya {author} na Mapillary, CC BY-SA 4.0. Efungwamaka na Mapillary."
+  "photoMapillary": "Foto ya balabala ya {author} na Mapillary, CC BY-SA 4.0. Efungwamaka na Mapillary.",
+  "themeLabel": "Lolenge",
+  "theme_night": "Likoló ya Butú",
+  "theme_marian": "Bule ya Maria",
+  "theme_stone": "Libanga ya Katedrale",
+  "theme_parchment": "Loposo ya Kokoma",
+  "theme_liturgical": "Eleko ya Liturgi",
+  "theme_contrast": "Bokeseni Makasi"
 }

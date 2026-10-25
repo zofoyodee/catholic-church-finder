@@ -403,5 +403,12 @@
   "loadingMore": "Nagkarga og dugang simbahan…",
   "noParishSite": "Walay nakit-ang website sa parokya",
   "photoStreetView": "Hulagway sa Street View gikan sa Google. Ablihan ang Street View.",
-  "photoMapillary": "Litrato sa dalan ni {author} sa Mapillary, CC BY-SA 4.0. Ablihan kini sa Mapillary."
+  "photoMapillary": "Litrato sa dalan ni {author} sa Mapillary, CC BY-SA 4.0. Ablihan kini sa Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Langit sa Gabii",
+  "theme_marian": "Asul ni Maria",
+  "theme_stone": "Bato sa Katedral",
+  "theme_parchment": "Pergamino",
+  "theme_liturgical": "Panahon sa Liturhiya",
+  "theme_contrast": "Taas nga Contrast"
 }

@@ -393,5 +393,12 @@
   "loadingMore": "성당을 더 불러오는 중…",
   "noParishSite": "본당 웹사이트를 찾지 못했습니다",
   "photoStreetView": "Google 스트리트 뷰 이미지. 스트리트 뷰에서 엽니다.",
-  "photoMapillary": "Mapillary의 {author} 거리 사진, CC BY-SA 4.0. Mapillary에서 엽니다."
+  "photoMapillary": "Mapillary의 {author} 거리 사진, CC BY-SA 4.0. Mapillary에서 엽니다.",
+  "themeLabel": "테마",
+  "theme_night": "밤하늘",
+  "theme_marian": "성모 파랑",
+  "theme_stone": "대성당 돌",
+  "theme_parchment": "양피지",
+  "theme_liturgical": "전례 시기",
+  "theme_contrast": "고대비"
 }

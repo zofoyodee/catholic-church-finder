@@ -414,5 +414,12 @@
   "loadingMore": "Įkeliama daugiau bažnyčių…",
   "noParishSite": "Parapijos svetainė nerasta",
   "photoStreetView": "Google Street View vaizdas. Atidaro Street View.",
-  "photoMapillary": "Gatvės nuotrauka: {author}, Mapillary, CC BY-SA 4.0. Atidaroma Mapillary."
+  "photoMapillary": "Gatvės nuotrauka: {author}, Mapillary, CC BY-SA 4.0. Atidaroma Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Naktinis dangus",
+  "theme_marian": "Marijos mėlyna",
+  "theme_stone": "Katedros akmuo",
+  "theme_parchment": "Pergamentas",
+  "theme_liturgical": "Liturginis laikotarpis",
+  "theme_contrast": "Didelis kontrastas"
 }

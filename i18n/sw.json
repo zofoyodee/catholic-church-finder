@@ -411,5 +411,12 @@
   "loadingMore": "Inapakia makanisa zaidi…",
   "noParishSite": "Hakuna tovuti ya parokia iliyopatikana",
   "photoStreetView": "Picha ya Street View kutoka Google. Inafungua Street View.",
-  "photoMapillary": "Picha ya barabarani na {author} kwenye Mapillary, CC BY-SA 4.0. Inafunguka kwenye Mapillary."
+  "photoMapillary": "Picha ya barabarani na {author} kwenye Mapillary, CC BY-SA 4.0. Inafunguka kwenye Mapillary.",
+  "themeLabel": "Mandhari",
+  "theme_night": "Anga la Usiku",
+  "theme_marian": "Bluu ya Maria",
+  "theme_stone": "Jiwe la Kanisa Kuu",
+  "theme_parchment": "Ngozi ya Kuandikia",
+  "theme_liturgical": "Kipindi cha Liturujia",
+  "theme_contrast": "Utofautishaji wa Juu"
 }

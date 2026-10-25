@@ -411,5 +411,12 @@
   "loadingMore": "Chargement d'autres églises…",
   "noParishSite": "Aucun site paroissial trouvé",
   "photoStreetView": "Image Street View de Google. Ouvre Street View.",
-  "photoMapillary": "Photo de rue par {author} sur Mapillary, CC BY-SA 4.0. S'ouvre sur Mapillary."
+  "photoMapillary": "Photo de rue par {author} sur Mapillary, CC BY-SA 4.0. S'ouvre sur Mapillary.",
+  "themeLabel": "Thème",
+  "theme_night": "Ciel Nocturne",
+  "theme_marian": "Bleu Marial",
+  "theme_stone": "Pierre de Cathédrale",
+  "theme_parchment": "Parchemin",
+  "theme_liturgical": "Temps Liturgique",
+  "theme_contrast": "Contraste Élevé"
 }

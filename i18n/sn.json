@@ -403,5 +403,12 @@
   "loadingMore": "Tiri kuisa mamwe machechi…",
   "noParishSite": "Webhusaiti yeparishi haina kuwanikwa",
   "photoStreetView": "Mufananidzo weStreet View kubva kuGoogle. Unovhura Street View.",
-  "photoMapillary": "Mufananidzo wemugwagwa na{author} paMapillary, CC BY-SA 4.0. Unovhurwa paMapillary."
+  "photoMapillary": "Mufananidzo wemugwagwa na{author} paMapillary, CC BY-SA 4.0. Unovhurwa paMapillary.",
+  "themeLabel": "Dingindira",
+  "theme_night": "Denga reUsiku",
+  "theme_marian": "Bhuruu raMaria",
+  "theme_stone": "Dombo reKatedhiraru",
+  "theme_parchment": "Ganda Rekunyorera",
+  "theme_liturgical": "Mwaka weLiturgy",
+  "theme_contrast": "Mutsauko Wakakwira"
 }

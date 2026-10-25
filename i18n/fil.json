@@ -411,5 +411,12 @@
   "loadingMore": "Naglo-load ng iba pang simbahan…",
   "noParishSite": "Walang nakitang website ng parokya",
   "photoStreetView": "Larawan ng Street View mula sa Google. Bubuksan ang Street View.",
-  "photoMapillary": "Larawan ng kalye ni {author} sa Mapillary, CC BY-SA 4.0. Bubuksan ito sa Mapillary."
+  "photoMapillary": "Larawan ng kalye ni {author} sa Mapillary, CC BY-SA 4.0. Bubuksan ito sa Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Langit sa Gabi",
+  "theme_marian": "Bughaw ni Maria",
+  "theme_stone": "Bato ng Katedral",
+  "theme_parchment": "Pergamino",
+  "theme_liturgical": "Panahong Liturhiko",
+  "theme_contrast": "Mataas na Contrast"
 }

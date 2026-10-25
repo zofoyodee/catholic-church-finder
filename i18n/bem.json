@@ -403,5 +403,12 @@
   "loadingMore": "Tuleleta amacalici yambi…",
   "noParishSite": "Website ya parishi taisangilwe",
   "photoStreetView": "Icikope ca Street View ukufuma kuli Google. Cikaiswila Street View.",
-  "photoMapillary": "Icikope ca musebo ica kwa {author} pa Mapillary, CC BY-SA 4.0. Cikaiswila pa Mapillary."
+  "photoMapillary": "Icikope ca musebo ica kwa {author} pa Mapillary, CC BY-SA 4.0. Cikaiswila pa Mapillary.",
+  "themeLabel": "Imimonekele",
+  "theme_night": "Umulu wa Bushiku",
+  "theme_marian": "Bulu wa kwa Maria",
+  "theme_stone": "Ilibwe lya Katedrali",
+  "theme_parchment": "Icipapa ca Kulembapo",
+  "theme_liturgical": "Inshita ya Liturgy",
+  "theme_contrast": "Ukupusana Ukukalamba"
 }

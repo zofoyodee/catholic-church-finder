@@ -437,5 +437,12 @@
   "loadingMore": "Завантажуємо більше храмів…",
   "noParishSite": "Сайт парафії не знайдено",
   "photoStreetView": "Зображення Street View від Google. Відкриває Street View.",
-  "photoMapillary": "Вуличне фото: {author}, Mapillary, CC BY-SA 4.0. Відкривається на Mapillary."
+  "photoMapillary": "Вуличне фото: {author}, Mapillary, CC BY-SA 4.0. Відкривається на Mapillary.",
+  "themeLabel": "Тема",
+  "theme_night": "Нічне небо",
+  "theme_marian": "Маріїна блакить",
+  "theme_stone": "Камінь собору",
+  "theme_parchment": "Пергамент",
+  "theme_liturgical": "Літургійний період",
+  "theme_contrast": "Висока контрастність"
 }

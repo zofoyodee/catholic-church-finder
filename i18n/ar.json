@@ -442,5 +442,12 @@
   "loadingMore": "جارٍ تحميل المزيد من الكنائس…",
   "noParishSite": "لم يُعثر على موقع للرعية",
   "photoStreetView": "صورة Street View من Google. تفتح Street View.",
-  "photoMapillary": "صورة شارع التقطها {author} على Mapillary، بترخيص CC BY-SA 4.0. تُفتح على Mapillary."
+  "photoMapillary": "صورة شارع التقطها {author} على Mapillary، بترخيص CC BY-SA 4.0. تُفتح على Mapillary.",
+  "themeLabel": "السمة",
+  "theme_night": "سماء الليل",
+  "theme_marian": "الأزرق المريمي",
+  "theme_stone": "حجر الكاتدرائية",
+  "theme_parchment": "الرَّق",
+  "theme_liturgical": "الزمن الليتورجي",
+  "theme_contrast": "تباين عالٍ"
 }

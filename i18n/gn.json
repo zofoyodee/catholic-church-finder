@@ -403,5 +403,12 @@
   "loadingMore": "Oñemyendy hetave tupao…",
   "noParishSite": "Ndojejuhúi parroquia kuatiañeʼẽ",
   "photoStreetView": "Ta'ãnga Street View Google-gui. Ojeipe'a Street View.",
-  "photoMapillary": "Tape ra'ãnga {author} ojapóva Mapillary-pe, CC BY-SA 4.0. Ojeipe'a Mapillary-pe."
+  "photoMapillary": "Tape ra'ãnga {author} ojapóva Mapillary-pe, CC BY-SA 4.0. Ojeipe'a Mapillary-pe.",
+  "themeLabel": "Téma",
+  "theme_night": "Yvága Pyharegua",
+  "theme_marian": "Hovy Maríagua",
+  "theme_stone": "Ita Katedrálgua",
+  "theme_parchment": "Pergamíno",
+  "theme_liturgical": "Ára Litúrhiko",
+  "theme_contrast": "Joavy Tuicha"
 }

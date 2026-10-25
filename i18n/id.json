@@ -395,5 +395,12 @@
   "loadingMore": "Memuat gereja lainnya…",
   "noParishSite": "Situs web paroki tidak ditemukan",
   "photoStreetView": "Gambar Street View dari Google. Membuka Street View.",
-  "photoMapillary": "Foto jalan oleh {author} di Mapillary, CC BY-SA 4.0. Membukanya di Mapillary."
+  "photoMapillary": "Foto jalan oleh {author} di Mapillary, CC BY-SA 4.0. Membukanya di Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Langit Malam",
+  "theme_marian": "Biru Maria",
+  "theme_stone": "Batu Katedral",
+  "theme_parchment": "Perkamen",
+  "theme_liturgical": "Masa Liturgi",
+  "theme_contrast": "Kontras Tinggi"
 }

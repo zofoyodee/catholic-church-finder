@@ -393,5 +393,12 @@
   "loadingMore": "正在加载更多教堂…",
   "noParishSite": "未找到堂区网站",
   "photoStreetView": "来自 Google 的街景图像。在街景中打开。",
-  "photoMapillary": "街景照片：{author}，来自 Mapillary，CC BY-SA 4.0。在 Mapillary 上打开。"
+  "photoMapillary": "街景照片：{author}，来自 Mapillary，CC BY-SA 4.0。在 Mapillary 上打开。",
+  "themeLabel": "主题",
+  "theme_night": "夜空",
+  "theme_marian": "圣母蓝",
+  "theme_stone": "主教座堂石",
+  "theme_parchment": "羊皮纸",
+  "theme_liturgical": "礼仪节期",
+  "theme_contrast": "高对比度"
 }
