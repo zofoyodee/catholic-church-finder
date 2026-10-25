@@ -186,6 +186,7 @@ const FEATURE = {
   'search': 'Search Result Picked', 'favorite-added': 'Favorite Added', 'favorite-removed': 'Favorite Removed',
   'life-of-jesus-play': 'Life of Jesus Play', 'directions': 'Directions', 'parish-website': 'Parish Website',
 };
+const SIZES = { phone: 'Phones', tablet: 'Tablets', desktop: 'Computers', desktophd: 'Large Computer Screens', unknown: 'Unknown' };
 const cap = (s) => s.replace(/(^|[\s-])(\w)/g, (m, a, b) => a + b.toUpperCase());
 function featureName(p) {
   if (FEATURE[p]) return FEATURE[p];
@@ -201,7 +202,7 @@ const langName = (c) => { try { return (c && langNames && langNames.of(c)) || c 
 
 /* ---------- drawing ---------- */
 function rank(el, rows, { limit = 10, click } = {}) {
-  rows = [...rows].sort((a, b) => b.count - a.count);
+  rows = rows.filter((r) => r.count > 0).sort((a, b) => b.count - a.count);  // GoatCounter lists every device group, even at 0
   if (!rows.length) { el.innerHTML = '<p class="empty">Nothing yet for this time range.</p>'; return; }
   const max = Math.max(...rows.map((r) => r.count), 1);
   let shown = Math.min(limit, rows.length);
@@ -302,7 +303,7 @@ async function load() {
     rank($('bible'), byPrefix('bible-place/').map((h) => ({ count: h.count, html: esc(h.path.slice(12)) })));
     rank($('sitelangs'), byPrefix('language/').map((h) => ({ count: h.count, html: esc(langName(h.path.slice(9))) })));
     rank($('toprefs'), fromStats(lists.toprefs, (s) => esc(s.name || '(direct or unknown)')));
-    rank($('sizes'), fromStats(lists.sizes));
+    rank($('sizes'), fromStats(lists.sizes, (s) => esc(SIZES[s.id] || s.name || 'Unknown')));
     rank($('browsers'), fromStats(lists.browsers));
     rank($('systems'), fromStats(lists.systems));
     rank($('languages'), fromStats(lists.languages));
