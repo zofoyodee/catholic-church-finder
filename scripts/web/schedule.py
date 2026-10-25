@@ -17,7 +17,7 @@ DAY = re.compile(r'\b(sun|sunday|sat|saturday|mon|monday|tue|tues|tuesday|wed|we
                  r'|domenica|sabato|luned[ìi]|marted[ìi]|mercoled[ìi]|gioved[ìi]|venerd[ìi]|feriali|festivi|prefestiv\w*'
                  r'|dimanches?|samedis?|lundi|mardi|mercredi|jeudi|vendredi|en semaine'
                  r'|sonntags?|samstags?|montags?|dienstags?|mittwochs?|donnerstags?|freitags?|werktags?|vorabend'
-                 r'|niedziel\w*|sobot\w*|poniedzia\w*|wtor\w*|[śs]rod\w*|czwart\w*|pi[ąa]t\w*|dni powszednie|[śs]wi[ęe]t\w*'
+                 r'|niedziel\w*|sobot\w*|poniedzia\w*|wtor\w*|[śs]rod\w*|czwart\w*|pi[ąa]t\w*|dni powszednie|[śs]wi[ęe]ta|[śs]wi[ąa]t\w*'
                  r'|zondag|zaterdag|maandag|dinsdag|woensdag|donderdag|vrijdag'
                  r'|linggo|sabado|lunes)\b', re.I)
 MASS = re.compile(r'\b(mass|masses|eucharist\w*|liturg\w*|misas?|missas?|messes?|messa|sante messe|s\. ?messe|celebra\w*|gottesdienst\w*|eucharistiefeier|hl\.? messe|msz[ae]|msze [śs]w|mis[ae] dominical|vigil)\b', re.I)

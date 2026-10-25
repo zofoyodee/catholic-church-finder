@@ -30,13 +30,15 @@ CODE = {'ok': 1, 'moved': 2, 'dead': 3}
 stats = collections.Counter()
 sys.path.insert(0, os.path.dirname(__file__))
 from crawl import records
+from schedule import OTHER, MASS, CONF
 from times import slots, LANGS
 from tz import tz_of
 import base64, struct
 
 shards = collections.defaultdict(dict)
-# a picture used by several parish sites is a template or diocese image, not this church
+# a picture or account linked from several parish sites is a template, diocese or Vatican one, not this church's
 IMG_USE = collections.Counter(x.get('img') for x in res.values() if x.get('img'))
+SOC_USE = collections.Counter(u.rstrip('/').lower() for x in res.values() for u in x.get('so') or [])
 sched = {}
 TZ = {}
 _raw = base64.b64decode(open('data/points.txt').read())
@@ -53,7 +55,7 @@ def unglue(ln):
 def socials(found, idx):
     """Links from the parish site first, then Wikidata for platforms the site didn't link."""
     out, seen = [], set()
-    for u in (found or []) + WSOC.get(str(idx), []):
+    for u in [u for u in found or [] if SOC_USE[u.rstrip('/').lower()] <= 2] + WSOC.get(str(idx), []):
         plat = re.sub(r'^(www|m|web|mobile)\.', '', u.split('/')[2].lower()).replace('twitter.com', 'x.com').replace('youtu.be', 'youtube.com')
         plat = plat.split('.')[-2] if plat.count('.') else plat
         if plat not in seen:
@@ -84,7 +86,8 @@ for k, j, r, added in records():
             x['p'], x['src'] = old[2], old[3] if len(old) > 3 else ''
             stats['staff_kept'] += 1
         if not x.get('mt') and not x.get('ct') and len(old) > 4 and (old[4] or (len(old) > 5 and old[5])):
-            x['mt'], x['ct'], x['msrc'] = [unglue(l) for l in old[4]], [unglue(l) for l in (old[5] if len(old) > 5 else [])], old[6] if len(old) > 6 else ''
+            keep = lambda ls: [unglue(l) for l in ls if not (OTHER.search(l) and not (MASS.search(l.split(': ', 1)[-1]) or CONF.search(l)))]  # parser rules added since
+            x['mt'], x['ct'], x['msrc'] = keep(old[4]), keep(old[5] if len(old) > 5 else []), old[6] if len(old) > 6 else ''
             stats['times_kept'] += 1
         if not x.get('so') and len(old) > 7 and old[7]:
             x['so'] = old[7]
