@@ -215,6 +215,8 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .favs li button.go { text-align: left; background: none; border: 0; cursor: pointer; padding: 9px 10px; min-width: 0; color: var(--ink); display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 10px; align-items: center; }
 .favs li .nm { display: block; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .favs li .dist { font-family: var(--font-data); font-size: 11.5px; color: var(--gold-soft); padding-right: 12px; font-variant-numeric: tabular-nums; }
+.favs li .loc.wrap { white-space: normal; color: var(--ink-faint); }
+.favs li .dist .site { display: block; margin-top: 2px; font-family: var(--font-ui, inherit); font-size: 11.5px; color: var(--gold-soft); }
 .favs li .loc { display: block; font-size: 12px; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .favs li i { width: 9px; height: 9px; border-radius: 50%; }
 .favs li button.rm { width: 32px; height: 32px; margin-right: 4px; border-radius: 50%; border: 0; background: none; cursor: pointer; display: grid; place-items: center; color: var(--ink-faint); }
@@ -662,7 +664,7 @@ function detectLang() {
 // English is built in; every other language is i18n/<code>.json with the same keys, missing keys fall back to English.
 // Plural forms are key_one, key_few, key_many, key_other (Intl.PluralRules categories) and are picked by vars.n.
 const EN = {
-  startOver: 'Start over',
+  startOver: 'Start over', youAreHere: 'You Are Here',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
   loadingChurches: 'Loading churches…', gathering: 'Gathering churches from around the world…',
   gatheringN: 'Gathering {n} churches from around the world…', placing: 'Placing them on the globe…',
@@ -730,9 +732,9 @@ const EN = {
   massTimes: 'Mass Times', confession: 'Confession', checkedOn: ', checked {date}',
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass Soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
-  massNear: 'Mass Near Me', confNear: 'Confession Near Me', massNearTip: 'Churches within 20 miles of you, nearest first, with their next Mass', confNearTip: 'Churches within 20 miles of you, nearest first, with their next Confession',
-  massNearTitle: 'Masses Near You', langListTitle: 'Mass in {lang}, Nearest First', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession Near You', massNearIntro: 'Churches within 20 miles that post their Mass times, nearest first, with the next Mass. Tap one for details.', confNearIntro: 'Churches within 20 miles that post their Confession times, nearest first, with the next time. Tap one for details.', massNearTag: 'Showing {n} nearby churches with Mass times', confNearTag: 'Showing {n} nearby churches with Confession times', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
-  noTimesWeek: 'No time listed this week', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church within 20 miles lists its times yet. Here is the nearest one that does.',
+  massNear: 'Mass Near Me', confNear: 'Confession Near Me', massNearTip: 'Churches within {dist} of you, nearest first, with their next Mass', confNearTip: 'Churches within {dist} of you, nearest first, with their next Confession',
+  massNearTitle: 'Masses Near You', langListTitle: 'Mass in {lang}, Nearest First', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession Near You', massNearIntro: 'Churches within {dist}, nearest first, with the next Mass when the parish posts it online. Tap one for details.', confNearIntro: 'Churches within {dist}, nearest first, with the next Confession when the parish posts it online. Tap one for details.', massNearTag: 'Showing {n} churches within {dist}', confNearTag: 'Showing {n} churches within {dist}', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
+  noTimesWeek: 'No time listed this week', timesUnknown: 'Times not listed, check the parish website', websiteShort: 'Website', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church is within {dist}. Here is the nearest one.', nearDistLabel: 'How far to look',
   seeWorldwide: 'See all {n} churches with Mass in {lang} worldwide', timesCheck: 'Times come from parish websites. Check with the parish before you go.',
   confSoon: 'Confession Soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
   anyLang: 'Any Language', clear: 'Clear', signLanguage: 'Sign Language', aramaic: 'Aramaic',
@@ -1135,15 +1137,21 @@ function renderMassChips() {
   const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
   const pin = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/></svg>';
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
-    <button class="chip" data-m="massNear" aria-pressed="${mn.kind === 0}" title="${esc(tr('massNearTip'))}">${pin}${esc(tr('massNear'))}</button>
-    <button class="chip" data-m="confNear" aria-pressed="${mn.kind === 1}" title="${esc(tr('confNearTip'))}">${pin}${esc(tr('confNear'))}</button>
+    <button class="chip" data-m="massNear" aria-pressed="${mn.kind === 0}" title="${esc(tr('massNearTip', { dist: nearDist(nearMiles) }))}">${pin}${esc(tr('massNear'))}</button>
+    <button class="chip" data-m="confNear" aria-pressed="${mn.kind === 1}" title="${esc(tr('confNearTip', { dist: nearDist(nearMiles) }))}">${pin}${esc(tr('confNear'))}</button>
+    <label class="chip lang dist" title="${esc(tr('nearDistLabel'))}"><select id="nearDist" aria-label="${esc(tr('nearDistLabel'))}">${NEAR_MILES.map(mi => `<option value="${mi}"${mi === nearMiles ? ' selected' : ''}>${esc(nearDist(mi))}</option>`).join('')}</select></label>
     ${opts ? `<label class="chip lang" title="${esc(tr('massLangTip2'))}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg><span>${esc(tr('massIn'))}</span><select id="massLang" aria-label="${esc(tr('massLangAria'))}"><option value="">${esc(tr('anyLang'))}</option>${opts}</select></label>` : ''}
     ${mf.mode || mf.lang || mn.kind >= 0 ? `<button class="chip" data-m="clear">${esc(tr('clear'))}</button>` : ''}
     <small class="mass-note" title="${esc(tr('massNoteTip'))}">${esc(tr('timesFound', { n: Object.keys(mf.data.c).length }))}</small>`;
   $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang || mn.kind >= 0));
 }
 /* ---------- Mass near me / Confession near me: nearby churches, soonest first ---------- */
-const NEAR_M = 32187;  // 20 miles
+// how far Mass / Confession Near Me looks: 20, 50 or 100 miles, remembered on this device
+const NEAR_MILES = [20, 50, 100], RADIUS_KEY = 'ccf-near-miles';
+let nearMiles = 20; try { nearMiles = NEAR_MILES.includes(+localStorage.getItem(RADIUS_KEY)) ? +localStorage.getItem(RADIUS_KEY) : 20; } catch (e) {}
+const nearM = () => nearMiles * 1609.34;
+// miles where people use miles; elsewhere the rounded kilometres (30, 80, 160)
+const nearDist = (mi) => miles ? unit(mi, 'mile', 0) : unit(Math.round(mi * 1.609 / 10) * 10, 'kilometer', 0);
 const mn = { kind: -1, far: false, at: null, guessed: false, rows: null };
 // minutes from now until this church's next Mass (kind 0) or Confession (kind 1) in the next week, optionally in one language
 function nextTime(v, kind, li) {
@@ -1181,7 +1189,7 @@ async function hereOrCenter() {
   } catch (e) { const c = map.getCenter(); mn.guessed = true; mn.at = [c.lng, c.lat]; }
   return mn.at;
 }
-// kind 0 = Mass near me, 1 = Confession near me (within 20 miles); 2 = every church with Mass in the chosen language, worldwide
+// kind 0 = Mass near me, 1 = Confession near me (within the chosen distance); 2 = every church with Mass in the chosen language, worldwide
 async function massNear(kind) {
   mn.kind = kind; mf.mode = '';
   if (kind < 2) mf.lang = '';  // the three are separate questions
@@ -1201,20 +1209,25 @@ async function massNear(kind) {
   }
   cand.sort((a, b) => a[0] - b[0]);  // closest first
   const rows = [];
-  for (const [, i, v] of cand) {
-    const n = nextTime(v, kind === 1 ? 1 : 0, li), m = metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6);
-    if (kind < 2 && !n) continue;
-    if (kind < 2 && m > NEAR_M && rows.length) break;  // near me stops at 20 miles
-    rows.push({ i, n, m });
-    if (kind < 2 && m > NEAR_M) break;  // nothing within 20 miles: keep just the nearest one
+  if (kind < 2) {
+    // every church within the chosen distance, nearest first; the ones whose websites we could read also show their next time
+    state.only = null;
+    for (const r of nearest(lat, lon, 1500)) {
+      if (r.m > nearM() && rows.length) break;
+      const v = mf.data.c[r.i];
+      rows.push({ i: r.i, n: v ? nextTime(v, kind, -1) : null, m: r.m });
+      if (r.m > nearM()) break;  // nothing that close: keep just the nearest one
+    }
+  } else for (const [, i, v] of cand) {
+    rows.push({ i, n: nextTime(v, 0, li), m: metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6) });
     if (rows.length >= 300) break;
   }
-  mn.far = kind < 2 && rows.length === 1 && rows[0].m > NEAR_M;
+  mn.far = kind < 2 && rows.length === 1 && rows[0].m > nearM();
   mn.rows = rows;
   state.only = kind === 2 ? inLang : new Set(rows.map(r => r.i));
   map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
   map.once('idle', updateNames);
-  $('tagline').innerHTML = kind === 2 ? tr('massLangTag', { n: inLang.size, lang: esc(massLangName(mf.lang)) }) : esc(tr(kind ? 'confNearTag' : 'massNearTag', { n: rows.length }));
+  $('tagline').innerHTML = kind === 2 ? tr('massLangTag', { n: inLang.size, lang: esc(massLangName(mf.lang)) }) : esc(tr(kind ? 'confNearTag' : 'massNearTag', { n: rows.length, dist: nearDist(nearMiles) }));
   closeCard();
   const wide = innerWidth > 640, pad = wide ? { left: 380, right: 80, top: 190, bottom: 80 } : { top: 190, bottom: innerHeight * 0.62, left: 40, right: 40 };
   if (kind === 2) {
@@ -1236,12 +1249,12 @@ async function renderMassNear() {
   const rows = mn.rows, list = $('nearList'); if (!rows) return;
   setNearTitle();
   $('nearN').textContent = rows.length ? fmt(mn.kind === 2 ? state.only.size : rows.length) : '';
-  let recs = []; try { recs = await Promise.all(rows.slice(0, 60).map(r => shardFor(r.i))); } catch (e) {}
+  let recs = []; try { recs = await Promise.all(rows.slice(0, 150).map(r => shardFor(r.i))); } catch (e) {}
   if (rows !== mn.rows) return;
   const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : 'massNearIntro';
-  list.innerHTML = `<p class="note">${esc(tr(intro))}</p>` + (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear'))}</p>` : '') + (rows.length ? rows.slice(0, 60).map((r, k) => {
-    const rec = recs[k] || [], t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
-    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc"><b class="when">${esc(r.n ? whenText(r.n) : tr('noTimesWeek'))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+  list.innerHTML = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear', { dist: nearDist(nearMiles) }))}</p>` : '') + (rows.length ? rows.slice(0, 150).map((r, k) => {
+    const rec = recs[k] || [], unknown = mn.kind < 2 && !r.n && !mf.data.c[r.i], site = rec[6] ? (/^https?:/.test(rec[6]) ? rec[6] : 'https://' + rec[6]) : '', t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
+    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span>${unknown ? `<span class="loc wrap">${esc(tr('timesUnknown'))}</span>` : `<span class="loc"><b class="when">${esc(r.n ? whenText(r.n) : tr('noTimesWeek'))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span>`}</div></button><span class="dist">${fmtDist(r.m)}${unknown && site ? `<a class="site" href="${esc(site)}" target="_blank" rel="noopener">${esc(tr('websiteShort'))}</a>` : ''}</span></li>`;
   }).join('') : `<p class="empty">${esc(tr('noMassNear'))}</p>`)
     + `<p class="note">${esc(tr('timesCheck'))}</p>`;
 }
@@ -1265,6 +1278,10 @@ async function initMassFilters() {
   });
   // a language narrows the nearby list; the worldwide view is one link away inside it
   $('massChips').addEventListener('change', (e) => {
+    if (e.target.id === 'nearDist') {
+      nearMiles = +e.target.value; try { localStorage.setItem(RADIUS_KEY, nearMiles); } catch (err) {}
+      massNear(mn.kind === 1 ? 1 : 0); return;
+    }
     if (e.target.id !== 'massLang') return;
     mf.lang = e.target.value;
     if (mf.lang) massNear(2); else { endMassNear(); showNear(false); applyMassFilter(); }
@@ -1597,7 +1614,20 @@ function addChurchLayers() {
   // your position, after "near me"
   map.addSource('me', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   map.addLayer({ id: 'me-halo', type: 'circle', source: 'me', paint: { 'circle-color': '#4f9dff', 'circle-opacity': 0.22, 'circle-radius': 16 } });
-  map.addLayer({ id: 'me', type: 'circle', source: 'me', paint: { 'circle-color': '#4f9dff', 'circle-radius': 6, 'circle-stroke-color': '#fff', 'circle-stroke-width': 2 } });
+  map.addLayer({ id: 'me-ring', type: 'circle', source: 'me', paint: { 'circle-color': 'rgba(0,0,0,0)', 'circle-radius': 16, 'circle-stroke-color': '#4f9dff', 'circle-stroke-width': 2, 'circle-stroke-opacity': 0.8 } });
+  map.addLayer({ id: 'me', type: 'circle', source: 'me', paint: { 'circle-color': '#4f9dff', 'circle-radius': 7, 'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5 } });
+  // "You Are Here" so your own dot can't be mistaken for a church
+  map.addLayer({ id: 'me-label', type: 'symbol', source: 'me', layout: { 'text-field': tr('youAreHere'), 'text-font': ['NotoSansMedium'], 'text-size': 13, 'text-offset': [0, 1.6], 'text-anchor': 'top', 'text-allow-overlap': true },
+    paint: { 'text-color': '#cfe3ff', 'text-halo-color': '#0a1a33', 'text-halo-width': 1.6 } });
+  // when your location arrives the ring pulses outward a few times, like a phone's map, then settles
+  let pulseUntil = 0;
+  const pulse = (t) => {
+    if (t > pulseUntil) { map.setPaintProperty('me-ring', 'circle-radius', 16); map.setPaintProperty('me-ring', 'circle-stroke-opacity', 0.8); pulseUntil = 0; return; }
+    const f = (t % 2000) / 2000;
+    map.setPaintProperty('me-ring', 'circle-radius', 9 + f * 20); map.setPaintProperty('me-ring', 'circle-stroke-opacity', 0.9 * (1 - f));
+    requestAnimationFrame(pulse);
+  };
+  map.on('sourcedata', (e) => { if (e.sourceId === 'me' && e.sourceDataType !== 'metadata' && !pulseUntil && !reduceMotion) { pulseUntil = performance.now() + 10000; requestAnimationFrame(pulse); } });
   // saved churches wear a rose ring at every zoom
   map.addSource('favs', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   map.addLayer({ id: 'fav-ring', type: 'circle', source: 'favs', paint: {
@@ -2707,6 +2737,7 @@ $('langSel').addEventListener('change', async (e) => {
   else { renderChips(); updateTagline(); }
   if (life.data && state.mode !== 'jesus') buildTimeline();
   renderFavs(); if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels();
+  if (map.getLayer('me-label')) map.setLayoutProperty('me-label', 'text-field', tr('youAreHere'));
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
   if (!$('about').hidden) $($('mailBtn') ? 'contactBtn' : 'aboutBtn').click();
