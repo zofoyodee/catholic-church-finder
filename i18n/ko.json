@@ -334,5 +334,11 @@
   "jReadIt": "복음서에서 읽기",
   "jThePlace": "장소",
   "jAlsoHere": "이곳에서 일어난 다른 일",
-  "jShareMoment": "예수님의 생애: {name}"
+  "jShareMoment": "예수님의 생애: {name}",
+  "desc_cathedral": "주교의 고유한 성당이자 교구의 모성당입니다.",
+  "desc_basilica": "교황으로부터 대성전 칭호를 받은 성당입니다.",
+  "desc_shrine": "순례와 신심의 장소입니다.",
+  "desc_church": "일반 본당과 지역 성당: 주교좌성당, 대성전, 성지, 경당, 수도원이 아닌 모든 성당입니다.",
+  "desc_chapel": "작은 경당이나 기도소로, 흔히 인근 본당에서 돌봅니다.",
+  "desc_abbey": "수사, 수녀, 탁발수사 또는 수녀회 공동체의 성당입니다."
 }

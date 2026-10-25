@@ -352,5 +352,11 @@
   "jReadIt": "Basahin sa mga Ebanghelyo",
   "jThePlace": "Ang lugar",
   "jAlsoHere": "Dito rin",
-  "jShareMoment": "{name}, mula sa buhay ni Hesus"
+  "jShareMoment": "{name}, mula sa buhay ni Hesus",
+  "desc_cathedral": "Ang sariling simbahan ng obispo, ang inang simbahan ng isang diyosesis.",
+  "desc_basilica": "Isang simbahang pinarangalan ng Papa ng titulong basilika.",
+  "desc_shrine": "Isang lugar ng peregrinasyon at debosyon.",
+  "desc_church": "Ang mga karaniwang simbahan ng parokya at ng pamayanan: bawat simbahang hindi katedral, basilika, dambana, kapilya o abadiya.",
+  "desc_chapel": "Isang mas maliit na kapilya o oratoryo, kadalasang pinaglilingkuran ng kalapit na parokya.",
+  "desc_abbey": "Ang simbahan ng isang pamayanan ng mga monghe, madre, prayle o sister."
 }

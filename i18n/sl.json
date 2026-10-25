@@ -319,5 +319,11 @@
   "stops_one": "{n} postaja",
   "stops_two": "{n} postaji",
   "stops_few": "{n} postaje",
-  "startOver": "Začni znova"
+  "startOver": "Začni znova",
+  "desc_cathedral": "Škofova lastna cerkev, mati cerkev škofije.",
+  "desc_basilica": "Cerkev, ki jo je papež počastil z nazivom bazilika.",
+  "desc_shrine": "Kraj romanja in pobožnosti.",
+  "desc_church": "Običajne župnijske in krajevne cerkve: vsaka cerkev, ki ni stolnica, bazilika, svetišče, kapela ali opatija.",
+  "desc_chapel": "Manjša kapela ali oratorij, ki ga pogosto oskrbuje bližnja župnija.",
+  "desc_abbey": "Cerkev skupnosti menihov, nun, bratov ali sester."
 }

@@ -313,5 +313,11 @@
   "color_rose": "rozë",
   "color_white": "e bardhë dhe e artë",
   "color_red": "e kuqe",
-  "startOver": "Fillo nga e para"
+  "startOver": "Fillo nga e para",
+  "desc_cathedral": "Kisha e vetë peshkopit, kisha nënë e një dioqeze.",
+  "desc_basilica": "Kishë e nderuar nga Papa me titullin bazilikë.",
+  "desc_shrine": "Vend shtegtimi dhe devocioni.",
+  "desc_church": "Kishat e zakonshme famullitare dhe të lagjeve: çdo kishë që nuk është katedrale, bazilikë, shenjtërore, kishëz ose abaci.",
+  "desc_chapel": "Kishëz ose oratore më e vogël, shpesh e shërbyer nga një famulli aty pranë.",
+  "desc_abbey": "Kisha e një bashkësie murgjish, murgeshash, vëllezërish ose motrash."
 }

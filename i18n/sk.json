@@ -373,5 +373,11 @@
   "jReadIt": "Prečítajte si to v evanjeliách",
   "jThePlace": "Miesto",
   "jAlsoHere": "Aj tu",
-  "jShareMoment": "{name} – zo života Ježiša"
+  "jShareMoment": "{name} – zo života Ježiša",
+  "desc_cathedral": "Vlastný kostol biskupa, materský kostol diecézy.",
+  "desc_basilica": "Kostol, ktorý Pápež poctil titulom bazilika.",
+  "desc_shrine": "Miesto púte a pobožnosti.",
+  "desc_church": "Bežné farské a miestne kostoly: každý kostol, ktorý nie je katedrálou, bazilikou, pútnickým miestom, kaplnkou ani opátstvom.",
+  "desc_chapel": "Menšia kaplnka alebo oratórium, často spravované blízkou farnosťou.",
+  "desc_abbey": "Kostol komunity mníchov, mníšok, bratov alebo sestier."
 }

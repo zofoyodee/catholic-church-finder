@@ -307,5 +307,11 @@
   "color_rose": "rosa",
   "color_white": "mutin no osan-mean",
   "color_red": "mean",
-  "startOver": "Hahú fali"
+  "startOver": "Hahú fali",
+  "desc_cathedral": "Bispu nia igreja rasik, igreja inan husi diosese ida.",
+  "desc_basilica": "Igreja ida ne'ebé Papa fó onra ho títulu basílika.",
+  "desc_shrine": "Fatin ida ba peregrinasaun no devosaun.",
+  "desc_church": "Igreja paróquia no suku sira ne'ebé baibain: igreja hotu ne'ebé la'ós katedrál, basílika, santuáriu, kapela ka abadia.",
+  "desc_chapel": "Kapela ka oratóriu ida ne'ebé ki'ik liu, dala barak paróquia besik mak serbí.",
+  "desc_abbey": "Igreja husi komunidade monje, madre, frade ka irmán sira nian."
 }

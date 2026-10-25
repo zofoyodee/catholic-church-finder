@@ -307,5 +307,11 @@
   "color_rose": "rosas",
   "color_white": "puraw ken balitok",
   "color_red": "nalabaga",
-  "startOver": "Mangrugi manen"
+  "startOver": "Mangrugi manen",
+  "desc_cathedral": "Ti bukod a simbaan ti obispo, ti ina a simbaan ti maysa a diyosesis.",
+  "desc_basilica": "Maysa a simbaan a pinadayawan ti Papa iti titulo a basilika.",
+  "desc_shrine": "Maysa a lugar ti peregrinasion ken debosion.",
+  "desc_church": "Dagiti gagangay a simbaan ti parokia ken ti purok: tunggal simbaan a saan a katedral, basilika, dambana, kapilia wenno abadia.",
+  "desc_chapel": "Maysa nga ad-adda a bassit a kapilia wenno oratorio, masansan a sersebien ti asideg a parokia.",
+  "desc_abbey": "Ti simbaan ti maysa a komunidad dagiti monghe, madre, prayle wenno sister."
 }

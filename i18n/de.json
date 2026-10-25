@@ -352,5 +352,11 @@
   "jReadIt": "Im Evangelium lesen",
   "jThePlace": "Der Ort",
   "jAlsoHere": "Auch hier",
-  "jShareMoment": "{name} – aus dem Leben Jesu"
+  "jShareMoment": "{name} – aus dem Leben Jesu",
+  "desc_cathedral": "Die eigene Kirche des Bischofs, die Mutterkirche eines Bistums.",
+  "desc_basilica": "Eine Kirche, die der Papst mit dem Titel Basilika geehrt hat.",
+  "desc_shrine": "Ein Ort der Wallfahrt und der Andacht.",
+  "desc_church": "Die gewöhnlichen Pfarr- und Ortskirchen: jede Kirche, die kein Dom, keine Basilika, kein Wallfahrtsort, keine Kapelle und keine Abtei ist.",
+  "desc_chapel": "Eine kleinere Kapelle oder ein Oratorium, oft von einer nahen Pfarrei betreut.",
+  "desc_abbey": "Die Kirche einer Gemeinschaft von Mönchen, Nonnen, Brüdern oder Schwestern."
 }

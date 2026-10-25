@@ -368,5 +368,11 @@
   "jReadIt": "Pročitaj u Evanđeljima",
   "jThePlace": "Mjesto",
   "jAlsoHere": "Također ovdje",
-  "jShareMoment": "{name} – iz Isusova života"
+  "jShareMoment": "{name} – iz Isusova života",
+  "desc_cathedral": "Biskupova vlastita crkva, majka-crkva biskupije.",
+  "desc_basilica": "Crkva koju je Papa počastio naslovom bazilike.",
+  "desc_shrine": "Mjesto hodočašća i pobožnosti.",
+  "desc_church": "Obične župne i mjesne crkve: svaka crkva koja nije katedrala, bazilika, svetište, kapela ni opatija.",
+  "desc_chapel": "Manja kapela ili oratorij, često u skrbi obližnje župe.",
+  "desc_abbey": "Crkva zajednice redovnika, redovnica, fratara ili sestara."
 }

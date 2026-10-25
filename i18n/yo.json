@@ -307,5 +307,11 @@
   "color_rose": "pínkì",
   "color_white": "funfun àti wúrà",
   "color_red": "pupa",
-  "startOver": "Bẹ̀rẹ̀ lẹ́ẹ̀kan sí i"
+  "startOver": "Bẹ̀rẹ̀ lẹ́ẹ̀kan sí i",
+  "desc_cathedral": "Ilé ìjọsìn bíṣọ́ọ̀bù fúnra rẹ̀, ìjọ ìyá ti dáyósísì kan.",
+  "desc_basilica": "Ilé ìjọsìn tí Pope bọlá fún pẹ̀lú orúkọ basilika.",
+  "desc_shrine": "Ibi ìrìnàjò mímọ́ àti ìfọkànsìn.",
+  "desc_church": "Àwọn ilé ìjọsìn parish àti ti àdúgbò lásán: gbogbo ilé ìjọsìn tí kì í ṣe katidira, basilika, ojúbọ, ilé àdúrà kékeré tàbí ilé àwọn mọ́ńkì.",
+  "desc_chapel": "Ilé àdúrà kékeré, tí parish tí ó wà nítòsí sábà máa ń ṣe ìránṣẹ́ fún.",
+  "desc_abbey": "Ilé ìjọsìn àwùjọ àwọn mọ́ńkì, àwọn arábìnrin, àwọn arákùnrin tàbí àwọn sisità."
 }

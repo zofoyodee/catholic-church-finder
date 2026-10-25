@@ -307,5 +307,11 @@
   "color_rose": "rose",
   "color_white": "pembe mpe wolo",
   "color_red": "motane",
-  "startOver": "Kobanda lisusu"
+  "startOver": "Kobanda lisusu",
+  "desc_cathedral": "Ndako-Nzambe ya episkopo moko, ndako-Nzambe mama ya diosezi.",
+  "desc_basilica": "Ndako-Nzambe oyo Papa apesi lokumu ya basilika.",
+  "desc_shrine": "Esika ya mobembo mosantu mpe ya losambo.",
+  "desc_church": "Ba ndako-Nzambe ya paroisi mpe ya quartier: ndako-Nzambe nyonso oyo ezali katedrale te, basilika te, esika mosantu te, shapele te to abasi te.",
+  "desc_chapel": "Shapele to esika ya losambo ya moke, mbala mingi paroisi ya pembeni nde ebatelaka yango.",
+  "desc_abbey": "Ndako-Nzambe ya lisanga ya ba moine, ba mama basantu, ba frère to ba sœur."
 }

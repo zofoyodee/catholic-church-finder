@@ -307,5 +307,11 @@
   "color_rose": "rosas",
   "color_white": "puti asin bulawan",
   "color_red": "pula",
-  "startOver": "Magpuon giraray"
+  "startOver": "Magpuon giraray",
+  "desc_cathedral": "An sadiring simbahan kan obispo, an inang simbahan kan sarong diyosesis.",
+  "desc_basilica": "Sarong simbahan na pinadunungan kan Papa kan titulong basilika.",
+  "desc_shrine": "Sarong lugar nin peregrinasyon asin debosyon.",
+  "desc_church": "An mga ordinaryong simbahan nin parokya asin nin komunidad: lambang simbahan na bakong katedral, basilika, dambana, kapilya o abadiya.",
+  "desc_chapel": "Sarong mas sadit na kapilya o oratoryo, parati pinaglilingkodan kan harani na parokya.",
+  "desc_abbey": "An simbahan kan sarong komunidad nin mga monghe, madre, prayle o sister."
 }

@@ -382,5 +382,11 @@
   "jReadIt": "Przeczytaj w Ewangeliach",
   "jThePlace": "Miejsce",
   "jAlsoHere": "Również tutaj",
-  "jShareMoment": "{name} – z życia Jezusa"
+  "jShareMoment": "{name} – z życia Jezusa",
+  "desc_cathedral": "Własny kościół biskupa, kościół matka diecezji.",
+  "desc_basilica": "Kościół wyróżniony przez Papieża tytułem bazyliki.",
+  "desc_shrine": "Miejsce pielgrzymek i pobożności.",
+  "desc_church": "Zwykłe kościoły parafialne i osiedlowe: każdy kościół, który nie jest katedrą, bazyliką, sanktuarium, kaplicą ani opactwem.",
+  "desc_chapel": "Mniejsza kaplica lub oratorium, często obsługiwane przez pobliską parafię.",
+  "desc_abbey": "Kościół wspólnoty mnichów, mniszek, braci zakonnych lub sióstr."
 }

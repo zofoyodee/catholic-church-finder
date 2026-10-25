@@ -307,5 +307,11 @@
   "color_rose": "rosas",
   "color_white": "puti kag bulawan",
   "color_red": "pula",
-  "startOver": "Magsugod liwat"
+  "startOver": "Magsugod liwat",
+  "desc_cathedral": "Ang kaugalingon nga simbahan sang obispo, ang iloy nga simbahan sang diyosesis.",
+  "desc_basilica": "Isa ka simbahan nga ginpadunggan sang Papa sang titulo nga basilika.",
+  "desc_shrine": "Isa ka lugar sang peregrinasyon kag debosyon.",
+  "desc_church": "Ang kasarangan nga mga simbahan sang parokya kag sang komunidad: tagsa ka simbahan nga indi katedral, basilika, dambana, kapilya ukon abadiya.",
+  "desc_chapel": "Isa ka mas gamay nga kapilya ukon oratoryo, masami ginaserbisyuhan sang malapit nga parokya.",
+  "desc_abbey": "Ang simbahan sang isa ka komunidad sang mga monghe, madre, prayle ukon sister."
 }

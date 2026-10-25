@@ -352,5 +352,11 @@
   "jReadIt": "Leia nos Evangelhos",
   "jThePlace": "O lugar",
   "jAlsoHere": "Também aqui",
-  "jShareMoment": "{name}, da vida de Jesus"
+  "jShareMoment": "{name}, da vida de Jesus",
+  "desc_cathedral": "A igreja do próprio bispo, a igreja-mãe de uma diocese.",
+  "desc_basilica": "Uma igreja honrada pelo Papa com o título de basílica.",
+  "desc_shrine": "Um lugar de peregrinação e devoção.",
+  "desc_church": "As igrejas paroquiais e de bairro: toda igreja que não é catedral, basílica, santuário, capela nem abadia.",
+  "desc_chapel": "Uma capela ou oratório menor, muitas vezes atendido por uma paróquia próxima.",
+  "desc_abbey": "A igreja de uma comunidade de monges, monjas, frades ou irmãs."
 }

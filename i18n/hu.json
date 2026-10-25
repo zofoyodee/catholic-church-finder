@@ -352,5 +352,11 @@
   "jReadIt": "Olvasd el az evangéliumban",
   "jThePlace": "A hely",
   "jAlsoHere": "Itt történt még",
-  "jShareMoment": "{name} – Jézus életéből"
+  "jShareMoment": "{name} – Jézus életéből",
+  "desc_cathedral": "A püspök saját temploma, az egyházmegye anyatemploma.",
+  "desc_basilica": "A Pápa által bazilika címmel kitüntetett templom.",
+  "desc_shrine": "Zarándoklat és áhítat helye.",
+  "desc_church": "A szokásos plébánia- és lakóhelyi templomok: minden templom, amely nem székesegyház, bazilika, kegyhely, kápolna vagy apátság.",
+  "desc_chapel": "Kisebb kápolna vagy oratórium, gyakran egy közeli plébánia látja el.",
+  "desc_abbey": "Szerzetesek, apácák, barátok vagy nővérek közösségének temploma."
 }

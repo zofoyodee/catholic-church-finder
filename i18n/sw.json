@@ -352,5 +352,11 @@
   "jReadIt": "Lisome katika Injili",
   "jThePlace": "Mahali",
   "jAlsoHere": "Pia hapa",
-  "jShareMoment": "{name}, kutoka maisha ya Yesu"
+  "jShareMoment": "{name}, kutoka maisha ya Yesu",
+  "desc_cathedral": "Kanisa la askofu mwenyewe, kanisa mama la jimbo.",
+  "desc_basilica": "Kanisa lililoheshimiwa na Papa kwa cheo cha basilika.",
+  "desc_shrine": "Mahali pa hija na ibada.",
+  "desc_church": "Makanisa ya kawaida ya parokia na ya mtaa: kila kanisa lisilo kanisa kuu, basilika, madhabahu, kikanisa wala abasia.",
+  "desc_chapel": "Kikanisa au chumba cha sala kidogo, mara nyingi huhudumiwa na parokia ya karibu.",
+  "desc_abbey": "Kanisa la jumuiya ya watawa wa kiume, wa kike, mafrateri au masista."
 }
