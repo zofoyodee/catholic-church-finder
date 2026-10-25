@@ -394,5 +394,11 @@
   "areaTag": "Tikuonetsa matchalitchi {n} a ku {place}",
   "areaTagView": "Tikuonetsa matchalitchi {n} m'chithunzi ichi",
   "areaTip": "Dinani kuti muone matchalitchi a mzinda uwu",
-  "noneInRange": "Palibe tchalitchi cha mitundu imene mwasankha mkati mwa {dist}. Yesani mtunda wautali kapena onetsani mitundu yambiri pamwamba."
+  "noneInRange": "Palibe tchalitchi cha mitundu imene mwasankha mkati mwa {dist}. Yesani mtunda wautali kapena onetsani mitundu yambiri pamwamba.",
+  "loadingMassNear": "Tikufufuza Misa pafupi nanu…",
+  "loadingConfNear": "Tikufufuza Kulapa pafupi nanu…",
+  "loadingLangList": "Tikufufuza matchalitchi okhala ndi Misa mu {lang}…",
+  "loadingArea": "Tikufufuza matchalitchi a ku {place}…",
+  "loadingView": "Tikufufuza matchalitchi m'chithunzi ichi…",
+  "loadingMore": "Tikutsitsa matchalitchi ena…"
 }

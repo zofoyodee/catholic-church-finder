@@ -418,5 +418,11 @@
   "areaTag": "Crkve: {place} ({n})",
   "areaTagView": "Crkve u ovom prikazu: {n}",
   "areaTip": "Kliknite za popis crkava ovoga grada",
-  "noneInRange": "Nema crkve odabranih vrsta unutar {dist}. Pokušajte veću udaljenost ili gore prikažite više vrsta."
+  "noneInRange": "Nema crkve odabranih vrsta unutar {dist}. Pokušajte veću udaljenost ili gore prikažite više vrsta.",
+  "loadingMassNear": "Tražim mise u blizini…",
+  "loadingConfNear": "Tražim ispovijed u blizini…",
+  "loadingLangList": "Tražim crkve s misom na jeziku: {lang}…",
+  "loadingArea": "Tražim crkve: {place}…",
+  "loadingView": "Tražim crkve u ovom prikazu…",
+  "loadingMore": "Učitavam još crkava…"
 }

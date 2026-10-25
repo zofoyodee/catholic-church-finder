@@ -402,5 +402,11 @@
   "areaTag": "Ipinapakita ang {n} simbahan sa {place}",
   "areaTagView": "Ipinapakita ang {n} simbahan sa view na ito",
   "areaTip": "I-click para ilista ang mga simbahan ng lungsod na ito",
-  "noneInRange": "Walang simbahan sa mga uring pinili mo sa loob ng {dist}. Subukan ang mas malayong distansya o magpakita ng mas maraming uri sa itaas."
+  "noneInRange": "Walang simbahan sa mga uring pinili mo sa loob ng {dist}. Subukan ang mas malayong distansya o magpakita ng mas maraming uri sa itaas.",
+  "loadingMassNear": "Hinahanap ang mga Misa malapit sa iyo…",
+  "loadingConfNear": "Hinahanap ang Kumpisal malapit sa iyo…",
+  "loadingLangList": "Hinahanap ang mga simbahang may Misa sa {lang}…",
+  "loadingArea": "Hinahanap ang mga simbahan sa {place}…",
+  "loadingView": "Hinahanap ang mga simbahan sa view na ito…",
+  "loadingMore": "Naglo-load ng iba pang simbahan…"
 }

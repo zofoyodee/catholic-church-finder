@@ -422,5 +422,11 @@
   "areaTag": "Kostely: {place} ({n})",
   "areaTagView": "Kostely v tomto zobrazení: {n}",
   "areaTip": "Klikněte pro seznam kostelů tohoto města",
-  "noneInRange": "Do {dist} není žádný kostel zvolených druhů. Zkuste větší vzdálenost nebo nahoře zobrazte více druhů."
+  "noneInRange": "Do {dist} není žádný kostel zvolených druhů. Zkuste větší vzdálenost nebo nahoře zobrazte více druhů.",
+  "loadingMassNear": "Hledám mše v okolí…",
+  "loadingConfNear": "Hledám zpověď v okolí…",
+  "loadingLangList": "Hledám kostely se mší v jazyce {lang}…",
+  "loadingArea": "Hledám kostely: {place}…",
+  "loadingView": "Hledám kostely v tomto zobrazení…",
+  "loadingMore": "Načítám další kostely…"
 }

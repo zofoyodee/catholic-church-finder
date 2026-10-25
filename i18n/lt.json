@@ -405,5 +405,11 @@
   "areaTag": "Bažnyčios: {place} ({n})",
   "areaTagView": "Bažnyčios šiame vaizde: {n}",
   "areaTip": "Spustelėkite, kad pamatytumėte šio miesto bažnyčias",
-  "noneInRange": "{dist} spinduliu nėra pasirinktų rūšių bažnyčios. Pabandykite didesnį atstumą arba aukščiau parodykite daugiau rūšių."
+  "noneInRange": "{dist} spinduliu nėra pasirinktų rūšių bažnyčios. Pabandykite didesnį atstumą arba aukščiau parodykite daugiau rūšių.",
+  "loadingMassNear": "Ieškoma Mišių netoliese…",
+  "loadingConfNear": "Ieškoma išpažinties netoliese…",
+  "loadingLangList": "Ieškoma bažnyčių su Mišiomis kalba {lang}…",
+  "loadingArea": "Ieškoma bažnyčių: {place}…",
+  "loadingView": "Ieškoma bažnyčių šiame vaizde…",
+  "loadingMore": "Įkeliama daugiau bažnyčių…"
 }

@@ -394,5 +394,11 @@
   "areaTag": "Ń fi ilé ìjọsìn {n} hàn ní {place}",
   "areaTagView": "Ń fi ilé ìjọsìn {n} hàn nínú ìwòye yìí",
   "areaTip": "Tẹ láti rí àwọn ilé ìjọsìn ìlú yìí",
-  "noneInRange": "Kò sí ilé ìjọsìn irú tí o yàn láàrin {dist}. Gbìyànjú ìjìnnà tó pọ̀ jù tàbí fi irú púpọ̀ sí i hàn lókè."
+  "noneInRange": "Kò sí ilé ìjọsìn irú tí o yàn láàrin {dist}. Gbìyànjú ìjìnnà tó pọ̀ jù tàbí fi irú púpọ̀ sí i hàn lókè.",
+  "loadingMassNear": "Ń wá Mísà nítòsí rẹ…",
+  "loadingConfNear": "Ń wá Ìjẹ́wọ́ nítòsí rẹ…",
+  "loadingLangList": "Ń wá ilé ìjọsìn tí ó ní Mísà ní {lang}…",
+  "loadingArea": "Ń wá ilé ìjọsìn ní {place}…",
+  "loadingView": "Ń wá ilé ìjọsìn nínú ìwòye yìí…",
+  "loadingMore": "Ń gbé ilé ìjọsìn mìíràn wọlé…"
 }

@@ -394,5 +394,11 @@
   "areaTag": "Iginpapakita an {n} nga simbahan ha {place}",
   "areaTagView": "Iginpapakita an {n} nga simbahan hini nga view",
   "areaTip": "I-klik basi ilista an mga simbahan hini nga syudad",
-  "noneInRange": "Waray simbahan han mga klase nga imo ginpili ha sulod han {dist}. Testinga an mas hirayo nga distansya o ipakita an dugang nga klase ha igbaw."
+  "noneInRange": "Waray simbahan han mga klase nga imo ginpili ha sulod han {dist}. Testinga an mas hirayo nga distansya o ipakita an dugang nga klase ha igbaw.",
+  "loadingMassNear": "Ginbibiling an mga Misa hirani ha imo…",
+  "loadingConfNear": "Ginbibiling an Kumpisal hirani ha imo…",
+  "loadingLangList": "Ginbibiling an mga simbahan nga may Misa ha {lang}…",
+  "loadingArea": "Ginbibiling an mga simbahan ha {place}…",
+  "loadingView": "Ginbibiling an mga simbahan hini nga view…",
+  "loadingMore": "Ginkakarga an dugang nga simbahan…"
 }

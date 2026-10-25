@@ -402,5 +402,11 @@
   "areaTag": "Mostrando {n} iglesias en {place}",
   "areaTagView": "Mostrando {n} iglesias en esta vista",
   "areaTip": "Haz clic para ver las iglesias de esta ciudad",
-  "noneInRange": "Ninguna iglesia de los tipos elegidos está a menos de {dist}. Prueba una distancia mayor o muestra más tipos arriba."
+  "noneInRange": "Ninguna iglesia de los tipos elegidos está a menos de {dist}. Prueba una distancia mayor o muestra más tipos arriba.",
+  "loadingMassNear": "Buscando Misas cerca de ti…",
+  "loadingConfNear": "Buscando Confesión cerca de ti…",
+  "loadingLangList": "Buscando iglesias con Misa en {lang}…",
+  "loadingArea": "Buscando iglesias en {place}…",
+  "loadingView": "Buscando iglesias en esta vista…",
+  "loadingMore": "Cargando más iglesias…"
 }

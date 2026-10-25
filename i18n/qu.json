@@ -394,5 +394,11 @@
   "areaTag": "{place}pi {n} iglesiakunata qhawachichkan",
   "areaTagView": "Kay qhawaypi {n} iglesiakunata qhawachichkan",
   "areaTip": "Kay llaqtap iglesiankunata qhawanaykipaq ñit'iy",
-  "noneInRange": "{dist} ukhupi mana akllasqayki laya iglesia kanchu. Aswan karuta maskay utaq hanaqpi aswan layakunata qhawachiy."
+  "noneInRange": "{dist} ukhupi mana akllasqayki laya iglesia kanchu. Aswan karuta maskay utaq hanaqpi aswan layakunata qhawachiy.",
+  "loadingMassNear": "Qayllaykipi Misakunata maskachkan…",
+  "loadingConfNear": "Qayllaykipi Confesionta maskachkan…",
+  "loadingLangList": "{lang} simipi Misayuq iglesiakunata maskachkan…",
+  "loadingArea": "{place}pi iglesiakunata maskachkan…",
+  "loadingView": "Kay qhawaypi iglesiakunata maskachkan…",
+  "loadingMore": "Aswan iglesiakunata cargachkan…"
 }

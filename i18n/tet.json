@@ -394,5 +394,11 @@
   "areaTag": "Hatudu igreja {n} iha {place}",
   "areaTagView": "Hatudu igreja {n} iha vista ida-ne'e",
   "areaTip": "Klik atu hatudu igreja sira iha sidade ida-ne'e",
-  "noneInRange": "La iha igreja husi tipu ne'ebé ita hili iha {dist} nia laran. Koko distánsia ne'ebé dook liu ka hatudu tipu barak liu iha leten."
+  "noneInRange": "La iha igreja husi tipu ne'ebé ita hili iha {dist} nia laran. Koko distánsia ne'ebé dook liu ka hatudu tipu barak liu iha leten.",
+  "loadingMassNear": "Buka hela Misa besik ita…",
+  "loadingConfNear": "Buka hela Konfisaun besik ita…",
+  "loadingLangList": "Buka hela igreja ho Misa iha {lang}…",
+  "loadingArea": "Buka hela igreja iha {place}…",
+  "loadingView": "Buka hela igreja iha vista ida-ne'e…",
+  "loadingMore": "Hatama hela igreja barak liu…"
 }

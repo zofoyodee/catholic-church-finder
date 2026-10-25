@@ -394,5 +394,11 @@
   "areaTag": "Kuonania makanitha {n} ma {place}",
   "areaTagView": "Kuonania makanitha {n} thĩinĩ wa mũoneko ũyũ",
   "areaTip": "Hihinya wone makanitha ma itũũra rĩĩrĩ",
-  "noneInRange": "Gũtirĩ kanitha ya mĩthemba ĩrĩa wathuurire thĩinĩ wa {dist}. Geria ũraihu mũnene kana wonanie mĩthemba mĩingĩ igũrũ."
+  "noneInRange": "Gũtirĩ kanitha ya mĩthemba ĩrĩa wathuurire thĩinĩ wa {dist}. Geria ũraihu mũnene kana wonanie mĩthemba mĩingĩ igũrũ.",
+  "loadingMassNear": "Tũrĩ gũcaria Mĩsa hakuhĩ nawe…",
+  "loadingConfNear": "Tũrĩ gũcaria Kwĩrira hakuhĩ nawe…",
+  "loadingLangList": "Tũrĩ gũcaria makanitha marĩ na Mĩsa na {lang}…",
+  "loadingArea": "Tũrĩ gũcaria makanitha ma {place}…",
+  "loadingView": "Tũrĩ gũcaria makanitha thĩinĩ wa mũoneko ũyũ…",
+  "loadingMore": "Tũrĩ kũrehe makanitha mangĩ…"
 }

@@ -384,5 +384,11 @@
   "areaTag": "{place}의 성당 {n}곳",
   "areaTagView": "이 화면의 성당 {n}곳",
   "areaTip": "이 도시의 성당 목록을 보려면 클릭하세요",
-  "noneInRange": "{dist} 이내에 선택한 종류의 성당이 없습니다. 거리를 늘리거나 위에서 종류를 더 표시해 보세요."
+  "noneInRange": "{dist} 이내에 선택한 종류의 성당이 없습니다. 거리를 늘리거나 위에서 종류를 더 표시해 보세요.",
+  "loadingMassNear": "근처 미사를 찾는 중…",
+  "loadingConfNear": "근처 고해성사를 찾는 중…",
+  "loadingLangList": "{lang} 미사가 있는 성당을 찾는 중…",
+  "loadingArea": "{place}의 성당을 찾는 중…",
+  "loadingView": "이 화면의 성당을 찾는 중…",
+  "loadingMore": "성당을 더 불러오는 중…"
 }

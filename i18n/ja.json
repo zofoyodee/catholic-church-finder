@@ -386,5 +386,11 @@
   "areaTag": "{place}の教会 {n} 件",
   "areaTagView": "この表示範囲の教会 {n} 件",
   "areaTip": "クリックしてこの都市の教会を一覧表示",
-  "noneInRange": "{dist}以内に選択した種類の教会はありません。距離を広げるか、上で種類を増やしてください。"
+  "noneInRange": "{dist}以内に選択した種類の教会はありません。距離を広げるか、上で種類を増やしてください。",
+  "loadingMassNear": "近くのミサを探しています…",
+  "loadingConfNear": "近くのゆるしの秘跡を探しています…",
+  "loadingLangList": "{lang}のミサがある教会を探しています…",
+  "loadingArea": "{place}の教会を探しています…",
+  "loadingView": "この表示範囲の教会を探しています…",
+  "loadingMore": "さらに教会を読み込んでいます…"
 }

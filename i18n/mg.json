@@ -394,5 +394,11 @@
   "areaTag": "Fiangonana {n} ao {place}",
   "areaTagView": "Fiangonana {n} amin'ity fijery ity",
   "areaTip": "Tsindrio hanehoana ny fiangonan'ity tanàna ity",
-  "noneInRange": "Tsy misy fiangonana amin'ireo karazana nofidinao ao anatin'ny {dist}. Andramo lavitra kokoa na asehoy karazana bebe kokoa etsy ambony."
+  "noneInRange": "Tsy misy fiangonana amin'ireo karazana nofidinao ao anatin'ny {dist}. Andramo lavitra kokoa na asehoy karazana bebe kokoa etsy ambony.",
+  "loadingMassNear": "Mitady Lamesa akaikinao…",
+  "loadingConfNear": "Mitady Fibebahana akaikinao…",
+  "loadingLangList": "Mitady fiangonana misy Lamesa amin'ny {lang}…",
+  "loadingArea": "Mitady fiangonana ao {place}…",
+  "loadingView": "Mitady fiangonana amin'ity fijery ity…",
+  "loadingMore": "Mampiditra fiangonana fanampiny…"
 }

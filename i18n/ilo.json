@@ -394,5 +394,11 @@
   "areaTag": "Ipakpakita ti {n} a simbaan iti {place}",
   "areaTagView": "Ipakpakita ti {n} a simbaan iti daytoy a view",
   "areaTip": "I-klik tapno ilista dagiti simbaan ti daytoy a siudad",
-  "noneInRange": "Awan ti simbaan kadagiti kita a pinilim iti uneg ti {dist}. Padasem ti ad-adayo a distansia wenno ipakita ti ad-adu a kita iti ngato."
+  "noneInRange": "Awan ti simbaan kadagiti kita a pinilim iti uneg ti {dist}. Padasem ti ad-adayo a distansia wenno ipakita ti ad-adu a kita iti ngato.",
+  "loadingMassNear": "Agsapsapul kadagiti Misa iti asidegmo…",
+  "loadingConfNear": "Agsapsapul iti Kumpisal iti asidegmo…",
+  "loadingLangList": "Agsapsapul kadagiti simbaan nga addaan Misa iti {lang}…",
+  "loadingArea": "Agsapsapul kadagiti simbaan iti {place}…",
+  "loadingView": "Agsapsapul kadagiti simbaan iti daytoy a view…",
+  "loadingMore": "Ikarkarga ti ad-adu pay a simbaan…"
 }

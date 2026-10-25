@@ -394,5 +394,11 @@
   "areaTag": "Ipinapahiling an {n} na simbahan sa {place}",
   "areaTagView": "Ipinapahiling an {n} na simbahan sa view na ini",
   "areaTip": "I-klik tanganing ilista an mga simbahan kan siyudad na ini",
-  "noneInRange": "Mayong simbahan kan mga klaseng pinili mo sa laog kan {dist}. Probaran an mas harayong distansya o ipahiling an dakol pang klase sa itaas."
+  "noneInRange": "Mayong simbahan kan mga klaseng pinili mo sa laog kan {dist}. Probaran an mas harayong distansya o ipahiling an dakol pang klase sa itaas.",
+  "loadingMassNear": "Hinahanap an mga Misa harani saimo…",
+  "loadingConfNear": "Hinahanap an Kumpisal harani saimo…",
+  "loadingLangList": "Hinahanap an mga simbahan na igwang Misa sa {lang}…",
+  "loadingArea": "Hinahanap an mga simbahan sa {place}…",
+  "loadingView": "Hinahanap an mga simbahan sa view na ini…",
+  "loadingMore": "Pigkakarga an dakol pang simbahan…"
 }

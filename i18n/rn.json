@@ -394,5 +394,11 @@
   "areaTag": "Herekanwa ingoro z'Imana {n} zo muri {place}",
   "areaTagView": "Herekanwa ingoro z'Imana {n} ziri muri iyi shusho",
   "areaTip": "Fyonda urabe ingoro z'Imana z'iki gisagara",
-  "noneInRange": "Nta ngoro y'Imana yo mu bwoko wahisemwo iri muri {dist}. Gerageza intera ndende canke werekane ubwoko bwinshi hejuru."
+  "noneInRange": "Nta ngoro y'Imana yo mu bwoko wahisemwo iri muri {dist}. Gerageza intera ndende canke werekane ubwoko bwinshi hejuru.",
+  "loadingMassNear": "Turarondera Misa hafi yawe…",
+  "loadingConfNear": "Turarondera Kwicuza hafi yawe…",
+  "loadingLangList": "Turarondera ingoro z'Imana zifise Misa mu {lang}…",
+  "loadingArea": "Turarondera ingoro z'Imana zo muri {place}…",
+  "loadingView": "Turarondera ingoro z'Imana ziri muri iyi shusho…",
+  "loadingMore": "Turazana izindi ngoro z'Imana…"
 }

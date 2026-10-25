@@ -402,5 +402,11 @@
   "areaTag": "{n} Kirchen in {place}",
   "areaTagView": "{n} Kirchen in dieser Ansicht",
   "areaTip": "Klicken, um die Kirchen dieser Stadt aufzulisten",
-  "noneInRange": "Keine Kirche der gewählten Arten im Umkreis von {dist}. Versuche eine größere Entfernung oder zeige oben mehr Arten."
+  "noneInRange": "Keine Kirche der gewählten Arten im Umkreis von {dist}. Versuche eine größere Entfernung oder zeige oben mehr Arten.",
+  "loadingMassNear": "Suche Messen in deiner Nähe…",
+  "loadingConfNear": "Suche Beichte in deiner Nähe…",
+  "loadingLangList": "Suche Kirchen mit Messe auf {lang}…",
+  "loadingArea": "Suche Kirchen in {place}…",
+  "loadingView": "Suche Kirchen in dieser Ansicht…",
+  "loadingMore": "Lade weitere Kirchen…"
 }

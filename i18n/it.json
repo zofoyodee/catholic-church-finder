@@ -402,5 +402,11 @@
   "areaTag": "{n} chiese a {place}",
   "areaTagView": "{n} chiese in questa vista",
   "areaTip": "Clicca per elencare le chiese di questa città",
-  "noneInRange": "Nessuna chiesa dei tipi scelti entro {dist}. Prova una distanza maggiore o mostra più tipi qui sopra."
+  "noneInRange": "Nessuna chiesa dei tipi scelti entro {dist}. Prova una distanza maggiore o mostra più tipi qui sopra.",
+  "loadingMassNear": "Cerco le Messe vicino a te…",
+  "loadingConfNear": "Cerco la Confessione vicino a te…",
+  "loadingLangList": "Cerco chiese con Messa in {lang}…",
+  "loadingArea": "Cerco chiese a {place}…",
+  "loadingView": "Cerco chiese in questa vista…",
+  "loadingMore": "Carico altre chiese…"
 }

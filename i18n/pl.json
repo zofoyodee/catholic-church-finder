@@ -432,5 +432,11 @@
   "areaTag": "Kościoły: {place} ({n})",
   "areaTagView": "Kościoły w tym widoku: {n}",
   "areaTip": "Kliknij, aby zobaczyć kościoły tego miasta",
-  "noneInRange": "Brak kościoła wybranych rodzajów w promieniu {dist}. Spróbuj większej odległości lub pokaż więcej rodzajów powyżej."
+  "noneInRange": "Brak kościoła wybranych rodzajów w promieniu {dist}. Spróbuj większej odległości lub pokaż więcej rodzajów powyżej.",
+  "loadingMassNear": "Szukam Mszy w pobliżu…",
+  "loadingConfNear": "Szukam spowiedzi w pobliżu…",
+  "loadingLangList": "Szukam kościołów z Mszą w języku: {lang}…",
+  "loadingArea": "Szukam kościołów: {place}…",
+  "loadingView": "Szukam kościołów w tym widoku…",
+  "loadingMore": "Wczytuję kolejne kościoły…"
 }

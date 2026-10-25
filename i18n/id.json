@@ -386,5 +386,11 @@
   "areaTag": "Menampilkan {n} gereja di {place}",
   "areaTagView": "Menampilkan {n} gereja di tampilan ini",
   "areaTip": "Klik untuk melihat gereja di kota ini",
-  "noneInRange": "Tidak ada gereja dari jenis yang Anda pilih dalam jarak {dist}. Coba jarak lebih jauh atau tampilkan lebih banyak jenis di atas."
+  "noneInRange": "Tidak ada gereja dari jenis yang Anda pilih dalam jarak {dist}. Coba jarak lebih jauh atau tampilkan lebih banyak jenis di atas.",
+  "loadingMassNear": "Mencari Misa di dekat Anda…",
+  "loadingConfNear": "Mencari Pengakuan Dosa di dekat Anda…",
+  "loadingLangList": "Mencari gereja dengan Misa berbahasa {lang}…",
+  "loadingArea": "Mencari gereja di {place}…",
+  "loadingView": "Mencari gereja di tampilan ini…",
+  "loadingMore": "Memuat gereja lainnya…"
 }

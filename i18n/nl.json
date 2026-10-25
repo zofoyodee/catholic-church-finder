@@ -402,5 +402,11 @@
   "areaTag": "{n} kerken in {place}",
   "areaTagView": "{n} kerken in deze weergave",
   "areaTip": "Klik om de kerken van deze stad te tonen",
-  "noneInRange": "Geen kerk van de gekozen soorten binnen {dist}. Probeer een grotere afstand of toon hierboven meer soorten."
+  "noneInRange": "Geen kerk van de gekozen soorten binnen {dist}. Probeer een grotere afstand of toon hierboven meer soorten.",
+  "loadingMassNear": "Missen bij jou in de buurt zoeken…",
+  "loadingConfNear": "Biecht bij jou in de buurt zoeken…",
+  "loadingLangList": "Kerken met een Mis in het {lang} zoeken…",
+  "loadingArea": "Kerken in {place} zoeken…",
+  "loadingView": "Kerken in deze weergave zoeken…",
+  "loadingMore": "Meer kerken laden…"
 }

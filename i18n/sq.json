@@ -400,5 +400,11 @@
   "areaTag": "Po shfaqen {n} kisha në {place}",
   "areaTagView": "Po shfaqen {n} kisha në këtë pamje",
   "areaTip": "Klikoni për të listuar kishat e këtij qyteti",
-  "noneInRange": "Asnjë kishë e llojeve që zgjodhët brenda {dist}. Provoni një largësi më të madhe ose shfaqni më shumë lloje më sipër."
+  "noneInRange": "Asnjë kishë e llojeve që zgjodhët brenda {dist}. Provoni një largësi më të madhe ose shfaqni më shumë lloje më sipër.",
+  "loadingMassNear": "Po kërkohen Mesha pranë jush…",
+  "loadingConfNear": "Po kërkohet Rrëfim pranë jush…",
+  "loadingLangList": "Po kërkohen kisha me Meshë në {lang}…",
+  "loadingArea": "Po kërkohen kisha në {place}…",
+  "loadingView": "Po kërkohen kisha në këtë pamje…",
+  "loadingMore": "Po ngarkohen më shumë kisha…"
 }
