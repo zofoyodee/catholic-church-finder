@@ -85,6 +85,7 @@ button, input { font: inherit; color: inherit; }
 .top::before { content: ""; position: absolute; inset: 0 0 -40px; z-index: -1; pointer-events: none; background: linear-gradient(to bottom, rgba(5,7,13,.82), rgba(5,7,13,.5) 60%, rgba(5,7,13,0)); }
 .foot::before { content: ""; position: absolute; inset: -24px 0 0; z-index: -1; pointer-events: none; background: linear-gradient(to top, rgba(5,7,13,.8), rgba(5,7,13,0)); }
 .brand { display: grid; gap: 2px; min-width: 0; }
+.brand h1 a { color: inherit; text-decoration: none; }
 .brand h1 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: 0.08em; color: var(--ink); text-shadow: 0 2px 18px #000; line-height: 1.1; }
 .brand h1 .cross { color: var(--gold); margin-right: 8px; }
 .brand p { margin: 0; color: var(--ink-soft); font-size: 13px; text-shadow: 0 1px 8px #000; }
@@ -470,7 +471,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 
 <header class="top">
   <div class="brand">
-    <h1><span class="cross" aria-hidden="true">✠</span><span data-i18n="app">Catholic Church Finder</span></h1>
+    <h1><a href="./" id="homeLink" data-i18n-attr="title:startOver" title="Start over"><span class="cross" aria-hidden="true">✠</span><span data-i18n="app">Catholic Church Finder</span></a></h1>
     <p id="tagline" data-i18n="loadingChurches">Loading churches…</p>
   </div>
   <div class="modes" role="tablist" aria-label="What the globe shows" data-i18n-attr="aria-label:modesLabel">
@@ -571,6 +572,8 @@ const SCRIPT_FONTS = {
   yo: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', ig: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600',
 };
 const LANG_KEY = 'ccf-lang';
+// the title starts the page over: no open church, filters or Bible view; favorites and language stay (both are saved)
+document.getElementById('homeLink').addEventListener('click', (e) => { e.preventDefault(); try { sessionStorage.clear(); } catch (err) {} location.href = location.pathname; });
 function detectLang() {
   const asked = new URLSearchParams(location.search).get('lang');
   let saved = null; try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
@@ -586,6 +589,7 @@ function detectLang() {
 // English is built in; every other language is i18n/<code>.json with the same keys, missing keys fall back to English.
 // Plural forms are key_one, key_few, key_many, key_other (Intl.PluralRules categories) and are picked by vars.n.
 const EN = {
+  startOver: 'Start over',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
   loadingChurches: 'Loading churches…', gathering: 'Gathering churches from around the world…',
   gatheringN: 'Gathering {n} churches from around the world…', placing: 'Placing them on the globe…',
