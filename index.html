@@ -147,6 +147,7 @@ button, input { font: inherit; color: inherit; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; align-items: center; }
 .chips .lbl { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-right: 2px; text-shadow: 0 1px 6px #000; flex: none; }
+#massChips.filtered .chip[aria-pressed="false"] { opacity: 1; }
 .chips.filtered .chip[aria-pressed="false"] { opacity: .5; }
 .chips.filtered .chip[aria-pressed="false"] i { background: transparent !important; box-shadow: inset 0 0 0 1.5px var(--ink-faint); }
 .chip .tick { display: none; width: 12px; height: 12px; stroke: var(--gold-soft); fill: none; stroke-width: 2.4; margin-left: -2px; }
@@ -729,9 +730,9 @@ const EN = {
   massTimes: 'Mass times', confession: 'Confession', checkedOn: ', checked {date}',
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
-  massNear: 'Mass near me', confNear: 'Confession near me', massNearTip: 'Churches near you, soonest Mass first', confNearTip: 'Churches near you, soonest Confession first',
-  massNearTitle: 'Mass near you', confNearTitle: 'Confession near you', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
-  noTimesWeek: 'No time listed this week', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No churches nearby list their times yet.',
+  massNear: 'Mass Near Me', confNear: 'Confession Near Me', massNearTip: 'Churches within 20 miles of you, soonest Mass first', confNearTip: 'Churches within 20 miles of you, soonest Confession first',
+  massNearTitle: 'Masses near you, soonest first', confNearTitle: 'Confession near you, soonest first', massNearIntro: 'Churches within 20 miles that post their Mass times, ordered by the next Mass. Tap one for details.', confNearIntro: 'Churches within 20 miles that post their Confession times, ordered by the next one. Tap one for details.', massNearTag: 'Showing {n} nearby churches with Mass times', confNearTag: 'Showing {n} nearby churches with Confession times', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
+  noTimesWeek: 'No time listed this week', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church within 20 miles lists its times yet. Here is the nearest one that does.',
   seeWorldwide: 'See all {n} churches with Mass in {lang} worldwide', timesCheck: 'Times come from parish websites. Check with the parish before you go.',
   confSoon: 'Confession soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
   anyLang: 'Any language', clear: 'Clear', signLanguage: 'Sign language', aramaic: 'Aramaic',
@@ -1142,7 +1143,8 @@ function renderMassChips() {
   $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang || mn.kind >= 0));
 }
 /* ---------- Mass near me / Confession near me: nearby churches, soonest first ---------- */
-const mn = { kind: -1, at: null, guessed: false, rows: null };
+const NEAR_M = 32187;  // 20 miles
+const mn = { kind: -1, far: false, at: null, guessed: false, rows: null };
 // minutes from now until this church's next Mass (kind 0) or Confession (kind 1) in the next week, optionally in one language
 function nextTime(v, kind, li) {
   const t = localNow(mf.data.tz[v[0]]); if (!t) return null;
@@ -1200,14 +1202,15 @@ async function massNear(kind) {
   for (const [, i, v] of cand) {
     const n = nextTime(v, kind, li); if (!n) continue;
     rows.push({ i, n, m: metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6) });
-    if (rows.length >= 40) break;
+    if (rows.length >= 60 || rows[rows.length - 1].m > NEAR_M) break;  // the list stops at 20 miles
   }
-  const reach = Math.max(25000, rows.length > 4 ? rows[4].m : 0);  // within ~15 miles, or as far as the 5th nearest
-  mn.rows = rows.filter(r => r.m <= reach).sort((a, b) => a.n.d - b.n.d || a.m - b.m).slice(0, 25);
+  const near = rows.filter(r => r.m <= NEAR_M);  // within 20 miles
+  mn.far = !near.length && rows.length > 0;
+  mn.rows = (near.length ? near : rows.slice(0, 1)).sort((a, b) => a.n.d - b.n.d || a.m - b.m).slice(0, 30);
   state.only = new Set(mn.rows.map(r => r.i));
   map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
   map.once('idle', updateNames);
-  $('tagline').textContent = tr(kind ? 'confNearTitle' : 'massNearTitle');
+  $('tagline').textContent = tr(kind ? 'confNearTag' : 'massNearTag', { n: mn.rows.length });
   if (mn.rows.length) {
     const pts = [[lon, lat], ...mn.rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
     const b = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
@@ -1222,7 +1225,7 @@ async function renderMassNear() {
   let recs = []; try { recs = await Promise.all(rows.map(r => shardFor(r.i))); } catch (e) {}
   if (rows !== mn.rows) return;
   const world = mf.lang ? langSet(mf.lang).size : 0;
-  list.innerHTML = (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (rows.length ? rows.map((r, k) => {
+  list.innerHTML = `<p class="note">${esc(tr(mn.kind ? 'confNearIntro' : 'massNearIntro'))}</p>` + (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear'))}</p>` : '') + (rows.length ? rows.map((r, k) => {
     const rec = recs[k] || [], t = state.typ[r.i] & 7, lang = r.n.lang ? mf.data.langs[r.n.lang] : '';
     return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc"><b class="when">${esc(whenText(r.n))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
   }).join('') : `<p class="empty">${esc(tr('noMassNear'))}</p>`)
@@ -2079,6 +2082,7 @@ const unit = (v, u, d) => { try { return v.toLocaleString(i18n.locale, { style: 
 const fmtDist = (m) => miles ? (m < 160 ? unit(Math.round(m * 3.281), 'foot', 0) : unit(m / 1609.34, 'mile', m < 16093 ? 1 : 0)) : (m < 1000 ? unit(Math.round(m), 'meter', 0) : unit(m / 1000, 'kilometer', m < 10000 ? 1 : 0));
 function showNear(open) {
   if (open && !$('favs').hidden) showFavs(false);
+  if (open && $('today')) $('today').hidden = true;  // the list you asked for gets the room the church of the day card had
   $('near').hidden = !open; $('nearBtn').setAttribute('aria-expanded', open); $('nearBtn').setAttribute('aria-pressed', open);
 }
 function nearest(lat, lon, k) {
