@@ -314,5 +314,6 @@
   "monthlyDay_3": "Ikatlong {day} ng buwan",
   "monthlyDay_4": "Ikaapat na {day} ng buwan",
   "monthlyDay_5": "Ikalimang {day} ng buwan",
-  "monthlyDay_6": "Huling {day} ng buwan"
+  "monthlyDay_6": "Huling {day} ng buwan",
+  "startOver": "Magsimula muli"
 }

@@ -314,5 +314,6 @@
   "monthlyDay_3": "{day} (a hónap 3.)",
   "monthlyDay_4": "{day} (a hónap 4.)",
   "monthlyDay_5": "{day} (a hónap 5.)",
-  "monthlyDay_6": "{day} (a hónap utolsó)"
+  "monthlyDay_6": "{day} (a hónap utolsó)",
+  "startOver": "Újrakezdés"
 }

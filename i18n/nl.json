@@ -314,5 +314,6 @@
   "monthlyDay_3": "3e {day} van de maand",
   "monthlyDay_4": "4e {day} van de maand",
   "monthlyDay_5": "5e {day} van de maand",
-  "monthlyDay_6": "Laatste {day} van de maand"
+  "monthlyDay_6": "Laatste {day} van de maand",
+  "startOver": "Opnieuw beginnen"
 }

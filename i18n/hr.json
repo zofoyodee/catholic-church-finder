@@ -328,5 +328,6 @@
   "monthlyDay_3": "{day} (3. u mjesecu)",
   "monthlyDay_4": "{day} (4. u mjesecu)",
   "monthlyDay_5": "{day} (5. u mjesecu)",
-  "monthlyDay_6": "{day} (zadnji u mjesecu)"
+  "monthlyDay_6": "{day} (zadnji u mjesecu)",
+  "startOver": "Počni ispočetka"
 }

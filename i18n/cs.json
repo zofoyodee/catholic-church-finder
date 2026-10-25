@@ -330,5 +330,6 @@
   "bTagline_few": "<b>{n}</b> místa z Bible v <b>{lands}</b> dnešních zemích · klepněte na špendlík nebo zemi",
   "stops_one": "{n} zastávka",
   "stops_few": "{n} zastávky",
-  "stops_many": "{n} zastávky"
+  "stops_many": "{n} zastávky",
+  "startOver": "Začít znovu"
 }

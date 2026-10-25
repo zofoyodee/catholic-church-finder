@@ -300,5 +300,6 @@
   "monthlyDay_3": "{day} ketiga setiap bulan",
   "monthlyDay_4": "{day} keempat setiap bulan",
   "monthlyDay_5": "{day} kelima setiap bulan",
-  "monthlyDay_6": "{day} terakhir setiap bulan"
+  "monthlyDay_6": "{day} terakhir setiap bulan",
+  "startOver": "Mulai ulang"
 }

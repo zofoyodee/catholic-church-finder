@@ -300,5 +300,6 @@
   "monthlyDay_3": "{day} thứ ba của tháng",
   "monthlyDay_4": "{day} thứ tư của tháng",
   "monthlyDay_5": "{day} thứ năm của tháng",
-  "monthlyDay_6": "{day} cuối cùng của tháng"
+  "monthlyDay_6": "{day} cuối cùng của tháng",
+  "startOver": "Bắt đầu lại"
 }
