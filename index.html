@@ -88,6 +88,7 @@ button, input { font: inherit; color: inherit; }
 .brand h1 a { color: inherit; text-decoration: none; }
 .brand h1 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: 0.08em; color: var(--ink); text-shadow: 0 2px 18px #000; line-height: 1.1; }
 .brand h1 .cross { color: var(--gold); margin-right: 8px; }
+.brand h1 a:hover .cross { text-shadow: 0 0 14px var(--gold); }
 .brand p { margin: 0; color: var(--ink-soft); font-size: 13px; text-shadow: 0 1px 8px #000; }
 .brand p b { color: var(--gold-soft); font-weight: 600; font-variant-numeric: tabular-nums; }
 
@@ -408,7 +409,66 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .modes button:hover { color: var(--ink); }
 .modes button[aria-selected="true"] { background: var(--gold); color: #1a1406; font-weight: 600; }
 .modes button[aria-selected="true"] span { color: #1a1406; }
-body.bible-mode .ctrls .fav-open { display: none; }
+body.bible-mode .ctrls .fav-open, body.bible-mode #massChips { display: none; }
+/* Life of Jesus: the horizontal timeline along the bottom */
+.life { position: fixed; z-index: 5; left: max(16px, env(safe-area-inset-left, 0px)); right: calc(max(16px, env(safe-area-inset-right, 0px)) + 54px); bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  display: grid; gap: 8px; padding: 10px 10px 8px; border-radius: 16px; border: 1px solid var(--line); background: var(--panel); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 18px 50px #0008; transition: right .35s cubic-bezier(.2,.8,.2,1), left .35s cubic-bezier(.2,.8,.2,1); }
+.life[hidden] { display: none; }
+.life-now { display: flex; gap: 12px; align-items: flex-start; min-width: 0; }
+.ln-ctl { display: flex; gap: 5px; flex: none; }
+.ln-ctl button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.03); display: grid; place-items: center; cursor: pointer; padding: 0; }
+.ln-ctl button:disabled { opacity: .35; cursor: default; }
+.ln-ctl button.play { background: var(--gold); border-color: transparent; }
+.ln-ctl svg { width: 16px; height: 16px; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ln-ctl button.play svg { stroke: #1a1406; fill: #1a1406; }
+[dir="rtl"] .ln-ctl svg { transform: scaleX(-1); }
+.ln-txt { flex: 1; min-width: 0; }
+.ln-txt .kick { display: flex; align-items: center; gap: 6px; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+.ln-txt .kick i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.ln-txt h2 { margin: 2px 0 0; font-size: 15px; font-weight: 600; line-height: 1.3; }
+.ln-txt h2 small { font-weight: 400; font-size: 12.5px; color: var(--ink-soft); }
+.ln-txt p { margin: 3px 0 0; font-size: 13px; line-height: 1.45; color: var(--ink-soft); max-height: 4.4em; overflow-y: auto; }
+.ln-txt p.u { font-size: 12px; color: var(--ink-faint); font-style: italic; }
+.ln-open { flex: none; align-self: center; }
+.life .timer { height: 2px; border-radius: 1px; background: var(--line); overflow: hidden; }
+.life .timer i { display: block; height: 100%; width: 0; background: var(--gold); }
+.life-track { position: relative; display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 4px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.life-track .era { flex: none; display: grid; gap: 6px; align-content: start; padding-top: 4px; border-top: 2px solid var(--c); }
+.life-track .era[hidden] { display: none; }
+.life-track .era-h { position: sticky; left: 0; right: 0; justify-self: start; padding: 0 6px 0 0; background: inherit; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--c); white-space: nowrap; }
+.life-track .era-evs { display: flex; gap: 6px; }
+.life-track .ev { --c: var(--gold); flex: none; width: 134px; display: grid; gap: 1px; padding: 6px 8px; border-radius: 10px; border: 1px solid var(--line); background: rgba(255,255,255,.02); color: var(--ink); text-align: start; cursor: pointer; scroll-snap-align: center; transition: background .2s, border-color .2s; }
+.life-track .ev:hover { border-color: color-mix(in srgb, var(--c) 60%, transparent); }
+.life-track .ev[aria-current="true"] { background: color-mix(in srgb, var(--c) 18%, transparent); border-color: var(--c); }
+.life-track .ev .no { font-family: var(--font-data); font-size: 10.5px; color: var(--c); font-variant-numeric: tabular-nums; }
+.life-track .ev .tt { font-size: 12.5px; font-weight: 600; line-height: 1.25; min-height: 2.5em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.life-track .ev .pl { font-size: 11px; color: var(--ink-faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cert { display: inline-flex; align-items: center; height: 20px; padding: 0 8px; border-radius: 10px; border: 1px solid var(--line); letter-spacing: .06em; }
+.cert.trad { color: var(--gold-soft); border-color: color-mix(in srgb, var(--gold) 45%, transparent); }
+.cert.debated { color: #f2b38c; border-color: #f2b38c66; }
+ol.jev { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+ol.jev li { padding-left: 12px; border-left: 2px solid var(--c); display: grid; gap: 3px; }
+ol.jev li[aria-current="true"] { background: color-mix(in srgb, var(--c) 10%, transparent); border-radius: 0 8px 8px 0; padding: 6px 8px 6px 12px; }
+ol.jev .linkish { text-align: start; font-weight: 600; text-decoration: none; color: var(--ink); }
+ol.jev .linkish:hover { color: var(--gold-soft); }
+ol.jev .refs { font-size: 12.5px; }
+ol.jev p { margin: 0; font-size: 13.5px; line-height: 1.5; }
+ol.jev p.u { font-size: 12.5px; color: var(--ink-soft); font-style: italic; }
+@media (min-width: 641px) {
+  body.card-open .life { right: calc(max(16px, env(safe-area-inset-right, 0px)) + min(420px, calc(100vw - 32px)) + 66px); }
+  [dir="rtl"] .life { right: max(16px, env(safe-area-inset-right, 0px)); left: calc(max(16px, env(safe-area-inset-left, 0px)) + 54px); }
+  [dir="rtl"] body.card-open .life { right: max(16px, env(safe-area-inset-right, 0px)); left: calc(max(16px, env(safe-area-inset-left, 0px)) + min(420px, calc(100vw - 32px)) + 66px); }
+}
+@media (max-width: 640px) {
+  .life { left: max(8px, env(safe-area-inset-left, 0px)); right: calc(max(8px, env(safe-area-inset-right, 0px)) + 58px); bottom: calc(36px + env(safe-area-inset-bottom, 0px)); padding: 8px 8px 6px; gap: 6px; }
+  .life-now { gap: 8px; flex-wrap: wrap; }
+  .ln-txt { flex-basis: calc(100% - 120px); }
+  .ln-txt p { max-height: 2.9em; }
+  .ln-open { display: none; }
+  .life-track .ev { width: 116px; }
+  body.sheet-up .life { visibility: hidden; }
+}
 /* Bible cards */
 .card .kicker { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 8px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
 .card .kicker span { display: inline-flex; align-items: center; gap: 6px; }
@@ -477,6 +537,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <div class="modes" role="tablist" aria-label="What the globe shows" data-i18n-attr="aria-label:modesLabel">
     <button role="tab" id="modeChurches" aria-selected="true" aria-controls="map"><span aria-hidden="true">✠</span><span data-i18n="modeChurches">Churches</span></button>
     <button role="tab" id="modeBible" aria-selected="false" aria-controls="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg><span data-i18n="modeBible">Bible Places</span></button>
+    <button role="tab" id="modeJesus" aria-selected="false" aria-controls="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 8h10"/><path d="M4 21c2.5-1.2 5-1.6 8-1.6s5.5.4 8 1.6" opacity=".6"/></svg><span data-i18n="modeJesus">Life of Jesus</span></button>
   </div>
   <div class="search" role="search">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
@@ -504,6 +565,12 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <span data-i18n="footCredit">Places © Overture Maps Foundation · Basemap Natural Earth</span>
   <span class="coords" id="coords"></span>
 </footer>
+
+<section id="life" class="life" hidden aria-label="Timeline of the life of Jesus" data-i18n-attr="aria-label:jTimeline">
+  <div class="life-now" id="lifeNow"></div>
+  <div class="timer" aria-hidden="true"><i id="lifeTimer"></i></div>
+  <div class="life-track" id="lifeTrack"></div>
+</section>
 
 <div id="tip" class="tip" hidden></div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -714,6 +781,26 @@ const EN = {
   bExplore: "Places to explore ({n})",
   bShareTitle: "{name} in the Bible",
   bShareLand: "{land}, once {a}",
+  // Life of Jesus
+  modeJesus: "Life of Jesus",
+  jSearchPh: "Search the life of Jesus, e.g. Cana, Transfiguration",
+  jSearchLabel: "Search places and moments in the life of Jesus",
+  jLoading: "Loading the life of Jesus…",
+  jFailed: "The life of Jesus did not load. Check your connection.",
+  jTagline_one: "<b>{n}</b> moment in the life of Our Lord at <b>{p}</b> places · tap the timeline or a pin",
+  jTagline_other: "<b>{n}</b> moments in the life of Our Lord at <b>{p}</b> places · tap the timeline or a pin",
+  jEra_hidden: "Birth & hidden life", jEra_ministry: "Public ministry", jEra_journey: "Toward Jerusalem", jEra_passion: "Holy Week & Passion", jEra_risen: "Resurrection & Ascension",
+  jCert_sure: "Gospel place", jCert_trad: "Traditional site", jCert_debated: "Location debated",
+  jTimeline: "Timeline of the life of Jesus",
+  jMoments_one: "{n} moment", jMoments_other: "{n} moments",
+  jIntroTitle: "From Nazareth to the Ascension",
+  jIntro: "Press play to follow Our Lord through the Gospels in order, or tap any moment on the timeline to fly there.",
+  jEventOf: "{k} of {n}",
+  jPrev: "Previous moment", jNext: "Next moment", jPlay: "Play the journey", jPause: "Pause the journey",
+  jDetails: "About this place", jPlayHere: "Play from here", jInBible: "In Bible Places", jInGospels: "In the Gospels",
+  jShareTitle: "{name} in the life of Jesus",
+  jNoMatch: "No place or moment in the life of Jesus matches “{q}”.",
+  jProv: "Gospel references follow the New American Bible, Revised Edition, the Catholic translation used at Mass in the United States. The order follows a traditional harmony of the four Gospels; where the evangelists differ or a site is uncertain, the card says so. Tap a reference to read it on the USCCB website.",
   // guided tours, church of the day, globe view (app/engage.js)
   tours: 'Guided tours', toursClose: 'Close tours', toursNote: 'The globe flies from stop to stop on its own. Drag the globe to pause, or step through with the arrows.',
   toursFailed: 'The tours did not load. Check your connection.', stops_one: '{n} stop', stops_other: '{n} stops',
@@ -1466,7 +1553,7 @@ $('favClose').addEventListener('click', () => { remember(true); showFavs(false);
 function openFavsOnLoad() {
   let shut = false; try { shut = !!sessionStorage.getItem(FAVS_SHUT); } catch (e) {}
   const sp = new URLSearchParams(location.search);
-  if (favs.length && !shut && !sp.has('bible') && !sp.has('land') && sp.get('mode') !== 'bible') showFavs(true);
+  if (favs.length && !shut && !sp.has('bible') && !sp.has('land') && !sp.has('jesus') && !sp.has('life') && !['bible', 'jesus'].includes(sp.get('mode'))) showFavs(true);
 }
 $('favList').addEventListener('click', (e) => {
   const rm = e.target.closest('button.rm');
@@ -1979,9 +2066,10 @@ setInterval(spinStep, 1200);
 $('spin').addEventListener('click', () => { state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning); if (state.spinning) { lastInteract = 0; spinStep(); } else map.stop(); });
 $('zin').addEventListener('click', () => { lastInteract = performance.now(); map.zoomIn({ duration: 400 }); });
 $('zout').addEventListener('click', () => { lastInteract = performance.now(); map.zoomOut({ duration: 400 }); });
-$('home').addEventListener('click', () => { closeCard(); if (state.mode === 'bible') { bibleOverview(); return; } map.flyTo({ center: [map.getCenter().lng, 20], zoom: 1.4, pitch: 0, bearing: 0, duration: 1800 }); });
+$('home').addEventListener('click', () => { closeCard(); if (state.mode === 'bible') { bibleOverview(); return; } if (state.mode === 'jesus') { lifePause(); lifeOverview(); return; } map.flyTo({ center: [map.getCenter().lng, 20], zoom: 1.4, pitch: 0, bearing: 0, duration: 1800 }); });
 $('rand').addEventListener('click', () => {
   if (state.mode === 'bible') { if (bible.data) { const ps = bibleVisible(); openBiblePlace(ps[Math.floor(Math.random() * ps.length)].id); } return; }
+  if (state.mode === 'jesus') { if (life.data) { const evs = lifeEvents(); lifePause(); goEvent(evs[Math.floor(Math.random() * evs.length)].i); } return; }
   if (!state.n) return;
   let i; do { i = Math.floor(Math.random() * state.n); } while (!state.enabled.has(state.typ[i] & 7));
   selectChurch(i, { fly: true });
@@ -2016,7 +2104,7 @@ function setHover(i) {
   src.setData({ type: 'FeatureCollection', features: i < 0 ? [] : [{ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { t: state.typ[i] & 7 } }] });
 }
 map.on('mousemove', async (e) => {
-  if (!map.getLayer('pt') || coarse || state.mode === 'bible') return;
+  if (!map.getLayer('pt') || coarse || state.mode !== 'churches') return;
   const f = pick(e.point, 14);
   const cv = map.getCanvas();
   if (!f) { if (hoverId !== -1) { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); } cv.style.cursor = ''; return; }
@@ -2035,7 +2123,7 @@ map.on('mousemove', async (e) => {
 });
 map.getCanvas().addEventListener('mouseleave', () => { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); });
 map.on('click', async (e) => {
-  if (!map.getLayer('pt') || state.mode === 'bible') return;
+  if (!map.getLayer('pt') || state.mode !== 'churches') return;
   const f = pick(e.point, coarse ? 26 : 16);
   if (!f) return;
   lastInteract = performance.now();
@@ -2267,7 +2355,8 @@ async function selectChurch(i, { fly = true } = {}) {
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: cardPad(wide) }));
 }
 function closeCard() {
-  $('card').hidden = true; state.selected = -1; if (window.__bibleSel) window.__bibleSel(null);
+  $('card').hidden = true; state.selected = -1; if (window.__bibleSel) window.__bibleSel(null); delete $('cardBody').dataset.jplace;
+  if (state.mode === 'jesus' && window.__lifeSel) window.__lifeSel(life.k >= 0 ? life.data.byId[life.data.events[life.k].p] : null);
   try { history.replaceState(null, '', location.pathname); } catch (e) {}
   if (map.getSource('sel')) map.getSource('sel').setData({ type: 'FeatureCollection', features: [] });
 }
@@ -2299,7 +2388,7 @@ function renderChips() {
     `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${esc(tipFor(t))}">${tick}<i style="background:${t.color}"></i>${esc(t.label)} <small>${fmt(n(t))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
-  const b = e.target.closest('.chip'); if (!b || state.mode === 'bible') return;
+  const b = e.target.closest('.chip'); if (!b || state.mode !== 'churches') return;
   const k = b.dataset.k;
   if (k === 'all') state.enabled = new Set(TYPES.map(t => t.code));
   else {
@@ -2401,6 +2490,7 @@ async function runSearch() {
   const q = fold(qEl.value.trim());
   if (q.length < 2) { resEl.hidden = true; return; }
   if (state.mode === 'bible') { resEl.hidden = false; bibleSearch(q); return; }
+  if (state.mode === 'jesus') { resEl.hidden = false; lifeSearch(q); return; }
   resEl.hidden = false;
   if (!searchIdx) { resEl.innerHTML = `<div class="note">${esc(tr('indexLoading'))}</div>`; try { await loadSearch(); } catch (e) { resEl.innerHTML = `<div class="note">${esc(tr('indexFailed'))}</div>`; return; } }
   const toks = q.split(/\s+/).filter(Boolean);
@@ -2420,13 +2510,13 @@ async function runSearch() {
     return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(nm)}</span><span class="loc">${esc([t.one, town, countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
   }).join('') + (hits.length > 30 ? `<div class="note">${esc(hits.length >= 400 ? tr('matchesMax') : tr('matches', { n: hits.length }))}</div>` : '');
 }
-resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-b],button[data-l]'); if (!b) return; pickResult(b); });
+resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-b],button[data-l],button[data-jp],button[data-je]'); if (!b) return; pickResult(b); });
 function pickResult(b) {
   resEl.hidden = true; qEl.blur();
-  if (b.dataset.b) openBiblePlace(b.dataset.b); else if (b.dataset.l) openBibleLand(b.dataset.l); else selectChurch(+b.dataset.i, { fly: true });
+  if (b.dataset.jp) openLifePlace(b.dataset.jp); else if (b.dataset.je) { lifePause(); goEvent(+b.dataset.je); } else if (b.dataset.b) openBiblePlace(b.dataset.b); else if (b.dataset.l) openBibleLand(b.dataset.l); else selectChurch(+b.dataset.i, { fly: true });
 }
 qEl.addEventListener('keydown', (e) => {
-  const opts = [...resEl.querySelectorAll('button[data-i],button[data-b],button[data-l]')]; if (!opts.length) return;
+  const opts = [...resEl.querySelectorAll('button[data-i],button[data-b],button[data-l],button[data-jp],button[data-je]')]; if (!opts.length) return;
   if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); activeRes = (activeRes + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length; opts.forEach((o, k) => o.setAttribute('aria-selected', k === activeRes)); opts[activeRes].scrollIntoView({ block: 'nearest' }); }
   else if (e.key === 'Enter') { e.preventDefault(); pickResult(opts[Math.max(activeRes, 0)]); }
 });
@@ -2482,13 +2572,15 @@ $('langSel').addEventListener('change', async (e) => {
   if (!state.meta) return;
   searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
   if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } if (!$('card').hidden && bible.sel) { if (bible.sel.land) openBibleLand(bible.sel.land, { fly: false }); else openBiblePlace(bible.sel.id, { fly: false }); } }
+  else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && life.sel) openLifePlace(life.sel.id, { fly: false }); }
   else { renderChips(); updateTagline(); }
+  if (life.data && state.mode !== 'jesus') buildTimeline();
   renderFavs(); renderNear(); setCityLabels();
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
   if (!$('about').hidden) $($('mailBtn') ? 'contactBtn' : 'aboutBtn').click();
   if (!resEl.hidden && searchIdx) runSearch();
-  if (state.selected >= 0 && state.mode !== 'bible') selectChurch(state.selected, { fly: false });
+  if (state.selected >= 0 && state.mode === 'churches') selectChurch(state.selected, { fly: false });
 });
 
 /* ---------- install as an app: offline cache ---------- */
@@ -2552,32 +2644,45 @@ function bibleOverview() {
   const wide = innerWidth > 640;
   map.flyTo({ center: wide ? [33, 33] : [37, 31], zoom: wide ? 3.5 : 2.6, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2200, essential: true });
 }
+const MODE_TABS = [['modeChurches', 'churches'], ['modeBible', 'bible'], ['modeJesus', 'jesus']];
 async function setMode(m, { fly = true } = {}) {
-  if (m === state.mode && (m !== 'bible' || bible.data)) return;
+  if (m === state.mode && (m === 'churches' || (m === 'bible' ? bible.data : life.data))) return;
   state.mode = m;
-  $('modeChurches').setAttribute('aria-selected', m === 'churches'); $('modeBible').setAttribute('aria-selected', m === 'bible');
-  document.body.classList.toggle('bible-mode', m === 'bible');
+  for (const [id, k] of MODE_TABS) $(id).setAttribute('aria-selected', m === k);
+  document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
+  document.body.classList.toggle('jesus-mode', m === 'jesus');
+  lifeStop(); $('life').hidden = m !== 'jesus' || !life.data;
   closeCard(); showFavs(false); resEl.hidden = true; qEl.value = ''; tip.hidden = true; setHover(-1);
   searchLabels();
   if (m === 'bible') {
     $('tagline').textContent = tr('bLoading');
     try { await loadBible(); } catch (e) { $('tagline').textContent = tr('bFailed'); return; }
     if (state.mode !== 'bible') return;
+  } else if (m === 'jesus') {
+    $('tagline').textContent = tr('jLoading');
+    try { await loadLife(); } catch (e) { $('tagline').textContent = tr('jFailed'); return; }
+    if (state.mode !== 'jesus') return;
+    $('life').hidden = false;
   }
-  for (const id of CHURCH_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'bible' ? 'none' : 'visible');
+  for (const id of CHURCH_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'churches' ? 'visible' : 'none');
   for (const id of BIBLE_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'bible' ? 'visible' : 'none');
+  for (const id of JESUS_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'jesus' ? 'visible' : 'none');
   if (m === 'bible') { renderBibleChips(); bibleTagline(); if (fly) bibleOverview(); }
+  else if (m === 'jesus') { renderLifeChips(); lifeTagline(); if (fly) lifeOverview(); }
   else { renderChips(); updateTagline(); map.once('idle', updateNames); if (fly) map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2400, essential: true }); }
 }
 $('modeChurches').addEventListener('click', () => setMode('churches'));
 $('modeBible').addEventListener('click', () => setMode('bible'));
+$('modeJesus').addEventListener('click', () => setMode('jesus'));
 $('modeChurches').parentElement.addEventListener('keydown', (e) => {
   if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-  const next = state.mode === 'bible' ? 'churches' : 'bible'; setMode(next); $(next === 'bible' ? 'modeBible' : 'modeChurches').focus();
+  const at = MODE_TABS.findIndex(([, k]) => k === state.mode), step = (e.key === 'ArrowRight') !== !!i18n.rtl ? 1 : -1;
+  const [id, next] = MODE_TABS[(at + step + MODE_TABS.length) % MODE_TABS.length]; setMode(next); $(id).focus();
 });
 function searchLabels() {
-  qEl.placeholder = tr(state.mode === 'bible' ? 'bSearchPh' : 'searchPh');
-  qEl.setAttribute('aria-label', tr(state.mode === 'bible' ? 'bSearchLabel' : 'searchLabel'));
+  const pre = { bible: 'bS', jesus: 'jS' }[state.mode] || 's';
+  qEl.placeholder = tr(pre + 'earchPh');
+  qEl.setAttribute('aria-label', tr(pre + 'earchLabel'));
 }
 function bibleTagline() {
   const n = bibleVisible().length, lands = bible.group === 'all' ? Object.keys(bible.data.lands).length : new Set(bibleVisible().map(p => p.c)).size;
@@ -2590,7 +2695,7 @@ function renderBibleChips() {
     `<button class="chip" data-g="${g.k}" aria-pressed="${bible.group === g.k}" title="${esc(tr('bOnly', { group: tr('bg_' + g.k) }))}"><i style="background:${BIBLE_COLORS[g.k]}"></i>${esc(tr('bg_' + g.k))} <small>${fmt(count(g.k))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
-  const b = e.target.closest('.chip'); if (!b || state.mode !== 'bible') return;
+  const b = e.target.closest('.chip'); if (!b || state.mode !== 'bible' || !b.dataset.g) return;
   bible.group = b.dataset.g === bible.group ? 'all' : b.dataset.g;
   renderBibleChips(); bibleTagline();
   map.getSource('b-places').setData(bibleFeatures());
@@ -2705,12 +2810,13 @@ async function fillNearby(p) {
   const near = nearestChurches(p.ll[0], p.ll[1]);
   if (!near.length) { box.innerHTML = `<p class="muted">${esc(tr('bNoNear'))}</p>`; return; }
   const recs = await Promise.all(near.map(([, i]) => shardFor(i).catch(() => null)));
-  if (bible.sel !== p || !$('bNear')) return;
+  if ((state.mode === 'jesus' ? life.sel : bible.sel) !== p || !$('bNear')) return;
   box.innerHTML = near.map(([km, i], k) => { const r = recs[k]; const t = TYPE_BY_CODE[state.typ[i] & 7];
     return `<button class="near" data-i="${i}"><i style="background:${t.color}"></i><span><b>${esc(r ? r[0] : t.one)}</b><small>${esc([t.one, r && r[2], km < 1 ? tr('awayM', { d: fmt(Math.round(km * 1000)) }) : tr('awayKm', { d: km.toLocaleString(i18n.locale, { maximumFractionDigits: 1, minimumFractionDigits: 1 }) })].filter(Boolean).join(' · '))}</small></span></button>`; }).join('');
 }
 $('cardBody').addEventListener('click', (e) => {
   const n = e.target.closest('button.near'); if (n) { const i = +n.dataset.i; setMode('churches', { fly: false }).then(() => selectChurch(i, { fly: true })); return; }
+  const j = e.target.closest('[data-golife]'); if (j) { lifePause(); goEvent(+j.dataset.golife); return; }
   const b = e.target.closest('[data-goplace]'); if (b) { openBiblePlace(b.dataset.goplace); return; }
   const l = e.target.closest('[data-goland]'); if (l) openBibleLand(l.dataset.goland);
 });
@@ -2785,6 +2891,259 @@ async function openBibleLand(k, { fly = true } = {}) {
   $('cardBody').scrollTop = 0;
 }
 
+/* ---------- Life of Jesus: a third mode following Our Lord through the Gospels, in order, along a timeline ----------
+   Static content in data/jesus.json (built by scripts/jesus/build.py; NABRE references). Each place card shows a live photo
+   from its English Wikipedia article, like Bible Places. */
+const life = { data: null, loading: null, era: 'all', k: -1, sel: null, auto: false, timer: 0, t0: 0, raf: 0, flying: false };
+const JESUS_LAYERS = ['j-route', 'j-route-done', 'j-pt-glow', 'j-pt', 'j-pt-name', 'j-sel'];
+const JESUS_RANK = new Set('nazareth bethlehem egypt jordan cana capernaum jacobswell tabor caesarea tyre jericho bethany calvary emmaus'.split(' '));
+const LIFE_DWELL = 9000;
+const ICON_PREV = '<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>', ICON_NEXT = '<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>';
+const ICON_PLAY = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>', ICON_PAUSE = '<svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>';
+function loadLife() {
+  if (!life.loading) life.loading = getJSON('data/jesus.json').then(d => {
+    d.byId = Object.fromEntries(d.places.map(p => [p.id, p]));
+    d.color = Object.fromEntries(d.eras.map(e => [e.k, e.color]));
+    d.events.forEach((e, i) => { e.i = i; });
+    for (const p of d.places) p.ev = d.events.filter(e => e.p === p.id);
+    life.data = d; addLifeLayers(); buildTimeline();
+  }).catch(e => { life.loading = null; throw e; });
+  return life.loading;
+}
+const lifeEvents = () => life.data.events.filter(e => life.era === 'all' || e.e === life.era);
+const lifeLL = (p) => [p.ll[1], p.ll[0]];
+function lifeGeo() {
+  const d = life.data, evs = lifeEvents(), first = new Map(), route = [];
+  for (const e of evs) if (!first.has(e.p)) first.set(e.p, e);
+  for (let j = 1; j < evs.length; j++) {
+    const a = d.byId[evs[j - 1].p], b = d.byId[evs[j].p];
+    if (a !== b) route.push({ type: 'Feature', geometry: { type: 'LineString', coordinates: [lifeLL(a), lifeLL(b)] }, properties: { i: evs[j].i, color: d.color[evs[j].e] } });
+  }
+  return {
+    places: { type: 'FeatureCollection', features: [...first].map(([id, e]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(d.byId[id]) }, properties: { id, name: drawable(d.byId[id].n), color: d.color[e.e], rank: JESUS_RANK.has(id) ? 0 : 1 } })) },
+    route: { type: 'FeatureCollection', features: route },
+  };
+}
+function addLifeLayers() {
+  const g = lifeGeo(), hide = { visibility: 'none' };
+  map.addSource('j-places', { type: 'geojson', data: g.places });
+  map.addSource('j-route', { type: 'geojson', data: g.route });
+  map.addSource('j-sel', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'j-route', type: 'line', source: 'j-route', layout: { ...hide, 'line-cap': 'round' }, paint: { 'line-color': ['get', 'color'], 'line-opacity': 0.32, 'line-width': 1.4, 'line-dasharray': [2, 2] } });
+  map.addLayer({ id: 'j-route-done', type: 'line', source: 'j-route', layout: { ...hide, 'line-cap': 'round' }, filter: ['<=', ['get', 'i'], -1], paint: { 'line-color': ['get', 'color'], 'line-opacity': 0.9, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 1.8, 12, 3] } });
+  map.addLayer({ id: 'j-pt-glow', type: 'circle', source: 'j-places', layout: hide, paint: {
+    'circle-color': ['get', 'color'], 'circle-blur': 1, 'circle-opacity': 0.4, 'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, 7, 8, 16, 14, 24] } });
+  map.addLayer({ id: 'j-pt', type: 'circle', source: 'j-places', layout: hide, paint: {
+    'circle-color': ['get', 'color'], 'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, ['case', ['==', ['get', 'rank'], 0], 4, 3], 8, 6, 14, 9],
+    'circle-stroke-color': '#05070d', 'circle-stroke-width': 1.4 } });
+  map.addLayer({ id: 'j-pt-name', type: 'symbol', source: 'j-places', layout: { ...hide,
+    'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'], 'text-size': ['interpolate', ['linear'], ['zoom'], 3, 10.5, 8, 12.5, 12, 14],
+    'text-anchor': 'top', 'text-offset': [0, 0.8], 'text-max-width': 9, 'symbol-sort-key': ['get', 'rank'], 'text-padding': 3 },
+    filter: ['any', ['>=', ['zoom'], 8.5], ['==', ['get', 'rank'], 0]],
+    paint: { 'text-color': '#fdf6e3', 'text-halo-color': '#05070d', 'text-halo-width': 1.5, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 4, 0, 5, 1] } });
+  map.addLayer({ id: 'j-sel', type: 'circle', source: 'j-sel', layout: hide, paint: { 'circle-color': 'rgba(0,0,0,0)', 'circle-radius': 13, 'circle-stroke-color': '#fdf6e3', 'circle-stroke-width': 2 } });
+}
+window.__lifeSel = (p) => lifeSel(p);
+function lifeSel(p) {
+  life.sel = p;
+  const src = map.getSource('j-sel'); if (!src) return;
+  src.setData({ type: 'FeatureCollection', features: p ? [{ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(p) }, properties: {} }] : [] });
+}
+const lifePad = () => {
+  const wide = innerWidth > 640, card = !$('card').hidden && wide, h = $('life').offsetHeight || 150;
+  return { top: wide ? 150 : (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--head')) || 150) + 10, bottom: h + 60, left: card && i18n.rtl ? 440 : 20, right: card && !i18n.rtl ? 440 : 70 };
+};
+function lifeOverview() {
+  const wide = innerWidth > 640;
+  map.flyTo({ center: wide ? [34.4, 31.6] : [34.6, 31.4], zoom: wide ? 6 : 5, pitch: 0, bearing: 0, padding: lifePad(), duration: reduceMotion ? 0 : 2200, essential: true });
+}
+function lifeTagline() {
+  const evs = lifeEvents();
+  $('tagline').innerHTML = tr('jTagline', { n: evs.length, p: fmt(new Set(evs.map(e => e.p)).size) });
+}
+function renderLifeChips() {
+  const d = life.data, count = (k) => d.events.filter(e => e.e === k).length;
+  $('chips').classList.remove('filtered');
+  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-era="all" aria-pressed="${life.era === 'all'}">${esc(tr('all'))}</button>` + d.eras.map(e =>
+    `<button class="chip" data-era="${e.k}" aria-pressed="${life.era === e.k}"><i style="background:${e.color}"></i>${esc(tr('jEra_' + e.k))} <small>${fmt(count(e.k))}</small></button>`).join('');
+}
+$('chips').addEventListener('click', (e) => {
+  const b = e.target.closest('.chip'); if (!b || state.mode !== 'jesus' || !b.dataset.era) return;
+  life.era = b.dataset.era === life.era ? 'all' : b.dataset.era;
+  lifePause(); renderLifeChips(); lifeTagline(); renderNow();
+  const g = lifeGeo(); map.getSource('j-places').setData(g.places); map.getSource('j-route').setData(g.route);
+  $('lifeTrack').querySelectorAll('.era').forEach(el => { el.hidden = life.era !== 'all' && el.dataset.era !== life.era; });
+  const cur = life.data.events[life.k];
+  if (cur && life.era !== 'all' && cur.e !== life.era) { life.k = -1; renderNow(); markTrack(); }
+  if (life.era !== 'all') { const evs = lifeEvents(); const b2 = evs.reduce((bb, x) => bb.extend(lifeLL(life.data.byId[x.p])), new maplibregl.LngLatBounds(lifeLL(life.data.byId[evs[0].p]), lifeLL(life.data.byId[evs[0].p])));
+    map.fitBounds(b2, { padding: lifePad(), maxZoom: 11, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 1800, essential: true }); }
+  else lifeOverview();
+  $('lifeTrack').scrollLeft = 0;
+});
+
+/* the timeline: one row of moments, grouped by period, with the current one told above it */
+function buildTimeline() {
+  const d = life.data;
+  $('lifeTrack').innerHTML = d.eras.map(era => `<div class="era" data-era="${era.k}" style="--c:${era.color}" role="group" aria-label="${esc(tr('jEra_' + era.k))}">
+    <div class="era-h">${esc(tr('jEra_' + era.k))}</div>
+    <div class="era-evs">${d.events.filter(e => e.e === era.k).map(e => `<button class="ev" data-k="${e.i}" style="--c:${era.color}" aria-current="${e.i === life.k}"><span class="no">${fmt(e.i + 1)}</span><span class="tt">${esc(e.t)}</span><span class="pl">${esc(d.byId[e.p].n)}</span></button>`).join('')}</div></div>`).join('');
+  $('lifeTrack').querySelectorAll('.era').forEach(el => { el.hidden = life.era !== 'all' && el.dataset.era !== life.era; });
+  $('life').setAttribute('aria-label', tr('jTimeline'));
+  renderNow();
+}
+function renderNow() {
+  const d = life.data, e = d.events[life.k], evs = lifeEvents(), pos = e ? evs.indexOf(e) : -1;
+  const p = e && d.byId[e.p];
+  $('lifeNow').innerHTML = `<div class="ln-ctl">
+      <button id="lifePrev" aria-label="${esc(tr('jPrev'))}" title="${esc(tr('jPrev'))}" ${pos <= 0 ? 'disabled' : ''}>${ICON_PREV}</button>
+      <button id="lifePlay" class="play" aria-pressed="${life.auto}" aria-label="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}" title="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}">${life.auto ? ICON_PAUSE : ICON_PLAY}</button>
+      <button id="lifeNext" aria-label="${esc(tr('jNext'))}" title="${esc(tr('jNext'))}" ${pos >= evs.length - 1 ? 'disabled' : ''}>${ICON_NEXT}</button>
+    </div>
+    <div class="ln-txt" aria-live="polite">${e ? `
+      <div class="kick"><i style="background:${d.color[e.e]}"></i>${esc(tr('jEra_' + e.e))} · ${esc(tr('jEventOf', { k: fmt(e.i + 1), n: d.events.length }))}</div>
+      <h2><button class="linkish" data-jplace="${p.id}" style="text-decoration:none;color:inherit">${esc(e.t)}</button> <small>· ${esc(p.n)}</small></h2>
+      <p>${withRefs(e.s)} <span class="refs">(${withRefs(e.r)})</span></p>${e.u ? `<p class="u">${withRefs(e.u)}</p>` : ''}` : `
+      <div class="kick">${esc(tr('modeJesus'))} · ${esc(tr('jMoments', { n: evs.length }))}</div>
+      <h2>${esc(tr('jIntroTitle'))}</h2><p>${esc(tr('jIntro'))}</p>`}
+    </div>
+    ${e ? `<button class="btn ln-open" data-jplace="${p.id}">${esc(tr('jDetails'))}</button>` : ''}`;
+}
+function markTrack() {
+  let cur = null;
+  $('lifeTrack').querySelectorAll('.ev').forEach(b => { const on = +b.dataset.k === life.k; b.setAttribute('aria-current', on); if (on) cur = b; });
+  if (cur) cur.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
+  if (map.getLayer('j-route-done')) map.setFilter('j-route-done', ['<=', ['get', 'i'], life.k]);
+}
+function clearLifeTimer() { clearTimeout(life.timer); cancelAnimationFrame(life.raf); const bar = $('lifeTimer'); if (bar) bar.style.width = '0'; }
+function lifePause() { if (!life.auto) return; life.auto = false; clearLifeTimer(); renderNow(); }
+function lifeStop() { life.auto = false; clearLifeTimer(); }
+function lifeSchedule(ms) {
+  clearLifeTimer();
+  const evs = lifeEvents(), pos = evs.indexOf(life.data.events[life.k]);
+  if (!life.auto) return;
+  if (pos >= evs.length - 1) { life.auto = false; renderNow(); return; }
+  life.t0 = performance.now();
+  const tick = (now) => { const bar = $('lifeTimer'); if (bar) bar.style.width = Math.min(100, (now - life.t0) / ms * 100) + '%'; if (now - life.t0 < ms) life.raf = requestAnimationFrame(tick); };
+  life.raf = requestAnimationFrame(tick);
+  life.timer = setTimeout(() => { if (life.auto && state.mode === 'jesus') goEvent(evs[pos + 1].i); }, ms);
+}
+async function goEvent(k, { fly = true } = {}) {
+  if (state.mode !== 'jesus') await setMode('jesus', { fly: false });
+  const d = life.data, e = d && d.events[k]; if (!e) return;
+  if (life.era !== 'all' && e.e !== life.era) $('chips').querySelector('[data-era="all"]').click();
+  clearLifeTimer(); life.k = k;
+  const p = d.byId[e.p];
+  renderNow(); markTrack(); lifeSel(p); lastInteract = performance.now();
+  if (!$('card').hidden) openLifePlace(p.id, { fly: false });
+  try { history.replaceState(null, '', '?life=' + (k + 1)); } catch (err) {}
+  if (!fly) { lifeSchedule(LIFE_DWELL); return; }
+  const bearing = ((k * 37) % 80) - 40;
+  life.flying = true;
+  map.flyTo({ center: lifeLL(p), zoom: p.z, pitch: p.z > 12 ? 45 : 20, bearing, speed: 1.1, curve: 1.5, padding: lifePad(), essential: true, ...(reduceMotion ? { duration: 0 } : {}) });
+  map.once('moveend', () => {
+    life.flying = false;
+    if (life.k !== k || state.mode !== 'jesus') return;
+    if (life.auto && !reduceMotion) map.easeTo({ bearing: bearing + 20, duration: LIFE_DWELL + 3000, easing: (x) => x, padding: lifePad() });
+    lifeSchedule(LIFE_DWELL);
+  });
+}
+function lifeStep(dir) {
+  const evs = lifeEvents(), pos = evs.indexOf(life.data.events[life.k]);
+  const next = evs[pos < 0 ? 0 : pos + dir]; if (next) goEvent(next.i);
+}
+$('lifeNow').addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b || !life.data) return;
+  if (b.id === 'lifePrev') { lifePause(); lifeStep(-1); }
+  else if (b.id === 'lifeNext') { lifePause(); lifeStep(1); }
+  else if (b.id === 'lifePlay') {
+    life.auto = !life.auto;
+    if (!life.auto) { clearLifeTimer(); map.stop(); renderNow(); return; }
+    const evs = lifeEvents(), pos = evs.indexOf(life.data.events[life.k]);
+    if (pos < 0 || pos >= evs.length - 1) goEvent(evs[0].i); else { renderNow(); lifeStep(1); }
+  }
+  else if (b.dataset.jplace) { lifePause(); openLifePlace(b.dataset.jplace, { fly: false }); }
+});
+$('lifeTrack').addEventListener('click', (e) => { const b = e.target.closest('button.ev'); if (b) { lifePause(); goEvent(+b.dataset.k); } });
+// dragging or zooming the globe pauses the journey; it waits until asked to go on
+for (const ev of ['mousedown', 'touchstart', 'wheel']) map.on(ev, () => { if (state.mode === 'jesus' && life.auto && !life.flying) { lifePause(); map.stop(); } });
+addEventListener('keydown', (e) => {
+  if (state.mode !== 'jesus' || !life.data || e.target.closest('input, textarea, select, .modes') || !$('lightbox').hidden) return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); lifePause(); lifeStep((e.key === 'ArrowRight') !== !!i18n.rtl ? 1 : -1); }
+});
+
+/* search over places and moments */
+function lifeSearch(q) {
+  const d = life.data; if (!d) { resEl.innerHTML = `<div class="note">${esc(tr('bSearchLoading'))}</div>`; return; }
+  const toks = q.split(/\s+/).filter(Boolean);
+  const hit = (s) => { const k = fold(s); return toks.every(t => k.includes(t)); };
+  const ico = (c) => `<i style="width:9px;height:9px;border-radius:50%;background:${c};justify-self:center"></i>`;
+  const places = d.places.filter(p => hit([p.n, p.m].join(' ')));
+  const evs = d.events.filter(e => hit([e.t, e.r, d.byId[e.p].n].join(' ')));
+  const rows = [...places.map(p => `<button role="option" data-jp="${p.id}">${ico(d.color[p.ev[0].e])}<div><span class="nm">${esc(p.n)}</span><span class="loc">${esc(p.m)}</span></div></button>`),
+    ...evs.slice(0, 30).map(e => `<button role="option" data-je="${e.i}">${ico(d.color[e.e])}<div><span class="nm">${fmt(e.i + 1)}. ${esc(e.t)}</span><span class="loc">${esc([d.byId[e.p].n, e.r].join(' · '))}</span></div></button>`)];
+  activeRes = -1;
+  resEl.innerHTML = rows.length ? rows.join('') : `<div class="note">${esc(tr('jNoMatch', { q: qEl.value.trim() }))}</div>`;
+}
+
+/* map hover and click */
+function lifeHit(point, reach) {
+  if (!map.getLayer('j-pt')) return null;
+  const feats = map.queryRenderedFeatures([[point.x - reach, point.y - reach], [point.x + reach, point.y + reach]], { layers: ['j-pt'] });
+  let best = null, bestD = Infinity;
+  for (const f of feats) { const p = map.project(f.geometry.coordinates); const dd = Math.hypot(p.x - point.x, p.y - point.y); if (dd < bestD) { bestD = dd; best = f; } }
+  return best ? life.data.byId[best.properties.id] : null;
+}
+map.on('mousemove', (e) => {
+  if (state.mode !== 'jesus' || !life.data || coarse) return;
+  const p = lifeHit(e.point, 12), cv = map.getCanvas(), r = map.getContainer().getBoundingClientRect();
+  if (!p) { tip.hidden = true; cv.style.cursor = ''; return; }
+  cv.style.cursor = 'pointer';
+  showTip(r.left + e.point.x, r.top + e.point.y, `<b>${esc(p.n)}</b><span>${esc(p.ev.map(x => x.t).slice(0, 3).join(' · ') + (p.ev.length > 3 ? ' …' : ''))}</span><span style="display:block;color:var(--gold-soft)">${esc(tr('bClickRead'))}</span>`);
+});
+map.on('click', (e) => {
+  if (state.mode !== 'jesus' || !life.data) return;
+  const p = lifeHit(e.point, coarse ? 24 : 14); if (!p) return;
+  lastInteract = performance.now(); tip.hidden = true; lifePause();
+  openLifePlace(p.id, { fly: map.getZoom() < 10 });
+});
+
+/* the place card: every moment the Gospels record there */
+const CERT = { sure: 'jCert_sure', trad: 'jCert_trad', debated: 'jCert_debated' };
+async function openLifePlace(id, { fly = true } = {}) {
+  if (state.mode !== 'jesus') await setMode('jesus', { fly: false });
+  const d = life.data, p = d && d.byId[id]; if (!p) return;
+  state.selected = -1; lifeSel(p); lastInteract = performance.now();
+  const sameCard = !$('card').hidden && $('cardBody').dataset.jplace === id;
+  $('card').hidden = false; placeCtrls();
+  if (fly) map.flyTo({ center: lifeLL(p), zoom: Math.max(map.getZoom(), p.z), pitch: 35, speed: 1.3, padding: lifePad(), essential: true });
+  if (!sameCard) bibleHero(p.n, p.m, p.w);
+  const eras = [...new Set(p.ev.map(e => e.e))];
+  const scroll = sameCard ? $('cardBody').scrollTop : 0;
+  $('cardBody').dataset.jplace = id;
+  $('cardBody').innerHTML = `
+    <div>
+      <div class="kicker">${eras.map(k => `<span><i style="background:${d.color[k]}"></i>${esc(tr('jEra_' + k))}</span>`).join('')}<span class="cert ${p.cert}">${esc(tr(CERT[p.cert]))}</span></div>
+      <h2 id="cName">${esc(p.n)}</h2>
+      <div class="where">${esc(p.m)}</div>
+    </div>
+    <p class="lede">${withRefs(p.s)}</p>
+    <div class="actions">
+      <button class="btn primary" id="jPlayHere">${esc(tr('jPlayHere'))}</button>
+      <button class="btn" id="bShare">${SHARE_ICON}<span>${esc(tr('share'))}</span></button>
+      ${p.bp ? `<button class="btn" data-goplace="${p.bp}">${esc(tr('jInBible'))}</button>` : ''}
+    </div>
+    <div class="sect"><h3>${esc(tr('jInGospels'))}</h3><ol class="jev">${p.ev.map(e => `<li style="--c:${d.color[e.e]}" aria-current="${e.i === life.k}">
+      <button class="linkish" data-golife="${e.i}">${fmt(e.i + 1)}. ${esc(e.t)}</button>
+      <span class="refs">${withRefs(e.r)}</span><p>${withRefs(e.s)}</p>${e.u ? `<p class="u">${withRefs(e.u)}</p>` : ''}</li>`).join('')}</ol></div>
+    <div class="sect"><h3>${esc(tr('bNearby'))}</h3><div id="bNear" class="nearlist"><p class="muted">${esc(tr('bLooking'))}</p></div></div>
+    <div class="prov">${esc(tr('jProv'))}</div>`;
+  $('jPlayHere').addEventListener('click', () => { const e = p.ev.find(x => life.era === 'all' || x.e === life.era) || p.ev[0]; life.auto = true; goEvent(e.i); });
+  bibleShare(bibleLink('jesus=' + p.id), tr('jShareTitle', { name: p.n }));
+  try { history.replaceState(null, '', '?jesus=' + p.id); } catch (e) {}
+  $('cardBody').scrollTop = scroll;
+  fillNearby(p);
+}
+
 /* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
 const hooks = {};
 window.ccf = { map, state, selectChurch, closeCard, shardFor, getJSON, countryName, esc, reduceMotion,
@@ -2821,6 +3180,7 @@ const mapReady = new Promise(res => map.once('load', res));
       if (innerWidth > 640 || !(shared >= 0 && shared < state.n)) openFavsOnLoad();  // on phones a shared church's card gets the bottom of the screen
       if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link
       const sp = new URLSearchParams(location.search);
+      if (sp.has('jesus') || sp.has('life') || sp.get('mode') === 'jesus') { state.ready = true; setMode('jesus', { fly: !sp.has('jesus') && !sp.has('life') }).then(() => { if (sp.get('jesus')) openLifePlace(sp.get('jesus')); else if (sp.get('life')) goEvent(parseInt(sp.get('life'), 10) - 1); }); return; }
       if (sp.has('bible') || sp.has('land') || sp.get('mode') === 'bible') { state.ready = true; setMode('bible', { fly: !sp.has('bible') && !sp.has('land') }).then(() => { if (sp.get('bible')) openBiblePlace(sp.get('bible')); else if (sp.get('land')) openBibleLand(sp.get('land')); }); return; }
       map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, duration: reduceMotion ? 0 : 3200, essential: true });
       map.once('moveend', () => { state.ready = true; });
