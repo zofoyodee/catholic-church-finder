@@ -408,5 +408,6 @@
   "loadingLangList": "Cerco chiese con Messa in {lang}…",
   "loadingArea": "Cerco chiese a {place}…",
   "loadingView": "Cerco chiese in questa vista…",
-  "loadingMore": "Carico altre chiese…"
+  "loadingMore": "Carico altre chiese…",
+  "noParishSite": "Nessun sito parrocchiale trovato"
 }

@@ -416,5 +416,6 @@
   "loadingLangList": "Iščem cerkve z mašo v jeziku {lang}…",
   "loadingArea": "Iščem cerkve: {place}…",
   "loadingView": "Iščem cerkve v tem pogledu…",
-  "loadingMore": "Nalagam več cerkva…"
+  "loadingMore": "Nalagam več cerkva…",
+  "noParishSite": "Spletne strani župnije ni bilo mogoče najti"
 }

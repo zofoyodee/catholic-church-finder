@@ -408,5 +408,6 @@
   "loadingLangList": "Inatafuta makanisa yenye Misa kwa {lang}…",
   "loadingArea": "Inatafuta makanisa ya {place}…",
   "loadingView": "Inatafuta makanisa katika mwonekano huu…",
-  "loadingMore": "Inapakia makanisa zaidi…"
+  "loadingMore": "Inapakia makanisa zaidi…",
+  "noParishSite": "Hakuna tovuti ya parokia iliyopatikana"
 }

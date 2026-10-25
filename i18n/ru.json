@@ -438,5 +438,6 @@
   "loadingLangList": "Ищем храмы с Мессой на языке «{lang}»…",
   "loadingArea": "Ищем храмы: {place}…",
   "loadingView": "Ищем храмы в этой области…",
-  "loadingMore": "Загружаем ещё храмы…"
+  "loadingMore": "Загружаем ещё храмы…",
+  "noParishSite": "Сайт прихода не найден"
 }

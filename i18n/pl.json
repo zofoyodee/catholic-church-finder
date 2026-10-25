@@ -438,5 +438,6 @@
   "loadingLangList": "Szukam kościołów z Mszą w języku: {lang}…",
   "loadingArea": "Szukam kościołów: {place}…",
   "loadingView": "Szukam kościołów w tym widoku…",
-  "loadingMore": "Wczytuję kolejne kościoły…"
+  "loadingMore": "Wczytuję kolejne kościoły…",
+  "noParishSite": "Nie znaleziono strony parafii"
 }

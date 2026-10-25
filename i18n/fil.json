@@ -408,5 +408,6 @@
   "loadingLangList": "Hinahanap ang mga simbahang may Misa sa {lang}…",
   "loadingArea": "Hinahanap ang mga simbahan sa {place}…",
   "loadingView": "Hinahanap ang mga simbahan sa view na ito…",
-  "loadingMore": "Naglo-load ng iba pang simbahan…"
+  "loadingMore": "Naglo-load ng iba pang simbahan…",
+  "noParishSite": "Walang nakitang website ng parokya"
 }

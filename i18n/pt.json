@@ -408,5 +408,6 @@
   "loadingLangList": "Procurando igrejas com Missa em {lang}…",
   "loadingArea": "Procurando igrejas em {place}…",
   "loadingView": "Procurando igrejas nesta visão…",
-  "loadingMore": "Carregando mais igrejas…"
+  "loadingMore": "Carregando mais igrejas…",
+  "noParishSite": "Nenhum site da paróquia encontrado"
 }

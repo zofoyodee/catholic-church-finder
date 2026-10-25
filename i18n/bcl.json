@@ -400,5 +400,6 @@
   "loadingLangList": "Hinahanap an mga simbahan na igwang Misa sa {lang}…",
   "loadingArea": "Hinahanap an mga simbahan sa {place}…",
   "loadingView": "Hinahanap an mga simbahan sa view na ini…",
-  "loadingMore": "Pigkakarga an dakol pang simbahan…"
+  "loadingMore": "Pigkakarga an dakol pang simbahan…",
+  "noParishSite": "Mayong nahanap na website kan parokya"
 }

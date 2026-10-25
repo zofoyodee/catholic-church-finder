@@ -390,5 +390,6 @@
   "loadingLangList": "正在查找有{lang}弥撒的教堂…",
   "loadingArea": "正在查找{place}的教堂…",
   "loadingView": "正在查找此视图中的教堂…",
-  "loadingMore": "正在加载更多教堂…"
+  "loadingMore": "正在加载更多教堂…",
+  "noParishSite": "未找到堂区网站"
 }

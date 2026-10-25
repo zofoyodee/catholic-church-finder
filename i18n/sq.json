@@ -406,5 +406,6 @@
   "loadingLangList": "Po kërkohen kisha me Meshë në {lang}…",
   "loadingArea": "Po kërkohen kisha në {place}…",
   "loadingView": "Po kërkohen kisha në këtë pamje…",
-  "loadingMore": "Po ngarkohen më shumë kisha…"
+  "loadingMore": "Po ngarkohen më shumë kisha…",
+  "noParishSite": "Nuk u gjet faqja e famullisë"
 }

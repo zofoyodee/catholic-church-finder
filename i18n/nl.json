@@ -408,5 +408,6 @@
   "loadingLangList": "Kerken met een Mis in het {lang} zoeken…",
   "loadingArea": "Kerken in {place} zoeken…",
   "loadingView": "Kerken in deze weergave zoeken…",
-  "loadingMore": "Meer kerken laden…"
+  "loadingMore": "Meer kerken laden…",
+  "noParishSite": "Geen parochiewebsite gevonden"
 }

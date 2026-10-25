@@ -408,5 +408,6 @@
   "loadingLangList": "Suche Kirchen mit Messe auf {lang}…",
   "loadingArea": "Suche Kirchen in {place}…",
   "loadingView": "Suche Kirchen in dieser Ansicht…",
-  "loadingMore": "Lade weitere Kirchen…"
+  "loadingMore": "Lade weitere Kirchen…",
+  "noParishSite": "Keine Pfarrwebsite gefunden"
 }
