@@ -422,7 +422,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .modes button:hover { color: var(--ink); }
 .modes button[aria-selected="true"] { background: var(--gold); color: #1a1406; font-weight: 600; }
 .modes button[aria-selected="true"] span { color: #1a1406; }
-body.bible-mode .ctrls .fav-open, body.bible-mode #massChips { display: none; }
+body.bible-mode .ctrls .fav-open, body.bible-mode .ctrls #nearBtn, body.bible-mode #massChips, body.bible-mode #near { display: none; }
 /* Life of Jesus: the horizontal timeline along the bottom */
 .life { position: fixed; z-index: 5; left: max(16px, env(safe-area-inset-left, 0px)); right: calc(max(16px, env(safe-area-inset-right, 0px)) + 54px); bottom: calc(40px + env(safe-area-inset-bottom, 0px));
   display: grid; gap: 8px; padding: 10px 10px 8px; border-radius: 16px; border: 1px solid var(--line); background: var(--panel); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
@@ -3033,7 +3033,7 @@ async function setMode(m, { fly = true } = {}) {
   document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
   document.body.classList.toggle('jesus-mode', m === 'jesus');
   lifeStop(); $('life').hidden = m !== 'jesus' || !life.data;
-  closeCard(); showFavs(false); resEl.hidden = true; qEl.value = ''; tip.hidden = true; setHover(-1);
+  closeCard(); showFavs(false); showNear(false); resEl.hidden = true; qEl.value = ''; tip.hidden = true; setHover(-1);
   searchLabels();
   if (m === 'bible') {
     $('tagline').innerHTML = LOADER(tr('bLoading'), 'inline');
