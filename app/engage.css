@@ -10,7 +10,13 @@
 @keyframes twinkle { 0%, 100% { opacity: .25; transform: scale(.7); } 50% { opacity: 1; transform: scale(1); } }
 
 /* the season in the header: a small pill under the tagline, which also opens today's card */
-.season { margin-top: 6px; justify-self: start; display: inline-flex; align-items: center; gap: 7px; height: 24px; padding: 0 10px 0 8px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--lit) 45%, transparent); background: color-mix(in srgb, var(--lit) 12%, rgba(12,18,32,.7)); color: var(--ink); font-size: 11.5px; letter-spacing: .02em; cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); max-width: 100%; }
+.season-row { margin-top: 6px; position: relative; display: flex; align-items: center; gap: 6px; justify-self: start; }
+.season-i { width: 20px; height: 20px; flex: none; border-radius: 50%; border: 1px solid color-mix(in srgb, var(--lit) 45%, transparent); background: rgba(12,18,32,.7); color: var(--ink-soft); font: italic 600 12px/1 Georgia, serif; cursor: help; display: grid; place-items: center; padding: 0; }
+.season-i:hover, .season-i[aria-expanded="true"] { color: var(--ink); border-color: var(--lit); }
+.season-info { position: absolute; z-index: 30; top: calc(100% + 8px); left: 0; width: min(320px, calc(100vw - 32px)); padding: 12px 14px; border-radius: 12px; background: var(--panel-solid); border: 1px solid var(--line); box-shadow: 0 18px 48px #000b; font-size: 13px; line-height: 1.5; color: var(--ink); text-shadow: none; letter-spacing: 0; }
+.season-info b { display: block; margin-bottom: 4px; color: var(--lit-soft, var(--gold-soft)); }
+.season-info p { margin: 0; color: var(--ink-soft); }
+.season { margin-top: 0; justify-self: start; display: inline-flex; align-items: center; gap: 7px; height: 24px; padding: 0 10px 0 8px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--lit) 45%, transparent); background: color-mix(in srgb, var(--lit) 12%, rgba(12,18,32,.7)); color: var(--ink); font-size: 11.5px; letter-spacing: .02em; cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); max-width: 100%; }
 .season i { width: 8px; height: 8px; border-radius: 50%; background: var(--lit); box-shadow: 0 0 8px var(--lit); flex: none; }
 .season span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .season:hover { border-color: var(--lit); }
