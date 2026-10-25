@@ -2275,7 +2275,7 @@ function revealMatches() {
   const low = (s) => i18n.code === 'de' ? s : s.toLocaleLowerCase(i18n.locale);
   let kinds = TYPES.filter(t => t.chip !== false && state.enabled.has(t.code)).map(t => low(t.label));
   try { kinds = new Intl.ListFormat(i18n.locale, { type: 'conjunction' }).format(kinds); } catch (e) { kinds = kinds.join(', '); }
-  toast(all ? tr('nChurches', { n: total }) : tr('countOf', { n: total, kinds }));
+  toast(all ? tr('nChurches', { n: total }) : tr('countOf', { n: total, kinds }), 7000);
   const b = map.getBounds(), { lon, lat, typ, n, enabled } = state;
   let inView = 0;
   if (map.getZoom() >= 3) for (let i = 0; i < n && inView < 5; i++) if (enabled.has(typ[i] & 7) && b.contains([lon[i] / 1e6, lat[i] / 1e6])) inView++;
@@ -2302,7 +2302,7 @@ function flyToMatches(only) {
     bump(cells.all, k);
     if (b.contains(p)) { inView++; bump(cells.view, k); }
   }
-  toast(total ? $('tagline').textContent : tr('noMatchNow'));
+  toast(total ? $('tagline').textContent : tr('noMatchNow'), 7000);
   if (!total) return;
   let bestK = '', bestN = -1;
   for (const [k, v] of inView >= 5 ? cells.view : cells.all) if (v > bestN) { bestN = v; bestK = k; }
@@ -2315,9 +2315,9 @@ function flyToMatches(only) {
   map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: 11, pitch: 0, duration: reduceMotion ? 0 : 1600 });
 }
 let toastTimer = 0;
-function toast(text) {
+function toast(text, ms = 2600) {
   const el = $('toast'); el.textContent = text; el.classList.add('on');
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), 2600);
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), ms);
 }
 function updateTagline() {
   let n = 0; for (const t of state.enabled) n += state.meta.types[t] || 0;
