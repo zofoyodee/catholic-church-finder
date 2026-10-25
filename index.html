@@ -499,8 +499,8 @@ const TYPES = [
   { code: 1, key: 'cathedral', label: 'Cathedrals', one: 'Cathedral', color: '#d2484f' },
   { code: 2, key: 'basilica', label: 'Basilicas', one: 'Basilica', color: '#f6e7b4' },
   { code: 3, key: 'shrine', label: 'Shrines', one: 'Shrine', color: '#6aa7ff' },
-  { code: 6, key: 'parish', label: 'Parishes', one: 'Parish church', color: '#e8b84a' },
-  { code: 0, key: 'church', label: 'Churches', one: 'Church', color: '#e8b84a' },
+  { code: 0, key: 'church', label: 'Parish churches', one: 'Church', color: '#e8b84a', with: 6 },  // one chip for both: they differ only in whether "parish" is in the name
+  { code: 6, key: 'parish', label: 'Parishes', one: 'Parish church', color: '#e8b84a', chip: false },
   { code: 5, key: 'chapel', label: 'Chapels', one: 'Chapel', color: '#c9a55e' },
   { code: 4, key: 'abbey', label: 'Abbeys & monasteries', one: 'Abbey or monastery', color: '#9fd3b0' },
 ];
@@ -1093,7 +1093,7 @@ function renderFavs() {
   $('favOpen').hidden = !favs.length;  // the heart shows up once there is something saved
   if (!favs.length && !$('favs').hidden) showFavs(false);
   $('favN').textContent = favs.length ? favs.length : '';
-  $('favList').innerHTML = favs.length ? favs.map(f => `<li><button class="go" data-i="${f.i}"><i style="background:${(TYPE_BY_CODE[f.t] || TYPES[4]).color}"></i><div><span class="nm">${esc(f.name)}</span><span class="loc">${esc(f.place)}</span></div></button><button class="rm" data-i="${f.i}" aria-label="Remove ${esc(f.name)} from favorites" title="Remove"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>`).join('')
+  $('favList').innerHTML = favs.length ? favs.map(f => `<li><button class="go" data-i="${f.i}"><i style="background:${(TYPE_BY_CODE[f.t] || TYPE_BY_CODE[0]).color}"></i><div><span class="nm">${esc(f.name)}</span><span class="loc">${esc(f.place)}</span></div></button><button class="rm" data-i="${f.i}" aria-label="Remove ${esc(f.name)} from favorites" title="Remove"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>`).join('')
     : `<p class="empty">No favorites yet. Open a church and tap <b><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg> Save</b> to keep it here.</p>`;
   let src = null; try { src = map.getSource('favs'); } catch (e) {}
   if (src && state.lon) src.setData({ type: 'FeatureCollection', features: favs.filter(f => f.i < state.n).map(f => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[f.i] / 1e6, state.lat[f.i] / 1e6] }, properties: {} })) });
@@ -1851,8 +1851,9 @@ function renderChips() {
   const tick = '<svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   const tipFor = (t) => all ? `Show only ${t.label.toLowerCase()}` : state.enabled.has(t.code) ? `Hide ${t.label.toLowerCase()}` : `Also show ${t.label.toLowerCase()}`;
   $('chips').classList.toggle('filtered', !all);
-  $('chips').innerHTML = `<span class="lbl">Show</span><button class="chip" data-k="all" aria-pressed="${all}" title="${all ? 'Showing every kind of church' : 'Show every kind of church again'}">All</button>` + TYPES.filter(t => counts[t.code]).map(t =>
-    `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${tipFor(t)}">${tick}<i style="background:${t.color}"></i>${t.label} <small>${fmt(counts[t.code])}</small></button>`).join('');
+  const n = (t) => (counts[t.code] || 0) + (t.with ? counts[t.with] || 0 : 0);
+  $('chips').innerHTML = `<span class="lbl">Show</span><button class="chip" data-k="all" aria-pressed="${all}" title="${all ? 'Showing every kind of church' : 'Show every kind of church again'}">All</button>` + TYPES.filter(t => t.chip !== false && n(t)).map(t =>
+    `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${tipFor(t)}">${tick}<i style="background:${t.color}"></i>${t.label} <small>${fmt(n(t))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode === 'bible') return;
@@ -1863,7 +1864,7 @@ $('chips').addEventListener('click', (e) => {
     if (all) state.enabled = new Set([c]);
     else if (state.enabled.has(c)) { state.enabled.delete(c); if (!state.enabled.size) state.enabled = new Set(TYPES.map(t => t.code)); }
     else state.enabled.add(c);
-    // "Churches" and "Parishes" read as one idea to most people, so they toggle together
+    // the "Parish churches" chip stands for both the church and parish codes
     if (c === 0 || c === 6) { if (state.enabled.has(c)) { state.enabled.add(0); state.enabled.add(6); } else { state.enabled.delete(0); state.enabled.delete(6); } if (!state.enabled.size) state.enabled = new Set(TYPES.map(t => t.code)); }
   }
   renderChips();
@@ -1881,7 +1882,7 @@ $('chips').addEventListener('click', (e) => {
 function revealMatches() {
   let total = 0; for (const t of state.enabled) total += state.meta.types[t] || 0;
   const all = state.enabled.size === TYPES.length;
-  const kinds = all ? 'churches' : TYPES.filter(t => state.enabled.has(t.code)).map(t => t.label.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' and $1');
+  const kinds = all ? 'churches' : TYPES.filter(t => t.chip !== false && state.enabled.has(t.code)).map(t => t.label.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' and $1');
   toast(`${fmt(total)} ${kinds}`);
   const b = map.getBounds(), { lon, lat, typ, n, enabled } = state;
   let inView = 0;
