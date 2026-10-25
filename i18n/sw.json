@@ -409,5 +409,6 @@
   "loadingArea": "Inatafuta makanisa ya {place}…",
   "loadingView": "Inatafuta makanisa katika mwonekano huu…",
   "loadingMore": "Inapakia makanisa zaidi…",
-  "noParishSite": "Hakuna tovuti ya parokia iliyopatikana"
+  "noParishSite": "Hakuna tovuti ya parokia iliyopatikana",
+  "photoMapillary": "Picha ya barabarani na {author} kwenye Mapillary, CC BY-SA 4.0. Inafunguka kwenye Mapillary."
 }

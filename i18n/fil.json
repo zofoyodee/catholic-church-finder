@@ -409,5 +409,6 @@
   "loadingArea": "Hinahanap ang mga simbahan sa {place}…",
   "loadingView": "Hinahanap ang mga simbahan sa view na ito…",
   "loadingMore": "Naglo-load ng iba pang simbahan…",
-  "noParishSite": "Walang nakitang website ng parokya"
+  "noParishSite": "Walang nakitang website ng parokya",
+  "photoMapillary": "Larawan ng kalye ni {author} sa Mapillary, CC BY-SA 4.0. Bubuksan ito sa Mapillary."
 }

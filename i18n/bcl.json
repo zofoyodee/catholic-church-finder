@@ -401,5 +401,6 @@
   "loadingArea": "Hinahanap an mga simbahan sa {place}…",
   "loadingView": "Hinahanap an mga simbahan sa view na ini…",
   "loadingMore": "Pigkakarga an dakol pang simbahan…",
-  "noParishSite": "Mayong nahanap na website kan parokya"
+  "noParishSite": "Mayong nahanap na website kan parokya",
+  "photoMapillary": "Litrato kan tinampo ni {author} sa Mapillary, CC BY-SA 4.0. Bubukasan ini sa Mapillary."
 }

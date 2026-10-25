@@ -400,5 +400,6 @@
   "loadingArea": "{place} के गिरजाघर खोजे जा रहे हैं…",
   "loadingView": "इस दृश्य के गिरजाघर खोजे जा रहे हैं…",
   "loadingMore": "और गिरजाघर लोड हो रहे हैं…",
-  "noParishSite": "पल्ली की वेबसाइट नहीं मिली"
+  "noParishSite": "पल्ली की वेबसाइट नहीं मिली",
+  "photoMapillary": "Mapillary पर {author} द्वारा सड़क का फ़ोटो, CC BY-SA 4.0. इसे Mapillary पर खोलता है।"
 }

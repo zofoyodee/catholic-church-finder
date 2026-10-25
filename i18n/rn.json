@@ -401,5 +401,6 @@
   "loadingArea": "Turarondera ingoro z'Imana zo muri {place}…",
   "loadingView": "Turarondera ingoro z'Imana ziri muri iyi shusho…",
   "loadingMore": "Turazana izindi ngoro z'Imana…",
-  "noParishSite": "Urubuga rwa paruwasi ntirwabonetse"
+  "noParishSite": "Urubuga rwa paruwasi ntirwabonetse",
+  "photoMapillary": "Ifoto y'ibarabara ya {author} kuri Mapillary, CC BY-SA 4.0. Ifungurirwa kuri Mapillary."
 }

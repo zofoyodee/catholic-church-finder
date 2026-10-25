@@ -409,5 +409,6 @@
   "loadingArea": "Cerco chiese a {place}…",
   "loadingView": "Cerco chiese in questa vista…",
   "loadingMore": "Carico altre chiese…",
-  "noParishSite": "Nessun sito parrocchiale trovato"
+  "noParishSite": "Nessun sito parrocchiale trovato",
+  "photoMapillary": "Foto stradale di {author} su Mapillary, CC BY-SA 4.0. Si apre su Mapillary."
 }

@@ -439,5 +439,6 @@
   "loadingArea": "Ищем храмы: {place}…",
   "loadingView": "Ищем храмы в этой области…",
   "loadingMore": "Загружаем ещё храмы…",
-  "noParishSite": "Сайт прихода не найден"
+  "noParishSite": "Сайт прихода не найден",
+  "photoMapillary": "Уличное фото: {author}, Mapillary, CC BY-SA 4.0. Открывается на Mapillary."
 }

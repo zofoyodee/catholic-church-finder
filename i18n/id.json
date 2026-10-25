@@ -393,5 +393,6 @@
   "loadingArea": "Mencari gereja di {place}…",
   "loadingView": "Mencari gereja di tampilan ini…",
   "loadingMore": "Memuat gereja lainnya…",
-  "noParishSite": "Situs web paroki tidak ditemukan"
+  "noParishSite": "Situs web paroki tidak ditemukan",
+  "photoMapillary": "Foto jalan oleh {author} di Mapillary, CC BY-SA 4.0. Membukanya di Mapillary."
 }

@@ -439,5 +439,6 @@
   "loadingArea": "Szukam kościołów: {place}…",
   "loadingView": "Szukam kościołów w tym widoku…",
   "loadingMore": "Wczytuję kolejne kościoły…",
-  "noParishSite": "Nie znaleziono strony parafii"
+  "noParishSite": "Nie znaleziono strony parafii",
+  "photoMapillary": "Zdjęcie uliczne: {author}, Mapillary, CC BY-SA 4.0. Otwiera się w Mapillary."
 }

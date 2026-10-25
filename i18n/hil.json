@@ -401,5 +401,6 @@
   "loadingArea": "Ginapangita ang mga simbahan sa {place}…",
   "loadingView": "Ginapangita ang mga simbahan sa sini nga view…",
   "loadingMore": "Ginakarga ang dugang nga simbahan…",
-  "noParishSite": "Wala sing nakita nga website sang parokya"
+  "noParishSite": "Wala sing nakita nga website sang parokya",
+  "photoMapillary": "Litrato sang dalan ni {author} sa Mapillary, CC BY-SA 4.0. Buksan ini sa Mapillary."
 }

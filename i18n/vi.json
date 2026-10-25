@@ -393,5 +393,6 @@
   "loadingArea": "Đang tìm nhà thờ ở {place}…",
   "loadingView": "Đang tìm nhà thờ trong khung nhìn này…",
   "loadingMore": "Đang tải thêm nhà thờ…",
-  "noParishSite": "Không tìm thấy trang web giáo xứ"
+  "noParishSite": "Không tìm thấy trang web giáo xứ",
+  "photoMapillary": "Ảnh đường phố của {author} trên Mapillary, CC BY-SA 4.0. Mở trên Mapillary."
 }
