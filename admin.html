@@ -151,13 +151,25 @@ let days = 30, run = 0, lastDaily = [];
 const code = () => store.get(CODE) || DEFAULT_CODE;
 const base = () => 'https://' + code() + '.goatcounter.com';
 
-async function api(path, q = {}) {
+// GoatCounter allows 4 API calls a second, so calls go out one at a time with a short gap
+let queue = Promise.resolve();
+function api(path, q = {}) {
+  const job = queue.then(() => call(path, q));
+  queue = job.catch(() => {}).then(() => new Promise((r) => setTimeout(r, 300)));
+  return job;
+}
+async function call(path, q) {
   const u = new URL(base() + '/api/v0/' + path);
   for (const [k, v] of Object.entries(q)) (Array.isArray(v) ? v : [v]).forEach((x) => u.searchParams.append(k, x));
   for (let tries = 0; ; tries++) {
-    const res = await fetch(u, { headers: { Authorization: 'Bearer ' + store.get(KEY), 'Content-Type': 'application/json' } });
-    if (res.status === 429 && tries < 3) { await new Promise((r) => setTimeout(r, 1500 * (tries + 1))); continue; }
-    if (!res.ok) { const e = new Error(res.status === 401 || res.status === 403 ? 'key' : 'http ' + res.status); e.status = res.status; throw e; }
+    let res;
+    try { res = await fetch(u, { headers: { Authorization: 'Bearer ' + store.get(KEY) } }); }
+    catch (err) { const e = new Error('blocked'); e.detail = String(err && err.message || err); throw e; }  // no answer at all: offline, or a blocker stopped it
+    if (res.status === 429 && tries < 3) { await new Promise((r) => setTimeout(r, 2000 * (tries + 1))); continue; }
+    if (!res.ok) {
+      let msg = ''; try { const j = await res.json(); msg = j.error || (j.errors && JSON.stringify(j.errors)) || ''; } catch (err) {}
+      const e = new Error(res.status === 401 || res.status === 403 ? 'key' : 'http'); e.status = res.status; e.detail = msg; throw e;
+    }
     return res.json();
   }
 }
@@ -274,7 +286,7 @@ async function load() {
   const my = ++run, r = range();
   $('loading').hidden = false; $('dashErr').hidden = true;
   try {
-    const [total, hits] = await Promise.all([api('stats/total', r), allHits(r)]);
+    const total = await api('stats/total', r), hits = await allHits(r);
     if (my !== run) return;
     const lists = {};
     for (const page of ['locations', 'toprefs', 'sizes', 'browsers', 'systems', 'languages']) lists[page] = await api('stats/' + page, { ...r, limit: 100 });
@@ -297,8 +309,11 @@ async function load() {
     $('updated').textContent = 'Updated ' + new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
   } catch (e) {
     if (my !== run) return;
-    if (e.message === 'key') { store.set(KEY, ''); showSetup('That key was not accepted. Check that it has "Read statistics" ticked and that the site code is right.'); }
-    else if ($('dash').hidden) showSetup('Could not reach GoatCounter. Check the site code and your connection, then try again.');
+    console.error('GoatCounter', e.status || '', e.message, e.detail || '');
+    const why = e.status ? ` (GoatCounter said: ${e.status}${e.detail ? ' ' + e.detail : ''})` : '';
+    if (e.message === 'key') { store.set(KEY, ''); showSetup('That key was not accepted. Check that it has "Read statistics" ticked and that the site code is right.' + why); }
+    else if (e.message === 'blocked') showSetup('Your browser could not reach GoatCounter. An ad or tracker blocker (or Brave Shields, or Safari content blockers) often stops it: allow goatcounter.com on this page, or try another browser, then tap Show My Stats again. Your key is still saved.');
+    else if ($('dash').hidden) showSetup('GoatCounter could not send the stats' + why + '. Try again in a minute; your key is still saved.');
     else { $('dashErr').textContent = 'Could not refresh the stats. Try again in a minute.'; $('dashErr').hidden = false; }
   } finally { if (my === run) $('loading').hidden = true; }
 }
@@ -307,13 +322,14 @@ function showSetup(msg) {
   $('dash').hidden = true; $('foot').hidden = true; $('ranges').hidden = true; $('setup').hidden = false;
   $('code').value = store.get(CODE) || DEFAULT_CODE;
   $('gcLink').href = base() + '/user/api';
+  $('key').placeholder = store.get(KEY) ? 'Saved key in use (paste a new one to replace it)' : 'Paste your read-only key';
   $('setupErr').textContent = msg || ''; $('setupErr').hidden = !msg;
 }
 $('save').onclick = () => {
   const c = $('code').value.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\.goatcounter\.com.*$/, ''), k = $('key').value.trim();
   if (!/^[a-z0-9-]+$/.test(c)) { showSetup('The site code is the first part of your GoatCounter address, such as zofo.'); return; }
-  if (!k) { showSetup('Paste your API key first.'); return; }
-  store.set(CODE, c === DEFAULT_CODE ? '' : c); store.set(KEY, k); $('key').value = ''; $('setupErr').hidden = true;
+  if (!k && !store.get(KEY)) { showSetup('Paste your API key first.'); return; }
+  store.set(CODE, c === DEFAULT_CODE ? '' : c); if (k) store.set(KEY, k); $('key').value = ''; $('setupErr').hidden = true;
   $('full').href = base() + '/'; load();
 };
 $('key').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('save').click(); });
