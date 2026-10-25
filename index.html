@@ -1334,6 +1334,23 @@ function faithful(text, max = 2) {
   return sentences.filter(x => !OUTSIDER.test(x)).slice(0, max).join('').trim();
 }
 const FACT_ROWS = [['P571', 'Founded'], ['P1619', 'Opened'], ['P825', 'Dedicated to'], ['P708', 'Diocese'], ['P84', 'Architect'], ['P149', 'Style'], ['P1435', 'Heritage status'], ['P5138', 'Part of']];
+/* ---------- Photos link: point it at something that has pictures, or hide it ---------- */
+async function checkPhotosLink(i, rec, name, town, lat, lng) {
+  const set = (href) => { const a = $('phLink'); if (!a || state.selected !== i) return; if (href) a.href = href; a.hidden = href === ''; };
+  const C = 'https://commons.wikimedia.org/';
+  try {
+    const a = await loadAbout(i, rec).catch(() => ({}));
+    if (a.cat) return set(C + 'wiki/Category:' + encodeURIComponent(a.cat.replace(/ /g, '_')));
+    // the church's name among Commons files, with the town unless it is written in another script
+    const q = [name, /^[\u0000-\u024f\s.'-]*$/.test(town || '') ? town : ''].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const s = await api('commons.wikimedia.org', { list: 'search', srsearch: q, srnamespace: 6, srlimit: 1, srinfo: 'totalhits', srprop: '' });
+    if (s.query && s.query.searchinfo && s.query.searchinfo.totalhits > 0) return set(C + 'w/index.php?search=' + encodeURIComponent(q) + '&title=Special:MediaSearch&type=image');
+    // or any photos taken right around it
+    const g = await api('commons.wikimedia.org', { list: 'geosearch', gscoord: lat + '|' + lng, gsradius: 250, gsnamespace: 6, gslimit: 1 });
+    if (g.query && g.query.geosearch && g.query.geosearch.length) return set(C + 'wiki/Special:Nearby#/coord/' + lat.toFixed(5) + ',' + lng.toFixed(5));
+    set('');
+  } catch (e) { set(null); }  // Commons didn't answer: keep the plain search link
+}
 /* ---------- Street View: with a Google Maps key, show the link only where Google has imagery near the church ---------- */
 // Browser key, restricted in Google Cloud to this site's address and the Maps JavaScript API. Empty = always show the link, unchecked.
 const GMAPS_KEY = '';
@@ -1767,7 +1784,7 @@ async function selectChurch(i, { fly = true } = {}) {
     <div class="sect">
       <h3>Photos, video and history</h3>
       <div class="media">
-        <a href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span><b>Photos</b><small>Wikimedia Commons</small></span></a>
+        <a id="phLink" hidden href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span><b>Photos</b><small>Wikimedia Commons</small></span></a>
         <a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">${icon.video}<span><b>Videos</b><small>YouTube</small></span></a>
         <a id="svLink"${GMAPS_KEY ? ' hidden' : ''} href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span><b>Street View</b><small>Google Maps</small></span></a>
         <a href="https://en.wikipedia.org/w/index.php?search=${qShort}" target="_blank" rel="noopener">${icon.book}<span><b>History</b><small>Wikipedia</small></span></a>
@@ -1788,6 +1805,7 @@ async function selectChurch(i, { fly = true } = {}) {
   });
   showAbout(i, rec);
   checkStreetView(i, lt, lng);
+  checkPhotosLink(i, rec, name, town, lt, lng);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
 }
