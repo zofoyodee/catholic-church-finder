@@ -692,7 +692,7 @@ const EN = {
   type_church: 'Parish Churches', one_church: 'Church', type_chapel: 'Chapels', one_chapel: 'Chapel',
   type_abbey: 'Abbeys & Monasteries', one_abbey: 'Abbey or Monastery',
   loadingPhoto: 'Loading photo', photoOf: 'Photograph of {name}', theChurch: 'the church',
-  photoBy: 'Photo by {author}, {license}. Opens the photo on Wikimedia Commons.', photoCredit: 'Photo: {author} · {license}', parishSitePhoto: 'parish website', photoFromSite: 'Photo from the parish website, {site}. Opens the site.', photoMapillary: 'Street photo by {author} on Mapillary, CC BY-SA 4.0. Opens it on Mapillary.',
+  photoBy: 'Photo by {author}, {license}. Opens the photo on Wikimedia Commons.', photoCredit: 'Photo: {author} · {license}', parishSitePhoto: 'parish website', photoFromSite: 'Photo from the parish website, {site}. Opens the site.', photoStreetView: 'Street View image from Google. Opens Street View.', photoMapillary: 'Street photo by {author} on Mapillary, CC BY-SA 4.0. Opens it on Mapillary.',
   unknownAuthor: 'Unknown author', seeFilePage: 'See file page',
   save: 'Save', saved: 'Saved', favAdd: 'Add to your favorites', favRemove: 'Remove from your favorites',
   favRemoveName: 'Remove {name} from favorites', remove: 'Remove', favEmpty: 'No favorites yet. Open a church and tap {save} to keep it here.',
@@ -1502,7 +1502,12 @@ async function showPhoto(i) {
       const w = await webFor(i), u = w.entry && w.entry[8], site = (w.entry && w.entry[1]) || (rec && rec[6]) || u;
       if (u && /^https:\/\//.test(u)) { const h = new URL(/^https?:/.test(site) ? site : 'https://' + site).hostname.replace(/^www\./, ''); photo = { src: u, file: rec && rec[0], author: h, license: tr('parishSitePhoto'), page: /^https?:/.test(site) ? site : 'https://' + h, own: true }; }
     } catch (e) {}
-    // still nothing: a street-level photo from Mapillary taken near the church and facing it
+    // still nothing: Google Street View from the street in front, turned to face the church
+    if (!photo && GMAPS_KEY && current()) try {
+      const lat = state.lat[i] / 1e6, lng = state.lon[i] / 1e6, sv = await svPano(i, lat, lng);
+      if (sv) photo = { src: svImage(sv, lat, lng), file: rec && rec[0], author: 'Google', license: 'Street View', page: `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(sv.pano)}`, sv: true };
+    } catch (e) {}
+    // or a street-level photo from Mapillary taken near the church and facing it
     if (!photo && MAPILLARY_TOKEN && current()) try { photo = await streetPhoto(i, rec); } catch (e) {}
   }
   if (!current()) return;
@@ -1512,7 +1517,7 @@ async function showPhoto(i) {
   if (!current()) return;
   hero.querySelector('svg.scene').after(img);
   hero.classList.add('has-photo');
-  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(photo.street ? tr('photoMapillary', { author: photo.author }) : photo.own ? tr('photoFromSite', { site: photo.author }) : tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
+  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(photo.sv ? tr('photoStreetView') : photo.street ? tr('photoMapillary', { author: photo.author }) : photo.own ? tr('photoFromSite', { site: photo.author }) : tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
   requestAnimationFrame(() => img.classList.add('on'));
   done();
 }
@@ -2229,7 +2234,21 @@ function loadGmaps() {
     document.head.appendChild(sc);
   }));
 }
-const svSeen = new Map();  // church index -> pano id, or '' when there is none
+const svSeen = new Map();  // church index -> Promise of the nearest outdoor panorama { pano, lat, lng }, or null when there is none
+function svPano(i, lat, lng) {
+  if (!svSeen.has(i)) svSeen.set(i, loadGmaps().then(async g => {
+    const r = await new g.StreetViewService().getPanorama({ location: { lat, lng }, radius: 100, source: g.StreetViewSource.OUTDOOR }).catch(() => null);
+    const l = r && r.data && r.data.location;
+    return l && l.pano ? { pano: l.pano, lat: l.latLng.lat(), lng: l.latLng.lng() } : null;
+  }).catch(e => { svSeen.delete(i); throw e; }));
+  return svSeen.get(i);
+}
+// a Street View picture taken from the nearest street, turned to face the church
+function svImage(sv, lat, lng) {
+  const r = Math.PI / 180, y = Math.sin((lng - sv.lng) * r) * Math.cos(lat * r), x = Math.cos(sv.lat * r) * Math.sin(lat * r) - Math.sin(sv.lat * r) * Math.cos(lat * r) * Math.cos((lng - sv.lng) * r);
+  const heading = Math.round((Math.atan2(y, x) / r + 360) % 360);
+  return `https://maps.googleapis.com/maps/api/streetview?size=640x400&pano=${encodeURIComponent(sv.pano)}&heading=${heading}&pitch=12&fov=80&key=${encodeURIComponent(GMAPS_KEY)}`;
+}
 async function checkStreetView(i, lat, lng) {
   if (!GMAPS_KEY) return;
   const show = (pano) => {
@@ -2238,12 +2257,9 @@ async function checkStreetView(i, lat, lng) {
     if (pano) a.href = `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(pano)}`;
     a.hidden = false;
   };
-  if (svSeen.has(i)) return show(svSeen.get(i));
   try {
-    const g = await loadGmaps();
-    const r = await new g.StreetViewService().getPanorama({ location: { lat, lng }, radius: 100, source: g.StreetViewSource.OUTDOOR }).catch(() => null);
-    const pano = (r && r.data && r.data.location && r.data.location.pano) || '';
-    svSeen.set(i, pano); show(pano);
+    const sv = await svPano(i, lat, lng);
+    show(sv ? sv.pano : '');
   } catch (e) { show(null); }  // could not ask Google: show the plain link rather than nothing
 }
 async function showAbout(i, rec) {
