@@ -219,6 +219,8 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .favs li button.rm { width: 32px; height: 32px; margin-right: 4px; border-radius: 50%; border: 0; background: none; cursor: pointer; display: grid; place-items: center; color: var(--ink-faint); }
 .favs li button.rm:hover { color: var(--ink); background: rgba(255,255,255,.06); }
 .favs li button.rm svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; }
+.favs .note { padding: 6px 18px 8px; color: var(--ink-soft); font-size: 12.5px; line-height: 1.45; margin: 0; }
+.favs .loc .when { color: var(--gold-soft); font-weight: 600; }
 .favs .empty { padding: 4px 18px 18px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; margin: 0; }
 .favs .empty svg { width: 14px; height: 14px; vertical-align: -2px; fill: #e0607e; stroke: none; }
 .btn.save svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; }
@@ -727,6 +729,10 @@ const EN = {
   massTimes: 'Mass times', confession: 'Confession', checkedOn: ', checked {date}',
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
+  massNear: 'Mass near me', confNear: 'Confession near me', massNearTip: 'Churches near you, soonest Mass first', confNearTip: 'Churches near you, soonest Confession first',
+  massNearTitle: 'Mass near you', confNearTitle: 'Confession near you', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
+  noTimesWeek: 'No time listed this week', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No churches nearby list their times yet.',
+  seeWorldwide: 'See all {n} churches with Mass in {lang} worldwide', timesCheck: 'Times come from parish websites. Check with the parish before you go.',
   confSoon: 'Confession soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
   anyLang: 'Any language', clear: 'Clear', signLanguage: 'Sign language', aramaic: 'Aramaic',
   everyDay: 'Every day', monthlyDay_1: '1st {day}', monthlyDay_2: '2nd {day}', monthlyDay_3: '3rd {day}', monthlyDay_4: '4th {day}', monthlyDay_5: '5th {day}', monthlyDay_6: 'Last {day}',
@@ -754,7 +760,7 @@ const EN = {
   noMatchNow: 'No churches match right now',
   modesLabel: "What the globe shows",
   modeChurches: "Churches",
-  modeBible: "Bible Places",
+  modeBible: "Bible Locations",
   bSearchPh: "Search a Bible place or country, e.g. Persia, Nineveh, Ephesus",
   bSearchLabel: "Search places of the Bible",
   bLoading: "Loading places of the Bible…",
@@ -1126,15 +1132,112 @@ function renderMassChips() {
   const langs = {};
   for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = (v[j] >> 19) & 31; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
   const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
-  const clock = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>';
+  const pin = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/></svg>';
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
-    <button class="chip" data-m="mass" aria-pressed="${mf.mode === 'mass'}" title="${esc(tr('massSoonTip'))}">${clock}${esc(tr('massSoon'))}</button>
-    <button class="chip" data-m="conf" aria-pressed="${mf.mode === 'conf'}" title="${esc(tr('confSoonTip'))}">${clock}${esc(tr('confSoon'))}</button>
+    <button class="chip" data-m="massNear" aria-pressed="${mn.kind === 0}" title="${esc(tr('massNearTip'))}">${pin}${esc(tr('massNear'))}</button>
+    <button class="chip" data-m="confNear" aria-pressed="${mn.kind === 1}" title="${esc(tr('confNearTip'))}">${pin}${esc(tr('confNear'))}</button>
     ${opts ? `<label class="chip lang" title="${esc(tr('massLangTip2'))}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg><span>${esc(tr('massIn'))}</span><select id="massLang" aria-label="${esc(tr('massLangAria'))}"><option value="">${esc(tr('anyLang'))}</option>${opts}</select></label>` : ''}
-    ${mf.mode || mf.lang ? `<button class="chip" data-m="clear">${esc(tr('clear'))}</button>` : ''}
+    ${mf.mode || mf.lang || mn.kind >= 0 ? `<button class="chip" data-m="clear">${esc(tr('clear'))}</button>` : ''}
     <small class="mass-note" title="${esc(tr('massNoteTip'))}">${esc(tr('timesFound', { n: Object.keys(mf.data.c).length }))}</small>`;
-  $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang));
+  $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang || mn.kind >= 0));
 }
+/* ---------- Mass near me / Confession near me: nearby churches, soonest first ---------- */
+const mn = { kind: -1, at: null, guessed: false, rows: null };
+// minutes from now until this church's next Mass (kind 0) or Confession (kind 1) in the next week, optionally in one language
+function nextTime(v, kind, li) {
+  const t = localNow(mf.data.tz[v[0]]); if (!t) return null;
+  let best = null;
+  for (let j = 1; j < v.length; j++) {
+    const s = v[j]; if ((s & 1) !== kind) continue;
+    const lang = (s >> 19) & 31; if (li >= 0 && lang !== li) continue;
+    const mask = (s >> 1) & 127, at = (s >> 8) & 2047, wk = (s >> 24) & 7;
+    for (let k = 0; k < 8; k++) {
+      const day = (t.day + k) % 7; if (!(mask & (1 << day))) continue;
+      const date = t.date + k;
+      if (wk && (wk === 6 ? date + 7 <= t.last : Math.ceil(date / 7) !== wk)) continue;
+      const d = k * 1440 + at - t.min; if (d < -5) continue;  // one that has just begun still counts as now
+      if (!best || d < best.d) best = { d, at, k, lang };
+      break;
+    }
+  }
+  return best;
+}
+function whenText(n) {
+  if (n.d <= 5) return tr('whenNow');
+  const time = new Date(2000, 0, 2, Math.floor(n.at / 60), n.at % 60).toLocaleTimeString(i18n.locale, { hour: 'numeric', minute: '2-digit' });
+  if (n.k === 0) return tr('whenToday', { time });
+  if (n.k === 1) return tr('whenTomorrow', { time });
+  const day = new Date(Date.now() + n.k * 864e5).toLocaleDateString(i18n.locale, { weekday: 'long' });
+  return tr('whenDay', { day: day.replace(/^./, c => c.toUpperCase()), time });
+}
+async function hereOrCenter() {
+  if (mn.at && !mn.guessed) return mn.at;
+  try {
+    const pos = await new Promise((res, rej) => navigator.geolocation ? navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 12000, maximumAge: 600000 }) : rej(new Error('geo')));
+    mn.guessed = false; mn.at = [pos.coords.longitude, pos.coords.latitude];
+    here = mn.at; map.getSource('me').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: here }, properties: {} }] });
+  } catch (e) { const c = map.getCenter(); mn.guessed = true; mn.at = [c.lng, c.lat]; }
+  return mn.at;
+}
+async function massNear(kind) {
+  mn.kind = kind; mf.mode = '';
+  showNear(true);
+  const title = document.querySelector('#nearTitle span'); title.dataset.i18n = kind ? 'confNearTitle' : 'massNearTitle'; title.textContent = tr(title.dataset.i18n);
+  const list = $('nearList'); $('nearN').textContent = ''; nearRows = null;
+  list.innerHTML = `<p class="empty">${esc(tr('finding'))}</p>`;
+  renderMassChips();
+  const [lon, lat] = await hereOrCenter();
+  if (mn.kind !== kind) return;
+  // the nearest churches that list a time of this kind (and language), then the soonest among those close by
+  const li = mf.lang ? mf.data.langs.indexOf(mf.lang) : -1, cos = Math.cos(lat * Math.PI / 180), cand = [];
+  for (const [k, v] of Object.entries(mf.data.c)) {
+    const i = +k; if (i >= state.n) continue;
+    const dx = (state.lon[i] / 1e6 - lon) * cos, dy = state.lat[i] / 1e6 - lat;
+    cand.push([dx * dx + dy * dy, i, v]);
+  }
+  cand.sort((a, b) => a[0] - b[0]);
+  const rows = [];
+  for (const [, i, v] of cand) {
+    const n = nextTime(v, kind, li); if (!n) continue;
+    rows.push({ i, n, m: metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6) });
+    if (rows.length >= 40) break;
+  }
+  const reach = Math.max(25000, rows.length > 4 ? rows[4].m : 0);  // within ~15 miles, or as far as the 5th nearest
+  mn.rows = rows.filter(r => r.m <= reach).sort((a, b) => a.n.d - b.n.d || a.m - b.m).slice(0, 25);
+  state.only = new Set(mn.rows.map(r => r.i));
+  map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
+  map.once('idle', updateNames);
+  $('tagline').textContent = tr(kind ? 'confNearTitle' : 'massNearTitle');
+  if (mn.rows.length) {
+    const pts = [[lon, lat], ...mn.rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
+    const b = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
+    closeCard();
+    map.fitBounds(b, { padding: innerWidth > 640 ? { left: 380, right: 80, top: 190, bottom: 80 } : { top: 190, bottom: innerHeight * 0.62, left: 40, right: 40 }, maxZoom: 14, duration: reduceMotion ? 0 : 2000 });
+  }
+  renderMassNear();
+}
+async function renderMassNear() {
+  const rows = mn.rows, list = $('nearList'); if (!rows) return;
+  $('nearN').textContent = rows.length ? fmt(rows.length) : '';
+  let recs = []; try { recs = await Promise.all(rows.map(r => shardFor(r.i))); } catch (e) {}
+  if (rows !== mn.rows) return;
+  const world = mf.lang ? langSet(mf.lang).size : 0;
+  list.innerHTML = (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (rows.length ? rows.map((r, k) => {
+    const rec = recs[k] || [], t = state.typ[r.i] & 7, lang = r.n.lang ? mf.data.langs[r.n.lang] : '';
+    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc"><b class="when">${esc(whenText(r.n))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+  }).join('') : `<p class="empty">${esc(tr('noMassNear'))}</p>`)
+    + (world ? `<p class="note"><button class="linkish" id="seeWorld">${esc(tr('seeWorldwide', { n: world, lang: massLangName(mf.lang) }))}</button></p>` : '')
+    + `<p class="note">${esc(tr('timesCheck'))}</p>`;
+}
+function endMassNear() {
+  if (mn.kind < 0) return;
+  mn.kind = -1; mn.rows = null; state.only = null;
+  const title = document.querySelector('#nearTitle span'); title.dataset.i18n = 'nearYou'; title.textContent = tr('nearYou');
+}
+$('nearList').addEventListener('click', (e) => {
+  if (!e.target.closest('#seeWorld')) return;
+  endMassNear(); showNear(false); applyMassFilter(true);  // every church with Mass in that language, worldwide
+});
 async function initMassFilters() {
   try { mf.data = await getJSON('data/web/sched.json'); } catch (e) { return; }
   if (!mf.data || !Object.keys(mf.data.c || {}).length) return;
@@ -1143,10 +1246,12 @@ async function initMassFilters() {
   $('massChips').addEventListener('click', (e) => {
     const b = e.target.closest('button[data-m]'); if (!b) return;
     const m = b.dataset.m;
-    if (m === 'clear') { mf.mode = ''; mf.lang = ''; } else mf.mode = mf.mode === m ? '' : m;
-    applyMassFilter(m !== 'clear');
+    if (m === 'clear') { mf.mode = ''; mf.lang = ''; endMassNear(); applyMassFilter(); return; }
+    const kind = m === 'confNear' ? 1 : 0;
+    if (mn.kind === kind) { endMassNear(); showNear(false); applyMassFilter(); } else massNear(kind);
   });
-  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; applyMassFilter(true); } });
+  // a language narrows the nearby list; the worldwide view is one link away inside it
+  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; massNear(mn.kind === 1 ? 1 : 0); } });
 }
 
 /* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
@@ -1993,6 +2098,7 @@ function nearest(lat, lon, k) {
 }
 let here = null;
 async function findNear() {
+  if (mn.kind >= 0) { endMassNear(); applyMassFilter(); }
   showNear(true);
   const list = $('nearList'); $('nearN').textContent = ''; nearRows = null;
   if (!navigator.geolocation) { list.innerHTML = `<p class="empty">${esc(tr('noGeo'))}</p>`; return; }
@@ -2582,7 +2688,7 @@ $('langSel').addEventListener('change', async (e) => {
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
   if (life.data && state.mode !== 'jesus') buildTimeline();
-  renderFavs(); renderNear(); setCityLabels();
+  renderFavs(); if (mn.kind >= 0) { const t = document.querySelector('#nearTitle span'); t.textContent = tr(t.dataset.i18n); renderMassNear(); } else renderNear(); setCityLabels();
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
   if (!$('about').hidden) $($('mailBtn') ? 'contactBtn' : 'aboutBtn').click();
