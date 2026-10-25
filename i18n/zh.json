@@ -288,5 +288,7 @@
   "bg_ot": "旧约",
   "bg_deut": "多俾亚传、友弟德传与玛加伯书",
   "bg_jesus": "耶稣的生平",
-  "bg_church": "宗徒与初期教会"
+  "bg_church": "宗徒与初期教会",
+  "parishSitePhoto": "堂区网站",
+  "photoFromSite": "图片来自堂区网站 {site}。点击打开该网站。"
 }

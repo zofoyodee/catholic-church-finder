@@ -330,5 +330,7 @@
   "bg_ot": "Stary Testament",
   "bg_deut": "Tobiasz, Judyta i Machabeusze",
   "bg_jesus": "Życie Jezusa",
-  "bg_church": "Apostołowie i pierwotny Kościół"
+  "bg_church": "Apostołowie i pierwotny Kościół",
+  "parishSitePhoto": "strona parafii",
+  "photoFromSite": "Zdjęcie ze strony parafii, {site}. Otwiera stronę."
 }

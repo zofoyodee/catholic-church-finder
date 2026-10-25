@@ -304,5 +304,7 @@
   "bg_ot": "Oude Testament",
   "bg_deut": "Tobit, Judit en Makkabeeën",
   "bg_jesus": "Leven van Jezus",
-  "bg_church": "Apostelen en vroege Kerk"
+  "bg_church": "Apostelen en vroege Kerk",
+  "parishSitePhoto": "website van de parochie",
+  "photoFromSite": "Foto van de website van de parochie, {site}. Opent de site."
 }

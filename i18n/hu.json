@@ -304,5 +304,7 @@
   "bg_ot": "Ószövetség",
   "bg_deut": "Tóbiás, Judit és a Makkabeusok",
   "bg_jesus": "Jézus élete",
-  "bg_church": "Az apostolok és az ősegyház"
+  "bg_church": "Az apostolok és az ősegyház",
+  "parishSitePhoto": "plébánia honlapja",
+  "photoFromSite": "Fotó a plébánia honlapjáról: {site}. Megnyitja az oldalt."
 }

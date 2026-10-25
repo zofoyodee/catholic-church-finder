@@ -304,5 +304,7 @@
   "bg_ot": "Agano la Kale",
   "bg_deut": "Tobiti, Yudithi na Wamakabayo",
   "bg_jesus": "Maisha ya Yesu",
-  "bg_church": "Mitume na Kanisa la mwanzo"
+  "bg_church": "Mitume na Kanisa la mwanzo",
+  "parishSitePhoto": "tovuti ya parokia",
+  "photoFromSite": "Picha kutoka tovuti ya parokia, {site}. Hufungua tovuti."
 }

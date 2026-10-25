@@ -304,5 +304,7 @@
   "bg_ot": "Altes Testament",
   "bg_deut": "Tobit, Judit und Makkabäer",
   "bg_jesus": "Leben Jesu",
-  "bg_church": "Apostel und Urkirche"
+  "bg_church": "Apostel und Urkirche",
+  "parishSitePhoto": "Website der Pfarrei",
+  "photoFromSite": "Foto von der Website der Pfarrei, {site}. Öffnet die Website."
 }

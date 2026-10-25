@@ -290,5 +290,7 @@
   "bg_ot": "Cựu Ước",
   "bg_deut": "Tô-bi-a, Giu-đi-tha và Ma-ca-bê",
   "bg_jesus": "Cuộc đời Chúa Giê-su",
-  "bg_church": "Các Tông đồ và Giáo Hội sơ khai"
+  "bg_church": "Các Tông đồ và Giáo Hội sơ khai",
+  "parishSitePhoto": "trang web giáo xứ",
+  "photoFromSite": "Ảnh từ trang web giáo xứ, {site}. Mở trang web."
 }

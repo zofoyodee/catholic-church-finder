@@ -304,5 +304,7 @@
   "bg_ot": "Antiguo Testamento",
   "bg_deut": "Tobías, Judit y Macabeos",
   "bg_jesus": "Vida de Jesús",
-  "bg_church": "Apóstoles e Iglesia primitiva"
+  "bg_church": "Apóstoles e Iglesia primitiva",
+  "parishSitePhoto": "sitio web de la parroquia",
+  "photoFromSite": "Foto del sitio web de la parroquia, {site}. Abre el sitio."
 }

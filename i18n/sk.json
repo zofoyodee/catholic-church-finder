@@ -321,5 +321,7 @@
   "bg_ot": "Starý zákon",
   "bg_deut": "Tobiáš, Judita a Makabejci",
   "bg_jesus": "Ježišov život",
-  "bg_church": "Apoštoli a prvotná Cirkev"
+  "bg_church": "Apoštoli a prvotná Cirkev",
+  "parishSitePhoto": "webová stránka farnosti",
+  "photoFromSite": "Fotografia z webovej stránky farnosti, {site}. Otvorí stránku."
 }

@@ -304,5 +304,7 @@
   "bg_ot": "Lumang Tipan",
   "bg_deut": "Tobit, Judit at Macabeo",
   "bg_jesus": "Buhay ni Hesus",
-  "bg_church": "Mga Apostol at unang Simbahan"
+  "bg_church": "Mga Apostol at unang Simbahan",
+  "parishSitePhoto": "website ng parokya",
+  "photoFromSite": "Larawan mula sa website ng parokya, {site}. Binubuksan ang site."
 }

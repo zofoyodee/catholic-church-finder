@@ -290,5 +290,7 @@
   "bg_ot": "Perjanjian Lama",
   "bg_deut": "Tobit, Yudit dan Makabe",
   "bg_jesus": "Hidup Yesus",
-  "bg_church": "Para Rasul dan Gereja perdana"
+  "bg_church": "Para Rasul dan Gereja perdana",
+  "parishSitePhoto": "situs paroki",
+  "photoFromSite": "Foto dari situs paroki, {site}. Membuka situs itu."
 }
