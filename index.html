@@ -353,6 +353,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .facts .mini { margin-left: 8px; vertical-align: 1px; height: 22px; padding: 0 9px; border-radius: 11px; border: 1px solid var(--line); background: none; color: var(--ink-soft); font-size: 11.5px; cursor: pointer; }
 .facts .mini:hover { color: var(--ink); border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
 .facts dd.links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.facts dd.links .none { color: var(--ink-faint); }
 .facts dd.links a { display: inline-flex; align-items: center; gap: 6px; }
 .facts dd.links svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .facts a { color: var(--gold-soft); text-underline-offset: 3px; }
@@ -707,7 +708,7 @@ const EN = {
   geoFail: 'Your location could not be found. Try again in a moment.', noneNear: 'No churches found. Check the filters across the top.',
   loadingName: 'Loading name…', clickDetails: 'Click for details',
   loading: 'Loading…', loadingMassNear: 'Finding Masses near you…', loadingConfNear: 'Finding Confession near you…', loadingLangList: 'Finding churches with Mass in {lang}…', loadingArea: 'Finding churches in {place}…', loadingView: 'Finding churches in this view…', loadingMore: 'Loading more churches…', detailsFailed: 'Details didn\'t load', checkConnection: 'Check your connection, then click the pin again.',
-  onGlobe: 'Location on the globe', directions: 'Directions', parishSite: 'Parish Website', share: 'Share', emailLink: 'Email a Link',
+  onGlobe: 'Location on the globe', directions: 'Directions', parishSite: 'Parish Website', noParishSite: 'No parish website found', share: 'Share', emailLink: 'Email a Link',
   copyLink: 'Copy Link', moreOptions: 'More Options…', flyHere: 'Fly Here', address: 'Address', phone: 'Phone',
   website: 'Website', mediaTitle: 'Photos, Video and History', photosLink: 'Photos', videos: 'Videos',
   streetView: 'Street View', history: 'History',
@@ -2630,8 +2631,8 @@ async function selectChurch(i, { fly = true } = {}) {
     const k = u && /^https?:\/\//.test(u) ? linkKind(u) : null; if (!k) continue;
     if (k.btn === 'Wikipedia') { if (!wikiUrl && wikiAboutIt(u, name)) wikiUrl = u; continue; }  // many listed articles are about the town
     const p = k.platform ? k.btn : 'site'; if (!p || seenP.has(p)) continue; seenP.add(p);
-    if (u === webUrl && kind && kind.btn) continue;  // already the button above the address (Parish website, Facebook, ...)
-    if (p !== 'site' && SOCIAL[p]) online.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${SOCIAL[p][0]}${SOCIAL[p][1]}</a>`);
+    if (p === 'site') online.unshift(`<a href="${esc(u)}" target="_blank" rel="noopener" title="${esc(tr('parishSite'))}">${icon.web}${esc(host(u))}</a>`);  // the parish's own site leads the row
+    else if (SOCIAL[p]) online.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${SOCIAL[p][0]}${SOCIAL[p][1]}</a>`);
   }
   const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   $('cardBody').innerHTML = `
@@ -2641,7 +2642,6 @@ async function selectChurch(i, { fly = true } = {}) {
     </div>
     <div class="actions">
       <a class="btn primary" href="${directionsURL(lt, lng, name)}" target="_blank" rel="noopener">${esc(tr('directions'))}</a>
-      ${kind && kind.btn && kind.btn !== 'Wikipedia' ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${esc(platLabel(kind.btn))}</a>` : ''}
       <button class="btn save" id="saveBtn" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span>${esc(tr('save'))}</span></button>
       <span class="share-wrap"><button class="btn" id="shareBtn" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>${esc(tr('share'))}</span></button>
         <span class="share-menu" id="shareMenu" role="menu" hidden>
@@ -2655,8 +2655,8 @@ async function selectChurch(i, { fly = true } = {}) {
       ${addr.length ? `<dt>${esc(tr('address'))}</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="${esc(tr('copyAddrTip'))}">${esc(tr('copy'))}</button></dd>` : ''}
       ${pastor ? `<dt>${esc(roleLabel(pastor[3]))}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
       ${phone ? `<dt>${esc(tr('phone'))}</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
-      ${online.length || webDead ? `<dt>${esc(tr('online'))}</dt><dd class="links">${online.join('')}${
-        webDead ? `<span>${tr('webDead', { site: `<s class="dead">${esc(host(listedUrl))}</s>`, a1: `<a href="${esc(webSearch)}" target="_blank" rel="noopener">`, end: '</a>' })}</span>` : ''}</dd>` : ''}
+      <dt>${esc(tr('online'))}</dt><dd class="links">${
+        webDead ? `<span>${tr('webDead', { site: `<s class="dead">${esc(host(listedUrl))}</s>`, a1: `<a href="${esc(webSearch)}" target="_blank" rel="noopener">`, end: '</a>' })}</span>` : seenP.has('site') ? '' : `<span class="none">${esc(tr('noParishSite'))}</span>`}${online.join('')}</dd>
     </dl>
     ${scheduleHTML(wentry, webInfo.checked, host, mf.data && mf.data.c[i])}
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
