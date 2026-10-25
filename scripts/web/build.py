@@ -1,7 +1,7 @@
 """Merge crawl parts into data/web/N.json, one file per detail shard.
 
 Each file maps a record's index within its shard to
-  [status, url, staff, staffSource, massLines, confessionLines, scheduleSource, socials]
+  [status, url, staff, staffSource, massLines, confessionLines, scheduleSource, socials, photoUrl]
 status: 2 = moved (url is the new address), 3 = dead, 1 = ok but at a new path (url).
 staff:  [[kind "p"|"d", title, name, role, photoUrl], ...]
 Records whose link works unchanged and have no staff are left out.
@@ -30,11 +30,15 @@ CODE = {'ok': 1, 'moved': 2, 'dead': 3}
 stats = collections.Counter()
 sys.path.insert(0, os.path.dirname(__file__))
 from crawl import records
+from schedule import OTHER, MASS, CONF
 from times import slots, LANGS
 from tz import tz_of
 import base64, struct
 
 shards = collections.defaultdict(dict)
+# a picture or account linked from several parish sites is a template, diocese or Vatican one, not this church's
+IMG_USE = collections.Counter(x.get('img') for x in res.values() if x.get('img'))
+SOC_USE = collections.Counter(u.rstrip('/').lower() for x in res.values() for u in x.get('so') or [])
 sched = {}
 TZ = {}
 _raw = base64.b64decode(open('data/points.txt').read())
@@ -51,7 +55,7 @@ def unglue(ln):
 def socials(found, idx):
     """Links from the parish site first, then Wikidata for platforms the site didn't link."""
     out, seen = [], set()
-    for u in (found or []) + WSOC.get(str(idx), []):
+    for u in [u for u in found or [] if SOC_USE[u.rstrip('/').lower()] <= 2] + WSOC.get(str(idx), []):
         plat = re.sub(r'^(www|m|web|mobile)\.', '', u.split('/')[2].lower()).replace('twitter.com', 'x.com').replace('youtu.be', 'youtube.com')
         plat = plat.split('.')[-2] if plat.count('.') else plat
         if plat not in seen:
@@ -82,10 +86,13 @@ for k, j, r, added in records():
             x['p'], x['src'] = old[2], old[3] if len(old) > 3 else ''
             stats['staff_kept'] += 1
         if not x.get('mt') and not x.get('ct') and len(old) > 4 and (old[4] or (len(old) > 5 and old[5])):
-            x['mt'], x['ct'], x['msrc'] = [unglue(l) for l in old[4]], [unglue(l) for l in (old[5] if len(old) > 5 else [])], old[6] if len(old) > 6 else ''
+            keep = lambda ls: [unglue(l) for l in ls if not (OTHER.search(l) and not (MASS.search(l.split(': ', 1)[-1]) or CONF.search(l)))]  # parser rules added since
+            x['mt'], x['ct'], x['msrc'] = keep(old[4]), keep(old[5] if len(old) > 5 else []), old[6] if len(old) > 6 else ''
             stats['times_kept'] += 1
         if not x.get('so') and len(old) > 7 and old[7]:
             x['so'] = old[7]
+        if not x.get('img') and len(old) > 8 and old[8]:
+            x['img'] = old[8]
     if o.get('mass') or o.get('confession'):
         # hand-entered times for parishes whose sites turn crawlers away
         x = dict(x or {'s': 'unknown'}, mt=o.get('mass', []), ct=o.get('confession', []), msrc=o.get('times_source', u))
@@ -120,8 +127,10 @@ for k, j, r, added in records():
         stats['with_language'] += any(x[3] for x in sl)
     so = socials(x.get('so'), k * 2000 + j)
     stats['with_social'] += bool(so)
-    if code == 3 or new or staff or mass or conf or so:
-        e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', ''), so]
+    img = x.get('img', '') if code != 3 and IMG_USE[x.get('img')] <= 2 else ''
+    stats['with_photo_url'] += bool(img)
+    if code == 3 or new or staff or mass or conf or so or img:
+        e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', ''), so, img]
         while e and not e[-1] and len(e) > 2:
             e.pop()
         out[j] = e
