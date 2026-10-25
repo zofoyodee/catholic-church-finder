@@ -542,8 +542,8 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   </div>
   <div class="modes" role="tablist" aria-label="What the globe shows" data-i18n-attr="aria-label:modesLabel">
     <button role="tab" id="modeChurches" aria-selected="true" aria-controls="map"><span aria-hidden="true">✠</span><span data-i18n="modeChurches">Churches</span></button>
-    <button role="tab" id="modeBible" aria-selected="false" aria-controls="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg><span data-i18n="modeBible">Bible Locations</span></button>
     <button role="tab" id="modeJesus" aria-selected="false" aria-controls="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 8h10"/><path d="M4 21c2.5-1.2 5-1.6 8-1.6s5.5.4 8 1.6" opacity=".6"/></svg><span data-i18n="modeJesus">Life of Jesus</span></button>
+    <button role="tab" id="modeBible" aria-selected="false" aria-controls="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg><span data-i18n="modeBible">Bible Locations</span></button>
   </div>
   <div class="search" role="search">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
@@ -2775,7 +2775,7 @@ function bibleOverview() {
   const wide = innerWidth > 640;
   map.flyTo({ center: wide ? [33, 33] : [37, 31], zoom: wide ? 3.5 : 2.6, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2200, essential: true });
 }
-const MODE_TABS = [['modeChurches', 'churches'], ['modeBible', 'bible'], ['modeJesus', 'jesus']];
+const MODE_TABS = [['modeChurches', 'churches'], ['modeJesus', 'jesus'], ['modeBible', 'bible']];
 async function setMode(m, { fly = true } = {}) {
   if (m === state.mode && (m === 'churches' || (m === 'bible' ? bible.data : life.data))) return;
   state.mode = m;
@@ -2799,7 +2799,7 @@ async function setMode(m, { fly = true } = {}) {
   for (const id of BIBLE_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'bible' ? 'visible' : 'none');
   for (const id of JESUS_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'jesus' ? 'visible' : 'none');
   if (m === 'bible') { renderBibleChips(); bibleTagline(); if (fly) bibleOverview(); }
-  else if (m === 'jesus') { renderLifeChips(); lifeTagline(); if (fly) lifeOverview(); }
+  else if (m === 'jesus') { renderLifeChips(); lifeTagline(); if (fly) { lifeOverview(); const first = lifeEvents()[0]; if (first) goEvent(first.i, { fly: false, card: true }); } }  // open on the first moment, details showing
   else { renderChips(); updateTagline(); map.once('idle', updateNames); if (fly) map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2400, essential: true }); }
 }
 $('modeChurches').addEventListener('click', () => setMode('churches'));
