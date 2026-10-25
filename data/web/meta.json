@@ -1,19 +1,22 @@
 {
- "checked": "2026-10-24",
+ "checked": "2026-10-25",
  "stats": {
-  "moved": 3495,
-  "with_mass": 14400,
-  "with_confession": 5348,
-  "with_staff": 12447,
-  "people": 32053,
-  "with_photo": 13359,
-  "dead": 14352,
+  "moved": 3478,
+  "with_mass": 16249,
+  "with_confession": 6131,
+  "with_social": 17658,
+  "with_staff": 14081,
+  "people": 35958,
+  "with_photo": 15040,
+  "dead": 14386,
   "not_checked": 6862,
-  "unknown": 10655,
-  "ok": 38674,
-  "with_pastor": 6768,
-  "with_times": 14459,
-  "with_language": 2030,
-  "with_confession_only": 520
+  "unknown": 10536,
+  "ok": 38776,
+  "with_pastor": 7614,
+  "with_times": 16354,
+  "with_language": 2348,
+  "staff_kept": 1877,
+  "times_kept": 2011,
+  "with_confession_only": 630
  }
 }

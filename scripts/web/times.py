@@ -1,7 +1,7 @@
 """Turn schedule lines ("Sunday: 8:00 AM, 10:30 AM (Spanish)") into structured slots.
 
 slot = [kind (0 Mass, 1 Confession), day mask (bit 0 = Sunday ... bit 6 = Saturday),
-        minutes after midnight, language code or '']
+        minutes after midnight, language code or '', week of the month (0 every week, 1-5, 6 last)]
 Only lines that name both a day and a time become slots.
 """
 import regex as re
@@ -39,9 +39,10 @@ LANGS = [
     ('zh', r'chinese|mandarin|cantonese|中文|華語|國語|粵語'),
     ('ht', r'haitian|creole|kr[ée]y[òo]l|cr[ée]ole'),
     ('de', r'\bgerman\b|deutsch|auf deutsch'),
-    ('en', r'\benglish\b|ingl[ée]s|in inglese|en anglais|auf englisch'),
+    ('en', r'\benglish\b|ingl[ée]s|in inglese|en anglais|auf englisch|angielsk\w*|ingl[êe]s|anglais|englisch'),
     ('ga', r'\birish\b|gaeilge'),
-    ('ar', r'arabic|[àa]rabe|syro|maronite|chaldean'),
+    ('arc', r'chaldean|aramaic|sureth|syriac|assyrian'),
+    ('ar', r'arabic|[àa]rabe|maronite'),
     ('uk', r'ukrainian|ucraniano|byzantine'),
     ('hu', r'hungarian|magyar'),
     ('hr', r'croatian|hrvatski'),
@@ -52,6 +53,10 @@ LANGS = [
     ('asl', r'\bASL\b|sign language|deaf'),
 ]
 LANG = [(c, re.compile(r, re.I)) for c, r in LANGS]
+# "First Friday", "3rd Wed", "primer viernes": once a month, not every week
+ORD = re.compile(r'\b(?:(?P<o1>1st|first|primer[oa]?s?|premier|erste[nr]?|pierwsz\w*)|(?P<o2>2nd|second|segund[oa]s?|deuxi[eè]me|zweite[nr]?)'
+                 r'|(?P<o3>3rd|third|tercer[oa]?s?|troisi[eè]me|dritte[nr]?)|(?P<o4>4th|fourth|cuart[oa]s?|quatri[eè]me|vierte[nr]?)'
+                 r'|(?P<o5>5th|fifth|quint[oa]s?)|(?P<o6>last|[úu]ltim[oa]s?|dernier|letzte[nr]?))\s+' + DAYWORD.pattern[2:], re.I)
 
 
 def days_of(text):
@@ -119,6 +124,8 @@ def slots(lines, kind):
         ts = times_of(ln)
         if not ts:
             continue
+        o = ORD.search(ln)
+        week = next(int(k[1]) for k, v in o.groupdict().items() if v and k[0] == 'o') if o else 0
         langs = [''] * len(ts)
         for c, rx in LANG:
             for m in rx.finditer(ln):
@@ -129,12 +136,13 @@ def slots(lines, kind):
                 elif m.start() < min(e for _, e in ts) or len(ts) == 1:
                     langs = [x or c for x in langs]
         for (t, _), lang in zip(ts, langs):
-            out.append([kind, mask, t, lang])
+            out.append([kind, mask, t, lang, week])
     return out
 
 
 if __name__ == '__main__':
     for s in ['Saturday Vigil: 5:00 PM', 'Sunday: 8:00 AM, 10:30 AM, 12:30 PM (Spanish)', 'Weekdays: Mon–Fri 7:00 am',
               'Lunes a Viernes: 19:00', 'Domingos: 9:00, 11:00 y 20:00', 'Domingo – 08h00 e 19h00', 'Saturday 3:30 – 4:30 pm',
-              'Sat 3 - 4 pm', 'Sunday Latin Mass 12 noon', 'Tues-Thurs 8:15am', 'Call 555-123-4567 Sunday 9am']:
+              'Sat 3 - 4 pm', 'Sunday Latin Mass 12 noon', 'Tues-Thurs 8:15am', 'Call 555-123-4567 Sunday 9am',
+              '1st Fri 6:30 PM', 'Sunday: 10:00 AM English 11:30 AM Chaldean', 'Primer viernes 19:00']:
         print(s, '->', slots([s], 0))

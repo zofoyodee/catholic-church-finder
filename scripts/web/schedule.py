@@ -20,9 +20,10 @@ DAY = re.compile(r'\b(sun|sunday|sat|saturday|mon|monday|tue|tues|tuesday|wed|we
                  r'|niedziel\w*|sobot\w*|poniedzia\w*|wtor\w*|[śs]rod\w*|czwart\w*|pi[ąa]t\w*|dni powszednie|[śs]wi[ęe]t\w*'
                  r'|zondag|zaterdag|maandag|dinsdag|woensdag|donderdag|vrijdag'
                  r'|linggo|sabado|lunes)\b', re.I)
-MASS = re.compile(r'\b(mass|masses|eucharist\w*|liturg\w*|misas?|missas?|messes?|messa|sante messe|s\. ?messe|celebra\w*|gottesdienst\w*|eucharistiefeier|hl\.? messe|msz[ae]|msze [śs]w|nabo[żz]e\w*|mis[ae] dominical|vigil)\b', re.I)
+MASS = re.compile(r'\b(mass|masses|eucharist\w*|liturg\w*|misas?|missas?|messes?|messa|sante messe|s\. ?messe|celebra\w*|gottesdienst\w*|eucharistiefeier|hl\.? messe|msz[ae]|msze [śs]w|mis[ae] dominical|vigil)\b', re.I)
 CONF = re.compile(r'\b(confessions?|reconciliation|penance|confesi[oó]n\w*|confiss\w*|confessioni|confessione|beicht\w*|spowied\w*|sacramento de la reconciliaci[oó]n|riconciliazione|biecht)\b', re.I)
-OTHER = re.compile(r'\b(office|oficina|secretar[íi]a|secretaria|ufficio|bureau|sekretariat|pfarrb[üu]ro|kancelari\w*|biuro|adoration|adoraci[oó]n|adora[çc][ãa]o|adorazione|anbetung|adoracj\w*|rosary|rosario|ros[áa]rio|chapelet|r[óo][żz]aniec|bingo|religious education|catequesis|catechesi|catequese|youth|j[óo]venes|choir|coro|meeting|reuni[oó]n|food pantry|thrift|gift shop|tienda|museum|museo|tours?|visit|horario de visita|opening hours|[öo]ffnungszeiten|apertura|ouverture|parking|bulletin deadline|novena|stations of the cross|via crucis|vespers|v[íi]speras|lauds|holy hour|hora santa|roraty|droga krzy\w*|gorzkie|nabo[żz]e[ńn]stw\w* (?:ku|majowe|czerwcowe|fatimsk)|rosarios?|ros[áa]rio|via crucis|aanbidding|anbetung|kreuzweg|chrzest|catechism\w*|catechismo|cresima|sakrament chrztu|incontro|reunión|zoom|livestream\w*|live ?stream\w*|communion service|liturgy of the word|baptism|bautismo|batismo|wedding|boda|casamento|funeral|quincea[ñn]era)\b', re.I)
+OTHER = re.compile(r'\b(devotions?|nabo[żz]e[ńn]stw\w*|office|oficina|secretar[íi]a|secretaria|ufficio|bureau|sekretariat|pfarrb[üu]ro|kancelari\w*|biuro|adoration|adoraci[oó]n|adora[çc][ãa]o|adorazione|anbetung|adoracj\w*|rosary|rosario|ros[áa]rio|chapelet|r[óo][żz]aniec|bingo|religious education|catequesis|catechesi|catequese|youth|j[óo]venes|choir|coro|meeting|reuni[oó]n|food pantry|thrift|gift shop|tienda|museum|museo|tours?|visit|horario de visita|opening hours|[öo]ffnungszeiten|apertura|ouverture|parking|bulletin deadline|novena|stations of the cross|via crucis|vespers|v[íi]speras|lauds|holy hour|hora santa|roraty|droga krzy\w*|gorzkie|nabo[żz]e[ńn]stw\w* (?:ku|majowe|czerwcowe|fatimsk)|rosarios?|ros[áa]rio|via crucis|aanbidding|anbetung|kreuzweg|chrzest|catechism\w*|catechismo|cresima|sakrament chrztu|incontro|reunión|zoom|livestream\w*|live ?stream\w*|communion service|liturgy of the word|baptism|bautismo|batismo|wedding|boda|casamento|funeral|quincea[ñn]era)\b', re.I)
+AFTER = re.compile(r'\b(followed by|before|after|then|antes de|despu[ée]s de|seguid[oa] de)\s+(the\s+|la\s+|el\s+)?(\w+\s+)?(mass|misa|messe|eucharist\w*)\b', re.I)
 INTENTION = re.compile(r'(^|\s)[+†]\s*\p{Lu}|\bintenc\w*|\bintenzion\w*|\bza \+|\bdo bo[żz]ej opatrzno', re.I)
 CHURCHY = re.compile(r'(church|parish|catholic|cat[óo]lic|catholique|cattolic|katholi|katolick|parroquia|par[óo]quia|parrocchia|paroisse|pfarr|parafi|iglesia|igreja|chiesa|[ée]glise|kirche|ko[śs]ci[óo][łl]|santuario|sanctuaire|catedral|cathedral|cattedrale|basilic|capela|capilla|cappella|chapel|chapelle|kaplica|\bmass\b|\bmisas?\b|\bmissas?\b|\bmesses?\b|\bmsz[ae]|eucharist)', re.I)
 DMONTH = re.compile(r'\b\d{1,2}\.?\s+(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre|janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[ûu]t|septembre|octobre|novembre|d[ée]cembre|januar|februar|m[äa]rz|april|juni|juli|august|september|oktober|dezember|stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|wrze[śs]nia|pa[źz]dziernika|listopada|grudnia|de \w+|janeiro|fevereiro|abril|maio|junho|julho|setembro|outubro|novembro|dezembro|januari|februari|maart|mei|augustus|oktober)\b|\b\d{1,2}\.\d{1,2}\.(\d{2,4})?(?!\d)', re.I)
@@ -46,7 +47,8 @@ def _text(el):
         elif c.name == 'br':
             out.append('\n')
         else:
-            out.append(_text(c))
+            # inline pieces laid out side by side ("<span>10:00 AM</span><span>English</span>") need a gap
+            out.append(' ' + _text(c) + ' ')
     return ''.join(out)
 
 
@@ -104,6 +106,8 @@ def extract_schedule(html, section=None):
             continue  # an event on a date or a Mass intention, not the weekly schedule
         if OTHER.search(ln) and not (MASS.search(ln) or CONF.search(ln)):
             continue
+        if AFTER.search(ln):
+            continue  # "Sodality at 4:45, followed by Mass at 6:30": the times belong to something else
         kind = 'c' if CONF.search(ln) else 'm' if MASS.search(ln) else section
         if kind not in ('m', 'c'):
             continue

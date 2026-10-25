@@ -354,6 +354,13 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .staff-src a { color: var(--gold-soft); text-underline-offset: 3px; }
 .sched { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 13.5px; }
 .sched li { padding-left: 12px; position: relative; }
+.sched-t { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+.sched-t th { text-align: left; font-weight: 600; color: var(--gold-soft); padding: 5px 12px 5px 0; vertical-align: top; white-space: nowrap; width: 1%; }
+.sched-t td { padding: 5px 0; }
+.sched-t .ts { display: flex; flex-wrap: wrap; gap: 2px 14px; }
+.sched-t tr + tr th, .sched-t tr + tr td { border-top: 1px solid var(--line); }
+.sched-t small { color: var(--ink-soft); font-size: 12px; }
+.sched-t tr.monthly { font-size: 12.5px; opacity: 0.8; }
 .sched li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.7; }
 .facts .dead { color: var(--ink-faint); }
 .facts .moved { color: var(--ink-faint); font-size: 12px; }
@@ -644,7 +651,8 @@ const EN = {
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
   confSoon: 'Confession soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
-  anyLang: 'Any language', clear: 'Clear', signLanguage: 'Sign language',
+  anyLang: 'Any language', clear: 'Clear', signLanguage: 'Sign language', aramaic: 'Aramaic',
+  everyDay: 'Every day', monthlyDay_1: '1st {day}', monthlyDay_2: '2nd {day}', monthlyDay_3: '3rd {day}', monthlyDay_4: '4th {day}', monthlyDay_5: '5th {day}', monthlyDay_6: 'Last {day}',
   timesFound_one: 'Times found for {n} church', timesFound_other: 'Times found for {n} churches',
   massLangTag_one: 'Showing <b>{n}</b> church with Mass in {lang}', massLangTag_other: 'Showing <b>{n}</b> churches with Mass in {lang}',
   massSoonTag_one: 'Showing <b>{n}</b> church with Mass in the next 2 hours', massSoonTag_other: 'Showing <b>{n}</b> churches with Mass in the next 2 hours',
@@ -900,15 +908,53 @@ function tidySched(rows) {
     .replace(/\s+/g, ' ').replace(/\s+([,.;])/g, '$1').trim())
     .filter(r => r && !seen.has(r.toLowerCase()) && seen.add(r.toLowerCase()));
 }
-function scheduleHTML(entry, checked, host) {
+// day names and clock times in the page language (2024-01-07 was a Sunday)
+const dayName = (d, width) => new Date(2024, 0, 7 + d).toLocaleDateString(i18n.locale, { weekday: width });
+const clock12 = (min) => new Date(2024, 0, 7, Math.floor(min / 60), min % 60).toLocaleTimeString(i18n.locale, { hour: 'numeric', minute: '2-digit' });
+function daysLabel(mask) {
+  const days = [0, 1, 2, 3, 4, 5, 6].filter(d => mask & (1 << d));
+  if (days.length === 1) return dayName(days[0], 'long');
+  if (mask === 127) return tr('everyDay');
+  if (days.length >= 3 && days[days.length - 1] - days[0] === days.length - 1) return `${dayName(days[0], 'short')}–${dayName(days[days.length - 1], 'short')}`;
+  return days.map(d => dayName(d, 'short')).join(', ');
+}
+// Rows like ["Sunday", [[600, 'en'], [690, 'ar']]] from the packed slots in sched.json, days with the same times merged
+function schedRows(slots, kind) {
+  const weekly = Array.from({ length: 7 }, () => new Map()), monthly = new Map();
+  for (const s of slots) {
+    if ((s & 1) !== kind) continue;
+    const mask = (s >> 1) & 127, min = (s >> 8) & 2047, lang = mf.data.langs[(s >> 19) & 31] || '', wk = (s >> 24) & 7;
+    for (let d = 0; d < 7; d++) {
+      if (!(mask & (1 << d))) continue;
+      const m = wk ? (monthly.has(wk * 8 + d) || monthly.set(wk * 8 + d, new Map()), monthly.get(wk * 8 + d)) : weekly[d];
+      if (!m.has(min) || !m.get(min)) m.set(min, lang);
+    }
+  }
+  const times = (m) => [...m].sort((a, b) => a[0] - b[0]);
+  const groups = new Map();
+  weekly.forEach((m, d) => { if (!m.size) return; const k = JSON.stringify(times(m)); groups.set(k, (groups.get(k) || 0) | (1 << d)); });
+  const rows = [...groups].map(([k, mask]) => [mask, daysLabel(mask), JSON.parse(k), false])
+    .sort((a, b) => Math.log2(a[0] & -a[0]) - Math.log2(b[0] & -b[0]));
+  for (const [key, m] of [...monthly].sort((a, b) => a[0] - b[0])) rows.push([0, tr('monthlyDay_' + (key >> 3), { day: dayName(key & 7, 'long') }), times(m), true]);
+  return rows;
+}
+function scheduleHTML(entry, checked, host, slots) {
   const mass = (entry && entry[4]) || [], conf = (entry && entry[5]) || [], src = entry && entry[6];
   if (!mass.length && !conf.length) return '';
   const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(i18n.locale, { month: 'short', year: 'numeric' }) : '';
+  const table = (kind) => {
+    const rows = slots && mf.data ? schedRows(slots.slice(1), kind) : [];
+    if (!rows.length) return '';
+    return `<table class="sched-t">${rows.map(([, label, ts, monthly]) => `<tr${monthly ? ' class="monthly"' : ''}><th>${esc(label)}</th><td><div class="ts">${
+      ts.map(([min, lang]) => `<span class="t">${clock12(min)}${lang ? ` <small>${esc(massLangName(lang))}</small>` : ''}</span>`).join('')}</div></td></tr>`).join('')}</table>`;
+  };
+  // lines the times parser could not read stay as cleaned-up text
   const list = (rows) => `<ul class="sched">${tidySched(rows).map(r => {  // the parish's own wording, not translated
-    const m = r.match(/^([^:]{2,28}):\\s+(.+)$/);  // "Sunday: 10:00 AM" -> bold day label
-    return `<li>${m && !/\\d:?$/.test(m[1]) ? `<b>${esc(m[1])}</b> ${esc(m[2])}` : esc(r)}</li>`;
+    const m = r.match(/^([^:]{2,28}):\s+(.+)$/);  // "Sunday: 10:00 AM" -> bold day label
+    return `<li>${m && !/\d:?$/.test(m[1]) ? `<b>${esc(m[1])}</b> ${esc(m[2])}` : esc(r)}</li>`;
   }).join('')}</ul>`;
-  return `<div class="sect">${mass.length ? `<h3>${esc(tr('massTimes'))}</h3>${list(mass)}` : ''}${conf.length ? `<h3${mass.length ? ' style="margin-top:14px"' : ''}>${esc(tr('confession'))}</h3>${list(conf)}` : ''}
+  const mHTML = mass.length ? table(0) || list(mass) : '', cHTML = conf.length ? table(1) || list(conf) : '';
+  return `<div class="sect">${mHTML ? `<h3>${esc(tr('massTimes'))}</h3>${mHTML}` : ''}${cHTML ? `<h3${mHTML ? ' style="margin-top:14px"' : ''}>${esc(tr('confession'))}</h3>${cHTML}` : ''}
     <p class="staff-src">${tr('schedSrc', { src: `<a href="${esc(src)}" target="_blank" rel="noopener">${esc(host(src))}</a>`, checked: when ? esc(tr('checkedOn', { date: when })) : '' })}</p></div>`;
 }
 function staffHTML(entry, checked, webUrl, host) {
@@ -929,17 +975,17 @@ function staffHTML(entry, checked, webUrl, host) {
 }
 
 /* ---------- Mass filters: "Mass soon", "Confession soon" and Mass language, from data/web/sched.json ---------- */
-// Each church: [time zone index, slot...]; slot = kind (0 Mass, 1 Confession) | day mask << 1 (bit 0 = Sunday) | minutes << 8 | language << 19
+// Each church: [time zone index, slot...]; slot = kind (0 Mass, 1 Confession) | day mask << 1 (bit 0 = Sunday) | minutes << 8 | language << 19 | week of month << 24 (0 every week, 6 last)
 // language names come from the browser in the page language
-const massLangName = (c) => (c === 'asl' ? tr('signLanguage') : langName(c));
+const massLangName = (c) => (c === 'asl' ? tr('signLanguage') : c === 'arc' ? tr('aramaic') : langName(c));  // browsers don't all name Aramaic
 const SOON_MIN = 120;
 const mf = { data: null, mode: '', lang: '', timer: 0, fmts: new Map() };
 function localNow(tz) {
   let f = mf.fmts.get(tz);
-  if (!f) { try { f = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }); } catch (e) { f = null; } mf.fmts.set(tz, f); }
+  if (!f) { try { f = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }); } catch (e) { f = null; } mf.fmts.set(tz, f); }
   if (!f) return null;
   const p = Object.fromEntries(f.formatToParts(new Date()).map(x => [x.type, x.value]));
-  return { day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), min: (+p.hour % 24) * 60 + +p.minute };
+  return { day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), min: (+p.hour % 24) * 60 + +p.minute, date: +p.day, last: new Date(+p.year, +p.month, 0).getDate() };
 }
 function soonSet(kind) {
   const out = new Set(), now = new Map();
@@ -950,6 +996,8 @@ function soonSet(kind) {
     for (let j = 1; j < v.length; j++) {
       const s = v[j];
       if ((s & 1) !== kind || !((s >> 1) & 127 & (1 << t.day))) continue;
+      const wk = (s >> 24) & 7;
+      if (wk && (wk === 6 ? t.date + 7 <= t.last : Math.ceil(t.date / 7) !== wk)) continue;  // "1st Friday" only on that Friday
       const d = ((s >> 8) & 2047) - t.min;
       if (d >= -10 && d <= SOON_MIN) { out.add(+k); break; }
     }
@@ -958,7 +1006,7 @@ function soonSet(kind) {
 }
 function langSet(code) {
   const li = mf.data.langs.indexOf(code), out = new Set();
-  for (const [k, v] of Object.entries(mf.data.c)) for (let j = 1; j < v.length; j++) if ((v[j] & 1) === 0 && (v[j] >> 19) === li) { out.add(+k); break; }
+  for (const [k, v] of Object.entries(mf.data.c)) for (let j = 1; j < v.length; j++) if ((v[j] & 1) === 0 && ((v[j] >> 19) & 31) === li) { out.add(+k); break; }
   return out;
 }
 function applyMassFilter(fly) {
@@ -978,7 +1026,7 @@ function applyMassFilter(fly) {
 }
 function renderMassChips() {
   const langs = {};
-  for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = v[j] >> 19; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
+  for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = (v[j] >> 19) & 31; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
   const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
   const clock = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>';
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
@@ -2182,7 +2230,7 @@ async function selectChurch(i, { fly = true } = {}) {
       ${online.length || webDead ? `<dt>${esc(tr('online'))}</dt><dd class="links">${online.join('')}${
         webDead ? `<span>${tr('webDead', { site: `<s class="dead">${esc(host(listedUrl))}</s>`, a1: `<a href="${esc(webSearch)}" target="_blank" rel="noopener">`, end: '</a>' })}</span>` : ''}</dd>` : ''}
     </dl>
-    ${scheduleHTML(wentry, webInfo.checked, host)}
+    ${scheduleHTML(wentry, webInfo.checked, host, mf.data && mf.data.c[i])}
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
     <div id="cAbout"></div>
     <div class="sect">
