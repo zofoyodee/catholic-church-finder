@@ -394,5 +394,6 @@
   "loadingView": "この表示範囲の教会を探しています…",
   "loadingMore": "さらに教会を読み込んでいます…",
   "noParishSite": "小教区のウェブサイトが見つかりません",
+  "photoStreetView": "Google のストリートビュー画像。ストリートビューで開きます。",
   "photoMapillary": "Mapillary の {author} による街路写真（CC BY-SA 4.0）。Mapillary で開きます。"
 }

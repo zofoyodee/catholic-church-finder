@@ -426,5 +426,6 @@
   "loadingView": "Tražim crkve u ovom prikazu…",
   "loadingMore": "Učitavam još crkava…",
   "noParishSite": "Župna stranica nije pronađena",
+  "photoStreetView": "Slika Street Viewa s Googlea. Otvara Street View.",
   "photoMapillary": "Ulična fotografija: {author}, Mapillary, CC BY-SA 4.0. Otvara se na Mapillaryju."
 }

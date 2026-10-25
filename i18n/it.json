@@ -410,5 +410,6 @@
   "loadingView": "Cerco chiese in questa vista…",
   "loadingMore": "Carico altre chiese…",
   "noParishSite": "Nessun sito parrocchiale trovato",
+  "photoStreetView": "Immagine Street View di Google. Apre Street View.",
   "photoMapillary": "Foto stradale di {author} su Mapillary, CC BY-SA 4.0. Si apre su Mapillary."
 }
