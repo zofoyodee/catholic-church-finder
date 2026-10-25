@@ -328,5 +328,6 @@
   "jInGospels": "在福音中",
   "jShareTitle": "耶稣生平中的{name}",
   "jNoMatch": "耶稣生平中没有与“{q}”相符的地点或时刻。",
-  "jProv": "经文出处依照 New American Bible, Revised Edition（美国弥撒中使用的天主教英文译本）。顺序依照四福音的传统合参；若各福音作者记载不同或地点不确定，卡片会注明。点按出处可在美国天主教主教团（USCCB）网站上阅读。"
+  "jProv": "经文出处依照 New American Bible, Revised Edition（美国弥撒中使用的天主教英文译本）。顺序依照四福音的传统合参；若各福音作者记载不同或地点不确定，卡片会注明。点按出处可在美国天主教主教团（USCCB）网站上阅读。",
+  "startOver": "重新开始"
 }

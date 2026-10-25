@@ -362,5 +362,6 @@
   "jInGospels": "U Evanđeljima",
   "jShareTitle": "{name} u Isusovu životu",
   "jNoMatch": "Nijedno mjesto ni događaj iz Isusova života ne odgovara „{q}”.",
-  "jProv": "Navodi slijede New American Bible, Revised Edition, katolički prijevod koji se koristi na misi u SAD-u. Redoslijed slijedi tradicionalno usklađivanje četiriju Evanđelja; gdje se evanđelisti razlikuju ili je mjesto nesigurno, kartica to navodi. Dodirni navod da ga pročitaš na mrežnoj stranici USCCB-a."
+  "jProv": "Navodi slijede New American Bible, Revised Edition, katolički prijevod koji se koristi na misi u SAD-u. Redoslijed slijedi tradicionalno usklađivanje četiriju Evanđelja; gdje se evanđelisti razlikuju ili je mjesto nesigurno, kartica to navodi. Dodirni navod da ga pročitaš na mrežnoj stranici USCCB-a.",
+  "startOver": "Kreni ispočetka"
 }

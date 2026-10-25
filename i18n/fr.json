@@ -346,5 +346,6 @@
   "jInGospels": "Dans les Évangiles",
   "jShareTitle": "{name} dans la vie de Jésus",
   "jNoMatch": "Aucun lieu ni moment de la vie de Jésus ne correspond à « {q} ».",
-  "jProv": "Les références suivent la New American Bible, Revised Edition, la traduction catholique utilisée à la messe aux États-Unis. L’ordre suit une harmonie traditionnelle des quatre Évangiles ; quand les évangélistes diffèrent ou qu’un lieu est incertain, la fiche le dit. Touchez une référence pour la lire sur le site de l’USCCB."
+  "jProv": "Les références suivent la New American Bible, Revised Edition, la traduction catholique utilisée à la messe aux États-Unis. L’ordre suit une harmonie traditionnelle des quatre Évangiles ; quand les évangélistes diffèrent ou qu’un lieu est incertain, la fiche le dit. Touchez une référence pour la lire sur le site de l’USCCB.",
+  "startOver": "Recommencer"
 }
