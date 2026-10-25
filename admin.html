@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Site Stats</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2305070d'/%3E%3Cpath d='M16 5v22M10 11h12' stroke='%23e8b84a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* The owner's view of how the globe is used. Numbers come from GoatCounter's read-only API with a key kept in this browser only. */
+:root {
+  --space: #05070d; --panel: #0e1526; --panel-2: #121b30; --line: rgba(233, 228, 214, 0.12);
+  --ink: #e9e4d6; --ink-soft: #a8adbb; --ink-faint: #6f7689;
+  --gold: #e8b84a; --gold-soft: #f3d58c; --bar: #c99a35; --track: rgba(233, 228, 214, 0.06); --bad: #e7787d;
+  --font-display: "Cinzel", "Times New Roman", serif;
+  --font-ui: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: radial-gradient(1200px 600px at 70% -10%, #0c1830 0%, var(--space) 60%) fixed, var(--space); color: var(--ink); font: 14px/1.45 var(--font-ui); }
+main { max-width: 1120px; margin: 0 auto; padding: 24px 16px 64px; }
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 20px; }
+h1 { margin: 0; font: 600 26px/1.1 var(--font-display); letter-spacing: 0.06em; }
+.sub { margin: 4px 0 0; color: var(--ink-soft); }
+.sub a, .note a, .setup a { color: var(--gold-soft); }
+.ranges { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid var(--line); background: var(--panel); color: var(--ink-soft); font: 500 13px var(--font-ui); cursor: pointer; }
+.chip:hover { color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #1a1405; }
+.chip:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 2px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 12px; }
+.tile, .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+.tile { padding: 14px 16px; }
+.tile .k { color: var(--ink-soft); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+.tile .v { font: 500 30px/1.15 var(--font-data); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.tile .s { color: var(--ink-faint); font-size: 12px; margin-top: 2px; }
+.panel { padding: 16px; min-width: 0; }
+.panel h2 { margin: 0 0 2px; font: 600 15px var(--font-ui); }
+.panel .hint { margin: 0 0 12px; color: var(--ink-faint); font-size: 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; margin-top: 12px; }
+@media (max-width: 380px) { .grid { grid-template-columns: 1fr; } }
+/* daily chart */
+.chart { position: relative; height: 220px; }
+.chart svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.chart .grid-l { stroke: var(--line); stroke-width: 1; }
+.chart .ax { fill: var(--ink-faint); font: 11px var(--font-data); }
+.tip { position: absolute; pointer-events: none; background: #050912; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 12px; white-space: nowrap; transform: translate(-50%, -100%); margin-top: -8px; box-shadow: 0 6px 24px #0008; }
+.tip b { font: 500 14px var(--font-data); display: block; }
+/* ranked lists: a bar behind each row, the number in text ink beside it */
+ol.rank { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+ol.rank li { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 5px 8px; border-radius: 6px; background: var(--track); overflow: hidden; }
+ol.rank li > i { position: absolute; inset: 0 auto 0 0; background: rgba(232, 184, 74, 0.22); border-radius: 0 4px 4px 0; }
+ol.rank li > span { position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+ol.rank li > span small { color: var(--ink-faint); margin-left: 6px; }
+ol.rank li > b { position: relative; font: 500 13px var(--font-data); font-variant-numeric: tabular-nums; }
+ol.rank li.click { cursor: pointer; }
+ol.rank li.click:hover > i { background: rgba(232, 184, 74, 0.34); }
+ol.rank ol.rank { grid-column: 1 / -1; margin: 4px 0 2px 12px; }
+.more { margin-top: 8px; background: none; border: 0; color: var(--gold-soft); font: 500 13px var(--font-ui); cursor: pointer; padding: 4px 0; }
+.empty { color: var(--ink-faint); padding: 6px 0; }
+/* setup */
+.setup { max-width: 640px; margin: 8px auto 0; }
+.setup ol.steps { padding-left: 20px; margin: 8px 0 16px; color: var(--ink-soft); }
+.setup ol.steps li { margin-bottom: 6px; }
+.setup label { display: block; font-weight: 600; margin: 12px 0 4px; }
+.setup input { width: 100%; height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2); color: var(--ink); font: 14px var(--font-data); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 14px; }
+.btn { height: 38px; padding: 0 16px; border-radius: 19px; border: 1px solid var(--gold); background: var(--gold); color: #1a1405; font: 600 13px var(--font-ui); cursor: pointer; }
+.btn.ghost { background: none; color: var(--gold-soft); border-color: var(--line); }
+.err { color: var(--bad); margin-top: 10px; }
+.foot { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; margin-top: 20px; color: var(--ink-faint); font-size: 12px; }
+.foot button { background: none; border: 0; color: var(--gold-soft); font: 500 12px var(--font-ui); cursor: pointer; padding: 0; }
+.loading { color: var(--ink-faint); padding: 40px 0; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div>
+      <h1>Site Stats</h1>
+      <p class="sub">Visits and feature use on the <a href="./">Catholic Church Finder</a> globe. Visitors are counted without cookies or names.</p>
+    </div>
+    <div class="ranges" id="ranges" role="group" aria-label="Time range" hidden>
+      <button class="chip" data-d="1">Today</button>
+      <button class="chip" data-d="7">7 Days</button>
+      <button class="chip" data-d="30" aria-pressed="true">30 Days</button>
+      <button class="chip" data-d="90">90 Days</button>
+      <button class="chip" data-d="365">1 Year</button>
+    </div>
+  </header>
+
+  <section class="panel setup" id="setup" hidden>
+    <h2>Connect Your Stats</h2>
+    <p class="hint">This page reads the counts from your free GoatCounter account. Do this once on each computer or phone you want to see stats on.</p>
+    <ol class="steps">
+      <li>Sign in at <a id="gcLink" href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>.</li>
+      <li>Open <b>Settings</b>, then <b>API</b>, and choose <b>New API Key</b>.</li>
+      <li>Give it any name, tick only <b>Read statistics</b>, and save.</li>
+      <li>Copy the key and paste it below.</li>
+    </ol>
+    <label for="code">Site Code</label>
+    <input id="code" autocomplete="off" spellcheck="false" placeholder="zofo">
+    <label for="key">API Key</label>
+    <input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your read-only key">
+    <div class="row"><button class="btn" id="save">Show My Stats</button></div>
+    <p class="err" id="setupErr" hidden></p>
+    <p class="hint" style="margin-top:14px">The key is kept only in this browser. It is never put in the website's files, so nobody else who finds this page can see your numbers.</p>
+  </section>
+
+  <div id="dash" hidden>
+    <div class="tiles" id="tiles"></div>
+    <section class="panel">
+      <h2 id="dailyTitle">Visitors per Day</h2>
+      <p class="hint">Unique visitors each day. Hover or tap a bar for the count.</p>
+      <div class="chart" id="daily"></div>
+    </section>
+    <div class="grid">
+      <section class="panel"><h2>Where Visitors Are From</h2><p class="hint">Tap a country to see its states or regions.</p><div id="locations"></div></section>
+      <section class="panel"><h2>Features Used</h2><p class="hint">Tabs, Mass and Confession Near Me, search, favorites, tours and more.</p><div id="features"></div></section>
+      <section class="panel"><h2>Most-Opened Churches</h2><p class="hint">Churches whose details were opened most.</p><div id="churches"></div></section>
+      <section class="panel"><h2>Bible Places Opened</h2><p class="hint">Places opened on the Bible Locations tab.</p><div id="bible"></div></section>
+      <section class="panel"><h2>How They Found the Site</h2><p class="hint">Sites and searches that sent visitors here.</p><div id="toprefs"></div></section>
+      <section class="panel"><h2>Devices</h2><p class="hint">By screen size.</p><div id="sizes"></div></section>
+      <section class="panel"><h2>Browsers</h2><p class="hint">&nbsp;</p><div id="browsers"></div></section>
+      <section class="panel"><h2>Operating Systems</h2><p class="hint">&nbsp;</p><div id="systems"></div></section>
+      <section class="panel"><h2>Browser Languages</h2><p class="hint">The language each visitor's browser is set to.</p><div id="languages"></div></section>
+      <section class="panel"><h2>Site Languages Chosen</h2><p class="hint">When someone picks a language from the site's menu.</p><div id="sitelangs"></div></section>
+    </div>
+    <p class="err" id="dashErr" hidden></p>
+  </div>
+  <p class="loading" id="loading" hidden>Loading stats…</p>
+
+  <div class="foot" id="foot" hidden>
+    <span id="updated"></span>
+    <span><button id="skip"></button> · <a id="full" href="#" target="_blank" rel="noopener" style="color:var(--gold-soft)">Full GoatCounter Dashboard</a> · <button id="forget">Disconnect This Browser</button></span>
+  </div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } }, set: (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} } };
+const KEY = 'ccf-stats-key', CODE = 'ccf-stats-code', DEFAULT_CODE = 'zofo';
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const num = (n) => (n || 0).toLocaleString();
+let days = 30, run = 0, lastDaily = [];
+
+const code = () => store.get(CODE) || DEFAULT_CODE;
+const base = () => 'https://' + code() + '.goatcounter.com';
+
+async function api(path, q = {}) {
+  const u = new URL(base() + '/api/v0/' + path);
+  for (const [k, v] of Object.entries(q)) (Array.isArray(v) ? v : [v]).forEach((x) => u.searchParams.append(k, x));
+  for (let tries = 0; ; tries++) {
+    const res = await fetch(u, { headers: { Authorization: 'Bearer ' + store.get(KEY), 'Content-Type': 'application/json' } });
+    if (res.status === 429 && tries < 3) { await new Promise((r) => setTimeout(r, 1500 * (tries + 1))); continue; }
+    if (!res.ok) { const e = new Error(res.status === 401 || res.status === 403 ? 'key' : 'http ' + res.status); e.status = res.status; throw e; }
+    return res.json();
+  }
+}
+function range() {
+  const end = new Date(); end.setUTCMinutes(0, 0, 0); end.setUTCHours(end.getUTCHours() + 1);
+  const start = new Date(); start.setHours(0, 0, 0, 0); start.setDate(start.getDate() - (days - 1)); start.setUTCMinutes(0, 0, 0);
+  return { start: start.toISOString().replace(/\.\d+Z$/, 'Z'), end: end.toISOString().replace(/\.\d+Z$/, 'Z') };
+}
+
+/* ---------- names for what the globe counts (see track() in index.html) ---------- */
+const FEATURE = {
+  'tab/churches': 'Churches Tab', 'tab/jesus': 'Life of Jesus Tab', 'tab/bible': 'Bible Locations Tab',
+  'mass-near-me': 'Mass Near Me', 'confession-near-me': 'Confession Near Me', 'churches-near-me': 'Churches Near Me',
+  'search': 'Search Result Picked', 'favorite-added': 'Favorite Added', 'favorite-removed': 'Favorite Removed',
+  'life-of-jesus-play': 'Life of Jesus Play', 'directions': 'Directions', 'parish-website': 'Parish Website',
+};
+const cap = (s) => s.replace(/(^|[\s-])(\w)/g, (m, a, b) => a + b.toUpperCase());
+function featureName(p) {
+  if (FEATURE[p]) return FEATURE[p];
+  const [head, ...rest] = p.split('/'), tail = rest.join('/');
+  if (head === 'mass-in-language') return 'Mass in a Language <small>' + esc(langName(tail)) + '</small>';
+  if (head === 'theme') return 'Theme <small>' + esc(cap(tail)) + '</small>';
+  if (head === 'tour') return 'Tour <small>' + esc(cap(tail.replace(/[-_]/g, ' '))) + '</small>';
+  if (head === 'link') return 'Link Opened <small>' + esc(tail) + '</small>';
+  return esc(p);
+}
+const langNames = typeof Intl.DisplayNames === 'function' ? new Intl.DisplayNames(['en'], { type: 'language' }) : null;
+const langName = (c) => { try { return (c && langNames && langNames.of(c)) || c || 'Unknown'; } catch (e) { return c; } };
+
+/* ---------- drawing ---------- */
+function rank(el, rows, { limit = 10, click } = {}) {
+  rows = [...rows].sort((a, b) => b.count - a.count);
+  if (!rows.length) { el.innerHTML = '<p class="empty">Nothing yet for this time range.</p>'; return; }
+  const max = Math.max(...rows.map((r) => r.count), 1);
+  let shown = Math.min(limit, rows.length);
+  const draw = () => {
+    el.innerHTML = '<ol class="rank">' + rows.slice(0, shown).map((r, k) =>
+      `<li${click ? ` class="click" data-k="${k}" tabindex="0" role="button" aria-expanded="false"` : ''}><i style="width:${(100 * r.count / max).toFixed(1)}%"></i><span title="${esc(r.tip || '')}">${r.html}</span><b>${num(r.count)}</b></li>`).join('') + '</ol>' +
+      (rows.length > shown ? `<button class="more">Show All ${num(rows.length)}</button>` : '');
+    const more = el.querySelector('.more'); if (more) more.onclick = () => { shown = rows.length; draw(); };
+    if (click) el.querySelectorAll('li.click').forEach((li) => {
+      const go = async () => {
+        const open = li.querySelector('ol'); if (open) { open.remove(); li.setAttribute('aria-expanded', 'false'); return; }
+        li.setAttribute('aria-expanded', 'true');
+        const sub = document.createElement('ol'); sub.className = 'rank'; sub.innerHTML = '<li><span class="empty">Loading…</span><b></b></li>'; li.appendChild(sub);
+        try { const kids = await click(rows[+li.dataset.k]); const m = Math.max(...kids.map((r) => r.count), 1);
+          sub.innerHTML = kids.length ? kids.map((r) => `<li><i style="width:${(100 * r.count / m).toFixed(1)}%"></i><span>${r.html}</span><b>${num(r.count)}</b></li>`).join('') : '<li><span class="empty">No regions recorded.</span><b></b></li>';
+        } catch (e) { sub.innerHTML = '<li><span class="empty">Could not load regions.</span><b></b></li>'; }
+      };
+      li.onclick = (e) => { if (!e.target.closest('ol ol')) go(); };
+      li.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } };
+    });
+  };
+  draw();
+}
+
+function daily(stats) {
+  const el = $('daily');
+  const pts = stats.map((s) => ({ day: s.day, n: s.daily || 0 }));
+  if (!pts.length) { el.innerHTML = '<p class="empty">Nothing yet for this time range.</p>'; return; }
+  const W = Math.max(el.clientWidth, 280), H = el.clientHeight, L = 36, B = 22, T = 6;
+  const max = Math.max(...pts.map((p) => p.n), 1), step = niceStep(max), top = Math.ceil(max / step) * step || 1;
+  const bw = (W - L) / pts.length, gap = Math.min(2, bw * 0.25), y = (v) => T + (H - T - B) * (1 - v / top);
+  let g = '';
+  for (let v = 0; v <= top; v += step) g += `<line class="grid-l" x1="${L}" x2="${W}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${num(v)}</text>`;
+  const every = Math.ceil(pts.length / Math.max(2, Math.floor((W - L) / 70)));
+  const label = (d) => new Date(d + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+  const bars = pts.map((p, k) => {
+    const x = L + k * bw + gap / 2, w = Math.max(1, bw - gap), h = y(0) - y(p.n), r = Math.min(4, w / 2, h);
+    // rounded data end, square at the baseline
+    const d = h <= 0 ? '' : `M${x},${y(0)}V${y(p.n) + r}Q${x},${y(p.n)} ${x + r},${y(p.n)}H${x + w - r}Q${x + w},${y(p.n)} ${x + w},${y(p.n) + r}V${y(0)}Z`;
+    return `<path class="b" data-k="${k}" d="${d}" fill="var(--bar)"/>` + (k % every === 0 ? `<text class="ax" x="${x + w / 2}" y="${H - 6}" text-anchor="middle">${label(p.day)}</text>` : '');
+  }).join('');
+  const hits = pts.map((p, k) => `<rect data-k="${k}" x="${L + k * bw}" y="${T}" width="${bw}" height="${H - T - B}" fill="transparent"/>`).join('');
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Visitors per day">${g}${bars}${hits}</svg><div class="tip" hidden></div>`;
+  const tip = el.querySelector('.tip'), svg = el.querySelector('svg');
+  const show = (k) => {
+    svg.querySelectorAll('path.b').forEach((b) => b.setAttribute('fill', +b.dataset.k === k ? 'var(--gold-soft)' : 'var(--bar)'));
+    if (k < 0) { tip.hidden = true; return; }
+    const p = pts[k]; tip.hidden = false;
+    tip.innerHTML = `<b>${num(p.n)}</b>${new Date(p.day + 'T12:00:00').toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}`;
+    tip.style.left = Math.min(Math.max(L + (k + 0.5) * bw, 60), W - 60) + 'px'; tip.style.top = y(p.n) + 'px';
+  };
+  svg.addEventListener('pointermove', (e) => { const r = e.target.closest('[data-k]'); show(r ? +r.dataset.k : -1); });
+  svg.addEventListener('pointerleave', () => show(-1));
+}
+function niceStep(max) { const raw = max / 4, mag = Math.pow(10, Math.floor(Math.log10(raw || 1))); return [1, 2, 5, 10].map((m) => m * mag).find((s) => s >= raw) || 1; }
+
+function tiles(total, stats, events) {
+  const busiest = stats.reduce((a, s) => ((s.daily || 0) > (a ? a.daily : -1) ? s : a), null);
+  const avg = stats.length ? total.total / stats.length : 0;
+  const t = [
+    ['Visitors', num(total.total), days === 1 ? 'today' : `in the last ${days} days`],
+    ['Daily Average', num(Math.round(avg)), 'visitors a day'],
+    ['Busiest Day', busiest && busiest.daily ? num(busiest.daily) : '0', busiest && busiest.daily ? new Date(busiest.day + 'T12:00:00').toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) : '—'],
+    ['Feature Uses', num(events), 'buttons, tabs and churches opened'],
+  ];
+  $('tiles').innerHTML = t.map(([k, v, s]) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${esc(s)}</div></div>`).join('');
+}
+
+/* ---------- loading ---------- */
+async function allHits(r) {
+  const out = [];
+  for (let page = 0; page < 5; page++) {
+    const j = await api('stats/hits', { ...r, limit: 100, exclude_paths: out.map((h) => h.path_id) });
+    out.push(...(j.hits || []));
+    if (!j.more) break;
+  }
+  return out;
+}
+const fromStats = (j, name = (s) => esc(s.name || 'Unknown')) => (j.stats || []).map((s) => ({ ...s, html: name(s) }));
+
+async function load() {
+  const my = ++run, r = range();
+  $('loading').hidden = false; $('dashErr').hidden = true;
+  try {
+    const [total, hits] = await Promise.all([api('stats/total', r), allHits(r)]);
+    if (my !== run) return;
+    const lists = {};
+    for (const page of ['locations', 'toprefs', 'sizes', 'browsers', 'systems', 'languages']) lists[page] = await api('stats/' + page, { ...r, limit: 100 });
+    if (my !== run) return;
+    const ev = hits.filter((h) => h.event), byPrefix = (p) => ev.filter((h) => h.path.startsWith(p));
+    $('dash').hidden = false; $('foot').hidden = false; $('ranges').hidden = false; $('setup').hidden = true;  // shown first so the chart can measure itself
+    tiles(total, total.stats || [], ev.reduce((a, h) => a + h.count, 0));
+    $('dailyTitle').textContent = days === 1 ? 'Visitors Today' : 'Visitors per Day';
+    lastDaily = total.stats || []; daily(lastDaily);
+    rank($('locations'), fromStats(lists.locations), { click: async (row) => fromStats(await api('stats/locations/' + encodeURIComponent(row.id), { ...r, limit: 100 })) });
+    rank($('features'), ev.filter((h) => !/^(church|bible-place|language)\//.test(h.path)).map((h) => ({ count: h.count, html: featureName(h.path), tip: h.path })));
+    rank($('churches'), byPrefix('church/').map((h) => ({ count: h.count, html: esc(h.path.slice(7)) + (h.title && h.title.split(' · ')[2] ? `<small>${esc(h.title.split(' · ')[2])}</small>` : ''), tip: h.title })));
+    rank($('bible'), byPrefix('bible-place/').map((h) => ({ count: h.count, html: esc(h.path.slice(12)) })));
+    rank($('sitelangs'), byPrefix('language/').map((h) => ({ count: h.count, html: esc(langName(h.path.slice(9))) })));
+    rank($('toprefs'), fromStats(lists.toprefs, (s) => esc(s.name || '(direct or unknown)')));
+    rank($('sizes'), fromStats(lists.sizes));
+    rank($('browsers'), fromStats(lists.browsers));
+    rank($('systems'), fromStats(lists.systems));
+    rank($('languages'), fromStats(lists.languages));
+    $('updated').textContent = 'Updated ' + new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+  } catch (e) {
+    if (my !== run) return;
+    if (e.message === 'key') { store.set(KEY, ''); showSetup('That key was not accepted. Check that it has "Read statistics" ticked and that the site code is right.'); }
+    else if ($('dash').hidden) showSetup('Could not reach GoatCounter. Check the site code and your connection, then try again.');
+    else { $('dashErr').textContent = 'Could not refresh the stats. Try again in a minute.'; $('dashErr').hidden = false; }
+  } finally { if (my === run) $('loading').hidden = true; }
+}
+
+function showSetup(msg) {
+  $('dash').hidden = true; $('foot').hidden = true; $('ranges').hidden = true; $('setup').hidden = false;
+  $('code').value = store.get(CODE) || DEFAULT_CODE;
+  $('gcLink').href = base() + '/user/api';
+  $('setupErr').textContent = msg || ''; $('setupErr').hidden = !msg;
+}
+$('save').onclick = () => {
+  const c = $('code').value.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\.goatcounter\.com.*$/, ''), k = $('key').value.trim();
+  if (!/^[a-z0-9-]+$/.test(c)) { showSetup('The site code is the first part of your GoatCounter address, such as zofo.'); return; }
+  if (!k) { showSetup('Paste your API key first.'); return; }
+  store.set(CODE, c === DEFAULT_CODE ? '' : c); store.set(KEY, k); $('key').value = ''; $('setupErr').hidden = true;
+  $('full').href = base() + '/'; load();
+};
+$('key').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('save').click(); });
+$('forget').onclick = () => { store.set(KEY, ''); showSetup(); };
+$('ranges').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-d]'); if (!b) return;
+  days = +b.dataset.d; $('ranges').querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b)); load();
+});
+// GoatCounter's own switch for leaving the owner's visits out of the counts (read by its count.js on the globe)
+function skipLabel() { $('skip').textContent = store.get('skipgc') === 't' ? 'This Browser Is Not Counted (Count It)' : "Don't Count My Visits"; }
+$('skip').onclick = () => { store.set('skipgc', store.get('skipgc') === 't' ? '' : 't'); skipLabel(); };
+skipLabel();
+let resized; addEventListener('resize', () => { clearTimeout(resized); resized = setTimeout(() => { if (!$('dash').hidden) daily(lastDaily); }, 200); });
+
+$('full').href = base() + '/';
+if (store.get(KEY)) load(); else showSetup();
+</script>
+</body>
+</html>
