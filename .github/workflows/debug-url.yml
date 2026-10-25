@@ -10,7 +10,7 @@ jobs:
   debug:
     runs-on: ubuntu-latest
     env:
-      DEBUG_URLS: https://fatimachurchabq.org/
+      DEBUG_URLS: http://www.popabq.org/
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,6 +36,6 @@ jobs:
                       for l in schedule_links(html, final):
                           st2, f2, h2, e2 = await c.get(l)
                           print('PAGE', l, st2, e2, len(h2), extract_schedule(h2, 'm'))
-                      print('RESULT', json.dumps(await c.check(u, 'Our Lady of Fatima', False), ensure_ascii=False)[:3000])
+                      print('RESULT', json.dumps(await c.check(u, 'Prince of Peace Catholic Church', False), ensure_ascii=False)[:3000])
           asyncio.run(main())
           PY

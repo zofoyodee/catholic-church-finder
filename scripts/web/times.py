@@ -51,12 +51,42 @@ LANGS = [
     ('ml', r'malayalam|syro-malabar|syro malabar'),
     ('ta', r'\btamil\b'),
     ('asl', r'\bASL\b|sign language|deaf'),
+    ('nl', r'\bdutch\b|nederlands\w*|in het nederlands'),
 ]
 LANG = [(c, re.compile(r, re.I)) for c, r in LANGS]
 # "First Friday", "3rd Wed", "primer viernes": once a month, not every week
 ORD = re.compile(r'\b(?:(?P<o1>1st|first|primer[oa]?s?|premier|erste[nr]?|pierwsz\w*)|(?P<o2>2nd|second|segund[oa]s?|deuxi[eè]me|zweite[nr]?)'
                  r'|(?P<o3>3rd|third|tercer[oa]?s?|troisi[eè]me|dritte[nr]?)|(?P<o4>4th|fourth|cuart[oa]s?|quatri[eè]me|vierte[nr]?)'
                  r'|(?P<o5>5th|fifth|quint[oa]s?)|(?P<o6>last|[úu]ltim[oa]s?|dernier|letzte[nr]?))\s+' + DAYWORD.pattern[2:], re.I)
+
+
+# the language a schedule is written in, from its day words: an unlabeled Mass on an
+# Italian page ("Domenica: 10.00") is said in Italian
+PAGE_LANG = [(c, re.compile(r, re.I)) for c, r in [
+    ('en', r'\b(sunday|monday|tuesday|wednesday|thursday|friday|saturday|weekdays?)\b'),
+    ('es', r'\b(domingos?|lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bados?)\b'),
+    ('pt', r'\b(domingos?|segunda|ter[çc]a|quarta|quinta|sexta)(-feira)?\b|\bs[áa]bados?\b'),
+    ('it', r'\b(domenica|luned[ìi]|marted[ìi]|mercoled[ìi]|gioved[ìi]|venerd[ìi]|sabato|feriali|festivi|prefestiv\w*)\b'),
+    ('fr', r'\b(dimanches?|lundi|mardi|mercredi|jeudi|vendredi|samedis?|en semaine)\b'),
+    ('de', r'\b(sonntags?|montags?|dienstags?|mittwochs?|donnerstags?|freitags?|samstags?|werktags?|vorabend)\b'),
+    ('pl', r'\b(niedziel\w*|poniedzia\w*|wtor\w*|[śs]rod\w*|czwart\w*|pi[ąa]t\w*|sobot\w*|dni powszednie)\b'),
+    ('nl', r'\b(zondag|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag)\b'),
+]]
+# words shared by two languages: a Portuguese page also matches "domingo", a Spanish one "sábado"
+_ONLY = {'pt': re.compile(r'\b(segunda|ter[çc]a|quarta|quinta|sexta)(-feira)?\b', re.I),
+         'es': re.compile(r'\b(lunes|martes|mi[ée]rcoles|jueves|viernes)\b', re.I)}
+
+
+def page_lang(lines):
+    """The language most of the schedule's day words are in, or '' when unclear."""
+    text = ' '.join(lines)
+    n = {c: len(rx.findall(text)) for c, rx in PAGE_LANG}
+    if n['pt'] and n['es']:  # domingo / sábado are shared: decide on the words only one has
+        pt, es = len(_ONLY['pt'].findall(text)), len(_ONLY['es'].findall(text))
+        n['es' if pt > es else 'pt'] = 0  # a tie goes to Spanish, the more common
+    best = max(n, key=n.get)
+    total = sum(n.values())
+    return best if n[best] and n[best] >= 0.7 * total else ''
 
 
 def days_of(text):
@@ -115,7 +145,8 @@ def times_of(text):
     return [(x, e) for x, e in out if 300 <= x <= 23 * 60]  # 5:00 to 23:00
 
 
-def slots(lines, kind):
+def slots(lines, kind, default=''):
+    """default: the language for times the page doesn't label; such slots get lang '~xx' (inferred)."""
     out = []
     for ln in lines:
         mask = days_of(ln)
@@ -136,7 +167,7 @@ def slots(lines, kind):
                 elif m.start() < min(e for _, e in ts) or len(ts) == 1:
                     langs = [x or c for x in langs]
         for (t, _), lang in zip(ts, langs):
-            out.append([kind, mask, t, lang, week])
+            out.append([kind, mask, t, lang or ('~' + default if default else ''), week])
     return out
 
 
