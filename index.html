@@ -1040,7 +1040,8 @@ function schedRows(slots, kind) {
   const weekly = Array.from({ length: 7 }, () => new Map()), monthly = new Map();
   for (const s of slots) {
     if ((s & 1) !== kind) continue;
-    const mask = (s >> 1) & 127, min = (s >> 8) & 2047, lang = mf.data.langs[(s >> 19) & 31] || '', wk = (s >> 24) & 7;
+    const mask = (s >> 1) & 127, min = (s >> 8) & 2047, wk = (s >> 24) & 7;
+    const lang = s & (1 << 27) ? '' : mf.data.langs[(s >> 19) & 31] || '';  // a language guessed from the page's wording isn't printed
     for (let d = 0; d < 7; d++) {
       if (!(mask & (1 << d))) continue;
       const m = wk ? (monthly.has(wk * 8 + d) || monthly.set(wk * 8 + d, new Map()), monthly.get(wk * 8 + d)) : weekly[d];

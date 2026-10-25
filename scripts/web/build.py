@@ -31,7 +31,7 @@ stats = collections.Counter()
 sys.path.insert(0, os.path.dirname(__file__))
 from crawl import records
 from schedule import OTHER, MASS, CONF
-from times import slots, LANGS
+from times import slots, LANGS, page_lang
 from tz import tz_of
 import base64, struct
 
@@ -83,7 +83,7 @@ for k, j, r, added in records():
     x = res.get(u)
     o = OV.get(str(k * 2000 + j), {})
     old = PREV.get(k * 2000 + j)
-    if not x and old and len(old) > 2:
+    if not x and old:
         x = {'s': {1: 'ok', 2: 'moved', 3: 'dead'}.get(old[0], 'unknown'), 'u': old[1]}  # this run didn't reach it
         stats['entry_kept'] += 1
     if x and old and x['s'] != 'dead' and not (o.get('web') and o['web'] != u):
@@ -134,15 +134,18 @@ for k, j, r, added in records():
         stats['with_confession'] += bool(conf)
     if any(p[3] in ('Pastor', 'Administrator', 'Rector') for p in staff):
         stats['with_pastor'] += 1
-    sl = slots(mass, 0) + slots(conf, 1)
+    pl = page_lang(mass + conf)
+    sl = slots(mass, 0, pl) + slots(conf, 1, pl)
     if sl:
         # one int per slot: kind | day mask << 1 | minutes << 8 | language << 19 | week of month << 24
+        # | 1 << 27 when the language is inferred from the page's wording rather than stated
         i = k * 2000 + j
         tz = tz_of(r[5], LON[i] / 1e6, LAT[i] / 1e6)
         tzi = TZ.setdefault(tz, len(TZ))
-        sched[i] = [tzi] + sorted({kd | m << 1 | t << 8 | (LANG_IDX[lg] if lg else 0) << 19 | wk << 24 for kd, m, t, lg, wk in sl})
+        sched[i] = [tzi] + sorted({kd | m << 1 | t << 8 | (LANG_IDX[lg.lstrip('~')] if lg else 0) << 19 | wk << 24 | (lg[:1] == '~') << 27 for kd, m, t, lg, wk in sl})
         stats['with_times'] += 1
-        stats['with_language'] += any(x[3] for x in sl)
+        stats['with_language'] += any(x[3] and x[3][0] != '~' for x in sl)
+        stats['with_inferred_language'] += any(x[3][:1] == '~' for x in sl)
     so = socials(x.get('so'), k * 2000 + j)
     stats['with_social'] += bool(so)
     img = x.get('img', '') if code != 3 and IMG_USE[x.get('img')] <= 2 else ''
