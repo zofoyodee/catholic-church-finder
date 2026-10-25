@@ -38,6 +38,12 @@ import base64, struct
 shards = collections.defaultdict(dict)
 # a picture or account linked from several parish sites is a template, diocese or Vatican one, not this church's
 IMG_USE = collections.Counter(x.get('img') for x in res.values() if x.get('img'))
+# a working address on each site, so a dead or unchecked page on a site that works can point there
+OKHOST = {}
+for url0, x0 in res.items():
+    if x0.get('s') == 'ok':
+        f0 = x0.get('u') or url0
+        OKHOST.setdefault(re.sub(r'^www\.', '', f0.split('/')[2].lower()), f0)
 SOC_USE = collections.Counter(u.rstrip('/').lower() for x in res.values() for u in x.get('so') or [])
 sched = {}
 TZ = {}
@@ -99,12 +105,24 @@ for k, j, r, added in records():
     if not x:
         stats['not_checked'] += 1
         so = socials([], k * 2000 + j)
+        if added and not o.get('web'):
+            # a website Wikidata suggested but nobody checked: only show it if the same site works elsewhere
+            ok = OKHOST.get(re.sub(r'^www\.', '', u.split('/')[2].lower()))
+            u, added = (ok, True) if ok else ('', False)
         if added or so:
             out[j] = [0, u if added else '', [], '', [], [], '', so] if so else [0, u]
         continue
     stats[x['s']] += 1
     code = CODE.get(x['s'], 0)
     new = x.get('u', '') or (u if added else '')
+    if code in (0, 3) and (code == 3 or (added and not o.get('web'))):
+        ok = OKHOST.get(re.sub(r'^www\.', '', u.split('/')[2].lower()))
+        if ok:
+            code, new = 2, ok  # this page is gone or unreachable, but the same site answers at another address
+            stats['pointed_to_working_page'] += 1
+        elif code == 0:
+            new = ''  # an unverified Wikidata suggestion: leave it out rather than show a link that may be broken
+            stats['unverified_dropped'] += 1
     staff = x.get('p') or []
     if staff:
         stats['with_staff'] += 1
