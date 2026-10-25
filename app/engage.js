@@ -165,7 +165,7 @@ async function fillToday() {
   const s = today.saint;
   const why = cotd.why === 'feast' && s ? T('whyFeast') : cotd.why === 'named' && s ? T(s.rank === 'S' || s.rank === 'F' ? 'whyNamedFeast' : 'whyNamedSaint') : T('whyFeatured');
   el.innerHTML = `<button class="x" id="todayClose" aria-label="${esc(T('todayClose'))}">${X}</button>
-    <div class="kick"><b>${esc(date)}</b> · ${esc(today.season ? seasonName(today.season) : T('today'))}</div>
+    <div class="kick"><b>${esc(date)}</b> · ${esc(today.season ? seasonName(today.season) : T('todayWord'))}</div>
     <div class="saint"><div class="pic"><div class="ph" aria-hidden="true">✠</div></div>
       <div><h2>${esc(s ? s.title : today.title)}</h2><div class="rank">${esc(s ? rankName(s.rank) + (s.title !== today.title && today.title && !(s.rank === 'S' || s.rank === 'F') ? ' · ' + today.title : '') : '')}</div></div></div>
     <button class="cotd" id="cotdGo"><small>${esc(T('cotd'))} · ${esc(why)}</small><b>${esc(name)}</b><span>${esc(where)}</span></button>

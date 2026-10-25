@@ -190,11 +190,13 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .foot .coords { font-family: var(--font-data); font-variant-numeric: tabular-nums; margin-left: auto; }
 
 /* favorites */
-.ctrls button.fav-open { position: relative; }
+.ctrls button.fav-open { position: relative; animation: pop .45s cubic-bezier(.3,1.6,.5,1); }
+.ctrls button[hidden] { display: none; }
+@keyframes pop { from { transform: scale(.3); opacity: 0; } }
 .ctrls .count { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--gold); color: #1a1406; font-size: 11px; font-weight: 600; line-height: 18px; text-align: center; font-variant-numeric: tabular-nums; }
 .ctrls .count:empty { display: none; }
 .favs {
-  position: fixed; z-index: 9; left: max(16px, env(safe-area-inset-left, 0px)); top: 132px; max-height: calc(100% - 190px); width: 320px;
+  position: fixed; z-index: 9; left: max(16px, env(safe-area-inset-left, 0px)); top: calc(var(--head, 120px) + 12px); max-height: calc(100% - var(--head, 120px) - 70px); width: 320px;
   display: flex; flex-direction: column; background: var(--panel-solid); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 48px #000a;
   transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
 }
@@ -479,12 +481,12 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 
 <div class="ctrls">
   <button id="nearBtn" aria-expanded="false" aria-controls="near" title="Churches near me" aria-label="Churches near me" data-i18n-attr="title:nearMe;aria-label:nearMe"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/></svg></button>
-  <button id="favOpen" class="fav-open" aria-expanded="false" aria-controls="favs" title="Your favorite churches" aria-label="Your favorite churches" data-i18n-attr="title:yourFavs;aria-label:yourFavs"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span class="count" id="favCount"></span></button>
   <button id="spin" aria-pressed="false" title="Spin the globe" aria-label="Spin the globe" data-i18n-attr="title:spin;aria-label:spin"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
   <button id="zin" title="Zoom in" aria-label="Zoom in" data-i18n-attr="title:zoomIn;aria-label:zoomIn"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
   <button id="zout" title="Zoom out" aria-label="Zoom out" data-i18n-attr="title:zoomOut;aria-label:zoomOut"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
   <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe" data-i18n-attr="title:home;aria-label:home"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
   <button id="rand" title="Visit a random church" aria-label="Visit a random church" data-i18n-attr="title:random;aria-label:random"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg></button>
+  <button id="favOpen" class="fav-open" hidden aria-expanded="false" aria-controls="favs" title="Your favorite churches" aria-label="Your favorite churches" data-i18n-attr="title:yourFavs;aria-label:yourFavs"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span class="count" id="favCount"></span></button>
 </div>
 
 <footer class="foot">
@@ -662,6 +664,8 @@ const EN = {
   massLangOpt_other: "{lang} · {n} churches",
   massLangTip: "Show only churches that list a Mass in this language. The number is how many churches list one.",
   massLangAria: "Show only churches with a Mass in this language",
+  massIn: 'Mass in', massLangTip2: "Filter churches by the language their Mass is said in. The number is how many churches list a Mass in that language. This does not change the language of the site.",
+  noMatchNow: 'No churches match right now',
   modesLabel: "What the globe shows",
   modeChurches: "Churches",
   modeBible: "Bible Places",
@@ -690,12 +694,33 @@ const EN = {
   bMoreIn: "More in {land}",
   bProvPlace: "References follow the New American Bible, Revised Edition, the Catholic translation used at Mass in the United States. Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read the chapter on the USCCB website.",
   bProvLand: "References follow the New American Bible, Revised Edition, which includes the deuterocanonical books (Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach, Baruch). Psalms follow its numbering (most are one number lower in the Douay-Rheims). Tap a reference to read it on the USCCB website.",
+  bg_ot: 'Old Testament', bg_deut: 'Tobit, Judith & Maccabees', bg_jesus: 'Life of Jesus', bg_church: 'Apostles & early Church',
   bModern: "Modern country",
   bAlso: "Also: {x}",
   bToday: "Today: {land}",
   bExplore: "Places to explore ({n})",
   bShareTitle: "{name} in the Bible",
   bShareLand: "{land}, once {a}",
+  // guided tours, church of the day, globe view (app/engage.js)
+  tours: 'Guided tours', toursClose: 'Close tours', toursNote: 'The globe flies from stop to stop on its own. Drag the globe to pause, or step through with the arrows.',
+  toursFailed: 'The tours did not load. Check your connection.', stops_one: '{n} stop', stops_other: '{n} stops',
+  tourGuide: 'Tour guide', tourEnd: 'End the tour', stopOf: 'Stop {k} of {n}', stopsLabel: 'Stops', stopName: 'Stop {k}: {name}',
+  tourPrev: 'Previous stop', tourPause: 'Pause the tour', tourPlay: 'Play the tour', churchDetails: 'Church details',
+  tourFinish: 'Finish', tourBegin: 'Begin', tourNext: 'Next',
+  globeView: 'Globe view',
+  view_satellite: 'Satellite imagery', view_satelliteHint: 'Cloud-free Sentinel-2 photos of the Earth. Uses more data.',
+  view_daynight: 'Day and night', view_daynightHint: 'Shades the half of the world where the sun has set.',
+  view_sky: 'Stars and atmosphere', view_skyHint: 'A starfield and a glowing halo around the globe.',
+  view_density: 'Density glow', view_densityHint: 'A soft glow where churches crowd together, when zoomed out.',
+  view_liturgical: 'Liturgical colours', view_liturgicalHint: 'Accents follow the colour of the day: green, violet, white, red or rose.',
+  todayLabel: 'Today in the Church', todayClose: "Close today's card", todayWord: 'Today',
+  whyFeast: 'Its feast is today', whyNamedFeast: "Named for today's feast", whyNamedSaint: "Named for today's saint", whyFeatured: 'Featured today',
+  cotd: 'Church of the day', visitGlobe: 'Visit on the globe', aboutSaint: 'About {name}', imgWiki: 'Image from Wikipedia: {name}',
+  rankS: 'Solemnity', rankF: 'Feast', rankM: 'Memorial', rankm: 'Optional memorial',
+  seasonAdvent: 'Advent', seasonChristmas: 'Christmas Time', seasonOrdinary: 'Ordinary Time', seasonLent: 'Lent',
+  seasonHolyWeek: 'Holy Week', seasonTriduum: 'Easter Triduum', seasonEaster: 'Easter Time',
+  ordinaryWeek: '{season} · Week {w}', seasonTip: '{title}. The liturgical colour of the day is {color}. Tap for the church of the day.',
+  color_green: 'green', color_violet: 'violet', color_rose: 'rose', color_white: 'white and gold', color_red: 'red',
   massNoteTip: "Mass and Confession times are read from parish websites, so only churches whose site lists them can be filtered",
 };
 const i18n = { code: 'en', dict: EN, locale: 'en', wiki: 'en', rtl: false };
@@ -922,7 +947,7 @@ function langSet(code) {
   for (const [k, v] of Object.entries(mf.data.c)) for (let j = 1; j < v.length; j++) if ((v[j] & 1) === 0 && (v[j] >> 19) === li) { out.add(+k); break; }
   return out;
 }
-function applyMassFilter() {
+function applyMassFilter(fly) {
   let only = null;
   if (mf.mode) only = soonSet(mf.mode === 'mass' ? 0 : 1);
   if (mf.lang) { const l = langSet(mf.lang); only = only ? new Set([...only].filter(i => l.has(i))) : l; }
@@ -935,6 +960,7 @@ function applyMassFilter() {
   clearInterval(mf.timer);
   if (mf.mode) mf.timer = setInterval(applyMassFilter, 5 * 60 * 1000);  // "soon" moves with the clock
   map.once('idle', updateNames);
+  if (fly && only) flyToMatches(only);
 }
 function renderMassChips() {
   const langs = {};
@@ -944,7 +970,7 @@ function renderMassChips() {
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
     <button class="chip" data-m="mass" aria-pressed="${mf.mode === 'mass'}" title="${esc(tr('massSoonTip'))}">${clock}${esc(tr('massSoon'))}</button>
     <button class="chip" data-m="conf" aria-pressed="${mf.mode === 'conf'}" title="${esc(tr('confSoonTip'))}">${clock}${esc(tr('confSoon'))}</button>
-    ${opts ? `<label class="chip lang" title="${esc(tr('massLangTip'))}"><span>${esc(tr('language'))}</span><select id="massLang" aria-label="${esc(tr('massLangAria'))}"><option value="">${esc(tr('anyLang'))}</option>${opts}</select></label>` : ''}
+    ${opts ? `<label class="chip lang" title="${esc(tr('massLangTip2'))}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg><span>${esc(tr('massIn'))}</span><select id="massLang" aria-label="${esc(tr('massLangAria'))}"><option value="">${esc(tr('anyLang'))}</option>${opts}</select></label>` : ''}
     ${mf.mode || mf.lang ? `<button class="chip" data-m="clear">${esc(tr('clear'))}</button>` : ''}
     <small class="mass-note" title="${esc(tr('massNoteTip'))}">${esc(tr('timesFound', { n: Object.keys(mf.data.c).length }))}</small>`;
   $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang));
@@ -958,9 +984,9 @@ async function initMassFilters() {
     const b = e.target.closest('button[data-m]'); if (!b) return;
     const m = b.dataset.m;
     if (m === 'clear') { mf.mode = ''; mf.lang = ''; } else mf.mode = mf.mode === m ? '' : m;
-    applyMassFilter();
+    applyMassFilter(m !== 'clear');
   });
-  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; applyMassFilter(); } });
+  $('massChips').addEventListener('change', (e) => { if (e.target.id === 'massLang') { mf.lang = e.target.value; applyMassFilter(true); } });
 }
 
 /* ---------- photos: bundled Wikimedia Commons thumbnails, fetched only when a card opens ---------- */
@@ -1350,6 +1376,8 @@ function syncSave(i) {
 }
 function renderFavs() {
   $('favCount').textContent = favs.length || '';
+  $('favOpen').hidden = !favs.length;  // the heart shows up once there is something saved
+  if (!favs.length && !$('favs').hidden) showFavs(false);
   $('favN').textContent = favs.length ? favs.length : '';
   $('favList').innerHTML = favs.length ? favs.map(f => `<li><button class="go" data-i="${f.i}"><i style="background:${(TYPE_BY_CODE[f.t] || TYPES[4]).color}"></i><div><span class="nm">${esc(f.name)}</span><span class="loc">${esc(f.place)}</span></div></button><button class="rm" data-i="${f.i}" aria-label="${esc(tr('favRemoveName', { name: f.name }))}" title="${esc(tr('remove'))}"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>`).join('')
     : `<p class="empty">${tr('favEmpty', { save: `<b><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg> ${esc(tr('save'))}</b>` })}</p>`;
@@ -1787,6 +1815,7 @@ $('nearList').addEventListener('click', (e) => {
 
 /* ---------- keep the side controls clear of open panels ---------- */
 function placeCtrls() {
+  document.documentElement.style.setProperty('--head', Math.round(document.querySelector('header.top').getBoundingClientRect().bottom) + 'px');
   const phone = innerWidth <= 640;
   let lift = 0;
   if (phone) for (const id of ['card', 'favs', 'near']) { const el = $(id); if (!el.hidden) lift = Math.max(lift, innerHeight - el.offsetTop); }
@@ -1797,6 +1826,7 @@ function placeCtrls() {
 {
   const watch = new MutationObserver(placeCtrls), sized = new ResizeObserver(placeCtrls);
   for (const id of ['card', 'favs', 'near']) { watch.observe($(id), { attributes: true, attributeFilter: ['hidden'] }); sized.observe($(id)); }
+  sized.observe(document.querySelector('header.top'));
   addEventListener('resize', placeCtrls);
 }
 
@@ -2160,6 +2190,32 @@ function revealMatches() {
   const wide = innerWidth > 640, open = !$('card').hidden;
   map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: Math.min(map.getZoom(), 13), pitch: 0, duration: reduceMotion ? 0 : 1600 });
 }
+// After a Mass filter is picked, fly to where the matches are thickest: within the current view if several are
+// already on screen, otherwise anywhere on the globe
+function flyToMatches(only) {
+  const { lon, lat, typ, enabled } = state;
+  const b = map.getBounds(), cells = { view: new Map(), all: new Map() };
+  let total = 0, inView = 0;
+  const bump = (m, k) => m.set(k, (m.get(k) || 0) + 1);
+  for (const i of only) {
+    if (!enabled.has(typ[i] & 7)) continue;
+    total++;
+    const p = [lon[i] / 1e6, lat[i] / 1e6], k = Math.floor(p[1] / 4) + ',' + Math.floor(p[0] / 4);
+    bump(cells.all, k);
+    if (b.contains(p)) { inView++; bump(cells.view, k); }
+  }
+  toast(total ? $('tagline').textContent : tr('noMatchNow'));
+  if (!total) return;
+  let bestK = '', bestN = -1;
+  for (const [k, v] of inView >= 5 ? cells.view : cells.all) if (v > bestN) { bestN = v; bestK = k; }
+  const [la, lo] = bestK.split(',').map(Number);
+  let near = nearest(la * 4 + 2, lo * 4 + 2, 25);
+  near = near.filter(r => r.m <= Math.max(near[0].m * 4, 150e3));  // that cluster, not stragglers across the map
+  const pts = near.map(r => [lon[r.i] / 1e6, lat[r.i] / 1e6]);
+  const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
+  const wide = innerWidth > 640, open = !$('card').hidden;
+  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: 11, pitch: 0, duration: reduceMotion ? 0 : 1600 });
+}
 let toastTimer = 0;
 function toast(text) {
   const el = $('toast'); el.textContent = text; el.classList.add('on');
@@ -2306,7 +2362,7 @@ function loadBible() {
 const bibleVisible = () => bible.data.places.filter(p => bible.group === 'all' || p.g.includes(bible.group));
 function bibleFeatures() {
   return { type: 'FeatureCollection', features: bibleVisible().map(p => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [p.ll[1], p.ll[0]] },
-    properties: { id: p.id, name: latinLabel(p.n), color: BIBLE_COLORS[mainGroup(p)], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
+    properties: { id: p.id, name: drawable(p.n), color: BIBLE_COLORS[mainGroup(p)], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
 }
 function addBibleLayers(lands) {
   const d = bible.data;
@@ -2380,7 +2436,7 @@ function renderBibleChips() {
   const d = bible.data, count = (k) => d.places.filter(p => p.g.includes(k)).length;
   $('chips').classList.remove('filtered');
   $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-g="all" aria-pressed="${bible.group === 'all'}">${esc(tr('all'))}</button>` + d.groups.map(g =>
-    `<button class="chip" data-g="${g.k}" aria-pressed="${bible.group === g.k}" title="${esc(tr('bOnly', { group: g.label }))}"><i style="background:${BIBLE_COLORS[g.k]}"></i>${esc(g.label)} <small>${fmt(count(g.k))}</small></button>`).join('');
+    `<button class="chip" data-g="${g.k}" aria-pressed="${bible.group === g.k}" title="${esc(tr('bOnly', { group: tr('bg_' + g.k) }))}"><i style="background:${BIBLE_COLORS[g.k]}"></i>${esc(tr('bg_' + g.k))} <small>${fmt(count(g.k))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'bible') return;
