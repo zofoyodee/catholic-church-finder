@@ -25,8 +25,17 @@ It is a static site with no build step and no server.
 | `data/tours.json`, `data/calendar.json` | Tour stops and the saints calendar, built by `scripts/engage/` |
 | `data/photos.json`, `photos/N.jpg` | ~80 pre-matched cathedral and basilica photos, used before the live lookup |
 | `base/*.json` | Natural Earth basemap (land, borders, cities, rivers) |
-| `fonts/*.txt` | Map label glyphs (Latin range) |
+| `fonts/*.txt` | Map label glyphs (Latin, Vietnamese, Greek, Cyrillic, Hebrew and Arabic ranges) |
+| `base/names/<lang>.json` | City names on the map in each language, from Natural Earth |
+| `i18n/<lang>.json` | Interface text in each language; English lives in `index.html` as `EN` |
+| `i18n/saints/<lang>.json` | The patron saint bios in each language, `[name, feast, bio]` per English title |
 | `scripts/` | The pipeline that built the data from Overture Maps |
+
+## Languages
+
+The page follows the browser's language, and the picker at the top switches it (the choice is remembered, and `?lang=xx` forces one). It speaks English, Spanish, Portuguese, French, Filipino, Italian, Polish, Swahili, German, Chinese, Dutch, Indonesian, Vietnamese, Malayalam, Korean, Hungarian, Ukrainian, Croatian, Arabic and Slovak, chosen by number of Catholic speakers. Arabic is laid out right to left. Wikipedia and Wikidata details come from the reader's own Wikipedia when it has the article, and every language keeps the Catholic-voice filter.
+
+To add a language, add it to `LANGS` in `index.html`, write `i18n/<lang>.json` and `i18n/saints/<lang>.json`, add its Wikipedia's outsider phrases to `OUTSIDER_BY`, and run `python3 scripts/i18n/check.py` (missing keys, placeholders, plural forms and saints). `scripts/i18n/city_names.py` builds the city names. Translations other than English are first drafts and welcome review by native speakers.
 
 ## Data
 
