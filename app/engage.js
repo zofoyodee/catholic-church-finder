@@ -138,9 +138,22 @@ function seasonPill() {
   if (!b) {
     b = document.createElement('button'); b.id = 'season'; b.className = 'season';
     b.setAttribute('aria-controls', 'today'); b.setAttribute('aria-expanded', 'false');
-    document.querySelector('.brand').appendChild(b);
+    // the pill opens the church of the day; the (i) beside it explains the season
+    const row = document.createElement('div'); row.className = 'season-row';
+    row.innerHTML = '<button class="season-i" id="seasonI" aria-expanded="false" aria-controls="seasonInfo">i</button><div class="season-info" id="seasonInfo" role="tooltip" hidden></div>';
+    row.prepend(b);
+    document.querySelector('.brand').appendChild(row);
     b.addEventListener('click', () => showToday($('today').hidden));
+    const info = $('seasonInfo'), ib = $('seasonI');
+    const show = (on) => { info.hidden = !on; ib.setAttribute('aria-expanded', on); };
+    ib.addEventListener('click', (e) => { e.stopPropagation(); show(info.hidden); });
+    ib.addEventListener('mouseenter', () => show(true));
+    row.addEventListener('mouseleave', () => show(false));
+    document.addEventListener('click', (e) => { if (!row.contains(e.target)) show(false); });
   }
+  const sk = SEASON_KEY[today.season] || 'seasonOrdinary';
+  $('seasonI').setAttribute('aria-label', T('seasonInfo'));
+  $('seasonInfo').innerHTML = `<b>${esc(seasonName(today.season || 'Ordinary Time'))}</b><p>${esc(T('about_' + sk))}</p>`;
   const label = today.season === 'Ordinary Time' && today.week ? T('ordinaryWeek', { season: seasonName('Ordinary Time'), w: today.week }) : today.season ? seasonName(today.season) : today.title;
   b.innerHTML = `<i aria-hidden="true"></i><span>${esc(label)}</span>`;
   b.title = T('seasonTip', { title: today.title, color: colorName(today.color) });

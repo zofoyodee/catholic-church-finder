@@ -379,5 +379,20 @@
   "desc_shrine": "Miesto púte a pobožnosti.",
   "desc_church": "Bežné farské a miestne kostoly: každý kostol, ktorý nie je katedrálou, bazilikou, pútnickým miestom, kaplnkou ani opátstvom.",
   "desc_chapel": "Menšia kaplnka alebo oratórium, často spravované blízkou farnosťou.",
-  "desc_abbey": "Kostol komunity mníchov, mníšok, bratov alebo sestier."
+  "desc_abbey": "Kostol komunity mníchov, mníšok, bratov alebo sestier.",
+  "massNear": "Svätá omša v blízkosti",
+  "confNear": "Spoveď v blízkosti",
+  "massNearTip": "Kostoly v okolí, najbližšia omša prvá",
+  "confNearTip": "Kostoly v okolí, najbližšia spoveď prvá",
+  "massNearTitle": "Svätá omša pri tebe",
+  "confNearTitle": "Spoveď pri tebe",
+  "whenNow": "Teraz",
+  "whenToday": "Dnes {time}",
+  "whenTomorrow": "Zajtra {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Tento týždeň bez času",
+  "usingMapCenter": "Poloha je vypnutá, preto sú to kostoly blízko stredu mapy.",
+  "noMassNear": "Žiadny blízky kostol zatiaľ neuvádza časy.",
+  "seeWorldwide": "Zobraziť všetky kostoly ({n}) so svätou omšou v jazyku {lang} na svete",
+  "timesCheck": "Časy pochádzajú z webov farností. Pred cestou si ich over vo farnosti."
 }

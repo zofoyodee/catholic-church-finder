@@ -358,5 +358,20 @@
   "desc_shrine": "Mahali pa hija na ibada.",
   "desc_church": "Makanisa ya kawaida ya parokia na ya mtaa: kila kanisa lisilo kanisa kuu, basilika, madhabahu, kikanisa wala abasia.",
   "desc_chapel": "Kikanisa au chumba cha sala kidogo, mara nyingi huhudumiwa na parokia ya karibu.",
-  "desc_abbey": "Kanisa la jumuiya ya watawa wa kiume, wa kike, mafrateri au masista."
+  "desc_abbey": "Kanisa la jumuiya ya watawa wa kiume, wa kike, mafrateri au masista.",
+  "massNear": "Misa karibu nami",
+  "confNear": "Kitubio karibu nami",
+  "massNearTip": "Makanisa karibu nawe, Misa ya karibuni kwanza",
+  "confNearTip": "Makanisa karibu nawe, Kitubio cha karibuni kwanza",
+  "massNearTitle": "Misa karibu nawe",
+  "confNearTitle": "Kitubio karibu nawe",
+  "whenNow": "Sasa",
+  "whenToday": "Leo {time}",
+  "whenTomorrow": "Kesho {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Hakuna saa wiki hii",
+  "usingMapCenter": "Mahali pamezimwa, kwa hiyo haya ni karibu na katikati ya ramani.",
+  "noMassNear": "Hakuna kanisa la karibu lililoorodhesha saa zake bado.",
+  "seeWorldwide": "Tazama makanisa yote {n} yenye Misa kwa {lang} duniani",
+  "timesCheck": "Saa zinatoka kwenye tovuti za parokia. Thibitisha na parokia kabla ya kwenda."
 }

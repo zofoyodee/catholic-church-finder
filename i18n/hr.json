@@ -374,5 +374,20 @@
   "desc_shrine": "Mjesto hodočašća i pobožnosti.",
   "desc_church": "Obične župne i mjesne crkve: svaka crkva koja nije katedrala, bazilika, svetište, kapela ni opatija.",
   "desc_chapel": "Manja kapela ili oratorij, često u skrbi obližnje župe.",
-  "desc_abbey": "Crkva zajednice redovnika, redovnica, fratara ili sestara."
+  "desc_abbey": "Crkva zajednice redovnika, redovnica, fratara ili sestara.",
+  "massNear": "Misa u blizini",
+  "confNear": "Ispovijed u blizini",
+  "massNearTip": "Crkve u blizini, najskorija misa prva",
+  "confNearTip": "Crkve u blizini, najskorija ispovijed prva",
+  "massNearTitle": "Misa u tvojoj blizini",
+  "confNearTitle": "Ispovijed u tvojoj blizini",
+  "whenNow": "Sada",
+  "whenToday": "Danas {time}",
+  "whenTomorrow": "Sutra {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Ovaj tjedan nema navedenog vremena",
+  "usingMapCenter": "Lokacija je isključena, pa su ove crkve blizu sredine karte.",
+  "noMassNear": "Nijedna obližnja crkva još nije navela svoja vremena.",
+  "seeWorldwide": "Pogledaj svih {n} crkava s misom na jeziku: {lang} u svijetu",
+  "timesCheck": "Vremena su preuzeta sa župnih stranica. Provjeri u župi prije odlaska."
 }
