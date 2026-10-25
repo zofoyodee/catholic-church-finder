@@ -1342,6 +1342,11 @@ function faithful(text, max = 2) {
   return sentences.filter(x => !OUTSIDER.test(x)).slice(0, max).join('').trim();
 }
 const FACT_ROWS = [['P571', 'Founded'], ['P1619', 'Opened'], ['P825', 'Dedicated to'], ['P708', 'Diocese'], ['P84', 'Architect'], ['P149', 'Style'], ['P1435', 'Heritage status'], ['P5138', 'Part of']];
+const PLAIN_WORDS = /^(the|and|des|del|della|dos|das|saint|sainte|san|santa|santo|sao|sankt|church|catholic|roman|parish|cathedral|catedral|cathedrale|cattedrale|iglesia|igreja|chiesa|eglise|kirche|parroquia|paroquia|parrocchia|paroisse|chapel|capilla|capela|basilica|nuestra|senora|nossa|senhora|notre|dame|lady|our)$/;
+function wikiAboutIt(u, name) {
+  let t = ''; try { const x = new URL(u); if (x.hash) return false; t = squash(decodeURIComponent(x.pathname.split('/').pop())); } catch (e) { return false; }
+  return squash(name).split(/\s+/).some(w => w.length > 3 && !PLAIN_WORDS.test(w) && t.includes(w));
+}
 /* ---------- Photos link: point it at something that has pictures, or hide it ---------- */
 async function checkPhotosLink(i, rec, name, town, lat, lng) {
   const set = (href) => { const a = $('phLink'); if (!a || state.selected !== i) return; if (href) a.href = href; a.hidden = href === ''; };
@@ -1729,6 +1734,11 @@ const icon = {
   map: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
   web: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>',
   fb: '<svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>',
+  ig: '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6"/></svg>',
+  yt: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3.5"/><path d="M10.5 9.5v5l4.2-2.5z"/></svg>',
+  x: '<svg viewBox="0 0 24 24"><path d="M5 4l14 16M19 4L5 20"/></svg>',
+  chat: '<svg viewBox="0 0 24 24"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg>',
+  link: '<svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>',
   book: '<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6"/></svg>',
 };
 
@@ -1759,13 +1769,23 @@ async function selectChurch(i, { fly = true } = {}) {
   const q = encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   const qShort = encodeURIComponent([name, town].filter(Boolean).join(' '));
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
-  const fb = (socials || []).find(s => /facebook\.com/.test(s));
+  // Online: the parish's own site plus one link per social platform, each named; a Wikipedia "website" feeds History instead
+  const SOCIAL = { Facebook: [icon.fb, 'Facebook Page'], Instagram: [icon.ig, 'Instagram'], YouTube: [icon.yt, 'YouTube'], X: [icon.x, 'X (Twitter)'], TikTok: [icon.video, 'TikTok'], WhatsApp: [icon.chat, 'WhatsApp'], Links: [icon.link, 'Links page'] };
   const listedUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
   const wentry = webInfo.entry;
   const webDead = !!(listedUrl && wentry && wentry[0] === 3);
   const webUrl = webDead ? '' : (wentry && wentry[1]) || listedUrl;
   const kind = webUrl ? linkKind(webUrl) : null;
   const pastor = pastorOf(wentry);
+  const online = [], seenP = new Set();
+  let wikiUrl = '';
+  for (const u of [webUrl, ...(socials || []), ...(webInfo.fix.socials || [])]) {
+    const k = u && /^https?:\/\//.test(u) ? linkKind(u) : null; if (!k) continue;
+    if (k.btn === 'Wikipedia') { if (!wikiUrl && wikiAboutIt(u, name)) wikiUrl = u; continue; }  // many listed articles are about the town
+    const p = k.platform ? k.btn : 'site'; if (!p || seenP.has(p)) continue; seenP.add(p);
+    if (p === 'site') online.unshift(`<a href="${esc(u)}" target="_blank" rel="noopener">${icon.web}${esc(host(u))}</a>${wentry && wentry[0] === 2 ? '<span class="moved">(new address)</span>' : ''}`);
+    else if (SOCIAL[p]) online.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${SOCIAL[p][0]}${SOCIAL[p][1]}</a>`);
+  }
   const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   $('cardBody').innerHTML = `
     <div>
@@ -1774,7 +1794,7 @@ async function selectChurch(i, { fly = true } = {}) {
     </div>
     <div class="actions">
       <a class="btn primary" href="${directionsURL(lt, lng, name)}" target="_blank" rel="noopener">Directions</a>
-      ${kind && kind.btn ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn}</a>` : ''}
+      ${kind && kind.btn && kind.btn !== 'Wikipedia' ? `<a class="btn" href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn}</a>` : ''}
       <button class="btn save" id="saveBtn" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span>Save</span></button>
       <span class="share-wrap"><button class="btn" id="shareBtn" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Share</span></button>
         <span class="share-menu" id="shareMenu" role="menu" hidden>
@@ -1788,10 +1808,8 @@ async function selectChurch(i, { fly = true } = {}) {
       ${addr.length ? `<dt>Address</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="Copy the address">Copy</button></dd>` : ''}
       ${pastor ? `<dt>${esc(pastor[3])}</dt><dd>${esc(pastor[1])} ${esc(pastor[2])}</dd>` : ''}
       ${phone ? `<dt>Phone</dt><dd id="cPhone">${phoneHTML(phone, cc)}</dd>` : ''}
-      ${(webUrl && kind && kind.row) || webDead || fb ? `<dt>Online</dt><dd class="links">${
-        webUrl && kind && kind.row ? `<a href="${esc(webUrl)}" target="_blank" rel="noopener">${kind.btn === 'Facebook' ? icon.fb : icon.web}${esc(kind.btn === 'Facebook' ? 'Facebook Page' : kind.platform ? kind.row.replace(/^./, c => c.toUpperCase()) : host(webUrl))}</a>${wentry && wentry[0] === 2 ? '<span class="moved">(new address)</span>' : ''}` : ''}${
-        webDead ? `<span><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></span>` : ''}${
-        fb && !(kind && kind.btn === 'Facebook') ? `<a href="${esc(fb)}" target="_blank" rel="noopener">${icon.fb}Facebook Page</a>` : ''}</dd>` : ''}
+      ${online.length || webDead ? `<dt>Online</dt><dd class="links">${online.join('')}${
+        webDead ? `<span><s class="dead">${esc(host(listedUrl))}</s> no longer works. <a href="${esc(webSearch)}" target="_blank" rel="noopener">Search for a current site</a></span>` : ''}</dd>` : ''}
     </dl>
     ${scheduleHTML(wentry, webInfo.checked, host)}
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
@@ -1802,7 +1820,7 @@ async function selectChurch(i, { fly = true } = {}) {
         <a id="phLink" hidden href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span><b>Photos</b><small>Wikimedia Commons</small></span></a>
         <a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">${icon.video}<span><b>Videos</b><small>YouTube</small></span></a>
         <a id="svLink"${GMAPS_KEY ? ' hidden' : ''} href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span><b>Street View</b><small>Google Maps</small></span></a>
-        <a href="https://en.wikipedia.org/w/index.php?search=${qShort}" target="_blank" rel="noopener">${icon.book}<span><b>History</b><small>Wikipedia</small></span></a>
+        <a href="${wikiUrl ? esc(wikiUrl) : `https://en.wikipedia.org/w/index.php?search=${qShort}`}" target="_blank" rel="noopener">${icon.book}<span><b>History</b><small>Wikipedia</small></span></a>
       </div>
     </div>
     <div class="prov">
