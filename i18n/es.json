@@ -304,5 +304,15 @@
   "bg_ot": "Antiguo Testamento",
   "bg_deut": "Tobías, Judit y Macabeos",
   "bg_jesus": "Vida de Jesús",
-  "bg_church": "Apóstoles e Iglesia primitiva"
+  "bg_church": "Apóstoles e Iglesia primitiva",
+  "parishSitePhoto": "sitio web de la parroquia",
+  "photoFromSite": "Foto del sitio web de la parroquia, {site}. Abre el sitio.",
+  "aramaic": "Arameo",
+  "everyDay": "Todos los días",
+  "monthlyDay_1": "1.er {day} del mes",
+  "monthlyDay_2": "2.º {day} del mes",
+  "monthlyDay_3": "3.er {day} del mes",
+  "monthlyDay_4": "4.º {day} del mes",
+  "monthlyDay_5": "5.º {day} del mes",
+  "monthlyDay_6": "Último {day} del mes"
 }

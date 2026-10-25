@@ -288,5 +288,15 @@
   "bg_ot": "구약",
   "bg_deut": "토빗기, 유딧기, 마카베오기",
   "bg_jesus": "예수님의 생애",
-  "bg_church": "사도들과 초대 교회"
+  "bg_church": "사도들과 초대 교회",
+  "parishSitePhoto": "본당 웹사이트",
+  "photoFromSite": "본당 웹사이트 {site}의 사진입니다. 사이트를 엽니다.",
+  "aramaic": "아람어",
+  "everyDay": "매일",
+  "monthlyDay_1": "매월 첫째 {day}",
+  "monthlyDay_2": "매월 둘째 {day}",
+  "monthlyDay_3": "매월 셋째 {day}",
+  "monthlyDay_4": "매월 넷째 {day}",
+  "monthlyDay_5": "매월 다섯째 {day}",
+  "monthlyDay_6": "매월 마지막 {day}"
 }

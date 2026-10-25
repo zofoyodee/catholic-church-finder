@@ -304,5 +304,15 @@
   "bg_ot": "Oude Testament",
   "bg_deut": "Tobit, Judit en Makkabeeën",
   "bg_jesus": "Leven van Jezus",
-  "bg_church": "Apostelen en vroege Kerk"
+  "bg_church": "Apostelen en vroege Kerk",
+  "parishSitePhoto": "website van de parochie",
+  "photoFromSite": "Foto van de website van de parochie, {site}. Opent de site.",
+  "aramaic": "Aramees",
+  "everyDay": "Elke dag",
+  "monthlyDay_1": "1e {day} van de maand",
+  "monthlyDay_2": "2e {day} van de maand",
+  "monthlyDay_3": "3e {day} van de maand",
+  "monthlyDay_4": "4e {day} van de maand",
+  "monthlyDay_5": "5e {day} van de maand",
+  "monthlyDay_6": "Laatste {day} van de maand"
 }
