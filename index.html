@@ -452,6 +452,19 @@ body.bible-mode .ctrls .fav-open, body.bible-mode .ctrls #nearBtn, body.bible-mo
   display: grid; gap: 8px; padding: 10px 10px 8px; border-radius: 16px; border: 1px solid var(--line); background: var(--panel); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 18px 50px #0008; transition: right .35s cubic-bezier(.2,.8,.2,1), left .35s cubic-bezier(.2,.8,.2,1); }
 .life[hidden] { display: none; }
+/* the painting of the moment, beside the timeline on wide screens */
+.life-art { position: fixed; z-index: 6; left: max(16px, env(safe-area-inset-left, 0px)); top: calc(var(--head, 80px) + 12px); margin: 0;
+  width: min(300px, 24vw, calc((100vh - var(--head, 80px) - var(--lifeH, 160px) - 110px) * .8)); border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--panel-solid); box-shadow: 0 18px 50px #0008; transition: opacity .45s ease, transform .45s cubic-bezier(.2,.8,.2,1); }
+.life-art[hidden] { display: block !important; opacity: 0; transform: translateX(-30px); pointer-events: none; }
+.life-art img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; opacity: 0; transition: opacity .6s ease; background: #f4ecda; }
+.life-art img.on { opacity: 1; }
+.life-art figcaption { padding: 8px 12px 10px; font-family: var(--font-display); font-size: 13px; line-height: 1.35; color: var(--ink); }
+[dir="rtl"] .life-art { left: auto; right: max(16px, env(safe-area-inset-right, 0px)); }
+[dir="rtl"] .life-art[hidden] { transform: translateX(30px); }
+.card .jart { margin: 0; min-height: min(52vh, 125vw - 50px); }
+.card .jart img { display: block; width: 100%; height: min(52vh, 125vw - 50px); object-fit: cover; object-position: center 35%; border-radius: 12px; border: 1px solid var(--line); background: #f4ecda; }
+@media (max-width: 900px), (max-height: 560px) { .life-art { display: none !important; } }
 .life-now { display: flex; gap: 12px; align-items: flex-start; min-width: 0; }
 .ln-ctl { display: flex; gap: 5px; flex: none; }
 .ln-ctl button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.03); display: grid; place-items: center; cursor: pointer; padding: 0; }
@@ -613,6 +626,8 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <div class="timer" aria-hidden="true"><i id="lifeTimer"></i></div>
   <div class="life-track" id="lifeTrack"></div>
 </section>
+
+<figure id="lifeArt" class="life-art" hidden><img id="lifeArtImg" alt=""><figcaption id="lifeArtCap"></figcaption></figure>
 
 <div id="tip" class="tip" hidden></div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -3073,6 +3088,7 @@ async function setMode(m, { fly = true } = {}) {
   document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
   document.body.classList.toggle('jesus-mode', m === 'jesus');
   lifeStop(); $('life').hidden = m !== 'jesus' || !life.data;
+  if (m !== 'jesus') $('lifeArt').hidden = true;
   closeCard(); showFavs(false); showNear(false); resEl.hidden = true; qEl.value = ''; tip.hidden = true; setHover(-1);
   searchLabels();
   if (m === 'bible') {
@@ -3376,8 +3392,35 @@ function lifeSel(p) {
 }
 const lifePad = () => {
   const wide = innerWidth > 640, card = !$('card').hidden && wide, h = $('life').offsetHeight || 150;
-  return { top: wide ? 150 : (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--head')) || 150) + 10, bottom: h + 60, left: card && i18n.rtl ? 440 : 20, right: card && !i18n.rtl ? 440 : 70 };
+  const art = $('lifeArt').hidden ? 0 : $('lifeArt').offsetWidth + 20;  // the painting panel takes the other side from the card
+  return { top: wide ? 150 : (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--head')) || 150) + 10, bottom: h + 60, left: card && i18n.rtl ? 440 : 20 + (i18n.rtl ? 0 : art), right: card && !i18n.rtl ? 440 : 70 + (i18n.rtl ? art : 0) };
 };
+
+/* a painting for each moment: art/jesus/NN.webp, listed in art/jesus/index.json */
+const ART = { have: null, ext: 'webp' };
+async function lifeArtList() {
+  if (!ART.have) ART.have = fetch('art/jesus/index.json').then(r => r.json()).then(j => { ART.ext = j.ext || 'webp'; return new Set(j.have); }).catch(() => new Set()).then(set => (ART.ready = set));
+  return ART.have;
+}
+const artSrc = (k) => `art/jesus/${String(k + 1).padStart(2, '0')}.${ART.ext}`;
+const artFig = (k, have) => have && have.has(k + 1) && innerWidth <= 900 ? `<figure class="jart"><img src="${artSrc(k)}" alt="${esc(life.data.events[k].t)}"></figure>` : '';
+async function showLifeArt(k) {
+  const box = $('lifeArt'), img = $('lifeArtImg'), have = await lifeArtList();
+  if (state.mode !== 'jesus' || life.k !== k) return;
+  if (!have.has(k + 1)) { box.hidden = true; return; }
+  const body = $('cardBody');  // on phones the painting rides at the top of the moment card instead
+  if (!$('card').hidden && body.dataset.jk === String(k) && !body.querySelector('.jart')) body.querySelector('.lede')?.insertAdjacentHTML('beforebegin', artFig(k, have));
+  document.documentElement.style.setProperty('--lifeH', ($('life').offsetHeight || 150) + 'px');
+  box.hidden = false;
+  if (img.dataset.k === String(k)) return;
+  img.dataset.k = k; img.classList.remove('on');
+  const pic = new Image(); pic.src = artSrc(k);
+  try { await pic.decode(); } catch (e) { return; }
+  if (img.dataset.k !== String(k)) return;
+  img.src = pic.src; img.alt = life.data.events[k].t; $('lifeArtCap').textContent = life.data.events[k].t;
+  requestAnimationFrame(() => img.classList.add('on'));
+  if (have.has(k + 2)) new Image().src = artSrc(k + 1);  // the next moment's painting is ready before it is needed
+}
 function lifeOverview() {
   const wide = innerWidth > 640;
   map.flyTo({ center: wide ? [34.4, 31.6] : [34.6, 31.4], zoom: wide ? 6 : 5, pitch: 0, bearing: 0, padding: lifePad(), duration: reduceMotion ? 0 : 2200, essential: true });
@@ -3458,7 +3501,7 @@ async function goEvent(k, { fly = true, card } = {}) {
   if (life.era !== 'all' && e.e !== life.era) $('chips').querySelector('[data-era="all"]').click();
   clearLifeTimer(); life.k = k;
   const p = d.byId[e.p];
-  renderNow(); markTrack(); lifeSel(p); lastInteract = performance.now();
+  renderNow(); markTrack(); lifeSel(p); lastInteract = performance.now(); showLifeArt(k);
   // the details panel follows the timeline: always beside the globe on wide screens, on phones only when asked for
   if (card ?? (!$('card').hidden || innerWidth > 640)) openLifeMoment(k);
   try { history.replaceState(null, '', '?life=' + (k + 1)); } catch (err) {}
@@ -3590,6 +3633,7 @@ function openLifeMoment(k) {
       <h2 id="cName">${esc(e.t)}</h2>
       <div class="where"><button class="linkish" data-jplace="${p.id}">${esc(p.n)}</button> · ${esc(p.m)}</div>
     </div>
+    ${artFig(k, ART.ready)}
     <p class="lede">${withRefs(e.s)}</p>
     ${e.u ? `<p class="muted"><i>${withRefs(e.u)}</i></p>` : ''}
     <div class="actions">
