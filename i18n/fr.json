@@ -391,5 +391,16 @@
   "about_seasonLent": "Le Carême, ce sont les quarante jours de prière, de jeûne et d'aumône, du mercredi des Cendres au Jeudi saint, où les fidèles reviennent à Dieu par la pénitence et se préparent à célébrer le Mystère pascal. Sa couleur est le violet, et le rose au dimanche de Laetare.",
   "about_seasonHolyWeek": "La Semaine sainte commence le dimanche des Rameaux, où l'Église rappelle l'entrée de notre Seigneur à Jérusalem, et mène au Triduum sacré de sa Passion, de sa Mort et de sa Résurrection. Le dimanche des Rameaux est rouge ; les jours de semaine sont violets.",
   "about_seasonTriduum": "Le saint Triduum pascal, de la Messe du soir de la Cène du Seigneur le Jeudi saint jusqu'au soir du dimanche de Pâques, est le sommet de toute l'année liturgique : la Passion, la Mort et la Résurrection du Seigneur.",
-  "about_seasonEaster": "Le temps pascal, ce sont les cinquante jours du dimanche de Pâques à la Pentecôte, célébrés comme un seul grand dimanche de joie dans le Seigneur ressuscité. Sa couleur est le blanc, et le rouge à la Pentecôte."
+  "about_seasonEaster": "Le temps pascal, ce sont les cinquante jours du dimanche de Pâques à la Pentecôte, célébrés comme un seul grand dimanche de joie dans le Seigneur ressuscité. Sa couleur est le blanc, et le rouge à la Pentecôte.",
+  "listHere": "Lister les églises ici",
+  "churchesIn": "Églises à {place}",
+  "churchesInView": "Églises dans cette vue",
+  "areaIntro": "La plus proche de vous d'abord. Touchez-en une pour les détails.",
+  "areaIntroCenter": "La plus proche du centre d'abord. Touchez-en une pour les détails.",
+  "areaMore": "Les {k} plus proches sur {n}. Zoomez pour voir les autres.",
+  "areaNone": "Aucune église n'est encore cartographiée ici.",
+  "areaTag": "{n} églises à {place}",
+  "areaTagView": "{n} églises dans cette vue",
+  "areaTip": "Cliquez pour lister les églises de cette ville",
+  "noneInRange": "Aucune église des types choisis à moins de {dist}. Essayez une distance plus grande ou affichez plus de types ci-dessus."
 }

@@ -383,5 +383,16 @@
   "about_seasonLent": "Cuaresma ha'e irundypa ára ñembo'e, ayuno ha ñeme'ẽ Miércoles de Ceniza guive Jueves Santo peve, jeroviaha ojevy Tupãme ñembyasýpe ha oñembosako'i omomba'eguasu hag̃ua Misterio Pascual. Isa'y ha'e morado, ha rosado domingo Laetare-pe.",
   "about_seasonHolyWeek": "Semana Santa oñepyrũ Domingo de Ramos-pe, Tupao imandu'a ñande Jára oike hague Jerusalénpe, ha ogueraha Triduo Santo ijasy, imano ha hekovevejey peve. Domingo de Ramos pytã; arapokõindy ára morado.",
   "about_seasonTriduum": "Triduo Pascual Santo, Jueves Santo pyhare Ñandejára Karu Misa guive Domingo de Pascua pyhare peve, ha'e opa ary liturgia yvate: Ñandejára Pasión, Ñemano ha Jekovevejey.",
-  "about_seasonEaster": "Pascua ára ha'e po pa ára Domingo de Pascua guive Pentecostés peve, oñemomba'eguasúva peteĩ domingo guasu vy'apópe Ñandejára oikovejeývape. Isa'y ha'e morotĩ, ha pytã Pentecostés-pe."
+  "about_seasonEaster": "Pascua ára ha'e po pa ára Domingo de Pascua guive Pentecostés peve, oñemomba'eguasúva peteĩ domingo guasu vy'apópe Ñandejára oikovejeývape. Isa'y ha'e morotĩ, ha pytã Pentecostés-pe.",
+  "listHere": "Ehechauka tupao ko'ápe",
+  "churchesIn": "Tupao {place}-pe",
+  "churchesInView": "Tupao ko jehechápe",
+  "areaIntro": "Nde ag̃uivéva raẽ. Ejopy peteĩ rehecha hag̃ua hekopete.",
+  "areaIntroCenter": "Mbytégui ag̃uivéva raẽ. Ejopy peteĩ rehecha hag̃ua hekopete.",
+  "areaMore": "Ojehechauka {k} ag̃uivéva {n}-gui. Embotuichave rehecha hag̃ua ambuéva.",
+  "areaNone": "Ndaipóri gueteri tupao mapápe ko'ápe.",
+  "areaTag": "Ojehechauka {n} tupao {place}-pe",
+  "areaTagView": "Ojehechauka {n} tupao ko jehechápe",
+  "areaTip": "Ejopy rehecha hag̃ua ko táva tupaokuéra",
+  "noneInRange": "Ndaipóri tupao reiporavóva {dist} pype. Eha'ã mombyryve térã ehechauka hetave yvategua."
 }

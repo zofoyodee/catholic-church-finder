@@ -399,5 +399,16 @@
   "about_seasonLent": "Postni čas je štirideset dni molitve, posta in miloščine od pepelnične srede do velikega četrtka, ko se verniki s pokoro obračajo k Bogu in se pripravljajo na obhajanje velikonočne skrivnosti. Barva je vijolična, na nedeljo Laetare rožnata.",
   "about_seasonHolyWeek": "Veliki teden se začne s cvetno nedeljo, ko se Cerkev spominja Gospodovega vhoda v Jeruzalem, in vodi v sveto tridnevje njegovega trpljenja, smrti in vstajenja. Cvetna nedelja je rdeča, delavniki vijolični.",
   "about_seasonTriduum": "Sveto velikonočno tridnevje, od večerne maše Gospodove večerje na veliki četrtek do večera velikonočne nedelje, je vrhunec vsega cerkvenega leta: Gospodovo trpljenje, smrt in vstajenje.",
-  "about_seasonEaster": "Velikonočni čas je petdeset dni od velikonočne nedelje do binkošti, ki jih obhajamo kot eno samo veliko nedeljo veselja v vstalem Gospodu. Barva je bela, na binkošti rdeča."
+  "about_seasonEaster": "Velikonočni čas je petdeset dni od velikonočne nedelje do binkošti, ki jih obhajamo kot eno samo veliko nedeljo veselja v vstalem Gospodu. Barva je bela, na binkošti rdeča.",
+  "listHere": "Seznam cerkva tukaj",
+  "churchesIn": "Cerkve: {place}",
+  "churchesInView": "Cerkve v tem pogledu",
+  "areaIntro": "Najbližja vam najprej. Tapnite za podrobnosti.",
+  "areaIntroCenter": "Najbližja sredini najprej. Tapnite za podrobnosti.",
+  "areaMore": "Prikazanih je {k} najbližjih od {n}. Povečajte za ostale.",
+  "areaNone": "Tu še ni cerkva na zemljevidu.",
+  "areaTag": "Cerkve: {place} ({n})",
+  "areaTagView": "Cerkve v tem pogledu: {n}",
+  "areaTip": "Kliknite za seznam cerkva tega mesta",
+  "noneInRange": "V razdalji {dist} ni cerkve izbranih vrst. Poskusite večjo razdaljo ali zgoraj prikažite več vrst."
 }

@@ -394,5 +394,16 @@
   "about_seasonLent": "Gavėnia – tai keturiasdešimt maldos, pasninko ir išmaldos dienų nuo Pelenų trečiadienio iki Didžiojo ketvirtadienio, kai tikintieji per atgailą grįžta pas Dievą ir rengiasi švęsti Velykų slėpinį. Spalva violetinė, Laetare sekmadienį rožinė.",
   "about_seasonHolyWeek": "Didžioji savaitė prasideda Verbų sekmadieniu, kai Bažnyčia mini mūsų Viešpaties įžengimą į Jeruzalę, ir veda į Šventąjį Velykų tridienį – Jo kančią, mirtį ir prisikėlimą. Verbų sekmadienis raudonas, šiokiadieniai violetiniai.",
   "about_seasonTriduum": "Šventasis Velykų tridienis, nuo Paskutinės vakarienės Mišių Didįjį ketvirtadienį vakare iki Velykų sekmadienio vakaro, yra visų liturginių metų viršūnė: Viešpaties kančia, mirtis ir prisikėlimas.",
-  "about_seasonEaster": "Velykų laikas – tai penkiasdešimt dienų nuo Velykų sekmadienio iki Sekminių, švenčiamų kaip vienas didelis džiaugsmo sekmadienis prisikėlusiu Viešpačiu. Spalva balta, per Sekmines raudona."
+  "about_seasonEaster": "Velykų laikas – tai penkiasdešimt dienų nuo Velykų sekmadienio iki Sekminių, švenčiamų kaip vienas didelis džiaugsmo sekmadienis prisikėlusiu Viešpačiu. Spalva balta, per Sekmines raudona.",
+  "listHere": "Rodyti bažnyčias čia",
+  "churchesIn": "Bažnyčios: {place}",
+  "churchesInView": "Bažnyčios šiame vaizde",
+  "areaIntro": "Artimiausia jums pirma. Bakstelėkite, kad pamatytumėte daugiau.",
+  "areaIntroCenter": "Artimiausia viduriui pirma. Bakstelėkite, kad pamatytumėte daugiau.",
+  "areaMore": "Rodomos {k} artimiausios iš {n}. Priartinkite, kad matytumėte kitas.",
+  "areaNone": "Čia žemėlapyje dar nėra bažnyčių.",
+  "areaTag": "Bažnyčios: {place} ({n})",
+  "areaTagView": "Bažnyčios šiame vaizde: {n}",
+  "areaTip": "Spustelėkite, kad pamatytumėte šio miesto bažnyčias",
+  "noneInRange": "{dist} spinduliu nėra pasirinktų rūšių bažnyčios. Pabandykite didesnį atstumą arba aukščiau parodykite daugiau rūšių."
 }

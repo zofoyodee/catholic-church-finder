@@ -383,5 +383,16 @@
   "about_seasonLent": "Karèm se karant jou lapriyè, jèn ak charite depi Mèkredi Sann rive Jedi Sen, lè fidèl yo tounen vin jwenn Bondye nan penitans epi prepare pou selebre Mistè Pak la. Koulè li se vyolèt, ak woz dimanch Laetare.",
   "about_seasonHolyWeek": "Semèn Sent kòmanse Dimanch Ramo, lè Legliz la sonje antre Senyè nou nan Jerizalèm, epi li mennen nan Sen Triyòm Pasyon, Lanmò ak Rezirèksyon li. Dimanch Ramo wouj; jou lasemèn yo vyolèt.",
   "about_seasonTriduum": "Sen Triyòm Pak la, depi Lamès Soupe Senyè a Jedi Sen nan aswè rive aswè Dimanch Pak, se pi wo pwen tout ane liturjik la: Pasyon, Lanmò ak Rezirèksyon Senyè a.",
-  "about_seasonEaster": "Tan Pak la se senkant jou depi Dimanch Pak rive Lapannkòt, yo selebre l tankou yon sèl gwo dimanch lajwa nan Senyè ki resisite a. Koulè li se blan, ak wouj nan Lapannkòt."
+  "about_seasonEaster": "Tan Pak la se senkant jou depi Dimanch Pak rive Lapannkòt, yo selebre l tankou yon sèl gwo dimanch lajwa nan Senyè ki resisite a. Koulè li se blan, ak wouj nan Lapannkòt.",
+  "listHere": "Lis legliz isit la",
+  "churchesIn": "Legliz nan {place}",
+  "churchesInView": "Legliz nan vi sa a",
+  "areaIntro": "Sa ki pi pre w la an premye. Tape youn pou detay.",
+  "areaIntroCenter": "Sa ki pi pre mitan an an premye. Tape youn pou detay.",
+  "areaMore": "N ap montre {k} ki pi pre yo sou {n}. Rale pi pre pou wè rès yo.",
+  "areaNone": "Poko gen legliz sou kat la isit la.",
+  "areaTag": "N ap montre {n} legliz nan {place}",
+  "areaTagView": "N ap montre {n} legliz nan vi sa a",
+  "areaTip": "Klike pou wè lis legliz vil sa a",
+  "noneInRange": "Pa gen legliz nan kalite ou chwazi yo nan {dist}. Eseye yon distans pi long oswa montre plis kalite anwo a."
 }

@@ -391,5 +391,16 @@
   "about_seasonLent": "Die Fastenzeit sind die vierzig Tage des Gebets, des Fastens und des Almosengebens von Aschermittwoch bis Gründonnerstag, in denen sich die Gläubigen in Buße zu Gott bekehren und sich auf die Feier des Pascha-Mysteriums vorbereiten. Ihre Farbe ist Violett, am Sonntag Laetare Rosa.",
   "about_seasonHolyWeek": "Die Karwoche beginnt mit dem Palmsonntag, an dem die Kirche des Einzugs unseres Herrn in Jerusalem gedenkt, und führt zum Heiligen Triduum seines Leidens, Sterbens und seiner Auferstehung. Der Palmsonntag ist rot, die Wochentage sind violett.",
   "about_seasonTriduum": "Das Heilige Österliche Triduum, von der Abendmahlsmesse am Gründonnerstag bis zum Abend des Ostersonntags, ist der Höhepunkt des ganzen Kirchenjahres: das Leiden, Sterben und die Auferstehung des Herrn.",
-  "about_seasonEaster": "Die Osterzeit sind die fünfzig Tage vom Ostersonntag bis Pfingsten, gefeiert wie ein einziger großer Sonntag der Freude über den auferstandenen Herrn. Ihre Farbe ist Weiß, an Pfingsten Rot."
+  "about_seasonEaster": "Die Osterzeit sind die fünfzig Tage vom Ostersonntag bis Pfingsten, gefeiert wie ein einziger großer Sonntag der Freude über den auferstandenen Herrn. Ihre Farbe ist Weiß, an Pfingsten Rot.",
+  "listHere": "Kirchen hier auflisten",
+  "churchesIn": "Kirchen in {place}",
+  "churchesInView": "Kirchen in dieser Ansicht",
+  "areaIntro": "Die nächste zuerst. Tippe für Details.",
+  "areaIntroCenter": "Die zur Mitte nächste zuerst. Tippe für Details.",
+  "areaMore": "Die {k} nächsten von {n}. Zoome hinein, um den Rest zu sehen.",
+  "areaNone": "Hier sind noch keine Kirchen kartiert.",
+  "areaTag": "{n} Kirchen in {place}",
+  "areaTagView": "{n} Kirchen in dieser Ansicht",
+  "areaTip": "Klicken, um die Kirchen dieser Stadt aufzulisten",
+  "noneInRange": "Keine Kirche der gewählten Arten im Umkreis von {dist}. Versuche eine größere Entfernung oder zeige oben mehr Arten."
 }

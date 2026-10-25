@@ -383,5 +383,16 @@
   "about_seasonLent": "An Kuaresma amo an kap-atan nga adlaw han pag-ampo, pagpuasa ngan paghatag tikang ha Miyerkoles han Abo tubtob ha Huwebes Santo, diin an mga matinumanon nabalik ha Dios pinaagi han paghinulsol ngan nag-aandam ha pagsaulog han Misteryo Paskwal. Lila an kolor hini, ngan rosas ha Domingo han Laetare.",
   "about_seasonHolyWeek": "An Semana Santa nagtitikang ha Domingo han Palaspas, diin ginhihinumdoman han Simbahan an pagsulod han aton Ginoo ha Jerusalem, ngan nagdadara ngadto ha Baraan nga Triduo han Iya Pasyon, Kamatayon ngan Pagkabanhaw. Pula an Domingo han Palaspas; lila an mga adlaw han semana.",
   "about_seasonTriduum": "An Baraan nga Triduo Paskwal, tikang ha Misa han Panihapon han Ginoo ha gab-i han Huwebes Santo tubtob ha gab-i han Domingo han Pagkabanhaw, amo an kahitaasan han bug-os nga tuig han liturhiya: an Pasyon, Kamatayon ngan Pagkabanhaw han Ginoo.",
-  "about_seasonEaster": "An Panahon han Pagkabanhaw amo an kalim-an nga adlaw tikang ha Domingo han Pagkabanhaw tubtob ha Pentekostes, ginsasaulog sugad nga usa nga daku nga Domingo han kalipay ha nabanhaw nga Ginoo. Busag an kolor hini, ngan pula ha Pentekostes."
+  "about_seasonEaster": "An Panahon han Pagkabanhaw amo an kalim-an nga adlaw tikang ha Domingo han Pagkabanhaw tubtob ha Pentekostes, ginsasaulog sugad nga usa nga daku nga Domingo han kalipay ha nabanhaw nga Ginoo. Busag an kolor hini, ngan pula ha Pentekostes.",
+  "listHere": "Ilista an mga simbahan dinhi",
+  "churchesIn": "Mga simbahan ha {place}",
+  "churchesInView": "Mga simbahan hini nga view",
+  "areaIntro": "An pinakahirani ha imo siyahan. Pindota an usa para ha detalye.",
+  "areaIntroCenter": "An pinakahirani ha butnga siyahan. Pindota an usa para ha detalye.",
+  "areaMore": "Iginpapakita an {k} nga pinakahirani ha {n}. I-zoom in basi makita an iba.",
+  "areaNone": "Waray pa simbahan nga namapa dinhi.",
+  "areaTag": "Iginpapakita an {n} nga simbahan ha {place}",
+  "areaTagView": "Iginpapakita an {n} nga simbahan hini nga view",
+  "areaTip": "I-klik basi ilista an mga simbahan hini nga syudad",
+  "noneInRange": "Waray simbahan han mga klase nga imo ginpili ha sulod han {dist}. Testinga an mas hirayo nga distansya o ipakita an dugang nga klase ha igbaw."
 }

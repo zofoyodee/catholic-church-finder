@@ -412,5 +412,16 @@
   "about_seasonLent": "Pôstne obdobie je štyridsať dní modlitby, pôstu a almužny od Popolcovej stredy po Zelený štvrtok, keď sa veriaci kajúcne obracajú k Bohu a pripravujú sa na slávenie veľkonočného tajomstva. Farba je fialová, na nedeľu Laetare ružová.",
   "about_seasonHolyWeek": "Veľký týždeň sa začína Kvetnou nedeľou, keď Cirkev spomína na vstup nášho Pána do Jeruzalema, a vedie k Svätému trojdniu jeho umučenia, smrti a zmŕtvychvstania. Kvetná nedeľa je červená, všedné dni fialové.",
   "about_seasonTriduum": "Sväté veľkonočné trojdnie, od večernej omše Pánovej večere na Zelený štvrtok po večer Veľkonočnej nedele, je vrcholom celého liturgického roka: umučenie, smrť a zmŕtvychvstanie Pána.",
-  "about_seasonEaster": "Veľkonočné obdobie je päťdesiat dní od Veľkonočnej nedele po Zoslanie Ducha Svätého, slávených ako jedna veľká nedeľa radosti zo vzkrieseného Pána. Farba je biela, na Turíce červená."
+  "about_seasonEaster": "Veľkonočné obdobie je päťdesiat dní od Veľkonočnej nedele po Zoslanie Ducha Svätého, slávených ako jedna veľká nedeľa radosti zo vzkrieseného Pána. Farba je biela, na Turíce červená.",
+  "listHere": "Zoznam kostolov tu",
+  "churchesIn": "Kostoly: {place}",
+  "churchesInView": "Kostoly v tomto zobrazení",
+  "areaIntro": "Najbližšie k vám najprv. Ťuknite pre podrobnosti.",
+  "areaIntroCenter": "Najbližšie k stredu najprv. Ťuknite pre podrobnosti.",
+  "areaMore": "Zobrazených {k} najbližších z {n}. Priblížte pre ostatné.",
+  "areaNone": "Tu zatiaľ nie sú na mape žiadne kostoly.",
+  "areaTag": "Kostoly: {place} ({n})",
+  "areaTagView": "Kostoly v tomto zobrazení: {n}",
+  "areaTip": "Kliknite pre zoznam kostolov tohto mesta",
+  "noneInRange": "Do {dist} nie je žiadny kostol zvolených druhov. Skúste väčšiu vzdialenosť alebo hore zobrazte viac druhov."
 }

@@ -383,5 +383,16 @@
   "about_seasonLent": "Rendi ndiwo mazuva makumi mana eminamato, kutsanya nekupa rubatsiro kubva paChitatu cheMadota kusvika paChina Chitsvene, apo vatendi vanodzokera kuna Mwari nekutendeuka uye vanogadzirira kupemberera Chakavanzika cheIsita. Ruvara rwayo ndepepuru, nepingi paSvondo reLaetare.",
   "about_seasonHolyWeek": "Svondo Dzvene rinotanga paSvondo reMichindwe, apo Chechi inorangarira kupinda kwaIshe wedu muJerusarema, uye rinotungamira kuMazuva Matatu Matsvene eKutambudzika, Rufu neKumuka kwake. Svondo reMichindwe idzvuku; mazuva evhiki ipepuru.",
   "about_seasonTriduum": "Mazuva Matatu Matsvene eIsita, kubva paMisa yeChirairo chaIshe manheru eChina Chitsvene kusvika manheru eSvondo reIsita, ndiyo pamusoro pegore rose rekunamata: Kutambudzika, Rufu neKumuka kwaIshe.",
-  "about_seasonEaster": "Mwaka weIsita ndiwo mazuva makumi mashanu kubva paSvondo reIsita kusvika paPendekosti, anopembererwa seSvondo rimwe guru remufaro munaIshe akamuka. Ruvara rwawo ndichena, nedzvuku paPendekosti."
+  "about_seasonEaster": "Mwaka weIsita ndiwo mazuva makumi mashanu kubva paSvondo reIsita kusvika paPendekosti, anopembererwa seSvondo rimwe guru remufaro munaIshe akamuka. Ruvara rwawo ndichena, nedzvuku paPendekosti.",
+  "listHere": "Ratidza machechi pano",
+  "churchesIn": "Machechi muna {place}",
+  "churchesInView": "Machechi mumufananidzo uyu",
+  "areaIntro": "Iri pedyo newe kutanga. Baya imwe kuti uone zvizere.",
+  "areaIntroCenter": "Iri pedyo nepakati kutanga. Baya imwe kuti uone zvizere.",
+  "areaMore": "Kuratidza {k} dziri pedyo pa{n}. Swedera kuti uone dzimwe.",
+  "areaNone": "Hapasati pava nemachechi pamepu pano.",
+  "areaTag": "Kuratidza machechi {n} muna {place}",
+  "areaTagView": "Kuratidza machechi {n} mumufananidzo uyu",
+  "areaTip": "Dzvanya kuti uone machechi eguta iri",
+  "noneInRange": "Hapana chechi yemhando dzawasarudza iri mukati me{dist}. Edza chinhambwe chirefu kana kuratidza mhando dzakawanda kumusoro."
 }

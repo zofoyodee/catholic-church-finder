@@ -391,5 +391,16 @@
   "about_seasonLent": "A Quaresma são os quarenta dias de oração, jejum e esmola da Quarta-feira de Cinzas à Quinta-feira Santa, quando os fiéis voltam a Deus pela penitência e se preparam para celebrar o Mistério Pascal. Sua cor é o roxo, com o rosa no domingo Laetare.",
   "about_seasonHolyWeek": "A Semana Santa começa no Domingo de Ramos, quando a Igreja recorda a entrada de nosso Senhor em Jerusalém, e conduz ao Sagrado Tríduo de sua Paixão, Morte e Ressurreição. O Domingo de Ramos é vermelho; os dias da semana, roxos.",
   "about_seasonTriduum": "O Sagrado Tríduo Pascal, da Missa vespertina da Ceia do Senhor na Quinta-feira Santa até a tarde do Domingo de Páscoa, é o ápice de todo o ano litúrgico: a Paixão, Morte e Ressurreição do Senhor.",
-  "about_seasonEaster": "O Tempo Pascal são os cinquenta dias do Domingo de Páscoa a Pentecostes, celebrados como um só grande domingo de alegria no Senhor ressuscitado. Sua cor é o branco, e o vermelho em Pentecostes."
+  "about_seasonEaster": "O Tempo Pascal são os cinquenta dias do Domingo de Páscoa a Pentecostes, celebrados como um só grande domingo de alegria no Senhor ressuscitado. Sua cor é o branco, e o vermelho em Pentecostes.",
+  "listHere": "Ver igrejas aqui",
+  "churchesIn": "Igrejas em {place}",
+  "churchesInView": "Igrejas nesta visão",
+  "areaIntro": "A mais próxima de você primeiro. Toque em uma para ver detalhes.",
+  "areaIntroCenter": "A mais próxima do centro primeiro. Toque em uma para ver detalhes.",
+  "areaMore": "Mostrando as {k} mais próximas de {n}. Aproxime o mapa para ver o resto.",
+  "areaNone": "Ainda não há igrejas no mapa aqui.",
+  "areaTag": "Mostrando {n} igrejas em {place}",
+  "areaTagView": "Mostrando {n} igrejas nesta visão",
+  "areaTip": "Clique para ver as igrejas desta cidade",
+  "noneInRange": "Nenhuma igreja dos tipos escolhidos está a até {dist}. Tente uma distância maior ou mostre mais tipos acima."
 }

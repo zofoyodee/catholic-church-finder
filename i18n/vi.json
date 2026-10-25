@@ -375,5 +375,16 @@
   "about_seasonLent": "Mùa Chay là bốn mươi ngày cầu nguyện, ăn chay và bố thí từ Thứ Tư Lễ Tro đến Thứ Năm Tuần Thánh, khi các tín hữu trở về với Thiên Chúa trong sám hối và chuẩn bị cử hành Mầu nhiệm Vượt Qua. Màu phụng vụ là tím, và hồng vào Chúa nhật Laetare.",
   "about_seasonHolyWeek": "Tuần Thánh bắt đầu với Chúa nhật Lễ Lá, khi Hội Thánh tưởng nhớ Chúa chúng ta vào thành Giêrusalem, và dẫn đến Tam Nhật Thánh về cuộc Thương Khó, Chịu Chết và Phục Sinh của Người. Chúa nhật Lễ Lá màu đỏ; các ngày trong tuần màu tím.",
   "about_seasonTriduum": "Tam Nhật Vượt Qua Thánh, từ Thánh lễ Tiệc Ly chiều Thứ Năm Tuần Thánh đến chiều Chúa nhật Phục Sinh, là đỉnh cao của toàn bộ năm phụng vụ: cuộc Thương Khó, Chịu Chết và Phục Sinh của Chúa.",
-  "about_seasonEaster": "Mùa Phục Sinh là năm mươi ngày từ Chúa nhật Phục Sinh đến Lễ Hiện Xuống, được cử hành như một Chúa nhật trọng đại đầy niềm vui trong Chúa Phục Sinh. Màu phụng vụ là trắng, và đỏ vào Lễ Hiện Xuống."
+  "about_seasonEaster": "Mùa Phục Sinh là năm mươi ngày từ Chúa nhật Phục Sinh đến Lễ Hiện Xuống, được cử hành như một Chúa nhật trọng đại đầy niềm vui trong Chúa Phục Sinh. Màu phụng vụ là trắng, và đỏ vào Lễ Hiện Xuống.",
+  "listHere": "Liệt kê nhà thờ ở đây",
+  "churchesIn": "Nhà thờ ở {place}",
+  "churchesInView": "Nhà thờ trong khung nhìn này",
+  "areaIntro": "Gần bạn nhất trước. Chạm để xem chi tiết.",
+  "areaIntroCenter": "Gần giữa bản đồ nhất trước. Chạm để xem chi tiết.",
+  "areaMore": "Đang hiện {k} nhà thờ gần nhất trong {n}. Phóng to để xem phần còn lại.",
+  "areaNone": "Chưa có nhà thờ nào được ghi trên bản đồ ở đây.",
+  "areaTag": "Đang hiện {n} nhà thờ ở {place}",
+  "areaTagView": "Đang hiện {n} nhà thờ trong khung nhìn này",
+  "areaTip": "Bấm để liệt kê nhà thờ của thành phố này",
+  "noneInRange": "Không có nhà thờ thuộc loại bạn chọn trong vòng {dist}. Hãy thử khoảng cách xa hơn hoặc hiện thêm loại ở trên."
 }

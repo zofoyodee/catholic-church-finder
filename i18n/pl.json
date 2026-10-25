@@ -421,5 +421,16 @@
   "about_seasonLent": "Wielki Post to czterdzieści dni modlitwy, postu i jałmużny od Środy Popielcowej do Wielkiego Czwartku, gdy wierni nawracają się do Boga przez pokutę i przygotowują się do świętowania Misterium Paschalnego. Jego kolor to fiolet, a w niedzielę Laetare róż.",
   "about_seasonHolyWeek": "Wielki Tydzień zaczyna się w Niedzielę Palmową, gdy Kościół wspomina wjazd naszego Pana do Jerozolimy, i prowadzi do Świętego Triduum Jego Męki, Śmierci i Zmartwychwstania. Niedziela Palmowa jest czerwona, dni powszednie fioletowe.",
   "about_seasonTriduum": "Święte Triduum Paschalne, od wieczornej Mszy Wieczerzy Pańskiej w Wielki Czwartek do wieczora Niedzieli Wielkanocnej, jest szczytem całego roku liturgicznego: Męka, Śmierć i Zmartwychwstanie Pana.",
-  "about_seasonEaster": "Okres Wielkanocny to pięćdziesiąt dni od Niedzieli Wielkanocnej do Zesłania Ducha Świętego, obchodzonych jak jedna wielka niedziela radości ze zmartwychwstałego Pana. Jego kolor to biel, a w Zesłanie Ducha Świętego czerwień."
+  "about_seasonEaster": "Okres Wielkanocny to pięćdziesiąt dni od Niedzieli Wielkanocnej do Zesłania Ducha Świętego, obchodzonych jak jedna wielka niedziela radości ze zmartwychwstałego Pana. Jego kolor to biel, a w Zesłanie Ducha Świętego czerwień.",
+  "listHere": "Pokaż kościoły tutaj",
+  "churchesIn": "Kościoły: {place}",
+  "churchesInView": "Kościoły w tym widoku",
+  "areaIntro": "Najbliższe najpierw. Dotknij, aby zobaczyć szczegóły.",
+  "areaIntroCenter": "Najbliższe środka najpierw. Dotknij, aby zobaczyć szczegóły.",
+  "areaMore": "Najbliższe {k} z {n}. Przybliż, aby zobaczyć resztę.",
+  "areaNone": "Nie ma tu jeszcze kościołów na mapie.",
+  "areaTag": "Kościoły: {place} ({n})",
+  "areaTagView": "Kościoły w tym widoku: {n}",
+  "areaTip": "Kliknij, aby zobaczyć kościoły tego miasta",
+  "noneInRange": "Brak kościoła wybranych rodzajów w promieniu {dist}. Spróbuj większej odległości lub pokaż więcej rodzajów powyżej."
 }

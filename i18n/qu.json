@@ -383,5 +383,16 @@
   "about_seasonLent": "Cuaresmaqa Uchpa Miércolesmanta Jueves Santokama tawa chunka p'unchawkunam, mañakuypa, ayunaypa, qunapa; iñiqkunaqa pesapakuywan Diosman kutirinku, Pascuap Misterionta raymichanankupaq wakichikunku. Llimp'inqa morado, Laetare domingopi rosado.",
   "about_seasonHolyWeek": "Semana Santaqa Ramos Domingopi qallarin, Iglesia Apu Yayanchikpa Jerusalenman yaykusqanta yuyarin, Pasionninpa, Wañuyninpa, Kawsarimuyninpa Santo Triduonman pusan. Ramos Domingoqa puka; semanap p'unchawninkunaqa morado.",
   "about_seasonTriduum": "Santo Triduo Pascualqa, Jueves Santo tutapi Señorpa Cenan Misamanta Pascua Domingo tutakama, tukuy liturgia watap patanmi: Señorpa Pasionnin, Wañuynin, Kawsarimuyninpas.",
-  "about_seasonEaster": "Pascua pachaqa Pascua Domingomanta Pentecosteskama pichqa chunka p'unchawkunam, kawsarimuq Señorpi kusikuypa huk hatun domingon hina raymichasqa. Llimp'inqa yuraq, Pentecostespi puka."
+  "about_seasonEaster": "Pascua pachaqa Pascua Domingomanta Pentecosteskama pichqa chunka p'unchawkunam, kawsarimuq Señorpi kusikuypa huk hatun domingon hina raymichasqa. Llimp'inqa yuraq, Pentecostespi puka.",
+  "listHere": "Kaypi iglesiakunata qhawachiy",
+  "churchesIn": "{place}pi iglesiakuna",
+  "churchesInView": "Kay qhawaypi iglesiakuna",
+  "areaIntro": "Qamman aswan qayllapi kaq ñawpaqta. Hukninta llapiy aswanta yachanaykipaq.",
+  "areaIntroCenter": "Chawpiman aswan qayllapi kaq ñawpaqta. Hukninta llapiy aswanta yachanaykipaq.",
+  "areaMore": "{n}manta {k} aswan qayllapi kaqkunata qhawachichkan. Hatunyachiy wakinkunata qhawanaykipaq.",
+  "areaNone": "Kaypiqa manaraq iglesiakuna mapapi kanchu.",
+  "areaTag": "{place}pi {n} iglesiakunata qhawachichkan",
+  "areaTagView": "Kay qhawaypi {n} iglesiakunata qhawachichkan",
+  "areaTip": "Kay llaqtap iglesiankunata qhawanaykipaq ñit'iy",
+  "noneInRange": "{dist} ukhupi mana akllasqayki laya iglesia kanchu. Aswan karuta maskay utaq hanaqpi aswan layakunata qhawachiy."
 }

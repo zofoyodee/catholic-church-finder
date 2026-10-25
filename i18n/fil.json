@@ -391,5 +391,16 @@
   "about_seasonLent": "Ang Kuwaresma ay ang apatnapung araw ng panalangin, pag-aayuno at paglilimos mula Miyerkules ng Abo hanggang Huwebes Santo, kung kailan nagbabalik-loob ang mga mananampalataya sa Diyos sa pagsisisi at naghahanda sa pagdiriwang ng Misteryo Paskuwal. Lila ang kulay nito, at rosas sa Linggo ng Laetare.",
   "about_seasonHolyWeek": "Nagsisimula ang Semana Santa sa Linggo ng Palaspas, kung kailan ginugunita ng Simbahan ang pagpasok ng ating Panginoon sa Jerusalem, at humahantong sa Banal na Triduo ng Kanyang Pagpapakasakit, Kamatayan at Muling Pagkabuhay. Pula ang Linggo ng Palaspas; lila ang mga karaniwang araw.",
   "about_seasonTriduum": "Ang Banal na Triduo Paskuwal, mula sa Misa ng Huling Hapunan sa gabi ng Huwebes Santo hanggang sa gabi ng Linggo ng Pagkabuhay, ang rurok ng buong taon ng liturhiya: ang Pagpapakasakit, Kamatayan at Muling Pagkabuhay ng Panginoon.",
-  "about_seasonEaster": "Ang Panahon ng Muling Pagkabuhay ay ang limampung araw mula Linggo ng Pagkabuhay hanggang Pentekostes, ipinagdiriwang bilang isang dakilang Linggo ng galak sa muling nabuhay na Panginoon. Puti ang kulay nito, at pula sa Pentekostes."
+  "about_seasonEaster": "Ang Panahon ng Muling Pagkabuhay ay ang limampung araw mula Linggo ng Pagkabuhay hanggang Pentekostes, ipinagdiriwang bilang isang dakilang Linggo ng galak sa muling nabuhay na Panginoon. Puti ang kulay nito, at pula sa Pentekostes.",
+  "listHere": "Ilista ang mga simbahan dito",
+  "churchesIn": "Mga simbahan sa {place}",
+  "churchesInView": "Mga simbahan sa view na ito",
+  "areaIntro": "Pinakamalapit sa iyo muna. Pindutin ang isa para sa detalye.",
+  "areaIntroCenter": "Pinakamalapit sa gitna muna. Pindutin ang isa para sa detalye.",
+  "areaMore": "Ipinapakita ang {k} pinakamalapit sa {n}. Mag-zoom in para makita ang iba.",
+  "areaNone": "Wala pang simbahang nakamapa rito.",
+  "areaTag": "Ipinapakita ang {n} simbahan sa {place}",
+  "areaTagView": "Ipinapakita ang {n} simbahan sa view na ito",
+  "areaTip": "I-click para ilista ang mga simbahan ng lungsod na ito",
+  "noneInRange": "Walang simbahan sa mga uring pinili mo sa loob ng {dist}. Subukan ang mas malayong distansya o magpakita ng mas maraming uri sa itaas."
 }

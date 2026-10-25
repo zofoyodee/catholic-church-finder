@@ -383,5 +383,16 @@
   "about_seasonLent": "Lẹ́ǹtì jẹ́ ogójì ọjọ́ àdúrà, ààwẹ̀ àti ọrẹ àánú láti Ọjọ́rú Eérú dé Ọjọ́bọ̀ Mímọ́, nígbà tí àwọn onígbàgbọ́ ń padà sọ́dọ̀ Ọlọ́run nínú ìrònúpìwàdà, tí wọ́n sì ń múra láti ṣe àjọyọ̀ Ohun Ìjìnlẹ̀ Àjíǹde. Àwọ̀ rẹ̀ jẹ́ elése àlùkò, àti pínkì ní Ọjọ́ Àìkú Laetare.",
   "about_seasonHolyWeek": "Ọ̀sẹ̀ Mímọ́ bẹ̀rẹ̀ ní Ọjọ́ Àìkú Ọ̀pẹ, nígbà tí Ìjọ ń rántí wíwọ Olúwa wa sí Jerúsálẹ́mù, ó sì ń tọ́ni lọ sí Ọjọ́ Mẹ́ta Mímọ́ ti Ìjìyà, Ikú àti Àjíǹde Rẹ̀. Ọjọ́ Àìkú Ọ̀pẹ jẹ́ pupa; àwọn ọjọ́ ọ̀sẹ̀ jẹ́ elése àlùkò.",
   "about_seasonTriduum": "Ọjọ́ Mẹ́ta Mímọ́ ti Àjíǹde, láti Mísà Oúnjẹ Alẹ́ Olúwa ní ìrọ̀lẹ́ Ọjọ́bọ̀ Mímọ́ dé ìrọ̀lẹ́ Ọjọ́ Àìkú Àjíǹde, ni òkè gbogbo ọdún ìjọsìn: Ìjìyà, Ikú àti Àjíǹde Olúwa.",
-  "about_seasonEaster": "Àsìkò Àjíǹde jẹ́ àádọ́ta ọjọ́ láti Ọjọ́ Àìkú Àjíǹde dé Pẹ́ńtíkọ́sì, tí a ń ṣe bí Ọjọ́ Àìkú ńlá kan ti ayọ̀ nínú Olúwa tí ó jíǹde. Àwọ̀ rẹ̀ jẹ́ funfun, àti pupa ní Pẹ́ńtíkọ́sì."
+  "about_seasonEaster": "Àsìkò Àjíǹde jẹ́ àádọ́ta ọjọ́ láti Ọjọ́ Àìkú Àjíǹde dé Pẹ́ńtíkọ́sì, tí a ń ṣe bí Ọjọ́ Àìkú ńlá kan ti ayọ̀ nínú Olúwa tí ó jíǹde. Àwọ̀ rẹ̀ jẹ́ funfun, àti pupa ní Pẹ́ńtíkọ́sì.",
+  "listHere": "Ṣe àkójọ ilé ìjọsìn níbí",
+  "churchesIn": "Àwọn ilé ìjọsìn ní {place}",
+  "churchesInView": "Àwọn ilé ìjọsìn nínú ìwòye yìí",
+  "areaIntro": "Èyí tó sún mọ́ ọ jùlọ ní àkọ́kọ́. Tẹ ọ̀kan láti rí kúlẹ̀kúlẹ̀.",
+  "areaIntroCenter": "Èyí tó sún mọ́ àárín jùlọ ní àkọ́kọ́. Tẹ ọ̀kan láti rí kúlẹ̀kúlẹ̀.",
+  "areaMore": "Ń fi {k} tó sún mọ́ jùlọ hàn nínú {n}. Sún mọ́ láti rí ìyókù.",
+  "areaNone": "Kò tíì sí ilé ìjọsìn lórí máàpù níbí.",
+  "areaTag": "Ń fi ilé ìjọsìn {n} hàn ní {place}",
+  "areaTagView": "Ń fi ilé ìjọsìn {n} hàn nínú ìwòye yìí",
+  "areaTip": "Tẹ láti rí àwọn ilé ìjọsìn ìlú yìí",
+  "noneInRange": "Kò sí ilé ìjọsìn irú tí o yàn láàrin {dist}. Gbìyànjú ìjìnnà tó pọ̀ jù tàbí fi irú púpọ̀ sí i hàn lókè."
 }
