@@ -10,6 +10,10 @@ const $ = (id) => document.getElementById(id);
 const phone = () => innerWidth <= 640;
 const rad = Math.PI / 180;
 const X = '<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+// page language: the main script's tr() with its English fallback
+const i18n = window.ccfI18n;
+const T = (k, v) => i18n ? i18n.tr(k, v) : k;
+const loc = () => (i18n && i18n.locale) || 'en';
 
 /* ---------- settings kept in this browser ---------- */
 const VIEW_KEY = 'ccf-view';
@@ -107,7 +111,11 @@ function liturgicalDay(n, cal) {
   out.md = md; out.y = y; out.n = n;
   return out;
 }
-const RANK_NAME = { S: 'Solemnity', F: 'Feast', M: 'Memorial', m: 'Optional memorial' };
+const RANK_KEY = { S: 'rankS', F: 'rankF', M: 'rankM', m: 'rankm' };
+const rankName = (r) => RANK_KEY[r] ? T(RANK_KEY[r]) : '';
+const SEASON_KEY = { 'Advent': 'seasonAdvent', 'Christmas Time': 'seasonChristmas', 'Ordinary Time': 'seasonOrdinary', 'Lent': 'seasonLent', 'Holy Week': 'seasonHolyWeek', 'Easter Triduum': 'seasonTriduum', 'Easter Time': 'seasonEaster' };
+const seasonName = (x) => SEASON_KEY[x] ? T(SEASON_KEY[x]) : x;
+const colorName = (c) => T('color_' + (COLORS[c] ? c : 'green'));
 function churchOfDay(day, cal) {
   const key = day.saint ? day.saint.md : day.key;
   if (key && cal.featured[key] != null) return { i: cal.featured[key], why: 'feast' };
@@ -133,9 +141,9 @@ function seasonPill() {
     document.querySelector('.brand').appendChild(b);
     b.addEventListener('click', () => showToday($('today').hidden));
   }
-  const label = today.season === 'Ordinary Time' && today.week ? `Ordinary Time · Week ${today.week}` : today.season || today.title;
+  const label = today.season === 'Ordinary Time' && today.week ? T('ordinaryWeek', { season: seasonName('Ordinary Time'), w: today.week }) : today.season ? seasonName(today.season) : today.title;
   b.innerHTML = `<i aria-hidden="true"></i><span>${esc(label)}</span>`;
-  b.title = `${today.title}. The liturgical colour of the day is ${(COLORS[today.color] || COLORS.green).name}. Tap for the church of the day.`;
+  b.title = T('seasonTip', { title: today.title, color: colorName(today.color) });
 }
 
 /* ---------- church of the day ---------- */
@@ -143,25 +151,25 @@ const TODAY_KEY = 'ccf-today-closed';
 let cal = null, cotd = null;
 function buildTodayCard() {
   const el = document.createElement('aside');
-  el.id = 'today'; el.className = 'float-card'; el.hidden = true; el.setAttribute('aria-label', 'Today in the Church');
+  el.id = 'today'; el.className = 'float-card'; el.hidden = true; el.setAttribute('aria-label', T('todayLabel'));
   document.body.appendChild(el);
   return el;
 }
 async function fillToday() {
   const el = $('today') || buildTodayCard();
   const d = fromNo(today.n);
-  const date = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
+  const date = d.toLocaleDateString(loc(), { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
   let rec = null; try { rec = await ccf.shardFor(cotd.i); } catch (e) {}
-  const name = rec ? rec[0] : 'A church on the globe';
+  const name = rec ? rec[0] : T('aChurch');
   const where = rec ? [rec[2], ccf.countryName(rec[5])].filter(Boolean).join(', ') : '';
   const s = today.saint;
-  const why = cotd.why === 'feast' && s ? `Its feast is today` : cotd.why === 'named' && s ? `Named for today's ${s.rank === 'S' || s.rank === 'F' ? 'feast' : 'saint'}` : 'Featured today';
-  el.innerHTML = `<button class="x" id="todayClose" aria-label="Close today's card">${X}</button>
-    <div class="kick"><b>${esc(date)}</b> · ${esc(today.season || 'Today')}</div>
+  const why = cotd.why === 'feast' && s ? T('whyFeast') : cotd.why === 'named' && s ? T(s.rank === 'S' || s.rank === 'F' ? 'whyNamedFeast' : 'whyNamedSaint') : T('whyFeatured');
+  el.innerHTML = `<button class="x" id="todayClose" aria-label="${esc(T('todayClose'))}">${X}</button>
+    <div class="kick"><b>${esc(date)}</b> · ${esc(today.season ? seasonName(today.season) : T('todayWord'))}</div>
     <div class="saint"><div class="pic"><div class="ph" aria-hidden="true">✠</div></div>
-      <div><h2>${esc(s ? s.title : today.title)}</h2><div class="rank">${esc(s ? (RANK_NAME[s.rank] || '') + (s.title !== today.title && today.title && !(s.rank === 'S' || s.rank === 'F') ? ' · ' + today.title : '') : '')}</div></div></div>
-    <button class="cotd" id="cotdGo"><small>Church of the day · ${esc(why)}</small><b>${esc(name)}</b><span>${esc(where)}</span></button>
-    <div class="row"><button class="btn primary" id="cotdVisit">Visit on the globe</button>${s && s.wiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(s.wiki.replace(/ /g, '_'))}" target="_blank" rel="noopener">About ${esc(s.title.replace(/^The /, 'the '))}</a>` : ''}</div>`;
+      <div><h2>${esc(s ? s.title : today.title)}</h2><div class="rank">${esc(s ? rankName(s.rank) + (s.title !== today.title && today.title && !(s.rank === 'S' || s.rank === 'F') ? ' · ' + today.title : '') : '')}</div></div></div>
+    <button class="cotd" id="cotdGo"><small>${esc(T('cotd'))} · ${esc(why)}</small><b>${esc(name)}</b><span>${esc(where)}</span></button>
+    <div class="row"><button class="btn primary" id="cotdVisit">${esc(T('visitGlobe'))}</button>${s && s.wiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(s.wiki.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(T('aboutSaint', { name: i18n && i18n.lang !== 'en' ? s.title : s.title.replace(/^The /, 'the ') }))}</a>` : ''}</div>`;
   const go = () => { showToday(false, true); ccf.selectChurch(cotd.i, { fly: true }); };
   $('cotdGo').addEventListener('click', go);
   $('cotdVisit').addEventListener('click', go);
@@ -175,7 +183,7 @@ async function saintPicture(title) {
     const src = j.thumbnail && j.thumbnail.source; if (!src || !/upload\.wikimedia\.org/.test(src)) return;
     const box = document.querySelector('#today .pic'); if (!box) return;
     const img = new Image(); img.referrerPolicy = 'no-referrer'; img.alt = j.title || ''; img.src = src;
-    await img.decode(); box.replaceChildren(img); img.title = 'Image from Wikipedia: ' + (j.title || '');
+    await img.decode(); box.replaceChildren(img); img.title = T('imgWiki', { name: j.title || '' });
   } catch (e) {}
 }
 function showToday(open, keep) {
@@ -201,8 +209,8 @@ function ctrlButton(id, title, svg, before) {
   const ref = $(before); ref.parentNode.insertBefore(b, ref);
   return b;
 }
-const tourBtn = ctrlButton('tourBtn', 'Guided tours', '<svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 17.2c4-1 2.5-5.2 6-6.4 1.8-.6 3-1.6 3.4-2.8"/><path d="M5 5.5l2 2M7 5.5l-2 2"/></svg>', 'spin');
-const viewBtn = ctrlButton('viewBtn', 'Globe view', '<svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg>', 'spin');
+const tourBtn = ctrlButton('tourBtn', T('tours'), '<svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 17.2c4-1 2.5-5.2 6-6.4 1.8-.6 3-1.6 3.4-2.8"/><path d="M5 5.5l2 2M7 5.5l-2 2"/></svg>', 'spin');
+const viewBtn = ctrlButton('viewBtn', T('globeView'), '<svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg>', 'spin');
 tourBtn.setAttribute('aria-expanded', 'false'); tourBtn.setAttribute('aria-controls', 'tours');
 viewBtn.setAttribute('aria-expanded', 'false'); viewBtn.setAttribute('aria-controls', 'viewMenu');
 
@@ -222,12 +230,12 @@ let tours = null;
 const tour = { t: null, k: 0, auto: true, timer: 0, t0: 0, dwell: 11000, raf: 0, flying: false, spinWas: false };
 const toursEl = document.createElement('aside');
 toursEl.id = 'tours'; toursEl.className = 'favs'; toursEl.hidden = true; toursEl.setAttribute('aria-labelledby', 'toursTitle');
-toursEl.innerHTML = `<header><h2 id="toursTitle">Guided tours</h2><button class="x" id="toursClose" aria-label="Close tours">${X}</button></header><ul id="tourList"></ul><p class="note">The globe flies from stop to stop on its own. Drag the globe to pause, or step through with the arrows.</p>`;
+toursEl.innerHTML = `<header><h2 id="toursTitle"></h2><button class="x" id="toursClose">${X}</button></header><ul id="tourList"></ul><p class="note" id="toursNote"></p>`;
 document.body.appendChild(toursEl);
 function showTours(open) {
   if (open) closeOthers('tours');
   toursEl.hidden = !open; tourBtn.setAttribute('aria-expanded', open); tourBtn.setAttribute('aria-pressed', open);
-  if (open) loadTours().then(renderTourList).catch(() => { $('tourList').innerHTML = '<p class="empty">The tours did not load. Check your connection.</p>'; });
+  if (open) loadTours().then(renderTourList).catch(() => { $('tourList').innerHTML = `<p class="empty">${esc(T('toursFailed'))}</p>`; });
 }
 tourBtn.addEventListener('click', () => showTours(toursEl.hidden));
 $('toursClose').addEventListener('click', () => showTours(false));
@@ -235,12 +243,12 @@ function loadTours() { if (!tours) tours = ccf.getJSON('data/tours.json').then(j
 async function renderTourList() {
   const list = await loadTours();
   const glyph = { marian: 'M', camino: '✦', basilicas: '✠', cathedrals: '♱' };
-  $('tourList').innerHTML = list.map(t => `<li><button class="tour" data-t="${esc(t.id)}" style="--c:${esc(t.color)}"><span class="ic" aria-hidden="true">${glyph[t.id] || '✠'}</span><span><b>${esc(t.title)}</b><small>${esc(t.sub)} · ${t.stops.length} stops</small></span></button></li>`).join('');
+  $('tourList').innerHTML = list.map(t => `<li><button class="tour" data-t="${esc(t.id)}" style="--c:${esc(t.color)}"><span class="ic" aria-hidden="true">${glyph[t.id] || '✠'}</span><span><b>${esc(t.title)}</b><small>${esc(t.sub)} · ${esc(T('stops', { n: t.stops.length }))}</small></span></button></li>`).join('');
 }
 $('tourList').addEventListener('click', (e) => { const b = e.target.closest('button[data-t]'); if (b) startTour(b.dataset.t); });
 
 const tourCard = document.createElement('aside');
-tourCard.id = 'tourCard'; tourCard.className = 'float-card'; tourCard.hidden = true; tourCard.setAttribute('aria-live', 'polite'); tourCard.setAttribute('aria-label', 'Tour guide');
+tourCard.id = 'tourCard'; tourCard.className = 'float-card'; tourCard.hidden = true; tourCard.setAttribute('aria-live', 'polite'); tourCard.setAttribute('aria-label', T('tourGuide'));
 document.body.appendChild(tourCard);
 
 function tourGeo(t) {
@@ -299,19 +307,19 @@ function renderTourCard(k) {
   tourCard.style.setProperty('--tc', t.color);
   const play = tour.auto ? '<svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>' : '<svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg>';
   const last = k === t.stops.length - 1;
-  tourCard.innerHTML = `<button class="x" id="tourExit" aria-label="End the tour">${X}</button>
-    <div class="kick"><b>${esc(t.title)}</b> · ${k < 0 ? `${t.stops.length} stops` : `Stop ${k + 1} of ${t.stops.length}`}</div>
+  tourCard.innerHTML = `<button class="x" id="tourExit" aria-label="${esc(T('tourEnd'))}">${X}</button>
+    <div class="kick"><b>${esc(t.title)}</b> · ${esc(k < 0 ? T('stops', { n: t.stops.length }) : T('stopOf', { k: k + 1, n: t.stops.length }))}</div>
     <h2>${esc(s ? s.name : t.title)}</h2>
     ${s ? `<div class="where">${esc(s.place)}</div>` : ''}
     <p>${esc(s ? s.text : t.sub + '.')}</p>
-    <div class="dots" role="tablist" aria-label="Stops">${t.stops.map((x, j) => `<button data-k="${j}" aria-current="${j === k}" aria-label="Stop ${j + 1}: ${esc(x.name)}" title="${esc(x.name)}"></button>`).join('')}</div>
+    <div class="dots" role="tablist" aria-label="${esc(T('stopsLabel'))}">${t.stops.map((x, j) => `<button data-k="${j}" aria-current="${j === k}" aria-label="${esc(T('stopName', { k: j + 1, name: x.name }))}" title="${esc(x.name)}"></button>`).join('')}</div>
     <div class="timer" aria-hidden="true"><i id="tourTimer"></i></div>
     <div class="nav">
-      <button class="btn icon" id="tourPrev" aria-label="Previous stop" ${k <= 0 ? 'disabled' : ''}><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-      <button class="btn icon" id="tourPlay" aria-label="${tour.auto ? 'Pause the tour' : 'Play the tour'}" aria-pressed="${tour.auto}">${play}</button>
-      ${s && s.i != null ? `<button class="btn" id="tourOpen">Church details</button>` : ''}
+      <button class="btn icon" id="tourPrev" aria-label="${esc(T('tourPrev'))}" ${k <= 0 ? 'disabled' : ''}><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="btn icon" id="tourPlay" aria-label="${esc(T(tour.auto ? 'tourPause' : 'tourPlay'))}" aria-pressed="${tour.auto}">${play}</button>
+      ${s && s.i != null ? `<button class="btn" id="tourOpen">${esc(T('churchDetails'))}</button>` : ''}
       <span class="grow"></span>
-      ${last ? `<button class="btn primary" id="tourDone">Finish</button>` : `<button class="btn primary" id="tourNext">${k < 0 ? 'Begin' : 'Next'} <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>`}
+      ${last ? `<button class="btn primary" id="tourDone">${esc(T('tourFinish'))}</button>` : `<button class="btn primary" id="tourNext">${esc(T(k < 0 ? 'tourBegin' : 'tourNext'))} <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>`}
     </div>`;
   tourCard.hidden = false;
   document.documentElement.style.setProperty('--tour-h', tourCard.offsetHeight + 'px');
@@ -374,15 +382,13 @@ new MutationObserver(() => { if (tour.t && $('card').hidden && tour.auto) schedu
 
 /* ---------- globe view: stars, atmosphere, day and night, satellite, density ---------- */
 const menu = document.createElement('div');
-menu.id = 'viewMenu'; menu.className = 'viewmenu'; menu.hidden = true; menu.setAttribute('role', 'dialog'); menu.setAttribute('aria-label', 'Globe view');
-const SWITCHES = [
-  ['satellite', 'Satellite imagery', 'Cloud-free Sentinel-2 photos of the Earth. Uses more data.'],
-  ['daynight', 'Day and night', 'Shades the half of the world where the sun has set.'],
-  ['sky', 'Stars and atmosphere', 'A starfield and a glowing halo around the globe.'],
-  ['density', 'Density glow', 'A soft glow where churches crowd together, when zoomed out.'],
-  ['liturgical', 'Liturgical colours', 'Accents follow the colour of the day: green, violet, white, red or rose.'],
-];
-menu.innerHTML = '<h3>Globe view</h3>' + SWITCHES.map(([k, label, hint]) => `<label><span>${label}</span><small>${hint}</small><input type="checkbox" data-k="${k}" ${view[k] ? 'checked' : ''}></label>`).join('');
+menu.id = 'viewMenu'; menu.className = 'viewmenu'; menu.hidden = true; menu.setAttribute('role', 'dialog');
+const SWITCHES = ['satellite', 'daynight', 'sky', 'density', 'liturgical'];
+function renderMenu() {
+  menu.setAttribute('aria-label', T('globeView'));
+  menu.innerHTML = `<h3>${esc(T('globeView'))}</h3>` + SWITCHES.map(k => `<label><span>${esc(T('view_' + k))}</span><small>${esc(T('view_' + k + 'Hint'))}</small><input type="checkbox" data-k="${k}" ${view[k] ? 'checked' : ''}></label>`).join('');
+}
+renderMenu();
 document.body.appendChild(menu);
 function showMenu(open) {
   menu.hidden = !open; viewBtn.setAttribute('aria-expanded', open); viewBtn.setAttribute('aria-pressed', open);
@@ -586,7 +592,19 @@ ccf.layers.then(() => {
   try { goldenPins(); } catch (e) { console.warn('golden pins', e); }
   try { applyView(); } catch (e) { console.warn('globe view', e); }
 });
-const todayReady = initToday().catch((e) => console.warn('today', e));
+const todayReady = (i18n && i18n.ready ? i18n.ready.catch(() => {}) : Promise.resolve()).then(() => { relabel(); return initToday(); }).catch((e) => console.warn('today', e));
+function relabel() {
+  for (const [b, k] of [[tourBtn, 'tours'], [viewBtn, 'globeView']]) { b.title = T(k); b.setAttribute('aria-label', T(k)); }
+  $('toursTitle').textContent = T('tours'); $('toursClose').setAttribute('aria-label', T('toursClose')); $('toursNote').textContent = T('toursNote');
+  tourCard.setAttribute('aria-label', T('tourGuide'));
+  renderMenu();
+}
+document.addEventListener('ccf-lang', () => {
+  relabel();
+  if (today) { seasonPill(); if ($('today')) $('today').setAttribute('aria-label', T('todayLabel')); if (cal && cotd) fillToday(); }
+  if (!toursEl.hidden) renderTourList();
+  if (tour.t) renderTourCard(tour.k);
+});
 ccf.opened.then(async ({ shared }) => {
   const tourId = new URLSearchParams(location.search).get('tour');
   if (tourId && !bibleMode()) { startTour(tourId); return; }
