@@ -164,7 +164,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .ctrls .count { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--gold); color: #1a1406; font-size: 11px; font-weight: 600; line-height: 18px; text-align: center; font-variant-numeric: tabular-nums; }
 .ctrls .count:empty { display: none; }
 .favs {
-  position: fixed; z-index: 9; left: max(16px, env(safe-area-inset-left, 0px)); top: calc(var(--head, 120px) + 12px); max-height: calc(100% - var(--head, 120px) - 70px); width: 320px;
+  position: fixed; z-index: 9; left: max(16px, env(safe-area-inset-left, 0px)); top: calc(var(--head, 120px) + 12px); max-height: calc(100% - var(--head, 120px) - 12px - var(--favs-gap, 58px)); width: 320px;
   display: flex; flex-direction: column; background: var(--panel-solid); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 48px #000a;
   transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
 }
@@ -1102,8 +1102,16 @@ function showFavs(open) {
   if (open) showNear(false);
   $('favs').hidden = !open; $('favOpen').setAttribute('aria-expanded', open); $('favOpen').setAttribute('aria-pressed', open);
 }
-$('favOpen').addEventListener('click', () => showFavs($('favs').hidden));
-$('favClose').addEventListener('click', () => showFavs(false));
+// the list opens with the page while there are favorites, until it is closed for this visit
+const FAVS_SHUT = 'ccf-favs-closed';
+const remember = (shut) => { try { shut ? sessionStorage.setItem(FAVS_SHUT, '1') : sessionStorage.removeItem(FAVS_SHUT); } catch (e) {} };
+$('favOpen').addEventListener('click', () => { const open = $('favs').hidden; remember(!open); showFavs(open); });
+$('favClose').addEventListener('click', () => { remember(true); showFavs(false); });
+function openFavsOnLoad() {
+  let shut = false; try { shut = !!sessionStorage.getItem(FAVS_SHUT); } catch (e) {}
+  const sp = new URLSearchParams(location.search);
+  if (favs.length && !shut && !sp.has('bible') && !sp.has('land') && sp.get('mode') !== 'bible') showFavs(true);
+}
 $('favList').addEventListener('click', (e) => {
   const rm = e.target.closest('button.rm');
   if (rm) { const i = +rm.dataset.i; favs = favs.filter(f => f.i !== i); saveFavs(); syncSave(i); return; }
@@ -1343,13 +1351,17 @@ async function checkPhotosLink(i, rec, name, town, lat, lng) {
     if (a.cat) return set(C + 'wiki/Category:' + encodeURIComponent(a.cat.replace(/ /g, '_')));
     // the church's name among Commons files, with the town unless it is written in another script
     const q = [name, /^[\u0000-\u024f\s.'-]*$/.test(town || '') ? town : ''].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    const s = await api('commons.wikimedia.org', { list: 'search', srsearch: q, srnamespace: 6, srlimit: 1, srinfo: 'totalhits', srprop: '' });
-    if (s.query && s.query.searchinfo && s.query.searchinfo.totalhits > 0) return set(C + 'w/index.php?search=' + encodeURIComponent(q) + '&title=Special:MediaSearch&type=image');
+    // Commons search matches loosely, so count only files whose own title carries the name's distinctive words
+    const GENERIC = /^(the|of|and|de|des|du|la|le|les|el|los|las|da|do|dos|di|del|della|st|ste|saint|sainte|san|santa|santo|sao|sankt|church|catholic|roman|parish|cathedral|cathedrale|catedral|cattedrale|iglesia|igreja|chiesa|eglise|kirche|kosciol|parroquia|paroquia|parrocchia|paroisse|chapel|chapelle|capilla|capela|cappella|of|our|lady|notre|dame|nuestra|senora|nossa|senhora)$/;
+    const key = squash(q).split(/\s+/).filter(w => w.length > 2 && !GENERIC.test(w));
+    const s = await api('commons.wikimedia.org', { list: 'search', srsearch: q, srnamespace: 6, srlimit: 20, srprop: '' });
+    const hits = ((s.query && s.query.search) || []).filter(h => { const t = squash(h.title); return key.length && key.filter(w => t.includes(w)).length >= Math.ceil(key.length * 0.75); });
+    if (hits.length) return set(C + 'w/index.php?search=' + encodeURIComponent(q) + '&title=Special:MediaSearch&type=image');
     // or any photos taken right around it
     const g = await api('commons.wikimedia.org', { list: 'geosearch', gscoord: lat + '|' + lng, gsradius: 250, gsnamespace: 6, gslimit: 1 });
     if (g.query && g.query.geosearch && g.query.geosearch.length) return set(C + 'wiki/Special:Nearby#/coord/' + lat.toFixed(5) + ',' + lng.toFixed(5));
     set('');
-  } catch (e) { set(null); }  // Commons didn't answer: keep the plain search link
+  } catch (e) { set(''); }  // Commons didn't answer: no link rather than one that may lead nowhere
 }
 /* ---------- Street View: with a Google Maps key, show the link only where Google has imagery near the church ---------- */
 // Browser key, restricted in Google Cloud to this site's address and the Maps JavaScript API. Empty = always show the link, unchecked.
@@ -1508,6 +1520,8 @@ $('nearList').addEventListener('click', (e) => {
 /* ---------- keep the side controls clear of open panels ---------- */
 function placeCtrls() {
   document.documentElement.style.setProperty('--search', Math.round(document.querySelector('.search').getBoundingClientRect().bottom) + 'px');
+  const td = $('today');  // the church of the day card sits bottom left: stop the favorites list above it
+  document.documentElement.style.setProperty('--favs-gap', innerWidth > 640 && td && !td.hidden ? Math.round(innerHeight - td.getBoundingClientRect().top + 12) + 'px' : '58px');
   document.documentElement.style.setProperty('--head', Math.round(document.querySelector('header.top').getBoundingClientRect().bottom) + 'px');
   const phone = innerWidth <= 640;
   let lift = 0;
@@ -1520,6 +1534,7 @@ function placeCtrls() {
   const watch = new MutationObserver(placeCtrls), sized = new ResizeObserver(placeCtrls);
   for (const id of ['card', 'favs', 'near']) { watch.observe($(id), { attributes: true, attributeFilter: ['hidden'] }); sized.observe($(id)); }
   sized.observe(document.querySelector('header.top'));
+  watch.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['hidden'] });
   addEventListener('resize', placeCtrls);
 }
 
@@ -2335,6 +2350,7 @@ const mapReady = new Promise(res => map.once('load', res));
       // open over the United States
       const shared = parseInt(new URLSearchParams(location.search).get('church'), 10);
       hooks.opened({ shared: shared >= 0 && shared < state.n });
+      if (innerWidth > 640 || !(shared >= 0 && shared < state.n)) openFavsOnLoad();  // on phones a shared church's card gets the bottom of the screen
       if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link
       const sp = new URLSearchParams(location.search);
       if (sp.has('bible') || sp.has('land') || sp.get('mode') === 'bible') { state.ready = true; setMode('bible', { fly: !sp.has('bible') && !sp.has('land') }).then(() => { if (sp.get('bible')) openBiblePlace(sp.get('bible')); else if (sp.get('land')) openBibleLand(sp.get('land')); }); return; }
