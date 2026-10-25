@@ -407,5 +407,16 @@
   "about_seasonLent": "Korizma je četrdeset dana molitve, posta i milostinje od Čiste srijede do Velikoga četvrtka, kada se vjernici pokorom obraćaju Bogu i pripremaju za slavlje Vazmenoga otajstva. Boja je ljubičasta, a na nedjelju Laetare ružičasta.",
   "about_seasonHolyWeek": "Veliki tjedan počinje Cvjetnicom, kada se Crkva spominje ulaska našega Gospodina u Jeruzalem, i vodi do Svetoga trodnevlja njegove muke, smrti i uskrsnuća. Cvjetnica je crvena, radni dani ljubičasti.",
   "about_seasonTriduum": "Sveto vazmeno trodnevlje, od večernje mise Večere Gospodnje na Veliki četvrtak do večeri Uskrsne nedjelje, vrhunac je cijele liturgijske godine: muka, smrt i uskrsnuće Gospodinovo.",
-  "about_seasonEaster": "Vazmeno vrijeme je pedeset dana od Uskrsa do Duhova, koje se slavi kao jedna velika nedjelja radosti u uskrslom Gospodinu. Boja je bijela, a na Duhove crvena."
+  "about_seasonEaster": "Vazmeno vrijeme je pedeset dana od Uskrsa do Duhova, koje se slavi kao jedna velika nedjelja radosti u uskrslom Gospodinu. Boja je bijela, a na Duhove crvena.",
+  "listHere": "Popis crkava ovdje",
+  "churchesIn": "Crkve: {place}",
+  "churchesInView": "Crkve u ovom prikazu",
+  "areaIntro": "Najbliže vama prve. Dodirnite za pojedinosti.",
+  "areaIntroCenter": "Najbliže sredini prve. Dodirnite za pojedinosti.",
+  "areaMore": "Prikazano {k} najbližih od {n}. Povećajte za ostale.",
+  "areaNone": "Ovdje još nema crkava na karti.",
+  "areaTag": "Crkve: {place} ({n})",
+  "areaTagView": "Crkve u ovom prikazu: {n}",
+  "areaTip": "Kliknite za popis crkava ovoga grada",
+  "noneInRange": "Nema crkve odabranih vrsta unutar {dist}. Pokušajte veću udaljenost ili gore prikažite više vrsta."
 }

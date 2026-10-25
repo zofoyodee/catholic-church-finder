@@ -383,5 +383,16 @@
   "about_seasonLent": "Ny Karemy dia ireo andro efapolo amin'ny vavaka, fifadian-kanina ary fanomezana, manomboka amin'ny Alarobian'ny Lavenona hatramin'ny Alakamisy Masina, izay iverenan'ny mpino amin'Andriamanitra amin'ny fibebahana sy iomanany hankalaza ny Misterin'ny Paska. Volomparasy ny lokony, ary mavokely amin'ny Alahady Laetare.",
   "about_seasonHolyWeek": "Ny Herinandro Masina dia manomboka amin'ny Alahadin'ny Sampana, izay ahatsiarovan'ny Fiangonana ny fidiran'ny Tompontsika tao Jerosalema, ary mitarika ho amin'ny Telo Andro Masin'ny Fijaliany, ny Fahafatesany ary ny Fitsanganany amin'ny maty. Mena ny Alahadin'ny Sampana; volomparasy ireo andro hafa amin'ny herinandro.",
   "about_seasonTriduum": "Ny Telo Andro Masin'ny Paska, manomboka amin'ny Lamesan'ny Fanasan'ny Tompo ny hariva Alakamisy Masina hatramin'ny hariva Alahadin'ny Paska, no tampon'ny taona litorjika manontolo: ny Fijaliana, ny Fahafatesana ary ny Fitsanganan'ny Tompo amin'ny maty.",
-  "about_seasonEaster": "Ny fotoanan'ny Paska dia ireo andro dimampolo manomboka amin'ny Alahadin'ny Paska hatramin'ny Pentekosta, ankalazaina ho toy ny Alahady lehibe iray feno hafaliana ao amin'ny Tompo nitsangana tamin'ny maty. Fotsy ny lokony, ary mena amin'ny Pentekosta."
+  "about_seasonEaster": "Ny fotoanan'ny Paska dia ireo andro dimampolo manomboka amin'ny Alahadin'ny Paska hatramin'ny Pentekosta, ankalazaina ho toy ny Alahady lehibe iray feno hafaliana ao amin'ny Tompo nitsangana tamin'ny maty. Fotsy ny lokony, ary mena amin'ny Pentekosta.",
+  "listHere": "Asehoy ny fiangonana eto",
+  "churchesIn": "Fiangonana ao {place}",
+  "churchesInView": "Fiangonana amin'ity fijery ity",
+  "areaIntro": "Ny akaiky anao indrindra aloha. Tsindrio ny iray raha hahita antsipiriany.",
+  "areaIntroCenter": "Ny akaikin'ny afovoany indrindra aloha. Tsindrio ny iray raha hahita antsipiriany.",
+  "areaMore": "Aseho ny {k} akaiky indrindra amin'ny {n}. Atonony ny sarintany hahitana ny sisa.",
+  "areaNone": "Mbola tsy misy fiangonana eo amin'ny sarintany eto.",
+  "areaTag": "Fiangonana {n} ao {place}",
+  "areaTagView": "Fiangonana {n} amin'ity fijery ity",
+  "areaTip": "Tsindrio hanehoana ny fiangonan'ity tanàna ity",
+  "noneInRange": "Tsy misy fiangonana amin'ireo karazana nofidinao ao anatin'ny {dist}. Andramo lavitra kokoa na asehoy karazana bebe kokoa etsy ambony."
 }

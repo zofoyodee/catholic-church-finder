@@ -383,5 +383,16 @@
   "about_seasonLent": "Ang Kwaresma mao ang kap-atan ka adlaw sa pag-ampo, pagpuasa ug paglimos gikan sa Miyerkoles sa Abo hangtod sa Huwebes Santo, diin ang mga magtutuo mobalik sa Dios pinaagi sa paghinulsol ug mangandam sa pagsaulog sa Misteryo Paskwal. Ube ang kolor niini, ug rosas sa Domingo sa Laetare.",
   "about_seasonHolyWeek": "Ang Semana Santa magsugod sa Domingo sa Palaspas, diin ang Simbahan nahinumdom sa pagsulod sa atong Ginoo sa Jerusalem, ug modala ngadto sa Balaang Triduo sa Iyang Pasyon, Kamatayon ug Pagkabanhaw. Pula ang Domingo sa Palaspas; ube ang mga adlaw sa semana.",
   "about_seasonTriduum": "Ang Balaang Triduo Paskwal, gikan sa Misa sa Panihapon sa Ginoo sa gabii sa Huwebes Santo hangtod sa gabii sa Domingo sa Pagkabanhaw, mao ang kinatumyan sa tibuok tuig sa liturhiya: ang Pasyon, Kamatayon ug Pagkabanhaw sa Ginoo.",
-  "about_seasonEaster": "Ang Panahon sa Pagkabanhaw mao ang kalim-an ka adlaw gikan sa Domingo sa Pagkabanhaw hangtod sa Pentekostes, gisaulog ingon nga usa ka dakong Domingo sa kalipay diha sa nabanhaw nga Ginoo. Puti ang kolor niini, ug pula sa Pentekostes."
+  "about_seasonEaster": "Ang Panahon sa Pagkabanhaw mao ang kalim-an ka adlaw gikan sa Domingo sa Pagkabanhaw hangtod sa Pentekostes, gisaulog ingon nga usa ka dakong Domingo sa kalipay diha sa nabanhaw nga Ginoo. Puti ang kolor niini, ug pula sa Pentekostes.",
+  "listHere": "Ilista ang mga simbahan dinhi",
+  "churchesIn": "Mga simbahan sa {place}",
+  "churchesInView": "Mga simbahan niini nga view",
+  "areaIntro": "Ang pinakaduol nimo una. Tuploka ang usa para sa detalye.",
+  "areaIntroCenter": "Ang pinakaduol sa tunga una. Tuploka ang usa para sa detalye.",
+  "areaMore": "Gipakita ang {k} nga pinakaduol sa {n}. I-zoom in aron makita ang uban.",
+  "areaNone": "Wala pay simbahan nga namapa dinhi.",
+  "areaTag": "Gipakita ang {n} ka simbahan sa {place}",
+  "areaTagView": "Gipakita ang {n} ka simbahan niini nga view",
+  "areaTip": "I-klik aron ilista ang mga simbahan niini nga siyudad",
+  "noneInRange": "Walay simbahan sa mga matang nga imong gipili sulod sa {dist}. Sulayi ang mas layo nga distansya o ipakita ang dugang matang sa ibabaw."
 }

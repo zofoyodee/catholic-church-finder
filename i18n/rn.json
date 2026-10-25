@@ -383,5 +383,16 @@
   "about_seasonLent": "Igisibo ni imisi mirongo ine y'isengesho, ukwisiba no gutanga imfashanyo kuva ku wa Gatatu w'Ivu gushika ku wa Kane Mweranda, igihe abakirisu bagarukira Imana bicuza kandi bitegura guhimbaza Iyobera rya Pasika. Ibara ryaco ni ijanjaro, n'iroza ku Musi w'Imana wa Laetare.",
   "about_seasonHolyWeek": "Indwi Nyeranda itangura ku Musi w'Imana w'Amashami, Ekleziya yibuka ukwinjira kw'Umukama wacu i Yeruzalemu, kandi iganisha ku Misi Itatu Myeranda y'Ububabare, Urupfu n'Izuka ryiwe. Umusi w'Imana w'Amashami ni umutuku; imisi y'indwi ni ijanjaro.",
   "about_seasonTriduum": "Imisi Itatu Myeranda ya Pasika, kuva kuri Misa y'Imfungurwa y'Umukama ku mugoroba wo ku wa Kane Mweranda gushika ku mugoroba w'Umusi w'Imana wa Pasika, ni yo mpera y'umwaka wose wa liturujiya: Ububabare, Urupfu n'Izuka ry'Umukama.",
-  "about_seasonEaster": "Ikiringo ca Pasika ni imisi mirongo itanu kuva ku Musi w'Imana wa Pasika gushika kuri Pentekoti, ihimbazwa nk'Umusi w'Imana umwe munini w'umunezero mu Mukama yazutse. Ibara ryaco ni umweru, n'umutuku kuri Pentekoti."
+  "about_seasonEaster": "Ikiringo ca Pasika ni imisi mirongo itanu kuva ku Musi w'Imana wa Pasika gushika kuri Pentekoti, ihimbazwa nk'Umusi w'Imana umwe munini w'umunezero mu Mukama yazutse. Ibara ryaco ni umweru, n'umutuku kuri Pentekoti.",
+  "listHere": "Erekana ingoro z'Imana hano",
+  "churchesIn": "Ingoro z'Imana zo muri {place}",
+  "churchesInView": "Ingoro z'Imana ziri muri iyi shusho",
+  "areaIntro": "Iri hafi yawe imbere. Fyonda kuri imwe urabe ibisobanuro.",
+  "areaIntroCenter": "Iri hafi y'agati imbere. Fyonda kuri imwe urabe ibisobanuro.",
+  "areaMore": "Herekanwa {k} ziri hafi muri {n}. Egereza urabe izisigaye.",
+  "areaNone": "Nta ngoro y'Imana iraboneka ku ikarata hano.",
+  "areaTag": "Herekanwa ingoro z'Imana {n} zo muri {place}",
+  "areaTagView": "Herekanwa ingoro z'Imana {n} ziri muri iyi shusho",
+  "areaTip": "Fyonda urabe ingoro z'Imana z'iki gisagara",
+  "noneInRange": "Nta ngoro y'Imana yo mu bwoko wahisemwo iri muri {dist}. Gerageza intera ndende canke werekane ubwoko bwinshi hejuru."
 }

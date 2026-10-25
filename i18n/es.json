@@ -391,5 +391,16 @@
   "about_seasonLent": "La Cuaresma son los cuarenta días de oración, ayuno y limosna desde el Miércoles de Ceniza hasta el Jueves Santo, en los que los fieles vuelven a Dios por la penitencia y se preparan para celebrar el Misterio Pascual. Su color es el morado, y el rosa el domingo Laetare.",
   "about_seasonHolyWeek": "La Semana Santa comienza el Domingo de Ramos, cuando la Iglesia recuerda la entrada de nuestro Señor en Jerusalén, y conduce al Sagrado Triduo de su Pasión, Muerte y Resurrección. El Domingo de Ramos es rojo; los días de semana, morados.",
   "about_seasonTriduum": "El Sagrado Triduo Pascual, desde la Misa vespertina de la Cena del Señor el Jueves Santo hasta la tarde del Domingo de Pascua, es la cumbre de todo el año litúrgico: la Pasión, Muerte y Resurrección del Señor.",
-  "about_seasonEaster": "El tiempo pascual son los cincuenta días desde el Domingo de Pascua hasta Pentecostés, celebrados como un solo gran domingo de alegría en el Señor resucitado. Su color es el blanco, y el rojo en Pentecostés."
+  "about_seasonEaster": "El tiempo pascual son los cincuenta días desde el Domingo de Pascua hasta Pentecostés, celebrados como un solo gran domingo de alegría en el Señor resucitado. Su color es el blanco, y el rojo en Pentecostés.",
+  "listHere": "Ver iglesias aquí",
+  "churchesIn": "Iglesias en {place}",
+  "churchesInView": "Iglesias en esta vista",
+  "areaIntro": "La más cercana a ti primero. Toca una para ver detalles.",
+  "areaIntroCenter": "La más cercana al centro primero. Toca una para ver detalles.",
+  "areaMore": "Mostrando las {k} más cercanas de {n}. Acerca el mapa para ver el resto.",
+  "areaNone": "Aún no hay iglesias en el mapa aquí.",
+  "areaTag": "Mostrando {n} iglesias en {place}",
+  "areaTagView": "Mostrando {n} iglesias en esta vista",
+  "areaTip": "Haz clic para ver las iglesias de esta ciudad",
+  "noneInRange": "Ninguna iglesia de los tipos elegidos está a menos de {dist}. Prueba una distancia mayor o muestra más tipos arriba."
 }

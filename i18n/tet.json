@@ -383,5 +383,16 @@
   "about_seasonLent": "Kuaresma mak loron haat-nulu ba orasaun, jejun no esmola husi Kuarta-feira Kinzas to'o Kinta-feira Santa, bainhira fiar-na'in sira fila ba Maromak liuhusi peniténsia no prepara an atu selebra Misteriu Páskoa nian. Ninia kór mak roxu, no rosa iha Domingu Laetare.",
   "about_seasonHolyWeek": "Semana Santa hahú iha Domingu Ramus, bainhira Igreja hanoin hikas ita-nia Na'i nia tama ba Jeruzalein, no lori ba Tríduu Santu ba Ninia Paixaun, Mate no Resurreisaun. Domingu Ramus mean; loron semana nian roxu.",
   "about_seasonTriduum": "Tríduu Pascál Santu, husi Misa Na'i nia Ceia iha Kinta-feira Santa kalan to'o Domingu Páskoa kalan, mak tinan liturjia tomak nia tutun: Na'i nia Paixaun, Mate no Resurreisaun.",
-  "about_seasonEaster": "Tempu Páskoa mak loron lima-nulu husi Domingu Páskoa to'o Pentekostes, selebra hanesan Domingu boot ida ho ksolok iha Na'i ne'ebé moris hikas. Ninia kór mak mutin, no mean iha Pentekostes."
+  "about_seasonEaster": "Tempu Páskoa mak loron lima-nulu husi Domingu Páskoa to'o Pentekostes, selebra hanesan Domingu boot ida ho ksolok iha Na'i ne'ebé moris hikas. Ninia kór mak mutin, no mean iha Pentekostes.",
+  "listHere": "Hatudu igreja sira iha ne'e",
+  "churchesIn": "Igreja sira iha {place}",
+  "churchesInView": "Igreja sira iha vista ida-ne'e",
+  "areaIntro": "Besik liu ba ita uluk. Baku ida atu haree detallu.",
+  "areaIntroCenter": "Besik liu ba klaran uluk. Baku ida atu haree detallu.",
+  "areaMore": "Hatudu {k} ne'ebé besik liu husi {n}. Halo boot atu haree seluk.",
+  "areaNone": "Seidauk iha igreja iha mapa iha ne'e.",
+  "areaTag": "Hatudu igreja {n} iha {place}",
+  "areaTagView": "Hatudu igreja {n} iha vista ida-ne'e",
+  "areaTip": "Klik atu hatudu igreja sira iha sidade ida-ne'e",
+  "noneInRange": "La iha igreja husi tipu ne'ebé ita hili iha {dist} nia laran. Koko distánsia ne'ebé dook liu ka hatudu tipu barak liu iha leten."
 }

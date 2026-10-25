@@ -381,5 +381,16 @@
   "about_seasonLent": "Quadragesima sunt quadraginta dies orationis, ieiunii et eleemosynae a Feria IV Cinerum usque ad Feriam V in Cena Domini, cum fideles per paenitentiam ad Deum convertuntur et ad Mysterium Paschale celebrandum se parant. Color est violaceus, et rosaceus dominica Laetare.",
   "about_seasonHolyWeek": "Hebdomada Sancta incipit Dominica in Palmis, cum Ecclesia ingressum Domini nostri in Ierusalem recolit, et ad Sacrum Triduum Passionis, Mortis et Resurrectionis eius ducit. Dominica in Palmis rubra est; feriae violaceae.",
   "about_seasonTriduum": "Sacrum Triduum Paschale, a Missa vespertina in Cena Domini usque ad vesperas Dominicae Paschae, est culmen totius anni liturgici: Passio, Mors et Resurrectio Domini.",
-  "about_seasonEaster": "Tempus Paschale sunt quinquaginta dies a Dominica Paschae usque ad Pentecosten, ut una magna dominica gaudii in Domino resuscitato celebrati. Color est albus, et ruber in Pentecoste."
+  "about_seasonEaster": "Tempus Paschale sunt quinquaginta dies a Dominica Paschae usque ad Pentecosten, ut una magna dominica gaudii in Domino resuscitato celebrati. Color est albus, et ruber in Pentecoste.",
+  "listHere": "Ecclesias hic enumera",
+  "churchesIn": "Ecclesiae in {place}",
+  "churchesInView": "Ecclesiae in hoc conspectu",
+  "areaIntro": "Tibi proxima prima. Tange ut singula videas.",
+  "areaIntroCenter": "Medio proxima prima. Tange ut singula videas.",
+  "areaMore": "{k} proximae ex {n} ostenduntur. Amplifica ut ceteras videas.",
+  "areaNone": "Nullae hic adhuc ecclesiae in tabula sunt.",
+  "areaTag": "{n} ecclesiae in {place}",
+  "areaTagView": "{n} ecclesiae in hoc conspectu",
+  "areaTip": "Preme ut ecclesias huius urbis enumeres",
+  "noneInRange": "Nulla ecclesia generum quae elegisti intra {dist} est. Maius spatium tempta aut plura genera supra ostende."
 }

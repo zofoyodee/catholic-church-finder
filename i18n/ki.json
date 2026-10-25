@@ -383,5 +383,16 @@
   "about_seasonLent": "Lent nĩ mĩthenya mĩrongo ĩna ya mahooya, kwĩhinga irio na kũheana kuuma Jumatatũ wa Mũhu nginya Alhamisi Ĩrĩa Theru, rĩrĩa ehoki macookaga kũrĩ Ngai na kwĩrira na makehaarĩria kũgũĩrĩria Hitho ya Pasaka. Rangi warĩo nĩ wa ndathi, na wa pink Kiumia-inĩ kĩa Laetare.",
   "about_seasonHolyWeek": "Kiumia Gĩtheru kĩambagĩrĩria Kiumia-inĩ kĩa Mathangũ, rĩrĩa Kanitha ĩririkanaga gũtoonya kwa Mwathani witũ Jerusalemu, na gĩkerekeria Mĩthenya Ĩtatũ Mĩtheru ya Mĩnyamaro, Gĩkuũ na Kũriũka gwake. Kiumia kĩa Mathangũ nĩ gĩtune; mĩthenya ya kiumia nĩ ya ndathi.",
   "about_seasonTriduum": "Mĩthenya Ĩtatũ Mĩtheru ya Pasaka, kuuma Mĩsa ya Irio cia Mwathani hwaĩ-inĩ wa Alhamisi Ĩrĩa Theru nginya hwaĩ-inĩ wa Kiumia kĩa Pasaka, nĩyo kĩrĩma kĩa igũrũ kĩa mwaka wothe wa mahooya: Mĩnyamaro, Gĩkuũ na Kũriũka kwa Mwathani.",
-  "about_seasonEaster": "Ihinda rĩa Pasaka nĩ mĩthenya mĩrongo ĩtano kuuma Kiumia kĩa Pasaka nginya Pentekoste, ĩrĩa ĩgũĩrĩrio ta Kiumia kĩmwe kĩnene kĩa gĩkeno thĩinĩ wa Mwathani ũrĩa wariũkire. Rangi warĩo nĩ mwerũ, na mũtune Pentekoste."
+  "about_seasonEaster": "Ihinda rĩa Pasaka nĩ mĩthenya mĩrongo ĩtano kuuma Kiumia kĩa Pasaka nginya Pentekoste, ĩrĩa ĩgũĩrĩrio ta Kiumia kĩmwe kĩnene kĩa gĩkeno thĩinĩ wa Mwathani ũrĩa wariũkire. Rangi warĩo nĩ mwerũ, na mũtune Pentekoste.",
+  "listHere": "Onania makanitha haha",
+  "churchesIn": "Makanitha ma {place}",
+  "churchesInView": "Makanitha thĩinĩ wa mũoneko ũyũ",
+  "areaIntro": "Ĩrĩa ĩrĩ hakuhĩ nawe mbere. Hihinya ĩmwe wone ũhoro makĩria.",
+  "areaIntroCenter": "Ĩrĩa ĩrĩ hakuhĩ na gatagatĩ mbere. Hihinya ĩmwe wone ũhoro makĩria.",
+  "areaMore": "Kuonania {k} marĩa marĩ hakuhĩ thĩinĩ wa {n}. Kuhĩrĩria wone marĩa matigaru.",
+  "areaNone": "Gũtirĩ makanitha marĩ mapu-inĩ haha o na rĩu.",
+  "areaTag": "Kuonania makanitha {n} ma {place}",
+  "areaTagView": "Kuonania makanitha {n} thĩinĩ wa mũoneko ũyũ",
+  "areaTip": "Hihinya wone makanitha ma itũũra rĩĩrĩ",
+  "noneInRange": "Gũtirĩ kanitha ya mĩthemba ĩrĩa wathuurire thĩinĩ wa {dist}. Geria ũraihu mũnene kana wonanie mĩthemba mĩingĩ igũrũ."
 }

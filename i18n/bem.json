@@ -383,5 +383,16 @@
   "about_seasonLent": "Lenti nshiku amakumi yane isha kupepa, ukuleka ukulya no kupeela ukufuma pa Cibili ca Mito ukufika pa Cine Uwashila, ilyo abasumina babwelela kuli Lesa mu kulapila no kuipekanya ukusefya Imfimbila ya Pasaka. Ilangi lyakwe ni lya pepo, ne lya pinki pa Mulungu wa Laetare.",
   "about_seasonHolyWeek": "Umulungu Uwashila utendeka pa Mulungu wa Misambo, ilyo Ekalesia yibukisha ukwingila kwa kwa Shikulu wesu mu Yerusalemu, kabili utungulula ku Nshiku Shitatu Ishashila isha Kucula, Imfwa no Kubuuka kwakwe. Pa Mulungu wa Misambo pa kashika; inshiku sha mulungu pa pepo.",
   "about_seasonTriduum": "Inshiku Shitatu Ishashila isha Pasaka, ukufuma pa Misa ya Cakulya ca kwa Shikulu icungulo ca Cine Uwashila ukufika icungulo ca Pa Mulungu wa Pasaka, e pa mulu pa mwaka onse uwa mapepo: Ukucula, Imfwa no Kubuuka kwa kwa Shikulu.",
-  "about_seasonEaster": "Inshita ya Pasaka nshiku amakumi yasano ukufuma pa Mulungu wa Pasaka ukufika pa Pentekoste, ishisefiwa nga Pa Mulungu umo ukalamba uwa nsansa muli Shikulu uwabuuka. Ilangi lyakwe ni lyabuuta, ne lya kashika pa Pentekoste."
+  "about_seasonEaster": "Inshita ya Pasaka nshiku amakumi yasano ukufuma pa Mulungu wa Pasaka ukufika pa Pentekoste, ishisefiwa nga Pa Mulungu umo ukalamba uwa nsansa muli Shikulu uwabuuka. Ilangi lyakwe ni lyabuuta, ne lya kashika pa Pentekoste.",
+  "listHere": "Langisheni amacalici kuno",
+  "churchesIn": "Amacalici mu {place}",
+  "churchesInView": "Amacalici mu cimonwa ici",
+  "areaIntro": "Ilya mupepi nankwe libalilepo. Tinikeni limo pa kumona ifyalundwapo.",
+  "areaIntroCenter": "Ilya mupepi na pakati libalilepo. Tinikeni limo pa kumona ifyalundwapo.",
+  "areaMore": "Ukulangisha {k} aya mupepi muli {n}. Palamikeni pa kumona ayashalapo.",
+  "areaNone": "Tapalaba amacalici pa mapu kuno.",
+  "areaTag": "Ukulangisha amacalici {n} mu {place}",
+  "areaTagView": "Ukulangisha amacalici {n} mu cimonwa ici",
+  "areaTip": "Tinikeni pa kumona amacalici ya muno musumba",
+  "noneInRange": "Tapali icalici ca misango iyo musalile mu {dist}. Eseshenipo ubutali ubukalamba nangu langisheni imisango iingi pa mulu."
 }

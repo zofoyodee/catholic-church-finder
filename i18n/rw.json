@@ -383,5 +383,16 @@
   "about_seasonLent": "Igisibo ni iminsi mirongo ine y'isengesho, gusiba no gufasha abakene kuva ku wa Gatatu w'Ivu kugeza ku wa Kane Mutagatifu, igihe abakristu bagarukira Imana bicuza kandi bitegura kwizihiza Iyobera rya Pasika. Ibara ryacyo ni isine, n'iroza ku Cyumweru cya Laetare.",
   "about_seasonHolyWeek": "Icyumweru Gitagatifu gitangira ku Cyumweru cy'Amashami, Kiliziya yibuka uko Umwami wacu yinjiye i Yeruzalemu, kandi kiganisha ku Minsi Itatu Mitagatifu y'Ububabare, Urupfu n'Izuka bye. Icyumweru cy'Amashami ni umutuku; iminsi y'icyumweru ni isine.",
   "about_seasonTriduum": "Iminsi Itatu Mitagatifu ya Pasika, kuva kuri Misa y'Isangira rya Nyagasani ku mugoroba wo ku wa Kane Mutagatifu kugeza ku mugoroba w'Icyumweru cya Pasika, ni yo ndunduro y'umwaka wose wa liturujiya: Ububabare, Urupfu n'Izuka bya Nyagasani.",
-  "about_seasonEaster": "Igihe cya Pasika ni iminsi mirongo itanu kuva ku Cyumweru cya Pasika kugeza kuri Pentekositi, yizihizwa nk'Icyumweru kimwe kinini cy'ibyishimo muri Nyagasani wazutse. Ibara ryacyo ni umweru, n'umutuku kuri Pentekositi."
+  "about_seasonEaster": "Igihe cya Pasika ni iminsi mirongo itanu kuva ku Cyumweru cya Pasika kugeza kuri Pentekositi, yizihizwa nk'Icyumweru kimwe kinini cy'ibyishimo muri Nyagasani wazutse. Ibara ryacyo ni umweru, n'umutuku kuri Pentekositi.",
+  "listHere": "Erekana kiliziya hano",
+  "churchesIn": "Kiliziya zo muri {place}",
+  "churchesInView": "Kiliziya ziri muri iyi shusho",
+  "areaIntro": "Iri hafi yawe mbere. Kanda kuri imwe urebe ibisobanuro.",
+  "areaIntroCenter": "Iri hafi y'agati mbere. Kanda kuri imwe urebe ibisobanuro.",
+  "areaMore": "Hagaragara {k} ziri hafi muri {n}. Egereza urebe izisigaye.",
+  "areaNone": "Nta kiliziya iragaragazwa ku ikarita hano.",
+  "areaTag": "Hagaragara kiliziya {n} zo muri {place}",
+  "areaTagView": "Hagaragara kiliziya {n} ziri muri iyi shusho",
+  "areaTip": "Kanda urebe kiliziya z'uyu mujyi",
+  "noneInRange": "Nta kiliziya yo mu bwoko wahisemo iri muri {dist}. Gerageza intera ndende cyangwa werekane ubwoko bwinshi hejuru."
 }

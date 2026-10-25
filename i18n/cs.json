@@ -411,5 +411,16 @@
   "about_seasonLent": "Postní doba je čtyřicet dní modlitby, postu a almužny od Popeleční středy do Zeleného čtvrtku, kdy se věřící kajícně obracejí k Bohu a připravují se na slavení velikonočního tajemství. Barva je fialová, o neděli Laetare růžová.",
   "about_seasonHolyWeek": "Svatý týden začíná Květnou nedělí, kdy si Církev připomíná vjezd našeho Pána do Jeruzaléma, a vede k Svatému třídenní jeho umučení, smrti a zmrtvýchvstání. Květná neděle je červená, všední dny fialové.",
   "about_seasonTriduum": "Svaté velikonoční třídenní, od večerní mše na památku Večeře Páně na Zelený čtvrtek do večera Neděle Zmrtvýchvstání, je vrcholem celého liturgického roku: umučení, smrt a zmrtvýchvstání Páně.",
-  "about_seasonEaster": "Doba velikonoční je padesát dní od Neděle Zmrtvýchvstání do Letnic, slavených jako jedna velká neděle radosti ze vzkříšeného Pána. Barva je bílá, o Letnicích červená."
+  "about_seasonEaster": "Doba velikonoční je padesát dní od Neděle Zmrtvýchvstání do Letnic, slavených jako jedna velká neděle radosti ze vzkříšeného Pána. Barva je bílá, o Letnicích červená.",
+  "listHere": "Seznam kostelů zde",
+  "churchesIn": "Kostely: {place}",
+  "churchesInView": "Kostely v tomto zobrazení",
+  "areaIntro": "Nejbližší k vám první. Klepněte pro podrobnosti.",
+  "areaIntroCenter": "Nejbližší ke středu první. Klepněte pro podrobnosti.",
+  "areaMore": "Zobrazeno {k} nejbližších z {n}. Přibližte pro ostatní.",
+  "areaNone": "Zde zatím nejsou na mapě žádné kostely.",
+  "areaTag": "Kostely: {place} ({n})",
+  "areaTagView": "Kostely v tomto zobrazení: {n}",
+  "areaTip": "Klikněte pro seznam kostelů tohoto města",
+  "noneInRange": "Do {dist} není žádný kostel zvolených druhů. Zkuste větší vzdálenost nebo nahoře zobrazte více druhů."
 }

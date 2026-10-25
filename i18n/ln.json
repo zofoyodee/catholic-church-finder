@@ -383,5 +383,16 @@
   "about_seasonLent": "Karema ezali mikolo ntuku minei ya losambo, kokila bilei mpe kopesa makabo banda Mokolo mwa misato ya Mputulu tii Mokolo mwa minei Mosantu, ntango bandimi bazongelaka Nzambe na boyamboli mpe bamibongisaka mpo na kosepela Mistere ya Pasika. Langi na yango ezali violet, mpe rose na Lomingo ya Laetare.",
   "about_seasonHolyWeek": "Poso Mosantu ebandaka na Lomingo ya Mapapa, ntango Eklezia ekanisaka bokoti ya Nkolo na biso na Yelusalemi, mpe ememaka na Mikolo Misato Mosantu ya Mpasi, Liwa mpe Lisekwa na Ye. Lomingo ya Mapapa ezali motane; mikolo ya poso violet.",
   "about_seasonTriduum": "Mikolo Misato Mosantu ya Pasika, banda Misa ya Bolei ya Nkolo na mpokwa ya Mokolo mwa minei Mosantu tii mpokwa ya Lomingo ya Pasika, ezali songe ya mobu mobimba ya liturgi: Mpasi, Liwa mpe Lisekwa ya Nkolo.",
-  "about_seasonEaster": "Eleko ya Pasika ezali mikolo ntuku mitano banda Lomingo ya Pasika tii Pantekoti, oyo basepelaka lokola Lomingo moko monene ya esengo na Nkolo oyo asekwi. Langi na yango ezali pembe, mpe motane na Pantekoti."
+  "about_seasonEaster": "Eleko ya Pasika ezali mikolo ntuku mitano banda Lomingo ya Pasika tii Pantekoti, oyo basepelaka lokola Lomingo moko monene ya esengo na Nkolo oyo asekwi. Langi na yango ezali pembe, mpe motane na Pantekoti.",
+  "listHere": "Lakisa ba ndako-Nzambe awa",
+  "churchesIn": "Ba ndako-Nzambe na {place}",
+  "churchesInView": "Ba ndako-Nzambe na botali oyo",
+  "areaIntro": "Oyo ya pene na yo liboso. Finá moko mpo na koyeba mingi.",
+  "areaIntroCenter": "Oyo ya pene na katikati liboso. Finá moko mpo na koyeba mingi.",
+  "areaMore": "Ezali kolakisa {k} ya pene na kati ya {n}. Pusana pene mpo na komona oyo etikali.",
+  "areaNone": "Naino ndako-Nzambe moko te na karte awa.",
+  "areaTag": "Ezali kolakisa ba ndako-Nzambe {n} na {place}",
+  "areaTagView": "Ezali kolakisa ba ndako-Nzambe {n} na botali oyo",
+  "areaTip": "Finá mpo na komona ba ndako-Nzambe ya engumba oyo",
+  "noneInRange": "Ndako-Nzambe moko te ya ndenge oyo oponi na kati ya {dist}. Meka mosika koleka to lakisa ndenge mingi na likolo."
 }

@@ -383,5 +383,16 @@
   "about_seasonLent": "An Kuaresma iyo an kwarenta na aldaw nin pamibi, pag-ayuno asin paglimos poon sa Miyerkoles de Ceniza sagkod sa Huwebes Santo, kun saen an mga tumutubod nagbabalik sa Dios paagi sa pagsolsol asin nag-aandam sa pagsurog kan Misteryo Paskwal. Lila an kolor kaini, asin rosas sa Domingo kan Laetare.",
   "about_seasonHolyWeek": "An Semana Santa nagpopoon sa Domingo de Ramos, kun saen ginigirumdom kan Simbahan an paglaog kan satong Kagurangnan sa Jerusalem, asin nagdadara sa Banal na Triduo kan Saiyang Pasyon, Kagadanan asin Pagkabuhay Liwat. Pula an Domingo de Ramos; lila an mga aldaw kan semana.",
   "about_seasonTriduum": "An Banal na Triduo Paskwal, poon sa Misa kan Pamanggihan kan Kagurangnan sa banggi kan Huwebes Santo sagkod sa banggi kan Domingo nin Pagkabuhay, iyo an kaitaasan kan bilog na taon nin liturhiya: an Pasyon, Kagadanan asin Pagkabuhay Liwat kan Kagurangnan.",
-  "about_seasonEaster": "An Panahon nin Pagkabuhay Liwat iyo an sinkwenta na aldaw poon sa Domingo nin Pagkabuhay sagkod sa Pentekostes, sinusurog bilang sarong dakulang Domingo nin kaogmahan sa nabuhay liwat na Kagurangnan. Puti an kolor kaini, asin pula sa Pentekostes."
+  "about_seasonEaster": "An Panahon nin Pagkabuhay Liwat iyo an sinkwenta na aldaw poon sa Domingo nin Pagkabuhay sagkod sa Pentekostes, sinusurog bilang sarong dakulang Domingo nin kaogmahan sa nabuhay liwat na Kagurangnan. Puti an kolor kaini, asin pula sa Pentekostes.",
+  "listHere": "Ilista an mga simbahan digdi",
+  "churchesIn": "Mga simbahan sa {place}",
+  "churchesInView": "Mga simbahan sa view na ini",
+  "areaIntro": "An pinakaharani saimo enot. Pinduton an saro para sa detalye.",
+  "areaIntroCenter": "An pinakaharani sa tahaw enot. Pinduton an saro para sa detalye.",
+  "areaMore": "Ipinapahiling an {k} na pinakaharani sa {n}. I-zoom in tanganing mahiling an iba.",
+  "areaNone": "Mayo pang simbahan na namapa digdi.",
+  "areaTag": "Ipinapahiling an {n} na simbahan sa {place}",
+  "areaTagView": "Ipinapahiling an {n} na simbahan sa view na ini",
+  "areaTip": "I-klik tanganing ilista an mga simbahan kan siyudad na ini",
+  "noneInRange": "Mayong simbahan kan mga klaseng pinili mo sa laog kan {dist}. Probaran an mas harayong distansya o ipahiling an dakol pang klase sa itaas."
 }

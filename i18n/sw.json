@@ -391,5 +391,16 @@
   "about_seasonLent": "Kwaresima ni siku arobaini za sala, kufunga na kutoa sadaka kuanzia Jumatano ya Majivu hadi Alhamisi Kuu, waamini wanapomrudia Mungu kwa toba na kujiandaa kuadhimisha Fumbo la Pasaka. Rangi yake ni zambarau, na waridi Dominika ya Laetare.",
   "about_seasonHolyWeek": "Juma Kuu huanza Dominika ya Matawi, Kanisa linapokumbuka kuingia kwa Bwana wetu Yerusalemu, na huelekea Siku Tatu Takatifu za Mateso, Kifo na Ufufuko wake. Dominika ya Matawi ni nyekundu; siku za juma ni zambarau.",
   "about_seasonTriduum": "Siku Tatu Takatifu za Pasaka, tangu Misa ya jioni ya Karamu ya Bwana Alhamisi Kuu hadi jioni ya Dominika ya Pasaka, ni kilele cha mwaka wote wa liturujia: Mateso, Kifo na Ufufuko wa Bwana.",
-  "about_seasonEaster": "Kipindi cha Pasaka ni siku hamsini kutoka Dominika ya Pasaka hadi Pentekoste, zinazoadhimishwa kama Dominika moja kuu ya furaha katika Bwana mfufuka. Rangi yake ni nyeupe, na nyekundu siku ya Pentekoste."
+  "about_seasonEaster": "Kipindi cha Pasaka ni siku hamsini kutoka Dominika ya Pasaka hadi Pentekoste, zinazoadhimishwa kama Dominika moja kuu ya furaha katika Bwana mfufuka. Rangi yake ni nyeupe, na nyekundu siku ya Pentekoste.",
+  "listHere": "Orodhesha makanisa hapa",
+  "churchesIn": "Makanisa ya {place}",
+  "churchesInView": "Makanisa katika mwonekano huu",
+  "areaIntro": "La karibu nawe kwanza. Gusa moja kwa maelezo.",
+  "areaIntroCenter": "La karibu na katikati kwanza. Gusa moja kwa maelezo.",
+  "areaMore": "Inaonyesha {k} ya karibu kati ya {n}. Kuza ramani kuona mengine.",
+  "areaNone": "Bado hakuna makanisa kwenye ramani hapa.",
+  "areaTag": "Inaonyesha makanisa {n} ya {place}",
+  "areaTagView": "Inaonyesha makanisa {n} katika mwonekano huu",
+  "areaTip": "Bofya kuorodhesha makanisa ya mji huu",
+  "noneInRange": "Hakuna kanisa la aina ulizochagua ndani ya {dist}. Jaribu umbali mrefu zaidi au onyesha aina zaidi hapo juu."
 }
