@@ -601,7 +601,7 @@ const EN = {
   type_church: 'Parish churches', one_church: 'Church', type_chapel: 'Chapels', one_chapel: 'Chapel',
   type_abbey: 'Abbeys & monasteries', one_abbey: 'Abbey or monastery',
   loadingPhoto: 'Loading photo', photoOf: 'Photograph of {name}', theChurch: 'the church',
-  photoBy: 'Photo by {author}, {license}. Opens the photo on Wikimedia Commons.', photoCredit: 'Photo: {author} · {license}',
+  photoBy: 'Photo by {author}, {license}. Opens the photo on Wikimedia Commons.', photoCredit: 'Photo: {author} · {license}', parishSitePhoto: 'parish website', photoFromSite: 'Photo from the parish website, {site}. Opens the site.',
   unknownAuthor: 'Unknown author', seeFilePage: 'See file page',
   save: 'Save', saved: 'Saved', favAdd: 'Add to your favorites', favRemove: 'Remove from your favorites',
   favRemoveName: 'Remove {name} from favorites', remove: 'Remove', favEmpty: 'No favorites yet. Open a church and tap {save} to keep it here.',
@@ -1101,6 +1101,11 @@ async function showPhoto(i) {
     let rec; try { rec = await shardFor(i); } catch (e) {}
     if (!current()) return;
     try { photo = (await lookupPhoto(i, rec)).photo; } catch (e) {}
+    // nothing on Wikimedia: the main picture from the parish's own website, found by the site crawl
+    if (!photo && current()) try {
+      const w = await webFor(i), u = w.entry && w.entry[8], site = (w.entry && w.entry[1]) || (rec && rec[6]) || u;
+      if (u && /^https:\/\//.test(u)) { const h = new URL(/^https?:/.test(site) ? site : 'https://' + site).hostname.replace(/^www\./, ''); photo = { src: u, file: rec && rec[0], author: h, license: tr('parishSitePhoto'), page: /^https?:/.test(site) ? site : 'https://' + h, own: true }; }
+    } catch (e) {}
   }
   if (!current()) return;
   if (!photo) { done(); return; }
@@ -1109,7 +1114,7 @@ async function showPhoto(i) {
   if (!current()) return;
   hero.querySelector('svg.scene').after(img);
   hero.classList.add('has-photo');
-  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
+  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(photo.own ? tr('photoFromSite', { site: photo.author }) : tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
   requestAnimationFrame(() => img.classList.add('on'));
   done();
 }
@@ -1167,9 +1172,9 @@ async function fromCommons(lat, lon, tokens, town) {
     const c = p.coordinates && p.coordinates[0]; const d = c ? metres(lat, lon, c.lat, c.lon) : 500;
     const nm = nameMatch(tokens, title), churchy = CHURCHY.test(squash(title));
     let score = -1;
-    if (d < 250 && (nm >= 0.5 || (churchy && d < 90 && (nm > 0 || !tokens.length)))) score = nm * 3 + (churchy ? 1 : 0) - d / 250;
+    // only files whose titles name this church: an unnamed photo taken nearby is too often a different building
+    if (d < 250 && nm >= 0.5) score = nm * 3 + (churchy ? 1 : 0) - d / 250;
     else if (nm >= 0.67 && churchy) score = 1.2 + nm - d / 500; // named, a little further off
-    else if (churchy && d < 200) score = 0.8 - d / 400 + (town && nameMatch(nameTokens(town), title) ? 0.15 : 0); // a church photo taken right here
     if (score > 0 && (!best || score > best.score)) best = { score, page: p };
   }
   // files whose titles name the church (interiors welcome) feed the gallery when there is no Commons category
@@ -1183,7 +1188,7 @@ async function fromWikipedia(lang, lat, lon, tokens) {
   for (const p of (j.query && j.query.pages) || []) {
     const c = p.coordinates && p.coordinates[0]; const d = c ? metres(lat, lon, c.lat, c.lon) : 400;
     const nm = nameMatch(tokens, p.title), churchy = CHURCHY.test(squash(p.title));
-    if (!(churchy && (nm >= 0.5 || (d < 120 && (nm > 0 || !tokens.length))))) continue;
+    if (!(churchy && nm >= 0.5)) continue;
     const score = nm * 3 + 1.5 - d / 400;
     if (!best || score > best.score) best = { score, file: p.pageimage, qid: p.pageprops && p.pageprops.wikibase_item, wiki: { lang, title: p.title } };
   }
@@ -1213,7 +1218,6 @@ async function fromWikidata(lat, lon, tokens, cc) {
     let score = -1;
     if (nm >= 0.5) score = 1.6 + nm * 2 - d / 400;      // named the same
     else if (d < 80) score = 1.5 - d / 200;              // the church item sits on the pin
-    else if (d < 200 && b.img) score = 0.9 - d / 400;    // nearest church with a picture (photo only, not facts)
     if (score >= 1.2 && (!item || score > item.score)) item = { score, qid };
     if (b.img && score > 0 && (!best || score > best.score)) best = { score, file: decodeURIComponent(b.img.value.split('/').pop()).replace(/_/g, ' ') };
   }
@@ -1753,7 +1757,7 @@ const FACT_ROWS = ['P571', 'P1619', 'P825', 'P708', 'P84', 'P149', 'P1435', 'P51
 const PLAIN_WORDS = /^(the|and|des|del|della|dos|das|saint|sainte|san|santa|santo|sao|sankt|church|catholic|roman|parish|cathedral|catedral|cathedrale|cattedrale|iglesia|igreja|chiesa|eglise|kirche|parroquia|paroquia|parrocchia|paroisse|chapel|capilla|capela|basilica|nuestra|senora|nossa|senhora|notre|dame|lady|our)$/;
 function wikiAboutIt(u, name) {
   let t = ''; try { const x = new URL(u); if (x.hash) return false; t = squash(decodeURIComponent(x.pathname.split('/').pop())); } catch (e) { return false; }
-  return squash(name).split(/\\s+/).some(w => w.length > 3 && !PLAIN_WORDS.test(w) && t.includes(w));
+  return squash(name).split(/\s+/).some(w => w.length > 3 && !PLAIN_WORDS.test(w) && t.includes(w));
 }
 /* ---------- Photos link: point it at something that has pictures, or hide it ---------- */
 async function checkPhotosLink(i, rec, name, town, lat, lng) {
@@ -1763,16 +1767,13 @@ async function checkPhotosLink(i, rec, name, town, lat, lng) {
     const a = await loadAbout(i, rec).catch(() => ({}));
     if (a.cat) return set(C + 'wiki/Category:' + encodeURIComponent(a.cat.replace(/ /g, '_')));
     // the church's name among Commons files, with the town unless it is written in another script
-    const q = [name, /^[\\u0000-\\u024f\\s.'-]*$/.test(town || '') ? town : ''].filter(Boolean).join(' ').normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+    const q = [name, /^[\u0000-\u024f\s.'-]*$/.test(town || '') ? town : ''].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     // Commons search matches loosely, so count only files whose own title carries the name's distinctive words
     const GENERIC = /^(the|of|and|de|des|du|la|le|les|el|los|las|da|do|dos|di|del|della|st|ste|saint|sainte|san|santa|santo|sao|sankt|church|catholic|roman|parish|cathedral|cathedrale|catedral|cattedrale|iglesia|igreja|chiesa|eglise|kirche|kosciol|parroquia|paroquia|parrocchia|paroisse|chapel|chapelle|capilla|capela|cappella|of|our|lady|notre|dame|nuestra|senora|nossa|senhora)$/;
-    const key = squash(q).split(/\\s+/).filter(w => w.length > 2 && !GENERIC.test(w));
+    const key = squash(q).split(/\s+/).filter(w => w.length > 2 && !GENERIC.test(w));
     const s = await api('commons.wikimedia.org', { list: 'search', srsearch: q, srnamespace: 6, srlimit: 20, srprop: '' });
     const hits = ((s.query && s.query.search) || []).filter(h => { const t = squash(h.title); return key.length && key.filter(w => t.includes(w)).length >= Math.ceil(key.length * 0.75); });
     if (hits.length) return set(C + 'w/index.php?search=' + encodeURIComponent(q) + '&title=Special:MediaSearch&type=image');
-    // or any photos taken right around it
-    const g = await api('commons.wikimedia.org', { list: 'geosearch', gscoord: lat + '|' + lng, gsradius: 250, gsnamespace: 6, gslimit: 1 });
-    if (g.query && g.query.geosearch && g.query.geosearch.length) return set(C + 'wiki/Special:Nearby#/coord/' + lat.toFixed(5) + ',' + lng.toFixed(5));
     set('');
   } catch (e) { set(''); }  // Commons didn't answer: no link rather than one that may lead nowhere
 }
