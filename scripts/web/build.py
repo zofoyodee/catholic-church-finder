@@ -1,7 +1,7 @@
 """Merge crawl parts into data/web/N.json, one file per detail shard.
 
 Each file maps a record's index within its shard to
-  [status, url, staff, staffSource]
+  [status, url, staff, staffSource, massLines, confessionLines, scheduleSource, socials]
 status: 2 = moved (url is the new address), 3 = dead, 1 = ok but at a new path (url).
 staff:  [[kind "p"|"d", title, name, role, photoUrl], ...]
 Records whose link works unchanged and have no staff are left out.
@@ -15,8 +15,17 @@ for fn in sys.argv[1:]:
     res.update(json.load(open(fn)))
 
 os.makedirs('data/web', exist_ok=True)
+# last run's results: a parish site that doesn't answer this time keeps the staff and times found before
+PREV = {}
 for old in glob.glob('data/web/[0-9]*.json'):
+    k = int(os.path.basename(old)[:-5])
+    for j, e in json.load(open(old)).items():
+        PREV[k * 2000 + int(j)] = e
     os.remove(old)
+try:
+    WSOC = json.load(open('data/web/wikidata_social.json'))
+except FileNotFoundError:
+    WSOC = {}
 CODE = {'ok': 1, 'moved': 2, 'dead': 3}
 stats = collections.Counter()
 sys.path.insert(0, os.path.dirname(__file__))
@@ -33,21 +42,58 @@ _n = json.load(open('data/meta.json'))['count']
 LON, LAT = struct.unpack_from(f'<{_n}i', _raw, 0), struct.unpack_from(f'<{_n}i', _raw, 4 * _n)
 LANG_IDX = {c: i + 1 for i, (c, _) in enumerate(LANGS)}
 OV = json.load(open('data/overrides.json'))
+def unglue(ln):
+    """Older crawls ran page pieces together ("10:00 AMEnglish", "Saturday6:30")."""
+    ln = re.sub(r'\b([AaPp]\.?[Mm]\.?)(?=[A-Z(])', r'\1 ', ln)
+    return re.sub(r'(?<=[A-Za-z\u00c0-\u024f]{3})(?=\d)', ' ', ln)  # not "18h30"
+
+
+def socials(found, idx):
+    """Links from the parish site first, then Wikidata for platforms the site didn't link."""
+    out, seen = [], set()
+    for u in (found or []) + WSOC.get(str(idx), []):
+        plat = re.sub(r'^(www|m|web|mobile)\.', '', u.split('/')[2].lower()).replace('twitter.com', 'x.com').replace('youtu.be', 'youtube.com')
+        plat = plat.split('.')[-2] if plat.count('.') else plat
+        if plat not in seen:
+            seen.add(plat)
+            out.append(u)
+    return out
+
+
 for k, j, r, added in records():
     out = shards[k]
     u = r[6]
     if not u:
+        so = socials([], k * 2000 + j)
+        if so:
+            out[j] = [0, '', [], '', [], [], '', so]
+            stats['with_social'] += 1
         continue
     u = u if re.match(r'^https?://', u) else 'https://' + u
     x = res.get(u)
     o = OV.get(str(k * 2000 + j), {})
+    old = PREV.get(k * 2000 + j)
+    if not x and old and len(old) > 2:
+        x = {'s': {1: 'ok', 2: 'moved', 3: 'dead'}.get(old[0], 'unknown'), 'u': old[1]}  # this run didn't reach it
+        stats['entry_kept'] += 1
+    if x and old and x['s'] != 'dead' and not (o.get('web') and o['web'] != u):
+        x = dict(x)
+        if not x.get('p') and len(old) > 2 and old[2]:
+            x['p'], x['src'] = old[2], old[3] if len(old) > 3 else ''
+            stats['staff_kept'] += 1
+        if not x.get('mt') and not x.get('ct') and len(old) > 4 and (old[4] or (len(old) > 5 and old[5])):
+            x['mt'], x['ct'], x['msrc'] = [unglue(l) for l in old[4]], [unglue(l) for l in (old[5] if len(old) > 5 else [])], old[6] if len(old) > 6 else ''
+            stats['times_kept'] += 1
+        if not x.get('so') and len(old) > 7 and old[7]:
+            x['so'] = old[7]
     if o.get('mass') or o.get('confession'):
         # hand-entered times for parishes whose sites turn crawlers away
         x = dict(x or {'s': 'unknown'}, mt=o.get('mass', []), ct=o.get('confession', []), msrc=o.get('times_source', u))
     if not x:
         stats['not_checked'] += 1
-        if added:
-            out[j] = [0, u]
+        so = socials([], k * 2000 + j)
+        if added or so:
+            out[j] = [0, u if added else '', [], '', [], [], '', so] if so else [0, u]
         continue
     stats[x['s']] += 1
     code = CODE.get(x['s'], 0)
@@ -72,8 +118,10 @@ for k, j, r, added in records():
         sched[i] = [tzi] + sorted({kd | m << 1 | t << 8 | (LANG_IDX[lg] if lg else 0) << 19 | wk << 24 for kd, m, t, lg, wk in sl})
         stats['with_times'] += 1
         stats['with_language'] += any(x[3] for x in sl)
-    if code == 3 or new or staff or mass or conf:
-        e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', '')]
+    so = socials(x.get('so'), k * 2000 + j)
+    stats['with_social'] += bool(so)
+    if code == 3 or new or staff or mass or conf or so:
+        e = [code, new, staff, x.get('src', ''), mass, conf, x.get('msrc', ''), so]
         while e and not e[-1] and len(e) > 2:
             e.pop()
         out[j] = e

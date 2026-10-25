@@ -261,6 +261,42 @@ def find_img(el, base, name):
     return ''
 
 
+SOCIAL = [  # (platform, host pattern); one link per platform
+    ('facebook', r'(?:www\.|m\.|web\.)?facebook\.com|fb\.com'),
+    ('instagram', r'(?:www\.)?instagram\.com'),
+    ('youtube', r'(?:www\.|m\.)?youtube\.com|youtu\.be'),
+    ('x', r'(?:www\.|mobile\.)?(?:twitter|x)\.com'),
+    ('tiktok', r'(?:www\.)?tiktok\.com'),
+    ('flocknote', r'(?:[\w-]+\.)?flocknote\.com'),
+]
+SOCIAL_RX = [(k, re.compile(rf'^(?:{h})$', re.I)) for k, h in SOCIAL]
+# share buttons, single posts and site-wide pages, not the parish's own account
+SOCIAL_SKIP = re.compile(r'(sharer|share\.php|/share\b|/intent/|/dialog/|/plugins/|/embed/|/watch\b|/shorts/|/p/|/reel/|/posts?/|/status/|/events?/|/photos?/|/videos?/|/hashtag/|/search|/login|/help|/policies|/privacy|/legal|/home\.php|/profile\.php$|/groups/$)', re.I)
+
+
+def social_links(html, base):
+    """The parish's own social accounts linked from its page: [url, ...], one per platform."""
+    soup = BeautifulSoup(html, 'lxml')
+    out = {}
+    for a in soup.find_all('a', href=True):
+        u = urljoin(base, a['href'].strip()).split('#')[0]
+        sp = urlsplit(u)
+        if sp.scheme not in ('http', 'https') or SOCIAL_SKIP.search(sp.path + ('?' + sp.query if sp.query else '')):
+            if not re.search(r'profile\.php\?id=\d+', u):
+                continue
+        host = (sp.hostname or '').lower()
+        for k, rx in SOCIAL_RX:
+            if k in out or not rx.match(host):
+                continue
+            path = sp.path.rstrip('/')
+            if k != 'flocknote' and (not path or path.count('/') > (3 if k == 'youtube' else 2)):
+                continue  # a bare platform home page or a deep link
+            if k == 'youtube' and not re.match(r'/(@[\w.-]+|c/[\w.-]+|channel/[\w-]+|user/[\w.-]+|[\w.-]+)(/(live|streams|videos|featured))?$', path):
+                continue
+            out[k] = f'https://{host}{path}' + (f'?{sp.query}' if 'profile.php' in path else '')
+    return [out[k] for k, _ in SOCIAL if k in out]
+
+
 def staff_links(html, base):
     soup = BeautifulSoup(html, 'lxml')
     host = norm_host(urlsplit(base).hostname)
@@ -412,7 +448,13 @@ class Crawler:
             if force_new or b.scheme != a.scheme or b.path.rstrip('/') != a.path.rstrip('/'):
                 res['u'] = final
         if shared:
-            return res  # a diocese or directory site shared by many churches: its clergy aren't this parish's
+            return res  # a diocese or directory site shared by many churches: its clergy and accounts aren't this parish's
+        try:
+            so = social_links(html, final)
+            if so:
+                res['so'] = so
+        except Exception as e:  # noqa: BLE001
+            res['x'] = type(e).__name__
         try:
             # on a home page, only trust names that come with a role (otherwise it's often news or a guest)
             people = [p for p in extract_people(html, final, name) if p['role']]

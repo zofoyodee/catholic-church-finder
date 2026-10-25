@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   wikidata:
-    # websites for churches that have none, from Wikidata's "official website"
+    # websites for churches that have none, and social accounts, from Wikidata
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: wikidata
-          path: data/web/wikidata_sites.json
+          path: |
+            data/web/wikidata_sites.json
+            data/web/wikidata_social.json
           retention-days: 14
 
   crawl:
