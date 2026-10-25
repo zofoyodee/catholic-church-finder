@@ -358,5 +358,20 @@
   "desc_shrine": "Een plaats van bedevaart en devotie.",
   "desc_church": "De gewone parochie- en buurtkerken: elke kerk die geen kathedraal, basiliek, heiligdom, kapel of abdij is.",
   "desc_chapel": "Een kleinere kapel of oratorium, vaak bediend vanuit een nabije parochie.",
-  "desc_abbey": "De kerk van een gemeenschap van monniken, nonnen, broeders of zusters."
+  "desc_abbey": "De kerk van een gemeenschap van monniken, nonnen, broeders of zusters.",
+  "massNear": "Mis bij mij in de buurt",
+  "confNear": "Biecht bij mij in de buurt",
+  "massNearTip": "Kerken bij jou in de buurt, eerstvolgende Mis eerst",
+  "confNearTip": "Kerken bij jou in de buurt, eerstvolgende biecht eerst",
+  "massNearTitle": "Mis bij jou in de buurt",
+  "confNearTitle": "Biecht bij jou in de buurt",
+  "whenNow": "Nu",
+  "whenToday": "Vandaag {time}",
+  "whenTomorrow": "Morgen {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Deze week geen tijd vermeld",
+  "usingMapCenter": "Locatie staat uit, dus deze liggen bij het midden van de kaart.",
+  "noMassNear": "Nog geen kerk in de buurt vermeldt haar tijden.",
+  "seeWorldwide": "Bekijk alle {n} kerken met een Mis in het {lang} wereldwijd",
+  "timesCheck": "Tijden komen van parochiewebsites. Controleer bij de parochie voor je gaat."
 }

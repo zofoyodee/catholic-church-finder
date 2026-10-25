@@ -388,5 +388,20 @@
   "desc_shrine": "Miejsce pielgrzymek i pobożności.",
   "desc_church": "Zwykłe kościoły parafialne i osiedlowe: każdy kościół, który nie jest katedrą, bazyliką, sanktuarium, kaplicą ani opactwem.",
   "desc_chapel": "Mniejsza kaplica lub oratorium, często obsługiwane przez pobliską parafię.",
-  "desc_abbey": "Kościół wspólnoty mnichów, mniszek, braci zakonnych lub sióstr."
+  "desc_abbey": "Kościół wspólnoty mnichów, mniszek, braci zakonnych lub sióstr.",
+  "massNear": "Msza w pobliżu",
+  "confNear": "Spowiedź w pobliżu",
+  "massNearTip": "Kościoły w pobliżu, najbliższa Msza najpierw",
+  "confNearTip": "Kościoły w pobliżu, najbliższa spowiedź najpierw",
+  "massNearTitle": "Msza w pobliżu",
+  "confNearTitle": "Spowiedź w pobliżu",
+  "whenNow": "Teraz",
+  "whenToday": "Dziś {time}",
+  "whenTomorrow": "Jutro {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Brak godzin w tym tygodniu",
+  "usingMapCenter": "Lokalizacja jest wyłączona, więc te kościoły są blisko środka mapy.",
+  "noMassNear": "Żaden pobliski kościół nie podaje jeszcze godzin.",
+  "seeWorldwide": "Zobacz wszystkie kościoły ({n}) z Mszą w języku: {lang} na świecie",
+  "timesCheck": "Godziny pochodzą ze stron parafii. Sprawdź w parafii przed wyjściem."
 }

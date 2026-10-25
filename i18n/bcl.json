@@ -350,5 +350,20 @@
   "jInGospels": "Sa mga Ebanghelyo",
   "jShareTitle": "{name} sa buhay ni Jesus",
   "jNoMatch": "Mayong lugar o pangyayari sa buhay ni Jesus na nagtutugma sa “{q}”.",
-  "jProv": "An mga reperensya sa Ebanghelyo nagsusunod sa New American Bible, Revised Edition, an Katolikong pagkasalin na gamit sa Misa sa Estados Unidos. An orden nagsusunod sa tradisyonal na pagkasararo kan apat na Ebanghelyo; kun nagkakaiba an mga ebanghelista o dai sigurado an lugar, sinasabi ini kan kard. Pinduton an reperensya tanganing basahon ini sa website kan USCCB."
+  "jProv": "An mga reperensya sa Ebanghelyo nagsusunod sa New American Bible, Revised Edition, an Katolikong pagkasalin na gamit sa Misa sa Estados Unidos. An orden nagsusunod sa tradisyonal na pagkasararo kan apat na Ebanghelyo; kun nagkakaiba an mga ebanghelista o dai sigurado an lugar, sinasabi ini kan kard. Pinduton an reperensya tanganing basahon ini sa website kan USCCB.",
+  "massNear": "Misa harani sako",
+  "confNear": "Kumpisal harani sako",
+  "massNearTip": "Mga simbahan harani saimo, an pinakaharaning Misa enot",
+  "confNearTip": "Mga simbahan harani saimo, an pinakaharaning Kumpisal enot",
+  "massNearTitle": "Misa harani saimo",
+  "confNearTitle": "Kumpisal harani saimo",
+  "whenNow": "Ngonyan",
+  "whenToday": "Ngonyan na aldaw {time}",
+  "whenTomorrow": "Sa aga {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Mayong oras ngonyan na semana",
+  "usingMapCenter": "Patay an lokasyon, kaya harani ini sa tahaw kan mapa.",
+  "noMassNear": "Mayo pang harani na simbahan na naglilista kan saindang oras.",
+  "seeWorldwide": "Hilingon an {n} na simbahan na igwang Misa sa {lang} sa bilog na kinaban",
+  "timesCheck": "An mga oras hale sa mga website kan parokya. Hapoton an parokya bago magduman."
 }

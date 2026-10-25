@@ -350,5 +350,20 @@
   "jInGospels": "Nan Levanjil yo",
   "jShareTitle": "{name} nan lavi Jezi",
   "jNoMatch": "Pa gen kote ni moman nan lavi Jezi ki koresponn ak “{q}”.",
-  "jProv": "Referans Levanjil yo swiv New American Bible, Revised Edition, tradiksyon katolik yo itilize nan Lamès Ozetazini. Lòd la swiv yon amoni tradisyonèl kat Levanjil yo; kote evanjelis yo diferan oswa yon kote pa sèten, kat la di sa. Tape yon referans pou li l sou sit USCCB a."
+  "jProv": "Referans Levanjil yo swiv New American Bible, Revised Edition, tradiksyon katolik yo itilize nan Lamès Ozetazini. Lòd la swiv yon amoni tradisyonèl kat Levanjil yo; kote evanjelis yo diferan oswa yon kote pa sèten, kat la di sa. Tape yon referans pou li l sou sit USCCB a.",
+  "massNear": "Lamès toupre m",
+  "confNear": "Konfesyon toupre m",
+  "massNearTip": "Legliz toupre w, premye Lamès la anvan",
+  "confNearTip": "Legliz toupre w, premye Konfesyon an anvan",
+  "massNearTitle": "Lamès toupre w",
+  "confNearTitle": "Konfesyon toupre w",
+  "whenNow": "Kounye a",
+  "whenToday": "Jodi a {time}",
+  "whenTomorrow": "Demen {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Pa gen lè semèn sa a",
+  "usingMapCenter": "Lokalizasyon an fèmen, kidonk sa yo toupre mitan kat la.",
+  "noMassNear": "Pa gen legliz toupre ki bay lè yo ankò.",
+  "seeWorldwide": "Wè tout {n} legliz ki gen Lamès an {lang} atravè lemond",
+  "timesCheck": "Lè yo soti sou sit pawas yo. Verifye ak pawas la anvan ou ale."
 }

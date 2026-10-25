@@ -348,5 +348,20 @@
   "jInGospels": "In Evangeliis",
   "jShareTitle": "{name} in vita Iesu",
   "jNoMatch": "Nullus locus vel momentum vitae Iesu cum “{q}” congruit.",
-  "jProv": "Loci Evangelii secuntur New American Bible, Revised Edition, versionem catholicam in Missa in Civitatibus Foederatis adhibitam. Ordo traditam quattuor Evangeliorum concordiam sequitur; ubi evangelistae differunt aut locus incertus est, charta id dicit. Tange locum ut eum in pagina USCCB legas."
+  "jProv": "Loci Evangelii secuntur New American Bible, Revised Edition, versionem catholicam in Missa in Civitatibus Foederatis adhibitam. Ordo traditam quattuor Evangeliorum concordiam sequitur; ubi evangelistae differunt aut locus incertus est, charta id dicit. Tange locum ut eum in pagina USCCB legas.",
+  "massNear": "Missa prope me",
+  "confNear": "Confessio prope me",
+  "massNearTip": "Ecclesiae prope te, proxima Missa prima",
+  "confNearTip": "Ecclesiae prope te, proxima Confessio prima",
+  "massNearTitle": "Missa prope te",
+  "confNearTitle": "Confessio prope te",
+  "whenNow": "Nunc",
+  "whenToday": "Hodie {time}",
+  "whenTomorrow": "Cras {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Nullum tempus hac hebdomada",
+  "usingMapCenter": "Locus extinctus est, itaque hae prope medium tabulae sunt.",
+  "noMassNear": "Nulla ecclesia propinqua tempora sua adhuc indicat.",
+  "seeWorldwide": "Vide omnes {n} ecclesias cum Missa {lang} per orbem",
+  "timesCheck": "Tempora e paginis paroeciarum sumuntur. Paroeciam interroga antequam eas."
 }

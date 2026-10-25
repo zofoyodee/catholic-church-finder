@@ -340,5 +340,20 @@
   "desc_shrine": "순례와 신심의 장소입니다.",
   "desc_church": "일반 본당과 지역 성당: 주교좌성당, 대성전, 성지, 경당, 수도원이 아닌 모든 성당입니다.",
   "desc_chapel": "작은 경당이나 기도소로, 흔히 인근 본당에서 돌봅니다.",
-  "desc_abbey": "수사, 수녀, 탁발수사 또는 수녀회 공동체의 성당입니다."
+  "desc_abbey": "수사, 수녀, 탁발수사 또는 수녀회 공동체의 성당입니다.",
+  "massNear": "내 근처 미사",
+  "confNear": "내 근처 고해성사",
+  "massNearTip": "근처 성당, 가장 가까운 미사 순",
+  "confNearTip": "근처 성당, 가장 가까운 고해성사 순",
+  "massNearTitle": "근처 미사",
+  "confNearTitle": "근처 고해성사",
+  "whenNow": "지금",
+  "whenToday": "오늘 {time}",
+  "whenTomorrow": "내일 {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "이번 주 시간 없음",
+  "usingMapCenter": "위치가 꺼져 있어 지도 중앙 근처 성당을 보여 줍니다.",
+  "noMassNear": "근처 성당 중 아직 시간을 올린 곳이 없습니다.",
+  "seeWorldwide": "전 세계 {lang} 미사가 있는 성당 {n}곳 모두 보기",
+  "timesCheck": "시간은 본당 웹사이트에서 가져왔습니다. 가기 전에 본당에 확인하세요."
 }

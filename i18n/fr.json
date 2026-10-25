@@ -358,5 +358,20 @@
   "desc_shrine": "Un lieu de pèlerinage et de dévotion.",
   "desc_church": "Les églises paroissiales et de quartier : toute église qui n'est ni cathédrale, ni basilique, ni sanctuaire, ni chapelle, ni abbaye.",
   "desc_chapel": "Une chapelle ou un oratoire plus petit, souvent desservi par une paroisse voisine.",
-  "desc_abbey": "L'église d'une communauté de moines, moniales, frères ou sœurs."
+  "desc_abbey": "L'église d'une communauté de moines, moniales, frères ou sœurs.",
+  "massNear": "Messe près de moi",
+  "confNear": "Confession près de moi",
+  "massNearTip": "Églises proches, la Messe la plus proche d'abord",
+  "confNearTip": "Églises proches, la Confession la plus proche d'abord",
+  "massNearTitle": "Messe près de vous",
+  "confNearTitle": "Confession près de vous",
+  "whenNow": "Maintenant",
+  "whenToday": "Aujourd'hui {time}",
+  "whenTomorrow": "Demain {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Aucun horaire cette semaine",
+  "usingMapCenter": "La localisation est désactivée : ces églises sont proches du centre de la carte.",
+  "noMassNear": "Aucune église proche n'indique encore ses horaires.",
+  "seeWorldwide": "Voir les {n} églises avec Messe en {lang} dans le monde",
+  "timesCheck": "Les horaires viennent des sites des paroisses. Vérifiez auprès de la paroisse avant d'y aller."
 }

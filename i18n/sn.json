@@ -350,5 +350,20 @@
   "jInGospels": "MuEvhangeri",
   "jShareTitle": "{name} muupenyu hwaJesu",
   "jNoMatch": "Hapana nzvimbo kana nguva muupenyu hwaJesu inoenderana ne“{q}”.",
-  "jProv": "Mavhesi eEvhangeri anotevera New American Bible, Revised Edition, shanduro yeKaturike inoshandiswa paMisa muUnited States. Kutevedzana kunotevera kuenzanisa kwetsika kweEvhangeri ina; apo vanyori veEvhangeri vanosiyana kana nzvimbo isina chokwadi, kadhi rinozvitaura. Baya vhesi kuti uriverenge pawebhusaiti yeUSCCB."
+  "jProv": "Mavhesi eEvhangeri anotevera New American Bible, Revised Edition, shanduro yeKaturike inoshandiswa paMisa muUnited States. Kutevedzana kunotevera kuenzanisa kwetsika kweEvhangeri ina; apo vanyori veEvhangeri vanosiyana kana nzvimbo isina chokwadi, kadhi rinozvitaura. Baya vhesi kuti uriverenge pawebhusaiti yeUSCCB.",
+  "massNear": "Misa pedyo neni",
+  "confNear": "Kureurura pedyo neni",
+  "massNearTip": "Machechi ari pedyo newe, Misa yepedyo kutanga",
+  "confNearTip": "Machechi ari pedyo newe, Kureurura kwepedyo kutanga",
+  "massNearTitle": "Misa pedyo newe",
+  "confNearTitle": "Kureurura pedyo newe",
+  "whenNow": "Iye zvino",
+  "whenToday": "Nhasi {time}",
+  "whenTomorrow": "Mangwana {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Hapana nguva svondo rino",
+  "usingMapCenter": "Nzvimbo yako yakadzimwa, saka idzi dziri pedyo nepakati pemepu.",
+  "noMassNear": "Hapana chechi iri pedyo yakanyora nguva dzayo.",
+  "seeWorldwide": "Ona machechi ose {n} ane Misa mu{lang} pasi rose",
+  "timesCheck": "Nguva dzinobva pamawebhusaiti eparishi. Bvunza parishi usati waenda."
 }

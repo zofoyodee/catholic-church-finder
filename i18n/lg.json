@@ -350,5 +350,20 @@
   "jInGospels": "Mu Njiri",
   "jShareTitle": "{name} mu bulamu bwa Yezu",
   "jNoMatch": "Tewali kifo oba kiseera mu bulamu bwa Yezu ekikwatagana ne “{q}”.",
-  "jProv": "Ennyiriri z'Enjiri zigoberera New American Bible, Revised Edition, enkyusa ya Katoliki ekozesebwa mu Mmisa mu Amerika. Enteekateeka egoberera engeri ey'ennono ey'okugatta Enjiri ennya; abawandiisi b'Enjiri bwe batakwatagana oba ekifo bwe kitamanyiddwa bulungi, kaadi ekyogera. Nyiga ku lunyiriri olusome ku mukutu gwa USCCB."
+  "jProv": "Ennyiriri z'Enjiri zigoberera New American Bible, Revised Edition, enkyusa ya Katoliki ekozesebwa mu Mmisa mu Amerika. Enteekateeka egoberera engeri ey'ennono ey'okugatta Enjiri ennya; abawandiisi b'Enjiri bwe batakwatagana oba ekifo bwe kitamanyiddwa bulungi, kaadi ekyogera. Nyiga ku lunyiriri olusome ku mukutu gwa USCCB.",
+  "massNear": "Mmisa okumpi nange",
+  "confNear": "Okwenenya okumpi nange",
+  "massNearTip": "Ekkanisa eziri okumpi naawe, Mmisa esooka okumpi",
+  "confNearTip": "Ekkanisa eziri okumpi naawe, okwenenya okusooka okumpi",
+  "massNearTitle": "Mmisa okumpi naawe",
+  "confNearTitle": "Okwenenya okumpi naawe",
+  "whenNow": "Kati",
+  "whenToday": "Leero {time}",
+  "whenTomorrow": "Enkya {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Tewali budde wiiki eno",
+  "usingMapCenter": "Ekifo kyo kiggaddwa, kale zino ziri okumpi ne wakati wa maapu.",
+  "noMassNear": "Tewali kkanisa eri okumpi eteekeddewo obudde bwayo.",
+  "seeWorldwide": "Laba ekkanisa zonna {n} ezirina Mmisa mu {lang} mu nsi yonna",
+  "timesCheck": "Obudde buva ku mikutu gya pariisi. Buuza pariisi nga tonnagenda."
 }

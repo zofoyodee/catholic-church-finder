@@ -350,5 +350,20 @@
   "jInGospels": "Mu Uthenga Wabwino",
   "jShareTitle": "{name} m'moyo wa Yesu",
   "jNoMatch": "Palibe malo kapena nthawi m'moyo wa Yesu yogwirizana ndi “{q}”.",
-  "jProv": "Mavesi a Uthenga Wabwino akutsatira New American Bible, Revised Edition, matembenuzidwe a Chikatolika ogwiritsidwa ntchito pa Misa ku United States. Ndondomeko ikutsatira kugwirizanitsa kwa mwambo kwa Mauthenga Abwino anayi; pamene alembi a Uthenga Wabwino akusiyana kapena malo sakudziwika bwino, khadi likunena. Dinani vesi kuti muliwerenge pa webusaiti ya USCCB."
+  "jProv": "Mavesi a Uthenga Wabwino akutsatira New American Bible, Revised Edition, matembenuzidwe a Chikatolika ogwiritsidwa ntchito pa Misa ku United States. Ndondomeko ikutsatira kugwirizanitsa kwa mwambo kwa Mauthenga Abwino anayi; pamene alembi a Uthenga Wabwino akusiyana kapena malo sakudziwika bwino, khadi likunena. Dinani vesi kuti muliwerenge pa webusaiti ya USCCB.",
+  "massNear": "Misa pafupi ndi ine",
+  "confNear": "Kulapa pafupi ndi ine",
+  "massNearTip": "Matchalitchi apafupi nanu, Misa yoyandikira kwambiri poyamba",
+  "confNearTip": "Matchalitchi apafupi nanu, Kulapa koyandikira kwambiri poyamba",
+  "massNearTitle": "Misa pafupi nanu",
+  "confNearTitle": "Kulapa pafupi nanu",
+  "whenNow": "Tsopano",
+  "whenToday": "Lero {time}",
+  "whenTomorrow": "Mawa {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Palibe nthawi sabata ino",
+  "usingMapCenter": "Malo anu azimitsidwa, choncho awa ali pafupi ndi pakati pa mapu.",
+  "noMassNear": "Palibe tchalitchi chapafupi chimene chalemba nthawi zake.",
+  "seeWorldwide": "Onani matchalitchi onse {n} okhala ndi Misa mu {lang} padziko lonse",
+  "timesCheck": "Nthawi zimachokera pa mawebusaiti a parishi. Funsani parishi musanapite."
 }

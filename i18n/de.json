@@ -358,5 +358,20 @@
   "desc_shrine": "Ein Ort der Wallfahrt und der Andacht.",
   "desc_church": "Die gewöhnlichen Pfarr- und Ortskirchen: jede Kirche, die kein Dom, keine Basilika, kein Wallfahrtsort, keine Kapelle und keine Abtei ist.",
   "desc_chapel": "Eine kleinere Kapelle oder ein Oratorium, oft von einer nahen Pfarrei betreut.",
-  "desc_abbey": "Die Kirche einer Gemeinschaft von Mönchen, Nonnen, Brüdern oder Schwestern."
+  "desc_abbey": "Die Kirche einer Gemeinschaft von Mönchen, Nonnen, Brüdern oder Schwestern.",
+  "massNear": "Messe in meiner Nähe",
+  "confNear": "Beichte in meiner Nähe",
+  "massNearTip": "Kirchen in deiner Nähe, nächste Messe zuerst",
+  "confNearTip": "Kirchen in deiner Nähe, nächste Beichte zuerst",
+  "massNearTitle": "Messe in deiner Nähe",
+  "confNearTitle": "Beichte in deiner Nähe",
+  "whenNow": "Jetzt",
+  "whenToday": "Heute {time}",
+  "whenTomorrow": "Morgen {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Diese Woche keine Zeit angegeben",
+  "usingMapCenter": "Der Standort ist aus, daher liegen diese nahe der Kartenmitte.",
+  "noMassNear": "Noch keine Kirche in der Nähe nennt ihre Zeiten.",
+  "seeWorldwide": "Alle {n} Kirchen mit Messe auf {lang} weltweit ansehen",
+  "timesCheck": "Die Zeiten stammen von Pfarrwebsites. Bitte vorher bei der Pfarrei nachfragen."
 }

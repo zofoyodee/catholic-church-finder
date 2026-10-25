@@ -342,5 +342,20 @@
   "jInGospels": "福音書の中で",
   "jShareTitle": "イエスの生涯の{name}",
   "jNoMatch": "「{q}」に一致するイエスの生涯の場所や出来事はありません。",
-  "jProv": "福音書の引用は、米国のミサで用いられるカトリックの翻訳 New American Bible, Revised Edition に従っています。順序は四福音書の伝統的な調和に従い、福音記者の記述が異なる場合や場所が不確かな場合はカードに記しています。引用をタップすると USCCB のサイトで読めます。"
+  "jProv": "福音書の引用は、米国のミサで用いられるカトリックの翻訳 New American Bible, Revised Edition に従っています。順序は四福音書の伝統的な調和に従い、福音記者の記述が異なる場合や場所が不確かな場合はカードに記しています。引用をタップすると USCCB のサイトで読めます。",
+  "massNear": "近くのミサ",
+  "confNear": "近くのゆるしの秘跡",
+  "massNearTip": "近くの教会、直近のミサ順",
+  "confNearTip": "近くの教会、直近のゆるしの秘跡順",
+  "massNearTitle": "近くのミサ",
+  "confNearTitle": "近くのゆるしの秘跡",
+  "whenNow": "今",
+  "whenToday": "今日 {time}",
+  "whenTomorrow": "明日 {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "今週の時刻はありません",
+  "usingMapCenter": "位置情報がオフのため、地図の中心付近の教会を表示しています。",
+  "noMassNear": "近くの教会はまだ時刻を掲載していません。",
+  "seeWorldwide": "世界で{lang}のミサがある教会 {n} 件をすべて見る",
+  "timesCheck": "時刻は小教区のウェブサイトから取得しています。行く前に小教区に確認してください。"
 }

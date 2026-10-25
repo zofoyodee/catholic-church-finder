@@ -350,5 +350,20 @@
   "jInGospels": "Evangeliokunapi",
   "jShareTitle": "{name} Jesuspa kawsayninpi",
   "jNoMatch": "Jesuspa kawsayninpi mana ima kiti utaq pacha “{q}”-man tupanchu.",
-  "jProv": "Evangeliokunap qillqankunaqa New American Bible, Revised Edition nisqata qatin, Estados Unidospi Misapi llamk'achisqa católica t'ikrasqata. Ñiqinqa tawa Evangeliokunap ñawpaq tupachiyninta qatin; evangelistakuna mana kaqllatachu ninku utaq kiti mana sut'ichu kaptinqa, tarjeta willan. Qillqata llapiy USCCB p'anqapi ñawirinaykipaq."
+  "jProv": "Evangeliokunap qillqankunaqa New American Bible, Revised Edition nisqata qatin, Estados Unidospi Misapi llamk'achisqa católica t'ikrasqata. Ñiqinqa tawa Evangeliokunap ñawpaq tupachiyninta qatin; evangelistakuna mana kaqllatachu ninku utaq kiti mana sut'ichu kaptinqa, tarjeta willan. Qillqata llapiy USCCB p'anqapi ñawirinaykipaq.",
+  "massNear": "Misa ñuqaq qayllaypi",
+  "confNear": "Confesión ñuqaq qayllaypi",
+  "massNearTip": "Qayllaykipi iglesiakuna, aswan qayllapi Misa ñawpaqta",
+  "confNearTip": "Qayllaykipi iglesiakuna, aswan qayllapi Confesión ñawpaqta",
+  "massNearTitle": "Misa qayllaykipi",
+  "confNearTitle": "Confesión qayllaykipi",
+  "whenNow": "Kunan",
+  "whenToday": "Kunan p'unchaw {time}",
+  "whenTomorrow": "Paqarin {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Kay semanapi mana horario kanchu",
+  "usingMapCenter": "Ubicación wañuchisqa, chayrayku kaykunaqa mapaq chawpinpa qayllanpi kanku.",
+  "noMassNear": "Qayllapi mana ima iglesiapas horarionta willanraqchu.",
+  "seeWorldwide": "Tukuy pachapi {lang} simipi Misayuq {n} iglesiakunata qhaway",
+  "timesCheck": "Horariokunaqa parroquiakunap web p'anqankunamanta hamun. Manaraq riqtiyki parroquiata tapuy."
 }

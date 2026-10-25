@@ -366,5 +366,20 @@
   "jTagline_two": "<b>{n}</b> trenutka iz življenja našega Gospoda na <b>{p}</b> krajih · tapnite časovnico ali žebljiček",
   "jTagline_few": "<b>{n}</b> trenutki iz življenja našega Gospoda na <b>{p}</b> krajih · tapnite časovnico ali žebljiček",
   "jMoments_two": "{n} trenutka",
-  "jMoments_few": "{n} trenutki"
+  "jMoments_few": "{n} trenutki",
+  "massNear": "Maša v bližini",
+  "confNear": "Spoved v bližini",
+  "massNearTip": "Cerkve v bližini, najbližja maša prva",
+  "confNearTip": "Cerkve v bližini, najbližja spoved prva",
+  "massNearTitle": "Maša v vaši bližini",
+  "confNearTitle": "Spoved v vaši bližini",
+  "whenNow": "Zdaj",
+  "whenToday": "Danes {time}",
+  "whenTomorrow": "Jutri {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Ta teden ni navedenega časa",
+  "usingMapCenter": "Lokacija je izklopljena, zato so to cerkve blizu sredine zemljevida.",
+  "noMassNear": "Nobena bližnja cerkev še ni navedla časov.",
+  "seeWorldwide": "Prikaži vse cerkve ({n}) z mašo v jeziku {lang} po svetu",
+  "timesCheck": "Časi so vzeti s spletnih strani župnij. Pred odhodom preverite pri župniji."
 }

@@ -378,5 +378,20 @@
   "jTagline_few": "<b>{n}</b> okamžiky ze života našeho Pána na <b>{p}</b> místech · klepněte na časovou osu nebo špendlík",
   "jMoments_few": "{n} okamžiky",
   "jTagline_many": "<b>{n}</b> okamžiku ze života našeho Pána na <b>{p}</b> místech · klepněte na časovou osu nebo špendlík",
-  "jMoments_many": "{n} okamžiku"
+  "jMoments_many": "{n} okamžiku",
+  "massNear": "Mše svatá poblíž",
+  "confNear": "Svátost smíření poblíž",
+  "massNearTip": "Kostely poblíž, nejbližší mše první",
+  "confNearTip": "Kostely poblíž, nejbližší zpověď první",
+  "massNearTitle": "Mše svatá ve vašem okolí",
+  "confNearTitle": "Zpověď ve vašem okolí",
+  "whenNow": "Teď",
+  "whenToday": "Dnes {time}",
+  "whenTomorrow": "Zítra {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Tento týden bez času",
+  "usingMapCenter": "Poloha je vypnutá, proto jsou to kostely blízko středu mapy.",
+  "noMassNear": "Žádný kostel poblíž zatím neuvádí časy.",
+  "seeWorldwide": "Zobrazit všechny kostely ({n}) se mší v jazyce {lang} ve světě",
+  "timesCheck": "Časy pocházejí z webů farností. Před cestou si je ověřte ve farnosti."
 }

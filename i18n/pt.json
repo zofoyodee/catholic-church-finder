@@ -358,5 +358,20 @@
   "desc_shrine": "Um lugar de peregrinação e devoção.",
   "desc_church": "As igrejas paroquiais e de bairro: toda igreja que não é catedral, basílica, santuário, capela nem abadia.",
   "desc_chapel": "Uma capela ou oratório menor, muitas vezes atendido por uma paróquia próxima.",
-  "desc_abbey": "A igreja de uma comunidade de monges, monjas, frades ou irmãs."
+  "desc_abbey": "A igreja de uma comunidade de monges, monjas, frades ou irmãs.",
+  "massNear": "Missa perto de mim",
+  "confNear": "Confissão perto de mim",
+  "massNearTip": "Igrejas perto de você, a Missa mais próxima primeiro",
+  "confNearTip": "Igrejas perto de você, a Confissão mais próxima primeiro",
+  "massNearTitle": "Missa perto de você",
+  "confNearTitle": "Confissão perto de você",
+  "whenNow": "Agora",
+  "whenToday": "Hoje {time}",
+  "whenTomorrow": "Amanhã {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Sem horário nesta semana",
+  "usingMapCenter": "A localização está desligada, por isso estas ficam perto do centro do mapa.",
+  "noMassNear": "Nenhuma igreja próxima informa seus horários ainda.",
+  "seeWorldwide": "Ver as {n} igrejas com Missa em {lang} no mundo todo",
+  "timesCheck": "Os horários vêm dos sites paroquiais. Confirme com a paróquia antes de ir."
 }

@@ -350,5 +350,20 @@
   "jInGospels": "Iha Evanjellu sira",
   "jShareTitle": "{name} iha Jesus nia moris",
   "jNoMatch": "La iha fatin ka momentu iha Jesus nia moris ne'ebé tuir “{q}”.",
-  "jProv": "Referénsia Evanjellu nian tuir New American Bible, Revised Edition, tradusaun katólika ne'ebé uza iha Misa iha Estadus Unidus. Orden tuir armonia tradisionál husi Evanjellu haat; bainhira evanjelista sira la hanesan ka fatin la serteza, kartaun hatete. Baku referénsia atu lee iha website USCCB nian."
+  "jProv": "Referénsia Evanjellu nian tuir New American Bible, Revised Edition, tradusaun katólika ne'ebé uza iha Misa iha Estadus Unidus. Orden tuir armonia tradisionál husi Evanjellu haat; bainhira evanjelista sira la hanesan ka fatin la serteza, kartaun hatete. Baku referénsia atu lee iha website USCCB nian.",
+  "massNear": "Misa besik ha'u",
+  "confNear": "Konfisaun besik ha'u",
+  "massNearTip": "Igreja sira besik ita, Misa ne'ebé lalais liu uluk",
+  "confNearTip": "Igreja sira besik ita, Konfisaun ne'ebé lalais liu uluk",
+  "massNearTitle": "Misa besik ita",
+  "confNearTitle": "Konfisaun besik ita",
+  "whenNow": "Agora",
+  "whenToday": "Ohin {time}",
+  "whenTomorrow": "Aban {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "La iha oras semana ida-ne'e",
+  "usingMapCenter": "Lokalizasaun mate, nune'e igreja sira-ne'e besik mapa nia klaran.",
+  "noMassNear": "Seidauk iha igreja besik ne'ebé hatama sira-nia oras.",
+  "seeWorldwide": "Haree igreja {n} hotu ne'ebé iha Misa iha {lang} iha mundu tomak",
+  "timesCheck": "Oras sira mai husi paróquia nia website. Husu ba paróquia molok ba."
 }

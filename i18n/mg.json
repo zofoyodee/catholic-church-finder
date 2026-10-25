@@ -350,5 +350,20 @@
   "jInGospels": "Ao amin'ny Evanjely",
   "jShareTitle": "{name} amin'ny fiainan'i Jesoa",
   "jNoMatch": "Tsy misy toerana na fotoana amin'ny fiainan'i Jesoa mifanaraka amin'ny “{q}”.",
-  "jProv": "Ny andinin'ny Evanjely dia manaraka ny New American Bible, Revised Edition, dikanteny katolika ampiasaina amin'ny Lamesa any Etazonia. Ny filaharana dia manaraka fampifanarahana nentim-paharazana ny Evanjely efatra; raha tsy mitovy ny evanjelista na tsy azo antoka ny toerana, dia lazain'ny karatra izany. Tsindrio ny andininy hamakiana azy ao amin'ny tranonkalan'ny USCCB."
+  "jProv": "Ny andinin'ny Evanjely dia manaraka ny New American Bible, Revised Edition, dikanteny katolika ampiasaina amin'ny Lamesa any Etazonia. Ny filaharana dia manaraka fampifanarahana nentim-paharazana ny Evanjely efatra; raha tsy mitovy ny evanjelista na tsy azo antoka ny toerana, dia lazain'ny karatra izany. Tsindrio ny andininy hamakiana azy ao amin'ny tranonkalan'ny USCCB.",
+  "massNear": "Lamesa akaiky ahy",
+  "confNear": "Fibebahana akaiky ahy",
+  "massNearTip": "Fiangonana akaikinao, ny Lamesa akaiky indrindra aloha",
+  "confNearTip": "Fiangonana akaikinao, ny Fibebahana akaiky indrindra aloha",
+  "massNearTitle": "Lamesa akaikinao",
+  "confNearTitle": "Fibebahana akaikinao",
+  "whenNow": "Izao",
+  "whenToday": "Anio {time}",
+  "whenTomorrow": "Rahampitso {time}",
+  "whenDay": "{day} {time}",
+  "noTimesWeek": "Tsy misy ora amin'ity herinandro ity",
+  "usingMapCenter": "Maty ny toerana, ka akaikin'ny afovoan'ny sarintany ireto.",
+  "noMassNear": "Mbola tsy misy fiangonana akaiky manome ny orany.",
+  "seeWorldwide": "Jereo ireo fiangonana {n} misy Lamesa amin'ny {lang} manerantany",
+  "timesCheck": "Avy amin'ny tranonkalan'ny paroasy ny ora. Anontanio ny paroasy alohan'ny handehananao."
 }
