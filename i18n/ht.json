@@ -401,5 +401,6 @@
   "loadingArea": "N ap chèche legliz nan {place}…",
   "loadingView": "N ap chèche legliz nan vi sa a…",
   "loadingMore": "N ap chaje plis legliz…",
-  "noParishSite": "Nou pa jwenn sit pawas la"
+  "noParishSite": "Nou pa jwenn sit pawas la",
+  "photoMapillary": "Foto lari pa {author} sou Mapillary, CC BY-SA 4.0. L ap louvri l sou Mapillary."
 }

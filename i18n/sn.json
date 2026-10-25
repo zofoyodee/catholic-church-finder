@@ -401,5 +401,6 @@
   "loadingArea": "Tiri kutsvaga machechi muna {place}…",
   "loadingView": "Tiri kutsvaga machechi mumufananidzo uyu…",
   "loadingMore": "Tiri kuisa mamwe machechi…",
-  "noParishSite": "Webhusaiti yeparishi haina kuwanikwa"
+  "noParishSite": "Webhusaiti yeparishi haina kuwanikwa",
+  "photoMapillary": "Mufananidzo wemugwagwa na{author} paMapillary, CC BY-SA 4.0. Unovhurwa paMapillary."
 }

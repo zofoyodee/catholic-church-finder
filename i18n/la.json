@@ -399,5 +399,6 @@
   "loadingArea": "Ecclesias in {place} quaerimus…",
   "loadingView": "Ecclesias in hoc conspectu quaerimus…",
   "loadingMore": "Plures ecclesias oneramus…",
-  "noParishSite": "Pagina paroeciae non inventa"
+  "noParishSite": "Pagina paroeciae non inventa",
+  "photoMapillary": "Imago viae ab {author} in Mapillary, CC BY-SA 4.0. In Mapillary aperitur."
 }

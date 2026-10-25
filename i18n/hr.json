@@ -425,5 +425,6 @@
   "loadingArea": "Tražim crkve: {place}…",
   "loadingView": "Tražim crkve u ovom prikazu…",
   "loadingMore": "Učitavam još crkava…",
-  "noParishSite": "Župna stranica nije pronađena"
+  "noParishSite": "Župna stranica nije pronađena",
+  "photoMapillary": "Ulična fotografija: {author}, Mapillary, CC BY-SA 4.0. Otvara se na Mapillaryju."
 }

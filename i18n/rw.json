@@ -401,5 +401,6 @@
   "loadingArea": "Turashaka kiliziya zo muri {place}…",
   "loadingView": "Turashaka kiliziya ziri muri iyi shusho…",
   "loadingMore": "Turazana izindi kiliziya…",
-  "noParishSite": "Urubuga rwa paruwasi ntirwabonetse"
+  "noParishSite": "Urubuga rwa paruwasi ntirwabonetse",
+  "photoMapillary": "Ifoto y'umuhanda ya {author} kuri Mapillary, CC BY-SA 4.0. Ifungurirwa kuri Mapillary."
 }

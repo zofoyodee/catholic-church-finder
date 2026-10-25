@@ -409,5 +409,6 @@
   "loadingArea": "Kerken in {place} zoeken…",
   "loadingView": "Kerken in deze weergave zoeken…",
   "loadingMore": "Meer kerken laden…",
-  "noParishSite": "Geen parochiewebsite gevonden"
+  "noParishSite": "Geen parochiewebsite gevonden",
+  "photoMapillary": "Straatfoto door {author} op Mapillary, CC BY-SA 4.0. Opent op Mapillary."
 }

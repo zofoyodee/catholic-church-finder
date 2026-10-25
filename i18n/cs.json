@@ -429,5 +429,6 @@
   "loadingArea": "Hledám kostely: {place}…",
   "loadingView": "Hledám kostely v tomto zobrazení…",
   "loadingMore": "Načítám další kostely…",
-  "noParishSite": "Web farnosti nenalezen"
+  "noParishSite": "Web farnosti nenalezen",
+  "photoMapillary": "Pouliční fotografie: {author}, Mapillary, CC BY-SA 4.0. Otevře se na Mapillary."
 }

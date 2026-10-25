@@ -407,5 +407,6 @@
   "loadingArea": "Po kërkohen kisha në {place}…",
   "loadingView": "Po kërkohen kisha në këtë pamje…",
   "loadingMore": "Po ngarkohen më shumë kisha…",
-  "noParishSite": "Nuk u gjet faqja e famullisë"
+  "noParishSite": "Nuk u gjet faqja e famullisë",
+  "photoMapillary": "Foto rruge nga {author} në Mapillary, CC BY-SA 4.0. Hapet në Mapillary."
 }

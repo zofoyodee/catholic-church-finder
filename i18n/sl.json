@@ -417,5 +417,6 @@
   "loadingArea": "Iščem cerkve: {place}…",
   "loadingView": "Iščem cerkve v tem pogledu…",
   "loadingMore": "Nalagam več cerkva…",
-  "noParishSite": "Spletne strani župnije ni bilo mogoče najti"
+  "noParishSite": "Spletne strani župnije ni bilo mogoče najti",
+  "photoMapillary": "Ulična fotografija: {author}, Mapillary, CC BY-SA 4.0. Odpre se na Mapillaryju."
 }
