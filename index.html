@@ -2264,7 +2264,7 @@ async function selectChurch(i, { fly = true } = {}) {
   map.getSource('sel').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lt] }, properties: {} }] });
   lastInteract = performance.now();
   const wide = innerWidth > 640;
-  if (fly) map.flyTo({ center: [lng, lt], zoom: Math.max(map.getZoom(), 15), speed: 1.4, curve: 1.5, pitch: 40, padding: cardPad(wide), essential: true });
+  if (fly) map.flyTo({ center: [lng, lt], zoom: Math.max(map.getZoom(), 13), speed: 1.4, curve: 1.5, pitch: 30, padding: cardPad(wide), essential: true });
   const t = state.typ[i] & 7; const byName = state.typ[i] >> 3;
   const sc = scene(t, lng, lt);
   const hero = $('hero');
@@ -2916,6 +2916,8 @@ function loadLife() {
   return life.loading;
 }
 const lifeEvents = () => life.data.events.filter(e => life.era === 'all' || e.e === life.era);
+// pull back from each place's close-up zoom so the town and the places around it stay in view
+const lifeZoom = (p) => Math.min(p.z - 2, 13);
 const lifeLL = (p) => [p.ll[1], p.ll[0]];
 function lifeGeo() {
   const d = life.data, evs = lifeEvents(), first = new Map(), route = [];
@@ -3045,7 +3047,7 @@ async function goEvent(k, { fly = true, card } = {}) {
   if (!fly) { lifeSchedule(LIFE_DWELL); return; }
   const bearing = ((k * 37) % 80) - 40;
   life.flying = true;
-  map.flyTo({ center: lifeLL(p), zoom: p.z, pitch: p.z > 12 ? 45 : 20, bearing, speed: 1.1, curve: 1.5, padding: lifePad(), essential: true, ...(reduceMotion ? { duration: 0 } : {}) });
+  map.flyTo({ center: lifeLL(p), zoom: lifeZoom(p), pitch: lifeZoom(p) > 12 ? 35 : 20, bearing, speed: 1.1, curve: 1.5, padding: lifePad(), essential: true, ...(reduceMotion ? { duration: 0 } : {}) });
   map.once('moveend', () => {
     life.flying = false;
     if (life.k !== k || state.mode !== 'jesus') return;
@@ -3123,7 +3125,7 @@ async function openLifePlace(id, { fly = true } = {}) {
   const sameCard = !$('card').hidden && $('cardBody').dataset.jplace === id;
   delete $('cardBody').dataset.jk;
   $('card').hidden = false; placeCtrls();
-  if (fly) map.flyTo({ center: lifeLL(p), zoom: Math.max(map.getZoom(), p.z), pitch: 35, speed: 1.3, padding: lifePad(), essential: true });
+  if (fly) map.flyTo({ center: lifeLL(p), zoom: Math.max(map.getZoom(), lifeZoom(p)), pitch: 30, speed: 1.3, padding: lifePad(), essential: true });
   if (!sameCard) bibleHero(p.n, p.m, p.w);
   const eras = [...new Set(p.ev.map(e => e.e))];
   const scroll = sameCard ? $('cardBody').scrollTop : 0;
