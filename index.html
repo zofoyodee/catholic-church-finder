@@ -321,6 +321,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
   display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 12px;
   border: 1px solid var(--line); text-decoration: none; color: var(--ink); background: rgba(255,255,255,0.02); min-width: 0;
 }
+.media a[hidden] { display: none; }
 .media a:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); background: rgba(232,184,74,0.07); }
 .media a span { min-width: 0; }
 .media b { display: block; font-weight: 500; font-size: 13px; }
@@ -1333,6 +1334,36 @@ function faithful(text, max = 2) {
   return sentences.filter(x => !OUTSIDER.test(x)).slice(0, max).join('').trim();
 }
 const FACT_ROWS = [['P571', 'Founded'], ['P1619', 'Opened'], ['P825', 'Dedicated to'], ['P708', 'Diocese'], ['P84', 'Architect'], ['P149', 'Style'], ['P1435', 'Heritage status'], ['P5138', 'Part of']];
+/* ---------- Street View: with a Google Maps key, show the link only where Google has imagery near the church ---------- */
+// Browser key, restricted in Google Cloud to this site's address and the Maps JavaScript API. Empty = always show the link, unchecked.
+const GMAPS_KEY = '';
+let gmaps = null;
+function loadGmaps() {
+  return gmaps || (gmaps = new Promise((ok, fail) => {
+    window.__gmapsReady = () => ok(window.google.maps);
+    const sc = document.createElement('script');
+    sc.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(GMAPS_KEY)}&loading=async&callback=__gmapsReady`;
+    sc.onerror = () => { gmaps = null; fail(new Error('maps')); };
+    document.head.appendChild(sc);
+  }));
+}
+const svSeen = new Map();  // church index -> pano id, or '' when there is none
+async function checkStreetView(i, lat, lng) {
+  if (!GMAPS_KEY) return;
+  const show = (pano) => {
+    const a = $('svLink'); if (!a || state.selected !== i) return;
+    if (pano === '') return;  // checked: no imagery here, so leave the link hidden
+    if (pano) a.href = `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(pano)}`;
+    a.hidden = false;
+  };
+  if (svSeen.has(i)) return show(svSeen.get(i));
+  try {
+    const g = await loadGmaps();
+    const r = await new g.StreetViewService().getPanorama({ location: { lat, lng }, radius: 100, source: g.StreetViewSource.OUTDOOR }).catch(() => null);
+    const pano = (r && r.data && r.data.location && r.data.location.pano) || '';
+    svSeen.set(i, pano); show(pano);
+  } catch (e) { show(null); }  // could not ask Google: show the plain link rather than nothing
+}
 async function showAbout(i, rec) {
   let a; try { a = await loadAbout(i, rec); } catch (e) { return; }
   const box = $('cAbout'); if (!box || state.selected !== i) return;
@@ -1738,7 +1769,7 @@ async function selectChurch(i, { fly = true } = {}) {
       <div class="media">
         <a href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span><b>Photos</b><small>Wikimedia Commons</small></span></a>
         <a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">${icon.video}<span><b>Videos</b><small>YouTube</small></span></a>
-        <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span><b>Street View</b><small>Google Maps</small></span></a>
+        <a id="svLink"${GMAPS_KEY ? ' hidden' : ''} href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span><b>Street View</b><small>Google Maps</small></span></a>
         <a href="https://en.wikipedia.org/w/index.php?search=${qShort}" target="_blank" rel="noopener">${icon.book}<span><b>History</b><small>Wikipedia</small></span></a>
       </div>
     </div>
@@ -1756,6 +1787,7 @@ async function selectChurch(i, { fly = true } = {}) {
     b.textContent = ok ? 'Copied' : 'Copy failed'; setTimeout(() => { b.textContent = 'Copy'; }, 1400);
   });
   showAbout(i, rec);
+  checkStreetView(i, lt, lng);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
   $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
 }
