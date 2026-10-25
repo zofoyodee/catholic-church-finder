@@ -392,5 +392,6 @@
   "loadingView": "이 화면의 성당을 찾는 중…",
   "loadingMore": "성당을 더 불러오는 중…",
   "noParishSite": "본당 웹사이트를 찾지 못했습니다",
+  "photoStreetView": "Google 스트리트 뷰 이미지. 스트리트 뷰에서 엽니다.",
   "photoMapillary": "Mapillary의 {author} 거리 사진, CC BY-SA 4.0. Mapillary에서 엽니다."
 }

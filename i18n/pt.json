@@ -410,5 +410,6 @@
   "loadingView": "Procurando igrejas nesta visão…",
   "loadingMore": "Carregando mais igrejas…",
   "noParishSite": "Nenhum site da paróquia encontrado",
+  "photoStreetView": "Imagem do Street View do Google. Abre o Street View.",
   "photoMapillary": "Foto de rua de {author} no Mapillary, CC BY-SA 4.0. Abre no Mapillary."
 }

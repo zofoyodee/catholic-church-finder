@@ -410,5 +410,6 @@
   "loadingView": "Templomok keresése ebben a nézetben…",
   "loadingMore": "További templomok betöltése…",
   "noParishSite": "Nem található plébániai honlap",
+  "photoStreetView": "Street View-kép a Google-tól. Megnyitja a Street View-t.",
   "photoMapillary": "Utcafotó: {author}, Mapillary, CC BY-SA 4.0. Megnyitja a Mapillaryn."
 }

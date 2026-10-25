@@ -440,5 +440,6 @@
   "loadingView": "Ищем храмы в этой области…",
   "loadingMore": "Загружаем ещё храмы…",
   "noParishSite": "Сайт прихода не найден",
+  "photoStreetView": "Изображение Street View от Google. Открывает Street View.",
   "photoMapillary": "Уличное фото: {author}, Mapillary, CC BY-SA 4.0. Открывается на Mapillary."
 }

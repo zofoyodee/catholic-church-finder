@@ -436,5 +436,6 @@
   "loadingView": "Шукаємо храми в цьому вигляді…",
   "loadingMore": "Завантажуємо більше храмів…",
   "noParishSite": "Сайт парафії не знайдено",
+  "photoStreetView": "Зображення Street View від Google. Відкриває Street View.",
   "photoMapillary": "Вуличне фото: {author}, Mapillary, CC BY-SA 4.0. Відкривається на Mapillary."
 }

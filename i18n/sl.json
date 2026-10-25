@@ -418,5 +418,6 @@
   "loadingView": "Iščem cerkve v tem pogledu…",
   "loadingMore": "Nalagam več cerkva…",
   "noParishSite": "Spletne strani župnije ni bilo mogoče najti",
+  "photoStreetView": "Slika Street View iz Googla. Odpre Street View.",
   "photoMapillary": "Ulična fotografija: {author}, Mapillary, CC BY-SA 4.0. Odpre se na Mapillaryju."
 }

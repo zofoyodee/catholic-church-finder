@@ -431,5 +431,6 @@
   "loadingView": "Hľadám kostoly v tomto zobrazení…",
   "loadingMore": "Načítavam ďalšie kostoly…",
   "noParishSite": "Web farnosti sa nenašiel",
+  "photoStreetView": "Snímka Street View od Googlu. Otvorí Street View.",
   "photoMapillary": "Pouličná fotografia: {author}, Mapillary, CC BY-SA 4.0. Otvorí sa na Mapillary."
 }

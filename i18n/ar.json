@@ -441,5 +441,6 @@
   "loadingView": "جارٍ البحث عن كنائس في هذا العرض…",
   "loadingMore": "جارٍ تحميل المزيد من الكنائس…",
   "noParishSite": "لم يُعثر على موقع للرعية",
+  "photoStreetView": "صورة Street View من Google. تفتح Street View.",
   "photoMapillary": "صورة شارع التقطها {author} على Mapillary، بترخيص CC BY-SA 4.0. تُفتح على Mapillary."
 }
