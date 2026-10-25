@@ -304,5 +304,15 @@
   "bg_ot": "Antigo Testamento",
   "bg_deut": "Tobias, Judite e Macabeus",
   "bg_jesus": "Vida de Jesus",
-  "bg_church": "Apóstolos e Igreja primitiva"
+  "bg_church": "Apóstolos e Igreja primitiva",
+  "parishSitePhoto": "site da paróquia",
+  "photoFromSite": "Foto do site da paróquia, {site}. Abre o site.",
+  "aramaic": "Aramaico",
+  "everyDay": "Todos os dias",
+  "monthlyDay_1": "{day} (1.º do mês)",
+  "monthlyDay_2": "{day} (2.º do mês)",
+  "monthlyDay_3": "{day} (3.º do mês)",
+  "monthlyDay_4": "{day} (4.º do mês)",
+  "monthlyDay_5": "{day} (5.º do mês)",
+  "monthlyDay_6": "{day} (último do mês)"
 }

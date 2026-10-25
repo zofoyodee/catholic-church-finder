@@ -290,5 +290,15 @@
   "bg_ot": "Perjanjian Lama",
   "bg_deut": "Tobit, Yudit dan Makabe",
   "bg_jesus": "Hidup Yesus",
-  "bg_church": "Para Rasul dan Gereja perdana"
+  "bg_church": "Para Rasul dan Gereja perdana",
+  "parishSitePhoto": "situs paroki",
+  "photoFromSite": "Foto dari situs paroki, {site}. Membuka situs itu.",
+  "aramaic": "Aram",
+  "everyDay": "Setiap hari",
+  "monthlyDay_1": "{day} pertama setiap bulan",
+  "monthlyDay_2": "{day} kedua setiap bulan",
+  "monthlyDay_3": "{day} ketiga setiap bulan",
+  "monthlyDay_4": "{day} keempat setiap bulan",
+  "monthlyDay_5": "{day} kelima setiap bulan",
+  "monthlyDay_6": "{day} terakhir setiap bulan"
 }
