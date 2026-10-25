@@ -2302,8 +2302,8 @@ async function selectChurch(i, { fly = true } = {}) {
     const k = u && /^https?:\/\//.test(u) ? linkKind(u) : null; if (!k) continue;
     if (k.btn === 'Wikipedia') { if (!wikiUrl && wikiAboutIt(u, name)) wikiUrl = u; continue; }  // many listed articles are about the town
     const p = k.platform ? k.btn : 'site'; if (!p || seenP.has(p)) continue; seenP.add(p);
-    if (p === 'site') online.unshift(`<a href="${esc(u)}" target="_blank" rel="noopener">${icon.web}${esc(host(u))}</a>${wentry && wentry[0] === 2 ? `<span class="moved">${esc(tr('newAddress'))}</span>` : ''}`);
-    else if (SOCIAL[p]) online.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${SOCIAL[p][0]}${SOCIAL[p][1]}</a>`);
+    if (u === webUrl && kind && kind.btn) continue;  // already the button above the address (Parish website, Facebook, ...)
+    if (p !== 'site' && SOCIAL[p]) online.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${SOCIAL[p][0]}${SOCIAL[p][1]}</a>`);
   }
   const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   $('cardBody').innerHTML = `
