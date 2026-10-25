@@ -104,7 +104,7 @@ ol.rank ol.rank { grid-column: 1 / -1; margin: 4px 0 2px 12px; }
       <li>Copy the key and paste it below.</li>
     </ol>
     <label for="code">Site Code</label>
-    <input id="code" autocomplete="off" spellcheck="false" placeholder="catholicchurchfinder">
+    <input id="code" autocomplete="off" spellcheck="false" placeholder="zofo">
     <label for="key">API Key</label>
     <input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your read-only key">
     <div class="row"><button class="btn" id="save">Show My Stats</button></div>
@@ -143,7 +143,7 @@ ol.rank ol.rank { grid-column: 1 / -1; margin: 4px 0 2px 12px; }
 <script>
 const $ = (id) => document.getElementById(id);
 const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } }, set: (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} } };
-const KEY = 'ccf-stats-key', CODE = 'ccf-stats-code', DEFAULT_CODE = 'catholicchurchfinder';
+const KEY = 'ccf-stats-key', CODE = 'ccf-stats-code', DEFAULT_CODE = 'zofo';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const num = (n) => (n || 0).toLocaleString();
 let days = 30, run = 0, lastDaily = [];
@@ -311,7 +311,7 @@ function showSetup(msg) {
 }
 $('save').onclick = () => {
   const c = $('code').value.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\.goatcounter\.com.*$/, ''), k = $('key').value.trim();
-  if (!/^[a-z0-9-]+$/.test(c)) { showSetup('The site code is the first part of your GoatCounter address, such as catholicchurchfinder.'); return; }
+  if (!/^[a-z0-9-]+$/.test(c)) { showSetup('The site code is the first part of your GoatCounter address, such as zofo.'); return; }
   if (!k) { showSetup('Paste your API key first.'); return; }
   store.set(CODE, c === DEFAULT_CODE ? '' : c); store.set(KEY, k); $('key').value = ''; $('setupErr').hidden = true;
   $('full').href = base() + '/'; load();
