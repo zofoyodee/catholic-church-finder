@@ -66,7 +66,8 @@ jobs:
 
   build:
     needs: [wikidata, crawl]
-    if: always() && needs.wikidata.result == 'success'
+    # not after a cancel: a newer push is running the full crawl, and a half-crawled build would race it
+    if: ${{ !cancelled() && needs.wikidata.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -94,5 +95,5 @@ jobs:
           git add data/web scripts/web/sample.json
           git diff --cached --quiet && exit 0
           git commit -m "Update website checks and parish staff (data/web)"
-          for i in 1 2 3 4; do git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0; sleep $((i*5)); done
+          for i in 1 2 3 4; do git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0; sleep $((i*5)); done
           exit 1
