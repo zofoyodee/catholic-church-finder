@@ -132,6 +132,22 @@ E = [
 
 ERAS = [('hidden', '#9ec5ff'), ('ministry', '#7ccf9a'), ('journey', '#f3d58c'), ('passion', '#e0625a'), ('risen', '#fdf6e3')]
 
+SMALL = set('a an and as at by for from in into of on or the to with'.split())
+def title(t):
+    """Title Case for event names: small words stay lowercase except first and after a colon."""
+    out, cap = [], True
+    for w in t.split(' '):
+        lead = len(w) - len(w.lstrip('"'))
+        core = w[lead:]
+        if core and (cap or core.lower() not in SMALL):
+            core = core[0].upper() + core[1:]
+        elif core.lower() in SMALL:
+            core = core.lower()
+        out.append(w[:lead] + core)
+        cap = w.endswith(':') or w.endswith(';')
+    return ' '.join(out)
+E = [(e[0], e[1], title(e[2])) + tuple(e[3:]) for e in E]
+
 ids = {p[0] for p in P}
 assert len(ids) == len(P)
 for e in E: assert e[1] in ids and e[0] in dict(ERAS), e
