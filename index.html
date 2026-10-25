@@ -591,7 +591,7 @@ const PLATFORMS = [
   [/(^|\.)(facebook|fb)\.com$/, 'Facebook', 'Facebook page'], [/(^|\.)instagram\.com$/, 'Instagram', 'Instagram'],
   [/(^|\.)(youtube\.com|youtu\.be)$/, 'YouTube', 'YouTube channel'], [/(^|\.)tiktok\.com$/, 'TikTok', 'TikTok'],
   [/(^|\.)(twitter|x)\.com$/, 'X', 'X (Twitter)'], [/(^|\.)(whatsapp\.com|wa\.me)$/, 'WhatsApp', 'WhatsApp'],
-  [/(^|\.)linktr\.ee$/, 'Links', 'Links page'], [/(^|\.)wikipedia\.org$/, 'Wikipedia', 'Wikipedia article'],
+  [/(^|\.)linktr\.ee$/, 'Links', 'Links page'], [/(^|\.)flocknote\.com$/, 'Flocknote', 'Flocknote'], [/(^|\.)wikipedia\.org$/, 'Wikipedia', 'Wikipedia article'],
   [/(^|\.)(maps\.app\.goo\.gl|goo\.gl)$|^maps\.google\./, null, null],
 ];
 function linkKind(u) {
@@ -1770,7 +1770,7 @@ async function selectChurch(i, { fly = true } = {}) {
   const qShort = encodeURIComponent([name, town].filter(Boolean).join(' '));
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
   // Online: the parish's own site plus one link per social platform, each named; a Wikipedia "website" feeds History instead
-  const SOCIAL = { Facebook: [icon.fb, 'Facebook Page'], Instagram: [icon.ig, 'Instagram'], YouTube: [icon.yt, 'YouTube'], X: [icon.x, 'X (Twitter)'], TikTok: [icon.video, 'TikTok'], WhatsApp: [icon.chat, 'WhatsApp'], Links: [icon.link, 'Links page'] };
+  const SOCIAL = { Facebook: [icon.fb, 'Facebook Page'], Instagram: [icon.ig, 'Instagram'], YouTube: [icon.yt, 'YouTube'], X: [icon.x, 'X (Twitter)'], TikTok: [icon.video, 'TikTok'], WhatsApp: [icon.chat, 'WhatsApp'], Links: [icon.link, 'Links page'], Flocknote: [icon.chat, 'Flocknote'] };
   const listedUrl = web && /^https?:\/\//.test(web) ? web : (web ? 'https://' + web : '');
   const wentry = webInfo.entry;
   const webDead = !!(listedUrl && wentry && wentry[0] === 3);
@@ -1779,7 +1779,7 @@ async function selectChurch(i, { fly = true } = {}) {
   const pastor = pastorOf(wentry);
   const online = [], seenP = new Set();
   let wikiUrl = '';
-  for (const u of [webUrl, ...(socials || []), ...(webInfo.fix.socials || [])]) {
+  for (const u of [webUrl, ...(webInfo.fix.socials || []), ...((wentry && Array.isArray(wentry[7]) && wentry[7]) || []), ...(socials || [])]) {
     const k = u && /^https?:\/\//.test(u) ? linkKind(u) : null; if (!k) continue;
     if (k.btn === 'Wikipedia') { if (!wikiUrl && wikiAboutIt(u, name)) wikiUrl = u; continue; }  // many listed articles are about the town
     const p = k.platform ? k.btn : 'site'; if (!p || seenP.has(p)) continue; seenP.add(p);
