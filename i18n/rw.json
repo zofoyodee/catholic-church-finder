@@ -307,5 +307,11 @@
   "color_rose": "iroza",
   "color_white": "umweru na zahabu",
   "color_red": "umutuku",
-  "startOver": "Ongera utangire"
+  "startOver": "Ongera utangire",
+  "desc_cathedral": "Kiliziya y'umwepiskopi ubwe, kiliziya nyina ya diyosezi.",
+  "desc_basilica": "Kiliziya Papa yahaye icyubahiro cy'izina rya bazilika.",
+  "desc_shrine": "Ahantu h'urugendo ntagatifu n'isengesho.",
+  "desc_church": "Kiliziya za paruwasi n'iz'aho abantu batuye zisanzwe: kiliziya yose itari katedrali, bazilika, ahantu ntagatifu, shapeli cyangwa abasiya.",
+  "desc_chapel": "Shapeli cyangwa aho gusengera hato, akenshi hakorerwa na paruwasi iri hafi.",
+  "desc_abbey": "Kiliziya y'umuryango w'abamonaki, ababikira, abafurere cyangwa ababikira."
 }

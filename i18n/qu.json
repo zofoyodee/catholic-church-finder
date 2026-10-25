@@ -307,5 +307,11 @@
   "color_rose": "rosado",
   "color_white": "yuraq quripas",
   "color_red": "puka",
-  "startOver": "Wakmanta qallariy"
+  "startOver": "Wakmanta qallariy",
+  "desc_cathedral": "Obispoq kikin iglesian, huk diócesispa mama iglesian.",
+  "desc_basilica": "Papa basílica sutiwan hatunchasqan iglesia.",
+  "desc_shrine": "Peregrinacionpaq, devocionpaq ima sitio.",
+  "desc_church": "Sapa p'unchaw parroquia, llaqta iglesiakuna: catedral, basílica, santuario, capilla, abadía mana kaq tukuy iglesiakuna.",
+  "desc_chapel": "Aswan huch'uy capilla utaq oratorio, sapa kuti qayllapi kaq parroquiaq qhawasqan.",
+  "desc_abbey": "Monjekunaq, monjakunaq, frailekunaq utaq hermanakunaq ayllunpa iglesian."
 }

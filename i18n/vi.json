@@ -336,5 +336,11 @@
   "jReadIt": "Đọc trong Tin Mừng",
   "jThePlace": "Nơi chốn",
   "jAlsoHere": "Cũng tại đây",
-  "jShareMoment": "{name}, trong cuộc đời Chúa Giêsu"
+  "jShareMoment": "{name}, trong cuộc đời Chúa Giêsu",
+  "desc_cathedral": "Nhà thờ riêng của giám mục, nhà thờ mẹ của một giáo phận.",
+  "desc_basilica": "Nhà thờ được Đức Giáo Hoàng ban tước hiệu vương cung thánh đường.",
+  "desc_shrine": "Nơi hành hương và tôn kính.",
+  "desc_church": "Các nhà thờ giáo xứ và khu xóm thông thường: mọi nhà thờ không phải nhà thờ chính tòa, vương cung thánh đường, đền thánh, nhà nguyện hay đan viện.",
+  "desc_chapel": "Nhà nguyện hoặc nhà cầu nguyện nhỏ hơn, thường do một giáo xứ gần đó coi sóc.",
+  "desc_abbey": "Nhà thờ của một cộng đoàn đan sĩ, nữ đan sĩ, tu huynh hoặc nữ tu."
 }

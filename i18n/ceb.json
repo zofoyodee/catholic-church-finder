@@ -307,5 +307,11 @@
   "color_rose": "rosas",
   "color_white": "puti ug bulawan",
   "color_red": "pula",
-  "startOver": "Sugod pag-usab"
+  "startOver": "Sugod pag-usab",
+  "desc_cathedral": "Ang kaugalingong simbahan sa obispo, ang inahang simbahan sa usa ka diyosesis.",
+  "desc_basilica": "Usa ka simbahan nga gipasidunggan sa Papa sa titulong basilika.",
+  "desc_shrine": "Usa ka dapit sa peregrinasyon ug debosyon.",
+  "desc_church": "Ang kasagarang mga simbahan sa parokya ug sa kasilinganan: matag simbahan nga dili katedral, basilika, simbahan sa peregrinasyon, kapilya o abadiya.",
+  "desc_chapel": "Usa ka mas gamay nga kapilya o oratoryo, kasagaran giserbisyohan sa duol nga parokya.",
+  "desc_abbey": "Ang simbahan sa usa ka komunidad sa mga monghe, madre, prayle o sister."
 }

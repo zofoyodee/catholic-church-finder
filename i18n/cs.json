@@ -331,5 +331,11 @@
   "stops_one": "{n} zastávka",
   "stops_few": "{n} zastávky",
   "stops_many": "{n} zastávky",
-  "startOver": "Začít znovu"
+  "startOver": "Začít znovu",
+  "desc_cathedral": "Vlastní kostel biskupa, mateřský kostel diecéze.",
+  "desc_basilica": "Kostel, který papež poctil titulem bazilika.",
+  "desc_shrine": "Místo poutí a zbožnosti.",
+  "desc_church": "Běžné farní a místní kostely: každý kostel, který není katedrálou, bazilikou, poutním místem, kaplí ani opatstvím.",
+  "desc_chapel": "Menší kaple nebo oratoř, často spravovaná nedalekou farností.",
+  "desc_abbey": "Kostel komunity mnichů, mnišek, bratří nebo sester."
 }

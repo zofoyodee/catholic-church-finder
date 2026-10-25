@@ -307,5 +307,11 @@
   "color_rose": "pinki",
   "color_white": "njerũ na thahabu",
   "color_red": "ndune",
-  "startOver": "Ambĩrĩria rĩngĩ"
+  "startOver": "Ambĩrĩria rĩngĩ",
+  "desc_cathedral": "Kanitha ya mũbishopu we mwene, kanitha nyina ya dayosisi.",
+  "desc_basilica": "Kanitha ĩrĩa Papa atĩĩte na rĩĩtwa rĩa basilika.",
+  "desc_shrine": "Handũ ha rũgendo rũtheru na kwĩrutĩra Ngai.",
+  "desc_church": "Makanitha ma paris na ma itũũra ma o ũguo: o kanitha ĩtarĩ katheduro, basilika, handũ hatheru, kanitha nini kana abbey.",
+  "desc_chapel": "Kanitha nini kana handũ ha kũhoera, kaingĩ ĩtungatagwo nĩ paris ĩrĩa ĩrĩ hakuhĩ.",
+  "desc_abbey": "Kanitha ya kĩama kĩa amonaki, atumia-atheru, ariũ a ithe kana masista."
 }

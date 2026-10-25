@@ -307,5 +307,11 @@
   "color_rose": "pinki",
   "color_white": "iyabuuta ne golide",
   "color_red": "iyakashika",
-  "startOver": "Tendeka cipya"
+  "startOver": "Tendeka cipya",
+  "desc_cathedral": "Icalici ca kwa bishopu wine, icalici nyina ica dayosisi.",
+  "desc_basilica": "Icalici ico Papa acindike ne shina lya basilika.",
+  "desc_shrine": "Incende ya lwendo lwa mushilo no kupepa.",
+  "desc_church": "Amacalici ya parishi na ya mu fyalo ayalingile: cila calici icishili katedrali, basilika, incende ya mushilo, cipelo nangu abbey.",
+  "desc_chapel": "Icipelo nangu incende ya kupepelamo iinono, inshita ishingi ibombelwamo na parishi iyaba mupepi.",
+  "desc_abbey": "Icalici ca bumba lwa bamonki, ba sista, ba bulaza nangu ba sista."
 }

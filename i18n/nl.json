@@ -352,5 +352,11 @@
   "jReadIt": "Lees het in de Evangeliën",
   "jThePlace": "De plaats",
   "jAlsoHere": "Ook hier",
-  "jShareMoment": "{name}, uit het leven van Jezus"
+  "jShareMoment": "{name}, uit het leven van Jezus",
+  "desc_cathedral": "De eigen kerk van de bisschop, de moederkerk van een bisdom.",
+  "desc_basilica": "Een kerk die door de Paus met de titel basiliek is geëerd.",
+  "desc_shrine": "Een plaats van bedevaart en devotie.",
+  "desc_church": "De gewone parochie- en buurtkerken: elke kerk die geen kathedraal, basiliek, heiligdom, kapel of abdij is.",
+  "desc_chapel": "Een kleinere kapel of oratorium, vaak bediend vanuit een nabije parochie.",
+  "desc_abbey": "De kerk van een gemeenschap van monniken, nonnen, broeders of zusters."
 }

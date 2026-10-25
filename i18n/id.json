@@ -336,5 +336,11 @@
   "jReadIt": "Baca dalam Injil",
   "jThePlace": "Tempatnya",
   "jAlsoHere": "Juga di sini",
-  "jShareMoment": "{name}, dari hidup Yesus"
+  "jShareMoment": "{name}, dari hidup Yesus",
+  "desc_cathedral": "Gereja milik uskup sendiri, gereja induk sebuah keuskupan.",
+  "desc_basilica": "Gereja yang dihormati Paus dengan gelar basilika.",
+  "desc_shrine": "Tempat ziarah dan devosi.",
+  "desc_church": "Gereja paroki dan lingkungan biasa: setiap gereja yang bukan katedral, basilika, tempat ziarah, kapel, atau biara.",
+  "desc_chapel": "Kapel atau oratorium yang lebih kecil, sering dilayani oleh paroki terdekat.",
+  "desc_abbey": "Gereja sebuah komunitas rahib, rubiah, frater, atau suster."
 }

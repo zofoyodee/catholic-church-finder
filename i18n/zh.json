@@ -334,5 +334,11 @@
   "jReadIt": "在福音中阅读",
   "jThePlace": "地点",
   "jAlsoHere": "此地还发生了",
-  "jShareMoment": "耶稣生平：{name}"
+  "jShareMoment": "耶稣生平：{name}",
+  "desc_cathedral": "主教自己的教堂，教区的母堂。",
+  "desc_basilica": "获教宗授予宗座圣殿称号的教堂。",
+  "desc_shrine": "朝圣与敬礼的地方。",
+  "desc_church": "普通的堂区和社区教堂：所有不属于主教座堂、圣殿、朝圣地、小堂或隐修院的教堂。",
+  "desc_chapel": "较小的小堂或祈祷所，常由附近的堂区照管。",
+  "desc_abbey": "隐修士、修女、会士或修女团体的本院教堂。"
 }
