@@ -314,5 +314,6 @@
   "monthlyDay_3": "3e {day} du mois",
   "monthlyDay_4": "4e {day} du mois",
   "monthlyDay_5": "5e {day} du mois",
-  "monthlyDay_6": "Dernier {day} du mois"
+  "monthlyDay_6": "Dernier {day} du mois",
+  "startOver": "Recommencer"
 }

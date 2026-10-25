@@ -298,5 +298,6 @@
   "monthlyDay_3": "매월 셋째 {day}",
   "monthlyDay_4": "매월 넷째 {day}",
   "monthlyDay_5": "매월 다섯째 {day}",
-  "monthlyDay_6": "매월 마지막 {day}"
+  "monthlyDay_6": "매월 마지막 {day}",
+  "startOver": "처음부터 다시"
 }

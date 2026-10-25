@@ -331,5 +331,6 @@
   "monthlyDay_3": "{day} (3. v mesiaci)",
   "monthlyDay_4": "{day} (4. v mesiaci)",
   "monthlyDay_5": "{day} (5. v mesiaci)",
-  "monthlyDay_6": "{day} (posledný v mesiaci)"
+  "monthlyDay_6": "{day} (posledný v mesiaci)",
+  "startOver": "Začať odznova"
 }

@@ -336,5 +336,6 @@
   "monthlyDay_3": "{day} (3-тя в місяці)",
   "monthlyDay_4": "{day} (4-та в місяці)",
   "monthlyDay_5": "{day} (5-та в місяці)",
-  "monthlyDay_6": "{day} (остання в місяці)"
+  "monthlyDay_6": "{day} (остання в місяці)",
+  "startOver": "Почати знову"
 }

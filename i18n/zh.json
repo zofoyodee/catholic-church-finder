@@ -298,5 +298,6 @@
   "monthlyDay_3": "每月第三个{day}",
   "monthlyDay_4": "每月第四个{day}",
   "monthlyDay_5": "每月第五个{day}",
-  "monthlyDay_6": "每月最后一个{day}"
+  "monthlyDay_6": "每月最后一个{day}",
+  "startOver": "重新开始"
 }

@@ -314,5 +314,6 @@
   "monthlyDay_3": "മാസത്തിലെ മൂന്നാം {day}",
   "monthlyDay_4": "മാസത്തിലെ നാലാം {day}",
   "monthlyDay_5": "മാസത്തിലെ അഞ്ചാം {day}",
-  "monthlyDay_6": "മാസത്തിലെ അവസാന {day}"
+  "monthlyDay_6": "മാസത്തിലെ അവസാന {day}",
+  "startOver": "വീണ്ടും തുടങ്ങുക"
 }
