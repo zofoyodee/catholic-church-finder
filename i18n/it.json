@@ -411,5 +411,12 @@
   "loadingMore": "Carico altre chiese…",
   "noParishSite": "Nessun sito parrocchiale trovato",
   "photoStreetView": "Immagine Street View di Google. Apre Street View.",
-  "photoMapillary": "Foto stradale di {author} su Mapillary, CC BY-SA 4.0. Si apre su Mapillary."
+  "photoMapillary": "Foto stradale di {author} su Mapillary, CC BY-SA 4.0. Si apre su Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Cielo Notturno",
+  "theme_marian": "Blu Mariano",
+  "theme_stone": "Pietra di Cattedrale",
+  "theme_parchment": "Pergamena",
+  "theme_liturgical": "Tempo Liturgico",
+  "theme_contrast": "Alto Contrasto"
 }

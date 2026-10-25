@@ -431,5 +431,12 @@
   "loadingMore": "Načítám další kostely…",
   "noParishSite": "Web farnosti nenalezen",
   "photoStreetView": "Snímek Street View od Googlu. Otevře Street View.",
-  "photoMapillary": "Pouliční fotografie: {author}, Mapillary, CC BY-SA 4.0. Otevře se na Mapillary."
+  "photoMapillary": "Pouliční fotografie: {author}, Mapillary, CC BY-SA 4.0. Otevře se na Mapillary.",
+  "themeLabel": "Motiv",
+  "theme_night": "Noční obloha",
+  "theme_marian": "Mariánská modrá",
+  "theme_stone": "Katedrální kámen",
+  "theme_parchment": "Pergamen",
+  "theme_liturgical": "Liturgické období",
+  "theme_contrast": "Vysoký kontrast"
 }

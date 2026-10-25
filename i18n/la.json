@@ -401,5 +401,12 @@
   "loadingMore": "Plures ecclesias oneramus…",
   "noParishSite": "Pagina paroeciae non inventa",
   "photoStreetView": "Imago Street View a Google. Street View aperit.",
-  "photoMapillary": "Imago viae ab {author} in Mapillary, CC BY-SA 4.0. In Mapillary aperitur."
+  "photoMapillary": "Imago viae ab {author} in Mapillary, CC BY-SA 4.0. In Mapillary aperitur.",
+  "themeLabel": "Thema",
+  "theme_night": "Caelum Nocturnum",
+  "theme_marian": "Caeruleum Marianum",
+  "theme_stone": "Lapis Cathedralis",
+  "theme_parchment": "Membrana",
+  "theme_liturgical": "Tempus Liturgicum",
+  "theme_contrast": "Contrarietas Alta"
 }

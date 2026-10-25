@@ -395,5 +395,12 @@
   "loadingMore": "Đang tải thêm nhà thờ…",
   "noParishSite": "Không tìm thấy trang web giáo xứ",
   "photoStreetView": "Ảnh Street View từ Google. Mở Street View.",
-  "photoMapillary": "Ảnh đường phố của {author} trên Mapillary, CC BY-SA 4.0. Mở trên Mapillary."
+  "photoMapillary": "Ảnh đường phố của {author} trên Mapillary, CC BY-SA 4.0. Mở trên Mapillary.",
+  "themeLabel": "Giao diện",
+  "theme_night": "Bầu trời đêm",
+  "theme_marian": "Xanh Đức Mẹ",
+  "theme_stone": "Đá nhà thờ chính tòa",
+  "theme_parchment": "Giấy da",
+  "theme_liturgical": "Mùa phụng vụ",
+  "theme_contrast": "Độ tương phản cao"
 }

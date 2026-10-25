@@ -403,5 +403,12 @@
   "loadingMore": "மேலும் ஆலயங்கள் ஏற்றப்படுகின்றன…",
   "noParishSite": "பங்கு இணையதளம் கிடைக்கவில்லை",
   "photoStreetView": "Google இன் Street View படம். Street View இல் திறக்கும்.",
-  "photoMapillary": "Mapillary இல் {author} எடுத்த தெரு புகைப்படம், CC BY-SA 4.0. Mapillary இல் திறக்கும்."
+  "photoMapillary": "Mapillary இல் {author} எடுத்த தெரு புகைப்படம், CC BY-SA 4.0. Mapillary இல் திறக்கும்.",
+  "themeLabel": "தீம்",
+  "theme_night": "இரவு வானம்",
+  "theme_marian": "மரியன்னை நீலம்",
+  "theme_stone": "பேராலயக் கல்",
+  "theme_parchment": "தோல் காகிதம்",
+  "theme_liturgical": "திருவழிபாட்டுக் காலம்",
+  "theme_contrast": "உயர் மாறுபாடு"
 }

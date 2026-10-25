@@ -403,5 +403,12 @@
   "loadingMore": "Hatama hela igreja barak liu…",
   "noParishSite": "La hetan paróquia nia website",
   "photoStreetView": "Imajen Street View husi Google. Loke Street View.",
-  "photoMapillary": "Foto dalan husi {author} iha Mapillary, CC BY-SA 4.0. Loke iha Mapillary."
+  "photoMapillary": "Foto dalan husi {author} iha Mapillary, CC BY-SA 4.0. Loke iha Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Lalehan Kalan",
+  "theme_marian": "Azúl Maria",
+  "theme_stone": "Fatuk Katedrál",
+  "theme_parchment": "Pergaminhu",
+  "theme_liturgical": "Tempu Litúrjiku",
+  "theme_contrast": "Kontraste Aas"
 }

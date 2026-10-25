@@ -403,5 +403,12 @@
   "loadingMore": "Aswan iglesiakunata cargachkan…",
   "noParishSite": "Mana parroquiap web p'anqan tarikunchu",
   "photoStreetView": "Google nisqamanta Street View rikchay. Street View kicharin.",
-  "photoMapillary": "Ñan fotota {author}, Mapillarypi, CC BY-SA 4.0. Mapillarypi kicharikun."
+  "photoMapillary": "Ñan fotota {author}, Mapillarypi, CC BY-SA 4.0. Mapillarypi kicharikun.",
+  "themeLabel": "Rikchay",
+  "theme_night": "Tuta Hanaqpacha",
+  "theme_marian": "Mariaq Anqasnin",
+  "theme_stone": "Katedral Rumi",
+  "theme_parchment": "Qara Qillqana",
+  "theme_liturgical": "Liturgia Pacha",
+  "theme_contrast": "Hatun Contraste"
 }

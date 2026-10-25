@@ -402,5 +402,12 @@
   "loadingMore": "और गिरजाघर लोड हो रहे हैं…",
   "noParishSite": "पल्ली की वेबसाइट नहीं मिली",
   "photoStreetView": "Google की Street View छवि। Street View खोलता है।",
-  "photoMapillary": "Mapillary पर {author} द्वारा सड़क का फ़ोटो, CC BY-SA 4.0. इसे Mapillary पर खोलता है।"
+  "photoMapillary": "Mapillary पर {author} द्वारा सड़क का फ़ोटो, CC BY-SA 4.0. इसे Mapillary पर खोलता है।",
+  "themeLabel": "थीम",
+  "theme_night": "रात का आकाश",
+  "theme_marian": "मरियम नीला",
+  "theme_stone": "महागिरजाघर का पत्थर",
+  "theme_parchment": "चर्मपत्र",
+  "theme_liturgical": "धर्मविधिक ऋतु",
+  "theme_contrast": "उच्च कंट्रास्ट"
 }

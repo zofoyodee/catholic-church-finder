@@ -403,5 +403,12 @@
   "loadingMore": "Tikutsitsa matchalitchi ena…",
   "noParishSite": "Webusaiti ya parishi sinapezeke",
   "photoStreetView": "Chithunzi cha Street View chochokera ku Google. Chimatsegula Street View.",
-  "photoMapillary": "Chithunzi cha msewu cha {author} pa Mapillary, CC BY-SA 4.0. Chimatsegulidwa pa Mapillary."
+  "photoMapillary": "Chithunzi cha msewu cha {author} pa Mapillary, CC BY-SA 4.0. Chimatsegulidwa pa Mapillary.",
+  "themeLabel": "Kaonekedwe",
+  "theme_night": "Thambo la Usiku",
+  "theme_marian": "Buluu wa Maria",
+  "theme_stone": "Mwala wa Katedrale",
+  "theme_parchment": "Chikopa Cholembapo",
+  "theme_liturgical": "Nyengo ya Liturgy",
+  "theme_contrast": "Kusiyana Kwakukulu"
 }

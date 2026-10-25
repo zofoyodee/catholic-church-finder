@@ -403,5 +403,12 @@
   "loadingMore": "Tũrĩ kũrehe makanitha mangĩ…",
   "noParishSite": "Website ya paris ndĩonekire",
   "photoStreetView": "Mbica ya Street View kuuma Google. Ĩhingũraga Street View.",
-  "photoMapillary": "Mbica ya barabara ya {author} Mapillary-inĩ, CC BY-SA 4.0. Ĩhingũragĩrwo Mapillary-inĩ."
+  "photoMapillary": "Mbica ya barabara ya {author} Mapillary-inĩ, CC BY-SA 4.0. Ĩhingũragĩrwo Mapillary-inĩ.",
+  "themeLabel": "Mũhianĩre",
+  "theme_night": "Igũrũ rĩa Ũtukũ",
+  "theme_marian": "Bluu ya Maria",
+  "theme_stone": "Ihiga rĩa Kanitha Mũnene",
+  "theme_parchment": "Rũũa rwa Kwandĩka",
+  "theme_liturgical": "Ihinda rĩa Liturgia",
+  "theme_contrast": "Ngũrani Nene"
 }

@@ -411,5 +411,12 @@
   "loadingMore": "Lade weitere Kirchen…",
   "noParishSite": "Keine Pfarrwebsite gefunden",
   "photoStreetView": "Street-View-Bild von Google. Öffnet Street View.",
-  "photoMapillary": "Straßenfoto von {author} auf Mapillary, CC BY-SA 4.0. Öffnet es auf Mapillary."
+  "photoMapillary": "Straßenfoto von {author} auf Mapillary, CC BY-SA 4.0. Öffnet es auf Mapillary.",
+  "themeLabel": "Design",
+  "theme_night": "Nachthimmel",
+  "theme_marian": "Marienblau",
+  "theme_stone": "Kathedralstein",
+  "theme_parchment": "Pergament",
+  "theme_liturgical": "Kirchenjahreszeit",
+  "theme_contrast": "Hoher Kontrast"
 }

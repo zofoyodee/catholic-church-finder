@@ -403,5 +403,12 @@
   "loadingMore": "Pigkakarga an dakol pang simbahan…",
   "noParishSite": "Mayong nahanap na website kan parokya",
   "photoStreetView": "Litrato sa Street View hale sa Google. Bubukasan an Street View.",
-  "photoMapillary": "Litrato kan tinampo ni {author} sa Mapillary, CC BY-SA 4.0. Bubukasan ini sa Mapillary."
+  "photoMapillary": "Litrato kan tinampo ni {author} sa Mapillary, CC BY-SA 4.0. Bubukasan ini sa Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Langit sa Banggi",
+  "theme_marian": "Asul ni Maria",
+  "theme_stone": "Gapo kan Katedral",
+  "theme_parchment": "Pergamino",
+  "theme_liturgical": "Panahon kan Liturhiya",
+  "theme_contrast": "Halangkaw na Contrast"
 }

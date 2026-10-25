@@ -403,5 +403,12 @@
   "loadingMore": "N ap chaje plis legliz…",
   "noParishSite": "Nou pa jwenn sit pawas la",
   "photoStreetView": "Imaj Street View Google. L ap louvri Street View.",
-  "photoMapillary": "Foto lari pa {author} sou Mapillary, CC BY-SA 4.0. L ap louvri l sou Mapillary."
+  "photoMapillary": "Foto lari pa {author} sou Mapillary, CC BY-SA 4.0. L ap louvri l sou Mapillary.",
+  "themeLabel": "Tèm",
+  "theme_night": "Syèl Lannwit",
+  "theme_marian": "Ble Marial",
+  "theme_stone": "Wòch Katedral",
+  "theme_parchment": "Pakemen",
+  "theme_liturgical": "Sezon Litijik",
+  "theme_contrast": "Gwo Kontras"
 }

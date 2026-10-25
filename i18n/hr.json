@@ -427,5 +427,12 @@
   "loadingMore": "Učitavam još crkava…",
   "noParishSite": "Župna stranica nije pronađena",
   "photoStreetView": "Slika Street Viewa s Googlea. Otvara Street View.",
-  "photoMapillary": "Ulična fotografija: {author}, Mapillary, CC BY-SA 4.0. Otvara se na Mapillaryju."
+  "photoMapillary": "Ulična fotografija: {author}, Mapillary, CC BY-SA 4.0. Otvara se na Mapillaryju.",
+  "themeLabel": "Tema",
+  "theme_night": "Noćno nebo",
+  "theme_marian": "Marijino plavo",
+  "theme_stone": "Katedralni kamen",
+  "theme_parchment": "Pergamena",
+  "theme_liturgical": "Liturgijsko vrijeme",
+  "theme_contrast": "Visoki kontrast"
 }

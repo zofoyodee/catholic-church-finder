@@ -441,5 +441,12 @@
   "loadingMore": "Загружаем ещё храмы…",
   "noParishSite": "Сайт прихода не найден",
   "photoStreetView": "Изображение Street View от Google. Открывает Street View.",
-  "photoMapillary": "Уличное фото: {author}, Mapillary, CC BY-SA 4.0. Открывается на Mapillary."
+  "photoMapillary": "Уличное фото: {author}, Mapillary, CC BY-SA 4.0. Открывается на Mapillary.",
+  "themeLabel": "Тема",
+  "theme_night": "Ночное небо",
+  "theme_marian": "Марианский синий",
+  "theme_stone": "Камень собора",
+  "theme_parchment": "Пергамент",
+  "theme_liturgical": "Литургический период",
+  "theme_contrast": "Высокая контрастность"
 }

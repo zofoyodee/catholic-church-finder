@@ -403,5 +403,12 @@
   "loadingMore": "Ikarkarga ti ad-adu pay a simbaan…",
   "noParishSite": "Awan ti nasarakan a website ti parokia",
   "photoStreetView": "Ladawan ti Street View manipud iti Google. Lukatanna ti Street View.",
-  "photoMapillary": "Ladawan ti kalsada babaen ni {author} iti Mapillary, CC BY-SA 4.0. Lukatanna iti Mapillary."
+  "photoMapillary": "Ladawan ti kalsada babaen ni {author} iti Mapillary, CC BY-SA 4.0. Lukatanna iti Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Langit iti Rabii",
+  "theme_marian": "Asul ni Maria",
+  "theme_stone": "Bato ti Katedral",
+  "theme_parchment": "Pergamino",
+  "theme_liturgical": "Panawen ti Liturhia",
+  "theme_contrast": "Nangato a Contrast"
 }

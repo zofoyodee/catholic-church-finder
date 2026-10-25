@@ -403,5 +403,12 @@
   "loadingMore": "आनीक इगर्जां लोड करतात…",
   "noParishSite": "फिरगजेची वेबसायट मेळ्ळी ना",
   "photoStreetView": "Google चें Street View चित्र. Street View उगडटा.",
-  "photoMapillary": "Mapillary चेर {author} हाणें काडिल्लो रस्त्याचो फोटो, CC BY-SA 4.0. Mapillary चेर उगडटा."
+  "photoMapillary": "Mapillary चेर {author} हाणें काडिल्लो रस्त्याचो फोटो, CC BY-SA 4.0. Mapillary चेर उगडटा.",
+  "themeLabel": "थीम",
+  "theme_night": "रातचें आकाश",
+  "theme_marian": "मारियेचो निळो",
+  "theme_stone": "कॅथेड्रलाचो फातर",
+  "theme_parchment": "चर्मपत्र",
+  "theme_liturgical": "लिटर्जिकल ऋतू",
+  "theme_contrast": "ऊंच कॉन्ट्रास्ट"
 }

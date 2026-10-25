@@ -403,5 +403,12 @@
   "loadingMore": "Na-ebu ụka ndị ọzọ…",
   "noParishSite": "Ahụghị weebụsaịtị parish",
   "photoStreetView": "Onyonyo Street View sitere na Google. Ọ na-emepe Street View.",
-  "photoMapillary": "Foto okporo ụzọ nke {author} na Mapillary, CC BY-SA 4.0. Ọ na-emepe ya na Mapillary."
+  "photoMapillary": "Foto okporo ụzọ nke {author} na Mapillary, CC BY-SA 4.0. Ọ na-emepe ya na Mapillary.",
+  "themeLabel": "Isiokwu",
+  "theme_night": "Mbara Igwe Abalị",
+  "theme_marian": "Acha Anụnụ Meri",
+  "theme_stone": "Nkume Katidral",
+  "theme_parchment": "Akpụkpọ Ederede",
+  "theme_liturgical": "Oge Liturgy",
+  "theme_contrast": "Ọdịiche Dị Elu"
 }

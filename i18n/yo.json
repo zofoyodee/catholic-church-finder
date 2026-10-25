@@ -403,5 +403,12 @@
   "loadingMore": "Ń gbé ilé ìjọsìn mìíràn wọlé…",
   "noParishSite": "A kò rí ojú-òpó parish",
   "photoStreetView": "Àwòrán Street View láti ọ̀dọ̀ Google. Ó ṣí Street View.",
-  "photoMapillary": "Fọ́tò ojú ọ̀nà láti ọwọ́ {author} lórí Mapillary, CC BY-SA 4.0. Ó ṣí i lórí Mapillary."
+  "photoMapillary": "Fọ́tò ojú ọ̀nà láti ọwọ́ {author} lórí Mapillary, CC BY-SA 4.0. Ó ṣí i lórí Mapillary.",
+  "themeLabel": "Àwòṣe",
+  "theme_night": "Ojú Ọ̀run Alẹ́",
+  "theme_marian": "Búlúù Màríà",
+  "theme_stone": "Òkúta Katidira",
+  "theme_parchment": "Awọ Ìwé",
+  "theme_liturgical": "Àsìkò Lítúrjì",
+  "theme_contrast": "Ìyàtọ̀ Gíga"
 }

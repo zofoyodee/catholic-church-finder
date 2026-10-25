@@ -409,5 +409,12 @@
   "loadingMore": "Po ngarkohen më shumë kisha…",
   "noParishSite": "Nuk u gjet faqja e famullisë",
   "photoStreetView": "Imazh Street View nga Google. Hap Street View.",
-  "photoMapillary": "Foto rruge nga {author} në Mapillary, CC BY-SA 4.0. Hapet në Mapillary."
+  "photoMapillary": "Foto rruge nga {author} në Mapillary, CC BY-SA 4.0. Hapet në Mapillary.",
+  "themeLabel": "Tema",
+  "theme_night": "Qielli i Natës",
+  "theme_marian": "Blu Mariane",
+  "theme_stone": "Gur Katedraleje",
+  "theme_parchment": "Pergamenë",
+  "theme_liturgical": "Koha Liturgjike",
+  "theme_contrast": "Kontrast i Lartë"
 }

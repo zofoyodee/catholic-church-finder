@@ -411,5 +411,12 @@
   "loadingMore": "കൂടുതൽ ദേവാലയങ്ങൾ ലോഡ് ചെയ്യുന്നു…",
   "noParishSite": "ഇടവക വെബ്സൈറ്റ് കണ്ടെത്തിയില്ല",
   "photoStreetView": "Google-ൽ നിന്നുള്ള Street View ചിത്രം. Street View തുറക്കുന്നു.",
-  "photoMapillary": "Mapillary-യിൽ {author} എടുത്ത തെരുവ് ഫോട്ടോ, CC BY-SA 4.0. Mapillary-യിൽ തുറക്കുന്നു."
+  "photoMapillary": "Mapillary-യിൽ {author} എടുത്ത തെരുവ് ഫോട്ടോ, CC BY-SA 4.0. Mapillary-യിൽ തുറക്കുന്നു.",
+  "themeLabel": "തീം",
+  "theme_night": "രാത്രി ആകാശം",
+  "theme_marian": "മരിയൻ നീല",
+  "theme_stone": "കത്തീഡ്രൽ കല്ല്",
+  "theme_parchment": "തുകൽക്കടലാസ്",
+  "theme_liturgical": "ആരാധനക്രമ കാലം",
+  "theme_contrast": "ഉയർന്ന കോൺട്രാസ്റ്റ്"
 }

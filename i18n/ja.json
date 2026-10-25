@@ -395,5 +395,12 @@
   "loadingMore": "さらに教会を読み込んでいます…",
   "noParishSite": "小教区のウェブサイトが見つかりません",
   "photoStreetView": "Google のストリートビュー画像。ストリートビューで開きます。",
-  "photoMapillary": "Mapillary の {author} による街路写真（CC BY-SA 4.0）。Mapillary で開きます。"
+  "photoMapillary": "Mapillary の {author} による街路写真（CC BY-SA 4.0）。Mapillary で開きます。",
+  "themeLabel": "テーマ",
+  "theme_night": "夜空",
+  "theme_marian": "マリアの青",
+  "theme_stone": "大聖堂の石",
+  "theme_parchment": "羊皮紙",
+  "theme_liturgical": "典礼季節",
+  "theme_contrast": "ハイコントラスト"
 }

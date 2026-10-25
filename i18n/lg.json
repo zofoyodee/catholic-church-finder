@@ -403,5 +403,12 @@
   "loadingMore": "Tutikka ekkanisa endala…",
   "noParishSite": "Omukutu gwa pariisi tegulabiddwa",
   "photoStreetView": "Ekifaananyi kya Street View okuva ku Google. Kiggula Street View.",
-  "photoMapillary": "Ekifaananyi ky'oluguudo kya {author} ku Mapillary, CC BY-SA 4.0. Kiggulirwa ku Mapillary."
+  "photoMapillary": "Ekifaananyi ky'oluguudo kya {author} ku Mapillary, CC BY-SA 4.0. Kiggulirwa ku Mapillary.",
+  "themeLabel": "Endabika",
+  "theme_night": "Eggulu ly'Ekiro",
+  "theme_marian": "Bbululu wa Maria",
+  "theme_stone": "Ejjinja lya Lutikko",
+  "theme_parchment": "Eddiba ly'Okuwandiikako",
+  "theme_liturgical": "Ekiseera kya Liturgiya",
+  "theme_contrast": "Enjawulo Ennene"
 }

@@ -441,5 +441,12 @@
   "loadingMore": "Wczytuję kolejne kościoły…",
   "noParishSite": "Nie znaleziono strony parafii",
   "photoStreetView": "Obraz Street View od Google. Otwiera Street View.",
-  "photoMapillary": "Zdjęcie uliczne: {author}, Mapillary, CC BY-SA 4.0. Otwiera się w Mapillary."
+  "photoMapillary": "Zdjęcie uliczne: {author}, Mapillary, CC BY-SA 4.0. Otwiera się w Mapillary.",
+  "themeLabel": "Motyw",
+  "theme_night": "Nocne niebo",
+  "theme_marian": "Maryjny błękit",
+  "theme_stone": "Kamień katedralny",
+  "theme_parchment": "Pergamin",
+  "theme_liturgical": "Okres liturgiczny",
+  "theme_contrast": "Wysoki kontrast"
 }
