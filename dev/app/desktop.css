@@ -74,3 +74,18 @@
 .wide body.card-open .mnav { left: calc((100vw - min(420px, calc(100vw - 32px)) - 28px) / 2); }
 [dir="rtl"].wide body.card-open .mnav { left: calc(100vw - (100vw - min(420px, calc(100vw - 32px)) - 28px) / 2); }
 @media (max-width: 1239px) { .wide body.card-open .ctrls { display: none; } }
+
+/* the search bar stands out in every theme: taller, nearly solid, a clear edge and a soft shadow */
+:root.wide { --sw: min(580px, calc(100vw - 480px)); }
+.wide .search input {
+  height: 50px; border-radius: 25px; font-size: 15px; padding-left: 46px;
+  background: color-mix(in srgb, var(--panel-solid) 88%, var(--ink) 12%);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 34%, transparent);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+.wide .search input::placeholder { color: var(--ink-soft); }
+.wide .search input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 25%, transparent), 0 8px 28px rgba(0, 0, 0, 0.45); }
+.wide .search > svg { left: 17px; top: 16px; width: 18px; height: 18px; stroke: var(--ink); }
+[dir="rtl"] .wide .search input { padding: 0 46px 0 16px; }
+[dir="rtl"] .wide .search > svg { left: auto; right: 17px; }
+.wide .results { top: 58px; }
