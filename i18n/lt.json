@@ -521,5 +521,9 @@
   "hint_spin": "Leisti gaubliui lėtai suktis",
   "hint_viewBtn": "Pakeisti žemėlapio išvaizdą",
   "hint_favOpen": "Jūsų išsaugotos bažnyčios",
-  "mineEmpty": "Bakstelėkite širdelę prie bažnyčios, kad ją čia išsaugotumėte."
+  "mineEmpty": "Bakstelėkite širdelę prie bažnyčios, kad ją čia išsaugotumėte.",
+  "voiceSearch": "Paieška Balsu",
+  "listening": "Klausausi… pasakykite bažnyčią ar vietovę",
+  "micBlocked": "Mikrofonas užblokuotas. Leiskite jį naršyklės nustatymuose, kad galėtumėte ieškoti balsu.",
+  "voiceFailed": "Paieška balsu dabar neveikia. Įveskite, ko ieškote."
 }

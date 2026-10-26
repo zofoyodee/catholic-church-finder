@@ -502,5 +502,9 @@
   "hint_spin": "Biarkan bola dunia berputar perlahan",
   "hint_viewBtn": "Ubah tampilan peta",
   "hint_favOpen": "Gereja yang Anda simpan",
-  "mineEmpty": "Ketuk hati pada sebuah gereja untuk menyimpannya di sini."
+  "mineEmpty": "Ketuk hati pada sebuah gereja untuk menyimpannya di sini.",
+  "voiceSearch": "Cari dengan Suara",
+  "listening": "Mendengarkan… sebutkan gereja atau kota",
+  "micBlocked": "Mikrofon diblokir. Izinkan di pengaturan peramban untuk mencari dengan suara.",
+  "voiceFailed": "Pencarian suara sedang tidak berfungsi. Silakan ketik pencarian Anda."
 }

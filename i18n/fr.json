@@ -518,5 +518,9 @@
   "hint_spin": "Laisser le globe tourner lentement",
   "hint_viewBtn": "Changer l’aspect de la carte",
   "hint_favOpen": "Les églises que vous avez enregistrées",
-  "mineEmpty": "Touchez le cœur d’une église pour l’enregistrer ici."
+  "mineEmpty": "Touchez le cœur d’une église pour l’enregistrer ici.",
+  "voiceSearch": "Recherche Vocale",
+  "listening": "À l’écoute… dites une église ou une ville",
+  "micBlocked": "Le micro est bloqué. Autorisez-le dans les réglages du navigateur pour chercher à la voix.",
+  "voiceFailed": "La recherche vocale ne fonctionne pas pour l’instant. Veuillez taper votre recherche."
 }

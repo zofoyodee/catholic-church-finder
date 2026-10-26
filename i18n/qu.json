@@ -510,5 +510,9 @@
   "hint_spin": "Pachata allillamanta muyurichun",
   "hint_viewBtn": "Mapa imayna rikhurisqanta tikray",
   "hint_favOpen": "Waqaychasqayki iglesiakuna",
-  "mineEmpty": "Huk iglesiapi sunquta llapiy kaypi waqaychanaykipaq."
+  "mineEmpty": "Huk iglesiapi sunquta llapiy kaypi waqaychanaykipaq.",
+  "voiceSearch": "Kunkawan Maskay",
+  "listening": "Uyarichkani… huk inti wasita utaq llaqtata niy",
+  "micBlocked": "Mikrofonoqa harkasqam. Navegadorpa churasqanpi saqiy, kunkawan maskanaykipaq.",
+  "voiceFailed": "Kunkawan maskayqa manam kunan llamk’anchu. Ama hina kaspa, maskasqaykita qillqay."
 }

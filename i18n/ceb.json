@@ -510,5 +510,9 @@
   "hint_spin": "Pasagdi nga hinay nga motuyok ang globo",
   "hint_viewBtn": "Usba ang hitsura sa mapa",
   "hint_favOpen": "Ang mga simbahan nga imong gitipigan",
-  "mineEmpty": "Pindota ang kasingkasing sa usa ka simbahan aron matipigan kini dinhi."
+  "mineEmpty": "Pindota ang kasingkasing sa usa ka simbahan aron matipigan kini dinhi.",
+  "voiceSearch": "Pangita Gamit ang Tingog",
+  "listening": "Naminaw… isulti ang simbahan o lungsod",
+  "micBlocked": "Naka-block ang mikropono. Tugoti kini sa settings sa browser aron makapangita gamit ang tingog.",
+  "voiceFailed": "Dili molihok karon ang pagpangita gamit ang tingog. Palihug i-type ang imong pangitaon."
 }

@@ -518,5 +518,9 @@
   "hint_spin": "Acha dunia izunguke polepole yenyewe",
   "hint_viewBtn": "Badilisha jinsi ramani inavyoonekana",
   "hint_favOpen": "Makanisa uliyoyahifadhi",
-  "mineEmpty": "Gusa moyo kwenye kanisa ili kulihifadhi hapa."
+  "mineEmpty": "Gusa moyo kwenye kanisa ili kulihifadhi hapa.",
+  "voiceSearch": "Tafuta kwa Sauti",
+  "listening": "Ninasikiliza… taja kanisa au mji",
+  "micBlocked": "Kipaza sauti kimezuiwa. Kiruhusu katika mipangilio ya kivinjari ili kutafuta kwa sauti.",
+  "voiceFailed": "Utafutaji kwa sauti haufanyi kazi sasa. Tafadhali andika unachotafuta."
 }

@@ -510,5 +510,9 @@
   "hint_spin": "Rega pasi ritenderere zvishoma nezvishoma",
   "hint_viewBtn": "Shandura kutaridzika kwemepu",
   "hint_favOpen": "Machechi awakachengeta",
-  "mineEmpty": "Baya moyo pachechi kuti uichengete pano."
+  "mineEmpty": "Baya moyo pachechi kuti uichengete pano.",
+  "voiceSearch": "Tsvaga neInzwi",
+  "listening": "Ndiri kuteerera… taura chechi kana guta",
+  "micBlocked": "Maikirofoni yakavharwa. Ibvumire mumasetingi ebrowser kuti utsvage neinzwi.",
+  "voiceFailed": "Kutsvaga neinzwi hakusi kushanda izvozvi. Ndapota nyora zvauri kutsvaga."
 }

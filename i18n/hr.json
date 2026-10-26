@@ -534,5 +534,9 @@
   "hint_spin": "Neka se globus polako sam okreće",
   "hint_viewBtn": "Promijenite izgled karte",
   "hint_favOpen": "Crkve koje ste spremili",
-  "mineEmpty": "Dodirnite srce kod crkve da biste je spremili ovdje."
+  "mineEmpty": "Dodirnite srce kod crkve da biste je spremili ovdje.",
+  "voiceSearch": "Glasovno Pretraživanje",
+  "listening": "Slušam… recite crkvu ili mjesto",
+  "micBlocked": "Mikrofon je blokiran. Dopustite ga u postavkama preglednika za glasovno pretraživanje.",
+  "voiceFailed": "Glasovno pretraživanje trenutno ne radi. Molimo upišite što tražite."
 }

@@ -25,8 +25,8 @@
 .compact .globe-btn:hover { background: rgba(232, 184, 74, 0.14); }
 .compact .search .globe-btn svg { position: static; width: 20px; height: 20px; stroke: var(--ink-soft); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .compact .search input { padding-right: 46px; }
-[dir="rtl"] .compact .globe-btn { right: auto; left: 5px; }
-[dir="rtl"] .compact .search input { padding: 0 40px 0 46px; }
+[dir="rtl"].compact .globe-btn { right: auto; left: 5px; }
+[dir="rtl"].compact .search input { padding: 0 40px 0 46px; }
 .compact .ctrls { bottom: calc(var(--nav-h) + 12px); }
 
 /* bottom tabs */

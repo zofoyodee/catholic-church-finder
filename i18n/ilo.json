@@ -510,5 +510,9 @@
   "hint_spin": "Bay-am nga in-inut nga agtayyek ti globo",
   "hint_viewBtn": "Baliwan ti langa ti mapa",
   "hint_favOpen": "Dagiti simbaan nga indulinmo",
-  "mineEmpty": "Pinduten ti puso iti maysa a simbaan tapno maidulin ditoy."
+  "mineEmpty": "Pinduten ti puso iti maysa a simbaan tapno maidulin ditoy.",
+  "voiceSearch": "Agbiruk Babaen ti Timek",
+  "listening": "Dumdumngeg… ibagam ti simbaan wenno ili",
+  "micBlocked": "Naserraan ti mikropono. Ipalubosmo daytoy iti settings ti browser tapno makabirukka babaen ti timek.",
+  "voiceFailed": "Saan nga agandar ita ti panagbiruk babaen ti timek. Pangngaasim ta i-type ti birukem."
 }

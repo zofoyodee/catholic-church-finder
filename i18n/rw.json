@@ -510,5 +510,9 @@
   "hint_spin": "Reka isi izenguruke buhoro",
   "hint_viewBtn": "Hindura uko ikarita igaragara",
   "hint_favOpen": "Kiliziya wabitse",
-  "mineEmpty": "Kanda ku mutima kuri kiliziya kugira ngo uyibike hano."
+  "mineEmpty": "Kanda ku mutima kuri kiliziya kugira ngo uyibike hano.",
+  "voiceSearch": "Shakisha mu Ijwi",
+  "listening": "Ndimo kumva… vuga kiliziya cyangwa umujyi",
+  "micBlocked": "Mikoro yafunzwe. Yemere mu igenamiterere rya mushakisha kugira ngo ushakishe mu ijwi.",
+  "voiceFailed": "Gushakisha mu ijwi ntibikora ubu. Andika ibyo ushaka, ubishoboye."
 }

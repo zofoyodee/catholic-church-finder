@@ -518,5 +518,9 @@
   "hint_spin": "Hagyja, hogy a földgömb lassan forogjon",
   "hint_viewBtn": "A térkép kinézetének módosítása",
   "hint_favOpen": "Az elmentett templomai",
-  "mineEmpty": "Koppintson egy templomnál a szívre, és itt megtalálja."
+  "mineEmpty": "Koppintson egy templomnál a szívre, és itt megtalálja.",
+  "voiceSearch": "Hangalapú Keresés",
+  "listening": "Figyelek… mondj egy templomot vagy települést",
+  "micBlocked": "A mikrofon le van tiltva. Engedélyezd a böngésző beállításaiban a hangalapú kereséshez.",
+  "voiceFailed": "A hangalapú keresés most nem működik. Kérjük, írd be, amit keresel."
 }

@@ -510,5 +510,9 @@
   "hint_spin": "Avelao hihodina miadana ny tany",
   "hint_viewBtn": "Ovay ny endriky ny sarintany",
   "hint_favOpen": "Ireo fiangonana notehirizinao",
-  "mineEmpty": "Tsindrio ny fo amin’ny fiangonana iray mba hitahiry azy eto."
+  "mineEmpty": "Tsindrio ny fo amin’ny fiangonana iray mba hitahiry azy eto.",
+  "voiceSearch": "Hikaroka amin’ny Feo",
+  "listening": "Mihaino… lazao ny fiangonana na tanàna",
+  "micBlocked": "Voasakana ny mikrô. Avelao izy ao amin’ny fikirakirana ny navigateur mba hikarohana amin’ny feo.",
+  "voiceFailed": "Tsy mandeha amin’izao ny fikarohana amin’ny feo. Soraty azafady izay tadiavinao."
 }

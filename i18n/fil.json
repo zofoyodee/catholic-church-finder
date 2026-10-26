@@ -518,5 +518,9 @@
   "hint_spin": "Hayaang dahan-dahang umikot ang globo",
   "hint_viewBtn": "Baguhin ang hitsura ng mapa",
   "hint_favOpen": "Ang mga simbahang na-save mo",
-  "mineEmpty": "I-tap ang puso sa isang simbahan para i-save ito rito."
+  "mineEmpty": "I-tap ang puso sa isang simbahan para i-save ito rito.",
+  "voiceSearch": "Maghanap Gamit ang Boses",
+  "listening": "Nakikinig… sabihin ang simbahan o bayan",
+  "micBlocked": "Naka-block ang mikropono. Payagan ito sa settings ng browser para makapaghanap gamit ang boses.",
+  "voiceFailed": "Hindi gumagana ang paghahanap gamit ang boses ngayon. Paki-type na lang ang hinahanap mo."
 }

@@ -510,5 +510,9 @@
   "hint_spin": "Reka isi izunguruke buhorobuhoro",
   "hint_viewBtn": "Hindura ingene ikarata iboneka",
   "hint_favOpen": "Ingoro z’Imana wabitse",
-  "mineEmpty": "Kanda ku mutima kw’ishengero kugira uribike ngaha."
+  "mineEmpty": "Kanda ku mutima kw’ishengero kugira uribike ngaha.",
+  "voiceSearch": "Rondera mw’Ijwi",
+  "listening": "Ndiko ndumviriza… vuga ingoro y’Imana canke igisagara",
+  "micBlocked": "Mikoro yabujijwe. Yemere mu mategeko ya mushakisha kugira urondere mw’ijwi.",
+  "voiceFailed": "Kurondera mw’ijwi ntibikora ubu. Turagusavye wandike ico urondera."
 }
