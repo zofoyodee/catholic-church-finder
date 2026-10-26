@@ -410,5 +410,15 @@
   "theme_stone": "Ibuye rya Katedrali",
   "theme_parchment": "Uruhu rwo Kwandikaho",
   "theme_liturgical": "Igihe cya Liturujiya",
-  "theme_contrast": "Itandukaniro Rikomeye"
+  "theme_contrast": "Itandukaniro Rikomeye",
+  "jEra_glory": "Pentekositi n'Ikuzo rya Bikira Mariya",
+  "jRosary": "Amibukiro ya Rozari",
+  "jRo_joyful": "Amibukiro y'Ibyishimo",
+  "jRo_luminous": "Amibukiro y'Urumuri",
+  "jRo_sorrowful": "Amibukiro y'Ububabare",
+  "jRo_glorious": "Amibukiro y'Ikuzo",
+  "jMysteryOf": "{set} · {k} kuri 5",
+  "jFruit": "Imbuto y'Iyibukiro",
+  "jRosaryAbout": "Uko Rozari Yavutse",
+  "jRosaryPray": "Uko Bavuga Rozari"
 }

@@ -410,5 +410,15 @@
   "theme_stone": "Bato sa Katedral",
   "theme_parchment": "Pergamino",
   "theme_liturgical": "Panahon sa Liturhiya",
-  "theme_contrast": "Taas nga Contrast"
+  "theme_contrast": "Taas nga Contrast",
+  "jEra_glory": "Pentekostes ug Himaya sa Mahal nga Birhen",
+  "jRosary": "Mga Misteryo sa Rosaryo",
+  "jRo_joyful": "Mga Misteryo sa Kalipay",
+  "jRo_luminous": "Mga Misteryo sa Kahayag",
+  "jRo_sorrowful": "Mga Misteryo sa Kasakit",
+  "jRo_glorious": "Mga Misteryo sa Himaya",
+  "jMysteryOf": "{set} · {k} sa 5",
+  "jFruit": "Bunga sa Misteryo",
+  "jRosaryAbout": "Giunsa Pagsugod sa Rosaryo",
+  "jRosaryPray": "Unsaon Pag-ampo sa Rosaryo"
 }

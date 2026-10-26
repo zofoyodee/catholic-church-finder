@@ -449,5 +449,15 @@
   "theme_stone": "حجر الكاتدرائية",
   "theme_parchment": "الرَّق",
   "theme_liturgical": "الزمن الليتورجي",
-  "theme_contrast": "تباين عالٍ"
+  "theme_contrast": "تباين عالٍ",
+  "jEra_glory": "العنصرة ومجد سيدتنا",
+  "jRosary": "أسرار الوردية",
+  "jRo_joyful": "أسرار الفرح",
+  "jRo_luminous": "أسرار النور",
+  "jRo_sorrowful": "أسرار الحزن",
+  "jRo_glorious": "أسرار المجد",
+  "jMysteryOf": "{set} · {k} من 5",
+  "jFruit": "ثمرة السر",
+  "jRosaryAbout": "كيف نشأت الوردية",
+  "jRosaryPray": "كيف نصلي الوردية"
 }

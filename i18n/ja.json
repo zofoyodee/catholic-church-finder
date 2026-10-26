@@ -402,5 +402,15 @@
   "theme_stone": "大聖堂の石",
   "theme_parchment": "羊皮紙",
   "theme_liturgical": "典礼季節",
-  "theme_contrast": "ハイコントラスト"
+  "theme_contrast": "ハイコントラスト",
+  "jEra_glory": "聖霊降臨と聖母の栄光",
+  "jRosary": "ロザリオの神秘",
+  "jRo_joyful": "喜びの神秘",
+  "jRo_luminous": "光の神秘",
+  "jRo_sorrowful": "苦しみの神秘",
+  "jRo_glorious": "栄えの神秘",
+  "jMysteryOf": "{set} · 第{k}の神秘（全5）",
+  "jFruit": "神秘の実り",
+  "jRosaryAbout": "ロザリオの起源",
+  "jRosaryPray": "ロザリオの祈り方"
 }

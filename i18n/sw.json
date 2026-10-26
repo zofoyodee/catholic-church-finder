@@ -418,5 +418,15 @@
   "theme_stone": "Jiwe la Kanisa Kuu",
   "theme_parchment": "Ngozi ya Kuandikia",
   "theme_liturgical": "Kipindi cha Liturujia",
-  "theme_contrast": "Utofautishaji wa Juu"
+  "theme_contrast": "Utofautishaji wa Juu",
+  "jEra_glory": "Pentekoste na Utukufu wa Bikira Maria",
+  "jRosary": "Mafumbo ya Rozari",
+  "jRo_joyful": "Matendo ya Furaha",
+  "jRo_luminous": "Matendo ya Mwanga",
+  "jRo_sorrowful": "Matendo ya Uchungu",
+  "jRo_glorious": "Matendo ya Utukufu",
+  "jMysteryOf": "{set} · {k} kati ya 5",
+  "jFruit": "Tunda la Fumbo",
+  "jRosaryAbout": "Jinsi Rozari Ilivyoanza",
+  "jRosaryPray": "Jinsi ya Kusali Rozari"
 }

@@ -402,5 +402,15 @@
   "theme_stone": "Batu Katedral",
   "theme_parchment": "Perkamen",
   "theme_liturgical": "Masa Liturgi",
-  "theme_contrast": "Kontras Tinggi"
+  "theme_contrast": "Kontras Tinggi",
+  "jEra_glory": "Pentakosta dan Kemuliaan Bunda Maria",
+  "jRosary": "Peristiwa Rosario",
+  "jRo_joyful": "Peristiwa Gembira",
+  "jRo_luminous": "Peristiwa Terang",
+  "jRo_sorrowful": "Peristiwa Sedih",
+  "jRo_glorious": "Peristiwa Mulia",
+  "jMysteryOf": "{set} · {k} dari 5",
+  "jFruit": "Buah Peristiwa",
+  "jRosaryAbout": "Asal Mula Rosario",
+  "jRosaryPray": "Cara Berdoa Rosario"
 }

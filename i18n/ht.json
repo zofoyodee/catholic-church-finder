@@ -410,5 +410,15 @@
   "theme_stone": "Wòch Katedral",
   "theme_parchment": "Pakemen",
   "theme_liturgical": "Sezon Litijik",
-  "theme_contrast": "Gwo Kontras"
+  "theme_contrast": "Gwo Kontras",
+  "jEra_glory": "Lapannkòt ak Glwa Notre Dam",
+  "jRosary": "Mistè Rozè yo",
+  "jRo_joyful": "Mistè Lajwa yo",
+  "jRo_luminous": "Mistè Limyè yo",
+  "jRo_sorrowful": "Mistè Doulè yo",
+  "jRo_glorious": "Mistè Glwa yo",
+  "jMysteryOf": "{set} · {k} sou 5",
+  "jFruit": "Fwi Mistè a",
+  "jRosaryAbout": "Kijan Rozè a Te Fèt",
+  "jRosaryPray": "Kijan pou Lapriyè Rozè a"
 }

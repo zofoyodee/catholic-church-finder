@@ -438,5 +438,15 @@
   "theme_stone": "Katedrální kámen",
   "theme_parchment": "Pergamen",
   "theme_liturgical": "Liturgické období",
-  "theme_contrast": "Vysoký kontrast"
+  "theme_contrast": "Vysoký kontrast",
+  "jEra_glory": "Letnice a sláva Panny Marie",
+  "jRosary": "Tajemství růžence",
+  "jRo_joyful": "Radostná tajemství",
+  "jRo_luminous": "Tajemství světla",
+  "jRo_sorrowful": "Bolestná tajemství",
+  "jRo_glorious": "Slavná tajemství",
+  "jMysteryOf": "{set} · {k} z 5",
+  "jFruit": "Plod tajemství",
+  "jRosaryAbout": "Jak vznikl růženec",
+  "jRosaryPray": "Jak se modlit růženec"
 }

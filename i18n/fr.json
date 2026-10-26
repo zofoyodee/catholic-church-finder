@@ -418,5 +418,15 @@
   "theme_stone": "Pierre de Cathédrale",
   "theme_parchment": "Parchemin",
   "theme_liturgical": "Temps Liturgique",
-  "theme_contrast": "Contraste Élevé"
+  "theme_contrast": "Contraste Élevé",
+  "jEra_glory": "Pentecôte et Gloire de Notre-Dame",
+  "jRosary": "Mystères du Rosaire",
+  "jRo_joyful": "Mystères Joyeux",
+  "jRo_luminous": "Mystères Lumineux",
+  "jRo_sorrowful": "Mystères Douloureux",
+  "jRo_glorious": "Mystères Glorieux",
+  "jMysteryOf": "{set} · {k} sur 5",
+  "jFruit": "Fruit du mystère",
+  "jRosaryAbout": "Comment Est Né le Rosaire",
+  "jRosaryPray": "Comment Prier le Rosaire"
 }

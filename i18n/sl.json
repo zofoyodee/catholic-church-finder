@@ -426,5 +426,15 @@
   "theme_stone": "Katedralni kamen",
   "theme_parchment": "Pergament",
   "theme_liturgical": "Liturgični čas",
-  "theme_contrast": "Visok kontrast"
+  "theme_contrast": "Visok kontrast",
+  "jEra_glory": "Binkošti in slava Matere Božje",
+  "jRosary": "Skrivnosti rožnega venca",
+  "jRo_joyful": "Veseli del",
+  "jRo_luminous": "Svetli del",
+  "jRo_sorrowful": "Žalostni del",
+  "jRo_glorious": "Častitljivi del",
+  "jMysteryOf": "{set} · {k} od 5",
+  "jFruit": "Sad skrivnosti",
+  "jRosaryAbout": "Kako je nastal rožni venec",
+  "jRosaryPray": "Kako moliti rožni venec"
 }

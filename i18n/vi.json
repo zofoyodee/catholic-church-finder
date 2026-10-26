@@ -402,5 +402,15 @@
   "theme_stone": "Đá nhà thờ chính tòa",
   "theme_parchment": "Giấy da",
   "theme_liturgical": "Mùa phụng vụ",
-  "theme_contrast": "Độ tương phản cao"
+  "theme_contrast": "Độ tương phản cao",
+  "jEra_glory": "Lễ Hiện Xuống và Vinh Quang Đức Mẹ",
+  "jRosary": "Các Mầu Nhiệm Mân Côi",
+  "jRo_joyful": "Năm Sự Vui",
+  "jRo_luminous": "Năm Sự Sáng",
+  "jRo_sorrowful": "Năm Sự Thương",
+  "jRo_glorious": "Năm Sự Mừng",
+  "jMysteryOf": "{set} · {k} trên 5",
+  "jFruit": "Hoa trái của mầu nhiệm",
+  "jRosaryAbout": "Kinh Mân Côi Ra Đời Thế Nào",
+  "jRosaryPray": "Cách Lần Hạt Mân Côi"
 }

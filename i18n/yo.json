@@ -410,5 +410,15 @@
   "theme_stone": "Òkúta Katidira",
   "theme_parchment": "Awọ Ìwé",
   "theme_liturgical": "Àsìkò Lítúrjì",
-  "theme_contrast": "Ìyàtọ̀ Gíga"
+  "theme_contrast": "Ìyàtọ̀ Gíga",
+  "jEra_glory": "Pẹ́ńtíkọ́sì àti Ògo Màmá Wa",
+  "jRosary": "Àwọn Ohun Ìjìnlẹ̀ Rósárì",
+  "jRo_joyful": "Àwọn Ohun Ìjìnlẹ̀ Ayọ̀",
+  "jRo_luminous": "Àwọn Ohun Ìjìnlẹ̀ Ìmọ́lẹ̀",
+  "jRo_sorrowful": "Àwọn Ohun Ìjìnlẹ̀ Ìbànújẹ́",
+  "jRo_glorious": "Àwọn Ohun Ìjìnlẹ̀ Ògo",
+  "jMysteryOf": "{set} · {k} nínú 5",
+  "jFruit": "Èso Ohun Ìjìnlẹ̀",
+  "jRosaryAbout": "Bí Rósárì Ṣe Bẹ̀rẹ̀",
+  "jRosaryPray": "Bí A Ṣe Ń Gba Àdúrà Rósárì"
 }

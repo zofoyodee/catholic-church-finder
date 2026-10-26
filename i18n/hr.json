@@ -434,5 +434,15 @@
   "theme_stone": "Katedralni kamen",
   "theme_parchment": "Pergamena",
   "theme_liturgical": "Liturgijsko vrijeme",
-  "theme_contrast": "Visoki kontrast"
+  "theme_contrast": "Visoki kontrast",
+  "jEra_glory": "Duhovi i slava Gospina",
+  "jRosary": "Otajstva krunice",
+  "jRo_joyful": "Radosna otajstva",
+  "jRo_luminous": "Otajstva svjetla",
+  "jRo_sorrowful": "Žalosna otajstva",
+  "jRo_glorious": "Slavna otajstva",
+  "jMysteryOf": "{set} · {k} od 5",
+  "jFruit": "Plod otajstva",
+  "jRosaryAbout": "Kako je nastala krunica",
+  "jRosaryPray": "Kako moliti krunicu"
 }

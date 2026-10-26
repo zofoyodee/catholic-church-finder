@@ -410,5 +410,15 @@
   "theme_stone": "कॅथेड्रलाचो फातर",
   "theme_parchment": "चर्मपत्र",
   "theme_liturgical": "लिटर्जिकल ऋतू",
-  "theme_contrast": "ऊंच कॉन्ट्रास्ट"
+  "theme_contrast": "ऊंच कॉन्ट्रास्ट",
+  "jEra_glory": "पेंतेकोस्त आनी आमच्या सायबिणीची महिमा",
+  "jRosary": "रोझाराचीं गुपितां",
+  "jRo_joyful": "खोशयेचीं गुपितां",
+  "jRo_luminous": "उजवाडाचीं गुपितां",
+  "jRo_sorrowful": "दुख्खाचीं गुपितां",
+  "jRo_glorious": "महिमेचीं गुपितां",
+  "jMysteryOf": "{set} · 5 पयकीं {k}",
+  "jFruit": "गुपिताचें फळ",
+  "jRosaryAbout": "रोझार कसो जालो",
+  "jRosaryPray": "रोझार कसो म्हणचो"
 }

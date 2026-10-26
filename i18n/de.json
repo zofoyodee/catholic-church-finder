@@ -418,5 +418,15 @@
   "theme_stone": "Kathedralstein",
   "theme_parchment": "Pergament",
   "theme_liturgical": "Kirchenjahreszeit",
-  "theme_contrast": "Hoher Kontrast"
+  "theme_contrast": "Hoher Kontrast",
+  "jEra_glory": "Pfingsten und Herrlichkeit Unserer Lieben Frau",
+  "jRosary": "Geheimnisse des Rosenkranzes",
+  "jRo_joyful": "Freudenreiche Geheimnisse",
+  "jRo_luminous": "Lichtreiche Geheimnisse",
+  "jRo_sorrowful": "Schmerzhafte Geheimnisse",
+  "jRo_glorious": "Glorreiche Geheimnisse",
+  "jMysteryOf": "{set} · {k} von 5",
+  "jFruit": "Frucht des Geheimnisses",
+  "jRosaryAbout": "Wie der Rosenkranz Entstand",
+  "jRosaryPray": "Wie Man den Rosenkranz Betet"
 }

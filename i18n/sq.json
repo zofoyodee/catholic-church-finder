@@ -416,5 +416,15 @@
   "theme_stone": "Gur Katedraleje",
   "theme_parchment": "Pergamenë",
   "theme_liturgical": "Koha Liturgjike",
-  "theme_contrast": "Kontrast i Lartë"
+  "theme_contrast": "Kontrast i Lartë",
+  "jEra_glory": "Rrëshajët dhe lavdia e Zojës",
+  "jRosary": "Misteret e Rruzares",
+  "jRo_joyful": "Misteret e Gëzimit",
+  "jRo_luminous": "Misteret e Dritës",
+  "jRo_sorrowful": "Misteret e Dhimbjes",
+  "jRo_glorious": "Misteret e Lavdisë",
+  "jMysteryOf": "{set} · {k} nga 5",
+  "jFruit": "Fryti i misterit",
+  "jRosaryAbout": "Si lindi Rruzarja",
+  "jRosaryPray": "Si të lutemi me Rruzare"
 }

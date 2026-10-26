@@ -410,5 +410,15 @@
   "theme_stone": "Katedral Rumi",
   "theme_parchment": "Qara Qillqana",
   "theme_liturgical": "Liturgia Pacha",
-  "theme_contrast": "Hatun Contraste"
+  "theme_contrast": "Hatun Contraste",
+  "jEra_glory": "Pentecostés, Mamanchikpa Hatun Kayninpas",
+  "jRosary": "Rosariopa Misteriokuna",
+  "jRo_joyful": "Kusikuy Misteriokuna",
+  "jRo_luminous": "Kanchay Misteriokuna",
+  "jRo_sorrowful": "Llakikuy Misteriokuna",
+  "jRo_glorious": "Hatunchay Misteriokuna",
+  "jMysteryOf": "{set} · {k} / 5",
+  "jFruit": "Misteriopa Rurun",
+  "jRosaryAbout": "Imaynatam Rosario Paqarirqan",
+  "jRosaryPray": "Imaynatam Rosariota Mañakuna"
 }

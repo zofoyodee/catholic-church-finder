@@ -410,5 +410,15 @@
   "theme_stone": "Gapo kan Katedral",
   "theme_parchment": "Pergamino",
   "theme_liturgical": "Panahon kan Liturhiya",
-  "theme_contrast": "Halangkaw na Contrast"
+  "theme_contrast": "Halangkaw na Contrast",
+  "jEra_glory": "Pentekostes asin Kamurawayan kan Mahal na Birhen",
+  "jRosary": "Mga Misteryo kan Rosaryo",
+  "jRo_joyful": "Mga Misteryo nin Kagayagayahan",
+  "jRo_luminous": "Mga Misteryo nin Liwanag",
+  "jRo_sorrowful": "Mga Misteryo nin Kamondoan",
+  "jRo_glorious": "Mga Misteryo nin Kamurawayan",
+  "jMysteryOf": "{set} · {k} kan 5",
+  "jFruit": "Bunga kan Misteryo",
+  "jRosaryAbout": "Pano Nagpoon an Rosaryo",
+  "jRosaryPray": "Pano Magdasal kan Rosaryo"
 }
