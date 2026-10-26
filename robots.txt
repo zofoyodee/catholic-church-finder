@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /dev/
 
 Sitemap: https://churchglobe.com/sitemap.xml

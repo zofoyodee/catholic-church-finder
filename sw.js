@@ -16,6 +16,7 @@ self.addEventListener('fetch', (e) => {
   const mine = url.origin === location.origin;
   if (!mine && !CDN.test(req.url)) return; // Wikimedia lookups and fonts go straight to the network
   if (/\/admin\.html$/.test(url.pathname)) return; // the stats page is never kept offline or mistaken for the globe
+  if (mine && /^\/dev\//.test(url.pathname)) return; // the test copy at /dev/ is never kept offline or mistaken for the globe
   if (req.mode === 'navigate') {
     e.respondWith(fetch(req.url, { cache: 'no-cache', credentials: 'same-origin' }).then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put('index.html', copy)); return res; })
       .catch(() => caches.match('index.html')));
