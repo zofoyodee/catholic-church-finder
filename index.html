@@ -565,6 +565,7 @@ body.bible-mode .ctrls .fav-open, body.bible-mode .ctrls #nearBtn, body.bible-mo
 svg.rosary { fill: currentColor; flex: none; }
 .ro-tag { display: inline-flex; align-items: center; gap: 5px; color: var(--rc); }
 .ro-tag svg { width: 13px; height: 13px; }
+.btn svg.rosary { width: 16px; height: 16px; }
 .chip svg.rosary { width: 16px; height: 16px; color: var(--gold-soft); }
 .ro-set { display: grid; gap: 6px; margin-top: 14px; }
 .ro-set h4 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 14px; color: var(--rc); }
@@ -3577,9 +3578,9 @@ function lifeTagline() {
 function renderLifeChips() {
   const d = life.data, count = (k) => d.events.filter(e => e.e === k).length;
   $('chips').classList.remove('filtered');
-  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-era="all" aria-pressed="${life.era === 'all'}">${esc(tr('all'))}</button>` + d.eras.map(e =>
-    `<button class="chip" data-era="${e.k}" aria-pressed="${life.era === e.k}"><i style="background:${e.color}"></i>${esc(tr('jEra_' + e.k))} <small>${fmt(count(e.k))}</small></button>`).join('') +
-    `<button class="chip" data-era="rosary" aria-pressed="${life.era === 'rosary'}">${ROSARY_ICON}${esc(tr('jRosary'))} <small>${fmt(d.mysteries.length)}</small></button>`;
+  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-era="all" aria-pressed="${life.era === 'all'}">${esc(tr('all'))}</button>` +
+    `<button class="chip" data-era="rosary" aria-pressed="${life.era === 'rosary'}">${ROSARY_ICON}${esc(tr('jRosary'))} <small>${fmt(d.mysteries.length)}</small></button>` + d.eras.map(e =>
+    `<button class="chip" data-era="${e.k}" aria-pressed="${life.era === e.k}"><i style="background:${e.color}"></i>${esc(tr('jEra_' + e.k))} <small>${fmt(count(e.k))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'jesus' || !b.dataset.era) return;
@@ -3812,7 +3813,7 @@ function rosarySet(k, cur) {
   return `<div class="sect ro-set" style="--rc:${r.color}">
     <h4>${ROSARY_ICON}${esc(tr('jRo_' + k))}</h4><div class="days">${esc(r.days)}</div>
     <ol>${d.mysteries.filter(e => e.ro[0] === k).map(e => `<li aria-current="${e === cur}"><button class="linkish" data-golife="${e.i}">${esc(e.ro[2])}</button></li>`).join('')}</ol>
-    ${cur ? `<div class="days">${esc(tr('jFruit'))}: ${esc(cur.ro[3])}</div><div><button class="linkish" data-rosary="1">${esc(tr('jRosaryAbout'))}</button></div>` : ''}
+    ${cur ? `<div class="days">${esc(tr('jFruit'))}: ${esc(cur.ro[3])}</div><div class="actions" style="margin-top:6px">${life.era === 'rosary' ? '' : `<button class="btn" data-roonly="1">${ROSARY_ICON}<span>${esc(tr('jRosary'))}</span></button>`}<button class="btn" data-rosary="1">${esc(tr('jRosaryAbout'))}</button></div>` : ''}
   </div>`;
 }
 function openRosary() {
@@ -3829,7 +3830,11 @@ function openRosary() {
     ${d.rosary.sets.map(r => rosarySet(r.k)).join('')}`;
   $('cardBody').scrollTop = 0;
 }
-$('cardBody').addEventListener('click', (e) => { if (e.target.closest('[data-rosary]') && life.data) openRosary(); });
+$('cardBody').addEventListener('click', (e) => {
+  if (!life.data) return;
+  if (e.target.closest('[data-rosary]')) openRosary();
+  else if (e.target.closest('[data-roonly]')) $('chips').querySelector('[data-era="rosary"]')?.click();  // the same as the chip, for phones where the chip row scrolls out of sight
+});
 const SCROLL_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5"/><path d="M9 9h7M9 13h7"/></svg>';
 
 /* ---------- themes: the page's colours and the globe's palette, remembered on this device ---------- */
