@@ -1,4 +1,6 @@
 import sys, json, glob, re, unicodedata, math, struct, os, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from regions import search_line, write_chunks
 src_dir, out_dir = sys.argv[1], sys.argv[2]
 os.makedirs(out_dir+'/d', exist_ok=True)
 
@@ -91,20 +93,13 @@ for i,(r,name,n,how) in enumerate(keep):
            round(r.get('confidence') or 0, 2), sorted({s['dataset'] for s in r['sources'] if s.get('dataset')}),
            r['id'], how, max((s.get('update_time') or '')[:10] for s in r['sources']) if r['sources'] else '']
     shard.append(rec)
-    search.append(f"{name}\t{a.get('locality') or ''}\t{cc}".replace('\n',' '))
+    search.append(search_line(name, a.get('locality') or '', cc, a.get('region') or ''))
     if len(shard) == SH: flush(i//SH); shard = []
 if shard: flush((N-1)//SH)
 with open(f'{out_dir}/points.bin','wb') as f:
     f.write(struct.pack(f'<{N}i', *lons)); f.write(struct.pack(f'<{N}i', *lats)); f.write(bytes(types))
-# search chunks <= 4.5MB
-chunks=[]; cur=[]; size=0
-for s in search:
-    b=len(s.encode())+1
-    if size+b>4_500_000: chunks.append(cur); cur=[]; size=0
-    cur.append(s); size+=b
-chunks.append(cur)
-for ci,c in enumerate(chunks):
-    with open(f'{out_dir}/search-{ci}.txt','w') as f: f.write('\n'.join(c))
+# search chunks <= 4.5MB: name, town, country, state or province
+chunks = write_chunks(out_dir, search)
 meta = {'count': N, 'shardSize': SH, 'shards': (N+SH-1)//SH, 'searchChunks': len(chunks), 'searchSizes':[len(c) for c in chunks],
         'countries': country_counts.most_common(), 'types': {str(k):v for k,v in type_counts.items()},
         'byMatch': collections.Counter(k[3] for k in keep), 'release': '2026-10-21.0'}

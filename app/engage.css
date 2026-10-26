@@ -72,6 +72,7 @@ body:has(#favs:not([hidden])) .float-card, body:has(#near:not([hidden])) .float-
 #tours .note { padding: 0 18px 16px; margin: 0; font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
 #tourCard { padding: 14px 16px 12px; display: grid; gap: 8px; }
 #tourCard h2 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 18px; line-height: 1.25; letter-spacing: .02em; padding-right: 24px; }
+#tourCard h2 .more { all: unset; cursor: default; }
 #tourCard .where { color: var(--ink-soft); font-size: 12.5px; }
 #tourCard p { margin: 0; line-height: 1.55; font-size: 13.5px; color: var(--ink); }
 #tourCard .dots { display: flex; gap: 4px; flex-wrap: wrap; }
