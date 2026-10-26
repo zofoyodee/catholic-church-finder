@@ -509,5 +509,16 @@
   "mSettings": "Nustatymai",
   "langNearTitle": "Mišios {lang} kalba netoliese",
   "langNearIntro": "Bažnyčios, kurių svetainėse nurodytos Mišios šia kalba, artimiausios pirmos. Bakstelėkite vieną, kad pamatytumėte daugiau.",
-  "langNoneNear": "Nėra arčiau nei {dist}. Tai artimiausios bažnyčios su Mišiomis {lang} kalba."
+  "langNoneNear": "Nėra arčiau nei {dist}. Tai artimiausios bažnyčios su Mišiomis {lang} kalba.",
+  "massLangLbl": "Mišių kalba",
+  "anyShort": "Bet kuri",
+  "massLangHint": "Mišių kalba rodo bažnyčias, kuriose aukojamos Mišios pasirinkta kalba.",
+  "siteLang": "Svetainės kalba",
+  "hint_listHere": "Visos bažnyčios matomoje žemėlapio dalyje",
+  "hint_season": "Liturginis laikas, šventė ir dienos bažnyčia",
+  "hint_tourBtn": "Garsios bažnyčios, stotelė po stotelės",
+  "hint_rand": "Nuskristi prie bažnyčios bet kur pasaulyje",
+  "hint_spin": "Leisti gaubliui lėtai suktis",
+  "hint_viewBtn": "Pakeisti žemėlapio išvaizdą",
+  "hint_favOpen": "Jūsų išsaugotos bažnyčios"
 }

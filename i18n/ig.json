@@ -498,5 +498,16 @@
   "mSettings": "Ntọala",
   "langNearTitle": "Mass n’asụsụ {lang} nso gị",
   "langNearIntro": "Ụka ndị webụsaịtị ha depụtara Mass n’asụsụ a, nke kacha nso na mbụ. Pịa otu maka nkọwa.",
-  "langNoneNear": "Ọ dịghị nke dị n’ime {dist}. Ndị a bụ ndị kacha nso nwere Mass n’asụsụ {lang}."
+  "langNoneNear": "Ọ dịghị nke dị n’ime {dist}. Ndị a bụ ndị kacha nso nwere Mass n’asụsụ {lang}.",
+  "massLangLbl": "Asụsụ Mass",
+  "anyShort": "Nke ọ bụla",
+  "massLangHint": "Asụsụ Mass na-egosi ụka nwere Mass n’asụsụ ị họọrọ.",
+  "siteLang": "Asụsụ saịtị",
+  "hint_listHere": "Ụka niile dị n’akụkụ maapụ ị na-ahụ",
+  "hint_season": "Oge, oriri na ụka nke ụbọchị a",
+  "hint_tourBtn": "Ụka a ma ama, otu otu",
+  "hint_rand": "Fega n’ụka ọ bụla n’ụwa",
+  "hint_spin": "Hapụ ụwa ka ọ na-agbagharị nwayọọ",
+  "hint_viewBtn": "Gbanwee otú maapụ si dị",
+  "hint_favOpen": "Ụka ị chekwara"
 }

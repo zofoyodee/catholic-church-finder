@@ -514,5 +514,16 @@
   "mSettings": "Nastavitve",
   "langNearTitle": "Maša v jeziku {lang} v bližini",
   "langNearIntro": "Cerkve, katerih spletne strani navajajo mašo v tem jeziku, najbližje najprej. Tapnite eno za podrobnosti.",
-  "langNoneNear": "Nobene v razdalji {dist}. To so najbližje z mašo v jeziku {lang}."
+  "langNoneNear": "Nobene v razdalji {dist}. To so najbližje z mašo v jeziku {lang}.",
+  "massLangLbl": "Jezik maše",
+  "anyShort": "Kateri koli",
+  "massLangHint": "Jezik maše prikaže cerkve z mašo v izbranem jeziku.",
+  "siteLang": "Jezik strani",
+  "hint_listHere": "Vse cerkve v delu zemljevida, ki ga vidite",
+  "hint_season": "Liturgični čas, praznik in cerkev dneva",
+  "hint_tourBtn": "Znamenite cerkve, postajo za postajo",
+  "hint_rand": "Poletite do cerkve kjer koli na svetu",
+  "hint_spin": "Naj se globus počasi vrti sam",
+  "hint_viewBtn": "Spremenite videz zemljevida",
+  "hint_favOpen": "Cerkve, ki ste jih shranili"
 }
