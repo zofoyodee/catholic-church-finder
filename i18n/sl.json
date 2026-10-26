@@ -525,5 +525,6 @@
   "hint_rand": "Poletite do cerkve kjer koli na svetu",
   "hint_spin": "Naj se globus počasi vrti sam",
   "hint_viewBtn": "Spremenite videz zemljevida",
-  "hint_favOpen": "Cerkve, ki ste jih shranili"
+  "hint_favOpen": "Cerkve, ki ste jih shranili",
+  "mineEmpty": "Tapnite srce pri cerkvi, da jo shranite sem."
 }

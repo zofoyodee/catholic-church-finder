@@ -517,5 +517,6 @@
   "hint_rand": "S’envoler vers une église n’importe où dans le monde",
   "hint_spin": "Laisser le globe tourner lentement",
   "hint_viewBtn": "Changer l’aspect de la carte",
-  "hint_favOpen": "Les églises que vous avez enregistrées"
+  "hint_favOpen": "Les églises que vous avez enregistrées",
+  "mineEmpty": "Touchez le cœur d’une église pour l’enregistrer ici."
 }

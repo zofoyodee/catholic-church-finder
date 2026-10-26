@@ -517,5 +517,6 @@
   "hint_rand": "Repüljön egy templomhoz bárhol a világon",
   "hint_spin": "Hagyja, hogy a földgömb lassan forogjon",
   "hint_viewBtn": "A térkép kinézetének módosítása",
-  "hint_favOpen": "Az elmentett templomai"
+  "hint_favOpen": "Az elmentett templomai",
+  "mineEmpty": "Koppintson egy templomnál a szívre, és itt megtalálja."
 }

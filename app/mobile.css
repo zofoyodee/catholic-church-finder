@@ -197,3 +197,5 @@ body.bible-mode .ms-acts .church-only { display: none; }
 .ms-find .for-jesus, .ms-find .for-bible, body.bible-mode .ms-find .for-churches { display: none; }
 body.jesus-mode .ms-find .for-jesus, body.bible-mode:not(.jesus-mode) .ms-find .for-bible { display: inline; }
 body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; }
+.ms-empty { margin: -4px 0 0; font-size: 12.5px; line-height: 1.4; color: var(--ink-faint); }
+.ms-empty[hidden] { display: none; }

@@ -517,5 +517,6 @@
   "hint_rand": "Vola verso una chiesa ovunque nel mondo",
   "hint_spin": "Lascia che il globo ruoti lentamente",
   "hint_viewBtn": "Cambia l’aspetto della mappa",
-  "hint_favOpen": "Le chiese che hai salvato"
+  "hint_favOpen": "Le chiese che hai salvato",
+  "mineEmpty": "Tocca il cuore di una chiesa per salvarla qui."
 }

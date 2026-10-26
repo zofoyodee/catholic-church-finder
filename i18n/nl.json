@@ -517,5 +517,6 @@
   "hint_rand": "Vlieg naar een kerk ergens op de wereld",
   "hint_spin": "Laat de wereldbol langzaam draaien",
   "hint_viewBtn": "Verander hoe de kaart eruitziet",
-  "hint_favOpen": "De kerken die u hebt bewaard"
+  "hint_favOpen": "De kerken die u hebt bewaard",
+  "mineEmpty": "Tik op het hartje bij een kerk om die hier te bewaren."
 }

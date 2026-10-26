@@ -501,5 +501,6 @@
   "hint_rand": "世界のどこかの教会へ飛ぶ",
   "hint_spin": "地球儀をゆっくり自動で回す",
   "hint_viewBtn": "地図の見た目を変える",
-  "hint_favOpen": "保存した教会"
+  "hint_favOpen": "保存した教会",
+  "mineEmpty": "教会のハートをタップすると、ここに保存されます。"
 }

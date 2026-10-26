@@ -10,7 +10,13 @@
 .wide header.top::before { inset: 0 0 -30px; }
 .wide .search { flex: 0 1 560px; margin: 0 auto; }
 .wide .brand { flex: 0 1 auto; }
-.wide header.top::after { content: ''; flex: 0 1 120px; }  /* keeps search near the middle */
+/* the search sits in the true middle, over the globe; a long name wraps instead of pushing it aside */
+@media (min-width: 1000px) {
+  :root.wide { --sw: min(520px, calc(100vw - 480px)); }
+  .wide .search { position: absolute; left: 50%; top: max(14px, env(safe-area-inset-top, 0px)); width: var(--sw); margin: 0; transform: translateX(-50%); }
+  .wide .brand { max-width: calc(50vw - var(--sw) / 2 - 36px); }
+}
+@media (max-width: 999px) { .wide header.top::after { content: ''; flex: 0 1 120px; } }
 
 /* the bottom bar: the three tabs and Menu, the same buttons as on phones */
 .wide .mnav {
@@ -34,14 +40,14 @@
 .wide .life { bottom: calc(40px + var(--dock) + 10px + env(safe-area-inset-bottom, 0px)); right: calc(max(16px, env(safe-area-inset-right, 0px)) + 54px); }
 .wide .float-card { bottom: calc(40px + var(--dock) + 10px + env(safe-area-inset-bottom, 0px)); }
 
-/* side buttons: Near Me (named), zoom, whole globe; everything else is in the menu */
+/* side buttons: Near Me, zoom, whole globe, all the same round button in one straight column (the names show
+   on hover); everything else is in the menu */
 .wide .ctrls > :not(#nearBtn):not(#zin):not(#zout):not(#home) { display: none !important; }
-.wide .ctrls { justify-items: end; }
-.wide .ctrls #nearBtn {
-  width: auto; border-radius: 21px; padding: 0 15px 0 12px; display: inline-flex; align-items: center; gap: 8px;
-  color: var(--ink); font-size: 13px; font-weight: 500; white-space: nowrap;
-}
-.wide .ctrls #nearBtn .lbl { display: inline; }
+.wide .ctrls { justify-items: center; gap: 10px; }
+.wide .ctrls button { width: 44px; height: 44px; padding: 0; border-radius: 50%; display: grid; place-items: center; }
+.wide .ctrls svg { width: 20px; height: 20px; }
+.wide .ctrls #nearBtn svg { stroke: var(--gold); }
+.wide .ctrls .lbl { display: none; }
 
 /* the menu: a panel above the bottom bar, in two columns; a click anywhere else closes it */
 .wide .msheet { position: fixed; inset: 0; z-index: 14; background: transparent; }
@@ -55,9 +61,8 @@
 .wide .ms-box > * { break-inside: avoid; margin: 0 0 14px; }
 .wide .ms-box > .ms-h { margin: 0 0 10px; }
 .wide .ms-box > .ms-h ~ .ms-h { padding-top: 14px; }
-/* Find a Church fills the left column; My Churches (or Explore, until something is saved) starts the right */
-.wide .ms-box > h3.ms-mine:not([hidden]), .wide .ms-box > h3.ms-mine[hidden] ~ h3[data-i18n="mExplore"] { break-before: column; border-top: 0; padding-top: 0; }
-.wide .ms-box > h3.ms-mine:not([hidden]) ~ h3[data-i18n="mExplore"] { break-before: auto; }
+/* Find a Church fills the left column; My Churches starts the right */
+.wide .ms-box > h3[data-i18n="mMine"] { break-before: column; border-top: 0; padding-top: 0; }
 .wide #msHead:empty, .wide #msFoot:empty { display: none; }
 .wide .ms-acts button { min-height: 0; }
 .wide .ms-x { z-index: 1; }

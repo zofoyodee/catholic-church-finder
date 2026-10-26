@@ -684,9 +684,9 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   .card .hero img.photo, .card .hero .vigil { transition: none; }
 }
 </style>
-<link rel="stylesheet" href="app/engage.css">
-<link rel="stylesheet" href="app/mobile.css">
-<link rel="stylesheet" href="app/desktop.css">
+<link rel="stylesheet" href="app/engage.css?v=82">
+<link rel="stylesheet" href="app/mobile.css?v=82">
+<link rel="stylesheet" href="app/desktop.css?v=82">
 </head>
 <body>
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
@@ -750,7 +750,8 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
     <div class="ms-acts">
       <button type="button" data-for="listHere" class="church-only"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span class="ms-t"><span data-i18n="listHere">List Churches on Screen</span><small class="ms-hint" data-i18n="hint_listHere">Every church in the part of the map you see</small></span></button>
     </div>
-    <h3 class="ms-h ms-mine" data-i18n="mMine">My Churches</h3>
+    <h3 class="ms-h" data-i18n="mMine">My Churches</h3>
+    <p class="ms-empty" data-i18n="mineEmpty">Tap the heart on a church to save it here.</p>
     <div class="ms-acts ms-mine">
       <button type="button" data-for="favOpen"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg><span class="ms-t"><span data-i18n="favorites">Favorites</span><small class="ms-hint" data-i18n="hint_favOpen">The churches you have saved</small></span></button>
     </div>
@@ -863,7 +864,7 @@ function detectLang() {
 const EN = {
   massLangLbl: 'Mass Language', anyShort: 'Any', massLangHint: 'Mass Language shows churches with Mass in the language you pick.', siteLang: 'Site Language',
   hint_listHere: 'Every church in the part of the map you see', hint_season: 'The season, feast and church of the day', hint_tourBtn: 'Famous churches, one stop at a time',
-  hint_rand: 'Fly to a church anywhere in the world', hint_spin: 'Let the globe turn slowly by itself', hint_viewBtn: 'Change how the map looks', hint_favOpen: 'The churches you have saved',
+  hint_rand: 'Fly to a church anywhere in the world', hint_spin: 'Let the globe turn slowly by itself', hint_viewBtn: 'Change how the map looks', hint_favOpen: 'The churches you have saved', mineEmpty: 'Tap the heart on a church to save it here.',
   mFind: 'Find a Church', mMine: 'My Churches', mExplore: 'Explore', mSettings: 'Settings',
   startOver: 'Start over', listHere: 'List Churches on Screen', churchesIn: 'Churches in {place}', matchTitle: 'Churches Matching “{q}”', matchTag: 'Showing {n} churches matching “{q}”', allIn: 'All {n} Churches in {place}', allMatching: 'All {n} Churches Matching “{q}”', churchesInView: 'Churches in This View', areaIntro: 'Nearest to you first. Tap one for details.', areaIntroCenter: 'Nearest to the middle first. Tap one for details.', areaMore: 'Showing the {k} nearest of {n}. Zoom in to see the rest.', areaNone: 'No churches are mapped here yet.', areaTag: 'Showing {n} churches in {place}', areaTagView: 'Showing {n} churches in this view', areaTip: 'Click to list this city\'s churches', youAreHere: 'You Are Here',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
@@ -2809,7 +2810,15 @@ function spinStep() {
 map.on('moveend', () => spinStep());
 for (const ev of ['mousedown', 'touchstart', 'wheel', 'dragstart']) map.on(ev, () => { lastInteract = performance.now(); });
 setInterval(spinStep, 1200);
-$('spin').addEventListener('click', () => { state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning); if (state.spinning) { lastInteract = 0; spinStep(); } else map.stop(); });
+$('spin').addEventListener('click', () => {
+  state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning);
+  if (!state.spinning) { map.stop(); return; }
+  lastInteract = 0;
+  // the globe only turns when it is seen whole: close the card and step back out first
+  if (!$('card').hidden) closeCard();
+  if (map.getZoom() >= 3.2) map.flyTo({ zoom: phoneNow() ? 0.9 : 1.6, pitch: 0, bearing: 0, padding: viewPad(), duration: reduceMotion ? 0 : 1600 });
+  else spinStep();
+});
 $('zin').addEventListener('click', () => { lastInteract = performance.now(); map.zoomIn({ duration: 400 }); });
 $('zout').addEventListener('click', () => { lastInteract = performance.now(); map.zoomOut({ duration: 400 }); });
 $('home').addEventListener('click', () => { closeCard(); if (state.mode === 'bible') { bibleOverview(); return; } if (state.mode === 'jesus') { lifePause(); lifeOverview(); return; } map.flyTo({ center: [map.getCenter().lng, 20], zoom: phoneNow() ? 0.9 : 1.4, pitch: 0, bearing: 0, padding: viewPad(), duration: 1800 }); });
@@ -4274,8 +4283,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="app/engage.js"></script>
-<script src="app/mobile.js"></script>
+<script src="app/engage.js?v=82"></script>
+<script src="app/mobile.js?v=82"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script data-goatcounter="https://zofo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
