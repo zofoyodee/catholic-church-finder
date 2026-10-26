@@ -323,6 +323,13 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .favs li button.rm { width: 32px; height: 32px; margin-right: 4px; border-radius: 50%; border: 0; background: none; cursor: pointer; display: grid; place-items: center; color: var(--ink-faint); }
 .favs li button.rm:hover { color: var(--ink); background: rgba(255,255,255,.06); }
 .favs li button.rm svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; }
+.place-form { display: flex; gap: 8px; padding: 2px 18px 8px; margin: 0; }
+.place-form input { flex: 1; min-width: 0; height: 38px; border-radius: 19px; border: 1px solid var(--line); background: rgba(255,255,255,.04); padding: 0 14px; font-size: 16px; color: var(--ink); outline: none; }
+.place-form input:focus { border-color: color-mix(in srgb, var(--gold) 60%, transparent); }
+.place-form .btn { height: 38px; }
+.favs details.exact summary { cursor: pointer; color: var(--gold-soft); }
+.favs details.exact p { margin: 8px 0; }
+.favs li.place-note { display: block; }
 .favs .note { padding: 6px 18px 8px; color: var(--ink-soft); font-size: 12.5px; line-height: 1.45; margin: 0; }
 .favs .loc .when { color: var(--gold-soft); font-weight: 600; }
 .favs .empty { padding: 4px 18px 18px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; margin: 0; }
@@ -867,7 +874,8 @@ const EN = {
   photos_one: '{n} photo', photos_other: '{n} photos', openGallery_one: 'Open the photo gallery, {n} photo', openGallery_other: 'Open the photo gallery, {n} photos',
   photosOfChurch: 'Photos of This Church', openPhoto: 'Open photo {k} of {n}',
   noGeo: 'This browser can\'t share your location.', finding: 'Finding where you are…',
-  geoOff: 'Location is turned off for this site.', useMyLoc: 'Use My Location', nearestFirstTip: 'to list the nearest first',
+  geoOff: 'Location is turned off for this site.', placeLead: 'Type your town or postal code instead:', placeAsk: 'Town or postal code', placeGo: 'Go',
+  placeNotFound: 'Couldn’t find “{q}”. Try the town’s name.', placeUsing: 'Near {place}.', exactLoc: 'Or Turn On Exact Location', useMyLoc: 'Use My Location', nearestFirstTip: 'to list the nearest first',
   locStepsIos: 'To turn it on: open the Settings app › Privacy & Security › Location Services, make sure it is on, then tap Safari Websites › While Using the App. Come back, reload this page and tap Use My Location. If Safari still says no, tap the page menu at the left of the address bar › Website Settings › Location › Allow.',
   locStepsAndroid: 'To turn it on, tap the icon at the left of the address bar, then Permissions › Location › Allow.',
   locStepsDesktop: 'To turn it on, click the icon at the left of the address bar and allow Location.',
@@ -1388,6 +1396,7 @@ function whenText(n) {
   return tr('whenDay', { day: day.replace(/^./, c => c.toUpperCase()), time });
 }
 async function hereOrCenter() {
+  if (myPlace) { mn.guessed = false; return (mn.at = here = myPlace.at); }
   if (mn.at && !mn.guessed) return mn.at;
   try {
     const pos = await new Promise((res, rej) => navigator.geolocation ? navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 12000, maximumAge: 600000 }) : rej(new Error('geo')));
@@ -1405,12 +1414,58 @@ function locSteps() {
   return tr(ios ? 'locStepsIos' : /Android/.test(ua) ? 'locStepsAndroid' : 'locStepsDesktop');
 }
 const locBtn = (where) => `<button class="btn loc-btn" data-loc="${where}">${icon.map}<span>${esc(tr('useMyLoc'))}</span></button>`;
-const locHelp = (where, lead) => `<p class="note">${esc(lead)}${geoDenied ? ' ' + esc(locSteps()) : ''}</p><p class="note">${locBtn(where)}</p>`;
+// Without the phone's location, a town or postal code does the job: the steps to switch location on
+// stay one tap away for anyone who wants it exact
+const placeForm = (where) => `<form class="place-form" data-where="${where}"><input type="text" name="place" autocomplete="postal-code" enterkeyhint="go" placeholder="${esc(tr('placeAsk'))}" aria-label="${esc(tr('placeAsk'))}"><button class="btn primary">${esc(tr('placeGo'))}</button></form><p class="note place-err" hidden></p>`;
+const locHelp = (where, lead) => `<p class="note">${esc(lead)} ${esc(tr('placeLead'))}</p>${placeForm(where)}`
+  + (geoDenied ? `<details class="note exact"><summary>${esc(tr('exactLoc'))}</summary><p>${esc(locSteps())}</p>${locBtn(where)}</details>` : `<p class="note">${locBtn(where)}</p>`);
 document.addEventListener('click', async (e) => {
   const b = e.target.closest('button[data-loc]'); if (!b) return;
   e.preventDefault(); e.stopPropagation();
+  forgetPlace();  // asking for the real location replaces a typed town
   if (b.dataset.loc === 'search') { searchAskedWhere = true; await hereOrCenter(); if (qEl.value.trim()) runSearch(); qEl.focus(); return; }
+  if (b.dataset.loc === 'set') { findNear(); return; }
   if (mn.kind === 0 || mn.kind === 1) massNear(mn.kind); else findNear();
+});
+
+/* ---------- a town or postal code instead of the phone's location ---------- */
+const PLACE_KEY = 'ccf-place';
+let myPlace = null;  // { at: [lon, lat], name }
+try { const p = JSON.parse(localStorage.getItem(PLACE_KEY)); if (p && Array.isArray(p.at)) myPlace = p; } catch (e) {}
+function forgetPlace() { myPlace = null; try { localStorage.removeItem(PLACE_KEY); } catch (e) {} }
+// The site's own towns first (no network), then OpenStreetMap's Nominatim, which knows towns and postal
+// codes worldwide; it is asked once per entry, in the page's language, as its usage policy asks.
+async function findPlace(q) {
+  const f = fold(q.trim());
+  if (!/\d/.test(f)) {
+    try {
+      await loadSearch();
+      // the middle of the biggest group of churches in a town of that name (there is a Denver in several states)
+      const { lines } = searchIdx, pts = []; let name = '';
+      for (let i = 0; i < lines.length; i++) { const town = lines[i].split('\t')[1]; if (town && fold(town) === f) { pts.push([state.lon[i] / 1e6, state.lat[i] / 1e6]); name = town; } }
+      const c = pts.length ? mainCluster(pts) : [];
+      if (c.length) return { at: [c.reduce((t, p) => t + p[0], 0) / c.length, c.reduce((t, p) => t + p[1], 0) / c.length], name };
+    } catch (e) {}
+  }
+  try {
+    const r = await fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&accept-language=' + encodeURIComponent(i18n.locale) + '&q=' + encodeURIComponent(q.trim()));
+    const j = r.ok ? await r.json() : [];
+    if (j[0]) return { at: [+j[0].lon, +j[0].lat], name: j[0].name || j[0].display_name.split(',')[0] };
+  } catch (e) {}
+  return null;
+}
+document.addEventListener('submit', async (e) => {
+  const form = e.target.closest('form.place-form'); if (!form) return;
+  e.preventDefault();
+  const q = form.place.value.trim(), err = form.nextElementSibling, go = form.querySelector('button'); if (!q) return;
+  go.disabled = true; err.hidden = true;
+  const p = await findPlace(q);
+  go.disabled = false;
+  if (!p) { err.textContent = tr('placeNotFound', { q }); err.hidden = false; return; }
+  myPlace = p; try { localStorage.setItem(PLACE_KEY, JSON.stringify(p)); } catch (e2) {}
+  track('typed-town');
+  mn.at = here = p.at; mn.guessed = false;
+  if (form.dataset.where === 'near' && (mn.kind === 0 || mn.kind === 1)) massNear(mn.kind); else findNear();
 });
 // kind 0 = Mass near me, 1 = Confession near me (within the chosen distance); 2 = every church with Mass in the chosen language, worldwide
 async function massNear(kind) {
@@ -2597,10 +2652,10 @@ async function findNear() {
   if (mn.kind >= 0) { endMassNear(); applyMassFilter(); }
   showNear(true);
   const list = $('nearList'); $('nearN').textContent = ''; nearRows = null;
-  if (!navigator.geolocation) { list.innerHTML = `<p class="empty">${esc(tr('noGeo'))}</p>`; return; }
-  list.innerHTML = LOADER(tr('finding'), 'big');
   let pos;
-  try { pos = await new Promise((res, rej) => navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 })); geoDenied = false; }
+  if (myPlace) pos = { coords: { latitude: myPlace.at[1], longitude: myPlace.at[0] } };  // a town or postal code you typed
+  else if (!navigator.geolocation) { list.innerHTML = locHelp('near', tr('noGeo')); return; }
+  else try { list.innerHTML = LOADER(tr('finding'), 'big'); pos = await new Promise((res, rej) => navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 })); geoDenied = false; }
   catch (e) {
     geoDenied = !!e && e.code === 1;
     list.innerHTML = locHelp('near', tr(geoDenied ? 'geoOff' : 'geoFail'));
@@ -2627,7 +2682,7 @@ async function renderNear() {
   let recs = [];
   try { recs = await Promise.all(near.map(r => shardFor(r.i))); } catch (e) {}
   if (near !== nearRows) return;
-  list.innerHTML = near.map((r, k) => {
+  list.innerHTML = (myPlace ? `<li class="place-note"><p class="note">${esc(tr('placeUsing', { place: myPlace.name }))} <button class="linkish" data-loc="set">${esc(tr('useMyLoc'))}</button></p></li>` : '') + near.map((r, k) => {
     const rec = recs[k] || [], t = state.typ[r.i] & 7;
     const place = [rec[1], rec[2]].filter(Boolean).join(', ');
     return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc(place)}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
@@ -3145,7 +3200,7 @@ async function runSearch() {
   const inTown = town ? hits.filter(i => lines[i].split('\t')[1] === town[0]) : [];
   const listIcon = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2;stroke-linecap:round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg>';
   searchLists = { town: town ? { name: town[0], ids: inTown } : null, all: { q: qEl.value.trim(), ids: hits } };
-  resEl.innerHTML = (here || !navigator.geolocation ? '' : `<button role="option" class="all" data-loc="search">${icon.map.replace('<svg', '<svg style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2"')}<div><span class="nm">${esc(tr('useMyLoc'))}</span><span class="loc">${esc(geoDenied ? locSteps() : tr('nearestFirstTip'))}</span></div></button>`)
+  resEl.innerHTML = (here || !navigator.geolocation ? '' : `<button role="option" class="all" data-loc="${geoDenied ? 'set' : 'search'}">${icon.map.replace('<svg', '<svg style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2"')}<div><span class="nm">${esc(tr(geoDenied ? 'placeAsk' : 'useMyLoc'))}</span><span class="loc">${esc(tr('nearestFirstTip'))}</span></div></button>`)
     + (town ? `<button role="option" class="all" data-all="town" id="rt">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inTown.length), place: town[0] }))}</span></div></button>` : '')
     + (hits.length > 1 && hits.length !== inTown.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
     + top.map((i, k) => {
