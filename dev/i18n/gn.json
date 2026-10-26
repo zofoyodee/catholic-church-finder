@@ -498,5 +498,16 @@
   "mSettings": "Ñemboheko",
   "langNearTitle": "Misa {lang}-pe ndeypýpe",
   "langNearIntro": "Tupao ohechaukáva Misa ko ñe’ẽme iwebsite-pe, hi’aguĩvéva raẽ. Ejopy peteĩme reikuaa hag̃ua hesegua.",
-  "langNoneNear": "Ndaipóri {dist} ryepýpe. Ko’ãva hi’aguĩvéva oguerekóva Misa {lang}-pe."
+  "langNoneNear": "Ndaipóri {dist} ryepýpe. Ko’ãva hi’aguĩvéva oguerekóva Misa {lang}-pe.",
+  "massLangLbl": "Misa ñe’ẽ",
+  "anyShort": "Oimeraẽ",
+  "massLangHint": "Misa ñe’ẽ ohechauka tupao oguerekóva Misa ñe’ẽ eiporavóvape.",
+  "siteLang": "Ko kuatiarogue ñe’ẽ",
+  "hint_listHere": "Opaite tupao mapa vore rehecháva",
+  "hint_season": "Ára ñemboguata, arete ha tupao ko árape",
+  "hint_tourBtn": "Tupao herakuãva, peteĩteĩ",
+  "hint_rand": "Eveve peteĩ tupaópe oimeraẽ yvy rehe",
+  "hint_spin": "Eheja yvy apu’a ojere mbeguekatu",
+  "hint_viewBtn": "Emoambue mapa ojehechaháicha",
+  "hint_favOpen": "Tupao ereñongatuva’ekue"
 }

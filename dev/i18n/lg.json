@@ -498,5 +498,16 @@
   "mSettings": "Ebiteekateekebwa",
   "langNearTitle": "Mmisa mu {lang} Okumpi Naawe",
   "langNearIntro": "Ekkanisa ezirina Mmisa mu lulimi luno ku mukutu gwazo, esinga okumpi esooka. Nyiga emu olabe ebisingawo.",
-  "langNoneNear": "Tewali mu {dist}. Zino ze zisinga okumpi ezirina Mmisa mu {lang}."
+  "langNoneNear": "Tewali mu {dist}. Zino ze zisinga okumpi ezirina Mmisa mu {lang}.",
+  "massLangLbl": "Olulimi lwa Mmisa",
+  "anyShort": "Lwonna",
+  "massLangHint": "Olulimi lwa Mmisa lulaga ekkanisa ezirina Mmisa mu lulimi lw’olonze.",
+  "siteLang": "Olulimi lw’omukutu",
+  "hint_listHere": "Ekkanisa zonna mu kitundu kya maapu ky’olaba",
+  "hint_season": "Ekiseera, embaga n’ekkanisa y’olwaleero",
+  "hint_tourBtn": "Ekkanisa ezimanyiddwa, emu ku emu",
+  "hint_rand": "Buuka ogende ku kkanisa wonna mu nsi",
+  "hint_spin": "Leka ensi yeekyuse mpola",
+  "hint_viewBtn": "Kyusa endabika ya maapu",
+  "hint_favOpen": "Ekkanisa z’otereka"
 }

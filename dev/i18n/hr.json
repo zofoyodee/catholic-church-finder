@@ -522,5 +522,16 @@
   "mSettings": "Postavke",
   "langNearTitle": "Misa na jeziku {lang} u blizini",
   "langNearIntro": "Crkve čije mrežne stranice navode misu na ovom jeziku, najbliže prvo. Dodirnite jednu za pojedinosti.",
-  "langNoneNear": "Nijedna unutar {dist}. Ovo su najbliže s misom na jeziku {lang}."
+  "langNoneNear": "Nijedna unutar {dist}. Ovo su najbliže s misom na jeziku {lang}.",
+  "massLangLbl": "Jezik mise",
+  "anyShort": "Bilo koji",
+  "massLangHint": "Jezik mise prikazuje crkve s misom na jeziku koji odaberete.",
+  "siteLang": "Jezik stranice",
+  "hint_listHere": "Sve crkve u dijelu karte koji vidite",
+  "hint_season": "Liturgijsko vrijeme, blagdan i crkva dana",
+  "hint_tourBtn": "Poznate crkve, postaju po postaju",
+  "hint_rand": "Odletite do crkve bilo gdje na svijetu",
+  "hint_spin": "Neka se globus polako sam okreće",
+  "hint_viewBtn": "Promijenite izgled karte",
+  "hint_favOpen": "Crkve koje ste spremili"
 }

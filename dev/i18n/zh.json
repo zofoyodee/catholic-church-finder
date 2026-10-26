@@ -488,5 +488,16 @@
   "mSettings": "设置",
   "langNearTitle": "您附近的{lang}弥撒",
   "langNearIntro": "网站上列有该语言弥撒的教堂，由近到远。点按查看详情。",
-  "langNoneNear": "{dist}内没有。以下是最近的有{lang}弥撒的教堂。"
+  "langNoneNear": "{dist}内没有。以下是最近的有{lang}弥撒的教堂。",
+  "massLangLbl": "弥撒语言",
+  "anyShort": "任意",
+  "massLangHint": "“弥撒语言”显示用所选语言举行弥撒的教堂。",
+  "siteLang": "网站语言",
+  "hint_listHere": "地图上当前可见区域的所有教堂",
+  "hint_season": "今日的礼仪时期、节日和教堂",
+  "hint_tourBtn": "著名教堂，一站一站地看",
+  "hint_rand": "飞往世界任何地方的一座教堂",
+  "hint_spin": "让地球仪慢慢自己转动",
+  "hint_viewBtn": "更改地图外观",
+  "hint_favOpen": "您保存的教堂"
 }

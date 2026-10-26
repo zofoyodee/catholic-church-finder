@@ -498,5 +498,16 @@
   "mSettings": "Mga Setting",
   "langNearTitle": "Misa sa {lang} Duol Nimo",
   "langNearIntro": "Mga simbahan nga ang website naglista og Misa niini nga pinulongan, ang pinakaduol una. I-tap ang usa para sa detalye.",
-  "langNoneNear": "Wala sulod sa {dist}. Kini ang pinakaduol nga adunay Misa sa {lang}."
+  "langNoneNear": "Wala sulod sa {dist}. Kini ang pinakaduol nga adunay Misa sa {lang}.",
+  "massLangLbl": "Pinulongan sa Misa",
+  "anyShort": "Bisan unsa",
+  "massLangHint": "Ipakita sa Pinulongan sa Misa ang mga simbahan nga adunay Misa sa pinulongan nga imong gipili.",
+  "siteLang": "Pinulongan sa Site",
+  "hint_listHere": "Tanang simbahan sa bahin sa mapa nga imong nakita",
+  "hint_season": "Ang panahon, kapistahan ug simbahan sa adlaw",
+  "hint_tourBtn": "Bantogang mga simbahan, usa-usa",
+  "hint_rand": "Lupad ngadto sa simbahan bisan asa sa kalibutan",
+  "hint_spin": "Pasagdi nga hinay nga motuyok ang globo",
+  "hint_viewBtn": "Usba ang hitsura sa mapa",
+  "hint_favOpen": "Ang mga simbahan nga imong gitipigan"
 }

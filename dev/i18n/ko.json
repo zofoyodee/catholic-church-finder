@@ -488,5 +488,16 @@
   "mSettings": "설정",
   "langNearTitle": "가까운 {lang} 미사",
   "langNearIntro": "웹사이트에 이 언어 미사가 안내된 성당을 가까운 순으로 보여 줍니다. 자세히 보려면 누르세요.",
-  "langNoneNear": "{dist} 이내에는 없습니다. {lang} 미사가 있는 가장 가까운 성당입니다."
+  "langNoneNear": "{dist} 이내에는 없습니다. {lang} 미사가 있는 가장 가까운 성당입니다.",
+  "massLangLbl": "미사 언어",
+  "anyShort": "전체",
+  "massLangHint": "미사 언어는 고른 언어로 미사가 있는 성당을 보여 줍니다.",
+  "siteLang": "사이트 언어",
+  "hint_listHere": "지금 보이는 지도 영역의 모든 성당",
+  "hint_season": "오늘의 전례 시기, 축일, 성당",
+  "hint_tourBtn": "유명한 성당을 하나씩 둘러보기",
+  "hint_rand": "세계 어딘가의 성당으로 날아가기",
+  "hint_spin": "지구본이 천천히 저절로 돌게 하기",
+  "hint_viewBtn": "지도 모양 바꾸기",
+  "hint_favOpen": "저장한 성당"
 }

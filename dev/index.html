@@ -689,7 +689,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/mobile.css">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 19:01 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 19:12 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -709,7 +709,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
     <button id="globeBtn" class="globe-btn" type="button" title="Whole Globe" aria-label="Whole Globe" data-i18n-attr="title:wholeGlobe;aria-label:wholeGlobe"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
-  <label class="langpick" title="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><select id="langSel" aria-label="Language"></select></label>
+  <label class="langpick" title="Site Language" data-i18n-attr="title:siteLang"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><span class="lp-name" data-i18n="siteLang">Site Language</span><select id="langSel" aria-label="Site Language" data-i18n-attr="aria-label:siteLang"></select></label>
   <div class="chips" id="chips" role="group" aria-label="Show church types" data-i18n-attr="aria-label:chipsLabel"></div>
   <div class="chips" id="massChips" role="group" aria-label="Filter by Mass times" data-i18n-attr="aria-label:massChipsLabel" hidden></div>
 </header>
@@ -749,22 +749,22 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
     <div id="msMass" class="ms-sect"></div>
     <div id="msShow" class="ms-sect"></div>
     <div class="ms-acts">
-      <button type="button" data-for="listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span data-i18n="listHere">List Churches on Screen</span></button>
+      <button type="button" data-for="listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span class="ms-t"><span data-i18n="listHere">List Churches on Screen</span><small class="ms-hint" data-i18n="hint_listHere">Every church in the part of the map you see</small></span></button>
     </div>
     <h3 class="ms-h ms-mine" data-i18n="mMine">My Churches</h3>
     <div class="ms-acts ms-mine">
-      <button type="button" data-for="favOpen"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg><span data-i18n="favorites">Favorites</span></button>
+      <button type="button" data-for="favOpen"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg><span class="ms-t"><span data-i18n="favorites">Favorites</span><small class="ms-hint" data-i18n="hint_favOpen">The churches you have saved</small></span></button>
     </div>
     <h3 class="ms-h" data-i18n="mExplore">Explore</h3>
     <div class="ms-acts">
-      <button type="button" data-for="season"><span class="ic" aria-hidden="true">✠</span><span data-i18n="todayLabel">Today in the Church</span></button>
-      <button type="button" data-for="tourBtn"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 17.2c4-1 2.5-5.2 6-6.4 1.8-.6 3-1.6 3.4-2.8"/></svg><span data-i18n="tours">Guided Tours</span></button>
-      <button type="button" data-for="rand"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg><span data-i18n="random">Visit a Random Church</span></button>
-      <button type="button" data-for="spin"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg><span data-i18n="spin">Spin the Globe</span></button>
+      <button type="button" data-for="season"><span class="ic" aria-hidden="true">✠</span><span class="ms-t"><span data-i18n="todayLabel">Today in the Church</span><small class="ms-hint" data-i18n="hint_season">The season, feast and church of the day</small></span></button>
+      <button type="button" data-for="tourBtn"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 17.2c4-1 2.5-5.2 6-6.4 1.8-.6 3-1.6 3.4-2.8"/></svg><span class="ms-t"><span data-i18n="tours">Guided Tours</span><small class="ms-hint" data-i18n="hint_tourBtn">Famous churches, one stop at a time</small></span></button>
+      <button type="button" data-for="rand"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg><span class="ms-t"><span data-i18n="random">Visit a Random Church</span><small class="ms-hint" data-i18n="hint_rand">Fly to a church anywhere in the world</small></span></button>
+      <button type="button" data-for="spin"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg><span class="ms-t"><span data-i18n="spin">Spin the Globe</span><small class="ms-hint" data-i18n="hint_spin">Let the globe turn slowly by itself</small></span></button>
     </div>
     <h3 class="ms-h" data-i18n="mSettings">Settings</h3>
     <div class="ms-acts">
-      <button type="button" data-for="viewBtn"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg><span data-i18n="globeView">Globe View</span></button>
+      <button type="button" data-for="viewBtn"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg><span class="ms-t"><span data-i18n="globeView">Globe View</span><small class="ms-hint" data-i18n="hint_viewBtn">Change how the map looks</small></span></button>
     </div>
     <div class="ms-picks" id="msPicks"></div>
     <div id="msFoot"></div>
@@ -862,6 +862,9 @@ function detectLang() {
 // English is built in; every other language is i18n/<code>.json with the same keys, missing keys fall back to English.
 // Plural forms are key_one, key_few, key_many, key_other (Intl.PluralRules categories) and are picked by vars.n.
 const EN = {
+  massLangLbl: 'Mass Language', anyShort: 'Any', massLangHint: 'Mass Language shows churches with Mass in the language you pick.', siteLang: 'Site Language',
+  hint_listHere: 'Every church in the part of the map you see', hint_season: 'The season, feast and church of the day', hint_tourBtn: 'Famous churches, one stop at a time',
+  hint_rand: 'Fly to a church anywhere in the world', hint_spin: 'Let the globe turn slowly by itself', hint_viewBtn: 'Change how the map looks', hint_favOpen: 'The churches you have saved',
   mFind: 'Find a Church', mMine: 'My Churches', mExplore: 'Explore', mSettings: 'Settings',
   startOver: 'Start over', listHere: 'List Churches on Screen', churchesIn: 'Churches in {place}', matchTitle: 'Churches Matching “{q}”', matchTag: 'Showing {n} churches matching “{q}”', allIn: 'All {n} Churches in {place}', allMatching: 'All {n} Churches Matching “{q}”', churchesInView: 'Churches in This View', areaIntro: 'Nearest to you first. Tap one for details.', areaIntroCenter: 'Nearest to the middle first. Tap one for details.', areaMore: 'Showing the {k} nearest of {n}. Zoom in to see the rest.', areaNone: 'No churches are mapped here yet.', areaTag: 'Showing {n} churches in {place}', areaTagView: 'Showing {n} churches in this view', areaTip: 'Click to list this city\'s churches', youAreHere: 'You Are Here',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
@@ -1402,9 +1405,9 @@ function renderMassChips() {
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
     <button class="chip" data-m="massNear" aria-pressed="${mn.kind === 0}">${pin}${esc(tr('churchNear'))}</button>
     <label class="chip lang dist" title="${esc(tr('nearDistLabel'))}"><select id="nearDist" aria-label="${esc(tr('nearDistLabel'))}">${NEAR_MILES.map(mi => `<option value="${mi}"${mi === nearMiles ? ' selected' : ''}>${esc(nearDist(mi))}</option>`).join('')}</select></label>
-    ${opts ? `<label class="chip lang" title="${esc(tr('massLangTip2'))}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg><span>${esc(tr('massIn'))}</span><select id="massLang" aria-label="${esc(tr('massLangAria'))}"><option value="">${esc(tr('anyLang'))}</option>${opts}</select></label>` : ''}
+    ${opts ? `<label class="chip lang" title="${esc(tr('massLangTip2'))}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg><span>${esc(tr('massLangLbl'))}:</span><select id="massLang" aria-label="${esc(tr('massLangAria'))}"><option value="">${esc(tr('anyShort'))}</option>${opts}</select></label>` : ''}
     ${mf.mode || mf.lang || mn.kind >= 0 ? `<button class="chip" data-m="clear">${esc(tr('clear'))}</button>` : ''}
-    <small class="mass-note" title="${esc(tr('massNoteTip'))}">${esc(tr('timesFound', { n: Object.keys(mf.data.c).length }))}</small>`;
+    <small class="mass-note" title="${esc(tr('massNoteTip') + ' ' + tr('timesFound', { n: Object.keys(mf.data.c).length }))}">${esc(tr('massLangHint'))}</small>`;
   $('massChips').classList.toggle('filtered', !!(mf.mode || mf.lang || mn.kind >= 0));
 }
 /* ---------- Mass near me / Confession near me: nearby churches, soonest first ---------- */
@@ -3483,6 +3486,7 @@ $('langSel').addEventListener('change', async (e) => {
   await useLang(code);
   if (!state.meta) return;
   searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
+  if (life.data) { localizeLife(life.data); map.getSource('j-places').setData(lifeGeo().places); delete $('cardBody').dataset.jplace; }  // forget the open place so its heading is redrawn too
   if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } if (!$('card').hidden && bible.sel) { if (bible.sel.land) openBibleLand(bible.sel.land, { fly: false }); else openBiblePlace(bible.sel.id, { fly: false }); } }
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && $('cardBody').dataset.rosary) openRosary(); else if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
@@ -3666,7 +3670,9 @@ const BOOKS = ['Song of Songs', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1
   'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', 'Titus', 'Philemon', 'Hebrews', 'James', 'Jude', 'Revelation'];
 const REF = new RegExp(`\\b(${BOOKS.join('|')}) (\\d+)((?::[\\d,\\-]+)?(?: ?- ?\\d+(?::\\d+)?)?)`, 'g');
 const bookSlug = (b) => b === 'Psalm' ? 'psalms' : b.toLowerCase().replace(/\s+/g, '');
-const withRefs = (text) => esc(text).replace(REF, (m, book, ch) => `<a class="ref" href="https://bible.usccb.org/bible/${bookSlug(book)}/${ch}" target="_blank" rel="noopener" title="${esc(tr('bReadRef', { ref: book + ' ' + ch }))}">${m}</a>`);
+// translated text keeps the English book name so the reference is found; the link shows the book in the reader's language
+const bookName = (b) => td('book:' + b).replace(/^book:/, '');
+const withRefs = (text) => esc(text).replace(REF, (m, book, ch) => `<a class="ref" href="https://bible.usccb.org/bible/${bookSlug(book)}/${ch}" target="_blank" rel="noopener" title="${esc(tr('bReadRef', { ref: bookName(book) + ' ' + ch }))}">${bookName(book)}${m.slice(book.length)}</a>`);
 
 /* card hero: a drawn desert dusk with the ancient name, then the live photo if one turns up */
 function bibleScene(title, sub) {
@@ -3820,8 +3826,17 @@ const ROSARY_ICON = '<svg class="rosary" viewBox="0 0 24 24" aria-hidden="true">
 const roColor = (e) => life.data.roColor[e.ro[0]];
 const roLabel = (e) => tr('jMysteryOf', { set: tr('jRo_' + e.ro[0]), k: fmt(e.ro[1]) });
 const roTag = (e) => e.ro ? `<span class="ro-tag" style="--rc:${roColor(e)}" title="${esc(tr('jRosary'))}: ${esc(e.ro[2])}">${ROSARY_ICON}${esc(roLabel(e))}</span>` : '';
+// the moments, places and Rosary are written in English; td() puts them in the reader's language, keeping the English to switch back
+function localizeLife(d) {
+  const keep = (x, keys) => { x.en = x.en || Object.fromEntries(keys.map(k => [k, x[k]])); for (const k of keys) if (x.en[k]) x[k] = td(x.en[k]); };
+  d.places.forEach(p => keep(p, ['n', 'm', 's']));
+  d.events.forEach(e => { keep(e, ['t', 's', 'u']); if (e.ro) { e.roEn = e.roEn || e.ro.slice(); e.ro = e.roEn.map((v, i) => i >= 2 ? td(v) : v); } });
+  d.rosary.sets.forEach(r => keep(r, ['days']));
+  d.rosary.aboutEn = d.rosary.aboutEn || d.rosary.about.slice(); d.rosary.about = d.rosary.aboutEn.map(td);
+}
 function loadLife() {
   if (!life.loading) life.loading = getJSON('data/jesus.json?v=rosary').then(d => {
+    localizeLife(d);
     d.byId = Object.fromEntries(d.places.map(p => [p.id, p]));
     d.color = Object.fromEntries(d.eras.map(e => [e.k, e.color]));
     d.events.forEach((e, i) => { e.i = i; });
@@ -3841,6 +3856,8 @@ const lifeColor = (e) => life.era === 'rosary' ? roColor(e) : life.data.color[e.
 // close enough to tell the towns apart, far enough to keep the neighbouring moments in view
 const lifeZoom = (p) => Math.min(p.z - 2, 9.5);
 const lifeLL = (p) => [p.ll[1], p.ll[0]];
+// the globe can't draw every script: a name it would lose letters from is shown in English
+const lifeLabel = (p) => { const n = drawable(p.n); return n.length >= [...p.n].length * 0.8 || !p.en ? n : drawable(p.en.n); };
 function lifeGeo() {
   const d = life.data, evs = lifeEvents(), first = new Map(), route = [];
   for (const e of evs) if (!first.has(e.p)) first.set(e.p, e);
@@ -3849,7 +3866,7 @@ function lifeGeo() {
     if (a !== b) route.push({ type: 'Feature', geometry: { type: 'LineString', coordinates: [lifeLL(a), lifeLL(b)] }, properties: { i: evs[j].i, color: lifeColor(evs[j]) } });
   }
   return {
-    places: { type: 'FeatureCollection', features: [...first].map(([id, e]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(d.byId[id]) }, properties: { id, name: drawable(d.byId[id].n), color: lifeColor(e), rank: JESUS_RANK.has(id) ? 0 : 1 } })) },
+    places: { type: 'FeatureCollection', features: [...first].map(([id, e]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(d.byId[id]) }, properties: { id, name: lifeLabel(d.byId[id]), color: lifeColor(e), rank: JESUS_RANK.has(id) ? 0 : 1 } })) },
     route: { type: 'FeatureCollection', features: route },
   };
 }

@@ -506,5 +506,16 @@
   "mSettings": "Mipangilio",
   "langNearTitle": "Misa kwa {lang} Karibu Nawe",
   "langNearIntro": "Makanisa ambayo tovuti zao zinaorodhesha Misa kwa lugha hii, lililo karibu zaidi kwanza. Gusa moja upate maelezo.",
-  "langNoneNear": "Hakuna ndani ya {dist}. Haya ndiyo yaliyo karibu zaidi yenye Misa kwa {lang}."
+  "langNoneNear": "Hakuna ndani ya {dist}. Haya ndiyo yaliyo karibu zaidi yenye Misa kwa {lang}.",
+  "massLangLbl": "Lugha ya Misa",
+  "anyShort": "Yoyote",
+  "massLangHint": "Lugha ya Misa huonyesha makanisa yenye Misa kwa lugha unayochagua.",
+  "siteLang": "Lugha ya tovuti",
+  "hint_listHere": "Makanisa yote katika sehemu ya ramani unayoiona",
+  "hint_season": "Kipindi, sikukuu na kanisa la leo",
+  "hint_tourBtn": "Makanisa maarufu, kituo kwa kituo",
+  "hint_rand": "Ruka hadi kanisa popote duniani",
+  "hint_spin": "Acha dunia izunguke polepole yenyewe",
+  "hint_viewBtn": "Badilisha jinsi ramani inavyoonekana",
+  "hint_favOpen": "Makanisa uliyoyahifadhi"
 }

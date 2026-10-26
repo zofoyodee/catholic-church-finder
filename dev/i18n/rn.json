@@ -498,5 +498,16 @@
   "mSettings": "Amategeko",
   "langNearTitle": "Misa mu {lang} hafi yawe",
   "langNearIntro": "Ingoro z’Imana zivuga kuri website yazo ko hari Misa muri uru rurimi, iya hafi kuruta izindi imbere. Kanda kuri imwe umenye vyinshi.",
-  "langNoneNear": "Nta na imwe iri muri {dist}. Izi ni zo ziri hafi zifise Misa mu {lang}."
+  "langNoneNear": "Nta na imwe iri muri {dist}. Izi ni zo ziri hafi zifise Misa mu {lang}.",
+  "massLangLbl": "Ururimi rwa Misa",
+  "anyShort": "Urwo arirwo rwose",
+  "massLangHint": "Ururimi rwa Misa rwerekana ingoro z’Imana zifise Misa mu rurimi uhisemwo.",
+  "siteLang": "Ururimi rw’urubuga",
+  "hint_listHere": "Ingoro z’Imana zose ziri mu gice c’ikarata ubona",
+  "hint_season": "Igihe, umusi mukuru n’ingoro y’Imana y’uyu musi",
+  "hint_tourBtn": "Ingoro z’Imana zizwi, imwe imwe",
+  "hint_rand": "Guruka ugana ingoro y’Imana aho ari ho hose kw’isi",
+  "hint_spin": "Reka isi izunguruke buhorobuhoro",
+  "hint_viewBtn": "Hindura ingene ikarata iboneka",
+  "hint_favOpen": "Ingoro z’Imana wabitse"
 }

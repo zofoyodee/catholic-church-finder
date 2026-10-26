@@ -498,5 +498,16 @@
   "mSettings": "Mga Setting",
   "langNearTitle": "Misa sa {lang} Harani Mo",
   "langNearIntro": "Mga simbahan na an saindang website may Misa sa lenguaheng ini, an pinakaharani enot. Pinduton an saro para sa detalye.",
-  "langNoneNear": "Mayo sa laog nin {dist}. Ini an pinakaharani na may Misa sa {lang}."
+  "langNoneNear": "Mayo sa laog nin {dist}. Ini an pinakaharani na may Misa sa {lang}.",
+  "massLangLbl": "Lenguahe kan Misa",
+  "anyShort": "Arin man",
+  "massLangHint": "Pinapahiling kan Lenguahe kan Misa an mga simbahan na may Misa sa lenguaheng pinili mo.",
+  "siteLang": "Lenguahe kan Site",
+  "hint_listHere": "Gabos na simbahan sa parte kan mapa na nahihiling mo",
+  "hint_season": "An panahon, kapistahan asin simbahan kan aldaw",
+  "hint_tourBtn": "Mga bantog na simbahan, saro-saro",
+  "hint_rand": "Lumupad pasiring sa simbahan saen man sa kinaban",
+  "hint_spin": "Pabayaan na luway-luway na magikot an globo",
+  "hint_viewBtn": "Ribayan kun paano an hitsura kan mapa",
+  "hint_favOpen": "An mga simbahan na naitagama mo"
 }

@@ -498,5 +498,16 @@
   "mSettings": "Churanakuna",
   "langNearTitle": "{lang} simipi Misa qanpa qayllaykipi",
   "langNearIntro": "Kay simipi Misata websitenkupi willakuq iglesiakuna, aswan qayllalla ñawpaqta. Hukta ñit’iy astawan yachanaykipaq.",
-  "langNoneNear": "Manam kanchu {dist} ukhupi. Kaykunam aswan qayllalla {lang} simipi Misayuq."
+  "langNoneNear": "Manam kanchu {dist} ukhupi. Kaykunam aswan qayllalla {lang} simipi Misayuq.",
+  "massLangLbl": "Misa simi",
+  "anyShort": "Mayqinpas",
+  "massLangHint": "Misa simiqa akllasqayki simipi Misayuq iglesiakunata rikuchin.",
+  "siteLang": "Websitepa simin",
+  "hint_listHere": "Mapapi rikusqayki ladopi tukuy iglesiakuna",
+  "hint_season": "Kunan p’unchaypa pachan, raymin, iglesian ima",
+  "hint_tourBtn": "Riqsisqa iglesiakuna, hukmanta hukman",
+  "hint_rand": "Pachapi maypipas iglesiaman phaway",
+  "hint_spin": "Pachata allillamanta muyurichun",
+  "hint_viewBtn": "Mapa imayna rikhurisqanta tikray",
+  "hint_favOpen": "Waqaychasqayki iglesiakuna"
 }

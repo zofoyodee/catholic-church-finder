@@ -498,5 +498,16 @@
   "mSettings": "Dagiti Setting",
   "langNearTitle": "Misa iti {lang} nga Asideg Kenka",
   "langNearIntro": "Dagiti simbaan a ti websiteda ket mangilista iti Misa iti daytoy a pagsasao, ti kaasitgan nga umuna. I-tap ti maysa para iti detalye.",
-  "langNoneNear": "Awan iti uneg ti {dist}. Dagitoy ti kaasitgan nga addaan iti Misa iti {lang}."
+  "langNoneNear": "Awan iti uneg ti {dist}. Dagitoy ti kaasitgan nga addaan iti Misa iti {lang}.",
+  "massLangLbl": "Pagsasao ti Misa",
+  "anyShort": "Aniaman",
+  "massLangHint": "Ipakita ti Pagsasao ti Misa dagiti simbaan nga addaan iti Misa iti pagsasao a pinilim.",
+  "siteLang": "Pagsasao ti Site",
+  "hint_listHere": "Amin a simbaan iti paset ti mapa a makitam",
+  "hint_season": "Ti panawen, piesta ken simbaan ti aldaw",
+  "hint_tourBtn": "Dagiti nalatak a simbaan, maysa-maysa",
+  "hint_rand": "Agtayab nga agturong iti simbaan iti sadinoman a lugar ti lubong",
+  "hint_spin": "Bay-am nga in-inut nga agtayyek ti globo",
+  "hint_viewBtn": "Baliwan ti langa ti mapa",
+  "hint_favOpen": "Dagiti simbaan nga indulinmo"
 }
