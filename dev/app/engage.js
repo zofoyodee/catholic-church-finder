@@ -300,7 +300,8 @@ function markStop(k) {
   map.setPaintProperty('tour-stop', 'circle-stroke-width', ['case', here, 2.5, 2]);
   map.setPaintProperty('tour-num', 'text-opacity', ['case', here, 0, 1]);
 }
-const tourPad = () => phone() ? { top: 120, bottom: (tourCard.offsetHeight || 260) + 40, left: 20, right: 20 } : { left: 400, right: 80, top: 120, bottom: 60 };
+// on phones the stop is framed in the space left above the guide card (and the tab bar below it)
+const tourPad = () => phone() ? { top: 120, bottom: (tourCard.hidden ? 260 : innerHeight - tourCard.getBoundingClientRect().top) + 30, left: 20, right: 20 } : { left: 400, right: 80, top: 120, bottom: 60 };
 async function startTour(id) {
   const list = await loadTours(); const t = list.find(x => x.id === id); if (!t) return;
   ccf.track('tour/' + id);
@@ -326,7 +327,7 @@ function renderTourCard(k) {
   const last = k === t.stops.length - 1;
   tourCard.innerHTML = `<button class="x" id="tourExit" aria-label="${esc(T('tourEnd'))}">${X}</button>
     <div class="kick"><b>${esc(t.title)}</b> · ${esc(k < 0 ? T('stops', { n: t.stops.length }) : T('stopOf', { k: k + 1, n: t.stops.length }))}</div>
-    <h2>${esc(s ? s.name : t.title)}</h2>
+    <h2><button class="more" aria-expanded="${tourCard.classList.contains('more')}">${esc(s ? s.name : t.title)}</button></h2>
     ${s ? `<div class="where">${esc(s.place)}</div>` : ''}
     <p>${esc(s ? s.text : t.sub + '.')}</p>
     <div class="dots" role="tablist" aria-label="${esc(T('stopsLabel'))}">${t.stops.map((x, j) => `<button data-k="${j}" aria-current="${j === k}" aria-label="${esc(T('stopName', { k: j + 1, name: x.name }))}" title="${esc(x.name)}"></button>`).join('')}</div>
@@ -349,6 +350,10 @@ tourCard.addEventListener('click', (e) => {
   else if (b.id === 'tourPlay') { tour.auto = !tour.auto; renderTourCard(tour.k); if (tour.auto) scheduleNext(2000); else clearNext(); }
   else if (b.id === 'tourOpen') { clearNext(); tour.auto = false; renderTourCard(tour.k); ccf.selectChurch(tour.t.stops[tour.k].i, { fly: false }); }
   else if (b.dataset.k) goStop(+b.dataset.k);
+  else if (b.classList.contains('more')) {  // phones show the story only when the title is tapped
+    const on = tourCard.classList.toggle('more'); b.setAttribute('aria-expanded', on);
+    document.documentElement.style.setProperty('--tour-h', tourCard.offsetHeight + 'px');
+  }
 });
 function clearNext() { clearTimeout(tour.timer); cancelAnimationFrame(tour.raf); const bar = $('tourTimer'); if (bar) bar.style.width = '0'; }
 function scheduleNext(ms) {
