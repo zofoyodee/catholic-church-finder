@@ -3790,7 +3790,7 @@ function renderNow() {
       <button id="lifePrev" aria-label="${esc(tr('jPrev'))}" title="${esc(tr('jPrev'))}" ${pos <= 0 ? 'disabled' : ''}>${ICON_PREV}</button>
       <button id="lifePlay" class="play" aria-pressed="${life.auto}" aria-label="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}" title="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}">${life.auto ? ICON_PAUSE : ICON_PLAY}</button>
       <button id="lifeNext" aria-label="${esc(tr('jNext'))}" title="${esc(tr('jNext'))}" ${pos >= evs.length - 1 ? 'disabled' : ''}>${ICON_NEXT}</button>
-      ${d.mysteries.length ? `<button id="lifeRosary" class="ro-toggle" aria-pressed="${life.era === 'rosary'}">${ROSARY_ICON}<span>${esc(tr('jRosary'))}</span></button>` : ''}
+      ${d.mysteries.length ? `<button id="lifeRosary" class="ro-toggle" aria-pressed="${life.era === 'rosary'}" aria-label="${esc(tr('jRosary'))}" title="${esc(tr('jRosary'))}">${ROSARY_ICON}<span>${esc(tr('jRosary'))}</span></button>` : ''}
     </div>
     <div class="ln-txt" aria-live="polite">${e ? `
       <div class="kick"><i style="background:${d.color[e.e]}"></i>${esc(tr('jEra_' + e.e))} · ${esc(tr('jEventOf', { k: fmt(e.i + 1), n: d.events.length }))}${e.ro ? ' · ' + roTag(e) : ''}</div>

@@ -137,3 +137,21 @@ body.bible-mode .ms-acts .church-only { display: none; }
 .compact .ctrls { justify-items: end; }
 .compact .ctrls button { width: auto; height: 40px; border-radius: 20px; padding: 0 14px 0 11px; display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: 12.5px; font-weight: 500; white-space: nowrap; }
 .compact .ctrls .lbl { display: inline; }
+
+/* Life of Jesus on an upright phone: a slim strip low on the screen, so the globe stays in view.
+   The moment's story, its reading and the rest are a tap away on the title or More. */
+@media (max-width: 640px) {
+  .compact .life { padding: 8px 8px 4px; gap: 6px; }
+  .compact .life-now { align-items: center; gap: 8px; flex-wrap: nowrap; }
+  .compact .ln-txt .kick, .compact .ln-txt p { display: none; }
+  .compact .ln-txt h2 { margin: 0; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .compact .ln-txt h2 small { display: none; }  /* the place is on the card below */
+  .compact .ln-ctl button { width: 32px; height: 32px; }
+  .compact .ln-ctl button.ro-toggle { width: 32px; padding: 0; border-radius: 50%; }
+  .compact .ln-ctl button.ro-toggle span { display: none; }  /* the beads alone: the row has to fit */
+  .compact .ln-open { display: inline-flex; height: 30px; padding: 0 12px; font-size: 12.5px; }  /* the story is behind it now */
+  .compact .life-track { gap: 10px; }
+  .compact .life-track .era-h { display: none; }  /* each card already shows where it belongs */
+  .compact .life-track .ev { width: 112px; padding: 5px 7px; }
+  .compact .life-track .ev .tt { font-size: 12px; min-height: 0; -webkit-line-clamp: 2; }
+}
