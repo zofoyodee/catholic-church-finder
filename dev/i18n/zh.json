@@ -185,7 +185,7 @@
   "online": "网上",
   "unverified": "未经核实",
   "unverifiedTip": "此条目来源的地图数据无法确定其是否准确",
-  "massLangOpt_other": "{lang} · {n} 座教堂",
+  "massLangOpt_other": "{lang} ({n})",
   "massLangTip": "只显示列出该语言弥撒的教堂。数字表示有多少座教堂列出。",
   "massLangAria": "只显示有该语言弥撒的教堂",
   "massNoteTip": "弥撒和告解时间读取自堂区网站，因此只能筛选网站上列出时间的教堂",

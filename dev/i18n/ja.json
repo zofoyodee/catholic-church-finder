@@ -185,7 +185,7 @@
   "online": "オンライン",
   "unverified": "未確認の情報",
   "unverifiedTip": "この情報の元になった地図データは、正確さに確信がありません",
-  "massLangOpt_other": "{lang} · {n} の教会",
+  "massLangOpt_other": "{lang} ({n})",
   "massLangTip": "この言語のミサがあると記載している教会だけを表示します。数字はそうした教会の数です。",
   "massLangAria": "この言語のミサがある教会だけを表示",
   "massNoteTip": "ミサとゆるしの秘跡の時間は小教区のサイトから読み取るため、サイトに時間を載せている教会だけを絞り込めます",
