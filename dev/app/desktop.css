@@ -75,17 +75,21 @@
 [dir="rtl"].wide body.card-open .mnav { left: calc(100vw - (100vw - min(420px, calc(100vw - 32px)) - 28px) / 2); }
 @media (max-width: 1239px) { .wide body.card-open .ctrls { display: none; } }
 
-/* the search bar stands out in every theme: taller, nearly solid, a clear edge and a soft shadow */
+/* the search bar stands out in every theme: a light bar on the dark themes (a dark one on Parchment),
+   taller, with a soft shadow */
 :root.wide { --sw: min(580px, calc(100vw - 480px)); }
 .wide .search input {
   height: 50px; border-radius: 25px; font-size: 15px; padding-left: 46px;
-  background: color-mix(in srgb, var(--panel-solid) 88%, var(--ink) 12%);
-  border: 1.5px solid color-mix(in srgb, var(--ink) 34%, transparent);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  background: color-mix(in srgb, var(--ink) 94%, transparent); color: var(--space);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5); backdrop-filter: none; -webkit-backdrop-filter: none;
 }
-.wide .search input::placeholder { color: var(--ink-soft); }
-.wide .search input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 25%, transparent), 0 8px 28px rgba(0, 0, 0, 0.45); }
-.wide .search > svg { left: 17px; top: 16px; width: 18px; height: 18px; stroke: var(--ink); }
+.wide .search input::placeholder { color: color-mix(in srgb, var(--space) 62%, var(--ink)); }
+.wide .search input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 45%, transparent), 0 8px 28px rgba(0, 0, 0, 0.5); }
+.wide .search > svg { left: 17px; top: 16px; width: 18px; height: 18px; stroke: var(--space); }
+.wide .search .clear, .wide .search button:not(.globe-btn) { color: var(--space); }
 [dir="rtl"] .wide .search input { padding: 0 46px 0 16px; }
 [dir="rtl"] .wide .search > svg { left: auto; right: 17px; }
 .wide .results { top: 58px; }
+.wide .search input { color-scheme: light; }  /* the clear (×) button reads dark on the light bar */
+:root.wide[data-theme="parchment"] .search input { color-scheme: dark; }
