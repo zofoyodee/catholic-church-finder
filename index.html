@@ -1631,39 +1631,46 @@ async function showPhoto(i) {
   hero.insertAdjacentHTML('beforeend', VIGIL());
   const vigil = hero.querySelector('.vigil');
   const done = () => { vigil.classList.add('out'); setTimeout(() => vigil.remove(), reduceMotion ? 0 : 500); };
-  let photo = null;
-  // fast path: the few cathedral and basilica photos shipped with the site
-  try {
-    const r = (await photoIndex()).get(i);
-    if (r) { const [, , , , file, author, license] = r; photo = { src: await photoURL(r), file, author, license, page: 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(file.replace(/ /g, '_')) }; }
-  } catch (e) {}
-  if (!current()) return;
-  if (!photo) {
-    let rec; try { rec = await shardFor(i); } catch (e) {}
-    if (!current()) return;
-    try { photo = (await lookupPhoto(i, rec)).photo; } catch (e) {}
+  let recP = null; const rec = () => recP || (recP = shardFor(i).catch(() => null));
+  // each source in turn; when one has nothing, or its picture won't load, the next one gets a turn
+  const sources = [
+    // fast path: the few cathedral and basilica photos shipped with the site
+    async () => {
+      const r = (await photoIndex()).get(i); if (!r) return null;
+      const [, , , , file, author, license] = r;
+      return { src: await photoURL(r), file, author, license, page: 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(file.replace(/ /g, '_')) };
+    },
+    async () => (await lookupPhoto(i, await rec())).photo,
     // nothing on Wikimedia: the main picture from the parish's own website, found by the site crawl
-    if (!photo && current()) try {
-      const w = await webFor(i), u = w.entry && w.entry[8], site = (w.entry && w.entry[1]) || (rec && rec[6]) || u;
-      if (u && /^https:\/\//.test(u)) { const h = new URL(/^https?:/.test(site) ? site : 'https://' + site).hostname.replace(/^www\./, ''); photo = { src: u, file: rec && rec[0], author: h, license: tr('parishSitePhoto'), page: /^https?:/.test(site) ? site : 'https://' + h, own: true }; }
-    } catch (e) {}
+    async () => {
+      const w = await webFor(i), r = await rec(), u = w.entry && w.entry[8], site = (w.entry && w.entry[1]) || (r && r[6]) || u;
+      if (!u || !/^https:\/\//.test(u)) return null;
+      const h = new URL(/^https?:/.test(site) ? site : 'https://' + site).hostname.replace(/^www\./, '');
+      return { src: u, file: r && r[0], author: h, license: tr('parishSitePhoto'), page: /^https?:/.test(site) ? site : 'https://' + h, own: true };
+    },
     // still nothing: Google Street View from the street in front, turned to face the church
-    if (!photo && GMAPS_KEY && current()) try {
-      const lat = state.lat[i] / 1e6, lng = state.lon[i] / 1e6, sv = await svPano(i, lat, lng);
-      if (sv) photo = { src: svImage(sv, lat, lng), file: rec && rec[0], author: 'Google', license: 'Street View', page: `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(sv.pano)}`, sv: true };
-    } catch (e) {}
+    async () => {
+      if (!GMAPS_KEY) return null;
+      const lat = state.lat[i] / 1e6, lng = state.lon[i] / 1e6, sv = await svPano(i, lat, lng); if (!sv) return null;
+      const r = await rec();
+      return { src: svImage(sv, lat, lng), file: r && r[0], author: 'Google', license: 'Street View', page: `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(sv.pano)}`, sv: true };
+    },
     // or a street-level photo from Mapillary taken near the church and facing it
-    if (!photo && MAPILLARY_TOKEN && current()) try { photo = await streetPhoto(i, rec); } catch (e) {}
+    async () => MAPILLARY_TOKEN ? streetPhoto(i, await rec()) : null,
+  ];
+  for (const get of sources) {
+    let photo = null; try { photo = await get(); } catch (e) {}
+    if (!current()) return;
+    if (!photo) continue;
+    const img = new Image(); img.className = 'photo'; img.alt = tr('photoOf', { name: photo.file || tr('theChurch') }); img.referrerPolicy = photo.sv ? 'strict-origin-when-cross-origin' : 'no-referrer'; img.src = photo.src;  // Google checks the key against the page's address
+    try { await img.decode(); } catch (e) { if (!img.complete || !img.naturalWidth) { if (!current()) return; continue; } }
+    if (!current()) return;
+    hero.querySelector('svg.scene').after(img);
+    hero.classList.add('has-photo');
+    hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(photo.sv ? tr('photoStreetView') : photo.street ? tr('photoMapillary', { author: photo.author }) : photo.own ? tr('photoFromSite', { site: photo.author }) : tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
+    requestAnimationFrame(() => img.classList.add('on'));
+    break;
   }
-  if (!current()) return;
-  if (!photo) { done(); return; }
-  const img = new Image(); img.className = 'photo'; img.alt = tr('photoOf', { name: photo.file || tr('theChurch') }); img.referrerPolicy = photo.sv ? 'strict-origin-when-cross-origin' : 'no-referrer'; img.src = photo.src;  // Google checks the key against the page's address
-  try { await img.decode(); } catch (e) { if (!img.complete || !img.naturalWidth) { if (current()) done(); return; } }
-  if (!current()) return;
-  hero.querySelector('svg.scene').after(img);
-  hero.classList.add('has-photo');
-  hero.insertAdjacentHTML('beforeend', `<a class="credit" href="${esc(photo.page)}" target="_blank" rel="noopener" title="${esc(photo.sv ? tr('photoStreetView') : photo.street ? tr('photoMapillary', { author: photo.author }) : photo.own ? tr('photoFromSite', { site: photo.author }) : tr('photoBy', { author: photo.author, license: photo.license }))}">${esc(tr('photoCredit', { author: photo.author, license: photo.license }))}</a>`);
-  requestAnimationFrame(() => img.classList.add('on'));
   done();
 }
 
