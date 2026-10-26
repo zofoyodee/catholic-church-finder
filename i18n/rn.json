@@ -491,5 +491,9 @@
   "mon12": "Kigarama",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Rondera Ingoro y’Imana",
+  "mMine": "Ingoro z’Imana zanje",
+  "mExplore": "Raba",
+  "mSettings": "Amategeko"
 }
