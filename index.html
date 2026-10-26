@@ -238,6 +238,7 @@ button, input { font: inherit; color: inherit; }
 .results button { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: center; text-align: left; width: 100%; padding: 8px 10px; border: 0; background: transparent; border-radius: 9px; cursor: pointer; }
 .results button:hover, .results button[aria-selected="true"] { background: rgba(232, 184, 74, 0.12); }
 .search .results svg { position: static; }
+.results button[data-loc] .loc { white-space: normal; }
 .results button.all .nm { color: var(--gold-soft); font-weight: 600; }
 .results button.all + button:not(.all) { margin-top: 4px; }
 .results .nm { display: block; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -705,7 +706,6 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <button id="zout" title="Zoom out" aria-label="Zoom out" data-i18n-attr="title:zoomOut;aria-label:zoomOut"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
   <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe" data-i18n-attr="title:home;aria-label:home"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
   <button id="listHere" title="List Churches Here" aria-label="List Churches Here" data-i18n-attr="title:listHere;aria-label:listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg></button>
-  <button id="rand" title="Visit a random church" aria-label="Visit a random church" data-i18n-attr="title:random;aria-label:random"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg></button>
 </div>
 
 <footer class="foot">
@@ -735,7 +735,6 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
       <button type="button" data-for="season"><span class="ic" aria-hidden="true">✠</span><span data-i18n="todayLabel">Today in the Church</span></button>
       <button type="button" data-for="tourBtn"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 17.2c4-1 2.5-5.2 6-6.4 1.8-.6 3-1.6 3.4-2.8"/></svg><span data-i18n="tours">Guided Tours</span></button>
       <button type="button" data-for="listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span data-i18n="listHere">List Churches Here</span></button>
-      <button type="button" data-for="rand"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg><span data-i18n="random">Visit a Random Church</span></button>
       <button type="button" data-for="spin"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg><span data-i18n="spin">Spin the Globe</span></button>
       <button type="button" data-for="viewBtn"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg><span data-i18n="globeView">Globe View</span></button>
     </div>
@@ -865,7 +864,10 @@ const EN = {
   photos_one: '{n} photo', photos_other: '{n} photos', openGallery_one: 'Open the photo gallery, {n} photo', openGallery_other: 'Open the photo gallery, {n} photos',
   photosOfChurch: 'Photos of This Church', openPhoto: 'Open photo {k} of {n}',
   noGeo: 'This browser can\'t share your location.', finding: 'Finding where you are…',
-  geoOff: 'Location is turned off for this site. Allow location in your browser settings, then tap the button again.',
+  geoOff: 'Location is turned off for this site.', useMyLoc: 'Use My Location', nearestFirstTip: 'to list the nearest first',
+  locStepsIos: 'To turn it on, tap aA in the address bar, then Website Settings › Location › Allow. If it stays off, open the Settings app: Privacy & Security › Location Services › Safari Websites › While Using the App.',
+  locStepsAndroid: 'To turn it on, tap the icon at the left of the address bar, then Permissions › Location › Allow.',
+  locStepsDesktop: 'To turn it on, click the icon at the left of the address bar and allow Location.',
   geoFail: 'Your location could not be found. Try again in a moment.', noneNear: 'No churches found. Check the filters across the top.',
   loadingName: 'Loading name…', clickDetails: 'Click for details',
   loading: 'Loading…', loadingMassNear: 'Finding Masses near you…', loadingConfNear: 'Finding Confession near you…', loadingLangList: 'Finding churches with Mass in {lang}…', loadingArea: 'Finding churches in {place}…', loadingView: 'Finding churches in this view…', loadingMore: 'Loading more churches…', detailsFailed: 'Details didn\'t load', checkConnection: 'Check your connection, then click the pin again.',
@@ -1386,11 +1388,27 @@ async function hereOrCenter() {
   if (mn.at && !mn.guessed) return mn.at;
   try {
     const pos = await new Promise((res, rej) => navigator.geolocation ? navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 12000, maximumAge: 600000 }) : rej(new Error('geo')));
-    mn.guessed = false; mn.at = [pos.coords.longitude, pos.coords.latitude];
+    mn.guessed = false; mn.at = [pos.coords.longitude, pos.coords.latitude]; geoDenied = false;
     here = mn.at; map.getSource('me').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: here }, properties: {} }] });
-  } catch (e) { const c = map.getCenter(); mn.guessed = true; mn.at = [c.lng, c.lat]; }
+  } catch (e) { const c = map.getCenter(); mn.guessed = true; mn.at = [c.lng, c.lat]; geoDenied = !!e && e.code === 1; }
   return mn.at;
 }
+/* ---------- asking again for your location ---------- */
+// A page can't open the browser's settings, but a tap can bring up its own Allow prompt again
+// (Safari asks once per visit). Once a browser has blocked the site it stops asking, so say where to switch it back on.
+let geoDenied = false;
+function locSteps() {
+  const ua = navigator.userAgent, ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  return tr(ios ? 'locStepsIos' : /Android/.test(ua) ? 'locStepsAndroid' : 'locStepsDesktop');
+}
+const locBtn = (where) => `<button class="btn loc-btn" data-loc="${where}">${icon.map}<span>${esc(tr('useMyLoc'))}</span></button>`;
+const locHelp = (where, lead) => `<p class="note">${esc(lead)}${geoDenied ? ' ' + esc(locSteps()) : ''}</p><p class="note">${locBtn(where)}</p>`;
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('button[data-loc]'); if (!b) return;
+  e.preventDefault(); e.stopPropagation();
+  if (b.dataset.loc === 'search') { searchAskedWhere = true; await hereOrCenter(); if (qEl.value.trim()) runSearch(); qEl.focus(); return; }
+  if (mn.kind === 0 || mn.kind === 1) massNear(mn.kind); else findNear();
+});
 // kind 0 = Mass near me, 1 = Confession near me (within the chosen distance); 2 = every church with Mass in the chosen language, worldwide
 async function massNear(kind) {
   if (mn.kind !== kind || kind === 2) track(kind === 2 ? 'mass-in-language/' + mf.lang : kind ? 'confession-near-me' : 'church-near-me');
@@ -1569,7 +1587,7 @@ async function renderMassNear() {
   setNearTitle();
   $('nearN').textContent = rows.length ? fmt(mn.kind === 2 ? state.only.size : rows.length) : '';
   const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : 'areaIntro';
-  const head = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? `<p class="note">${esc(tr('usingMapCenter'))}</p>` : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear', { dist: nearDist(nearMiles) }))}</p>` : '') + (rows.length ? '' : `<p class="empty">${esc(tr('noneInRange', { dist: nearDist(nearMiles) }))}</p>`);
+  const head = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? locHelp('near', geoDenied ? tr('geoOff') + ' ' + tr('usingMapCenter') : tr('usingMapCenter')) : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear', { dist: nearDist(nearMiles) }))}</p>` : '') + (rows.length ? '' : `<p class="empty">${esc(tr('noneInRange', { dist: nearDist(nearMiles) }))}</p>`);
   fillList(rows, 150, head, (r, rec) => {
     const plain = mn.kind === 0, unknown = mn.kind === 1 && !r.n && !mf.data.c[r.i], site = rec[6] ? (/^https?:/.test(rec[6]) ? rec[6] : 'https://' + rec[6]) : '', t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
     if (notChurch(rec[0])) return '';
@@ -2564,9 +2582,10 @@ async function findNear() {
   if (!navigator.geolocation) { list.innerHTML = `<p class="empty">${esc(tr('noGeo'))}</p>`; return; }
   list.innerHTML = LOADER(tr('finding'), 'big');
   let pos;
-  try { pos = await new Promise((res, rej) => navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 })); }
+  try { pos = await new Promise((res, rej) => navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 })); geoDenied = false; }
   catch (e) {
-    list.innerHTML = `<p class="empty">${esc(tr(e && e.code === 1 ? 'geoOff' : 'geoFail'))}</p>`;
+    geoDenied = !!e && e.code === 1;
+    list.innerHTML = locHelp('near', tr(geoDenied ? 'geoOff' : 'geoFail'));
     return;
   }
   const lat = pos.coords.latitude, lon = pos.coords.longitude;
@@ -2640,13 +2659,6 @@ $('spin').addEventListener('click', () => { state.spinning = !state.spinning; $(
 $('zin').addEventListener('click', () => { lastInteract = performance.now(); map.zoomIn({ duration: 400 }); });
 $('zout').addEventListener('click', () => { lastInteract = performance.now(); map.zoomOut({ duration: 400 }); });
 $('home').addEventListener('click', () => { closeCard(); if (state.mode === 'bible') { bibleOverview(); return; } if (state.mode === 'jesus') { lifePause(); lifeOverview(); return; } map.flyTo({ center: [map.getCenter().lng, 20], zoom: 1.4, pitch: 0, bearing: 0, duration: 1800 }); });
-$('rand').addEventListener('click', () => {
-  if (state.mode === 'bible') { if (bible.data) { const ps = bibleVisible(); openBiblePlace(ps[Math.floor(Math.random() * ps.length)].id); } return; }
-  if (state.mode === 'jesus') { if (life.data) { const evs = lifeEvents(); lifePause(); goEvent(evs[Math.floor(Math.random() * evs.length)].i); } return; }
-  if (!state.n) return;
-  let i; do { i = Math.floor(Math.random() * state.n); } while (!state.enabled.has(state.typ[i] & 7));
-  selectChurch(i, { fly: true });
-});
 
 /* ---------- interaction ---------- */
 const tip = $('tip');
@@ -2846,7 +2858,9 @@ async function selectChurch(i, { fly = true } = {}) {
   map.getSource('sel').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lt] }, properties: {} }] });
   lastInteract = performance.now();
   const wide = innerWidth > 640;
-  if (fly) map.flyTo({ center: [lng, lt], zoom: Math.max(map.getZoom(), 13), speed: 1.4, curve: 1.5, pitch: 30, padding: cardPad(wide), essential: true });
+  // phones stop further out, so the streets and churches around it stay in view
+  const closeIn = matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)').matches ? Math.min(Math.max(map.getZoom(), 11.5), 14) : Math.max(map.getZoom(), 13);
+  if (fly) map.flyTo({ center: [lng, lt], zoom: closeIn, speed: 1.4, curve: 1.5, pitch: 30, padding: cardPad(wide), essential: true });
   const t = state.typ[i] & 7; const byName = state.typ[i] >> 3;
   const sc = scene(t, lng, lt);
   const hero = $('hero');
@@ -3097,7 +3111,8 @@ async function runSearch() {
   const inTown = town ? hits.filter(i => lines[i].split('\t')[1] === town[0]) : [];
   const listIcon = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2;stroke-linecap:round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg>';
   searchLists = { town: town ? { name: town[0], ids: inTown } : null, all: { q: qEl.value.trim(), ids: hits } };
-  resEl.innerHTML = (town ? `<button role="option" class="all" data-all="town" id="rt">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inTown.length), place: town[0] }))}</span></div></button>` : '')
+  resEl.innerHTML = (here || !navigator.geolocation ? '' : `<button role="option" class="all" data-loc="search">${icon.map.replace('<svg', '<svg style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2"')}<div><span class="nm">${esc(tr('useMyLoc'))}</span><span class="loc">${esc(geoDenied ? locSteps() : tr('nearestFirstTip'))}</span></div></button>`)
+    + (town ? `<button role="option" class="all" data-all="town" id="rt">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inTown.length), place: town[0] }))}</span></div></button>` : '')
     + (hits.length > 1 && hits.length !== inTown.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
     + top.map((i, k) => {
     const [nm, town, cc] = lines[i].split('\t'); const t = TYPE_BY_CODE[state.typ[i] & 7];
