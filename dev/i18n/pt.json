@@ -517,5 +517,6 @@
   "hint_rand": "Voar para uma igreja em qualquer lugar do mundo",
   "hint_spin": "Deixar o globo girar devagar sozinho",
   "hint_viewBtn": "Mudar a aparência do mapa",
-  "hint_favOpen": "As igrejas que você salvou"
+  "hint_favOpen": "As igrejas que você salvou",
+  "mineEmpty": "Toque no coração de uma igreja para guardá-la aqui."
 }

@@ -517,5 +517,6 @@
   "hint_rand": "Volar a una iglesia en cualquier lugar del mundo",
   "hint_spin": "Dejar que el globo gire despacio",
   "hint_viewBtn": "Cambiar el aspecto del mapa",
-  "hint_favOpen": "Las iglesias que has guardado"
+  "hint_favOpen": "Las iglesias que has guardado",
+  "mineEmpty": "Toca el corazón de una iglesia para guardarla aquí."
 }

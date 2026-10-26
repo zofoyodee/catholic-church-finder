@@ -547,5 +547,6 @@
   "hint_rand": "Przeleć do kościoła w dowolnym miejscu świata",
   "hint_spin": "Niech globus powoli sam się obraca",
   "hint_viewBtn": "Zmień wygląd mapy",
-  "hint_favOpen": "Zapisane przez Ciebie kościoły"
+  "hint_favOpen": "Zapisane przez Ciebie kościoły",
+  "mineEmpty": "Stuknij serce przy kościele, aby zapisać go tutaj."
 }

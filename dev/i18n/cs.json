@@ -537,5 +537,6 @@
   "hint_rand": "Přeletět ke kostelu kdekoli na světě",
   "hint_spin": "Nechat zeměkouli pomalu otáčet",
   "hint_viewBtn": "Změnit vzhled mapy",
-  "hint_favOpen": "Kostely, které jste si uložili"
+  "hint_favOpen": "Kostely, které jste si uložili",
+  "mineEmpty": "Klepněte na srdce u kostela a uloží se sem."
 }

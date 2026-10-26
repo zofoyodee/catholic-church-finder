@@ -538,5 +538,6 @@
   "hint_rand": "Preletieť ku kostolu kdekoľvek na svete",
   "hint_spin": "Nechať zemeguľu pomaly otáčať",
   "hint_viewBtn": "Zmeniť vzhľad mapy",
-  "hint_favOpen": "Kostoly, ktoré ste si uložili"
+  "hint_favOpen": "Kostoly, ktoré ste si uložili",
+  "mineEmpty": "Ťuknite na srdce pri kostole a uloží sa sem."
 }

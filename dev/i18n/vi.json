@@ -501,5 +501,6 @@
   "hint_rand": "Bay đến một nhà thờ ở bất kỳ đâu trên thế giới",
   "hint_spin": "Để quả địa cầu tự quay chậm",
   "hint_viewBtn": "Thay đổi giao diện bản đồ",
-  "hint_favOpen": "Các nhà thờ bạn đã lưu"
+  "hint_favOpen": "Các nhà thờ bạn đã lưu",
+  "mineEmpty": "Chạm vào trái tim ở một nhà thờ để lưu vào đây."
 }

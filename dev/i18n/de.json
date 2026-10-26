@@ -517,5 +517,6 @@
   "hint_rand": "Zu einer Kirche irgendwo auf der Welt fliegen",
   "hint_spin": "Den Globus langsam von selbst drehen lassen",
   "hint_viewBtn": "Das Aussehen der Karte ändern",
-  "hint_favOpen": "Ihre gespeicherten Kirchen"
+  "hint_favOpen": "Ihre gespeicherten Kirchen",
+  "mineEmpty": "Tippen Sie bei einer Kirche auf das Herz, um sie hier zu speichern."
 }

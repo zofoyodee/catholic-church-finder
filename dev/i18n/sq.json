@@ -515,5 +515,6 @@
   "hint_rand": "Fluturoni drejt një kishe kudo në botë",
   "hint_spin": "Lëreni globin të rrotullohet ngadalë",
   "hint_viewBtn": "Ndryshoni pamjen e hartës",
-  "hint_favOpen": "Kishat që keni ruajtur"
+  "hint_favOpen": "Kishat që keni ruajtur",
+  "mineEmpty": "Prekni zemrën te një kishë për ta ruajtur këtu."
 }

@@ -499,5 +499,6 @@
   "hint_rand": "세계 어딘가의 성당으로 날아가기",
   "hint_spin": "지구본이 천천히 저절로 돌게 하기",
   "hint_viewBtn": "지도 모양 바꾸기",
-  "hint_favOpen": "저장한 성당"
+  "hint_favOpen": "저장한 성당",
+  "mineEmpty": "성당의 하트를 누르면 여기에 저장됩니다."
 }

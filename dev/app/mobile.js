@@ -52,8 +52,10 @@ function sync() {
     if (b.dataset.for === 'favOpen' && t) { const n = t.querySelector('.count'); b.dataset.n = n ? n.textContent : ''; }
     if (t && t.getAttribute('aria-pressed')) b.setAttribute('aria-pressed', t.getAttribute('aria-pressed'));
   }
-  // My Churches shows up once something is saved
-  for (const el of sheet.querySelectorAll('.ms-mine')) el.hidden = !$('favOpen') || $('favOpen').hidden;
+  // My Churches lists the saved churches, or says how to save one
+  const none = !$('favOpen') || $('favOpen').hidden;
+  for (const el of sheet.querySelectorAll('.ms-mine')) el.hidden = none;
+  for (const el of sheet.querySelectorAll('.ms-empty')) el.hidden = !none;
 }
 const toggle = () => show(sheet.hidden);
 $('mnavMenu').addEventListener('click', toggle);

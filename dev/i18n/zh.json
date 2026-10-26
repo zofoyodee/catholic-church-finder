@@ -499,5 +499,6 @@
   "hint_rand": "飞往世界任何地方的一座教堂",
   "hint_spin": "让地球仪慢慢自己转动",
   "hint_viewBtn": "更改地图外观",
-  "hint_favOpen": "您保存的教堂"
+  "hint_favOpen": "您保存的教堂",
+  "mineEmpty": "点按教堂上的爱心，即可保存到这里。"
 }
