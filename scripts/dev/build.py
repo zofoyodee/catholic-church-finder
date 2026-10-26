@@ -26,6 +26,7 @@ html = sub(r'<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="../">
 html = sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex, nofollow">', html, 1)
 html = sub(r'(href|src)="app/', r'\1="dev/app/', html)
 html = sub(r"'i18n/' \+ code", "'dev/i18n/' + code", html)
+html = sub(r"'i18n/content/' \+ code", "'dev/i18n/content/' + code", html)
 html = sub(r"getJSON\('data/meta\.json'\)", "getJSON('dev/data/meta.json')", html, 1)
 html = sub(r"BASE \+ 'data/search-'", "BASE + 'dev/data/search-'", html, 1)
 html = sub(r"if \('serviceWorker' in navigator", "if (false && 'serviceWorker' in navigator", html, 1)

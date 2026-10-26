@@ -1052,6 +1052,13 @@ const EN = {
   about_seasonTriduum: 'The Sacred Paschal Triduum, from the evening Mass of the Lord\'s Supper on Holy Thursday to Easter Sunday evening, is the summit of the whole liturgical year: the Passion, Death and Resurrection of the Lord.',
   about_seasonEaster: 'Easter Time is the fifty days from Easter Sunday to Pentecost, celebrated as one great Sunday of joy in the risen Lord. Its colour is white, and red on Pentecost.',
   ordinaryWeek: '{season} · Week {w}', seasonTip: '{title}. The liturgical colour of the day is {color}. Tap for the church of the day.',
+  litSunAdvent: '{ord} Sunday of Advent', litDayAdvent: '{day} of the {ord} Week of Advent',
+  litSunOrdinary: '{ord} Sunday in Ordinary Time', litDayOrdinary: '{day} of the {ord} Week in Ordinary Time',
+  litSunLent: '{ord} Sunday of Lent', litDayLent: '{day} of the {ord} Week of Lent', litAfterAsh: '{day} after Ash Wednesday', litHolyWeek: '{day} of Holy Week',
+  litSunEaster: '{ord} Sunday of Easter', litDayEaster: '{day} of the {ord} Week of Easter', litEasterOctave: '{day} within the Octave of Easter',
+  wd0: 'Sunday', wd1: 'Monday', wd2: 'Tuesday', wd3: 'Wednesday', wd4: 'Thursday', wd5: 'Friday', wd6: 'Saturday',
+  mon1: 'January', mon2: 'February', mon3: 'March', mon4: 'April', mon5: 'May', mon6: 'June', mon7: 'July', mon8: 'August', mon9: 'September', mon10: 'October', mon11: 'November', mon12: 'December',
+  fmtWeekdayDate: '{weekday}, {month} {d}', fmtDate: '{month} {d}, {y}', fmtMonthYear: '{month} {y}',
   color_green: 'green', color_violet: 'violet', color_rose: 'rose', color_white: 'white and gold', color_red: 'red',
   massNoteTip: "Mass and Confession times are read from parish websites, so only churches whose site lists them can be filtered",
 };
@@ -1066,6 +1073,24 @@ function tr(key, v) {
   return v ? s.replace(/\{(\w+)\}/g, (m, k) => (k in v ? (k === 'n' && typeof v.n === 'number' ? fmt(v.n) : v[k]) : m)) : s;
 }
 const fmt = (n) => n.toLocaleString(i18n.locale);
+// dates in the page language; where the browser knows no month or day names for it, the dictionary's are used
+const intlDates = new Map();
+function dateText(date, o, utc) {
+  const l = i18n.locale;
+  if (!intlDates.has(l)) { let ok = false; try { ok = i18n.code === 'en' || (l !== 'en' && Intl.DateTimeFormat.supportedLocalesOf([l]).length > 0); } catch (e) {} intlDates.set(l, ok); }
+  if (intlDates.get(l)) return date.toLocaleDateString(l, utc ? { ...o, timeZone: 'UTC' } : o);
+  const g = (k) => date[(utc ? 'getUTC' : 'get') + k]();
+  const v = { weekday: tr('wd' + g('Day')), month: tr('mon' + (g('Month') + 1)), d: String(g('Date')), y: String(g('FullYear')) };
+  return o.weekday && !o.month ? v.weekday : o.weekday ? tr('fmtWeekdayDate', v) : o.day ? tr('fmtDate', v) : tr('fmtMonthYear', v);
+}
+// names in the data files (feasts, tours, the Gospels and Bible places) are English; i18n/content/<lang>.json translates them
+let content = {};
+const td = (s) => (s && content[s]) || s;
+const contents = new Map([['en', Promise.resolve({})]]);
+function loadContent(code) {
+  if (!contents.has(code)) contents.set(code, fetch(new URL('i18n/content/' + code + '.json', document.baseURI)).then(r => r.ok ? r.json() : {}).catch(e => { contents.delete(code); return {}; }));
+  return contents.get(code);
+}
 let regionNames = null, langNames = null;
 const dicts = new Map([['en', Promise.resolve(EN)]]);
 function loadDict(code) {
@@ -1083,6 +1108,7 @@ function applyStatic() {
 async function useLang(code) {
   let dict;
   try { dict = await loadDict(code); } catch (e) { code = 'en'; dict = EN; }
+  content = await loadContent(code);
   const l = LANG_BY[code];
   Object.assign(i18n, { code, dict, locale: l.locale, wiki: l.wiki, rtl: RTL.has(code) });
   plurals = new Intl.PluralRules(l.locale);
@@ -1101,7 +1127,7 @@ const langReady = useLang(detectLang());
 /* ---------- usage counts: anonymous GoatCounter events (no cookies), read on admin.html ---------- */
 // track('tab/bible') counts one use of a feature; the counter script loads at the end of the page
 function track(name, title) { try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: name, title: title || name, event: true }); } catch (e) {} }
-window.ccfI18n = { tr, ready: langReady, get lang() { return i18n.code; }, get locale() { return i18n.locale; } };
+window.ccfI18n = { tr, td, date: dateText, ready: langReady, get lang() { return i18n.code; }, get locale() { return i18n.locale; } };
 
 // type codes come from the data build: low 3 bits = kind, bit 8 = matched by name only
 const TYPES = [
@@ -1236,7 +1262,7 @@ function tidySched(rows) {
     .filter(r => r && !seen.has(r.toLowerCase()) && seen.add(r.toLowerCase()));
 }
 // day names and clock times in the page language (2024-01-07 was a Sunday)
-const dayName = (d, width) => new Date(2024, 0, 7 + d).toLocaleDateString(i18n.locale, { weekday: width });
+const dayName = (d, width) => dateText(new Date(2024, 0, 7 + d), { weekday: width });
 const clock12 = (min) => new Date(2024, 0, 7, Math.floor(min / 60), min % 60).toLocaleTimeString(i18n.locale, { hour: 'numeric', minute: '2-digit' });
 function daysLabel(mask) {
   const days = [0, 1, 2, 3, 4, 5, 6].filter(d => mask & (1 << d));
@@ -1269,7 +1295,7 @@ function schedRows(slots, kind) {
 function scheduleHTML(entry, checked, host, slots) {
   const mass = (entry && entry[4]) || [], conf = (entry && entry[5]) || [], src = entry && entry[6];
   if (!mass.length && !conf.length) return '';
-  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(i18n.locale, { month: 'short', year: 'numeric' }) : '';
+  const when = checked ? dateText(new Date(checked + 'T12:00:00'), { month: 'short', year: 'numeric' }) : '';
   const table = (kind) => {
     const rows = slots && mf.data ? schedRows(slots.slice(1), kind) : [];
     if (!rows.length) return '';
@@ -1288,7 +1314,7 @@ function scheduleHTML(entry, checked, host, slots) {
 function staffHTML(entry, checked, webUrl, host) {
   const staff = (entry && entry[2]) || [];
   const src = (entry && entry[3]) || webUrl;
-  const when = checked ? new Date(checked + 'T12:00:00').toLocaleDateString(i18n.locale, { month: 'short', year: 'numeric' }) : '';
+  const when = checked ? dateText(new Date(checked + 'T12:00:00'), { month: 'short', year: 'numeric' }) : '';
   if (!staff.length) return '';  // only show Staff when the parish site named its clergy
   // "Father Vu Lam" and "Fr. Peter Vu Lam" on one page are the same man: keep the fuller entry
   const words = (n) => n.toLowerCase().replace(/\./g, '').split(/\s+/);
@@ -1400,7 +1426,7 @@ function whenText(n) {
   const time = new Date(2000, 0, 2, Math.floor(n.at / 60), n.at % 60).toLocaleTimeString(i18n.locale, { hour: 'numeric', minute: '2-digit' });
   if (n.k === 0) return tr('whenToday', { time });
   if (n.k === 1) return tr('whenTomorrow', { time });
-  const day = new Date(Date.now() + n.k * 864e5).toLocaleDateString(i18n.locale, { weekday: 'long' });
+  const day = dateText(new Date(Date.now() + n.k * 864e5), { weekday: 'long' });
   return tr('whenDay', { day: day.replace(/^./, c => c.toUpperCase()), time });
 }
 async function hereOrCenter() {
@@ -2234,7 +2260,7 @@ const ordinalEn = (n) => n + ({ one: 'st', two: 'nd', few: 'rd' }[new Intl.Plura
 function wdDate(v, precision) {
   const m = /^([+-]?\d+)-(\d\d)-(\d\d)/.exec(v || ''); if (!m) return '';
   const y = +m[1];
-  if (+precision >= 11 && +m[2] && +m[3] && y > 0) return new Date(Date.UTC(y, +m[2] - 1, +m[3])).toLocaleDateString(i18n.locale, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+  if (+precision >= 11 && +m[2] && +m[3] && y > 0) return dateText(new Date(Date.UTC(y, +m[2] - 1, +m[3])), { year: 'numeric', month: 'long', day: 'numeric' }, true);
   if (+precision === 7 && y > 0) { const n = Math.ceil(y / 100); return tr('century', { n: String(n), roman: roman(n), ord: ordinalEn(n) }); }
   if (+precision === 8 && y > 0) return tr('decade', { y: String(Math.floor(y / 10) * 10) });
   return y < 0 ? tr('bc', { y: String(-y) }) : String(y);
@@ -3050,7 +3076,7 @@ async function selectChurch(i, { fly = true } = {}) {
     <div id="cAbout"></div>
     <div class="prov">
       ${conf < 0.55 ? `<span class="pill warn" title="${esc(tr('unverifiedTip'))}">${esc(tr('unverified'))}</span>` : ''}${how === 'name' ? `<span class="pill warn">${esc(tr('byName'))}</span>` : `<span class="pill">${esc(tr('listed'))}</span>`}
-      <div style="margin-top:8px">${esc(tr(updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: /^\d{4}-\d\d-\d\d$/.test(updated) ? new Date(updated + 'T12:00:00').toLocaleDateString(i18n.locale, { dateStyle: 'medium' }) : updated }))}</div>
+      <div style="margin-top:8px">${esc(tr(updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: /^\d{4}-\d\d-\d\d$/.test(updated) ? dateText(new Date(updated + 'T12:00:00'), { year: 'numeric', month: 'short', day: 'numeric' }) : updated }))}</div>
     </div>`;
   if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
   syncSave(i);
