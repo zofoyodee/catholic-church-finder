@@ -15,6 +15,7 @@ const X = '<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 const i18n = window.ccfI18n;
 const T = (k, v) => i18n ? i18n.tr(k, v) : k;
 const loc = () => (i18n && i18n.locale) || 'en';
+const td = (s) => i18n && i18n.td ? i18n.td(s) : s;
 
 /* ---------- settings kept in this browser ---------- */
 const VIEW_KEY = 'ccf-view';
@@ -56,9 +57,11 @@ function liturgicalDay(n, cal) {
   const out = { season: '', color: 'green', title: '', key: null, rank: '', week: 0 };
   const sundayOf = (k) => `${ORD[k] || nth(k)} Sunday`;
   const weekdayOf = (k, season) => `${WEEKDAY[wd]} of the ${ORD[k] || nth(k)} Week ${season}`;
+  // the pattern behind a numbered day, so each language can name it its own way (dayTitle)
+  const pat = (sun, day, k) => ({ key: wd === 0 && sun ? sun : day, w: k, wd });
   if (n >= advent1 && n < xmas) {
     const k = Math.floor((n - advent1) / 7) + 1;
-    Object.assign(out, { season: 'Advent', color: n === advent1 + 14 ? 'rose' : 'violet', week: k, title: wd === 0 ? `${sundayOf(k)} of Advent` : weekdayOf(k, 'of Advent') });
+    Object.assign(out, { season: 'Advent', color: n === advent1 + 14 ? 'rose' : 'violet', week: k, title: wd === 0 ? `${sundayOf(k)} of Advent` : weekdayOf(k, 'of Advent'), pat: pat('litSunAdvent', 'litDayAdvent', k) });
   } else if (n >= xmas || n <= baptism) {
     Object.assign(out, { season: 'Christmas Time', color: 'white', title: 'Christmas Time' });
     if (n === xmas) Object.assign(out, { title: 'The Nativity of the Lord', key: 'christmas', rank: 'S' });
@@ -67,33 +70,33 @@ function liturgicalDay(n, cal) {
     else if (n > xmas && n < xmas + 8) out.title = 'Within the Octave of Christmas';
   } else if (n < E - 46) {
     const k = Math.floor((n - baptism) / 7) + 1;
-    Object.assign(out, { season: 'Ordinary Time', week: k, title: wd === 0 ? `${sundayOf(k)} in Ordinary Time` : weekdayOf(k, 'in Ordinary Time') });
+    Object.assign(out, { season: 'Ordinary Time', week: k, title: wd === 0 ? `${sundayOf(k)} in Ordinary Time` : weekdayOf(k, 'in Ordinary Time'), pat: pat('litSunOrdinary', 'litDayOrdinary', k) });
   } else if (n < E - 3) {
     const k = Math.floor((n - (E - 42)) / 7) + 1;
     Object.assign(out, { season: 'Lent', color: 'violet', week: Math.max(k, 0) });
     if (n === E - 46) out.title = 'Ash Wednesday';
-    else if (n < E - 42) out.title = `${WEEKDAY[wd]} after Ash Wednesday`;
+    else if (n < E - 42) Object.assign(out, { title: `${WEEKDAY[wd]} after Ash Wednesday`, pat: pat(null, 'litAfterAsh', 0) });
     else if (n === E - 7) Object.assign(out, { title: 'Palm Sunday of the Passion of the Lord', color: 'red', season: 'Holy Week' });
-    else if (n > E - 7) Object.assign(out, { title: `${WEEKDAY[wd]} of Holy Week`, season: 'Holy Week' });
-    else out.title = wd === 0 ? `${sundayOf(k)} of Lent` : weekdayOf(k, 'of Lent');
+    else if (n > E - 7) Object.assign(out, { title: `${WEEKDAY[wd]} of Holy Week`, season: 'Holy Week', pat: pat(null, 'litHolyWeek', 0) });
+    else Object.assign(out, { title: wd === 0 ? `${sundayOf(k)} of Lent` : weekdayOf(k, 'of Lent'), pat: pat('litSunLent', 'litDayLent', k) });
     if (n === E - 21) out.color = 'rose';
   } else if (n < E) {
     Object.assign(out, { season: 'Easter Triduum', color: n === E - 2 ? 'red' : n === E - 3 ? 'white' : 'violet',
       title: ['Holy Thursday', 'Good Friday', 'Holy Saturday'][n - (E - 3)], key: n === E - 2 ? 'goodfriday' : null });
   } else if (n <= E + 49) {
     const k = Math.floor((n - E) / 7) + 1;
-    Object.assign(out, { season: 'Easter Time', color: 'white', week: k, title: wd === 0 ? `${sundayOf(k)} of Easter` : weekdayOf(k, 'of Easter') });
-    if (n === E) Object.assign(out, { title: 'Easter Sunday of the Resurrection of the Lord', key: 'easter', rank: 'S' });
-    else if (n < E + 7) out.title = `${WEEKDAY[wd]} within the Octave of Easter`;
-    else if (n === E + 7) Object.assign(out, { title: 'Second Sunday of Easter (Divine Mercy Sunday)', key: 'divinemercy' });
-    else if (n === E + 39) Object.assign(out, { title: 'The Ascension of the Lord', key: 'ascension', rank: 'S' });
-    else if (n === E + 49) Object.assign(out, { title: 'Pentecost Sunday', key: 'pentecost', rank: 'S', color: 'red' });
+    Object.assign(out, { season: 'Easter Time', color: 'white', week: k, title: wd === 0 ? `${sundayOf(k)} of Easter` : weekdayOf(k, 'of Easter'), pat: pat('litSunEaster', 'litDayEaster', k) });
+    if (n === E) Object.assign(out, { title: 'Easter Sunday of the Resurrection of the Lord', pat: null, key: 'easter', rank: 'S' });
+    else if (n < E + 7) Object.assign(out, { title: `${WEEKDAY[wd]} within the Octave of Easter`, pat: pat(null, 'litEasterOctave', 0) });
+    else if (n === E + 7) Object.assign(out, { title: 'Second Sunday of Easter (Divine Mercy Sunday)', pat: null, key: 'divinemercy' });
+    else if (n === E + 39) Object.assign(out, { title: 'The Ascension of the Lord', pat: null, key: 'ascension', rank: 'S' });
+    else if (n === E + 49) Object.assign(out, { title: 'Pentecost Sunday', pat: null, key: 'pentecost', rank: 'S', color: 'red' });
   } else {
     const sun = n - wd, k = 34 - Math.round((christKing - sun) / 7);
-    Object.assign(out, { season: 'Ordinary Time', week: k, title: wd === 0 ? `${sundayOf(k)} in Ordinary Time` : weekdayOf(k, 'in Ordinary Time') });
+    Object.assign(out, { season: 'Ordinary Time', week: k, title: wd === 0 ? `${sundayOf(k)} in Ordinary Time` : weekdayOf(k, 'in Ordinary Time'), pat: pat('litSunOrdinary', 'litDayOrdinary', k) });
     const sol = { [E + 56]: ['The Most Holy Trinity', 'trinity'], [E + 63]: ['The Most Holy Body and Blood of Christ', 'corpus'], [E + 68]: ['The Most Sacred Heart of Jesus', 'sacredheart'], [christKing]: ['Our Lord Jesus Christ, King of the Universe', 'christking'] };
-    if (sol[n]) Object.assign(out, { title: sol[n][0], key: sol[n][1], rank: 'S', color: 'white' });
-    else if (n === E + 69) Object.assign(out, { title: 'The Immaculate Heart of the Blessed Virgin Mary', key: 'immaculateheart', rank: 'M' });
+    if (sol[n]) Object.assign(out, { title: sol[n][0], pat: null, key: sol[n][1], rank: 'S', color: 'white' });
+    else if (n === E + 69) Object.assign(out, { title: 'The Immaculate Heart of the Blessed Virgin Mary', pat: null, key: 'immaculateheart', rank: 'M' });
   }
   // a saint or feast fixed to this date, unless the day already outranks it
   const fixed = cal && cal.fixed.find(f => f[0] === md);
@@ -103,7 +106,7 @@ function liturgicalDay(n, cal) {
     const [, rank, title, wiki, churches] = fixed, sunday = wd === 0;
     const outranks = rank === 'S' || (rank === 'F' && (!sunday || LORD_FEASTS.has(md) || out.season === 'Christmas Time')) || (!sunday && (rank === 'M' || rank === 'm'));
     if (outranks) {
-      if (rank === 'S' || rank === 'F') Object.assign(out, { title, rank, key: md, color: redFeast(title) ? 'red' : title === 'All Souls' ? 'violet' : 'white' });
+      if (rank === 'S' || rank === 'F') Object.assign(out, { title, rank, key: md, pat: null, color: redFeast(title) ? 'red' : title === 'All Souls' ? 'violet' : 'white' });
       Object.assign(out, { saint: { title, rank, wiki, md }, wiki, churches });
     }
   }
@@ -114,6 +117,12 @@ function liturgicalDay(n, cal) {
 }
 const RANK_KEY = { S: 'rankS', F: 'rankF', M: 'rankM', m: 'rankm' };
 const rankName = (r) => RANK_KEY[r] ? T(RANK_KEY[r]) : '';
+// the day's name in the page language: numbered days follow the dictionary's pattern, named ones come from the content file
+const dayTitle = (d) => {
+  if (!d.pat || !i18n || i18n.lang === 'en') return td(d.title);
+  const p = d.pat, day = i18n.date(fromNo(d.n), { weekday: 'long' }, true);
+  return T(p.key, { n: p.w, ord: ORD[p.w] || nth(p.w), day }).replace(/^./, c => c.toUpperCase());
+};
 const SEASON_KEY = { 'Advent': 'seasonAdvent', 'Christmas Time': 'seasonChristmas', 'Ordinary Time': 'seasonOrdinary', 'Lent': 'seasonLent', 'Holy Week': 'seasonHolyWeek', 'Easter Triduum': 'seasonTriduum', 'Easter Time': 'seasonEaster' };
 const seasonName = (x) => SEASON_KEY[x] ? T(SEASON_KEY[x]) : x;
 const colorName = (c) => T('color_' + (COLORS[c] ? c : 'green'));
@@ -157,9 +166,9 @@ function seasonPill() {
   const sk = SEASON_KEY[today.season] || 'seasonOrdinary';
   $('seasonI').setAttribute('aria-label', T('seasonInfo'));
   $('seasonInfo').innerHTML = `<b>${esc(seasonName(today.season || 'Ordinary Time'))}</b><p>${esc(T('about_' + sk))}</p>`;
-  const label = today.season === 'Ordinary Time' && today.week ? T('ordinaryWeek', { season: seasonName('Ordinary Time'), w: today.week }) : today.season ? seasonName(today.season) : today.title;
+  const label = today.season === 'Ordinary Time' && today.week ? T('ordinaryWeek', { season: seasonName('Ordinary Time'), w: today.week }) : today.season ? seasonName(today.season) : dayTitle(today);
   b.innerHTML = `<i aria-hidden="true"></i><span>${esc(label)}</span>`;
-  b.title = T('seasonTip', { title: today.title, color: colorName(today.color) });
+  b.title = T('seasonTip', { title: dayTitle(today), color: colorName(today.color) });
 }
 
 /* ---------- church of the day ---------- */
@@ -174,7 +183,7 @@ function buildTodayCard() {
 async function fillToday() {
   const el = $('today') || buildTodayCard();
   const d = fromNo(today.n);
-  const date = d.toLocaleDateString(loc(), { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
+  const date = i18n ? i18n.date(d, { weekday: 'long', month: 'long', day: 'numeric' }, true) : d.toLocaleDateString('en', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
   let rec = null; try { rec = await ccf.shardFor(cotd.i); } catch (e) {}
   const name = rec ? rec[0] : T('aChurch');
   const where = rec ? [rec[2], ccf.countryName(rec[5])].filter(Boolean).join(', ') : '';
@@ -183,9 +192,9 @@ async function fillToday() {
   el.innerHTML = `<button class="x" id="todayClose" aria-label="${esc(T('todayClose'))}">${X}</button>
     <div class="kick"><b>${esc(date)}</b> · ${esc(today.season ? seasonName(today.season) : T('todayWord'))}</div>
     <div class="saint"><div class="pic"><div class="ph" aria-hidden="true">✠</div></div>
-      <div><h2>${esc(s ? s.title : today.title)}</h2><div class="rank">${esc(s ? rankName(s.rank) + (s.title !== today.title && today.title && !(s.rank === 'S' || s.rank === 'F') ? ' · ' + today.title : '') : '')}</div></div></div>
+      <div><h2>${esc(s ? td(s.title) : dayTitle(today))}</h2><div class="rank">${esc(s ? rankName(s.rank) + (s.title !== today.title && today.title && !(s.rank === 'S' || s.rank === 'F') ? ' · ' + dayTitle(today) : '') : '')}</div></div></div>
     <button class="cotd" id="cotdGo"><small>${esc(T('cotd'))} · ${esc(why)}</small><b>${esc(name)}</b><span>${esc(where)}</span></button>
-    <div class="row"><button class="btn primary" id="cotdVisit">${esc(T('visitGlobe'))}</button>${s && s.wiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(s.wiki.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(T('aboutSaint', { name: i18n && i18n.lang !== 'en' ? s.title : s.title.replace(/^The /, 'the ') }))}</a>` : ''}</div>`;
+    <div class="row"><button class="btn primary" id="cotdVisit">${esc(T('visitGlobe'))}</button>${s && s.wiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(s.wiki.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(T('aboutSaint', { name: i18n && i18n.lang !== 'en' ? td(s.title) : s.title.replace(/^The /, 'the ') }))}</a>` : ''}</div>`;
   const go = () => { showToday(false, true); ccf.selectChurch(cotd.i, { fly: true }); };
   $('cotdGo').addEventListener('click', go);
   $('cotdVisit').addEventListener('click', go);
