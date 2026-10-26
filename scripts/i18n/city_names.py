@@ -8,8 +8,8 @@ usage: python3 scripts/i18n/city_names.py ne_10m_populated_places.geojson
 """
 import json, sys, os
 
-# Every other page language uses en.json: it has no Natural Earth column, or (Hindi, Tamil, Malayalam)
-# MapLibre cannot shape its script. The page lists these files in CITY_FILES.
+# Languages without a column get theirs from Wikipedia (city_names_wiki.py); Hindi, Tamil, Malayalam and Konkani
+# use en.json since MapLibre cannot shape their scripts. The page lists every file in CITY_FILES.
 LANGS = ['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja']
 NE_COL = {'en': 'NAME_EN', 'es': 'NAME_ES', 'pt': 'NAME_PT', 'fr': 'NAME_FR', 'it': 'NAME_IT', 'pl': 'NAME_PL', 'de': 'NAME_DE',
           'zh': 'NAME_ZH', 'nl': 'NAME_NL', 'id': 'NAME_ID', 'vi': 'NAME_VI', 'ko': 'NAME_KO', 'hu': 'NAME_HU', 'uk': 'NAME_UK', 'ar': 'NAME_AR',
