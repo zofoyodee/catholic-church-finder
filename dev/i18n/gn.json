@@ -495,5 +495,8 @@
   "mFind": "Eheka Tupao",
   "mMine": "Che Tupaokuéra",
   "mExplore": "Ejeporeka",
-  "mSettings": "Ñemboheko"
+  "mSettings": "Ñemboheko",
+  "langNearTitle": "Misa {lang}-pe ndeypýpe",
+  "langNearIntro": "Tupao ohechaukáva Misa ko ñe’ẽme iwebsite-pe, hi’aguĩvéva raẽ. Ejopy peteĩme reikuaa hag̃ua hesegua.",
+  "langNoneNear": "Ndaipóri {dist} ryepýpe. Ko’ãva hi’aguĩvéva oguerekóva Misa {lang}-pe."
 }

@@ -503,5 +503,8 @@
   "mFind": "Kerk zoeken",
   "mMine": "Mijn kerken",
   "mExplore": "Ontdekken",
-  "mSettings": "Instellingen"
+  "mSettings": "Instellingen",
+  "langNearTitle": "Mis in het {lang} bij u in de buurt",
+  "langNearIntro": "Kerken die op hun website een Mis in deze taal vermelden, de dichtstbijzijnde eerst. Tik op een kerk voor details.",
+  "langNoneNear": "Geen binnen {dist}. Dit zijn de dichtstbijzijnde met een Mis in het {lang}."
 }

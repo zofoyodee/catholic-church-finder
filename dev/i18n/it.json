@@ -503,5 +503,8 @@
   "mFind": "Trova una chiesa",
   "mMine": "Le mie chiese",
   "mExplore": "Esplora",
-  "mSettings": "Impostazioni"
+  "mSettings": "Impostazioni",
+  "langNearTitle": "Messa in {lang} vicino a te",
+  "langNearIntro": "Chiese il cui sito indica una Messa in questa lingua, la più vicina per prima. Tocca una per i dettagli.",
+  "langNoneNear": "Nessuna entro {dist}. Queste sono le più vicine con Messa in {lang}."
 }

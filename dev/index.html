@@ -689,7 +689,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/mobile.css">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 18:56 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 19:01 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -937,7 +937,7 @@ const EN = {
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass Soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
   massNear: 'Mass Near Me', churchNear: 'Church Near Me', loadingChurchNear: 'Finding churches near you…', confNear: 'Confession Near Me', massNearTip: 'Churches within {dist} of you, nearest first, with their next Mass', confNearTip: 'Churches within {dist} of you, nearest first, with their next Confession',
-  massNearTitle: 'Masses Near You', langListTitle: 'Mass in {lang}, Nearest First', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession Near You', massNearIntro: 'Churches within {dist}, nearest first, with the next Mass when the parish posts it online. Tap one for details.', confNearIntro: 'Churches within {dist}, nearest first, with the next Confession when the parish posts it online. Tap one for details.', massNearTag: 'Showing {n} churches within {dist}', confNearTag: 'Showing {n} churches within {dist}', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
+  massNearTitle: 'Masses Near You', langNearTitle: 'Mass in {lang} Near You', langNearIntro: 'Churches whose websites list a Mass in this language, nearest first. Tap one for details.', langNoneNear: 'None within {dist}. These are the nearest with Mass in {lang}.', langListTitle: 'Mass in {lang}, Nearest First', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession Near You', massNearIntro: 'Churches within {dist}, nearest first, with the next Mass when the parish posts it online. Tap one for details.', confNearIntro: 'Churches within {dist}, nearest first, with the next Confession when the parish posts it online. Tap one for details.', massNearTag: 'Showing {n} churches within {dist}', confNearTag: 'Showing {n} churches within {dist}', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
   noTimesWeek: 'No time listed this week', timesUnknown: 'Times not listed, check the parish website', websiteShort: 'Website', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church is within {dist}. Here is the nearest one.', nearDistLabel: 'How far to look', noneInRange: 'No church of the kinds you have chosen is within {dist}. Try a longer distance or show more kinds above.',
   seeWorldwide: 'See all {n} churches with Mass in {lang} worldwide', timesCheck: 'Times come from parish websites. Check with the parish before you go.',
   confSoon: 'Confession Soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
@@ -1518,7 +1518,7 @@ document.addEventListener('submit', async (e) => {
 async function massNear(kind) {
   if (mn.kind !== kind || kind === 2) track(kind === 2 ? 'mass-in-language/' + mf.lang : kind ? 'confession-near-me' : 'church-near-me');
   mn.kind = kind; mf.mode = '';
-  if (kind < 2) mf.lang = '';  // the three are separate questions
+  if (kind === 1) mf.lang = '';  // a chosen language narrows Church Near Me to churches with Mass in it
   showNear(true);
   const list = $('nearList'); $('nearN').textContent = ''; nearRows = null; mn.rows = null;
   setNearTitle();
@@ -1541,7 +1541,12 @@ async function massNear(kind) {
   if (kind < 2) {
     // every church within the chosen distance, nearest first; the ones whose websites we could read also show their next time
     state.only = null;
-    for (const r of nearest(lat, lon, 1500)) {
+    if (kind === 0 && mf.lang) {
+      // Mass in a language near you: the ones within the distance, or the nearest few when none is that close
+      const all = [...langSet(mf.lang)].filter(i => state.enabled.has(state.typ[i] & 7)).map(i => ({ i, n: null, m: metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6) })).sort((a, b) => a.m - b.m);
+      rows = all.filter(r => r.m <= nearM());
+      if (!rows.length) rows = all.slice(0, 10);
+    } else for (const r of nearest(lat, lon, 1500)) {
       if (r.m > nearM() && rows.length) break;
       const v = mf.data.c[r.i];
       rows.push({ i: r.i, n: v && kind ? nextTime(v, kind, -1) : null, m: r.m });  // Church Near Me lists no times
@@ -1558,7 +1563,7 @@ async function massNear(kind) {
     if (mn.kind !== kind) return;
     rows = rows.filter((r, k) => !notChurch(named[k] && named[k][0]));
   }
-  mn.far = kind < 2 && rows.length === 1 && rows[0].m > nearM();
+  mn.far = kind < 2 && rows.length > 0 && rows[0].m > nearM() && (rows.length === 1 || !!mf.lang);
   mn.rows = rows;
   state.only = kind === 2 ? inLang : new Set(rows.map(r => r.i));
   map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
@@ -1571,7 +1576,9 @@ async function massNear(kind) {
     const pts = mainCluster([...inLang].map(i => [state.lon[i] / 1e6, state.lat[i] / 1e6]));
     if (pts.length) map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 9, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   } else if (rows.length) {
-    const pts = [[lon, lat], ...rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
+    // you and the nearest few; when the nearest are far away, just them, so the view is never mid-ocean
+    const near8 = rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6]);
+    const pts = mn.far && mf.lang ? mainCluster(near8) : [[lon, lat], ...near8];
     map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 14, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   }
   renderMassNear();
@@ -1684,15 +1691,16 @@ function fillList(rows, cap, head, rowHTML, tail, wait) {
 function setNearTitle() {
   const title = document.querySelector('#nearTitle span');
   if (mn.kind === 3) { title.dataset.i18n = mn.area.q ? 'matchTitle' : mn.area.name ? 'churchesIn' : 'churchesInView'; title.textContent = mn.area.q ? tr('matchTitle', { q: mn.area.q }) : mn.area.name ? tr('churchesIn', { place: mn.area.name }) : tr('churchesInView'); return; }
-  title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : mn.kind === 1 ? 'confNearTitle' : 'nearYou';
-  title.textContent = mn.kind === 2 ? tr('langListTitle', { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
+  const langNear = mn.kind === 0 && mf.lang;
+  title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : langNear ? 'langNearTitle' : mn.kind === 1 ? 'confNearTitle' : 'nearYou';
+  title.textContent = mn.kind === 2 || langNear ? tr(title.dataset.i18n, { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
 }
 async function renderMassNear() {
   const rows = mn.rows, list = $('nearList'); if (!rows) return;
   setNearTitle();
   $('nearN').textContent = rows.length ? fmt(mn.kind === 2 ? state.only.size : rows.length) : '';
-  const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : 'areaIntro';
-  const head = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? locHelp('near', geoDenied ? tr('geoOff') + ' ' + tr('usingMapCenter') : tr('usingMapCenter')) : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear', { dist: nearDist(nearMiles) }))}</p>` : '') + (rows.length ? '' : `<p class="empty">${esc(tr('noneInRange', { dist: nearDist(nearMiles) }))}</p>`);
+  const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : mf.lang ? 'langNearIntro' : 'areaIntro';
+  const head = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? locHelp('near', geoDenied ? tr('geoOff') + ' ' + tr('usingMapCenter') : tr('usingMapCenter')) : '') + (mn.far ? `<p class="note">${esc(tr(mf.lang ? 'langNoneNear' : 'noMassNear', { dist: nearDist(nearMiles), lang: massLangName(mf.lang) }))}</p>` : '') + (rows.length ? '' : `<p class="empty">${esc(tr('noneInRange', { dist: nearDist(nearMiles) }))}</p>`);
   fillList(rows, 150, head, (r, rec) => {
     const plain = mn.kind === 0, unknown = mn.kind === 1 && !r.n && !mf.data.c[r.i], site = rec[6] ? (/^https?:/.test(rec[6]) ? rec[6] : 'https://' + rec[6]) : '', t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
     if (notChurch(rec[0])) return '';
@@ -1727,7 +1735,8 @@ async function initMassFilters() {
     }
     if (e.target.id !== 'massLang') return;
     mf.lang = e.target.value;
-    if (mf.lang) massNear(2); else { endMassNear(); showNear(false); applyMassFilter(); }
+    // a language narrows Church Near Me: the nearest churches with Mass in it, around you
+    if (mf.lang || mn.kind === 0) massNear(0); else { endMassNear(); showNear(false); applyMassFilter(); }
   });
 }
 

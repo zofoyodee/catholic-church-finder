@@ -495,5 +495,8 @@
   "mFind": "Chọta Ụka",
   "mMine": "Ụka M",
   "mExplore": "Nyochaa",
-  "mSettings": "Ntọala"
+  "mSettings": "Ntọala",
+  "langNearTitle": "Mass n’asụsụ {lang} nso gị",
+  "langNearIntro": "Ụka ndị webụsaịtị ha depụtara Mass n’asụsụ a, nke kacha nso na mbụ. Pịa otu maka nkọwa.",
+  "langNoneNear": "Ọ dịghị nke dị n’ime {dist}. Ndị a bụ ndị kacha nso nwere Mass n’asụsụ {lang}."
 }

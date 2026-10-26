@@ -495,5 +495,8 @@
   "mFind": "Caria Kanitha",
   "mMine": "Makanitha Makwa",
   "mExplore": "Thuthuria",
-  "mSettings": "Mũbango"
+  "mSettings": "Mũbango",
+  "langNearTitle": "Mĩsa ya {lang} Hakuhĩ Nawe",
+  "langNearIntro": "Makanitha marĩa website ciao ciandĩkĩte Mĩsa rũthiomi-inĩ rũrũ, rĩrĩa rĩrĩ hakuhĩ mbere. Hũtia rĩmwe ũmenye maũndũ.",
+  "langNoneNear": "Gũtirĩ thĩinĩ wa {dist}. Macio nĩmo marĩ hakuhĩ makĩrĩ na Mĩsa ya {lang}."
 }

@@ -495,5 +495,8 @@
   "mFind": "Hitady Fiangonana",
   "mMine": "Ireo Fiangonako",
   "mExplore": "Hikaroka",
-  "mSettings": "Fandrindrana"
+  "mSettings": "Fandrindrana",
+  "langNearTitle": "Lamesa amin’ny teny {lang} akaikinao",
+  "langNearIntro": "Fiangonana manoratra Lamesa amin’ity fiteny ity ao amin’ny tranokalany, ny akaiky indrindra aloha. Tsindrio ny iray raha hahalala bebe kokoa.",
+  "langNoneNear": "Tsy misy ao anatin’ny {dist}. Ireto no akaiky indrindra manana Lamesa amin’ny teny {lang}."
 }

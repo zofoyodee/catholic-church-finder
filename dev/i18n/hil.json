@@ -495,5 +495,8 @@
   "mFind": "Mangita sang Simbahan",
   "mMine": "Akon mga Simbahan",
   "mExplore": "Usisaon",
-  "mSettings": "Mga Setting"
+  "mSettings": "Mga Setting",
+  "langNearTitle": "Misa sa {lang} Malapit sa Imo",
+  "langNearIntro": "Mga simbahan nga ang website nagalista sang Misa sa sini nga lenguahe, ang pinakamalapit una. I-tap ang isa para sa detalye.",
+  "langNoneNear": "Wala sa sulod sang {dist}. Amo ini ang pinakamalapit nga may Misa sa {lang}."
 }

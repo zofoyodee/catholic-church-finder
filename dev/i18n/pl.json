@@ -533,5 +533,8 @@
   "mFind": "Znajdź kościół",
   "mMine": "Moje kościoły",
   "mExplore": "Odkrywaj",
-  "mSettings": "Ustawienia"
+  "mSettings": "Ustawienia",
+  "langNearTitle": "Msza w języku {lang} w pobliżu",
+  "langNearIntro": "Kościoły, których strony podają Mszę w tym języku, najbliższe najpierw. Dotknij, aby zobaczyć szczegóły.",
+  "langNoneNear": "Brak w promieniu {dist}. Oto najbliższe z Mszą w języku {lang}."
 }
