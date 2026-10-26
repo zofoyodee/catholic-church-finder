@@ -689,7 +689,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/mobile.css">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 14:01 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 14:06 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -3792,7 +3792,7 @@ function renderNow() {
       <button id="lifePrev" aria-label="${esc(tr('jPrev'))}" title="${esc(tr('jPrev'))}" ${pos <= 0 ? 'disabled' : ''}>${ICON_PREV}</button>
       <button id="lifePlay" class="play" aria-pressed="${life.auto}" aria-label="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}" title="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}">${life.auto ? ICON_PAUSE : ICON_PLAY}</button>
       <button id="lifeNext" aria-label="${esc(tr('jNext'))}" title="${esc(tr('jNext'))}" ${pos >= evs.length - 1 ? 'disabled' : ''}>${ICON_NEXT}</button>
-      ${d.mysteries.length ? `<button id="lifeRosary" class="ro-toggle" aria-pressed="${life.era === 'rosary'}">${ROSARY_ICON}<span>${esc(tr('jRosary'))}</span></button>` : ''}
+      ${d.mysteries.length ? `<button id="lifeRosary" class="ro-toggle" aria-pressed="${life.era === 'rosary'}" aria-label="${esc(tr('jRosary'))}" title="${esc(tr('jRosary'))}">${ROSARY_ICON}<span>${esc(tr('jRosary'))}</span></button>` : ''}
     </div>
     <div class="ln-txt" aria-live="polite">${e ? `
       <div class="kick"><i style="background:${d.color[e.e]}"></i>${esc(tr('jEra_' + e.e))} · ${esc(tr('jEventOf', { k: fmt(e.i + 1), n: d.events.length }))}${e.ro ? ' · ' + roTag(e) : ''}</div>
