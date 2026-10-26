@@ -638,13 +638,9 @@ document.addEventListener('ccf-lang', () => {
   if (!toursEl.hidden) renderTourList();
   if (tour.t) renderTourCard(tour.k);
 });
-ccf.opened.then(async ({ shared }) => {
+ccf.opened.then(() => {
   const tourId = new URLSearchParams(location.search).get('tour');
-  if (tourId && !bibleMode()) { startTour(tourId); return; }
-  await todayReady;
-  let closed = null; try { closed = localStorage.getItem(TODAY_KEY); } catch (e) {}
-  // church of the day slides in once the globe has settled over the United States, unless closed earlier today;
-  // phones keep the globe clear and offer it on the Today button instead
-  if (!shared && !bibleMode() && !compact() && cotd && closed !== String(today.n)) setTimeout(() => { if (!tour.t && $('card').hidden) showToday(true, true); }, reduceMotion ? 300 : 3600);
+  if (tourId && !bibleMode()) startTour(tourId);
+  // the church of the day no longer slides in by itself: the globe stays clear, and Today in the Church in the Menu opens it
 });
 })();
