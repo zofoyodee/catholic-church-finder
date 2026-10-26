@@ -237,6 +237,9 @@ button, input { font: inherit; color: inherit; }
 }
 .results button { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: center; text-align: left; width: 100%; padding: 8px 10px; border: 0; background: transparent; border-radius: 9px; cursor: pointer; }
 .results button:hover, .results button[aria-selected="true"] { background: rgba(232, 184, 74, 0.12); }
+.search .results svg { position: static; }
+.results button.all .nm { color: var(--gold-soft); font-weight: 600; }
+.results button.all + button:not(.all) { margin-top: 4px; }
 .results .nm { display: block; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .results .loc { display: block; font-size: 12px; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .results .note { padding: 10px; color: var(--ink-soft); font-size: 13px; }
@@ -830,7 +833,7 @@ function detectLang() {
 // English is built in; every other language is i18n/<code>.json with the same keys, missing keys fall back to English.
 // Plural forms are key_one, key_few, key_many, key_other (Intl.PluralRules categories) and are picked by vars.n.
 const EN = {
-  startOver: 'Start over', listHere: 'List Churches Here', churchesIn: 'Churches in {place}', churchesInView: 'Churches in This View', areaIntro: 'Nearest to you first. Tap one for details.', areaIntroCenter: 'Nearest to the middle first. Tap one for details.', areaMore: 'Showing the {k} nearest of {n}. Zoom in to see the rest.', areaNone: 'No churches are mapped here yet.', areaTag: 'Showing {n} churches in {place}', areaTagView: 'Showing {n} churches in this view', areaTip: 'Click to list this city\'s churches', youAreHere: 'You Are Here',
+  startOver: 'Start over', listHere: 'List Churches Here', churchesIn: 'Churches in {place}', matchTitle: 'Churches Matching “{q}”', matchTag: 'Showing {n} churches matching “{q}”', allIn: 'All {n} Churches in {place}', allMatching: 'All {n} Churches Matching “{q}”', churchesInView: 'Churches in This View', areaIntro: 'Nearest to you first. Tap one for details.', areaIntroCenter: 'Nearest to the middle first. Tap one for details.', areaMore: 'Showing the {k} nearest of {n}. Zoom in to see the rest.', areaNone: 'No churches are mapped here yet.', areaTag: 'Showing {n} churches in {place}', areaTagView: 'Showing {n} churches in this view', areaTip: 'Click to list this city\'s churches', youAreHere: 'You Are Here',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
   loadingChurches: 'Loading churches…', gathering: 'Gathering churches from around the world…',
   gatheringN: 'Gathering {n} churches from around the world…', placing: 'Placing them on the globe…',
@@ -1473,42 +1476,52 @@ const notChurch = (name) => !!name && (NEVER_CHURCH.test(name) || (NOT_CHURCH.te
 /* ---------- list the churches in a city (click its name) or in the whole view ---------- */
 let areaTicket = 0;
 async function listArea(args) {
-  const { name, center, pop, bounds } = args;
+  const { name, pop, bounds, ids } = args;
+  let { center } = args;
   if (state.mode !== 'churches') return;
   if (mn.kind >= 0) endMassNear();
   mf.lang = ''; renderMassChips();
   const inView = !!bounds, ticket = ++areaTicket;
   showNear(true); $('nearN').textContent = '';
-  document.querySelector('#nearTitle span').textContent = inView ? tr('churchesInView') : tr('churchesIn', { place: name });
+  document.querySelector('#nearTitle span').textContent = inView ? tr('churchesInView') : args.q ? tr('matchTitle', { q: args.q }) : tr('churchesIn', { place: name });
   $('nearList').innerHTML = LOADER(inView ? tr('loadingView') : tr('loadingArea', { place: name }), 'big');
   await nextFrame();
   if (ticket !== areaTicket) return;
+  if (!center) center = [map.getCenter().lng, map.getCenter().lat];  // a list from the search box finds its own middle below
   // a city reaches further the bigger it is
   const radius = pop > 3e6 ? 30000 : pop > 1e6 ? 22000 : pop > 3e5 ? 14000 : pop > 5e4 ? 8000 : 5000;
   const [clon, clat] = center, cos = Math.cos(clat * Math.PI / 180);
   const { lon: L, lat: A, typ, n, enabled } = state, hits = [];
-  for (let i = 0; i < n; i++) {
+  if (ids) for (const i of ids) { if (enabled.has(typ[i] & 7)) hits.push(i); }
+  else for (let i = 0; i < n; i++) {
     if (!enabled.has(typ[i] & 7)) continue;
     const lo = L[i] / 1e6, la = A[i] / 1e6;
     if (inView ? !bounds.contains([lo, la]) : metres(clat, clon, la, lo) > radius) continue;
     hits.push(i);
   }
-  const from = here || center;  // nearest to you when we know where you are
+  // a town from the search box: frame where most of its churches are; a word: the ones nearest you or the view
+  let cluster = ids && !args.q ? mainCluster(hits.map(i => [L[i] / 1e6, A[i] / 1e6])) : null;
+  if (cluster && cluster.length) center = [cluster.reduce((t, p) => t + p[0], 0) / cluster.length, cluster.reduce((t, p) => t + p[1], 0) / cluster.length];
+  const from = here || center || [map.getCenter().lng, map.getCenter().lat];  // nearest to you when we know where you are
   let rows = hits.map(i => ({ i, m: metres(from[1], from[0], A[i] / 1e6, L[i] / 1e6) })).sort((a, b) => a.m - b.m);
   const named = await Promise.all(rows.slice(0, 300).map(r => shardFor(r.i).catch(() => null)));
   if (ticket !== areaTicket || state.mode !== 'churches') return;
+  if (args.q) cluster = [from, ...rows.slice(0, 10).map(r => [L[r.i] / 1e6, A[r.i] / 1e6])];
   const junk = new Set(rows.slice(0, 300).filter((r, k) => notChurch(named[k] && named[k][0])).map(r => r.i));
   if (junk.size) { rows = rows.filter(r => !junk.has(r.i)); for (const i of junk) hits.splice(hits.indexOf(i), 1); }
-  mn.kind = 3; mn.areaArgs = args; mn.rows = rows.slice(0, 300); mn.area = { name: inView ? '' : name, total: rows.length, fromYou: !!here };
+  mn.kind = 3; mn.areaArgs = args; mn.rows = rows.slice(0, 300); mn.area = { name: inView ? '' : name, q: args.q || '', total: rows.length, fromYou: !!here };
   state.only = new Set(hits);
   map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
   map.once('idle', updateNames);
   const ring = [];
-  if (!inView) for (let k = 0; k <= 64; k++) { const t = k / 64 * 2 * Math.PI; ring.push([clon + Math.cos(t) * radius / (111320 * cos), clat + Math.sin(t) * radius / 110540]); }
+  if (!inView && !ids) for (let k = 0; k <= 64; k++) { const t = k / 64 * 2 * Math.PI; ring.push([clon + Math.cos(t) * radius / (111320 * cos), clat + Math.sin(t) * radius / 110540]); }
   map.getSource('area').setData({ type: 'FeatureCollection', features: ring.length ? [{ type: 'Feature', geometry: { type: 'Polygon', coordinates: [ring] }, properties: {} }] : [] });
-  $('tagline').textContent = inView ? tr('areaTagView', { n: fmt(rows.length) }) : tr('areaTag', { n: fmt(rows.length), place: name });
+  $('tagline').textContent = inView ? tr('areaTagView', { n: fmt(rows.length) }) : args.q ? tr('matchTag', { n: fmt(rows.length), q: args.q }) : tr('areaTag', { n: fmt(rows.length), place: name });
   closeCard(); showNear(true); renderMassChips();
-  if (!inView && ring.length) {
+  if (cluster && cluster.length) {
+    const wide = innerWidth > 640;
+    map.fitBounds(cluster.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(cluster[0], cluster[0])), { padding: wide ? { left: 380, right: 80, top: 120, bottom: 60 } : { top: 90, bottom: innerHeight * 0.55, left: 30, right: 30 }, maxZoom: 12, pitch: 0, duration: reduceMotion ? 0 : 2000 });
+  } else if (!inView && ring.length) {
     const wide = innerWidth > 640;
     map.fitBounds(ring.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(ring[0], ring[0])), { padding: wide ? { left: 380, right: 80, top: 190, bottom: 60 } : { top: 190, bottom: innerHeight * 0.62, left: 30, right: 30 }, pitch: 0, duration: reduceMotion ? 0 : 1600 });
   }
@@ -1546,7 +1559,7 @@ function fillList(rows, cap, head, rowHTML, tail, wait) {
 }
 function setNearTitle() {
   const title = document.querySelector('#nearTitle span');
-  if (mn.kind === 3) { title.dataset.i18n = mn.area.name ? 'churchesIn' : 'churchesInView'; title.textContent = mn.area.name ? tr('churchesIn', { place: mn.area.name }) : tr('churchesInView'); return; }
+  if (mn.kind === 3) { title.dataset.i18n = mn.area.q ? 'matchTitle' : mn.area.name ? 'churchesIn' : 'churchesInView'; title.textContent = mn.area.q ? tr('matchTitle', { q: mn.area.q }) : mn.area.name ? tr('churchesIn', { place: mn.area.name }) : tr('churchesInView'); return; }
   title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : mn.kind === 1 ? 'confNearTitle' : 'nearYou';
   title.textContent = mn.kind === 2 ? tr('langListTitle', { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
 }
@@ -3067,29 +3080,47 @@ async function runSearch() {
   resEl.hidden = false;
   if (!searchIdx) { resEl.innerHTML = `<div class="note">${LOADER(tr('indexLoading'), 'inline')}</div>`; try { await loadSearch(); } catch (e) { resEl.innerHTML = `<div class="note">${esc(tr('indexFailed'))}</div>`; return; } }
   const toks = q.split(/\s+/).filter(Boolean);
+  // any part of a name or town matches, so "fatima" finds every Fatima church and "denver" every church in Denver
   const { keys, lines } = searchIdx; const hits = [];
-  for (let i = 0; i < keys.length && hits.length < 400; i++) {
+  for (let i = 0; i < keys.length; i++) {
     const k = keys[i]; let ok = true;
     for (const t of toks) if (k.indexOf(t) < 0) { ok = false; break; }
     if (ok && state.enabled.has(state.typ[i] & 7)) hits.push(i);
   }
-  const score = (i) => { const k = keys[i]; const ty = state.typ[i] & 7; return (k.startsWith(toks[0]) ? 0 : 2) + (ty === 1 || ty === 2 ? -1.5 : ty === 3 ? -0.5 : 0) + (state.typ[i] >> 3) * 0.6 + k.length / 200; };
-  hits.sort((a, b) => score(a) - score(b));
+  // a whole word beats part of one, then the nearest to you (or to the middle of the globe's view) comes first;
+  // cathedrals, basilicas and shrines count as closer than they are
+  const c = here || [map.getCenter().lng, map.getCenter().lat], cos = Math.cos(c[1] * Math.PI / 180);
+  const whole = new RegExp('(^|[^a-z0-9])' + toks.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('.*'));
+  const score = (i) => { const ty = state.typ[i] & 7, dx = (state.lon[i] / 1e6 - c[0]) * cos, dy = state.lat[i] / 1e6 - c[1];
+    return (whole.test(keys[i]) ? 0 : 1e6) + Math.sqrt(dx * dx + dy * dy) * (ty === 1 || ty === 2 ? 0.25 : ty === 3 ? 0.5 : 1); };
+  const sc = new Map(hits.map(i => [i, score(i)]));
+  hits.sort((a, b) => sc.get(a) - sc.get(b));
   const top = hits.slice(0, 30);
   activeRes = -1;
   if (!top.length) { resEl.innerHTML = `<div class="note">${esc(tr('noMatch', { q: qEl.value.trim() }))}</div>`; return; }
-  resEl.innerHTML = top.map((i, k) => {
+  // the town everyone means: the most common town among the matches whose name is exactly what was typed
+  const towns = new Map();
+  for (const i of hits) { const town = lines[i].split('\t')[1]; if (town && fold(town) === q) towns.set(town, (towns.get(town) || 0) + 1); }
+  const town = [...towns].sort((a, b) => b[1] - a[1])[0];
+  const inTown = town ? hits.filter(i => lines[i].split('\t')[1] === town[0]) : [];
+  const listIcon = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2;stroke-linecap:round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg>';
+  searchLists = { town: town ? { name: town[0], ids: inTown } : null, all: { q: qEl.value.trim(), ids: hits } };
+  resEl.innerHTML = (town ? `<button role="option" class="all" data-all="town" id="rt">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inTown.length), place: town[0] }))}</span></div></button>` : '')
+    + (hits.length > 1 && hits.length !== inTown.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
+    + top.map((i, k) => {
     const [nm, town, cc] = lines[i].split('\t'); const t = TYPE_BY_CODE[state.typ[i] & 7];
     return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(nm)}</span><span class="loc">${esc([t.one, town, countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
-  }).join('') + (hits.length > 30 ? `<div class="note">${esc(hits.length >= 400 ? tr('matchesMax') : tr('matches', { n: hits.length }))}</div>` : '');
+  }).join('');
 }
-resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-b],button[data-l],button[data-jp],button[data-je]'); if (!b) return; pickResult(b); });
+let searchLists = null;
+resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-all],button[data-b],button[data-l],button[data-jp],button[data-je]'); if (!b) return; pickResult(b); });
 function pickResult(b) {
   resEl.hidden = true; qEl.blur(); track('search');
+  if (b.dataset.all && searchLists) { const l = searchLists[b.dataset.all]; if (l) listArea(b.dataset.all === 'town' ? { name: l.name, ids: l.ids } : { q: l.q, ids: l.ids }); return; }
   if (b.dataset.jp) openLifePlace(b.dataset.jp); else if (b.dataset.je) { lifePause(); goEvent(+b.dataset.je); } else if (b.dataset.b) openBiblePlace(b.dataset.b); else if (b.dataset.l) openBibleLand(b.dataset.l); else selectChurch(+b.dataset.i, { fly: true });
 }
 qEl.addEventListener('keydown', (e) => {
-  const opts = [...resEl.querySelectorAll('button[data-i],button[data-b],button[data-l],button[data-jp],button[data-je]')]; if (!opts.length) return;
+  const opts = [...resEl.querySelectorAll('button[data-i],button[data-all],button[data-b],button[data-l],button[data-jp],button[data-je]')]; if (!opts.length) return;
   if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); activeRes = (activeRes + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length; opts.forEach((o, k) => o.setAttribute('aria-selected', k === activeRes)); opts[activeRes].scrollIntoView({ block: 'nearest' }); }
   else if (e.key === 'Enter') { e.preventDefault(); pickResult(opts[Math.max(activeRes, 0)]); }
 });
