@@ -3081,13 +3081,11 @@ async function runSearch() {
     for (const t of toks) if (k.indexOf(t) < 0) { ok = false; break; }
     if (ok && state.enabled.has(state.typ[i] & 7)) hits.push(i);
   }
-  // a whole word beats part of one, then the nearest to you (or to the middle of the globe's view) comes first;
-  // cathedrals, basilicas and shrines count as closer than they are
-  const c = here || [map.getCenter().lng, map.getCenter().lat], cos = Math.cos(c[1] * Math.PI / 180);
-  const whole = new RegExp('(^|[^a-z0-9])' + toks.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('.*'));
-  const score = (i) => { const ty = state.typ[i] & 7, dx = (state.lon[i] / 1e6 - c[0]) * cos, dy = state.lat[i] / 1e6 - c[1];
-    return (whole.test(keys[i]) ? 0 : 1e6) + Math.sqrt(dx * dx + dy * dy) * (ty === 1 || ty === 2 ? 0.25 : ty === 3 ? 0.5 : 1); };
-  const sc = new Map(hits.map(i => [i, score(i)]));
+  // nearest to you first: the first search asks where you are, and until then (or if you say no)
+  // the middle of the globe's view stands in
+  if (!here && !searchAskedWhere) { searchAskedWhere = true; hereOrCenter().then(() => { if (here && !resEl.hidden && qEl.value.trim()) runSearch(); }); }
+  const c = here || [map.getCenter().lng, map.getCenter().lat];
+  const sc = new Map(hits.map(i => [i, metres(c[1], c[0], state.lat[i] / 1e6, state.lon[i] / 1e6)]));
   hits.sort((a, b) => sc.get(a) - sc.get(b));
   const top = hits.slice(0, 30);
   activeRes = -1;
@@ -3103,10 +3101,10 @@ async function runSearch() {
     + (hits.length > 1 && hits.length !== inTown.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
     + top.map((i, k) => {
     const [nm, town, cc] = lines[i].split('\t'); const t = TYPE_BY_CODE[state.typ[i] & 7];
-    return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(nm)}</span><span class="loc">${esc([t.one, town, countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
+    return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(nm)}</span><span class="loc">${esc([here ? fmtDist(sc.get(i)) : '', t.one, town, countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
   }).join('');
 }
-let searchLists = null;
+let searchLists = null, searchAskedWhere = false;
 resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-all],button[data-b],button[data-l],button[data-jp],button[data-je]'); if (!b) return; pickResult(b); });
 function pickResult(b) {
   resEl.hidden = true; qEl.blur(); track('search');

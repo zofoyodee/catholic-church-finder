@@ -1,5 +1,6 @@
-/* Phones (narrow, or short in landscape): a search bar on top, the tabs and Menu along the bottom,
-   everything else in the menu sheet. app/mobile.js sets .compact on <html> and moves the pieces. */
+/* Phones (narrow, or short when turned sideways): a search bar on top, the tabs and Menu along
+   the bottom, everything else in the menu sheet. "Sideways" needs the orientation too: a small
+   iPhone held upright in Safari is under 500px tall as well. app/mobile.js sets .compact on <html> and moves the pieces. */
 .mnav { display: none; }
 .msheet[hidden] { display: none; }
 
@@ -82,7 +83,7 @@ body.bible-mode .ms-acts .church-only { display: none; }
 @media (max-width: 640px) { .compact .card { bottom: calc(var(--nav-h) + 6px); max-height: calc(100% - var(--nav-h) - 74px); } }
 
 /* phones on their side: the tabs become a rail down the left edge, the menu a side panel */
-@media (max-height: 500px) {
+@media (max-height: 500px) and (orientation: landscape) {
   :root.compact { --nav-h: 0px; --rail: calc(74px + env(safe-area-inset-left, 0px)); }
   .compact header.top { padding-left: calc(var(--rail) + 8px); }
   .compact .search { max-width: 400px; margin-right: auto; }
@@ -99,6 +100,7 @@ body.bible-mode .ms-acts .church-only { display: none; }
   .mnav button[aria-pressed="true"] { background: rgba(232, 184, 74, 0.12); }
   .compact .ctrls { bottom: max(12px, env(safe-area-inset-bottom, 0px)); grid-auto-flow: column; }
   .compact .card { width: min(420px, calc(100vw - var(--rail) - 120px)); }
+  .compact .card .hero { height: 110px; }
   .compact .float-card, .compact .life, .compact .favs { left: calc(var(--rail) + 10px); }
   .compact .life { bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
   .compact .life-now { display: none; }  /* the moment's story is in its card */

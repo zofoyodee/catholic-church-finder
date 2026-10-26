@@ -8,7 +8,7 @@ if (!ccf) return;
 const { map, state, esc, reduceMotion } = ccf;
 const $ = (id) => document.getElementById(id);
 const phone = () => innerWidth <= 640;
-const compact = () => matchMedia('(max-width: 640px), (max-height: 500px)').matches;  // phones either way up (app/mobile.js)
+const compact = () => matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)').matches;  // phones either way up (app/mobile.js)
 const rad = Math.PI / 180;
 const X = '<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 // page language: the main script's tr() with its English fallback

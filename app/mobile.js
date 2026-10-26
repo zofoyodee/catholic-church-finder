@@ -5,7 +5,7 @@
 (() => {
 'use strict';
 const $ = (id) => document.getElementById(id);
-const compact = matchMedia('(max-width: 640px), (max-height: 500px)');
+const compact = matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)');
 const sheet = $('msheet');
 if (!sheet) return;
 
