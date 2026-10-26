@@ -1,8 +1,8 @@
 /* Phones: the globe gets the screen. A search bar on top, the three tabs and a Menu button along
    the bottom, and everything else (filters, Church Near Me, language, theme, tours, about) in one
    menu sheet. The same page elements are moved into the sheet, so their own handlers keep working,
-   and moved back when the screen grows. On a computer the same menu drops down from a Menu
-   button in the top bar: the filters, language and theme live in it there too (html.wide). */
+   and moved back when the screen grows. Computers get the same layout (html.wide, app/desktop.css):
+   the tabs and Menu float in a bar along the bottom, and the filters, language and theme live in the menu. */
 (() => {
 'use strict';
 const $ = (id) => document.getElementById(id);
@@ -41,7 +41,6 @@ place();
 function show(open) {
   sheet.hidden = !open;
   $('mnavMenu').setAttribute('aria-expanded', open);
-  $('dMenu').setAttribute('aria-expanded', open);
   document.documentElement.classList.toggle('ms-open', open);
   if (open) sync();
 }
@@ -58,10 +57,9 @@ function sync() {
 }
 const toggle = () => show(sheet.hidden);
 $('mnavMenu').addEventListener('click', toggle);
-$('dMenu').addEventListener('click', toggle);
 $('msClose').addEventListener('click', () => show(false));
 sheet.addEventListener('click', (e) => { if (e.target === sheet) show(false); });  // tap outside the box
-addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) { show(false); $(compact.matches ? 'mnavMenu' : 'dMenu').focus(); } });
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) { show(false); $('mnavMenu').focus(); } });
 sheet.addEventListener('click', (e) => {
   const b = e.target.closest('.ms-acts button[data-for]'); if (!b) return;
   show(false);
@@ -79,7 +77,7 @@ sheet.addEventListener('click', (e) => {
 
 // the Menu tab shows how many churches are saved, so Favorites can be found
 {
-  const n = () => { $('mnavMenu').dataset.n = $('dMenu').dataset.n = $('favCount').textContent; };
+  const n = () => { $('mnavMenu').dataset.n = $('favCount').textContent; };
   new MutationObserver(n).observe($('favCount'), { childList: true, characterData: true, subtree: true });
   n();
 }

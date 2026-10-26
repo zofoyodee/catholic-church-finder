@@ -1,41 +1,40 @@
-/* Computers and tablets (html.wide, set by app/mobile.js): one slim top bar with the name, the three tabs,
-   search and a Menu button. The filters, Church Near Me, favorites, tours, language and theme all live in the
-   same four-part menu as the phone, which drops down from the Menu button. The side buttons keep only
-   Church Near Me, zoom and the whole globe. */
-.dmenu { display: none; }
-.wide .dmenu {
-  display: inline-flex; align-items: center; gap: 8px; flex: none; height: 42px; padding: 0 16px 0 13px; border-radius: 21px;
-  border: 1px solid var(--line); background: var(--panel); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  color: var(--ink); font-size: 13.5px; font-weight: 500; cursor: pointer; position: relative;
-}
-.wide .dmenu:hover, .wide .dmenu[aria-expanded="true"] { border-color: color-mix(in srgb, var(--gold) 55%, transparent); }
-.wide .dmenu[aria-expanded="true"] { background: rgba(232, 184, 74, 0.14); }
-.dmenu svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; }
-.wide .dmenu[data-n]:not([data-n=""])::after {
-  content: attr(data-n); position: absolute; top: -5px; right: -5px; min-width: 18px; padding: 0 5px; border-radius: 9px;
-  background: var(--gold); color: #1a1406; font-size: 10.5px; font-weight: 700; line-height: 18px; text-align: center;
-}
-[dir="rtl"] .wide .dmenu[data-n]:not([data-n=""])::after { right: auto; left: -5px; }
+/* Computers and tablets (html.wide, set by app/mobile.js): the phone's layout, sized for a big screen.
+   The name and search along the top; the three tabs and Menu float in a bar at the bottom centre; the filters,
+   Church Near Me, favorites, tours, language and theme all live in the same four-part menu, which opens above
+   that bar. The side buttons keep only Near Me, zoom and the whole globe. */
+:root.wide { --dock: 62px; }
 
-/* the top bar: one row; the season pill gives way to Today in the Church in the menu */
+/* top: the name on the left, search in the middle; the tabs move to the bottom bar */
+.wide .modes, .wide .brand .season-row { display: none; }
 .wide header.top { align-items: center; flex-wrap: nowrap; }
 .wide header.top::before { inset: 0 0 -30px; }
-.wide .brand .season-row { display: none; }
-.wide .modes { margin: 0 auto; }
-.wide .search { margin-left: 0; flex: 0 1 400px; }
-[dir="rtl"] .wide .search { margin-right: 0; }
-@media (max-width: 1100px) {
-  .wide .brand h1 { font-size: 18px; }
-  .wide .modes button { padding: 0 11px; }
-}
-/* tablets: the tabs drop to a second row so the name and search keep their room */
-@media (max-width: 900px) {
-  .wide header.top { flex-wrap: wrap; }
-  .wide .modes { order: 5; margin: 0; }
-  .wide .search { flex: 1 1 260px; margin-left: auto; }
-}
+.wide .search { flex: 0 1 560px; margin: 0 auto; }
+.wide .brand { flex: 0 1 auto; }
+.wide header.top::after { content: ''; flex: 0 1 120px; }  /* keeps search near the middle */
 
-/* side buttons: Church Near Me (named), zoom, whole globe; everything else is in the menu */
+/* the bottom bar: the three tabs and Menu, the same buttons as on phones */
+.wide .mnav {
+  display: flex; position: fixed; z-index: 6; left: 50%; transform: translateX(-50%); bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  gap: 2px; padding: 4px; border-radius: 26px; border: 1px solid var(--line); background: var(--panel);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 10px 30px #0008;
+}
+.wide .mnav button {
+  flex: none; display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px; border-radius: 21px;
+  color: var(--gold-soft); font-size: 14px; position: relative;
+}
+.wide .mnav button:hover { background: rgba(232, 184, 74, 0.1); }
+.wide .mnav svg { width: 18px; height: 18px; }
+.wide .mnav .ic { font-size: 16px; line-height: 18px; height: 18px; }
+.wide .mnav button[aria-pressed="true"] { background: var(--gold); color: #1a1406; font-weight: 600; }
+.wide .mnav #mnavMenu { color: var(--ink); }
+.wide .mnav #mnavMenu[aria-expanded="true"] { background: rgba(232, 184, 74, 0.16); color: var(--gold-soft); }
+.wide .mnav #mnavMenu[data-n]:not([data-n=""])::after { top: 2px; left: auto; right: 4px; }
+
+/* everything that sat along the bottom now sits above the bar */
+.wide .life { bottom: calc(40px + var(--dock) + 10px + env(safe-area-inset-bottom, 0px)); right: calc(max(16px, env(safe-area-inset-right, 0px)) + 54px); }
+.wide .float-card { bottom: calc(40px + var(--dock) + 10px + env(safe-area-inset-bottom, 0px)); }
+
+/* side buttons: Near Me (named), zoom, whole globe; everything else is in the menu */
 .wide .ctrls > :not(#nearBtn):not(#zin):not(#zout):not(#home) { display: none !important; }
 .wide .ctrls { justify-items: end; }
 .wide .ctrls #nearBtn {
@@ -44,16 +43,29 @@
 }
 .wide .ctrls #nearBtn .lbl { display: inline; }
 
-/* the menu: a panel under the Menu button; a click anywhere else closes it */
+/* the menu: a panel above the bottom bar, in two columns; a click anywhere else closes it */
 .wide .msheet { position: fixed; inset: 0; z-index: 14; background: transparent; }
 .wide .ms-box {
-  left: auto; bottom: auto; right: max(16px, env(safe-area-inset-right, 0px)); top: 66px;
-  width: min(420px, calc(100vw - 32px)); max-height: calc(100% - 84px); gap: 14px; padding: 18px 18px 16px;
-  border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 24px 60px #000c; animation-name: msDrop; animation-duration: .22s;
+  display: block; columns: 2; column-gap: 28px;
+  left: 50%; right: auto; top: auto; transform: translateX(-50%); bottom: calc(40px + var(--dock) + 10px + env(safe-area-inset-bottom, 0px));
+  width: min(780px, calc(100vw - 32px)); max-height: calc(100% - 40px - var(--dock) - 90px); padding: 20px 22px 18px;
+  border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 24px 60px #000c; animation: msRise .22s cubic-bezier(.2,.8,.2,1);
 }
-[dir="rtl"] .wide .ms-box { right: auto; left: max(16px, env(safe-area-inset-left, 0px)); }
-@keyframes msDrop { from { transform: translateY(-10px); opacity: 0; } }
+@keyframes msRise { from { transform: translate(-50%, 12px); opacity: 0; } }
+.wide .ms-box > * { break-inside: avoid; margin: 0 0 14px; }
+.wide .ms-box > .ms-h { margin: 0 0 10px; }
+.wide .ms-box > .ms-h ~ .ms-h { padding-top: 14px; }
+/* Find a Church fills the left column; My Churches (or Explore, until something is saved) starts the right */
+.wide .ms-box > h3.ms-mine:not([hidden]), .wide .ms-box > h3.ms-mine[hidden] ~ h3[data-i18n="mExplore"] { break-before: column; border-top: 0; padding-top: 0; }
+.wide .ms-box > h3.ms-mine:not([hidden]) ~ h3[data-i18n="mExplore"] { break-before: auto; }
 .wide #msHead:empty, .wide #msFoot:empty { display: none; }
-.wide .ms-box .ms-h:first-of-type { padding-right: 44px; }
 .wide .ms-acts button { min-height: 0; }
-@media (max-width: 900px) { .wide .ms-box { top: 110px; max-height: calc(100% - 128px); } }
+.wide .ms-x { z-index: 1; }
+@media (max-width: 760px) { .wide .ms-box { columns: 1; } .wide .ms-box > h3 { break-before: auto !important; } }
+@media (prefers-reduced-motion: reduce) { .wide .ms-box { animation: none; } }
+
+/* an open details card takes the right side: the bar centres in what is left, and on smaller screens the
+   side buttons give way (the mouse wheel still zooms) */
+.wide body.card-open .mnav { left: calc((100vw - min(420px, calc(100vw - 32px)) - 28px) / 2); }
+[dir="rtl"].wide body.card-open .mnav { left: calc(100vw - (100vw - min(420px, calc(100vw - 32px)) - 28px) / 2); }
+@media (max-width: 1239px) { .wide body.card-open .ctrls { display: none; } }
