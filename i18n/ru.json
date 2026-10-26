@@ -529,5 +529,12 @@
   "mon12": "декабрь",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Найти храм",
+  "mMine": "Мои храмы",
+  "mExplore": "Исследовать",
+  "mSettings": "Настройки",
+  "langNearTitle": "Месса на языке {lang} рядом с вами",
+  "langNearIntro": "Храмы, на сайтах которых указана Месса на этом языке, сначала ближайшие. Нажмите, чтобы узнать подробности.",
+  "langNoneNear": "В пределах {dist} нет. Это ближайшие храмы с Мессой на языке {lang}."
 }

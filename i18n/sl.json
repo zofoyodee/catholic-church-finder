@@ -507,5 +507,12 @@
   "mon12": "december",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Poišči cerkev",
+  "mMine": "Moje cerkve",
+  "mExplore": "Raziskuj",
+  "mSettings": "Nastavitve",
+  "langNearTitle": "Maša v jeziku {lang} v bližini",
+  "langNearIntro": "Cerkve, katerih spletne strani navajajo mašo v tem jeziku, najbližje najprej. Tapnite eno za podrobnosti.",
+  "langNoneNear": "Nobene v razdalji {dist}. To so najbližje z mašo v jeziku {lang}."
 }

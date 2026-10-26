@@ -491,5 +491,12 @@
   "mon12": "Ọ̀pẹ̀",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Wá Ilé Ìjọsìn",
+  "mMine": "Àwọn Ilé Ìjọsìn Mi",
+  "mExplore": "Ṣàwárí",
+  "mSettings": "Ètò",
+  "langNearTitle": "Máàsì ní èdè {lang} nítòsí rẹ",
+  "langNearIntro": "Àwọn ilé ìjọsìn tí ojú-òpó wọn kọ Máàsì ní èdè yìí, èyí tó sún mọ́ jùlọ kọ́kọ́. Tẹ ọ̀kan fún àlàyé.",
+  "langNoneNear": "Kò sí láàrin {dist}. Àwọn wọ̀nyí ló sún mọ́ jùlọ tí wọ́n ní Máàsì ní èdè {lang}."
 }

@@ -491,5 +491,12 @@
   "mon12": "Dezembru",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Buka Igreja",
+  "mMine": "Ha’u-nia Igreja sira",
+  "mExplore": "Esplora",
+  "mSettings": "Konfigurasaun",
+  "langNearTitle": "Misa iha {lang} besik ó",
+  "langNearIntro": "Igreja sira ne’ebé ninia website hatudu Misa iha lian ida-ne’e, ida ne’ebé besik liu uluk. Tama ida atu haree detallu.",
+  "langNoneNear": "La iha iha {dist} laran. Ne’e mak sira ne’ebé besik liu ho Misa iha {lang}."
 }

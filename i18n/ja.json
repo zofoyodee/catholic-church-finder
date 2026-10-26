@@ -483,5 +483,12 @@
   "mon12": "12月",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "教会を探す",
+  "mMine": "お気に入りの教会",
+  "mExplore": "発見する",
+  "mSettings": "設定",
+  "langNearTitle": "近くの{lang}のミサ",
+  "langNearIntro": "この言語のミサをウェブサイトに載せている教会を近い順に表示します。タップすると詳細が見られます。",
+  "langNoneNear": "{dist}以内にはありません。{lang}のミサがある最寄りの教会です。"
 }

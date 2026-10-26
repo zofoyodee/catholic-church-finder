@@ -529,5 +529,12 @@
   "mon12": "grudzień",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Znajdź kościół",
+  "mMine": "Moje kościoły",
+  "mExplore": "Odkrywaj",
+  "mSettings": "Ustawienia",
+  "langNearTitle": "Msza w języku {lang} w pobliżu",
+  "langNearIntro": "Kościoły, których strony podają Mszę w tym języku, najbliższe najpierw. Dotknij, aby zobaczyć szczegóły.",
+  "langNoneNear": "Brak w promieniu {dist}. Oto najbliższe z Mszą w języku {lang}."
 }

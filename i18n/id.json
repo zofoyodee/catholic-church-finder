@@ -483,5 +483,12 @@
   "mon12": "Desember",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Cari Gereja",
+  "mMine": "Gereja Saya",
+  "mExplore": "Jelajahi",
+  "mSettings": "Pengaturan",
+  "langNearTitle": "Misa dalam bahasa {lang} di Dekat Anda",
+  "langNearIntro": "Gereja yang situs webnya mencantumkan Misa dalam bahasa ini, yang terdekat lebih dulu. Ketuk salah satu untuk detail.",
+  "langNoneNear": "Tidak ada dalam {dist}. Ini yang terdekat dengan Misa dalam bahasa {lang}."
 }

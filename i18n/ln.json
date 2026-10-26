@@ -491,5 +491,12 @@
   "mon12": "Sánzá ya zómi na míbalé",
   "fmtWeekdayDate": "{weekday} {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Luka Ndako-Nzambe",
+  "mMine": "Ba ndako-Nzambe na ngai",
+  "mExplore": "Luka koyeba",
+  "mSettings": "Mibongiseli",
+  "langNearTitle": "Misa na {lang} pene na yo",
+  "langNearIntro": "Ba ndako-Nzambe oyo site na bango ekomi Misa na monoko oyo, oyo ezali pene liboso. Fina moko mpo na koyeba makambo mosusu.",
+  "langNoneNear": "Ezali te kati na {dist}. Oyo nde ezali pene koleka na Misa na {lang}."
 }

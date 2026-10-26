@@ -489,5 +489,12 @@
   "mon12": "Decembris",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "mensis {month} {y}"
+  "fmtMonthYear": "mensis {month} {y}",
+  "mFind": "Ecclesiam Quaere",
+  "mMine": "Ecclesiae Meae",
+  "mExplore": "Explora",
+  "mSettings": "Optiones",
+  "langNearTitle": "Missa {lang} prope te",
+  "langNearIntro": "Ecclesiae quarum paginae Missam hac lingua nuntiant, proxima prima. Tange unam ut plura videas.",
+  "langNoneNear": "Nulla intra {dist}. Hae sunt proximae cum Missa {lang}."
 }

@@ -743,15 +743,25 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <div class="ms-box" role="dialog" aria-label="Menu" data-i18n-attr="aria-label:menu">
     <button type="button" class="ms-x" id="msClose" aria-label="Close" data-i18n-attr="aria-label:close"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <div id="msHead"></div>
-    <div id="msShow" class="ms-sect"></div>
+    <h3 class="ms-h" data-i18n="mFind">Find a Church</h3>
     <div id="msMass" class="ms-sect"></div>
-    <div class="ms-acts" id="msActs">
+    <div id="msShow" class="ms-sect"></div>
+    <div class="ms-acts">
+      <button type="button" data-for="listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span data-i18n="listHere">List Churches on Screen</span></button>
+    </div>
+    <h3 class="ms-h ms-mine" data-i18n="mMine">My Churches</h3>
+    <div class="ms-acts ms-mine">
       <button type="button" data-for="favOpen"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg><span data-i18n="favorites">Favorites</span></button>
+    </div>
+    <h3 class="ms-h" data-i18n="mExplore">Explore</h3>
+    <div class="ms-acts">
       <button type="button" data-for="season"><span class="ic" aria-hidden="true">✠</span><span data-i18n="todayLabel">Today in the Church</span></button>
       <button type="button" data-for="tourBtn"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 17.2c4-1 2.5-5.2 6-6.4 1.8-.6 3-1.6 3.4-2.8"/></svg><span data-i18n="tours">Guided Tours</span></button>
-      <button type="button" data-for="listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span data-i18n="listHere">List Churches on Screen</span></button>
       <button type="button" data-for="rand"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg><span data-i18n="random">Visit a Random Church</span></button>
       <button type="button" data-for="spin"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg><span data-i18n="spin">Spin the Globe</span></button>
+    </div>
+    <h3 class="ms-h" data-i18n="mSettings">Settings</h3>
+    <div class="ms-acts">
       <button type="button" data-for="viewBtn"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg><span data-i18n="globeView">Globe View</span></button>
     </div>
     <div class="ms-picks" id="msPicks"></div>
@@ -850,6 +860,7 @@ function detectLang() {
 // English is built in; every other language is i18n/<code>.json with the same keys, missing keys fall back to English.
 // Plural forms are key_one, key_few, key_many, key_other (Intl.PluralRules categories) and are picked by vars.n.
 const EN = {
+  mFind: 'Find a Church', mMine: 'My Churches', mExplore: 'Explore', mSettings: 'Settings',
   startOver: 'Start over', listHere: 'List Churches on Screen', churchesIn: 'Churches in {place}', matchTitle: 'Churches Matching “{q}”', matchTag: 'Showing {n} churches matching “{q}”', allIn: 'All {n} Churches in {place}', allMatching: 'All {n} Churches Matching “{q}”', churchesInView: 'Churches in This View', areaIntro: 'Nearest to you first. Tap one for details.', areaIntroCenter: 'Nearest to the middle first. Tap one for details.', areaMore: 'Showing the {k} nearest of {n}. Zoom in to see the rest.', areaNone: 'No churches are mapped here yet.', areaTag: 'Showing {n} churches in {place}', areaTagView: 'Showing {n} churches in this view', areaTip: 'Click to list this city\'s churches', youAreHere: 'You Are Here',
   app: 'Catholic Church Finder', language: 'Language', mapLabel: 'Interactive globe of Catholic churches',
   loadingChurches: 'Loading churches…', gathering: 'Gathering churches from around the world…',
@@ -924,7 +935,7 @@ const EN = {
   schedSrc: 'From {src}{checked}. Times change for holidays and seasons, so check with the parish.',
   massChipsLabel: 'Filter by Mass times', massLbl: 'Mass', massSoon: 'Mass Soon', massSoonTip: 'Churches with a Mass starting in the next 2 hours, local time',
   massNear: 'Mass Near Me', churchNear: 'Church Near Me', loadingChurchNear: 'Finding churches near you…', confNear: 'Confession Near Me', massNearTip: 'Churches within {dist} of you, nearest first, with their next Mass', confNearTip: 'Churches within {dist} of you, nearest first, with their next Confession',
-  massNearTitle: 'Masses Near You', langListTitle: 'Mass in {lang}, Nearest First', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession Near You', massNearIntro: 'Churches within {dist}, nearest first, with the next Mass when the parish posts it online. Tap one for details.', confNearIntro: 'Churches within {dist}, nearest first, with the next Confession when the parish posts it online. Tap one for details.', massNearTag: 'Showing {n} churches within {dist}', confNearTag: 'Showing {n} churches within {dist}', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
+  massNearTitle: 'Masses Near You', langNearTitle: 'Mass in {lang} Near You', langNearIntro: 'Churches whose websites list a Mass in this language, nearest first. Tap one for details.', langNoneNear: 'None within {dist}. These are the nearest with Mass in {lang}.', langListTitle: 'Mass in {lang}, Nearest First', langListIntro: 'Every church whose website lists a Mass in this language, nearest to you first. Tap one for details.', confNearTitle: 'Confession Near You', massNearIntro: 'Churches within {dist}, nearest first, with the next Mass when the parish posts it online. Tap one for details.', confNearIntro: 'Churches within {dist}, nearest first, with the next Confession when the parish posts it online. Tap one for details.', massNearTag: 'Showing {n} churches within {dist}', confNearTag: 'Showing {n} churches within {dist}', whenNow: 'Now', whenToday: 'Today {time}', whenTomorrow: 'Tomorrow {time}', whenDay: '{day} {time}',
   noTimesWeek: 'No time listed this week', timesUnknown: 'Times not listed, check the parish website', websiteShort: 'Website', usingMapCenter: 'Location is off, so these are near the middle of the map.', noMassNear: 'No church is within {dist}. Here is the nearest one.', nearDistLabel: 'How far to look', noneInRange: 'No church of the kinds you have chosen is within {dist}. Try a longer distance or show more kinds above.',
   seeWorldwide: 'See all {n} churches with Mass in {lang} worldwide', timesCheck: 'Times come from parish websites. Check with the parish before you go.',
   confSoon: 'Confession Soon', confSoonTip: 'Churches with Confession in the next 2 hours, local time',
@@ -1505,7 +1516,7 @@ document.addEventListener('submit', async (e) => {
 async function massNear(kind) {
   if (mn.kind !== kind || kind === 2) track(kind === 2 ? 'mass-in-language/' + mf.lang : kind ? 'confession-near-me' : 'church-near-me');
   mn.kind = kind; mf.mode = '';
-  if (kind < 2) mf.lang = '';  // the three are separate questions
+  if (kind === 1) mf.lang = '';  // a chosen language narrows Church Near Me to churches with Mass in it
   showNear(true);
   const list = $('nearList'); $('nearN').textContent = ''; nearRows = null; mn.rows = null;
   setNearTitle();
@@ -1528,7 +1539,12 @@ async function massNear(kind) {
   if (kind < 2) {
     // every church within the chosen distance, nearest first; the ones whose websites we could read also show their next time
     state.only = null;
-    for (const r of nearest(lat, lon, 1500)) {
+    if (kind === 0 && mf.lang) {
+      // Mass in a language near you: the ones within the distance, or the nearest few when none is that close
+      const all = [...langSet(mf.lang)].filter(i => state.enabled.has(state.typ[i] & 7)).map(i => ({ i, n: null, m: metres(lat, lon, state.lat[i] / 1e6, state.lon[i] / 1e6) })).sort((a, b) => a.m - b.m);
+      rows = all.filter(r => r.m <= nearM());
+      if (!rows.length) rows = all.slice(0, 10);
+    } else for (const r of nearest(lat, lon, 1500)) {
       if (r.m > nearM() && rows.length) break;
       const v = mf.data.c[r.i];
       rows.push({ i: r.i, n: v && kind ? nextTime(v, kind, -1) : null, m: r.m });  // Church Near Me lists no times
@@ -1545,7 +1561,7 @@ async function massNear(kind) {
     if (mn.kind !== kind) return;
     rows = rows.filter((r, k) => !notChurch(named[k] && named[k][0]));
   }
-  mn.far = kind < 2 && rows.length === 1 && rows[0].m > nearM();
+  mn.far = kind < 2 && rows.length > 0 && rows[0].m > nearM() && (rows.length === 1 || !!mf.lang);
   mn.rows = rows;
   state.only = kind === 2 ? inLang : new Set(rows.map(r => r.i));
   map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON());
@@ -1558,7 +1574,9 @@ async function massNear(kind) {
     const pts = mainCluster([...inLang].map(i => [state.lon[i] / 1e6, state.lat[i] / 1e6]));
     if (pts.length) map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 9, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   } else if (rows.length) {
-    const pts = [[lon, lat], ...rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
+    // you and the nearest few; when the nearest are far away, just them, so the view is never mid-ocean
+    const near8 = rows.slice(0, 8).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6]);
+    const pts = mn.far && mf.lang ? mainCluster(near8) : [[lon, lat], ...near8];
     map.fitBounds(pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0])), { padding: pad, maxZoom: 14, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   }
   renderMassNear();
@@ -1671,15 +1689,16 @@ function fillList(rows, cap, head, rowHTML, tail, wait) {
 function setNearTitle() {
   const title = document.querySelector('#nearTitle span');
   if (mn.kind === 3) { title.dataset.i18n = mn.area.q ? 'matchTitle' : mn.area.name ? 'churchesIn' : 'churchesInView'; title.textContent = mn.area.q ? tr('matchTitle', { q: mn.area.q }) : mn.area.name ? tr('churchesIn', { place: mn.area.name }) : tr('churchesInView'); return; }
-  title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : mn.kind === 1 ? 'confNearTitle' : 'nearYou';
-  title.textContent = mn.kind === 2 ? tr('langListTitle', { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
+  const langNear = mn.kind === 0 && mf.lang;
+  title.dataset.i18n = mn.kind === 2 ? 'langListTitle' : langNear ? 'langNearTitle' : mn.kind === 1 ? 'confNearTitle' : 'nearYou';
+  title.textContent = mn.kind === 2 || langNear ? tr(title.dataset.i18n, { lang: massLangName(mf.lang) }) : tr(title.dataset.i18n);
 }
 async function renderMassNear() {
   const rows = mn.rows, list = $('nearList'); if (!rows) return;
   setNearTitle();
   $('nearN').textContent = rows.length ? fmt(mn.kind === 2 ? state.only.size : rows.length) : '';
-  const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : 'areaIntro';
-  const head = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? locHelp('near', geoDenied ? tr('geoOff') + ' ' + tr('usingMapCenter') : tr('usingMapCenter')) : '') + (mn.far ? `<p class="note">${esc(tr('noMassNear', { dist: nearDist(nearMiles) }))}</p>` : '') + (rows.length ? '' : `<p class="empty">${esc(tr('noneInRange', { dist: nearDist(nearMiles) }))}</p>`);
+  const intro = mn.kind === 2 ? 'langListIntro' : mn.kind ? 'confNearIntro' : mf.lang ? 'langNearIntro' : 'areaIntro';
+  const head = `<p class="note">${esc(tr(intro, { dist: nearDist(nearMiles) }))}</p>` + (mn.guessed ? locHelp('near', geoDenied ? tr('geoOff') + ' ' + tr('usingMapCenter') : tr('usingMapCenter')) : '') + (mn.far ? `<p class="note">${esc(tr(mf.lang ? 'langNoneNear' : 'noMassNear', { dist: nearDist(nearMiles), lang: massLangName(mf.lang) }))}</p>` : '') + (rows.length ? '' : `<p class="empty">${esc(tr('noneInRange', { dist: nearDist(nearMiles) }))}</p>`);
   fillList(rows, 150, head, (r, rec) => {
     const plain = mn.kind === 0, unknown = mn.kind === 1 && !r.n && !mf.data.c[r.i], site = rec[6] ? (/^https?:/.test(rec[6]) ? rec[6] : 'https://' + rec[6]) : '', t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
     if (notChurch(rec[0])) return '';
@@ -1714,7 +1733,8 @@ async function initMassFilters() {
     }
     if (e.target.id !== 'massLang') return;
     mf.lang = e.target.value;
-    if (mf.lang) massNear(2); else { endMassNear(); showNear(false); applyMassFilter(); }
+    // a language narrows Church Near Me: the nearest churches with Mass in it, around you
+    if (mf.lang || mn.kind === 0) massNear(0); else { endMassNear(); showNear(false); applyMassFilter(); }
   });
 }
 

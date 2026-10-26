@@ -499,5 +499,12 @@
   "mon12": "december",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Templomkereső",
+  "mMine": "Templomaim",
+  "mExplore": "Felfedezés",
+  "mSettings": "Beállítások",
+  "langNearTitle": "{lang} nyelvű szentmise a közelben",
+  "langNearIntro": "Templomok, amelyek honlapja ezen a nyelven hirdet szentmisét, a legközelebbi elöl. Koppintson egyre a részletekért.",
+  "langNoneNear": "{dist} távolságon belül nincs ilyen. Ezek a legközelebbiek {lang} nyelvű szentmisével."
 }

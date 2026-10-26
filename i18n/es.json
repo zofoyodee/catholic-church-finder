@@ -499,5 +499,12 @@
   "mon12": "diciembre",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Buscar una iglesia",
+  "mMine": "Mis iglesias",
+  "mExplore": "Explorar",
+  "mSettings": "Ajustes",
+  "langNearTitle": "Misa en {lang} cerca de ti",
+  "langNearIntro": "Iglesias cuyo sitio web anuncia una Misa en este idioma, la más cercana primero. Toca una para ver detalles.",
+  "langNoneNear": "Ninguna a menos de {dist}. Estas son las más cercanas con Misa en {lang}."
 }

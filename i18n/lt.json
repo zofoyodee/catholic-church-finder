@@ -502,5 +502,12 @@
   "mon12": "gruodis",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Rasti bažnyčią",
+  "mMine": "Mano bažnyčios",
+  "mExplore": "Naršyti",
+  "mSettings": "Nustatymai",
+  "langNearTitle": "Mišios {lang} kalba netoliese",
+  "langNearIntro": "Bažnyčios, kurių svetainėse nurodytos Mišios šia kalba, artimiausios pirmos. Bakstelėkite vieną, kad pamatytumėte daugiau.",
+  "langNoneNear": "Nėra arčiau nei {dist}. Tai artimiausios bažnyčios su Mišiomis {lang} kalba."
 }

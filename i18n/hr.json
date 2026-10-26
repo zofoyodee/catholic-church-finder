@@ -515,5 +515,12 @@
   "mon12": "prosinac",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Pronađi crkvu",
+  "mMine": "Moje crkve",
+  "mExplore": "Istraži",
+  "mSettings": "Postavke",
+  "langNearTitle": "Misa na jeziku {lang} u blizini",
+  "langNearIntro": "Crkve čije mrežne stranice navode misu na ovom jeziku, najbliže prvo. Dodirnite jednu za pojedinosti.",
+  "langNoneNear": "Nijedna unutar {dist}. Ovo su najbliže s misom na jeziku {lang}."
 }

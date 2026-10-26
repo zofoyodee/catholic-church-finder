@@ -491,5 +491,12 @@
   "mon12": "Disyembre",
   "fmtWeekdayDate": "{weekday}, {month} {d}",
   "fmtDate": "{month} {d}, {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Maghanap nin Simbahan",
+  "mMine": "Mga Simbahan Ko",
+  "mExplore": "Mag-usisa",
+  "mSettings": "Mga Setting",
+  "langNearTitle": "Misa sa {lang} Harani Mo",
+  "langNearIntro": "Mga simbahan na an saindang website may Misa sa lenguaheng ini, an pinakaharani enot. Pinduton an saro para sa detalye.",
+  "langNoneNear": "Mayo sa laog nin {dist}. Ini an pinakaharani na may Misa sa {lang}."
 }

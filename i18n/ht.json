@@ -491,5 +491,12 @@
   "mon12": "desanm",
   "fmtWeekdayDate": "{weekday} {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Jwenn yon Legliz",
+  "mMine": "Legliz Mwen yo",
+  "mExplore": "Eksplore",
+  "mSettings": "Paramèt",
+  "langNearTitle": "Lamès an {lang} toupre w",
+  "langNearIntro": "Legliz ki gen yon Lamès nan lang sa a sou sit entènèt yo, sa ki pi pre an premye. Tape youn pou detay.",
+  "langNoneNear": "Pa gen youn nan {dist}. Men sa ki pi pre ki gen Lamès an {lang}."
 }

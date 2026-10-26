@@ -491,5 +491,12 @@
   "mon12": "Qhapaq raymi",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Iglesiata maskay",
+  "mMine": "Iglesiaykuna",
+  "mExplore": "Maskarikuy",
+  "mSettings": "Churanakuna",
+  "langNearTitle": "{lang} simipi Misa qanpa qayllaykipi",
+  "langNearIntro": "Kay simipi Misata websitenkupi willakuq iglesiakuna, aswan qayllalla ñawpaqta. Hukta ñit’iy astawan yachanaykipaq.",
+  "langNoneNear": "Manam kanchu {dist} ukhupi. Kaykunam aswan qayllalla {lang} simipi Misayuq."
 }

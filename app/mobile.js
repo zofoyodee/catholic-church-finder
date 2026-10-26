@@ -43,20 +43,22 @@ function show(open) {
 }
 function sync() {
   // only offer what the page offers right now: favorites once there are some
-  for (const b of $('msActs').querySelectorAll('button[data-for]')) {
+  for (const b of sheet.querySelectorAll('.ms-acts button[data-for]')) {
     const t = $(b.dataset.for);
     b.hidden = !t || (b.dataset.for === 'favOpen' && t.hidden);
     if (b.dataset.for === 'favOpen' && t) { const n = t.querySelector('.count'); b.dataset.n = n ? n.textContent : ''; }
     if (t && t.getAttribute('aria-pressed')) b.setAttribute('aria-pressed', t.getAttribute('aria-pressed'));
   }
+  // My Churches shows up once something is saved
+  for (const el of sheet.querySelectorAll('.ms-mine')) el.hidden = !$('favOpen') || $('favOpen').hidden;
 }
 const toggle = () => show(sheet.hidden);
 $('mnavMenu').addEventListener('click', toggle);
 $('msClose').addEventListener('click', () => show(false));
 sheet.addEventListener('click', (e) => { if (e.target === sheet) show(false); });  // tap outside the box
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) { show(false); $('mnavMenu').focus(); } });
-$('msActs').addEventListener('click', (e) => {
-  const b = e.target.closest('button[data-for]'); if (!b) return;
+sheet.addEventListener('click', (e) => {
+  const b = e.target.closest('.ms-acts button[data-for]'); if (!b) return;
   show(false);
   const t = $(b.dataset.for); if (t) t.click();
 });

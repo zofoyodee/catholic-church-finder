@@ -491,5 +491,12 @@
   "mon12": "Disembala",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Pezani Tchalitchi",
+  "mMine": "Matchalitchi Anga",
+  "mExplore": "Fufuzani",
+  "mSettings": "Zokonda",
+  "langNearTitle": "Misa m’chi{lang} Pafupi Nanu",
+  "langNearIntro": "Matchalitchi omwe webusaiti yawo imatchula Misa m’chilankhulo ichi, oyandikira kwambiri poyamba. Dinani limodzi kuti mudziwe zambiri.",
+  "langNoneNear": "Palibe mkati mwa {dist}. Awa ndi oyandikira kwambiri omwe ali ndi Misa m’chi{lang}."
 }
