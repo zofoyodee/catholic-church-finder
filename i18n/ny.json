@@ -410,5 +410,15 @@
   "theme_stone": "Mwala wa Katedrale",
   "theme_parchment": "Chikopa Cholembapo",
   "theme_liturgical": "Nyengo ya Liturgy",
-  "theme_contrast": "Kusiyana Kwakukulu"
+  "theme_contrast": "Kusiyana Kwakukulu",
+  "jEra_glory": "Pentekoste ndi Ulemerero wa Amayi Maria",
+  "jRosary": "Zinsinsi za Rozari",
+  "jRo_joyful": "Zinsinsi za Chimwemwe",
+  "jRo_luminous": "Zinsinsi za Kuwala",
+  "jRo_sorrowful": "Zinsinsi za Chisoni",
+  "jRo_glorious": "Zinsinsi za Ulemerero",
+  "jMysteryOf": "{set} · {k} mwa 5",
+  "jFruit": "Chipatso cha Chinsinsi",
+  "jRosaryAbout": "Momwe Rozari Inayambira",
+  "jRosaryPray": "Momwe Mungapempherere Rozari"
 }

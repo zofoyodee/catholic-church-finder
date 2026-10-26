@@ -421,5 +421,15 @@
   "theme_stone": "Katedros akmuo",
   "theme_parchment": "Pergamentas",
   "theme_liturgical": "Liturginis laikotarpis",
-  "theme_contrast": "Didelis kontrastas"
+  "theme_contrast": "Didelis kontrastas",
+  "jEra_glory": "Sekminės ir Dievo Motinos šlovė",
+  "jRosary": "Rožinio slėpiniai",
+  "jRo_joyful": "Džiaugsmo slėpiniai",
+  "jRo_luminous": "Šviesos slėpiniai",
+  "jRo_sorrowful": "Sopulių slėpiniai",
+  "jRo_glorious": "Garbės slėpiniai",
+  "jMysteryOf": "{set} · {k} iš 5",
+  "jFruit": "Slėpinio vaisius",
+  "jRosaryAbout": "Kaip atsirado Rožinis",
+  "jRosaryPray": "Kaip melstis Rožinį"
 }

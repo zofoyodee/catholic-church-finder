@@ -418,5 +418,15 @@
   "theme_stone": "Katedráliskő",
   "theme_parchment": "Pergamen",
   "theme_liturgical": "Liturgikus idő",
-  "theme_contrast": "Nagy kontraszt"
+  "theme_contrast": "Nagy kontraszt",
+  "jEra_glory": "Pünkösd és a Szűzanya dicsősége",
+  "jRosary": "A rózsafüzér titkai",
+  "jRo_joyful": "Örvendetes titkok",
+  "jRo_luminous": "Világosság titkai",
+  "jRo_sorrowful": "Fájdalmas titkok",
+  "jRo_glorious": "Dicsőséges titkok",
+  "jMysteryOf": "{set} · {k} / 5",
+  "jFruit": "A titok gyümölcse",
+  "jRosaryAbout": "Hogyan született a rózsafüzér",
+  "jRosaryPray": "Hogyan imádkozzuk a rózsafüzért"
 }

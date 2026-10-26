@@ -2,6 +2,7 @@
 
 References follow the NABRE (bible.usccb.org). The order follows a traditional harmony of the four Gospels, checked against the Mysteries of the Rosary
 (Joyful: Annunciation, Visitation, Nativity, Presentation, Finding; Luminous; Sorrowful; Glorious).
+Each of the twenty mysteries is tied to its moment in RO below; the last era carries the Glorious Mysteries after the Ascension.
 cert: sure = the place itself is known; trad = the town or area is known and the exact spot is honoured by long tradition;
 debated = more than one site is proposed. An event's u note flags a placement less certain than its place.
 
@@ -50,6 +51,7 @@ P = [
  ('calvary', 'Calvary and the Holy Sepulchre', 'Church of the Holy Sepulchre, Jerusalem', [31.7784, 35.2296], 'trad', "Christians have honoured this place since the first generations; Saint Helena and Constantine built the basilica over the rock of Golgotha and the empty tomb, and the Franciscans serve there today.", 'Church of the Holy Sepulchre', 'sepulchre', 16.5),
  ('emmaus', 'Emmaus', 'Emmaus Nicopolis, near Latrun', [31.8395, 34.9897], 'debated', "Luke gives the distance as about seven miles from Jerusalem (Luke 24:13). Three sites are honoured: Emmaus Nicopolis, shown here; El-Qubeibeh, kept by the Franciscans; and Abu Ghosh.", 'Emmaus Nicopolis', 'emmaus', 14),
  ('primacy', 'Shore of the Sea of Tiberias', 'Church of the Primacy of Saint Peter, Tabgha', [32.8718, 35.5480], 'trad', "A small basalt church on the water's edge is built around the rock called Mensa Christi, the table of Christ, where tradition says He served breakfast to the apostles.", 'Church of the Primacy of Saint Peter', None, 16.5),
+ ('marytomb', 'Tomb of the Virgin Mary', 'Church of the Sepulchre of Saint Mary, Kidron Valley', [31.7801, 35.2399], 'trad', "Since at least the fifth century the Church of Jerusalem has honoured this tomb at the foot of the Mount of Olives, beside Gethsemane, as the place from which the Mother of God was taken up into heaven. The Dormition Abbey on Mount Zion recalls her falling asleep; another tradition holds that she spent her last years at Ephesus with Saint John.", 'Tomb of the Virgin Mary', None, 16.5),
  ('ascension', 'Place of the Ascension', 'Chapel of the Ascension, Mount of Olives', [31.7787, 35.2447], 'trad', "Luke says He led them \"as far as Bethany\" (Luke 24:50), and Acts that they returned from the Mount of Olives (Acts 1:12). A small chapel at the summit keeps a rock honoured as bearing His last footprint.", 'Chapel of the Ascension, Jerusalem', 'olives', 16.5),
 ]
 
@@ -128,9 +130,49 @@ E = [
  ('risen', 'primacy', '"Feed My Sheep"', 'John 21:1-19', "At dawn by the lake He fills the apostles' nets and cooks them breakfast. Three times He asks Peter, \"Do you love me?\" and three times entrusts him: \"Feed my sheep.\""),
  ('risen', 'beatitudes', 'The Great Commission', 'Matthew 28:16-20', "On the mountain in Galilee He sends the Eleven: \"Go, therefore, and make disciples of all nations, baptizing them in the name of the Father, and of the Son, and of the holy Spirit ... I am with you always.\"", "Matthew does not name the mountain. Pilgrims often recall it on the Mount of Beatitudes; others think of Tabor or Mount Arbel."),
  ('risen', 'ascension', 'The Ascension', 'Luke 24:50-53; Acts 1:6-12', "Forty days after Easter He blesses the apostles, promises them the Holy Spirit, and is taken up to heaven before their eyes, while they return to Jerusalem with great joy."),
+
+ ('glory', 'cenacle', 'Pentecost', 'Acts 2:1-41', "Fifty days after Easter, as the apostles devote themselves to prayer with Mary the mother of Jesus, the Holy Spirit comes upon them in tongues of fire. Peter preaches Christ crucified and risen, about three thousand are baptized, and the Church goes out to all nations."),
+ ('glory', 'marytomb', 'The Assumption of Our Lady', 'Revelation 11:19; Revelation 12:1-6; Luke 1:46-55', "At the end of her earthly life the Immaculate Mother of God, the ever-Virgin Mary, is taken up body and soul into heavenly glory, as Pope Pius XII solemnly defined in 1950. She who bore the Lord shares first in her Son's Resurrection.", "Scripture does not record the place. It is shown at the tomb where the Church of Jerusalem has honoured her Assumption since ancient times."),
+ ('glory', 'marytomb', 'The Coronation of Our Lady', 'Revelation 12:1; Psalm 45:10-12', "Her Son crowns the Blessed Virgin Queen of Heaven and Earth, Queen of angels and saints. \"A great sign appeared in the sky, a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.\"", "This mystery takes place in heaven; it is shown here with her Assumption."),
 ]
 
-ERAS = [('hidden', '#9ec5ff'), ('ministry', '#7ccf9a'), ('journey', '#f3d58c'), ('passion', '#e0625a'), ('risen', '#fdf6e3')]
+ERAS = [('hidden', '#9ec5ff'), ('ministry', '#7ccf9a'), ('journey', '#f3d58c'), ('passion', '#e0625a'), ('risen', '#fdf6e3'), ('glory', '#f7a65a')]
+
+# the Mysteries of the Holy Rosary: set, colour, the days they are prayed, and for each mystery its name, the moment above it belongs to, and its traditional fruit
+MYST = [
+ ('joyful', '#8fb8ff', 'Mondays and Saturdays, and the Sundays of Advent and Christmas', [
+   ('The Annunciation', 'The Annunciation', 'Humility'),
+   ('The Visitation', 'The Visitation', 'Love of neighbor'),
+   ('The Nativity', 'The Birth of Our Lord', 'Poverty of spirit'),
+   ('The Presentation in the Temple', 'The Presentation in the Temple', 'Obedience'),
+   ('The Finding in the Temple', 'The Finding in the Temple', 'Joy in finding Jesus')]),
+ ('luminous', '#f6d36b', 'Thursdays', [
+   ('The Baptism of Christ in the Jordan', 'The Baptism of the Lord', 'Openness to the Holy Spirit'),
+   ('The Wedding Feast at Cana', 'The Wedding at Cana', 'To Jesus through Mary'),
+   ("Jesus' Proclamation of the Coming of the Kingdom of God", 'The Kingdom of God Is at Hand', 'Repentance and trust in God'),
+   ('The Transfiguration', 'The Transfiguration', 'Desire for holiness'),
+   ('The Institution of the Eucharist', 'The Last Supper', 'Adoration')]),
+ ('sorrowful', '#b98cff', 'Tuesdays and Fridays, and the Sundays of Lent', [
+   ('The Agony in the Garden', 'The Agony in the Garden', 'Sorrow for sin'),
+   ('The Scourging at the Pillar', 'The Scourging at the Pillar', 'Purity'),
+   ('The Crowning with Thorns', 'The Crowning with Thorns', 'Courage'),
+   ('The Carrying of the Cross', 'The Carrying of the Cross', 'Patience'),
+   ('The Crucifixion and Death', 'The Crucifixion', 'Perseverance')]),
+ ('glorious', '#fdf6e3', 'Wednesdays and Sundays', [
+   ('The Resurrection', 'The Resurrection', 'Faith'),
+   ('The Ascension', 'The Ascension', 'Hope'),
+   ('The Descent of the Holy Spirit', 'Pentecost', 'Wisdom and love of God'),
+   ('The Assumption', 'The Assumption of Our Lady', 'Grace of a happy death'),
+   ('The Coronation of Mary', 'The Coronation of Our Lady', "Trust in Mary's intercession")]),
+]
+
+# how the Rosary came to be, told for the Rosary view
+ROSARY_ABOUT = [
+ "The Rosary grew out of the prayer of the Church. Monks chanted the 150 Psalms, and the faithful who could not read prayed 150 Our Fathers, and then 150 Hail Marys, counted on strings of beads: \"Our Lady's Psalter\".",
+ "By a beloved tradition, the Blessed Virgin Mary gave the Rosary to Saint Dominic at Prouille in France in the early 1200s, as a help in preaching against the Albigensian heresy. His Order of Preachers carried it across Christendom, and in the 1400s the Dominican Blessed Alan de la Roche renewed the devotion and founded the first Rosary confraternities.",
+ "Pope Saint Pius V, himself a Dominican, gave the Rosary its classic form of fifteen mysteries, Joyful, Sorrowful and Glorious, in 1569. After the victory at Lepanto on October 7, 1571, won as all Christendom prayed the Rosary, he kept that day as the feast of Our Lady of Victory, now Our Lady of the Rosary. At Lourdes and at Fatima Our Lady herself came with the Rosary and asked that it be prayed every day.",
+ "On October 16, 2002, Pope Saint John Paul II added the five Luminous Mysteries, the mysteries of light from Our Lord's public life, in his apostolic letter Rosarium Virginis Mariae, so that the Rosary might become \"a compendium of the Gospel\". In each mystery we look on the face of Christ with the eyes of His Mother.",
+]
 
 SMALL = set('a an and as at by for from in into of on or the to with'.split())
 def title(t):
@@ -151,13 +193,21 @@ E = [(e[0], e[1], title(e[2])) + tuple(e[3:]) for e in E]
 ids = {p[0] for p in P}
 assert len(ids) == len(P)
 for e in E: assert e[1] in ids and e[0] in dict(ERAS), e
+titles = [e[2] for e in E]
+RO = {}
+for k, _c, _d, ms in MYST:
+    assert len(ms) == 5, k
+    for n, (name, moment, fruit) in enumerate(ms, 1):
+        assert titles.count(moment) == 1, moment
+        RO[moment] = [k, n, name, fruit]
 used = {e[1] for e in E}
 assert used == ids, ids - used
 out = {
   'note': 'Places the Gospels record Our Lord going, and the moments of His life in a traditional harmony of the four Gospels. References: New American Bible, Revised Edition. Built by scripts/jesus/build.py.',
   'eras': [{'k': k, 'color': c} for k, c in ERAS],
   'places': [dict(id=i, n=n, m=m, ll=ll, cert=c, s=s, w=w, **({'bp': bp} if bp else {}), z=min(z, 15.5)) for i, n, m, ll, c, s, w, bp, z in P],
-  'events': [dict(e=e[0], p=e[1], t=e[2], r=e[3], s=e[4], **({'u': e[5]} if len(e) > 5 else {})) for e in E],
+  'events': [dict(e=e[0], p=e[1], t=e[2], r=e[3], s=e[4], **({'u': e[5]} if len(e) > 5 else {}), **({'ro': RO[e[2]]} if e[2] in RO else {})) for e in E],
+  'rosary': {'sets': [{'k': k, 'color': c, 'days': d} for k, c, d, _ in MYST], 'about': ROSARY_ABOUT},
 }
 root = os.path.join(os.path.dirname(__file__), '..', '..')
 with open(os.path.join(root, 'data', 'jesus.json'), 'w', encoding='utf-8') as f: json.dump(out, f, ensure_ascii=False, separators=(',', ':'))

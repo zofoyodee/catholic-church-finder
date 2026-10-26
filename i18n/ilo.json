@@ -410,5 +410,15 @@
   "theme_stone": "Bato ti Katedral",
   "theme_parchment": "Pergamino",
   "theme_liturgical": "Panawen ti Liturhia",
-  "theme_contrast": "Nangato a Contrast"
+  "theme_contrast": "Nangato a Contrast",
+  "jEra_glory": "Pentekostes ken Dayag ti Apo a Birhen",
+  "jRosary": "Dagiti Misterio ti Rosario",
+  "jRo_joyful": "Dagiti Misterio ti Rag-o",
+  "jRo_luminous": "Dagiti Misterio ti Lawag",
+  "jRo_sorrowful": "Dagiti Misterio ti Ladingit",
+  "jRo_glorious": "Dagiti Misterio ti Dayag",
+  "jMysteryOf": "{set} · {k} iti 5",
+  "jFruit": "Bunga ti Misterio",
+  "jRosaryAbout": "No Kasano a Nangrugi ti Rosario",
+  "jRosaryPray": "Kasano ti Agkararag iti Rosario"
 }

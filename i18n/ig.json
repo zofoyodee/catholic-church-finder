@@ -410,5 +410,15 @@
   "theme_stone": "Nkume Katidral",
   "theme_parchment": "Akpụkpọ Ederede",
   "theme_liturgical": "Oge Liturgy",
-  "theme_contrast": "Ọdịiche Dị Elu"
+  "theme_contrast": "Ọdịiche Dị Elu",
+  "jEra_glory": "Pentikọst na Ebube Nne Anyị Nsọ",
+  "jRosary": "Ihe Omimi nke Rosarị",
+  "jRo_joyful": "Ihe Omimi nke Ọṅụ",
+  "jRo_luminous": "Ihe Omimi nke Ìhè",
+  "jRo_sorrowful": "Ihe Omimi nke Mwute",
+  "jRo_glorious": "Ihe Omimi nke Ebube",
+  "jMysteryOf": "{set} · {k} n'ime 5",
+  "jFruit": "Mkpụrụ nke Ihe Omimi",
+  "jRosaryAbout": "Otu Rosarị Si Malite",
+  "jRosaryPray": "Otu E Si Ekpe Rosarị"
 }

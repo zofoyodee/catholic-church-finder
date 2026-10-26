@@ -444,5 +444,15 @@
   "theme_stone": "Камінь собору",
   "theme_parchment": "Пергамент",
   "theme_liturgical": "Літургійний період",
-  "theme_contrast": "Висока контрастність"
+  "theme_contrast": "Висока контрастність",
+  "jEra_glory": "П'ятидесятниця і слава Богородиці",
+  "jRosary": "Таїнства Вервиці",
+  "jRo_joyful": "Радісні таїнства",
+  "jRo_luminous": "Таїнства Світла",
+  "jRo_sorrowful": "Скорботні таїнства",
+  "jRo_glorious": "Славні таїнства",
+  "jMysteryOf": "{set} · {k} з 5",
+  "jFruit": "Плід таїнства",
+  "jRosaryAbout": "Як постала Вервиця",
+  "jRosaryPray": "Як молитися на Вервиці"
 }

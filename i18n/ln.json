@@ -410,5 +410,15 @@
   "theme_stone": "Libanga ya Katedrale",
   "theme_parchment": "Loposo ya Kokoma",
   "theme_liturgical": "Eleko ya Liturgi",
-  "theme_contrast": "Bokeseni Makasi"
+  "theme_contrast": "Bokeseni Makasi",
+  "jEra_glory": "Pantekoti mpe Nkembo ya Mama Maria",
+  "jRosary": "Mabombami ya Rozario",
+  "jRo_joyful": "Mabombami ya Esengo",
+  "jRo_luminous": "Mabombami ya Pole",
+  "jRo_sorrowful": "Mabombami ya Mawa",
+  "jRo_glorious": "Mabombami ya Nkembo",
+  "jMysteryOf": "{set} · {k} na 5",
+  "jFruit": "Mbuma ya Ebombami",
+  "jRosaryAbout": "Ndenge Rozario Ebandaki",
+  "jRosaryPray": "Ndenge ya Kobondela Rozario"
 }

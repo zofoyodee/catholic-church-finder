@@ -410,5 +410,15 @@
   "theme_stone": "Dombo reKatedhiraru",
   "theme_parchment": "Ganda Rekunyorera",
   "theme_liturgical": "Mwaka weLiturgy",
-  "theme_contrast": "Mutsauko Wakakwira"
+  "theme_contrast": "Mutsauko Wakakwira",
+  "jEra_glory": "Pendekosti neKukudzwa kwaAmai Maria",
+  "jRosary": "Zvakavanzika zveRozari",
+  "jRo_joyful": "Zvakavanzika zveMufaro",
+  "jRo_luminous": "Zvakavanzika zveChiedza",
+  "jRo_sorrowful": "Zvakavanzika zveKusuwa",
+  "jRo_glorious": "Zvakavanzika zveKubwinya",
+  "jMysteryOf": "{set} · {k} pa5",
+  "jFruit": "Chibereko cheChakavanzika",
+  "jRosaryAbout": "Kutanga kweRozari",
+  "jRosaryPray": "Kunamata Rozari"
 }

@@ -410,5 +410,15 @@
   "theme_stone": "Fatuk Katedrál",
   "theme_parchment": "Pergaminhu",
   "theme_liturgical": "Tempu Litúrjiku",
-  "theme_contrast": "Kontraste Aas"
+  "theme_contrast": "Kontraste Aas",
+  "jEra_glory": "Pentekoste no Glória Ami-nia Inan",
+  "jRosary": "Misteriu Rozáriu nian",
+  "jRo_joyful": "Misteriu Haksolok",
+  "jRo_luminous": "Misteriu Naroman",
+  "jRo_sorrowful": "Misteriu Terus",
+  "jRo_glorious": "Misteriu Glória",
+  "jMysteryOf": "{set} · {k} husi 5",
+  "jFruit": "Fuan Misteriu nian",
+  "jRosaryAbout": "Oinsá Rozáriu Moris",
+  "jRosaryPray": "Oinsá Reza Rozáriu"
 }

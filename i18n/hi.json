@@ -409,5 +409,15 @@
   "theme_stone": "महागिरजाघर का पत्थर",
   "theme_parchment": "चर्मपत्र",
   "theme_liturgical": "धर्मविधिक ऋतु",
-  "theme_contrast": "उच्च कंट्रास्ट"
+  "theme_contrast": "उच्च कंट्रास्ट",
+  "jEra_glory": "पेंतेकोस्त और माँ मरियम की महिमा",
+  "jRosary": "माला-विनती के रहस्य",
+  "jRo_joyful": "आनंद के रहस्य",
+  "jRo_luminous": "ज्योति के रहस्य",
+  "jRo_sorrowful": "दुःख के रहस्य",
+  "jRo_glorious": "महिमा के रहस्य",
+  "jMysteryOf": "{set} · 5 में से {k}",
+  "jFruit": "रहस्य का फल",
+  "jRosaryAbout": "माला-विनती की उत्पत्ति",
+  "jRosaryPray": "माला-विनती कैसे करें"
 }

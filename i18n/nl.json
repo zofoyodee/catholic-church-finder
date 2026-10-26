@@ -418,5 +418,15 @@
   "theme_stone": "Kathedraalsteen",
   "theme_parchment": "Perkament",
   "theme_liturgical": "Liturgische tijd",
-  "theme_contrast": "Hoog contrast"
+  "theme_contrast": "Hoog contrast",
+  "jEra_glory": "Pinksteren en Heerlijkheid van Onze-Lieve-Vrouw",
+  "jRosary": "Geheimen van de Rozenkrans",
+  "jRo_joyful": "Blijde Geheimen",
+  "jRo_luminous": "Geheimen van het Licht",
+  "jRo_sorrowful": "Droevige Geheimen",
+  "jRo_glorious": "Glorievolle Geheimen",
+  "jMysteryOf": "{set} · {k} van 5",
+  "jFruit": "Vrucht van het geheim",
+  "jRosaryAbout": "Hoe de Rozenkrans Ontstond",
+  "jRosaryPray": "Hoe Bid Je de Rozenkrans"
 }
