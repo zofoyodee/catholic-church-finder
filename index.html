@@ -2626,11 +2626,19 @@ const appleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) || (/Macintosh/
 // links out of a details card: Directions, the parish website, social pages, Wikipedia and the like
 $('card').addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="http"]'); if (!a) return;
-  // Street View always gets its own tab, so the globe stays where it was (an iPhone may otherwise open it in place)
-  if (a.id === 'svLink') { e.preventDefault(); window.open(a.href, '_blank', 'noopener'); track('street-view'); return; }
+  if (a.id === 'svLink') { track('street-view'); return; }
   if (/maps\.apple\.com\/\?daddr|google\.com\/maps\/dir/.test(a.href)) { track('directions'); return; }
   if (a.title === tr('parishSite')) { track('parish-website'); return; }
   try { track('link/' + new URL(a.href).hostname.split('.').slice(-2).join('.')); } catch (err) {}  // en.wikipedia.org counts as wikipedia.org
+});
+// every link off the site opens in its own tab, on phones too (a home-screen app or an iPhone may otherwise
+// open it in place of the globe); phone numbers, email and the site's own links behave as usual
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href]'); if (!a || e.defaultPrevented || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+  let u; try { u = new URL(a.href, location.href); } catch (err) { return; }
+  if (!/^https?:$/.test(u.protocol) || u.origin === location.origin) return;
+  e.preventDefault();
+  window.open(u.href, '_blank', 'noopener');
 });
 function directionsURL(lat, lng, name) {
   const at = lat.toFixed(6) + ',' + lng.toFixed(6);
