@@ -540,6 +540,9 @@ body.bible-mode .ctrls .fav-open, body.bible-mode .ctrls #nearBtn, body.bible-mo
 .ln-ctl button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.03); display: grid; place-items: center; cursor: pointer; padding: 0; }
 .ln-ctl button:disabled { opacity: .35; cursor: default; }
 .ln-ctl button.play { background: var(--gold); border-color: transparent; }
+.ln-ctl button.ro-toggle { width: auto; display: inline-flex; gap: 6px; padding: 0 12px 0 9px; border-radius: 17px; color: var(--ink); font: inherit; font-size: 12.5px; white-space: nowrap; }
+.ln-ctl button.ro-toggle svg { width: 16px; height: 16px; stroke: none; fill: var(--gold-soft); transform: none; }
+.ln-ctl button.ro-toggle[aria-pressed="true"] { border-color: color-mix(in srgb, var(--gold) 60%, transparent); background: rgba(232, 184, 74, 0.16); }
 .ln-ctl svg { width: 16px; height: 16px; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .ln-ctl button.play svg { stroke: #1a1406; fill: #1a1406; }
 [dir="rtl"] .ln-ctl svg { transform: scaleX(-1); }
@@ -3578,13 +3581,16 @@ function lifeTagline() {
 function renderLifeChips() {
   const d = life.data, count = (k) => d.events.filter(e => e.e === k).length;
   $('chips').classList.remove('filtered');
-  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-era="all" aria-pressed="${life.era === 'all'}">${esc(tr('all'))}</button>` +
-    `<button class="chip" data-era="rosary" aria-pressed="${life.era === 'rosary'}">${ROSARY_ICON}${esc(tr('jRosary'))} <small>${fmt(d.mysteries.length)}</small></button>` + d.eras.map(e =>
+  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-era="all" aria-pressed="${life.era === 'all'}">${esc(tr('all'))}</button>` + d.eras.map(e =>
     `<button class="chip" data-era="${e.k}" aria-pressed="${life.era === e.k}"><i style="background:${e.color}"></i>${esc(tr('jEra_' + e.k))} <small>${fmt(count(e.k))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'jesus' || !b.dataset.era) return;
-  life.era = b.dataset.era === life.era ? 'all' : b.dataset.era;
+  setLifeEra(b.dataset.era === life.era ? 'all' : b.dataset.era);
+});
+// show one period, all of them, or ('rosary') only the twenty Mysteries of the Rosary
+function setLifeEra(era) {
+  life.era = era;
   lifePause(); renderLifeChips(); lifeTagline(); renderNow();
   const g = lifeGeo(); map.getSource('j-places').setData(g.places); map.getSource('j-route').setData(g.route);
   const cur = life.data.events[life.k];
@@ -3595,7 +3601,7 @@ $('chips').addEventListener('click', (e) => {
     map.fitBounds(b2, { padding: lifePad(), maxZoom: 11, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 1800, essential: true }); }
   else lifeOverview();
   if (life.k < 0) $('lifeTrack').scrollLeft = 0;
-});
+}
 
 /* the timeline: one row of moments, grouped by period, with the current one told above it */
 function buildTimeline() {
@@ -3618,6 +3624,7 @@ function renderNow() {
       <button id="lifePrev" aria-label="${esc(tr('jPrev'))}" title="${esc(tr('jPrev'))}" ${pos <= 0 ? 'disabled' : ''}>${ICON_PREV}</button>
       <button id="lifePlay" class="play" aria-pressed="${life.auto}" aria-label="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}" title="${esc(tr(life.auto ? 'jPause' : 'jPlay'))}">${life.auto ? ICON_PAUSE : ICON_PLAY}</button>
       <button id="lifeNext" aria-label="${esc(tr('jNext'))}" title="${esc(tr('jNext'))}" ${pos >= evs.length - 1 ? 'disabled' : ''}>${ICON_NEXT}</button>
+      ${d.mysteries.length ? `<button id="lifeRosary" class="ro-toggle" aria-pressed="${life.era === 'rosary'}">${ROSARY_ICON}<span>${esc(tr('jRosary'))}</span></button>` : ''}
     </div>
     <div class="ln-txt" aria-live="polite">${e ? `
       <div class="kick"><i style="background:${d.color[e.e]}"></i>${esc(tr('jEra_' + e.e))} · ${esc(tr('jEventOf', { k: fmt(e.i + 1), n: d.events.length }))}${e.ro ? ' · ' + roTag(e) : ''}</div>
@@ -3650,7 +3657,7 @@ function lifeSchedule(ms) {
 async function goEvent(k, { fly = true, card } = {}) {
   if (state.mode !== 'jesus') await setMode('jesus', { fly: false });
   const d = life.data, e = d && d.events[k]; if (!e) return;
-  if (!lifeEvents().includes(e)) $('chips').querySelector('[data-era="all"]').click();
+  if (!lifeEvents().includes(e)) setLifeEra('all');
   clearLifeTimer(); life.k = k;
   const p = d.byId[e.p];
   renderNow(); markTrack(); lifeSel(p); lastInteract = performance.now();
@@ -3676,6 +3683,7 @@ $('lifeNow').addEventListener('click', (e) => {
   const b = e.target.closest('button'); if (!b || !life.data) return;
   if (b.id === 'lifePrev') { lifePause(); lifeStep(-1); }
   else if (b.id === 'lifeNext') { lifePause(); lifeStep(1); }
+  else if (b.id === 'lifeRosary') setLifeEra(life.era === 'rosary' ? 'all' : 'rosary');
   else if (b.id === 'lifePlay') {
     life.auto = !life.auto; if (life.auto) track('life-of-jesus-play');
     if (!life.auto) { clearLifeTimer(); map.stop(); renderNow(); return; }
@@ -3833,7 +3841,7 @@ function openRosary() {
 $('cardBody').addEventListener('click', (e) => {
   if (!life.data) return;
   if (e.target.closest('[data-rosary]')) openRosary();
-  else if (e.target.closest('[data-roonly]')) $('chips').querySelector('[data-era="rosary"]')?.click();  // the same as the chip, for phones where the chip row scrolls out of sight
+  else if (e.target.closest('[data-roonly]')) setLifeEra('rosary');
 });
 const SCROLL_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5"/><path d="M9 9h7M9 13h7"/></svg>';
 
