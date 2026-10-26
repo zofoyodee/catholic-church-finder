@@ -871,7 +871,7 @@ const EN = {
   loadingPhoto: 'Loading photo', photoOf: 'Photograph of {name}', theChurch: 'the church',
   photoBy: 'Photo by {author}, {license}. Opens the photo on Wikimedia Commons.', photoCredit: 'Photo: {author} · {license}', parishSitePhoto: 'parish website', photoFromSite: 'Photo from the parish website, {site}. Opens the site.', photoStreetView: 'Street View image from Google. Opens Street View.', photoMapillary: 'Street photo by {author} on Mapillary, CC BY-SA 4.0. Opens it on Mapillary.',
   unknownAuthor: 'Unknown author', seeFilePage: 'See file page',
-  save: 'Save', saved: 'Saved', favAdd: 'Add to your favorites', favRemove: 'Remove from your favorites',
+  save: 'Save', saved: 'Saved', favWhere: 'Saved. Your favorites are in the Menu.', favAdd: 'Add to your favorites', favRemove: 'Remove from your favorites',
   favRemoveName: 'Remove {name} from favorites', remove: 'Remove', favEmpty: 'No favorites yet. Open a church and tap {save} to keep it here.',
   century: '{ord} century', decade: '{y}s', bc: '{y} BC',
   fact_P571: 'Founded', fact_P1619: 'Opened', fact_P825: 'Dedicated to', fact_P708: 'Diocese', fact_P84: 'Architect',
@@ -2170,7 +2170,10 @@ function saveFavs() { try { localStorage.setItem(FAV_KEY, JSON.stringify(favs));
 function toggleFav(i, info) {
   track(isFav(i) ? 'favorite-removed' : 'favorite-added');
   if (isFav(i)) favs = favs.filter(f => f.i !== i);
-  else favs.unshift({ i, name: info.name || tr('one_church'), place: info.place || '', t: info.t });
+  else {
+    favs.unshift({ i, name: info.name || tr('one_church'), place: info.place || '', t: info.t });
+    if (phoneNow()) toast(tr('favWhere'), 3600);  // on phones the list lives in the menu
+  }
   saveFavs(); syncSave(i);
 }
 function syncSave(i) {
@@ -2623,6 +2626,8 @@ const appleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) || (/Macintosh/
 // links out of a details card: Directions, the parish website, social pages, Wikipedia and the like
 $('card').addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="http"]'); if (!a) return;
+  // Street View always gets its own tab, so the globe stays where it was (an iPhone may otherwise open it in place)
+  if (a.id === 'svLink') { e.preventDefault(); window.open(a.href, '_blank', 'noopener'); track('street-view'); return; }
   if (/maps\.apple\.com\/\?daddr|google\.com\/maps\/dir/.test(a.href)) { track('directions'); return; }
   if (a.title === tr('parishSite')) { track('parish-website'); return; }
   try { track('link/' + new URL(a.href).hostname.split('.').slice(-2).join('.')); } catch (err) {}  // en.wikipedia.org counts as wikipedia.org

@@ -70,6 +70,13 @@ $('msActs').addEventListener('click', (e) => {
   setTimeout(hook, 4000);  // the church of the day card is built once the calendar loads
 }
 
+// the Menu tab shows how many churches are saved, so Favorites can be found
+{
+  const n = () => { $('mnavMenu').dataset.n = $('favCount').textContent; };
+  new MutationObserver(n).observe($('favCount'), { childList: true, characterData: true, subtree: true });
+  n();
+}
+
 // Whole Globe lives at the end of the search bar on phones, where no panel ever covers it
 $('globeBtn').addEventListener('click', () => { show(false); $('home').click(); });
 
