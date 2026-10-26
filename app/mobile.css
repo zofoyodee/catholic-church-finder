@@ -15,8 +15,18 @@
 .compact .search > svg { top: 15px; }
 .compact .results { top: 52px; }
 
-/* side buttons: just churches near me and back to the whole globe */
-.compact .ctrls > :not(#nearBtn):not(#home) { display: none !important; }
+/* side buttons: just churches near me; Whole Globe sits at the end of the search bar */
+.compact .ctrls > :not(#nearBtn) { display: none !important; }
+.globe-btn { display: none; }
+.compact .globe-btn {
+  display: grid; place-items: center; position: absolute; z-index: 2; right: 5px; top: 5px; width: 36px; height: 36px;
+  border-radius: 50%; border: 0; background: transparent; cursor: pointer;
+}
+.compact .globe-btn:hover { background: rgba(232, 184, 74, 0.14); }
+.compact .search .globe-btn svg { position: static; width: 20px; height: 20px; stroke: var(--ink-soft); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.compact .search input { padding-right: 46px; }
+[dir="rtl"] .compact .globe-btn { right: auto; left: 5px; }
+[dir="rtl"] .compact .search input { padding: 0 40px 0 46px; }
 .compact .ctrls { bottom: calc(var(--nav-h) + 12px); }
 
 /* bottom tabs */
@@ -37,6 +47,7 @@
 
 /* the floating cards and side buttons sit above the bar */
 .compact .float-card, .compact .life { bottom: calc(var(--nav-h) + 8px); }
+.compact .life { left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); }  /* the whole width */
 .compact body.tour-on .ctrls { bottom: calc(var(--tour-h, 0px) + var(--nav-h) + 18px); }
 .compact .toast { top: calc(var(--search, 56px) + 12px); }
 
@@ -102,6 +113,8 @@ body.bible-mode .ms-acts .church-only { display: none; }
   .compact .card { width: min(420px, calc(100vw - var(--rail) - 120px)); }
   .compact .card .hero { height: 110px; }
   .compact .float-card, .compact .life, .compact .favs { left: calc(var(--rail) + 10px); }
+  .compact .life { right: max(10px, env(safe-area-inset-right, 0px)); }
+  .compact .globe-btn { top: 3px; }
   .compact .life { bottom: max(10px, env(safe-area-inset-bottom, 0px)); }
   .compact .life-now { display: none; }  /* the moment's story is in its card */
   .compact .viewmenu { top: 8px !important; bottom: auto !important; left: calc(var(--rail) + 10px) !important; right: auto !important; max-height: calc(100% - 16px); overflow-y: auto; }
