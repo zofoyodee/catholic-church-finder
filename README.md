@@ -13,7 +13,7 @@ An interactive 3D globe of about 184,000 Catholic churches, chapels, shrines, ba
 
 ## How it works
 
-It is a static site with no build step and no server.
+It is a static site with no build step and no server, apart from the small Cloudflare Worker behind the Contact Us form.
 
 | Path | What it holds |
 | --- | --- |
@@ -30,6 +30,7 @@ It is a static site with no build step and no server.
 | `i18n/<lang>.json` | Interface text in each language; English lives in `index.html` as `EN` |
 | `i18n/saints/<lang>.json` | The patron saint bios in each language, `[name, feast, bio]` per English title |
 | `scripts/` | The pipeline that built the data from Overture Maps |
+| `contact/` | The Contact Us form's Cloudflare Worker (profanity check, AI reading and auto-reply, summary email); setup in `contact/README.md` |
 
 ## Languages
 
