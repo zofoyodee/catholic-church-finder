@@ -510,5 +510,9 @@
   "hint_spin": "Pabay-i nga hinay-hinay nga lumibot an globo",
   "hint_viewBtn": "Bag-oha an hitsura han mapa",
   "hint_favOpen": "An mga simbahan nga imo gintipig",
-  "mineEmpty": "Pinduta an kasingkasing ha usa nga simbahan basi matipigan ito dinhi."
+  "mineEmpty": "Pinduta an kasingkasing ha usa nga simbahan basi matipigan ito dinhi.",
+  "voiceSearch": "Pagbiling Gamit an Tingog",
+  "listening": "Namamati… sidngon an simbahan o bungto",
+  "micBlocked": "Naka-block an mikropono. Tugota ini ha settings han browser basi makabiling gamit an tingog.",
+  "voiceFailed": "Diri nagana yana an pagbiling gamit an tingog. Alayon i-type an imo ginbibiling."
 }

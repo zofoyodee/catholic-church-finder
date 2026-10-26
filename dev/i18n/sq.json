@@ -516,5 +516,9 @@
   "hint_spin": "Lëreni globin të rrotullohet ngadalë",
   "hint_viewBtn": "Ndryshoni pamjen e hartës",
   "hint_favOpen": "Kishat që keni ruajtur",
-  "mineEmpty": "Prekni zemrën te një kishë për ta ruajtur këtu."
+  "mineEmpty": "Prekni zemrën te një kishë për ta ruajtur këtu.",
+  "voiceSearch": "Kërko me Zë",
+  "listening": "Po dëgjoj… thuaj një kishë ose qytet",
+  "micBlocked": "Mikrofoni është i bllokuar. Lejoje te cilësimet e shfletuesit për të kërkuar me zë.",
+  "voiceFailed": "Kërkimi me zë nuk punon tani. Ju lutemi shkruani atë që kërkoni."
 }

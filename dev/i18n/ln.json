@@ -510,5 +510,9 @@
   "hint_spin": "Tika mabele ebaluka malembe",
   "hint_viewBtn": "Bongola ndenge karte emonanaka",
   "hint_favOpen": "Ba ndako-Nzambe oyo obombi",
-  "mineEmpty": "Fina motema na lingomba mpo na kobomba yango awa."
+  "mineEmpty": "Fina motema na lingomba mpo na kobomba yango awa.",
+  "voiceSearch": "Luka na Mongongo",
+  "listening": "Nazali koyoka… loba lingomba to engumba",
+  "micBlocked": "Mikro ekangami. Ndima yango na mibongiseli ya navigatɛ́ mpo na koluka na mongongo.",
+  "voiceFailed": "Koluka na mongongo ezali kosala te sikoyo. Svp, koma oyo ozali koluka."
 }

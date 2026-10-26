@@ -518,5 +518,9 @@
   "hint_spin": "Den Globus langsam von selbst drehen lassen",
   "hint_viewBtn": "Das Aussehen der Karte ändern",
   "hint_favOpen": "Ihre gespeicherten Kirchen",
-  "mineEmpty": "Tippen Sie bei einer Kirche auf das Herz, um sie hier zu speichern."
+  "mineEmpty": "Tippen Sie bei einer Kirche auf das Herz, um sie hier zu speichern.",
+  "voiceSearch": "Sprachsuche",
+  "listening": "Ich höre zu … nenne eine Kirche oder einen Ort",
+  "micBlocked": "Das Mikrofon ist blockiert. Erlaube es in den Browsereinstellungen, um per Sprache zu suchen.",
+  "voiceFailed": "Die Sprachsuche funktioniert gerade nicht. Bitte tippe deine Suche ein."
 }

@@ -518,5 +518,9 @@
   "hint_spin": "Laat de wereldbol langzaam draaien",
   "hint_viewBtn": "Verander hoe de kaart eruitziet",
   "hint_favOpen": "De kerken die u hebt bewaard",
-  "mineEmpty": "Tik op het hartje bij een kerk om die hier te bewaren."
+  "mineEmpty": "Tik op het hartje bij een kerk om die hier te bewaren.",
+  "voiceSearch": "Zoeken met Spraak",
+  "listening": "Aan het luisteren… zeg een kerk of plaats",
+  "micBlocked": "De microfoon is geblokkeerd. Sta hem toe in de browserinstellingen om met je stem te zoeken.",
+  "voiceFailed": "Zoeken met spraak werkt nu niet. Typ je zoekopdracht alstublieft."
 }

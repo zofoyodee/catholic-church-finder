@@ -510,5 +510,9 @@
   "hint_spin": "Kite glòb la vire dousman pou kont li",
   "hint_viewBtn": "Chanje jan kat la parèt",
   "hint_favOpen": "Legliz ou sove yo",
-  "mineEmpty": "Tape sou kè a sou yon legliz pou w sere l isit la."
+  "mineEmpty": "Tape sou kè a sou yon legliz pou w sere l isit la.",
+  "voiceSearch": "Chèche ak Vwa",
+  "listening": "M ap koute… di non yon legliz oswa yon vil",
+  "micBlocked": "Mikwo a bloke. Pèmèt li nan paramèt navigatè a pou w ka chèche ak vwa.",
+  "voiceFailed": "Rechèch ak vwa a pa mache kounye a. Tanpri tape sa w ap chèche a."
 }

@@ -510,5 +510,9 @@
   "hint_spin": "Lekeni icibulungwa cishinguluke panono",
   "hint_viewBtn": "Alulenipo ifyo mapu imoneka",
   "hint_favOpen": "Amacalici mwasunga",
-  "mineEmpty": "Kanda pa mutima pa calici pa kuti cisungwe muno."
+  "mineEmpty": "Kanda pa mutima pa calici pa kuti cisungwe muno.",
+  "voiceSearch": "Fwailisheni Ishiwi",
+  "listening": "Ndekutika… lumbuleni icalici nangu umusumba",
+  "micBlocked": "Maikolofoni naiikwa. Isuminisheni mu fyakupanga fya browser pa kufwaya ku ishiwi.",
+  "voiceFailed": "Ukufwaya ku ishiwi tafilebomba nomba. Mukwai lembeni ifyo mulefwaya."
 }

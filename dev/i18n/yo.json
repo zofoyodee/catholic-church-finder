@@ -510,5 +510,9 @@
   "hint_spin": "Jẹ́ kí àgbáyé yí lọ́ra fúnra rẹ̀",
   "hint_viewBtn": "Yí bí máàpù ṣe rí padà",
   "hint_favOpen": "Àwọn ilé ìjọsìn tí o ti fipamọ́",
-  "mineEmpty": "Tẹ ọkàn lórí ṣọ́ọ̀ṣì kan láti fi pamọ́ síbí."
+  "mineEmpty": "Tẹ ọkàn lórí ṣọ́ọ̀ṣì kan láti fi pamọ́ síbí.",
+  "voiceSearch": "Ṣàwárí pẹ̀lú Ohùn",
+  "listening": "Mò ń gbọ́… sọ orúkọ ṣọ́ọ̀ṣì tàbí ìlú kan",
+  "micBlocked": "A ti dí máíkírófóònù. Gbà á láàyè nínú ètò aṣàwákiri láti ṣàwárí pẹ̀lú ohùn.",
+  "voiceFailed": "Ìṣàwárí pẹ̀lú ohùn kò ṣiṣẹ́ báyìí. Jọ̀wọ́ tẹ ohun tí o ń wá."
 }

@@ -518,5 +518,9 @@
   "hint_spin": "Deixar o globo girar devagar sozinho",
   "hint_viewBtn": "Mudar a aparência do mapa",
   "hint_favOpen": "As igrejas que você salvou",
-  "mineEmpty": "Toque no coração de uma igreja para guardá-la aqui."
+  "mineEmpty": "Toque no coração de uma igreja para guardá-la aqui.",
+  "voiceSearch": "Pesquisar por Voz",
+  "listening": "Ouvindo… diga uma igreja ou cidade",
+  "micBlocked": "O microfone está bloqueado. Permita-o nas configurações do navegador para pesquisar por voz.",
+  "voiceFailed": "A pesquisa por voz não está funcionando agora. Digite sua pesquisa, por favor."
 }

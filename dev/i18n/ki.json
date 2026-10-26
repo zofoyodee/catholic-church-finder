@@ -510,5 +510,9 @@
   "hint_spin": "Reka thĩ ĩgĩthiũrũrũke kahora",
   "hint_viewBtn": "Garũra ũrĩa mapu ĩonekaga",
   "hint_favOpen": "Makanitha marĩa ũiigĩte",
-  "mineEmpty": "Hutia ngoro ya kanitha nĩguo ũmĩiige haha."
+  "mineEmpty": "Hutia ngoro ya kanitha nĩguo ũmĩiige haha.",
+  "voiceSearch": "Caria na Mũgambo",
+  "listening": "Ndĩrathikĩrĩria… ugĩa kanitha kana itũũra",
+  "micBlocked": "Maikorofoni nĩ ĩhingĩtwo. Ĩĩtĩkĩrie mabangĩ-inĩ ma browser nĩguo ũcarie na mũgambo.",
+  "voiceFailed": "Gũcaria na mũgambo gũtirarũta wĩra rĩu. Ndagũthaitha andĩka ũrĩa ũracaria."
 }

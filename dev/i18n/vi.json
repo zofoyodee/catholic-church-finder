@@ -502,5 +502,9 @@
   "hint_spin": "Để quả địa cầu tự quay chậm",
   "hint_viewBtn": "Thay đổi giao diện bản đồ",
   "hint_favOpen": "Các nhà thờ bạn đã lưu",
-  "mineEmpty": "Chạm vào trái tim ở một nhà thờ để lưu vào đây."
+  "mineEmpty": "Chạm vào trái tim ở một nhà thờ để lưu vào đây.",
+  "voiceSearch": "Tìm bằng Giọng Nói",
+  "listening": "Đang nghe… hãy nói tên nhà thờ hoặc thị trấn",
+  "micBlocked": "Micrô đang bị chặn. Hãy cho phép trong cài đặt trình duyệt để tìm bằng giọng nói.",
+  "voiceFailed": "Tìm bằng giọng nói hiện không hoạt động. Vui lòng gõ nội dung cần tìm."
 }

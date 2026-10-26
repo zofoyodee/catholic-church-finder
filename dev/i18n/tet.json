@@ -510,5 +510,9 @@
   "hint_spin": "Husik mundu atu fila neineik",
   "hint_viewBtn": "Muda oinsá mapa haree",
   "hint_favOpen": "Igreja sira ne’ebé ita rai ona",
-  "mineEmpty": "Toka fuan iha igreja ida atu rai iha ne’e."
+  "mineEmpty": "Toka fuan iha igreja ida atu rai iha ne’e.",
+  "voiceSearch": "Buka ho Lian",
+  "listening": "Rona hela… temi igreja ka sidade ida",
+  "micBlocked": "Mikrofone taka ona. Fó lisensa iha konfigurasaun browser nian atu buka ho lian.",
+  "voiceFailed": "Buka ho lian la la’o agora. Favór hakerek buat ne’ebé ita buka."
 }

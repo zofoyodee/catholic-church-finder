@@ -539,5 +539,9 @@
   "hint_spin": "Nechať zemeguľu pomaly otáčať",
   "hint_viewBtn": "Zmeniť vzhľad mapy",
   "hint_favOpen": "Kostoly, ktoré ste si uložili",
-  "mineEmpty": "Ťuknite na srdce pri kostole a uloží sa sem."
+  "mineEmpty": "Ťuknite na srdce pri kostole a uloží sa sem.",
+  "voiceSearch": "Hlasové Vyhľadávanie",
+  "listening": "Počúvam… povedzte kostol alebo obec",
+  "micBlocked": "Mikrofón je zablokovaný. Povoľte ho v nastaveniach prehliadača, aby ste mohli hľadať hlasom.",
+  "voiceFailed": "Hlasové vyhľadávanie teraz nefunguje. Napíšte, prosím, čo hľadáte."
 }

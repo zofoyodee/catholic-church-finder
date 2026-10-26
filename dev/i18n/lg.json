@@ -510,5 +510,9 @@
   "hint_spin": "Leka ensi yeekyuse mpola",
   "hint_viewBtn": "Kyusa endabika ya maapu",
   "hint_favOpen": "Ekkanisa z’otereka",
-  "mineEmpty": "Nyiga omutima ku kkanisa okugitereka wano."
+  "mineEmpty": "Nyiga omutima ku kkanisa okugitereka wano.",
+  "voiceSearch": "Noonya n’Eddoboozi",
+  "listening": "Mpuliriza… yogera ekkanisa oba ekibuga",
+  "micBlocked": "Mayikolofooni eziyiddwa. Gikkirize mu nteekateeka za bulawuza osobole okunoonya n’eddoboozi.",
+  "voiceFailed": "Okunoonya n’eddoboozi tekukola kati. Bambi wandiika ky’onoonya."
 }
