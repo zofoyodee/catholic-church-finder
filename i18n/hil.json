@@ -498,5 +498,16 @@
   "mSettings": "Mga Setting",
   "langNearTitle": "Misa sa {lang} Malapit sa Imo",
   "langNearIntro": "Mga simbahan nga ang website nagalista sang Misa sa sini nga lenguahe, ang pinakamalapit una. I-tap ang isa para sa detalye.",
-  "langNoneNear": "Wala sa sulod sang {dist}. Amo ini ang pinakamalapit nga may Misa sa {lang}."
+  "langNoneNear": "Wala sa sulod sang {dist}. Amo ini ang pinakamalapit nga may Misa sa {lang}.",
+  "massLangLbl": "Lenguahe sang Misa",
+  "anyShort": "Bisan ano",
+  "massLangHint": "Ginapakita sang Lenguahe sang Misa ang mga simbahan nga may Misa sa lenguahe nga imo ginpili.",
+  "siteLang": "Lenguahe sang Site",
+  "hint_listHere": "Tanan nga simbahan sa bahin sang mapa nga imo nakita",
+  "hint_season": "Ang panahon, piesta kag simbahan sang adlaw",
+  "hint_tourBtn": "Bantog nga mga simbahan, isa-isa",
+  "hint_rand": "Lupad pakadto sa simbahan bisan diin sa kalibutan",
+  "hint_spin": "Pabay-i nga hinay nga maglibot ang globo",
+  "hint_viewBtn": "Bag-uha ang itsura sang mapa",
+  "hint_favOpen": "Ang mga simbahan nga imo ginbutang"
 }

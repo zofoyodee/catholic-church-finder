@@ -527,5 +527,16 @@
   "mSettings": "Nastavenia",
   "langNearTitle": "Svätá omša v jazyku {lang} v okolí",
   "langNearIntro": "Kostoly, ktorých web uvádza omšu v tomto jazyku, najbližšie prvé. Ťuknite na jeden pre podrobnosti.",
-  "langNoneNear": "Nič do {dist}. Toto sú najbližšie kostoly s omšou v jazyku {lang}."
+  "langNoneNear": "Nič do {dist}. Toto sú najbližšie kostoly s omšou v jazyku {lang}.",
+  "massLangLbl": "Jazyk omše",
+  "anyShort": "Ľubovoľný",
+  "massLangHint": "Jazyk omše zobrazí kostoly s omšou vo vybranom jazyku.",
+  "siteLang": "Jazyk stránky",
+  "hint_listHere": "Všetky kostoly v časti mapy, ktorú vidíte",
+  "hint_season": "Liturgické obdobie, sviatok a kostol dňa",
+  "hint_tourBtn": "Slávne kostoly, zastávku po zastávke",
+  "hint_rand": "Preletieť ku kostolu kdekoľvek na svete",
+  "hint_spin": "Nechať zemeguľu pomaly otáčať",
+  "hint_viewBtn": "Zmeniť vzhľad mapy",
+  "hint_favOpen": "Kostoly, ktoré ste si uložili"
 }

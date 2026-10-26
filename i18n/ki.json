@@ -498,5 +498,16 @@
   "mSettings": "Mũbango",
   "langNearTitle": "Mĩsa ya {lang} Hakuhĩ Nawe",
   "langNearIntro": "Makanitha marĩa website ciao ciandĩkĩte Mĩsa rũthiomi-inĩ rũrũ, rĩrĩa rĩrĩ hakuhĩ mbere. Hũtia rĩmwe ũmenye maũndũ.",
-  "langNoneNear": "Gũtirĩ thĩinĩ wa {dist}. Macio nĩmo marĩ hakuhĩ makĩrĩ na Mĩsa ya {lang}."
+  "langNoneNear": "Gũtirĩ thĩinĩ wa {dist}. Macio nĩmo marĩ hakuhĩ makĩrĩ na Mĩsa ya {lang}.",
+  "massLangLbl": "Rũthiomi rwa Mĩsa",
+  "anyShort": "O rũrĩa rwothe",
+  "massLangHint": "Rũthiomi rwa Mĩsa nĩ rũonanagia makanitha marĩ na Mĩsa rũthiomi-inĩ rũrĩa ũthuurĩte.",
+  "siteLang": "Rũthiomi rwa Website",
+  "hint_listHere": "Makanitha mothe gĩcunjĩ-inĩ kĩa mapu kĩrĩa ũroona",
+  "hint_season": "Ihinda, gĩathĩ na kanitha wa ũmũthĩ",
+  "hint_tourBtn": "Makanitha marĩa moĩkaine, rĩmwe rĩmwe",
+  "hint_rand": "Ũmbũka nginya kanitha o kũrĩa guothe thĩ",
+  "hint_spin": "Reka thĩ ĩgĩthiũrũrũke kahora",
+  "hint_viewBtn": "Garũra ũrĩa mapu ĩonekaga",
+  "hint_favOpen": "Makanitha marĩa ũiigĩte"
 }

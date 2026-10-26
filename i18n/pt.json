@@ -506,5 +506,16 @@
   "mSettings": "Configurações",
   "langNearTitle": "Missa em {lang} perto de você",
   "langNearIntro": "Igrejas cujo site anuncia uma Missa neste idioma, a mais próxima primeiro. Toque em uma para ver detalhes.",
-  "langNoneNear": "Nenhuma a menos de {dist}. Estas são as mais próximas com Missa em {lang}."
+  "langNoneNear": "Nenhuma a menos de {dist}. Estas são as mais próximas com Missa em {lang}.",
+  "massLangLbl": "Idioma da Missa",
+  "anyShort": "Qualquer",
+  "massLangHint": "Idioma da Missa mostra as igrejas com Missa no idioma que você escolher.",
+  "siteLang": "Idioma do site",
+  "hint_listHere": "Todas as igrejas na parte do mapa que você vê",
+  "hint_season": "O tempo litúrgico, a festa e a igreja do dia",
+  "hint_tourBtn": "Igrejas famosas, uma parada por vez",
+  "hint_rand": "Voar para uma igreja em qualquer lugar do mundo",
+  "hint_spin": "Deixar o globo girar devagar sozinho",
+  "hint_viewBtn": "Mudar a aparência do mapa",
+  "hint_favOpen": "As igrejas que você salvou"
 }

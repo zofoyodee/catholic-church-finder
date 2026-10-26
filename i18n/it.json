@@ -506,5 +506,16 @@
   "mSettings": "Impostazioni",
   "langNearTitle": "Messa in {lang} vicino a te",
   "langNearIntro": "Chiese il cui sito indica una Messa in questa lingua, la più vicina per prima. Tocca una per i dettagli.",
-  "langNoneNear": "Nessuna entro {dist}. Queste sono le più vicine con Messa in {lang}."
+  "langNoneNear": "Nessuna entro {dist}. Queste sono le più vicine con Messa in {lang}.",
+  "massLangLbl": "Lingua della Messa",
+  "anyShort": "Qualsiasi",
+  "massLangHint": "Lingua della Messa mostra le chiese con la Messa nella lingua che scegli.",
+  "siteLang": "Lingua del sito",
+  "hint_listHere": "Tutte le chiese nella parte di mappa che vedi",
+  "hint_season": "Il tempo liturgico, la festa e la chiesa del giorno",
+  "hint_tourBtn": "Chiese famose, una tappa alla volta",
+  "hint_rand": "Vola verso una chiesa ovunque nel mondo",
+  "hint_spin": "Lascia che il globo ruoti lentamente",
+  "hint_viewBtn": "Cambia l’aspetto della mappa",
+  "hint_favOpen": "Le chiese che hai salvato"
 }

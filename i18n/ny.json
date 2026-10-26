@@ -498,5 +498,16 @@
   "mSettings": "Zokonda",
   "langNearTitle": "Misa m’chi{lang} Pafupi Nanu",
   "langNearIntro": "Matchalitchi omwe webusaiti yawo imatchula Misa m’chilankhulo ichi, oyandikira kwambiri poyamba. Dinani limodzi kuti mudziwe zambiri.",
-  "langNoneNear": "Palibe mkati mwa {dist}. Awa ndi oyandikira kwambiri omwe ali ndi Misa m’chi{lang}."
+  "langNoneNear": "Palibe mkati mwa {dist}. Awa ndi oyandikira kwambiri omwe ali ndi Misa m’chi{lang}.",
+  "massLangLbl": "Chilankhulo cha Misa",
+  "anyShort": "Chilichonse",
+  "massLangHint": "Chilankhulo cha Misa chimaonetsa matchalitchi omwe ali ndi Misa m’chilankhulo chimene mwasankha.",
+  "siteLang": "Chilankhulo cha Webusaiti",
+  "hint_listHere": "Matchalitchi onse m’gawo la mapu limene mukuona",
+  "hint_season": "Nthawi, phwando ndi tchalitchi cha lero",
+  "hint_tourBtn": "Matchalitchi otchuka, limodzi ndi limodzi",
+  "hint_rand": "Pitani ku tchalitchi kulikonse padziko lapansi",
+  "hint_spin": "Lolani dziko lizungulire pang’onopang’ono",
+  "hint_viewBtn": "Sinthani maonekedwe a mapu",
+  "hint_favOpen": "Matchalitchi amene mwasunga"
 }

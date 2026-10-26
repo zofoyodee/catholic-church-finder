@@ -490,5 +490,16 @@
   "mSettings": "Pengaturan",
   "langNearTitle": "Misa dalam bahasa {lang} di Dekat Anda",
   "langNearIntro": "Gereja yang situs webnya mencantumkan Misa dalam bahasa ini, yang terdekat lebih dulu. Ketuk salah satu untuk detail.",
-  "langNoneNear": "Tidak ada dalam {dist}. Ini yang terdekat dengan Misa dalam bahasa {lang}."
+  "langNoneNear": "Tidak ada dalam {dist}. Ini yang terdekat dengan Misa dalam bahasa {lang}.",
+  "massLangLbl": "Bahasa Misa",
+  "anyShort": "Apa saja",
+  "massLangHint": "Bahasa Misa menampilkan gereja dengan Misa dalam bahasa yang Anda pilih.",
+  "siteLang": "Bahasa Situs",
+  "hint_listHere": "Semua gereja di bagian peta yang Anda lihat",
+  "hint_season": "Masa liturgi, pesta dan gereja hari ini",
+  "hint_tourBtn": "Gereja terkenal, satu per satu",
+  "hint_rand": "Terbang ke gereja di mana saja di dunia",
+  "hint_spin": "Biarkan bola dunia berputar perlahan",
+  "hint_viewBtn": "Ubah tampilan peta",
+  "hint_favOpen": "Gereja yang Anda simpan"
 }

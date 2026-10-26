@@ -536,5 +536,16 @@
   "mSettings": "Ustawienia",
   "langNearTitle": "Msza w języku {lang} w pobliżu",
   "langNearIntro": "Kościoły, których strony podają Mszę w tym języku, najbliższe najpierw. Dotknij, aby zobaczyć szczegóły.",
-  "langNoneNear": "Brak w promieniu {dist}. Oto najbliższe z Mszą w języku {lang}."
+  "langNoneNear": "Brak w promieniu {dist}. Oto najbliższe z Mszą w języku {lang}.",
+  "massLangLbl": "Język Mszy",
+  "anyShort": "Dowolny",
+  "massLangHint": "Język Mszy pokazuje kościoły z Mszą w wybranym języku.",
+  "siteLang": "Język strony",
+  "hint_listHere": "Wszystkie kościoły w widocznej części mapy",
+  "hint_season": "Okres liturgiczny, święto i kościół dnia",
+  "hint_tourBtn": "Słynne kościoły, przystanek po przystanku",
+  "hint_rand": "Przeleć do kościoła w dowolnym miejscu świata",
+  "hint_spin": "Niech globus powoli sam się obraca",
+  "hint_viewBtn": "Zmień wygląd mapy",
+  "hint_favOpen": "Zapisane przez Ciebie kościoły"
 }

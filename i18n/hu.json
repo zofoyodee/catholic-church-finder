@@ -506,5 +506,16 @@
   "mSettings": "Beállítások",
   "langNearTitle": "{lang} nyelvű szentmise a közelben",
   "langNearIntro": "Templomok, amelyek honlapja ezen a nyelven hirdet szentmisét, a legközelebbi elöl. Koppintson egyre a részletekért.",
-  "langNoneNear": "{dist} távolságon belül nincs ilyen. Ezek a legközelebbiek {lang} nyelvű szentmisével."
+  "langNoneNear": "{dist} távolságon belül nincs ilyen. Ezek a legközelebbiek {lang} nyelvű szentmisével.",
+  "massLangLbl": "Szentmise nyelve",
+  "anyShort": "Bármely",
+  "massLangHint": "A szentmise nyelve azokat a templomokat mutatja, ahol a választott nyelven van szentmise.",
+  "siteLang": "Az oldal nyelve",
+  "hint_listHere": "A térkép látható részének minden temploma",
+  "hint_season": "Az egyházi idő, az ünnep és a nap temploma",
+  "hint_tourBtn": "Híres templomok, állomásról állomásra",
+  "hint_rand": "Repüljön egy templomhoz bárhol a világon",
+  "hint_spin": "Hagyja, hogy a földgömb lassan forogjon",
+  "hint_viewBtn": "A térkép kinézetének módosítása",
+  "hint_favOpen": "Az elmentett templomai"
 }
