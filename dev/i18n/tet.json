@@ -498,5 +498,16 @@
   "mSettings": "Konfigurasaun",
   "langNearTitle": "Misa iha {lang} besik ó",
   "langNearIntro": "Igreja sira ne’ebé ninia website hatudu Misa iha lian ida-ne’e, ida ne’ebé besik liu uluk. Tama ida atu haree detallu.",
-  "langNoneNear": "La iha iha {dist} laran. Ne’e mak sira ne’ebé besik liu ho Misa iha {lang}."
+  "langNoneNear": "La iha iha {dist} laran. Ne’e mak sira ne’ebé besik liu ho Misa iha {lang}.",
+  "massLangLbl": "Lian Misa",
+  "anyShort": "Saida de’it",
+  "massLangHint": "Lian Misa hatudu igreja sira ne’ebé iha Misa iha lian ne’ebé ita hili.",
+  "siteLang": "Lian site nian",
+  "hint_listHere": "Igreja hotu iha parte mapa nian ne’ebé ita haree",
+  "hint_season": "Tempu, festa no igreja loron ohin nian",
+  "hint_tourBtn": "Igreja famozu sira, ida-idak",
+  "hint_rand": "Semo ba igreja iha mundu fatin ne’ebé de’it",
+  "hint_spin": "Husik mundu atu fila neineik",
+  "hint_viewBtn": "Muda oinsá mapa haree",
+  "hint_favOpen": "Igreja sira ne’ebé ita rai ona"
 }

@@ -498,5 +498,16 @@
   "mSettings": "Ètò",
   "langNearTitle": "Máàsì ní èdè {lang} nítòsí rẹ",
   "langNearIntro": "Àwọn ilé ìjọsìn tí ojú-òpó wọn kọ Máàsì ní èdè yìí, èyí tó sún mọ́ jùlọ kọ́kọ́. Tẹ ọ̀kan fún àlàyé.",
-  "langNoneNear": "Kò sí láàrin {dist}. Àwọn wọ̀nyí ló sún mọ́ jùlọ tí wọ́n ní Máàsì ní èdè {lang}."
+  "langNoneNear": "Kò sí láàrin {dist}. Àwọn wọ̀nyí ló sún mọ́ jùlọ tí wọ́n ní Máàsì ní èdè {lang}.",
+  "massLangLbl": "Èdè Máàsì",
+  "anyShort": "Èyíkéyìí",
+  "massLangHint": "Èdè Máàsì ń fi àwọn ilé ìjọsìn tí wọ́n ní Máàsì ní èdè tí o yàn hàn.",
+  "siteLang": "Èdè ojú-òpó",
+  "hint_listHere": "Gbogbo ilé ìjọsìn ní apá máàpù tí o ń rí",
+  "hint_season": "Àsìkò, àjọ̀dún àti ilé ìjọsìn ti òní",
+  "hint_tourBtn": "Àwọn ilé ìjọsìn olókìkí, ọ̀kan-ọ̀kan",
+  "hint_rand": "Fò lọ sí ilé ìjọsìn kan níbikíbi ní àgbáyé",
+  "hint_spin": "Jẹ́ kí àgbáyé yí lọ́ra fúnra rẹ̀",
+  "hint_viewBtn": "Yí bí máàpù ṣe rí padà",
+  "hint_favOpen": "Àwọn ilé ìjọsìn tí o ti fipamọ́"
 }

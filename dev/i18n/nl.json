@@ -506,5 +506,16 @@
   "mSettings": "Instellingen",
   "langNearTitle": "Mis in het {lang} bij u in de buurt",
   "langNearIntro": "Kerken die op hun website een Mis in deze taal vermelden, de dichtstbijzijnde eerst. Tik op een kerk voor details.",
-  "langNoneNear": "Geen binnen {dist}. Dit zijn de dichtstbijzijnde met een Mis in het {lang}."
+  "langNoneNear": "Geen binnen {dist}. Dit zijn de dichtstbijzijnde met een Mis in het {lang}.",
+  "massLangLbl": "Taal van de Mis",
+  "anyShort": "Alle",
+  "massLangHint": "Taal van de Mis toont kerken met een Mis in de gekozen taal.",
+  "siteLang": "Taal van de site",
+  "hint_listHere": "Alle kerken in het deel van de kaart dat u ziet",
+  "hint_season": "De tijd van het jaar, het feest en de kerk van de dag",
+  "hint_tourBtn": "Beroemde kerken, halte voor halte",
+  "hint_rand": "Vlieg naar een kerk ergens op de wereld",
+  "hint_spin": "Laat de wereldbol langzaam draaien",
+  "hint_viewBtn": "Verander hoe de kaart eruitziet",
+  "hint_favOpen": "De kerken die u hebt bewaard"
 }

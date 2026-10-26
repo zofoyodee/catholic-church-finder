@@ -490,5 +490,16 @@
   "mSettings": "設定",
   "langNearTitle": "近くの{lang}のミサ",
   "langNearIntro": "この言語のミサをウェブサイトに載せている教会を近い順に表示します。タップすると詳細が見られます。",
-  "langNoneNear": "{dist}以内にはありません。{lang}のミサがある最寄りの教会です。"
+  "langNoneNear": "{dist}以内にはありません。{lang}のミサがある最寄りの教会です。",
+  "massLangLbl": "ミサの言語",
+  "anyShort": "すべて",
+  "massLangHint": "「ミサの言語」で選んだ言語のミサがある教会を表示します。",
+  "siteLang": "サイトの言語",
+  "hint_listHere": "見えている地図の範囲にあるすべての教会",
+  "hint_season": "今日の典礼季節・祝日・教会",
+  "hint_tourBtn": "有名な教会を一か所ずつ",
+  "hint_rand": "世界のどこかの教会へ飛ぶ",
+  "hint_spin": "地球儀をゆっくり自動で回す",
+  "hint_viewBtn": "地図の見た目を変える",
+  "hint_favOpen": "保存した教会"
 }

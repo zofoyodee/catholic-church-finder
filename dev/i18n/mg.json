@@ -498,5 +498,16 @@
   "mSettings": "Fandrindrana",
   "langNearTitle": "Lamesa amin’ny teny {lang} akaikinao",
   "langNearIntro": "Fiangonana manoratra Lamesa amin’ity fiteny ity ao amin’ny tranokalany, ny akaiky indrindra aloha. Tsindrio ny iray raha hahalala bebe kokoa.",
-  "langNoneNear": "Tsy misy ao anatin’ny {dist}. Ireto no akaiky indrindra manana Lamesa amin’ny teny {lang}."
+  "langNoneNear": "Tsy misy ao anatin’ny {dist}. Ireto no akaiky indrindra manana Lamesa amin’ny teny {lang}.",
+  "massLangLbl": "Fitenin’ny Lamesa",
+  "anyShort": "Na inona na inona",
+  "massLangHint": "Ny fitenin’ny Lamesa dia mampiseho ny fiangonana misy Lamesa amin’ny fiteny nofidinao.",
+  "siteLang": "Fitenin’ny tranokala",
+  "hint_listHere": "Ny fiangonana rehetra amin’ny ampahan’ny sarintany hitanao",
+  "hint_season": "Ny fotoana, ny fety ary ny fiangonan’ny andro",
+  "hint_tourBtn": "Fiangonana malaza, tsirairay",
+  "hint_rand": "Manidina mankany amin’ny fiangonana na aiza na aiza eto an-tany",
+  "hint_spin": "Avelao hihodina miadana ny tany",
+  "hint_viewBtn": "Ovay ny endriky ny sarintany",
+  "hint_favOpen": "Ireo fiangonana notehirizinao"
 }

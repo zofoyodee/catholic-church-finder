@@ -506,5 +506,16 @@
   "mSettings": "Réglages",
   "langNearTitle": "Messe en {lang} près de vous",
   "langNearIntro": "Églises dont le site annonce une messe dans cette langue, la plus proche d’abord. Touchez-en une pour les détails.",
-  "langNoneNear": "Aucune à moins de {dist}. Voici les plus proches avec une messe en {lang}."
+  "langNoneNear": "Aucune à moins de {dist}. Voici les plus proches avec une messe en {lang}.",
+  "massLangLbl": "Langue de la messe",
+  "anyShort": "Toutes",
+  "massLangHint": "La langue de la messe affiche les églises où la messe est dite dans la langue choisie.",
+  "siteLang": "Langue du site",
+  "hint_listHere": "Toutes les églises dans la partie de la carte affichée",
+  "hint_season": "Le temps liturgique, la fête et l’église du jour",
+  "hint_tourBtn": "Des églises célèbres, étape par étape",
+  "hint_rand": "S’envoler vers une église n’importe où dans le monde",
+  "hint_spin": "Laisser le globe tourner lentement",
+  "hint_viewBtn": "Changer l’aspect de la carte",
+  "hint_favOpen": "Les églises que vous avez enregistrées"
 }

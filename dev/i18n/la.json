@@ -496,5 +496,16 @@
   "mSettings": "Optiones",
   "langNearTitle": "Missa {lang} prope te",
   "langNearIntro": "Ecclesiae quarum paginae Missam hac lingua nuntiant, proxima prima. Tange unam ut plura videas.",
-  "langNoneNear": "Nulla intra {dist}. Hae sunt proximae cum Missa {lang}."
+  "langNoneNear": "Nulla intra {dist}. Hae sunt proximae cum Missa {lang}.",
+  "massLangLbl": "Lingua Missae",
+  "anyShort": "Quaevis",
+  "massLangHint": "Lingua Missae ecclesias ostendit ubi Missa lingua electa celebratur.",
+  "siteLang": "Lingua paginae",
+  "hint_listHere": "Omnes ecclesiae in parte tabulae quam vides",
+  "hint_season": "Tempus, festum et ecclesia diei",
+  "hint_tourBtn": "Ecclesiae illustres, statio post stationem",
+  "hint_rand": "Vola ad ecclesiam ubivis terrarum",
+  "hint_spin": "Sine globum lente sponte verti",
+  "hint_viewBtn": "Muta speciem tabulae",
+  "hint_favOpen": "Ecclesiae quas servasti"
 }

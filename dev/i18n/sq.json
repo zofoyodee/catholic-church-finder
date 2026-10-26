@@ -504,5 +504,16 @@
   "mSettings": "Cilësimet",
   "langNearTitle": "Meshë në {lang} pranë jush",
   "langNearIntro": "Kisha, faqja e të cilave shënon një meshë në këtë gjuhë, më e afërta e para. Prekni njërën për hollësi.",
-  "langNoneNear": "Asnjë brenda {dist}. Këto janë më të afërtat me meshë në {lang}."
+  "langNoneNear": "Asnjë brenda {dist}. Këto janë më të afërtat me meshë në {lang}.",
+  "massLangLbl": "Gjuha e meshës",
+  "anyShort": "Çdo gjuhë",
+  "massLangHint": "Gjuha e meshës tregon kishat me meshë në gjuhën që zgjidhni.",
+  "siteLang": "Gjuha e faqes",
+  "hint_listHere": "Të gjitha kishat në pjesën e hartës që shihni",
+  "hint_season": "Koha liturgjike, festa dhe kisha e ditës",
+  "hint_tourBtn": "Kisha të famshme, ndalesë pas ndalese",
+  "hint_rand": "Fluturoni drejt një kishe kudo në botë",
+  "hint_spin": "Lëreni globin të rrotullohet ngadalë",
+  "hint_viewBtn": "Ndryshoni pamjen e hartës",
+  "hint_favOpen": "Kishat që keni ruajtur"
 }

@@ -498,5 +498,16 @@
   "mSettings": "Ifyakupekanya",
   "langNearTitle": "Misa mu {lang} Mupepi Nobe",
   "langNearIntro": "Amacalici ayalemba Misa muli uno ululimi pa website, ayapalamisha pa ntanshi. Kandeni pali limo pa kwishiba ifingi.",
-  "langNoneNear": "Takuli pa {dist}. Aya e yapalamisha ayakwata Misa mu {lang}."
+  "langNoneNear": "Takuli pa {dist}. Aya e yapalamisha ayakwata Misa mu {lang}.",
+  "massLangLbl": "Ululimi lwa Misa",
+  "anyShort": "Ululimi lili lyonse",
+  "massLangHint": "Ululimi lwa Misa lulanga amacalici ayakwata Misa mu lulimi mwasala.",
+  "siteLang": "Ululimi lwa Website",
+  "hint_listHere": "Amacalici yonse mu cipande ca mapu mulemona",
+  "hint_season": "Inshita, umutebeto na icalici ca lelo",
+  "hint_tourBtn": "Amacalici yalumbuka, cimo cimo",
+  "hint_rand": "Pupukeni ku calici konse mu calo",
+  "hint_spin": "Lekeni icibulungwa cishinguluke panono",
+  "hint_viewBtn": "Alulenipo ifyo mapu imoneka",
+  "hint_favOpen": "Amacalici mwasunga"
 }

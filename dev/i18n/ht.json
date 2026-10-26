@@ -498,5 +498,16 @@
   "mSettings": "Paramèt",
   "langNearTitle": "Lamès an {lang} toupre w",
   "langNearIntro": "Legliz ki gen yon Lamès nan lang sa a sou sit entènèt yo, sa ki pi pre an premye. Tape youn pou detay.",
-  "langNoneNear": "Pa gen youn nan {dist}. Men sa ki pi pre ki gen Lamès an {lang}."
+  "langNoneNear": "Pa gen youn nan {dist}. Men sa ki pi pre ki gen Lamès an {lang}.",
+  "massLangLbl": "Lang Lamès",
+  "anyShort": "Nenpòt",
+  "massLangHint": "Lang Lamès la montre legliz ki gen Lamès nan lang ou chwazi a.",
+  "siteLang": "Lang sit la",
+  "hint_listHere": "Tout legliz nan pati kat ou wè a",
+  "hint_season": "Sezon, fèt ak legliz jou a",
+  "hint_tourBtn": "Legliz ki pi popilè, youn apre lòt",
+  "hint_rand": "Vole al jwenn yon legliz nenpòt kote sou latè",
+  "hint_spin": "Kite glòb la vire dousman pou kont li",
+  "hint_viewBtn": "Chanje jan kat la parèt",
+  "hint_favOpen": "Legliz ou sove yo"
 }

@@ -498,5 +498,16 @@
   "mSettings": "Igenamiterere",
   "langNearTitle": "Misa mu {lang} hafi yawe",
   "langNearIntro": "Kiliziya zivuga ku rubuga rwazo ko zifite Misa muri uru rurimi, iya hafi mbere. Kanda kuri imwe umenye byinshi.",
-  "langNoneNear": "Nta n’imwe iri muri {dist}. Izi ni zo ziri hafi zifite Misa mu {lang}."
+  "langNoneNear": "Nta n’imwe iri muri {dist}. Izi ni zo ziri hafi zifite Misa mu {lang}.",
+  "massLangLbl": "Ururimi rwa Misa",
+  "anyShort": "Urwo ari rwo rwose",
+  "massLangHint": "Ururimi rwa Misa rwerekana kiliziya zifite Misa mu rurimi wahisemo.",
+  "siteLang": "Ururimi rw’urubuga",
+  "hint_listHere": "Kiliziya zose ziri mu gice cy’ikarita ubona",
+  "hint_season": "Igihe, umunsi mukuru na kiliziya y’uyu munsi",
+  "hint_tourBtn": "Kiliziya zizwi, imwe imwe",
+  "hint_rand": "Guruka ujye kuri kiliziya aho ari ho hose ku isi",
+  "hint_spin": "Reka isi izenguruke buhoro",
+  "hint_viewBtn": "Hindura uko ikarita igaragara",
+  "hint_favOpen": "Kiliziya wabitse"
 }

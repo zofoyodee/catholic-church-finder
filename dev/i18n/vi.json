@@ -490,5 +490,16 @@
   "mSettings": "Cài đặt",
   "langNearTitle": "Thánh lễ tiếng {lang} gần bạn",
   "langNearIntro": "Các nhà thờ có ghi Thánh lễ bằng ngôn ngữ này trên trang web, gần nhất trước. Chạm vào một nhà thờ để xem chi tiết.",
-  "langNoneNear": "Không có trong phạm vi {dist}. Đây là những nhà thờ gần nhất có Thánh lễ tiếng {lang}."
+  "langNoneNear": "Không có trong phạm vi {dist}. Đây là những nhà thờ gần nhất có Thánh lễ tiếng {lang}.",
+  "massLangLbl": "Ngôn ngữ Thánh lễ",
+  "anyShort": "Bất kỳ",
+  "massLangHint": "Ngôn ngữ Thánh lễ hiển thị các nhà thờ có Thánh lễ bằng ngôn ngữ bạn chọn.",
+  "siteLang": "Ngôn ngữ trang web",
+  "hint_listHere": "Mọi nhà thờ trong phần bản đồ bạn đang xem",
+  "hint_season": "Mùa phụng vụ, lễ và nhà thờ của ngày",
+  "hint_tourBtn": "Các nhà thờ nổi tiếng, từng điểm dừng",
+  "hint_rand": "Bay đến một nhà thờ ở bất kỳ đâu trên thế giới",
+  "hint_spin": "Để quả địa cầu tự quay chậm",
+  "hint_viewBtn": "Thay đổi giao diện bản đồ",
+  "hint_favOpen": "Các nhà thờ bạn đã lưu"
 }

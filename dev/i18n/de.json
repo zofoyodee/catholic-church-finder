@@ -506,5 +506,16 @@
   "mSettings": "Einstellungen",
   "langNearTitle": "Messe auf {lang} in Ihrer Nähe",
   "langNearIntro": "Kirchen, deren Website eine Messe in dieser Sprache nennt, die nächsten zuerst. Für Details eine antippen.",
-  "langNoneNear": "Keine im Umkreis von {dist}. Dies sind die nächsten mit Messe auf {lang}."
+  "langNoneNear": "Keine im Umkreis von {dist}. Dies sind die nächsten mit Messe auf {lang}.",
+  "massLangLbl": "Messsprache",
+  "anyShort": "Beliebig",
+  "massLangHint": "Die Messsprache zeigt Kirchen mit Messe in der gewählten Sprache.",
+  "siteLang": "Sprache der Seite",
+  "hint_listHere": "Alle Kirchen im sichtbaren Kartenausschnitt",
+  "hint_season": "Kirchenjahr, Fest und Kirche des Tages",
+  "hint_tourBtn": "Berühmte Kirchen, Station für Station",
+  "hint_rand": "Zu einer Kirche irgendwo auf der Welt fliegen",
+  "hint_spin": "Den Globus langsam von selbst drehen lassen",
+  "hint_viewBtn": "Das Aussehen der Karte ändern",
+  "hint_favOpen": "Ihre gespeicherten Kirchen"
 }

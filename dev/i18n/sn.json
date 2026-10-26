@@ -498,5 +498,16 @@
   "mSettings": "Zvirongwa",
   "langNearTitle": "Misa ne{lang} Pedyo Newe",
   "langNearIntro": "Machechi ane webhusaiti inotaura Misa mumutauro uyu, iri pedyo kwazvo kutanga. Baya imwe kuti uone zvimwe.",
-  "langNoneNear": "Hapana mukati me{dist}. Aya ndiwo ari pedyo ane Misa ne{lang}."
+  "langNoneNear": "Hapana mukati me{dist}. Aya ndiwo ari pedyo ane Misa ne{lang}.",
+  "massLangLbl": "Mutauro weMisa",
+  "anyShort": "Chero upi",
+  "massLangHint": "Mutauro weMisa unoratidza machechi ane Misa mumutauro wawasarudza.",
+  "siteLang": "Mutauro wewebhusaiti",
+  "hint_listHere": "Machechi ese ari muchikamu chemepu chauri kuona",
+  "hint_season": "Mwaka, mutambo uye chechi yanhasi",
+  "hint_tourBtn": "Machechi ane mukurumbira, imwe neimwe",
+  "hint_rand": "Bhururuka kuenda kuchechi chero kupi pasi rose",
+  "hint_spin": "Rega pasi ritenderere zvishoma nezvishoma",
+  "hint_viewBtn": "Shandura kutaridzika kwemepu",
+  "hint_favOpen": "Machechi awakachengeta"
 }

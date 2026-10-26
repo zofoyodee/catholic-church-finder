@@ -498,5 +498,16 @@
   "mSettings": "Mga Setting",
   "langNearTitle": "Misa ha {lang} Harani Ha Imo",
   "langNearIntro": "Mga simbahan nga an ira website naglilista hin Misa hini nga yinaknan, an pinakaharani siyahan. Pinduta an usa para han detalye.",
-  "langNoneNear": "Waray ha sulod han {dist}. Ini an pinakaharani nga may Misa ha {lang}."
+  "langNoneNear": "Waray ha sulod han {dist}. Ini an pinakaharani nga may Misa ha {lang}.",
+  "massLangLbl": "Yinaknan han Misa",
+  "anyShort": "Bisan ano",
+  "massLangHint": "Ginpapakita han Yinaknan han Misa an mga simbahan nga may Misa ha yinaknan nga imo ginpili.",
+  "siteLang": "Yinaknan han Site",
+  "hint_listHere": "Ngatanan nga simbahan ha bahin han mapa nga imo nakikita",
+  "hint_season": "An panahon, piyesta ngan simbahan han adlaw",
+  "hint_tourBtn": "Bantog nga mga simbahan, usa-usa",
+  "hint_rand": "Lupad ngadto ha simbahan bisan diin ha kalibutan",
+  "hint_spin": "Pabay-i nga hinay-hinay nga lumibot an globo",
+  "hint_viewBtn": "Bag-oha an hitsura han mapa",
+  "hint_favOpen": "An mga simbahan nga imo gintipig"
 }

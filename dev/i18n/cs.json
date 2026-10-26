@@ -526,5 +526,16 @@
   "mSettings": "Nastavení",
   "langNearTitle": "Mše v jazyce {lang} ve vašem okolí",
   "langNearIntro": "Kostely, jejichž web uvádí mši v tomto jazyce, nejbližší první. Klepněte na jeden pro podrobnosti.",
-  "langNoneNear": "Nic do {dist}. Toto jsou nejbližší kostely se mší v jazyce {lang}."
+  "langNoneNear": "Nic do {dist}. Toto jsou nejbližší kostely se mší v jazyce {lang}.",
+  "massLangLbl": "Jazyk mše",
+  "anyShort": "Libovolný",
+  "massLangHint": "Jazyk mše ukáže kostely se mší ve vybraném jazyce.",
+  "siteLang": "Jazyk webu",
+  "hint_listHere": "Všechny kostely v části mapy, kterou vidíte",
+  "hint_season": "Liturgická doba, svátek a kostel dne",
+  "hint_tourBtn": "Slavné kostely, zastávku po zastávce",
+  "hint_rand": "Přeletět ke kostelu kdekoli na světě",
+  "hint_spin": "Nechat zeměkouli pomalu otáčet",
+  "hint_viewBtn": "Změnit vzhled mapy",
+  "hint_favOpen": "Kostely, které jste si uložili"
 }
