@@ -481,5 +481,9 @@
   "mon12": "12월",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "성당 찾기",
+  "mMine": "내 성당",
+  "mExplore": "둘러보기",
+  "mSettings": "설정"
 }

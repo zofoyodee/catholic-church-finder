@@ -491,5 +491,9 @@
   "mon12": "डिसेंबर",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "इगर्ज सोदात",
+  "mMine": "म्हजीं इगर्जां",
+  "mExplore": "सोदून पळयात",
+  "mSettings": "सेटिंग्ज"
 }

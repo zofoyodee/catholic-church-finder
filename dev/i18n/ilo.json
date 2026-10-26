@@ -491,5 +491,9 @@
   "mon12": "Disiembre",
   "fmtWeekdayDate": "{weekday}, {month} {d}",
   "fmtDate": "{month} {d}, {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Agbiruk iti Simbaan",
+  "mMine": "Dagiti Simbaanko",
+  "mExplore": "Sukimaten",
+  "mSettings": "Dagiti Setting"
 }
