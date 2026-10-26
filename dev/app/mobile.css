@@ -146,8 +146,9 @@ body.bible-mode .ms-acts .church-only { display: none; }
   .compact .ln-txt .kick, .compact .ln-txt p { display: none; }
   .compact .ln-txt h2 { margin: 0; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .compact .ln-txt h2 small { display: none; }  /* the place is on the card below */
+  .compact .ln-txt h2 .linkish { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: start; }
   .compact .ln-ctl button { width: 32px; height: 32px; }
-  .compact .ln-ctl button.ro-toggle { width: 32px; padding: 0; border-radius: 50%; }
+  .compact .ln-ctl button.ro-toggle { width: 32px; padding: 0; border-radius: 50%; justify-content: center; }
   .compact .ln-ctl button.ro-toggle span { display: none; }  /* the beads alone: the row has to fit */
   .compact .ln-open { display: inline-flex; height: 30px; padding: 0 12px; font-size: 12.5px; }  /* the story is behind it now */
   .compact .life-track { gap: 10px; }
