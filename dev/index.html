@@ -689,7 +689,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/mobile.css">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 17:31 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 17:33 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -1988,8 +1988,10 @@ window.__map = map;
 
 // city names in the page language (Natural Earth); languages it lacks use the English names
 let places = null;
-// city names on the map: languages with their own Natural Earth column, the rest read English (Hindi and Tamil can't be drawn by the map)
-const cityNames = new Map(), CITY_FILES = new Set(['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja']);
+// city names on the map: Natural Earth's own columns, or each language's Wikipedia titles (scripts/i18n/city_names_wiki.py);
+// the rest read English (the map can't draw Hindi, Tamil, Malayalam or Konkani, and Bemba and Hiligaynon have no Wikipedia)
+const cityNames = new Map(), CITY_FILES = new Set(['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja',
+  'bcl', 'ceb', 'cs', 'fil', 'gn', 'hr', 'ht', 'ig', 'ilo', 'la', 'lg', 'ln', 'lt', 'mg', 'ny', 'qu', 'rn', 'rw', 'sk', 'sl', 'sn', 'sq', 'sw', 'tet', 'war', 'yo', 'ki']);
 /* ---------- streets once you zoom into a town: OpenStreetMap vector tiles from OpenFreeMap (free, no key) ---------- */
 function addStreets() {
   map.addSource('osm', { type: 'vector', url: 'https://tiles.openfreemap.org/planet', minzoom: 0, maxzoom: 14 });
