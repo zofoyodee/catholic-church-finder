@@ -2,7 +2,7 @@
 
 An interactive 3D globe of about 184,000 Catholic churches, chapels, shrines, basilicas and cathedrals around the world.
 
-**Live site:** https://zofoyodee.github.io/catholic-church-finder/
+**Live site:** https://churchglobe.com/
 
 - Drag to spin the globe, scroll or pinch to zoom. Pins cluster when zoomed out; church names appear under pins once you zoom into a city.
 - Search by church name or town.
