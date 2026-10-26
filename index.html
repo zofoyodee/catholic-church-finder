@@ -1356,9 +1356,9 @@ function applyMassFilter(fly) {
   if (fly && only) flyToMatches(only);
 }
 function renderMassChips() {
-  const langs = {};
-  for (const v of Object.values(mf.data.c)) { const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = (v[j] >> 19) & 31; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
-  const opts = Object.entries(langs).filter(([, n]) => n >= 3).sort((a, b) => massLangName(mf.data.langs[a[0]]).localeCompare(massLangName(mf.data.langs[b[0]]), document.documentElement.lang || undefined)).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
+  const langs = {}, scope = searchScope();
+  for (const [k, v] of Object.entries(mf.data.c)) { if (scope && !scope.set.has(+k)) continue; const seen = new Set(); for (let j = 1; j < v.length; j++) { const l = (v[j] >> 19) & 31; if (l && (v[j] & 1) === 0) seen.add(l); } for (const l of seen) langs[l] = (langs[l] || 0) + 1; }
+  const opts = Object.entries(langs).filter(([l, n]) => n >= (scope ? 1 : 3) || mf.data.langs[l] === mf.lang).sort((a, b) => massLangName(mf.data.langs[a[0]]).localeCompare(massLangName(mf.data.langs[b[0]]), document.documentElement.lang || undefined)).map(([l, n]) => { const c = mf.data.langs[l]; return `<option value="${c}"${mf.lang === c ? ' selected' : ''}>${esc(tr('massLangOpt', { lang: massLangName(c), n }))}</option>`; }).join('');
   const pin = '<svg class="tick" viewBox="0 0 24 24" style="display:inline-block"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/></svg>';
   $('massChips').innerHTML = `<span class="lbl">${esc(tr('massLbl'))}</span>
     <button class="chip" data-m="massNear" aria-pressed="${mn.kind === 0}">${pin}${esc(tr('churchNear'))}</button>
@@ -3080,15 +3080,30 @@ function pulse(now) {
 requestAnimationFrame(pulse);
 
 /* ---------- filter chips ---------- */
+// the churches the search box covers, of every kind, with a count per kind; null while it is empty
+let scopeCache = { q: null };
+function searchScope() {
+  const q = state.mode === 'churches' && searchIdx ? qEl.value.trim() : '';
+  if (fold(q).length < 2) return null;
+  if (scopeCache.q !== q) {
+    const { hits } = searchMatch(fold(q), q, true), counts = {};
+    for (const i of hits) { const t = state.typ[i] & 7; counts[t] = (counts[t] || 0) + 1; }
+    scopeCache = { q, set: new Set(hits), counts };
+  }
+  return scopeCache;
+}
+// the numbers in the menu follow the search box: NM's cathedrals while it says NM, the world's once it is empty
+function refreshCounts() { renderChips(); if (mf.data) renderMassChips(); }
 function renderChips() {
-  const counts = state.meta.types;
+  const scope = searchScope(), world = state.meta.types, counts = scope ? scope.counts : world;
+  const shown = (t) => (world[t.code] || 0) + (t.with ? world[t.with] || 0 : 0);
   const all = state.enabled.size === TYPES.length;
   const tick = '<svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   const low = (s) => i18n.code === 'de' ? s : s.toLocaleLowerCase(i18n.locale); // German nouns keep their capital
   const tipFor = (t) => tr('desc_' + t.key) + '\n' + tr(all ? 'onlyType' : state.enabled.has(t.code) ? 'hideType' : 'alsoType', { type: low(t.label) });
   $('chips').classList.toggle('filtered', !all);
   const n = (t) => (counts[t.code] || 0) + (t.with ? counts[t.with] || 0 : 0);
-  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-k="all" aria-pressed="${all}" title="${esc(tr(all ? 'allOn' : 'allAgain'))}">${esc(tr('all'))}</button>` + TYPES.filter(t => t.chip !== false && n(t)).map(t =>
+  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-k="all" aria-pressed="${all}" title="${esc(tr(all ? 'allOn' : 'allAgain'))}">${esc(tr('all'))}</button>` + TYPES.filter(t => t.chip !== false && shown(t)).map(t =>
     `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${esc(tipFor(t))}">${tick}<i style="background:${t.color}"></i>${esc(t.label)} <small>${fmt(n(t))}</small></button>`).join('');
 }
 $('chips').addEventListener('click', (e) => {
@@ -3203,9 +3218,10 @@ qEl.addEventListener('input', () => {
   clearTimeout(qTimer); qTimer = setTimeout(runSearch, 120);
   // an emptied search box lets go of the list it made
   if (!qEl.value.trim() && mn.kind === 3 && mn.areaArgs && mn.areaArgs.ids) { showNear(false); endList(); }
+  if (fold(qEl.value.trim()).length < 2 && scopeCache.q) refreshCounts();
 });
 // the churches a search means, for the kinds of church now shown
-function searchMatch(q, raw = q) {
+function searchMatch(q, raw = q, anyKind = false) {
   const toks = q.replace(/[.,]/g, ' ').split(/\s+/).filter(Boolean);
   // any part of a name or town matches, so "fatima" finds every Fatima church and "denver" every church in Denver;
   // each word may stand for others ("abq", "st", "mt"), and a short last word may be a state ("santa fe nm")
@@ -3220,7 +3236,7 @@ function searchMatch(q, raw = q) {
     for (let i = 0; i < keys.length; i++) {
       const k = keys[i]; let ok = true;
       for (const a of alts) if (!a.some(x => k.indexOf(x) >= 0)) { ok = false; break; }
-      if (ok && state.enabled.has(state.typ[i] & 7)) out.push(i);
+      if (ok && (anyKind || state.enabled.has(state.typ[i] & 7))) out.push(i);
     }
     return out;
   };
@@ -3239,6 +3255,7 @@ async function runSearch() {
   if (!searchIdx) { resEl.innerHTML = `<div class="note">${LOADER(tr('indexLoading'), 'inline')}</div>`; try { await loadSearch(); } catch (e) { resEl.innerHTML = `<div class="note">${esc(tr('indexFailed'))}</div>`; return; } }
   const { lines } = searchIdx;
   const { hits, townQ } = searchMatch(q, qEl.value);
+  if (scopeCache.q !== qEl.value.trim()) refreshCounts();
   // nearest to you first: the first search asks where you are, and until then (or if you say no)
   // the middle of the globe's view stands in
   if (!here && !searchAskedWhere) { searchAskedWhere = true; hereOrCenter().then(() => { if (here && !resEl.hidden && qEl.value.trim()) runSearch(); }); }
