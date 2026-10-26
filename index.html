@@ -699,13 +699,14 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 </header>
 
 <div class="ctrls">
-  <button id="nearBtn" aria-expanded="false" aria-controls="near" title="Churches near me" aria-label="Churches near me" data-i18n-attr="title:nearMe;aria-label:nearMe"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/></svg></button>
+  <button id="nearBtn" aria-expanded="false" aria-controls="near" title="Churches near me" aria-label="Churches near me" data-i18n-attr="title:nearMe;aria-label:nearMe"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/></svg><span class="lbl" data-i18n="navNear">Near Me</span></button>
   <button id="favOpen" class="fav-open" hidden aria-expanded="false" aria-controls="favs" title="Your favorite churches" aria-label="Your favorite churches" data-i18n-attr="title:yourFavs;aria-label:yourFavs"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg><span class="count" id="favCount"></span></button>
   <button id="spin" aria-pressed="false" title="Spin the globe" aria-label="Spin the globe" data-i18n-attr="title:spin;aria-label:spin"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
   <button id="zin" title="Zoom in" aria-label="Zoom in" data-i18n-attr="title:zoomIn;aria-label:zoomIn"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
   <button id="zout" title="Zoom out" aria-label="Zoom out" data-i18n-attr="title:zoomOut;aria-label:zoomOut"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
-  <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe" data-i18n-attr="title:home;aria-label:home"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
+  <button id="home" title="Back to the whole globe" aria-label="Back to the whole globe" data-i18n-attr="title:home;aria-label:home"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><span class="lbl" data-i18n="wholeGlobe">Whole Globe</span></button>
   <button id="listHere" title="List Churches Here" aria-label="List Churches Here" data-i18n-attr="title:listHere;aria-label:listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg></button>
+  <button id="rand" title="Visit a random church" aria-label="Visit a random church" data-i18n-attr="title:random;aria-label:random"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg></button>
 </div>
 
 <footer class="foot">
@@ -735,6 +736,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
       <button type="button" data-for="season"><span class="ic" aria-hidden="true">✠</span><span data-i18n="todayLabel">Today in the Church</span></button>
       <button type="button" data-for="tourBtn"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8 17.2c4-1 2.5-5.2 6-6.4 1.8-.6 3-1.6 3.4-2.8"/></svg><span data-i18n="tours">Guided Tours</span></button>
       <button type="button" data-for="listHere"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span data-i18n="listHere">List Churches Here</span></button>
+      <button type="button" data-for="rand"><svg viewBox="0 0 24 24"><path d="M12 2v6M9 5h6"/><path d="M5 22V12l7-4 7 4v10"/><path d="M10 22v-5h4v5"/></svg><span data-i18n="random">Visit a Random Church</span></button>
       <button type="button" data-for="spin"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg><span data-i18n="spin">Spin the Globe</span></button>
       <button type="button" data-for="viewBtn"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg><span data-i18n="globeView">Globe View</span></button>
     </div>
@@ -840,7 +842,7 @@ const EN = {
   dataFailed: 'The church data did not load. Reload the page to try again.',
   searchPh: 'Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków', searchLabel: 'Search churches by name or town',
   chipsLabel: 'Show church types', nearMe: 'Churches near me', yourFavs: 'Your favorite churches', spin: 'Spin the Globe',
-  zoomIn: 'Zoom in', zoomOut: 'Zoom out', home: 'Back to the whole globe', random: 'Visit a Random Church', menu: 'Menu',
+  zoomIn: 'Zoom in', zoomOut: 'Zoom out', home: 'Back to the whole globe', random: 'Visit a Random Church', menu: 'Menu', navNear: 'Near Me', wholeGlobe: 'Whole Globe',
   aboutData: 'About the Data', footCredit: 'Places © Overture Maps Foundation · Basemap Natural Earth, streets © OpenStreetMap contributors via OpenFreeMap',
   nearYou: 'Near You', closeNear: 'Close nearby churches', favorites: 'Favorites', closeFavs: 'Close favorites',
   closeDetails: 'Close details', gallery: 'Photo gallery', prevPhoto: 'Previous photo', nextPhoto: 'Next photo', closeGallery: 'Close gallery',
@@ -2659,6 +2661,13 @@ $('spin').addEventListener('click', () => { state.spinning = !state.spinning; $(
 $('zin').addEventListener('click', () => { lastInteract = performance.now(); map.zoomIn({ duration: 400 }); });
 $('zout').addEventListener('click', () => { lastInteract = performance.now(); map.zoomOut({ duration: 400 }); });
 $('home').addEventListener('click', () => { closeCard(); if (state.mode === 'bible') { bibleOverview(); return; } if (state.mode === 'jesus') { lifePause(); lifeOverview(); return; } map.flyTo({ center: [map.getCenter().lng, 20], zoom: 1.4, pitch: 0, bearing: 0, duration: 1800 }); });
+$('rand').addEventListener('click', () => {
+  if (state.mode === 'bible') { if (bible.data) { const ps = bibleVisible(); openBiblePlace(ps[Math.floor(Math.random() * ps.length)].id); } return; }
+  if (state.mode === 'jesus') { if (life.data) { const evs = lifeEvents(); lifePause(); goEvent(evs[Math.floor(Math.random() * evs.length)].i); } return; }
+  if (!state.n) return;
+  let i; do { i = Math.floor(Math.random() * state.n); } while (!state.enabled.has(state.typ[i] & 7));
+  selectChurch(i, { fly: true });
+});
 
 /* ---------- interaction ---------- */
 const tip = $('tip');
