@@ -118,3 +118,9 @@ body.bible-mode .ms-acts .church-only { display: none; }
   .compact .favs { bottom: calc(var(--nav-h) + 6px); max-height: calc(100% - var(--nav-h) - 74px); }
   .compact body.sheet-up .ctrls { display: none; }  /* an open card or list has its own close button */
 }
+
+/* the side buttons say what they do: phones have no hover tips */
+.ctrls .lbl { display: none; }
+.compact .ctrls { justify-items: end; }
+.compact .ctrls button { width: auto; height: 40px; border-radius: 20px; padding: 0 14px 0 11px; display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: 12.5px; font-weight: 500; white-space: nowrap; }
+.compact .ctrls .lbl { display: inline; }
