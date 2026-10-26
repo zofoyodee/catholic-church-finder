@@ -689,7 +689,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/mobile.css">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 14:06 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 14:15 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -3695,7 +3695,8 @@ function loadLife() {
 const lifeEvents = () => life.era === 'rosary' ? life.data.mysteries : life.data.events.filter(e => life.era === 'all' || e.e === life.era);
 const lifeColor = (e) => life.era === 'rosary' ? roColor(e) : life.data.color[e.e];
 // pull back from each place's close-up zoom so the town and the places around it stay in view
-const lifeZoom = (p) => Math.min(p.z - 2, 13);
+// close enough to tell the towns apart, far enough to keep the neighbouring moments in view
+const lifeZoom = (p) => Math.min(p.z - 2, 9.5);
 const lifeLL = (p) => [p.ll[1], p.ll[0]];
 function lifeGeo() {
   const d = life.data, evs = lifeEvents(), first = new Map(), route = [];
