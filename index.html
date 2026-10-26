@@ -3693,7 +3693,8 @@ function loadLife() {
 const lifeEvents = () => life.era === 'rosary' ? life.data.mysteries : life.data.events.filter(e => life.era === 'all' || e.e === life.era);
 const lifeColor = (e) => life.era === 'rosary' ? roColor(e) : life.data.color[e.e];
 // pull back from each place's close-up zoom so the town and the places around it stay in view
-const lifeZoom = (p) => Math.min(p.z - 2, 13);
+// close enough to tell the towns apart, far enough to keep the neighbouring moments in view
+const lifeZoom = (p) => Math.min(p.z - 2, 9.5);
 const lifeLL = (p) => [p.ll[1], p.ll[0]];
 function lifeGeo() {
   const d = life.data, evs = lifeEvents(), first = new Map(), route = [];
