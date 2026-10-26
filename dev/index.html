@@ -676,7 +676,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/mobile.css">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 13:33 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 13:52 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -693,6 +693,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   <div class="search" role="search">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
     <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków" aria-label="Search churches by name or town" aria-controls="results" data-i18n-attr="placeholder:searchPh;aria-label:searchLabel">
+    <button id="globeBtn" class="globe-btn" type="button" title="Whole Globe" aria-label="Whole Globe" data-i18n-attr="title:wholeGlobe;aria-label:wholeGlobe"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
   <label class="langpick" title="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><select id="langSel" aria-label="Language"></select></label>
@@ -869,7 +870,7 @@ const EN = {
   photosOfChurch: 'Photos of This Church', openPhoto: 'Open photo {k} of {n}',
   noGeo: 'This browser can\'t share your location.', finding: 'Finding where you are…',
   geoOff: 'Location is turned off for this site.', useMyLoc: 'Use My Location', nearestFirstTip: 'to list the nearest first',
-  locStepsIos: 'To turn it on, tap aA in the address bar, then Website Settings › Location › Allow. If it stays off, open the Settings app: Privacy & Security › Location Services › Safari Websites › While Using the App.',
+  locStepsIos: 'To turn it on: open the Settings app › Privacy & Security › Location Services, make sure it is on, then tap Safari Websites › While Using the App. Come back, reload this page and tap Use My Location. If Safari still says no, tap the page menu at the left of the address bar › Website Settings › Location › Allow.',
   locStepsAndroid: 'To turn it on, tap the icon at the left of the address bar, then Permissions › Location › Allow.',
   locStepsDesktop: 'To turn it on, click the icon at the left of the address bar and allow Location.',
   geoFail: 'Your location could not be found. Try again in a moment.', noneNear: 'No churches found. Check the filters across the top.',
@@ -1464,7 +1465,7 @@ async function massNear(kind) {
   map.once('idle', updateNames);
   $('tagline').innerHTML = kind === 2 ? tr('massLangTag', { n: inLang.size, lang: esc(massLangName(mf.lang)) }) : esc(tr(kind ? 'confNearTag' : 'massNearTag', { n: rows.length, dist: nearDist(nearMiles) }));
   closeCard();
-  const wide = innerWidth > 640, pad = wide ? { left: 380, right: 80, top: 190, bottom: 80 } : { top: 190, bottom: innerHeight * 0.62, left: 40, right: 40 };
+  const wide = innerWidth > 640, pad = wide ? { left: 380, right: 80, top: 190, bottom: 80 } : { top: 90, bottom: innerHeight * 0.55, left: 40, right: 40 };
   if (kind === 2) {
     // go to where most of these churches are; pull back to the whole world only when they really are spread across it
     const pts = mainCluster([...inLang].map(i => [state.lon[i] / 1e6, state.lat[i] / 1e6]));
@@ -1546,7 +1547,7 @@ async function listArea(args) {
     map.fitBounds(cluster.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(cluster[0], cluster[0])), { padding: wide ? { left: 380, right: 80, top: 120, bottom: 60 } : { top: 90, bottom: innerHeight * 0.55, left: 30, right: 30 }, maxZoom: 12, pitch: 0, duration: reduceMotion ? 0 : 2000 });
   } else if (!inView && ring.length) {
     const wide = innerWidth > 640;
-    map.fitBounds(ring.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(ring[0], ring[0])), { padding: wide ? { left: 380, right: 80, top: 190, bottom: 60 } : { top: 190, bottom: innerHeight * 0.62, left: 30, right: 30 }, pitch: 0, duration: reduceMotion ? 0 : 1600 });
+    map.fitBounds(ring.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(ring[0], ring[0])), { padding: wide ? { left: 380, right: 80, top: 190, bottom: 60 } : { top: 90, bottom: innerHeight * 0.55, left: 30, right: 30 }, pitch: 0, duration: reduceMotion ? 0 : 1600 });
   }
   renderArea();
 }
@@ -1906,6 +1907,21 @@ const map = new maplibregl.Map({
   attributionControl: false, renderWorldCopies: false, maxPitch: 60, dragRotate: true,
 });
 window.__map = map;
+// On phones the padding a camera move leaves behind adds to a fit's own, and together they can leave
+// no room at all (MapLibre then quietly gives up). A fit there starts from none and shrinks its padding to fit.
+{
+  const fit = map.fitBounds.bind(map);
+  map.fitBounds = (b, o = {}) => {
+    const p = o.padding;
+    if (phoneNow() && p && typeof p === 'object') {
+      map.setPadding({ top: 0, bottom: 0, left: 0, right: 0 });
+      const t = p.top || 0, bt = p.bottom || 0, l = p.left || 0, r = p.right || 0;
+      const k = Math.min(1, (innerHeight - 60) / (t + bt || 1), (innerWidth - 60) / (l + r || 1));
+      if (k < 1) o = { ...o, padding: { top: t * k, bottom: bt * k, left: l * k, right: r * k } };
+    }
+    return fit(b, o);
+  };
+}
 
 // city names in the page language (Natural Earth); languages it lacks use the English names
 let places = null;
@@ -2601,7 +2617,7 @@ async function findNear() {
   const pts = [here, ...near.slice(0, 6).map(r => [state.lon[r.i] / 1e6, state.lat[r.i] / 1e6])];
   const b = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
   closeCard();
-  map.fitBounds(b, { padding: innerWidth > 640 ? { left: 380, right: 80, top: 150, bottom: 80 } : { top: 140, bottom: innerHeight * 0.62, left: 40, right: 40 }, maxZoom: 15, duration: reduceMotion ? 0 : 2200 });
+  map.fitBounds(b, { padding: innerWidth > 640 ? { left: 380, right: 80, top: 150, bottom: 80 } : { top: 90, bottom: innerHeight * 0.55, left: 40, right: 40 }, maxZoom: 15, duration: reduceMotion ? 0 : 2200 });
   nearRows = near;
   renderNear();
 }
@@ -2662,7 +2678,7 @@ setInterval(spinStep, 1200);
 $('spin').addEventListener('click', () => { state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning); if (state.spinning) { lastInteract = 0; spinStep(); } else map.stop(); });
 $('zin').addEventListener('click', () => { lastInteract = performance.now(); map.zoomIn({ duration: 400 }); });
 $('zout').addEventListener('click', () => { lastInteract = performance.now(); map.zoomOut({ duration: 400 }); });
-$('home').addEventListener('click', () => { closeCard(); if (state.mode === 'bible') { bibleOverview(); return; } if (state.mode === 'jesus') { lifePause(); lifeOverview(); return; } map.flyTo({ center: [map.getCenter().lng, 20], zoom: 1.4, pitch: 0, bearing: 0, duration: 1800 }); });
+$('home').addEventListener('click', () => { closeCard(); if (state.mode === 'bible') { bibleOverview(); return; } if (state.mode === 'jesus') { lifePause(); lifeOverview(); return; } map.flyTo({ center: [map.getCenter().lng, 20], zoom: phoneNow() ? 0.9 : 1.4, pitch: 0, bearing: 0, padding: viewPad(), duration: 1800 }); });
 $('rand').addEventListener('click', () => {
   if (state.mode === 'bible') { if (bible.data) { const ps = bibleVisible(); openBiblePlace(ps[Math.floor(Math.random() * ps.length)].id); } return; }
   if (state.mode === 'jesus') { if (life.data) { const evs = lifeEvents(); lifePause(); goEvent(evs[Math.floor(Math.random() * evs.length)].i); } return; }
@@ -2800,6 +2816,15 @@ function phoneHTML(raw, cc) {
 /* ---------- sharing: the phone's own share sheet, or email and copy on a computer ---------- */
 const churchLink = (i) => location.origin + location.pathname + '?church=' + i;
 // keep the church clear of the details card, which sits on the left in right-to-left languages
+// the open sky between the search bar and the tabs on phones; a padding set by one camera move
+// sticks for the next, so overviews reset it to this rather than keep a closed card's
+const phoneNow = () => matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)').matches;
+function viewPad() {
+  if (!phoneNow()) return { top: 0, bottom: 0, left: 0, right: 0 };
+  const top = Math.round(document.querySelector('.search').getBoundingClientRect().bottom), nav = $('mnav'), r = nav ? nav.getBoundingClientRect() : null;
+  const sideways = r && r.height > r.width;  // the tabs run down the left edge
+  return { top: Math.max(0, top - 8), bottom: r && !sideways ? Math.round(innerHeight - r.top) : 0, left: sideways ? Math.round(r.right) : 0, right: 0 };
+}
 const cardPad = (wide) => wide ? { top: 0, bottom: 0, left: i18n.rtl ? 440 : 0, right: i18n.rtl ? 0 : 440 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 };
 function wireShare(i, name, place) {
   const btn = $('shareBtn'), menu = $('shareMenu'), url = churchLink(i);
@@ -3033,7 +3058,7 @@ function revealMatches() {
   const pts = [[c.lng, c.lat], ...near.map(r => [lon[r.i] / 1e6, lat[r.i] / 1e6])];
   const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
   const wide = innerWidth > 640, open = !$('card').hidden;
-  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: Math.min(map.getZoom(), 13), pitch: 0, duration: reduceMotion ? 0 : 1600 });
+  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 90, bottom: open ? innerHeight * 0.55 : 90, left: 30, right: 30 }, maxZoom: Math.min(map.getZoom(), 13), pitch: 0, duration: reduceMotion ? 0 : 1600 });
 }
 // After a Mass filter is picked, fly to where the matches are thickest: within the current view if several are
 // already on screen, otherwise anywhere on the globe
@@ -3059,7 +3084,7 @@ function flyToMatches(only) {
   const pts = near.map(r => [lon[r.i] / 1e6, lat[r.i] / 1e6]);
   const box = pts.reduce((bb, p) => bb.extend(p), new maplibregl.LngLatBounds(pts[0], pts[0]));
   const wide = innerWidth > 640, open = !$('card').hidden;
-  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 170, bottom: open ? innerHeight * 0.62 : 90, left: 30, right: 30 }, maxZoom: 11, pitch: 0, duration: reduceMotion ? 0 : 1600 });
+  map.fitBounds(box, { padding: wide ? { left: 60, right: open ? 480 : 80, top: 150, bottom: 70 } : { top: 90, bottom: open ? innerHeight * 0.55 : 90, left: 30, right: 30 }, maxZoom: 11, pitch: 0, duration: reduceMotion ? 0 : 1600 });
 }
 let toastTimer = 0;
 function toast(text, ms = 2600) {
@@ -3320,7 +3345,7 @@ function bibleSel(p) {
 window.__bibleSel = bibleSel;
 function bibleOverview() {
   const wide = innerWidth > 640;
-  map.flyTo({ center: wide ? [33, 33] : [37, 31], zoom: wide ? 3.5 : 2.6, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2200, essential: true });
+  map.flyTo({ center: wide ? [33, 33] : [37, 31], zoom: wide ? 3.5 : 2.6, pitch: 0, bearing: 0, padding: viewPad(), duration: reduceMotion ? 0 : 2200, essential: true });
 }
 const MODE_TABS = [['modeChurches', 'churches'], ['modeJesus', 'jesus'], ['modeBible', 'bible']];
 async function setMode(m, { fly = true } = {}) {
@@ -3347,7 +3372,7 @@ async function setMode(m, { fly = true } = {}) {
   for (const id of JESUS_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'jesus' ? 'visible' : 'none');
   if (m === 'bible') { renderBibleChips(); bibleTagline(); if (fly) bibleOverview(); }
   else if (m === 'jesus') { renderLifeChips(); lifeTagline(); if (fly) { lifeOverview(); const first = lifeEvents()[0]; if (first) goEvent(first.i, { fly: false, card: true }); } }  // open on the first moment, details showing
-  else { renderChips(); updateTagline(); map.once('idle', updateNames); if (fly) map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, pitch: 0, bearing: 0, duration: reduceMotion ? 0 : 2400, essential: true }); }
+  else { renderChips(); updateTagline(); map.once('idle', updateNames); if (fly) map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, pitch: 0, bearing: 0, padding: viewPad(), duration: reduceMotion ? 0 : 2400, essential: true }); }
 }
 $('modeChurches').addEventListener('click', () => setMode('churches'));
 $('modeBible').addEventListener('click', () => setMode('bible'));
@@ -3644,7 +3669,7 @@ function lifeSel(p) {
 }
 const lifePad = () => {
   const wide = innerWidth > 640, card = !$('card').hidden && wide, h = $('life').offsetHeight || 150;
-  return { top: wide ? 150 : (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--head')) || 150) + 10, bottom: h + 60, left: card && i18n.rtl ? 440 : 20, right: card && !i18n.rtl ? 440 : 70 };
+  return { top: wide ? 150 : (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--head')) || 150) + 10, bottom: h + 60 + viewPad().bottom, left: card && i18n.rtl ? 440 : 20, right: card && !i18n.rtl ? 440 : 70 };
 };
 function lifeOverview() {
   const wide = innerWidth > 640;
@@ -4010,7 +4035,7 @@ const mapReady = new Promise(res => map.once('load', res));
       const sp = new URLSearchParams(location.search);
       if (sp.has('jesus') || sp.has('life') || sp.get('mode') === 'jesus') { state.ready = true; setMode('jesus', { fly: !sp.has('jesus') && !sp.has('life') }).then(() => { if (sp.get('jesus')) openLifePlace(sp.get('jesus')); else if (sp.get('life')) goEvent(parseInt(sp.get('life'), 10) - 1, { card: true }); }); return; }
       if (sp.has('bible') || sp.has('land') || sp.get('mode') === 'bible') { state.ready = true; setMode('bible', { fly: !sp.has('bible') && !sp.has('land') }).then(() => { if (sp.get('bible')) openBiblePlace(sp.get('bible')); else if (sp.get('land')) openBibleLand(sp.get('land')); }); return; }
-      map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, duration: reduceMotion ? 0 : 3200, essential: true });
+      map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, padding: viewPad(), duration: reduceMotion ? 0 : 3200, essential: true });
       map.once('moveend', () => { state.ready = true; });
     };
     map.once('idle', open);

@@ -70,6 +70,9 @@ $('msActs').addEventListener('click', (e) => {
   setTimeout(hook, 4000);  // the church of the day card is built once the calendar loads
 }
 
+// Whole Globe lives at the end of the search bar on phones, where no panel ever covers it
+$('globeBtn').addEventListener('click', () => { show(false); $('home').click(); });
+
 /* ---------- bottom tabs: the same buttons as the desktop tabs ---------- */
 const tabs = [...$('mnav').querySelectorAll('button[data-mode]')];
 for (const b of tabs) b.addEventListener('click', () => { show(false); $(b.dataset.mode).click(); });
