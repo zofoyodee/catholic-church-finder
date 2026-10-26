@@ -705,7 +705,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 
 <footer class="foot">
   <button id="aboutBtn" data-i18n="aboutData">About the data</button>
-  <button id="contactBtn" data-i18n="contact">Contact</button>
+  <button id="contactBtn" data-i18n="contact" hidden>Contact</button>
   <label class="themepick" title="Theme" data-i18n-attr="title:themeLabel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.5-1-2.6 0-.9.7-1.6 1.6-1.6H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10" cy="7" r="1.2"/><circle cx="15" cy="7" r="1.2"/></svg><select id="themeSel" aria-label="Theme" data-i18n-attr="aria-label:themeLabel"></select></label>
   <span data-i18n="footCredit">Places © Overture Maps Foundation · Basemap Natural Earth, streets © OpenStreetMap contributors via OpenFreeMap</span>
   <span class="coords" id="coords"></span>
@@ -3100,7 +3100,7 @@ function loadTurnstile() {
     document.head.appendChild(s);
   });
 }
-// no email address is ever shown; until the Worker is running there is simply no Contact button
+// no email address is ever shown; the button starts hidden in the HTML and appears only once the Worker is running
 $('contactBtn').hidden = !CONTACT_API;
 $('contactBtn').addEventListener('click', async () => {
   track('contact');
