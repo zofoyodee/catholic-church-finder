@@ -1542,7 +1542,7 @@ async function showPhoto(i) {
   }
   if (!current()) return;
   if (!photo) { done(); return; }
-  const img = new Image(); img.className = 'photo'; img.alt = tr('photoOf', { name: photo.file || tr('theChurch') }); img.referrerPolicy = 'no-referrer'; img.src = photo.src;
+  const img = new Image(); img.className = 'photo'; img.alt = tr('photoOf', { name: photo.file || tr('theChurch') }); img.referrerPolicy = photo.sv ? 'strict-origin-when-cross-origin' : 'no-referrer'; img.src = photo.src;  // Google checks the key against the page's address
   try { await img.decode(); } catch (e) { if (!img.complete || !img.naturalWidth) { if (current()) done(); return; } }
   if (!current()) return;
   hero.querySelector('svg.scene').after(img);
@@ -3208,7 +3208,7 @@ async function bibleHero(title, sub, wiki) {
   if (!wiki) return;
   const photo = await wikiPhoto(wiki);
   if (!photo || ticket !== photoTicket) return;
-  const img = new Image(); img.className = 'photo'; img.alt = tr('photoOf', { name: title }); img.referrerPolicy = 'no-referrer'; img.src = photo.src;
+  const img = new Image(); img.className = 'photo'; img.alt = tr('photoOf', { name: title }); img.referrerPolicy = photo.sv ? 'strict-origin-when-cross-origin' : 'no-referrer'; img.src = photo.src;  // Google checks the key against the page's address
   try { await img.decode(); } catch (e) { return; }
   if (ticket !== photoTicket) return;
   hero.querySelector('svg.scene').after(img); hero.classList.add('has-photo');
