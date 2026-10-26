@@ -1,7 +1,8 @@
 /* Phones: the globe gets the screen. A search bar on top, the three tabs and a Menu button along
    the bottom, and everything else (filters, Church Near Me, language, theme, tours, about) in one
    menu sheet. The same page elements are moved into the sheet, so their own handlers keep working,
-   and moved back when the screen grows. */
+   and moved back when the screen grows. On a computer the same menu drops down from a Menu
+   button in the top bar: the filters, language and theme live in it there too (html.wide). */
 (() => {
 'use strict';
 const $ = (id) => document.getElementById(id);
@@ -9,27 +10,29 @@ const compact = matchMedia('(max-width: 640px), (max-height: 500px) and (orienta
 const sheet = $('msheet');
 if (!sheet) return;
 
-// what moves into the sheet, and where it goes; a marker keeps each one's place on the desktop page
+// what moves into the sheet, and where it goes; a marker keeps each one's place on the page.
+// 'all' moves on every screen; the rest only on phones.
 const MOVES = [
   [() => document.querySelector('.brand'), 'msHead'],
-  [() => $('chips'), 'msShow'],
-  [() => $('massChips'), 'msMass'],
-  [() => document.querySelector('.langpick'), 'msPicks'],
-  [() => document.querySelector('.themepick'), 'msPicks'],
+  [() => $('chips'), 'msShow', 'all'],
+  [() => $('massChips'), 'msMass', 'all'],
+  [() => document.querySelector('.langpick'), 'msPicks', 'all'],
+  [() => document.querySelector('.themepick'), 'msPicks', 'all'],
   [() => document.querySelector('footer.foot'), 'msFoot'],
 ];
 const marks = new Map();
 function place() {
-  const into = compact.matches;
-  document.documentElement.classList.toggle('compact', into);
-  for (const [get, box] of MOVES) {
+  const small = compact.matches;
+  document.documentElement.classList.toggle('compact', small);
+  document.documentElement.classList.toggle('wide', !small);
+  for (const [get, box, all] of MOVES) {
     const el = get(); if (!el) continue;
-    if (into) {
+    if (small || all) {
       if (!marks.has(el)) { const m = document.createComment('mobile'); el.before(m); marks.set(el, m); }
       if (el.parentNode !== $(box)) $(box).appendChild(el);
     } else if (marks.has(el)) { marks.get(el).replaceWith(el); marks.delete(el); }
   }
-  if (!into) show(false);
+  show(false);
 }
 compact.addEventListener('change', place);
 place();
@@ -38,6 +41,7 @@ place();
 function show(open) {
   sheet.hidden = !open;
   $('mnavMenu').setAttribute('aria-expanded', open);
+  $('dMenu').setAttribute('aria-expanded', open);
   document.documentElement.classList.toggle('ms-open', open);
   if (open) sync();
 }
@@ -54,9 +58,10 @@ function sync() {
 }
 const toggle = () => show(sheet.hidden);
 $('mnavMenu').addEventListener('click', toggle);
+$('dMenu').addEventListener('click', toggle);
 $('msClose').addEventListener('click', () => show(false));
 sheet.addEventListener('click', (e) => { if (e.target === sheet) show(false); });  // tap outside the box
-addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) { show(false); $('mnavMenu').focus(); } });
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) { show(false); $(compact.matches ? 'mnavMenu' : 'dMenu').focus(); } });
 sheet.addEventListener('click', (e) => {
   const b = e.target.closest('.ms-acts button[data-for]'); if (!b) return;
   show(false);
@@ -74,7 +79,7 @@ sheet.addEventListener('click', (e) => {
 
 // the Menu tab shows how many churches are saved, so Favorites can be found
 {
-  const n = () => { $('mnavMenu').dataset.n = $('favCount').textContent; };
+  const n = () => { $('mnavMenu').dataset.n = $('dMenu').dataset.n = $('favCount').textContent; };
   new MutationObserver(n).observe($('favCount'), { childList: true, characterData: true, subtree: true });
   n();
 }
