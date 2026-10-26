@@ -192,3 +192,8 @@ body.bible-mode .ms-acts .church-only { display: none; }
 .ms-picks .langpick { height: auto; display: grid; gap: 4px; }
 .ms-picks .langpick .lp-name { display: block; font-size: 12px; line-height: 16px; color: var(--ink-soft); }
 .ms-picks .langpick svg { top: 33px; }
+
+/* the first section is the open tab's own: Find a Church, or the Life of Jesus / Bible Locations filters */
+.ms-find .for-jesus, .ms-find .for-bible, body.bible-mode .ms-find .for-churches { display: none; }
+body.jesus-mode .ms-find .for-jesus, body.bible-mode:not(.jesus-mode) .ms-find .for-bible { display: inline; }
+body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; }
