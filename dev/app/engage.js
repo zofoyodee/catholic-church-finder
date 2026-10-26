@@ -268,7 +268,7 @@ function loadTours() { if (!tours) tours = ccf.getJSON('data/tours.json').then(j
 async function renderTourList() {
   const list = await loadTours();
   const glyph = { marian: 'M', camino: '✦', basilicas: '✠', cathedrals: '♱' };
-  $('tourList').innerHTML = list.map(t => `<li><button class="tour" data-t="${esc(t.id)}" style="--c:${esc(t.color)}"><span class="ic" aria-hidden="true">${glyph[t.id] || '✠'}</span><span><b>${esc(t.title)}</b><small>${esc(t.sub)} · ${esc(T('stops', { n: t.stops.length }))}</small></span></button></li>`).join('');
+  $('tourList').innerHTML = list.map(t => `<li><button class="tour" data-t="${esc(t.id)}" style="--c:${esc(t.color)}"><span class="ic" aria-hidden="true">${glyph[t.id] || '✠'}</span><span><b>${esc(td(t.title))}</b><small>${esc(td(t.sub))} · ${esc(T('stops', { n: t.stops.length }))}</small></span></button></li>`).join('');
 }
 $('tourList').addEventListener('click', (e) => { const b = e.target.closest('button[data-t]'); if (b) startTour(b.dataset.t); });
 
@@ -335,11 +335,11 @@ function renderTourCard(k) {
   const play = tour.auto ? '<svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>' : '<svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg>';
   const last = k === t.stops.length - 1;
   tourCard.innerHTML = `<button class="x" id="tourExit" aria-label="${esc(T('tourEnd'))}">${X}</button>
-    <div class="kick"><b>${esc(t.title)}</b> · ${esc(k < 0 ? T('stops', { n: t.stops.length }) : T('stopOf', { k: k + 1, n: t.stops.length }))}</div>
-    <h2><button class="more" aria-expanded="${tourCard.classList.contains('more')}">${esc(s ? s.name : t.title)}</button></h2>
-    ${s ? `<div class="where">${esc(s.place)}</div>` : ''}
-    <p>${esc(s ? s.text : t.sub + '.')}</p>
-    <div class="dots" role="tablist" aria-label="${esc(T('stopsLabel'))}">${t.stops.map((x, j) => `<button data-k="${j}" aria-current="${j === k}" aria-label="${esc(T('stopName', { k: j + 1, name: x.name }))}" title="${esc(x.name)}"></button>`).join('')}</div>
+    <div class="kick"><b>${esc(td(t.title))}</b> · ${esc(k < 0 ? T('stops', { n: t.stops.length }) : T('stopOf', { k: k + 1, n: t.stops.length }))}</div>
+    <h2><button class="more" aria-expanded="${tourCard.classList.contains('more')}">${esc(td(s ? s.name : t.title))}</button></h2>
+    ${s ? `<div class="where">${esc(td(s.place))}</div>` : ''}
+    <p>${esc(s ? td(s.text) : td(t.sub) + '.')}</p>
+    <div class="dots" role="tablist" aria-label="${esc(T('stopsLabel'))}">${t.stops.map((x, j) => `<button data-k="${j}" aria-current="${j === k}" aria-label="${esc(T('stopName', { k: j + 1, name: td(x.name) }))}" title="${esc(td(x.name))}"></button>`).join('')}</div>
     <div class="timer" aria-hidden="true"><i id="tourTimer"></i></div>
     <div class="nav">
       <button class="btn icon" id="tourPrev" aria-label="${esc(T('tourPrev'))}" ${k <= 0 ? 'disabled' : ''}><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
