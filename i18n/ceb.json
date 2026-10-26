@@ -495,5 +495,8 @@
   "mFind": "Pangitag Simbahan",
   "mMine": "Akong mga Simbahan",
   "mExplore": "Susiha",
-  "mSettings": "Mga Setting"
+  "mSettings": "Mga Setting",
+  "langNearTitle": "Misa sa {lang} Duol Nimo",
+  "langNearIntro": "Mga simbahan nga ang website naglista og Misa niini nga pinulongan, ang pinakaduol una. I-tap ang usa para sa detalye.",
+  "langNoneNear": "Wala sulod sa {dist}. Kini ang pinakaduol nga adunay Misa sa {lang}."
 }

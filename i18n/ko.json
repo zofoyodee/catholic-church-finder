@@ -485,5 +485,8 @@
   "mFind": "성당 찾기",
   "mMine": "내 성당",
   "mExplore": "둘러보기",
-  "mSettings": "설정"
+  "mSettings": "설정",
+  "langNearTitle": "가까운 {lang} 미사",
+  "langNearIntro": "웹사이트에 이 언어 미사가 안내된 성당을 가까운 순으로 보여 줍니다. 자세히 보려면 누르세요.",
+  "langNoneNear": "{dist} 이내에는 없습니다. {lang} 미사가 있는 가장 가까운 성당입니다."
 }

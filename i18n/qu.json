@@ -495,5 +495,8 @@
   "mFind": "Iglesiata maskay",
   "mMine": "Iglesiaykuna",
   "mExplore": "Maskarikuy",
-  "mSettings": "Churanakuna"
+  "mSettings": "Churanakuna",
+  "langNearTitle": "{lang} simipi Misa qanpa qayllaykipi",
+  "langNearIntro": "Kay simipi Misata websitenkupi willakuq iglesiakuna, aswan qayllalla ñawpaqta. Hukta ñit’iy astawan yachanaykipaq.",
+  "langNoneNear": "Manam kanchu {dist} ukhupi. Kaykunam aswan qayllalla {lang} simipi Misayuq."
 }

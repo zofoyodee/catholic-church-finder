@@ -524,5 +524,8 @@
   "mFind": "Nájsť kostol",
   "mMine": "Moje kostoly",
   "mExplore": "Objavovať",
-  "mSettings": "Nastavenia"
+  "mSettings": "Nastavenia",
+  "langNearTitle": "Svätá omša v jazyku {lang} v okolí",
+  "langNearIntro": "Kostoly, ktorých web uvádza omšu v tomto jazyku, najbližšie prvé. Ťuknite na jeden pre podrobnosti.",
+  "langNoneNear": "Nič do {dist}. Toto sú najbližšie kostoly s omšou v jazyku {lang}."
 }

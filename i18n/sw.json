@@ -503,5 +503,8 @@
   "mFind": "Tafuta Kanisa",
   "mMine": "Makanisa Yangu",
   "mExplore": "Gundua",
-  "mSettings": "Mipangilio"
+  "mSettings": "Mipangilio",
+  "langNearTitle": "Misa kwa {lang} Karibu Nawe",
+  "langNearIntro": "Makanisa ambayo tovuti zao zinaorodhesha Misa kwa lugha hii, lililo karibu zaidi kwanza. Gusa moja upate maelezo.",
+  "langNoneNear": "Hakuna ndani ya {dist}. Haya ndiyo yaliyo karibu zaidi yenye Misa kwa {lang}."
 }

@@ -523,5 +523,8 @@
   "mFind": "Najít kostel",
   "mMine": "Moje kostely",
   "mExplore": "Objevovat",
-  "mSettings": "Nastavení"
+  "mSettings": "Nastavení",
+  "langNearTitle": "Mše v jazyce {lang} ve vašem okolí",
+  "langNearIntro": "Kostely, jejichž web uvádí mši v tomto jazyce, nejbližší první. Klepněte na jeden pro podrobnosti.",
+  "langNoneNear": "Nic do {dist}. Toto jsou nejbližší kostely se mší v jazyce {lang}."
 }

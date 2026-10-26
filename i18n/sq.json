@@ -501,5 +501,8 @@
   "mFind": "Gjej një kishë",
   "mMine": "Kishat e mia",
   "mExplore": "Eksploro",
-  "mSettings": "Cilësimet"
+  "mSettings": "Cilësimet",
+  "langNearTitle": "Meshë në {lang} pranë jush",
+  "langNearIntro": "Kisha, faqja e të cilave shënon një meshë në këtë gjuhë, më e afërta e para. Prekni njërën për hollësi.",
+  "langNoneNear": "Asnjë brenda {dist}. Këto janë më të afërtat me meshë në {lang}."
 }

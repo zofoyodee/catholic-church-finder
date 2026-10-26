@@ -495,5 +495,8 @@
   "mFind": "Shaka Kiliziya",
   "mMine": "Kiliziya Zanjye",
   "mExplore": "Gushakisha",
-  "mSettings": "Igenamiterere"
+  "mSettings": "Igenamiterere",
+  "langNearTitle": "Misa mu {lang} hafi yawe",
+  "langNearIntro": "Kiliziya zivuga ku rubuga rwazo ko zifite Misa muri uru rurimi, iya hafi mbere. Kanda kuri imwe umenye byinshi.",
+  "langNoneNear": "Nta n’imwe iri muri {dist}. Izi ni zo ziri hafi zifite Misa mu {lang}."
 }

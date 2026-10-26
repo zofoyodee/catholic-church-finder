@@ -495,5 +495,8 @@
   "mFind": "Rondera Ingoro y’Imana",
   "mMine": "Ingoro z’Imana zanje",
   "mExplore": "Raba",
-  "mSettings": "Amategeko"
+  "mSettings": "Amategeko",
+  "langNearTitle": "Misa mu {lang} hafi yawe",
+  "langNearIntro": "Ingoro z’Imana zivuga kuri website yazo ko hari Misa muri uru rurimi, iya hafi kuruta izindi imbere. Kanda kuri imwe umenye vyinshi.",
+  "langNoneNear": "Nta na imwe iri muri {dist}. Izi ni zo ziri hafi zifise Misa mu {lang}."
 }

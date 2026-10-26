@@ -487,5 +487,8 @@
   "mFind": "Tìm nhà thờ",
   "mMine": "Nhà thờ của tôi",
   "mExplore": "Khám phá",
-  "mSettings": "Cài đặt"
+  "mSettings": "Cài đặt",
+  "langNearTitle": "Thánh lễ tiếng {lang} gần bạn",
+  "langNearIntro": "Các nhà thờ có ghi Thánh lễ bằng ngôn ngữ này trên trang web, gần nhất trước. Chạm vào một nhà thờ để xem chi tiết.",
+  "langNoneNear": "Không có trong phạm vi {dist}. Đây là những nhà thờ gần nhất có Thánh lễ tiếng {lang}."
 }
