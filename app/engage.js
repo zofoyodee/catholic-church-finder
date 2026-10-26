@@ -8,6 +8,7 @@ if (!ccf) return;
 const { map, state, esc, reduceMotion } = ccf;
 const $ = (id) => document.getElementById(id);
 const phone = () => innerWidth <= 640;
+const compact = () => matchMedia('(max-width: 640px), (max-height: 500px)').matches;  // phones either way up (app/mobile.js)
 const rad = Math.PI / 180;
 const X = '<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 // page language: the main script's tr() with its English fallback
@@ -408,7 +409,7 @@ renderMenu();
 document.body.appendChild(menu);
 function showMenu(open) {
   menu.hidden = !open; viewBtn.setAttribute('aria-expanded', open); viewBtn.setAttribute('aria-pressed', open);
-  if (open && !phone()) {
+  if (open && !phone() && viewBtn.offsetParent) {  // beside its button; on phones the button lives in the menu, so from the bottom
     const r = viewBtn.getBoundingClientRect();
     menu.style.right = (innerWidth - r.left + 10) + 'px'; menu.style.left = 'auto';
     menu.style.top = Math.max(12, Math.min(r.top - 40, innerHeight - menu.offsetHeight - 12)) + 'px'; menu.style.bottom = 'auto';
@@ -628,7 +629,8 @@ ccf.opened.then(async ({ shared }) => {
   if (tourId && !bibleMode()) { startTour(tourId); return; }
   await todayReady;
   let closed = null; try { closed = localStorage.getItem(TODAY_KEY); } catch (e) {}
-  // church of the day slides in once the globe has settled over the United States, unless closed earlier today
-  if (!shared && !bibleMode() && cotd && closed !== String(today.n)) setTimeout(() => { if (!tour.t && $('card').hidden) showToday(true, true); }, reduceMotion ? 300 : 3600);
+  // church of the day slides in once the globe has settled over the United States, unless closed earlier today;
+  // phones keep the globe clear and offer it on the Today button instead
+  if (!shared && !bibleMode() && !compact() && cotd && closed !== String(today.n)) setTimeout(() => { if (!tour.t && $('card').hidden) showToday(true, true); }, reduceMotion ? 300 : 3600);
 });
 })();
