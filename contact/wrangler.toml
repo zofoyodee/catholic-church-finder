@@ -1,0 +1,24 @@
+# Cloudflare Worker for the Contact Us form. Secrets (RESEND_API_KEY, OWNER_EMAIL, REPLY_SECRET, TURNSTILE_SECRET) are set with
+# `npx wrangler secret put NAME` and are never written here. See README.md.
+name = "churchglobe-contact"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[vars]
+FROM_EMAIL = "Catholic Church Finder <hello@churchglobe.com>"
+ALLOWED_ORIGINS = "https://churchglobe.com,https://www.churchglobe.com,http://localhost:8000"
+SITE_URL = "https://churchglobe.com/"
+AI_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+
+[ai]
+binding = "AI"
+
+# at most 3 messages a minute from one address
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "7301"
+simple = { limit = 3, period = 60 }
+
+[observability]
+enabled = true

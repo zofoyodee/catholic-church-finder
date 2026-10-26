@@ -1,0 +1,41 @@
+name: Deploy Contact Us worker
+
+# Puts contact/worker.js on Cloudflare and hands it its private settings. Everything private comes from this
+# repository's Actions secrets (Settings > Secrets and variables > Actions), which are never shown publicly:
+#   CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, RESEND_API_KEY, OWNER_EMAIL
+# Until those are added the job skips itself. See contact/README.md.
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-bm0v2j]
+    paths: [contact/**, .github/workflows/contact-worker.yml]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: contact-worker
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      READY: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.RESEND_API_KEY != '' && secrets.OWNER_EMAIL != '' }}
+    steps:
+      - if: env.READY != 'true'
+        run: echo "::notice::Contact worker not deployed yet. Add the four Actions secrets listed in contact/README.md, then run this workflow."
+      - if: env.READY == 'true'
+        uses: actions/checkout@v4
+      - if: env.READY == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: contact
+          secrets: |
+            RESEND_API_KEY
+            OWNER_EMAIL
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}

@@ -507,6 +507,16 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .about p { margin: 0; color: var(--ink-soft); max-width: 65ch; }
 .about table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
 .about td { padding: 4px 0; border-bottom: 1px solid var(--line); }
+.cform { display: grid; gap: 12px; }
+.cform label { display: grid; gap: 5px; font-size: 13px; color: var(--ink-soft); }
+.cform input:not([type=checkbox]), .cform textarea { font: inherit; font-size: 15px; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px; width: 100%; box-sizing: border-box; }
+.cform textarea { resize: vertical; min-height: 110px; }
+.cform input:focus, .cform textarea:focus { outline: 2px solid var(--focus); outline-offset: 1px; }
+.cform label.check { display: flex; align-items: center; gap: 8px; }
+.cform .hint { font-size: 12px; color: var(--ink-soft); opacity: .8; }
+.cform .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.cf-err { color: #ff9b8f; font-size: 13px; }
+.cf-reply { white-space: pre-wrap; padding: 12px 14px; border-left: 3px solid var(--gold); background: color-mix(in srgb, var(--gold) 8%, transparent); border-radius: 0 10px 10px 0; line-height: 1.6; }
 .about td:last-child { text-align: right; font-family: var(--font-data); font-size: 12.5px; }
 .about .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
 .about a { color: var(--gold-soft); }
@@ -870,9 +880,23 @@ const EN = {
   confSoonLangTag_one: 'Showing <b>{n}</b> church with Confession in the next 2 hours and Mass in {lang}', confSoonLangTag_other: 'Showing <b>{n}</b> churches with Confession in the next 2 hours and Mass in {lang}',
   contact: "Contact",
   contactIntro: "Questions, corrections or a church that's missing from the globe? We'd love to hear from you.",
-  sendEmail: "Send an Email",
-  copyEmail: "Copy Email Address",
-  noMailApp: "If no email app opened, write to {addr}",
+  yourName: "Your Name",
+  yourEmail: "Your Email",
+  emailOptional: "(optional, so we can write back)",
+  yourMessage: "Your Message",
+  contactAbout: "This is about {name}",
+  contactPrivacy: "Your message is read by AI so it can be sorted and answered right away, then passed on to the volunteer who runs this site.",
+  sendMessage: "Send Message",
+  sending: "Sending…",
+  contactEmpty: "Please write a message first.",
+  contactBadEmail: "Please check your email address.",
+  contactRobot: "Please complete the check above so we know you're not a robot.",
+  contactProfanity: "Please take out the offensive language and send your message again.",
+  contactBusy: "Too many messages at once. Please wait a minute and try again.",
+  contactError: "Your message could not be sent. Please try again in a few minutes.",
+  contactThanks: "Thank You",
+  contactSent: "Your message was sent. Here is our reply:",
+  contactSentEmailed: "Your message was sent. Here is our reply, and a copy is on its way to your email:",
   copy: "Copy",
   copyAddrTip: "Copy the address",
   online: "Online",
@@ -3051,28 +3075,83 @@ $('aboutBtn').addEventListener('click', () => {
 });
 $('about').addEventListener('click', (e) => { if (e.target.id === 'about') $('about').hidden = true; });
 
-/* ---------- contact: the address is put together only when someone asks, to keep it from spam harvesters ---------- */
-const contactAddr = () => ['jjones622', ['comcast', 'net'].join('.')].join(String.fromCharCode(64));
-$('contactBtn').addEventListener('click', () => {
+/* ---------- contact: a form that a small Cloudflare Worker (contact/worker.js) checks, reads with AI, answers and forwards ----------
+   The owner's email address lives only in the Worker's private settings, never on the page. */
+const CONTACT_API = '';        // e.g. 'https://churchglobe-contact.<account>.workers.dev' once the Worker is deployed
+const TURNSTILE_SITEKEY = '';  // Cloudflare Turnstile site key (public); leave empty to skip the robot check
+const contactDraft = { name: '', email: '', message: '', about: true };
+let turnstileLoad = null;
+function loadTurnstile() {
+  if (!TURNSTILE_SITEKEY) return Promise.resolve(null);
+  return turnstileLoad ??= new Promise((ok, no) => {
+    const s = document.createElement('script'); s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    s.async = true; s.onload = () => ok(window.turnstile); s.onerror = () => { turnstileLoad = null; no(new Error('turnstile')); };
+    document.head.appendChild(s);
+  });
+}
+// no email address is ever shown; until the Worker is running there is simply no Contact button
+$('contactBtn').hidden = !CONTACT_API;
+$('contactBtn').addEventListener('click', async () => {
+  track('contact');
+  // the church whose card is open goes along with the message, so a correction arrives knowing which church it means
+  let church = null;
+  if (state.selected >= 0 && state.mode === 'churches' && !$('card').hidden) {
+    const i = state.selected;
+    try { const r = await shardFor(i); church = { id: i, name: r[0] || '', town: r[2] || '', country: countryName(r[5]) }; } catch (e) {}
+  }
+  const d = contactDraft;
   $('aboutBox').innerHTML = `
     <h2 id="aboutTitle">${esc(tr('contact'))}</h2>
     <p>${esc(tr('contactIntro'))}</p>
-    <div class="actions" style="display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn primary" id="mailBtn">${esc(tr('sendEmail'))}</button>
-      <button class="btn" id="copyMail">${esc(tr('copyEmail'))}</button>
-      <button class="btn" id="contactClose">${esc(tr('close'))}</button>
-    </div>
-    <p id="mailShown" style="font-size:13px" hidden></p>`;
-  $('about').hidden = false; $('mailBtn').focus();
-  $('mailBtn').addEventListener('click', () => {
-    location.href = 'mailto:' + contactAddr() + '?subject=' + encodeURIComponent(tr('app'));
-    $('mailShown').hidden = false; $('mailShown').textContent = tr('noMailApp', { addr: contactAddr() });
-  });
-  $('copyMail').addEventListener('click', async () => {
-    let ok = false; try { await navigator.clipboard.writeText(contactAddr()); ok = true; } catch (e) {}
-    $('copyMail').textContent = ok ? tr('copied') : contactAddr();
-  });
+    <form id="contactForm" class="cform" novalidate>
+      <label>${esc(tr('yourName'))}<input id="cfName" name="name" autocomplete="name" maxlength="100" value="${esc(d.name)}"></label>
+      <label>${esc(tr('yourEmail'))} <span class="hint">${esc(tr('emailOptional'))}</span><input id="cfEmail" name="email" type="email" autocomplete="email" maxlength="200" value="${esc(d.email)}"></label>
+      <label>${esc(tr('yourMessage'))}<textarea id="cfMsg" name="message" rows="5" maxlength="4000" required>${esc(d.message)}</textarea></label>
+      <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+      ${church && church.name ? `<label class="check"><input type="checkbox" id="cfAbout"${d.about ? ' checked' : ''}> ${esc(tr('contactAbout', { name: church.name }))}</label>` : ''}
+      <div id="cfRobot"></div>
+      <p class="hint">${esc(tr('contactPrivacy'))}</p>
+      <p id="cfErr" class="cf-err" role="alert" hidden></p>
+      <div class="actions" style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn primary" id="cfSend" type="submit">${esc(tr('sendMessage'))}</button>
+        <button class="btn" id="contactClose" type="button">${esc(tr('close'))}</button>
+      </div>
+    </form>`;
+  $('about').hidden = false; $('cfMsg').focus();
+  const keep = () => { d.name = $('cfName').value; d.email = $('cfEmail').value; d.message = $('cfMsg').value; if ($('cfAbout')) d.about = $('cfAbout').checked; };
+  $('contactForm').addEventListener('input', keep);
   $('contactClose').addEventListener('click', () => { $('about').hidden = true; });
+  let robotId = null, robotToken = '';
+  loadTurnstile().then(ts => { if (ts && $('cfRobot')) robotId = ts.render('#cfRobot', { sitekey: TURNSTILE_SITEKEY, theme: 'dark', language: 'auto', callback: (t) => { robotToken = t; } }); }).catch(() => {});
+  const fail = (key) => { const e = $('cfErr'); e.textContent = tr(key); e.hidden = false; $('cfSend').disabled = false; $('cfSend').textContent = tr('sendMessage'); };
+  $('contactForm').addEventListener('submit', async (ev) => {
+    ev.preventDefault(); keep(); $('cfErr').hidden = true;
+    if (d.message.trim().length < 5) return fail('contactEmpty');
+    if (d.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim())) return fail('contactBadEmail');
+    if (TURNSTILE_SITEKEY && !robotToken) return fail('contactRobot');
+    $('cfSend').disabled = true; $('cfSend').textContent = tr('sending');
+    let res, out = {};
+    try {
+      res = await fetch(CONTACT_API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+        name: d.name, email: d.email, message: d.message, lang: i18n.code, website: $('contactForm').website.value,
+        church: church && d.about ? church : null, turnstile: robotToken }) });
+      out = await res.json().catch(() => ({}));
+    } catch (e) {}
+    if (!res || !out.ok) {
+      if (robotId !== null && window.turnstile) { try { turnstile.reset(robotId); } catch (e) {} robotToken = ''; }
+      return fail({ profanity: 'contactProfanity', busy: 'contactBusy', email: 'contactBadEmail', empty: 'contactEmpty', robot: 'contactRobot' }[out.error] || 'contactError');
+    }
+    track('contact-sent');
+    const emailed = !!d.email.trim();
+    Object.assign(d, { message: '', about: true });
+    $('aboutBox').innerHTML = `
+      <h2 id="aboutTitle">${esc(tr('contactThanks'))}</h2>
+      <p>${esc(tr(emailed ? 'contactSentEmailed' : 'contactSent'))}</p>
+      ${out.reply ? `<div class="cf-reply" id="cfReply">${esc(out.reply)}</div>` : ''}
+      <div><button class="btn" id="contactClose">${esc(tr('close'))}</button></div>`;
+    $('contactClose').focus();
+    $('contactClose').addEventListener('click', () => { $('about').hidden = true; });
+  });
 });
 
 /* ---------- switching language: everything on screen is drawn again in the new one ---------- */
@@ -3090,7 +3169,7 @@ $('langSel').addEventListener('change', async (e) => {
   if (map.getLayer('me-label')) map.setLayoutProperty('me-label', 'text-field', tr('youAreHere'));
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
-  if (!$('about').hidden) $($('mailBtn') ? 'contactBtn' : 'aboutBtn').click();
+  if (!$('about').hidden) $($('contactForm') || $('cfReply') ? 'contactBtn' : 'aboutBtn').click();
   if (!resEl.hidden && searchIdx) runSearch();
   if (state.selected >= 0 && state.mode === 'churches') selectChurch(state.selected, { fly: false });
 });
