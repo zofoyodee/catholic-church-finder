@@ -87,7 +87,6 @@
 .wide .search input::placeholder { color: color-mix(in srgb, var(--space) 62%, var(--ink)); }
 .wide .search input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 45%, transparent), 0 8px 28px rgba(0, 0, 0, 0.5); }
 .wide .search > svg { left: 17px; top: 16px; width: 18px; height: 18px; stroke: var(--space); }
-.wide .search .clear, .wide .search button:not(.globe-btn) { color: var(--space); }
 [dir="rtl"] .wide .search input { padding: 0 46px 0 16px; }
 [dir="rtl"] .wide .search > svg { left: auto; right: 17px; }
 .wide .results { top: 58px; }
