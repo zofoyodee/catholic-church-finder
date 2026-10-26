@@ -3015,7 +3015,6 @@ async function selectChurch(i, { fly = true } = {}) {
         </span></span>
       <a class="btn" id="svLink"${GMAPS_KEY ? ' hidden' : ''} href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span>${esc(tr('streetView'))}</span></a>
       <a class="btn" id="phLink" hidden href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span>${esc(tr('photosLink'))}</span></a>
-      <button class="btn" id="flyBtn">${esc(tr('flyHere'))}</button>
     </div>
     <dl class="facts">
       ${addr.length ? `<dt>${esc(tr('address'))}</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="${esc(tr('copyAddrTip'))}">${esc(tr('copy'))}</button></dd>` : ''}
@@ -3043,7 +3042,6 @@ async function selectChurch(i, { fly = true } = {}) {
   checkStreetView(i, lt, lng);
   checkPhotosLink(i, rec, name, town, lt, lng);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
-  $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: cardPad(wide) }));
 }
 function closeCard() {
   $('cardBack').hidden = true;
