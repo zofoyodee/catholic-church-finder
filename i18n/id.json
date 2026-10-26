@@ -185,7 +185,7 @@
   "online": "Daring",
   "unverified": "Data belum diverifikasi",
   "unverifiedTip": "Data peta asal data ini tidak yakin akan ketepatannya",
-  "massLangOpt_other": "{lang} · {n} gereja",
+  "massLangOpt_other": "{lang} ({n})",
   "massLangTip": "Tampilkan hanya gereja yang mencantumkan Misa dalam bahasa ini. Angkanya adalah jumlah gereja yang mencantumkannya.",
   "massLangAria": "Tampilkan hanya gereja dengan Misa dalam bahasa ini",
   "massNoteTip": "Jadwal Misa dan Pengakuan Dosa dibaca dari situs web paroki, jadi hanya gereja yang situsnya mencantumkannya yang dapat difilter",

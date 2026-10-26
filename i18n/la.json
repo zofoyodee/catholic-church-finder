@@ -191,7 +191,7 @@
   "online": "In interrete",
   "unverified": "Inscriptio non probata",
   "unverifiedTip": "Notitiae tabulae unde haec inscriptio venit de eius accuratione non certae sunt",
-  "massLangOpt_other": "{lang} · ecclesiae {n}",
+  "massLangOpt_other": "{lang} ({n})",
   "massLangTip": "Ostende tantum ecclesias quae Missam hac lingua indicant. Numerus est quot ecclesiae eam indicant.",
   "massLangAria": "Ostende tantum ecclesias cum Missa hac lingua",
   "massNoteTip": "Horae Missarum et confessionum ex sitibus paroeciarum leguntur; itaque solae ecclesiae quarum situs eas indicat cribrari possunt",

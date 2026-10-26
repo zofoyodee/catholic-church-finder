@@ -196,7 +196,7 @@
   "online": "Internete",
   "unverified": "Nepatikrintas įrašas",
   "unverifiedTip": "Žemėlapio duomenys, iš kurių paimtas šis įrašas, nėra tikri dėl jo tikslumo",
-  "massLangOpt_other": "{lang} · bažnyčių: {n}",
+  "massLangOpt_other": "{lang} ({n})",
   "massLangTip": "Rodyti tik bažnyčias, nurodančias Mišias šia kalba. Skaičius – kiek bažnyčių jas nurodo.",
   "massLangAria": "Rodyti tik bažnyčias su Mišiomis šia kalba",
   "massNoteTip": "Mišių ir išpažinties laikas skaitomas iš parapijų svetainių, todėl filtruoti galima tik bažnyčias, kurių svetainė jį nurodo",

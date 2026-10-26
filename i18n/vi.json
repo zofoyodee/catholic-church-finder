@@ -185,7 +185,7 @@
   "online": "Trực tuyến",
   "unverified": "Chưa được xác minh",
   "unverifiedTip": "Dữ liệu bản đồ của mục này không chắc chắn về độ chính xác",
-  "massLangOpt_other": "{lang} · {n} nhà thờ",
+  "massLangOpt_other": "{lang} ({n})",
   "massLangTip": "Chỉ hiện các nhà thờ có ghi Thánh lễ bằng ngôn ngữ này. Con số là số nhà thờ có ghi.",
   "massLangAria": "Chỉ hiện nhà thờ có Thánh lễ bằng ngôn ngữ này",
   "massNoteTip": "Giờ lễ và giờ giải tội được đọc từ trang web giáo xứ, nên chỉ lọc được các nhà thờ có ghi trên trang web",

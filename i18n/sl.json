@@ -202,7 +202,7 @@
   "online": "Na spletu",
   "unverified": "Nepreverjen vnos",
   "unverifiedTip": "Podatki zemljevida, iz katerih izvira ta vnos, niso prepričani o njegovi točnosti",
-  "massLangOpt_other": "{lang} · cerkve: {n}",
+  "massLangOpt_other": "{lang} ({n})",
   "massLangTip": "Prikaži samo cerkve, ki navajajo mašo v tem jeziku. Število pove, koliko cerkva jo navaja.",
   "massLangAria": "Prikaži samo cerkve z mašo v tem jeziku",
   "massNoteTip": "Časi maš in spovedi se berejo s spletnih strani župnij, zato je mogoče filtrirati samo cerkve, katerih stran jih navaja",
