@@ -2254,7 +2254,7 @@ async function checkPhotosLink(i, rec, name, town, lat, lng) {
 }
 /* ---------- Street View: with a Google Maps key, show the link only where Google has imagery near the church ---------- */
 // Browser key, restricted in Google Cloud to this site's address and the Maps JavaScript API. Empty = always show the link, unchecked.
-const GMAPS_KEY = '';
+const GMAPS_KEY = 'AIzaSyDAgbV25JgxlwKSSiDEUMLpjp01v5V340w';  // restricted to this site's addresses in Google Cloud
 let gmaps = null;
 function loadGmaps() {
   return gmaps || (gmaps = new Promise((ok, fail) => {
