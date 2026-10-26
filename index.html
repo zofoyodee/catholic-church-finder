@@ -287,7 +287,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 }
 .foot > * { pointer-events: auto; }
 .foot button { background: none; border: 0; color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 0; font-size: 11.5px; }
-.foot .coords { font-family: var(--font-data); font-variant-numeric: tabular-nums; margin-left: auto; }
+.foot .coords { display: none; }  /* the latitude and longitude readout stays hidden */
 
 /* favorites */
 .ctrls button.fav-open { position: relative; animation: pop .45s cubic-bezier(.3,1.6,.5,1); }
@@ -3499,10 +3499,11 @@ const roColor = (e) => life.data.roColor[e.ro[0]];
 const roLabel = (e) => tr('jMysteryOf', { set: tr('jRo_' + e.ro[0]), k: fmt(e.ro[1]) });
 const roTag = (e) => e.ro ? `<span class="ro-tag" style="--rc:${roColor(e)}" title="${esc(tr('jRosary'))}: ${esc(e.ro[2])}">${ROSARY_ICON}${esc(roLabel(e))}</span>` : '';
 function loadLife() {
-  if (!life.loading) life.loading = getJSON('data/jesus.json').then(d => {
+  if (!life.loading) life.loading = getJSON('data/jesus.json?v=rosary').then(d => {
     d.byId = Object.fromEntries(d.places.map(p => [p.id, p]));
     d.color = Object.fromEntries(d.eras.map(e => [e.k, e.color]));
     d.events.forEach((e, i) => { e.i = i; });
+    d.rosary = d.rosary || { sets: [], about: [] };  // an older copy of the data has no Rosary
     d.roColor = Object.fromEntries(d.rosary.sets.map(r => [r.k, r.color]));
     const ro = d.rosary.sets.map(r => r.k);
     d.mysteries = d.events.filter(e => e.ro).sort((a, b) => ro.indexOf(a.ro[0]) - ro.indexOf(b.ro[0]) || a.ro[1] - b.ro[1]);
