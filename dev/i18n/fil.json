@@ -503,5 +503,8 @@
   "mFind": "Maghanap ng Simbahan",
   "mMine": "Aking mga Simbahan",
   "mExplore": "Tuklasin",
-  "mSettings": "Mga Setting"
+  "mSettings": "Mga Setting",
+  "langNearTitle": "Misa sa {lang} Malapit sa Iyo",
+  "langNearIntro": "Mga simbahang may Misa sa wikang ito ayon sa kanilang website, pinakamalapit muna. I-tap ang isa para sa detalye.",
+  "langNoneNear": "Wala sa loob ng {dist}. Ito ang pinakamalapit na may Misa sa {lang}."
 }

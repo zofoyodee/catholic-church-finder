@@ -495,5 +495,8 @@
   "mFind": "Fwaya Icalici",
   "mMine": "Amacalici Yandi",
   "mExplore": "Pempula",
-  "mSettings": "Ifyakupekanya"
+  "mSettings": "Ifyakupekanya",
+  "langNearTitle": "Misa mu {lang} Mupepi Nobe",
+  "langNearIntro": "Amacalici ayalemba Misa muli uno ululimi pa website, ayapalamisha pa ntanshi. Kandeni pali limo pa kwishiba ifingi.",
+  "langNoneNear": "Takuli pa {dist}. Aya e yapalamisha ayakwata Misa mu {lang}."
 }

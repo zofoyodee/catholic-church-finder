@@ -485,5 +485,8 @@
   "mFind": "查找教堂",
   "mMine": "我的教堂",
   "mExplore": "探索",
-  "mSettings": "设置"
+  "mSettings": "设置",
+  "langNearTitle": "您附近的{lang}弥撒",
+  "langNearIntro": "网站上列有该语言弥撒的教堂，由近到远。点按查看详情。",
+  "langNoneNear": "{dist}内没有。以下是最近的有{lang}弥撒的教堂。"
 }

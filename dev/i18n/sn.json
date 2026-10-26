@@ -495,5 +495,8 @@
   "mFind": "Tsvaga Chechi",
   "mMine": "Machechi Angu",
   "mExplore": "Ongorora",
-  "mSettings": "Zvirongwa"
+  "mSettings": "Zvirongwa",
+  "langNearTitle": "Misa ne{lang} Pedyo Newe",
+  "langNearIntro": "Machechi ane webhusaiti inotaura Misa mumutauro uyu, iri pedyo kwazvo kutanga. Baya imwe kuti uone zvimwe.",
+  "langNoneNear": "Hapana mukati me{dist}. Aya ndiwo ari pedyo ane Misa ne{lang}."
 }

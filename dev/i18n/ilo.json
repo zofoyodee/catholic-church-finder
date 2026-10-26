@@ -495,5 +495,8 @@
   "mFind": "Agbiruk iti Simbaan",
   "mMine": "Dagiti Simbaanko",
   "mExplore": "Sukimaten",
-  "mSettings": "Dagiti Setting"
+  "mSettings": "Dagiti Setting",
+  "langNearTitle": "Misa iti {lang} nga Asideg Kenka",
+  "langNearIntro": "Dagiti simbaan a ti websiteda ket mangilista iti Misa iti daytoy a pagsasao, ti kaasitgan nga umuna. I-tap ti maysa para iti detalye.",
+  "langNoneNear": "Awan iti uneg ti {dist}. Dagitoy ti kaasitgan nga addaan iti Misa iti {lang}."
 }

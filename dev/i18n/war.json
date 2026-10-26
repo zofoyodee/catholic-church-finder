@@ -495,5 +495,8 @@
   "mFind": "Pagbiling hin Simbahan",
   "mMine": "Akon mga Simbahan",
   "mExplore": "Susiha",
-  "mSettings": "Mga Setting"
+  "mSettings": "Mga Setting",
+  "langNearTitle": "Misa ha {lang} Harani Ha Imo",
+  "langNearIntro": "Mga simbahan nga an ira website naglilista hin Misa hini nga yinaknan, an pinakaharani siyahan. Pinduta an usa para han detalye.",
+  "langNoneNear": "Waray ha sulod han {dist}. Ini an pinakaharani nga may Misa ha {lang}."
 }

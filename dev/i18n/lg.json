@@ -495,5 +495,8 @@
   "mFind": "Noonya Ekkanisa",
   "mMine": "Ekkanisa Zange",
   "mExplore": "Noonyereza",
-  "mSettings": "Ebiteekateekebwa"
+  "mSettings": "Ebiteekateekebwa",
+  "langNearTitle": "Mmisa mu {lang} Okumpi Naawe",
+  "langNearIntro": "Ekkanisa ezirina Mmisa mu lulimi luno ku mukutu gwazo, esinga okumpi esooka. Nyiga emu olabe ebisingawo.",
+  "langNoneNear": "Tewali mu {dist}. Zino ze zisinga okumpi ezirina Mmisa mu {lang}."
 }
