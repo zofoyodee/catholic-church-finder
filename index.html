@@ -903,6 +903,7 @@ const EN = {
   taglineCountries_one: 'in <b>{n}</b> country or territory', taglineCountries_other: 'in <b>{n}</b> countries and territories',
   showing_one: 'Showing <b>{shown}</b> of {n} church', showing_other: 'Showing <b>{shown}</b> of {n} churches',
   indexLoading: 'Loading the church index…', indexFailed: 'The church index did not load. Check your connection and try again.',
+  churchesNearQ: 'Churches Near “{q}”',
   noMatch: 'No churches match “{q}”. Try the town name or a saint’s name.',
   matches_one: '{n} match. Add a town to narrow it down.', matches_other: '{n} matches. Add a town to narrow it down.',
   matchesMax: '400+ matches. Add a town to narrow it down.',
@@ -3188,14 +3189,26 @@ async function runSearch() {
   if (state.mode === 'jesus') { resEl.hidden = false; lifeSearch(q); return; }
   resEl.hidden = false;
   if (!searchIdx) { resEl.innerHTML = `<div class="note">${LOADER(tr('indexLoading'), 'inline')}</div>`; try { await loadSearch(); } catch (e) { resEl.innerHTML = `<div class="note">${esc(tr('indexFailed'))}</div>`; return; } }
-  const toks = q.split(/\s+/).filter(Boolean);
-  // any part of a name or town matches, so "fatima" finds every Fatima church and "denver" every church in Denver
-  const { keys, lines } = searchIdx; const hits = [];
-  for (let i = 0; i < keys.length; i++) {
-    const k = keys[i]; let ok = true;
-    for (const t of toks) if (k.indexOf(t) < 0) { ok = false; break; }
-    if (ok && state.enabled.has(state.typ[i] & 7)) hits.push(i);
-  }
+  const toks = q.replace(/[.,]/g, ' ').split(/\s+/).filter(Boolean);
+  // any part of a name or town matches, so "fatima" finds every Fatima church and "denver" every church in Denver;
+  // each word may stand for others ("abq", "st", "mt"), and a short last word may be a state ("santa fe nm")
+  const { keys, lines } = searchIdx;
+  const city = CITY_ALIAS[toks.join(' ')];
+  const alts = city ? [city] : toks.map(t => [t, ...(CITY_ALIAS[t] || []), ...(WORD_ALIAS[t] || [])]);
+  const last = toks[toks.length - 1], region = !city && toks.length > 1 && /^[a-z]{2,3}$/.test(last) ? '\t' + last + ' ' : '';
+  const find = (alts) => {
+    const out = [];
+    for (let i = 0; i < keys.length; i++) {
+      const k = keys[i]; let ok = true;
+      for (const a of alts) if (!a.some(x => k.indexOf(x) >= 0)) { ok = false; break; }
+      if (ok && state.enabled.has(state.typ[i] & 7)) out.push(i);
+    }
+    return out;
+  };
+  let hits = region ? find([...alts.slice(0, -1), [region]]) : [];
+  const inRegion = hits.length > 0;
+  if (!inRegion) hits = find(region ? [...alts.slice(0, -1), [...alts[alts.length - 1], region]] : alts);
+  const townQ = new Set(city || [(inRegion ? toks.slice(0, -1) : toks).join(' ')]);
   // nearest to you first: the first search asks where you are, and until then (or if you say no)
   // the middle of the globe's view stands in
   if (!here && !searchAskedWhere) { searchAskedWhere = true; hereOrCenter().then(() => { if (here && !resEl.hidden && qEl.value.trim()) runSearch(); }); }
@@ -3204,10 +3217,15 @@ async function runSearch() {
   hits.sort((a, b) => sc.get(a) - sc.get(b));
   const top = hits.slice(0, 30);
   activeRes = -1;
-  if (!top.length) { resEl.innerHTML = `<div class="note">${esc(tr('noMatch', { q: qEl.value.trim() }))}</div>`; return; }
+  if (!top.length) {
+    // not a church or a town we know by name: maybe a place the map service knows (a postal code, a district)
+    searchLists = null;
+    resEl.innerHTML = `<button role="option" class="all" data-geo="1" id="rg">${icon.map.replace('<svg', '<svg style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2"')}<div><span class="nm">${esc(tr('churchesNearQ', { q: qEl.value.trim() }))}</span></div></button><div class="note">${esc(tr('noMatch', { q: qEl.value.trim() }))}</div>`;
+    return;
+  }
   // the town everyone means: the most common town among the matches whose name is exactly what was typed
   const towns = new Map();
-  for (const i of hits) { const town = lines[i].split('\t')[1]; if (town && fold(town) === q) towns.set(town, (towns.get(town) || 0) + 1); }
+  for (const i of hits) { const town = lines[i].split('\t')[1]; if (town && townQ.has(fold(town))) towns.set(town, (towns.get(town) || 0) + 1); }
   const town = [...towns].sort((a, b) => b[1] - a[1])[0];
   const inTown = town ? hits.filter(i => lines[i].split('\t')[1] === town[0]) : [];
   const listIcon = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2;stroke-linecap:round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg>';
@@ -3221,14 +3239,36 @@ async function runSearch() {
   }).join('');
 }
 let searchLists = null, searchAskedWhere = false;
-resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-all],button[data-b],button[data-l],button[data-jp],button[data-je]'); if (!b) return; pickResult(b); });
+// what people type for a city: a whole search that is one of these means that city (English and local names)
+const CITY_ALIAS = Object.fromEntries(Object.entries({
+  abq: 'albuquerque', nyc: 'new york|brooklyn|bronx|queens|staten island', la: 'los angeles', sf: 'san francisco', dc: 'washington',
+  philly: 'philadelphia', nola: 'new orleans', kc: 'kansas city', slc: 'salt lake city', okc: 'oklahoma city', stl: 'st. louis|saint louis|st louis',
+  vegas: 'las vegas', pdx: 'portland', phx: 'phoenix',
+  'san fran': 'san francisco', 'st pete': 'st. petersburg|saint petersburg|st petersburg', cdmx: 'ciudad de mexico|mexico city|mexico, d.f.',
+  gdl: 'guadalajara', mty: 'monterrey', ba: 'buenos aires', bsas: 'buenos aires', sampa: 'sao paulo', bh: 'belo horizonte',
+  poa: 'porto alegre', ldn: 'london', hk: 'hong kong', kl: 'kuala lumpur', jhb: 'johannesburg', joburg: 'johannesburg',
+  cpt: 'cape town', syd: 'sydney', akl: 'auckland', mtl: 'montreal', yvr: 'vancouver', yyc: 'calgary', yeg: 'edmonton', tdot: 'toronto', mnl: 'manila',
+}).map(([k, v]) => [k, v.split('|').map(fold)]));
+// words written short or long in church names
+const WORD_ALIAS = Object.fromEntries(Object.entries({
+  st: 'saint|st.', saint: 'st.|st |sankt|san |santa |santo |sao |são |saint', ste: 'sainte|ste.', sts: 'saints|sts.|ss.', ss: 'saints|sts.|ss.',
+  saints: 'sts.|ss.', mt: 'mount|mt.', mount: 'mt.|mt ', ft: 'fort|ft.', fort: 'ft.|ft ', olg: 'our lady of guadalupe', ol: 'our lady',
+  olph: 'our lady of perpetual help', bvm: 'blessed virgin mary', bl: 'blessed', imm: 'immaculate', hs: 'holy spirit', sh: 'sacred heart',
+  nsra: 'nuestra senora', sra: 'senora', n: 'nuestra', ntra: 'nuestra', nossa: 'n. sra|nossa', sr: 'senhor|senor', s: 'san |santa |santo |sao |saint|st.',
+}).map(([k, v]) => [k, v.split('|').map(fold)]));
+resEl.addEventListener('click', (e) => { const b = e.target.closest('button[data-i],button[data-all],button[data-geo],button[data-b],button[data-l],button[data-jp],button[data-je]'); if (!b) return; pickResult(b); });
 function pickResult(b) {
   resEl.hidden = true; qEl.blur(); track('search');
+  if (b.dataset.geo) {
+    const q = qEl.value.trim();
+    findPlace(q).then(p => { if (p) listArea({ name: p.name, center: p.at, pop: 1e6 }); else toast(tr('placeNotFound', { q })); });
+    return;
+  }
   if (b.dataset.all && searchLists) { const l = searchLists[b.dataset.all]; if (l) listArea(b.dataset.all === 'town' ? { name: l.name, ids: l.ids } : { q: l.q, ids: l.ids }); return; }
   if (b.dataset.jp) openLifePlace(b.dataset.jp); else if (b.dataset.je) { lifePause(); goEvent(+b.dataset.je); } else if (b.dataset.b) openBiblePlace(b.dataset.b); else if (b.dataset.l) openBibleLand(b.dataset.l); else selectChurch(+b.dataset.i, { fly: true });
 }
 qEl.addEventListener('keydown', (e) => {
-  const opts = [...resEl.querySelectorAll('button[data-i],button[data-all],button[data-b],button[data-l],button[data-jp],button[data-je]')]; if (!opts.length) return;
+  const opts = [...resEl.querySelectorAll('button[data-i],button[data-all],button[data-geo],button[data-b],button[data-l],button[data-jp],button[data-je]')]; if (!opts.length) return;
   if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); activeRes = (activeRes + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length; opts.forEach((o, k) => o.setAttribute('aria-selected', k === activeRes)); opts[activeRes].scrollIntoView({ block: 'nearest' }); }
   else if (e.key === 'Enter') { e.preventDefault(); pickResult(opts[Math.max(activeRes, 0)]); }
 });

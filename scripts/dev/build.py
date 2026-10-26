@@ -4,7 +4,7 @@
 
 SOURCE_DIR is a checkout of the branch being tested (default: this checkout) and OUT_DIR is
 the dev/ folder of the live branch (default: ./dev). The test page, its app/ scripts and its
-i18n/ dictionaries come from SOURCE_DIR; the big data files (data/, base/, photos/, fonts/)
+i18n/ dictionaries, and the search index (data/meta.json, data/search-*.txt) come from SOURCE_DIR; the other big data files (data/, base/, photos/, fonts/)
 are the live site's own, shared through <base href="../">. The copy is kept out of search
 engines and never installs the offline service worker, so it can't disturb the live site.
 """
@@ -26,6 +26,8 @@ html = sub(r'<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="../">
 html = sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex, nofollow">', html, 1)
 html = sub(r'(href|src)="app/', r'\1="dev/app/', html)
 html = sub(r"'i18n/' \+ code", "'dev/i18n/' + code", html)
+html = sub(r"getJSON\('data/meta\.json'\)", "getJSON('dev/data/meta.json')", html, 1)
+html = sub(r"BASE \+ 'data/search-'", "BASE + 'dev/data/search-'", html, 1)
 html = sub(r"if \('serviceWorker' in navigator", "if (false && 'serviceWorker' in navigator", html, 1)
 html = html.replace('href="./" id="homeLink"', 'href="dev/" id="homeLink"')
 stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
@@ -40,4 +42,7 @@ out.mkdir(parents=True)
 (out / 'index.html').write_text(html, encoding='utf-8')
 shutil.copytree(src / 'app', out / 'app')
 shutil.copytree(src / 'i18n', out / 'i18n')
+(out / 'data').mkdir()
+for f in [src / 'data' / 'meta.json', *sorted((src / 'data').glob('search-*.txt'))]:
+    shutil.copy(f, out / 'data' / f.name)
 print(f'built {out} from {src} ({stamp})')
