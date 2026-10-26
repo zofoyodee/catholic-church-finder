@@ -501,6 +501,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .share-menu a:hover, .share-menu button:hover { background: rgba(232, 184, 74, 0.12); }
 .btn { height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 13px; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; }
 .btn:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+a.btn { text-decoration: none; }
 .btn.primary { background: var(--gold); color: #1a1406; border-color: var(--gold); font-weight: 600; }
 
 /* about dialog */
@@ -2898,6 +2899,8 @@ async function selectChurch(i, { fly = true } = {}) {
           <button role="menuitem" id="shareCopy">${esc(tr('copyLink'))}</button>
           <button role="menuitem" id="shareMore" hidden>${esc(tr('moreOptions'))}</button>
         </span></span>
+      <a class="btn" id="svLink"${GMAPS_KEY ? ' hidden' : ''} href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span>${esc(tr('streetView'))}</span></a>
+      <a class="btn" id="phLink" hidden href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span>${esc(tr('photosLink'))}</span></a>
       <button class="btn" id="flyBtn">${esc(tr('flyHere'))}</button>
     </div>
     <dl class="facts">
@@ -2909,15 +2912,6 @@ async function selectChurch(i, { fly = true } = {}) {
     </dl>
     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
     <div id="cAbout"></div>
-    <div class="sect">
-      <h3>${esc(tr('mediaTitle'))}</h3>
-      <div class="media">
-        <a id="phLink" hidden href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span><b>${esc(tr('photosLink'))}</b><small>Wikimedia Commons</small></span></a>
-        <a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">${icon.video}<span><b>${esc(tr('videos'))}</b><small>YouTube</small></span></a>
-        <a id="svLink"${GMAPS_KEY ? ' hidden' : ''} href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span><b>${esc(tr('streetView'))}</b><small>Google Maps</small></span></a>
-        <a href="${wikiUrl ? esc(wikiUrl) : `https://${i18n.wiki}.wikipedia.org/w/index.php?search=${qShort}`}" target="_blank" rel="noopener">${icon.book}<span><b>${esc(tr('history'))}</b><small>Wikipedia</small></span></a>
-      </div>
-    </div>
     <div class="prov">
       ${conf < 0.55 ? `<span class="pill warn" title="${esc(tr('unverifiedTip'))}">${esc(tr('unverified'))}</span>` : ''}${how === 'name' ? `<span class="pill warn">${esc(tr('byName'))}</span>` : `<span class="pill">${esc(tr('listed'))}</span>`}
       <div style="margin-top:8px">${esc(tr(updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: /^\d{4}-\d\d-\d\d$/.test(updated) ? new Date(updated + 'T12:00:00').toLocaleDateString(i18n.locale, { dateStyle: 'medium' }) : updated }))}</div>
