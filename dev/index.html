@@ -689,7 +689,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/mobile.css">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 15:39 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-26 15:46 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -3017,7 +3017,6 @@ async function selectChurch(i, { fly = true } = {}) {
         </span></span>
       <a class="btn" id="svLink"${GMAPS_KEY ? ' hidden' : ''} href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lt.toFixed(6)},${lng.toFixed(6)}" target="_blank" rel="noopener">${icon.map}<span>${esc(tr('streetView'))}</span></a>
       <a class="btn" id="phLink" hidden href="https://commons.wikimedia.org/w/index.php?search=${qShort}&title=Special:MediaSearch&type=image" target="_blank" rel="noopener">${icon.photo}<span>${esc(tr('photosLink'))}</span></a>
-      <button class="btn" id="flyBtn">${esc(tr('flyHere'))}</button>
     </div>
     <dl class="facts">
       ${addr.length ? `<dt>${esc(tr('address'))}</dt><dd class="addr">${addr.map(esc).join('<br>')}<button class="mini" id="copyAddr" title="${esc(tr('copyAddrTip'))}">${esc(tr('copy'))}</button></dd>` : ''}
@@ -3045,7 +3044,6 @@ async function selectChurch(i, { fly = true } = {}) {
   checkStreetView(i, lt, lng);
   checkPhotosLink(i, rec, name, town, lt, lng);
   try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
-  $('flyBtn').addEventListener('click', () => map.flyTo({ center: [lng, lt], zoom: 16.5, pitch: 50, bearing: map.getBearing() + 40, duration: 2200, padding: cardPad(wide) }));
 }
 function closeCard() {
   $('cardBack').hidden = true;
