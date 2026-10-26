@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://churchglobe.com/sitemap.xml
