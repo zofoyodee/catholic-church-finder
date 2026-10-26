@@ -483,9 +483,5 @@
   "mon12": "Desember",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Cari Gereja",
-  "mMine": "Gereja Saya",
-  "mExplore": "Jelajahi",
-  "mSettings": "Pengaturan"
+  "fmtMonthYear": "{month} {y}"
 }

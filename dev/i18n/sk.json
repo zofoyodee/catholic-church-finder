@@ -520,9 +520,5 @@
   "mon12": "december",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Nájsť kostol",
-  "mMine": "Moje kostoly",
-  "mExplore": "Objavovať",
-  "mSettings": "Nastavenia"
+  "fmtMonthYear": "{month} {y}"
 }

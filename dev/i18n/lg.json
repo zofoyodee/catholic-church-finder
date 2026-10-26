@@ -491,9 +491,5 @@
   "mon12": "Desemba",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Noonya Ekkanisa",
-  "mMine": "Ekkanisa Zange",
-  "mExplore": "Noonyereza",
-  "mSettings": "Ebiteekateekebwa"
+  "fmtMonthYear": "{month} {y}"
 }

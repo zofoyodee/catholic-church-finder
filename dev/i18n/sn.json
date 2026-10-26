@@ -491,9 +491,5 @@
   "mon12": "Zvita",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Tsvaga Chechi",
-  "mMine": "Machechi Angu",
-  "mExplore": "Ongorora",
-  "mSettings": "Zvirongwa"
+  "fmtMonthYear": "{month} {y}"
 }

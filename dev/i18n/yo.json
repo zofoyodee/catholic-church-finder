@@ -491,9 +491,5 @@
   "mon12": "Ọ̀pẹ̀",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Wá Ilé Ìjọsìn",
-  "mMine": "Àwọn Ilé Ìjọsìn Mi",
-  "mExplore": "Ṣàwárí",
-  "mSettings": "Ètò"
+  "fmtMonthYear": "{month} {y}"
 }

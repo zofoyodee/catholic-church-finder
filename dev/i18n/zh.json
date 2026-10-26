@@ -481,9 +481,5 @@
   "mon12": "十二月",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "查找教堂",
-  "mMine": "我的教堂",
-  "mExplore": "探索",
-  "mSettings": "设置"
+  "fmtMonthYear": "{month} {y}"
 }

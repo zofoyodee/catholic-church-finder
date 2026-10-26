@@ -491,9 +491,5 @@
   "mon12": "Desambra",
   "fmtWeekdayDate": "{weekday} {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Hitady Fiangonana",
-  "mMine": "Ireo Fiangonako",
-  "mExplore": "Hikaroka",
-  "mSettings": "Fandrindrana"
+  "fmtMonthYear": "{month} {y}"
 }

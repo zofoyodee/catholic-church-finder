@@ -491,9 +491,5 @@
   "mon12": "Qhapaq raymi",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Iglesiata maskay",
-  "mMine": "Iglesiaykuna",
-  "mExplore": "Maskarikuy",
-  "mSettings": "Churanakuna"
+  "fmtMonthYear": "{month} {y}"
 }

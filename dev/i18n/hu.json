@@ -499,9 +499,5 @@
   "mon12": "december",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Templomkereső",
-  "mMine": "Templomaim",
-  "mExplore": "Felfedezés",
-  "mSettings": "Beállítások"
+  "fmtMonthYear": "{month} {y}"
 }

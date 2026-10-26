@@ -497,9 +497,5 @@
   "mon12": "dhjetor",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Gjej një kishë",
-  "mMine": "Kishat e mia",
-  "mExplore": "Eksploro",
-  "mSettings": "Cilësimet"
+  "fmtMonthYear": "{month} {y}"
 }

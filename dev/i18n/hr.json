@@ -515,9 +515,5 @@
   "mon12": "prosinac",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Pronađi crkvu",
-  "mMine": "Moje crkve",
-  "mExplore": "Istraži",
-  "mSettings": "Postavke"
+  "fmtMonthYear": "{month} {y}"
 }

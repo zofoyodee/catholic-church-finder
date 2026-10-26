@@ -519,9 +519,5 @@
   "mon12": "prosinec",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Najít kostel",
-  "mMine": "Moje kostely",
-  "mExplore": "Objevovat",
-  "mSettings": "Nastavení"
+  "fmtMonthYear": "{month} {y}"
 }

@@ -507,9 +507,5 @@
   "mon12": "december",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Poišči cerkev",
-  "mMine": "Moje cerkve",
-  "mExplore": "Raziskuj",
-  "mSettings": "Nastavitve"
+  "fmtMonthYear": "{month} {y}"
 }

@@ -491,9 +491,5 @@
   "mon12": "desanm",
   "fmtWeekdayDate": "{weekday} {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Jwenn yon Legliz",
-  "mMine": "Legliz Mwen yo",
-  "mExplore": "Eksplore",
-  "mSettings": "Paramèt"
+  "fmtMonthYear": "{month} {y}"
 }

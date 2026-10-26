@@ -499,9 +499,5 @@
   "mon12": "Disyembre",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Maghanap ng Simbahan",
-  "mMine": "Aking mga Simbahan",
-  "mExplore": "Tuklasin",
-  "mSettings": "Mga Setting"
+  "fmtMonthYear": "{month} {y}"
 }

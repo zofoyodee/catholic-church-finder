@@ -502,9 +502,5 @@
   "mon12": "gruodis",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Rasti bažnyčią",
-  "mMine": "Mano bažnyčios",
-  "mExplore": "Naršyti",
-  "mSettings": "Nustatymai"
+  "fmtMonthYear": "{month} {y}"
 }

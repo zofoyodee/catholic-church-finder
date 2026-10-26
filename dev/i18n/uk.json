@@ -525,9 +525,5 @@
   "mon12": "грудень",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Знайти храм",
-  "mMine": "Мої храми",
-  "mExplore": "Досліджувати",
-  "mSettings": "Налаштування"
+  "fmtMonthYear": "{month} {y}"
 }

@@ -530,9 +530,5 @@
   "mon12": "ديسمبر",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "ابحث عن كنيسة",
-  "mMine": "كنائسي",
-  "mExplore": "استكشف",
-  "mSettings": "الإعدادات"
+  "fmtMonthYear": "{month} {y}"
 }

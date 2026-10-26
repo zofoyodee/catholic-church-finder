@@ -499,9 +499,5 @@
   "mon12": "ഡിസംബർ",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "ദേവാലയം കണ്ടെത്തുക",
-  "mMine": "എന്റെ ദേവാലയങ്ങൾ",
-  "mExplore": "പര്യവേക്ഷണം",
-  "mSettings": "ക്രമീകരണങ്ങൾ"
+  "fmtMonthYear": "{month} {y}"
 }

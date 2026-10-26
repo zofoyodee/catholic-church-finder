@@ -490,9 +490,5 @@
   "mon12": "दिसंबर",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "गिरजाघर खोजें",
-  "mMine": "मेरे गिरजाघर",
-  "mExplore": "खोजबीन करें",
-  "mSettings": "सेटिंग्स"
+  "fmtMonthYear": "{month} {y}"
 }

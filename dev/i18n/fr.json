@@ -499,9 +499,5 @@
   "mon12": "décembre",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Trouver une église",
-  "mMine": "Mes églises",
-  "mExplore": "Explorer",
-  "mSettings": "Réglages"
+  "fmtMonthYear": "{month} {y}"
 }

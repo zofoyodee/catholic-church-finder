@@ -491,9 +491,5 @@
   "mon12": "Ukuboza",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Shaka Kiliziya",
-  "mMine": "Kiliziya Zanjye",
-  "mExplore": "Gushakisha",
-  "mSettings": "Igenamiterere"
+  "fmtMonthYear": "{month} {y}"
 }

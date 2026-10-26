@@ -491,9 +491,5 @@
   "mon12": "Ndithemba",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Caria Kanitha",
-  "mMine": "Makanitha Makwa",
-  "mExplore": "Thuthuria",
-  "mSettings": "Mũbango"
+  "fmtMonthYear": "{month} {y}"
 }

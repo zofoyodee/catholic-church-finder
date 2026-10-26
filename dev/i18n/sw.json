@@ -499,9 +499,5 @@
   "mon12": "Desemba",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}",
-  "mFind": "Tafuta Kanisa",
-  "mMine": "Makanisa Yangu",
-  "mExplore": "Gundua",
-  "mSettings": "Mipangilio"
+  "fmtMonthYear": "{month} {y}"
 }
