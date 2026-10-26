@@ -2702,7 +2702,15 @@ async function renderNear() {
   }).join('');
 }
 $('nearBtn').addEventListener('click', () => { if ($('near').hidden) findNear(); else showNear(false); });
-$('nearClose').addEventListener('click', () => { showNear(false); if (mn.kind === 3) { endMassNear(); applyMassFilter(); } });  // closing a city list brings every church back
+// a list (Church Near Me, a town, a search, List Here) narrows the map only while it is around: once it is
+// closed, dismissed with its church, or its search is cleared, every church comes back. Mass in a language
+// stays, since the menu shows it as a chosen filter.
+function endList() {
+  if (mn.kind === 3 && fromSearch() && qEl.value.trim()) return;  // the words in the search box still say what to show
+  if (mn.kind === 0 || mn.kind === 1 || mn.kind === 3) { endMassNear(); applyMassFilter(); }
+}
+const fromSearch = () => !!(mn.areaArgs && mn.areaArgs.ids);
+$('nearClose').addEventListener('click', () => { showNear(false); endList(); });
 $('nearList').addEventListener('click', (e) => {
   const go = e.target.closest('button.go'); if (!go) return;
   if (innerWidth <= 640) { showNear(false); cardFrom = 'near'; }  // the card covers the list on phones: offer a way back
@@ -3055,9 +3063,9 @@ function closeCard() {
   try { history.replaceState(null, '', location.pathname); } catch (e) {}
   if (map.getSource('sel')) map.getSource('sel').setData({ type: 'FeatureCollection', features: [] });
 }
-$('cardClose').addEventListener('click', closeCard);
+$('cardClose').addEventListener('click', () => { closeCard(); if ($('near').hidden) endList(); });
 $('cardBack').addEventListener('click', () => { const to = $('cardBack').dataset.to; closeCard(); if (to === 'favs') showFavs(true); else showNear(true); });
-addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (!$('about').hidden) $('about').hidden = true; else if (!$('favs').hidden) showFavs(false); else if (!$('near').hidden) showNear(false); else if (!$('results').hidden) $('results').hidden = true; else closeCard(); } });
+addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (!$('about').hidden) $('about').hidden = true; else if (!$('favs').hidden) showFavs(false); else if (!$('near').hidden) { showNear(false); endList(); } else if (!$('results').hidden) $('results').hidden = true; else closeCard(); } });
 
 // gently pulse the selection ring
 let t0 = performance.now();
@@ -3103,6 +3111,13 @@ $('chips').addEventListener('click', (e) => {
   map.getSource('churches').setData(buildGeoJSON());
   map.getSource('notable').setData(notableGeoJSON());
   // an open Near Me, language or city list is redrawn for the new filter instead of going stale
+  // with words in the search box, the kinds chosen are shown within that search (cathedrals in NM)
+  const q = qEl.value.trim();
+  if (state.mode === 'churches' && q.length >= 2 && searchIdx && (mn.kind < 0 || (mn.kind === 3 && fromSearch()))) {
+    const { hits } = searchMatch(fold(q), q), town = mn.kind === 3 && mn.areaArgs.name;
+    const ids = town ? hits.filter(i => searchIdx.lines[i].split('\t')[1] === town) : hits;
+    if (ids.length || mn.kind === 3) { listArea(town ? { name: town, ids } : { q, ids }); return; }
+  }
   if (mn.kind === 3 && mn.areaArgs) { listArea(mn.areaArgs); return; }
   if (mn.kind >= 0) { massNear(mn.kind); return; }
   updateTagline();
@@ -3184,21 +3199,22 @@ const qEl = $('q'), resEl = $('results');
 let activeRes = -1;
 qEl.addEventListener('focus', () => { loadSearch().catch(() => {}); if (qEl.value.trim()) runSearch(); });
 let qTimer = 0;
-qEl.addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(runSearch, 120); });
-async function runSearch() {
-  const q = fold(qEl.value.trim());
-  if (q.length < 2) { resEl.hidden = true; return; }
-  if (state.mode === 'bible') { resEl.hidden = false; bibleSearch(q); return; }
-  if (state.mode === 'jesus') { resEl.hidden = false; lifeSearch(q); return; }
-  resEl.hidden = false;
-  if (!searchIdx) { resEl.innerHTML = `<div class="note">${LOADER(tr('indexLoading'), 'inline')}</div>`; try { await loadSearch(); } catch (e) { resEl.innerHTML = `<div class="note">${esc(tr('indexFailed'))}</div>`; return; } }
+qEl.addEventListener('input', () => {
+  clearTimeout(qTimer); qTimer = setTimeout(runSearch, 120);
+  // an emptied search box lets go of the list it made
+  if (!qEl.value.trim() && mn.kind === 3 && mn.areaArgs && mn.areaArgs.ids) { showNear(false); endList(); }
+});
+// the churches a search means, for the kinds of church now shown
+function searchMatch(q, raw = q) {
   const toks = q.replace(/[.,]/g, ' ').split(/\s+/).filter(Boolean);
   // any part of a name or town matches, so "fatima" finds every Fatima church and "denver" every church in Denver;
   // each word may stand for others ("abq", "st", "mt"), and a short last word may be a state ("santa fe nm")
-  const { keys, lines } = searchIdx;
+  const { keys } = searchIdx;
   const city = CITY_ALIAS[toks.join(' ')];
   const alts = city ? [city] : toks.map(t => [t, ...(CITY_ALIAS[t] || []), ...(WORD_ALIAS[t] || [])]);
-  const last = toks[toks.length - 1], region = !city && toks.length > 1 && /^[a-z]{2,3}$/.test(last) ? '\t' + last + ' ' : '';
+  // a state on its own: two letters ("nm"), or three in capitals ("NSW")
+  const last = toks[toks.length - 1], alone = toks.length === 1 && (/^[a-z]{2}$/.test(last) || /^[A-Z]{3}$/.test(raw.trim()));
+  const region = !city && (toks.length > 1 || alone) && /^[a-z]{2,3}$/.test(last) ? '\t' + last + ' ' : '';
   const find = (alts) => {
     const out = [];
     for (let i = 0; i < keys.length; i++) {
@@ -3212,6 +3228,17 @@ async function runSearch() {
   const inRegion = hits.length > 0;
   if (!inRegion) hits = find(region ? [...alts.slice(0, -1), [...alts[alts.length - 1], region]] : alts);
   const townQ = new Set(city || [(inRegion ? toks.slice(0, -1) : toks).join(' ')]);
+  return { hits, townQ };
+}
+async function runSearch() {
+  const q = fold(qEl.value.trim());
+  if (q.length < 2) { resEl.hidden = true; return; }
+  if (state.mode === 'bible') { resEl.hidden = false; bibleSearch(q); return; }
+  if (state.mode === 'jesus') { resEl.hidden = false; lifeSearch(q); return; }
+  resEl.hidden = false;
+  if (!searchIdx) { resEl.innerHTML = `<div class="note">${LOADER(tr('indexLoading'), 'inline')}</div>`; try { await loadSearch(); } catch (e) { resEl.innerHTML = `<div class="note">${esc(tr('indexFailed'))}</div>`; return; } }
+  const { lines } = searchIdx;
+  const { hits, townQ } = searchMatch(q, qEl.value);
   // nearest to you first: the first search asks where you are, and until then (or if you say no)
   // the middle of the globe's view stands in
   if (!here && !searchAskedWhere) { searchAskedWhere = true; hereOrCenter().then(() => { if (here && !resEl.hidden && qEl.value.trim()) runSearch(); }); }
