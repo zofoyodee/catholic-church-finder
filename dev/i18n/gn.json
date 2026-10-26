@@ -491,5 +491,9 @@
   "mon12": "Jasypakõi",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Eheka Tupao",
+  "mMine": "Che Tupaokuéra",
+  "mExplore": "Ejeporeka",
+  "mSettings": "Ñemboheko"
 }

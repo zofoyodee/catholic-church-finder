@@ -491,5 +491,9 @@
   "mon12": "Disembala",
   "fmtWeekdayDate": "{weekday}, {d} {month}",
   "fmtDate": "{d} {month} {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Pezani Tchalitchi",
+  "mMine": "Matchalitchi Anga",
+  "mExplore": "Fufuzani",
+  "mSettings": "Zokonda"
 }

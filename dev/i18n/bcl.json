@@ -491,5 +491,9 @@
   "mon12": "Disyembre",
   "fmtWeekdayDate": "{weekday}, {month} {d}",
   "fmtDate": "{month} {d}, {y}",
-  "fmtMonthYear": "{month} {y}"
+  "fmtMonthYear": "{month} {y}",
+  "mFind": "Maghanap nin Simbahan",
+  "mMine": "Mga Simbahan Ko",
+  "mExplore": "Mag-usisa",
+  "mSettings": "Mga Setting"
 }
