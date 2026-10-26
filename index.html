@@ -3461,6 +3461,7 @@ $('langSel').addEventListener('change', async (e) => {
   await useLang(code);
   if (!state.meta) return;
   searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
+  if (life.data) { localizeLife(life.data); map.getSource('j-places').setData(lifeGeo().places); delete $('cardBody').dataset.jplace; }  // forget the open place so its heading is redrawn too
   if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } if (!$('card').hidden && bible.sel) { if (bible.sel.land) openBibleLand(bible.sel.land, { fly: false }); else openBiblePlace(bible.sel.id, { fly: false }); } }
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && $('cardBody').dataset.rosary) openRosary(); else if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
@@ -3644,7 +3645,9 @@ const BOOKS = ['Song of Songs', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1
   'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', 'Titus', 'Philemon', 'Hebrews', 'James', 'Jude', 'Revelation'];
 const REF = new RegExp(`\\b(${BOOKS.join('|')}) (\\d+)((?::[\\d,\\-]+)?(?: ?- ?\\d+(?::\\d+)?)?)`, 'g');
 const bookSlug = (b) => b === 'Psalm' ? 'psalms' : b.toLowerCase().replace(/\s+/g, '');
-const withRefs = (text) => esc(text).replace(REF, (m, book, ch) => `<a class="ref" href="https://bible.usccb.org/bible/${bookSlug(book)}/${ch}" target="_blank" rel="noopener" title="${esc(tr('bReadRef', { ref: book + ' ' + ch }))}">${m}</a>`);
+// translated text keeps the English book name so the reference is found; the link shows the book in the reader's language
+const bookName = (b) => td('book:' + b).replace(/^book:/, '');
+const withRefs = (text) => esc(text).replace(REF, (m, book, ch) => `<a class="ref" href="https://bible.usccb.org/bible/${bookSlug(book)}/${ch}" target="_blank" rel="noopener" title="${esc(tr('bReadRef', { ref: bookName(book) + ' ' + ch }))}">${bookName(book)}${m.slice(book.length)}</a>`);
 
 /* card hero: a drawn desert dusk with the ancient name, then the live photo if one turns up */
 function bibleScene(title, sub) {
@@ -3798,8 +3801,17 @@ const ROSARY_ICON = '<svg class="rosary" viewBox="0 0 24 24" aria-hidden="true">
 const roColor = (e) => life.data.roColor[e.ro[0]];
 const roLabel = (e) => tr('jMysteryOf', { set: tr('jRo_' + e.ro[0]), k: fmt(e.ro[1]) });
 const roTag = (e) => e.ro ? `<span class="ro-tag" style="--rc:${roColor(e)}" title="${esc(tr('jRosary'))}: ${esc(e.ro[2])}">${ROSARY_ICON}${esc(roLabel(e))}</span>` : '';
+// the moments, places and Rosary are written in English; td() puts them in the reader's language, keeping the English to switch back
+function localizeLife(d) {
+  const keep = (x, keys) => { x.en = x.en || Object.fromEntries(keys.map(k => [k, x[k]])); for (const k of keys) if (x.en[k]) x[k] = td(x.en[k]); };
+  d.places.forEach(p => keep(p, ['n', 'm', 's']));
+  d.events.forEach(e => { keep(e, ['t', 's', 'u']); if (e.ro) { e.roEn = e.roEn || e.ro.slice(); e.ro = e.roEn.map((v, i) => i >= 2 ? td(v) : v); } });
+  d.rosary.sets.forEach(r => keep(r, ['days']));
+  d.rosary.aboutEn = d.rosary.aboutEn || d.rosary.about.slice(); d.rosary.about = d.rosary.aboutEn.map(td);
+}
 function loadLife() {
   if (!life.loading) life.loading = getJSON('data/jesus.json?v=rosary').then(d => {
+    localizeLife(d);
     d.byId = Object.fromEntries(d.places.map(p => [p.id, p]));
     d.color = Object.fromEntries(d.eras.map(e => [e.k, e.color]));
     d.events.forEach((e, i) => { e.i = i; });
@@ -3819,6 +3831,8 @@ const lifeColor = (e) => life.era === 'rosary' ? roColor(e) : life.data.color[e.
 // close enough to tell the towns apart, far enough to keep the neighbouring moments in view
 const lifeZoom = (p) => Math.min(p.z - 2, 9.5);
 const lifeLL = (p) => [p.ll[1], p.ll[0]];
+// the globe can't draw every script: a name it would lose letters from is shown in English
+const lifeLabel = (p) => { const n = drawable(p.n); return n.length >= [...p.n].length * 0.8 || !p.en ? n : drawable(p.en.n); };
 function lifeGeo() {
   const d = life.data, evs = lifeEvents(), first = new Map(), route = [];
   for (const e of evs) if (!first.has(e.p)) first.set(e.p, e);
@@ -3827,7 +3841,7 @@ function lifeGeo() {
     if (a !== b) route.push({ type: 'Feature', geometry: { type: 'LineString', coordinates: [lifeLL(a), lifeLL(b)] }, properties: { i: evs[j].i, color: lifeColor(evs[j]) } });
   }
   return {
-    places: { type: 'FeatureCollection', features: [...first].map(([id, e]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(d.byId[id]) }, properties: { id, name: drawable(d.byId[id].n), color: lifeColor(e), rank: JESUS_RANK.has(id) ? 0 : 1 } })) },
+    places: { type: 'FeatureCollection', features: [...first].map(([id, e]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(d.byId[id]) }, properties: { id, name: lifeLabel(d.byId[id]), color: lifeColor(e), rank: JESUS_RANK.has(id) ? 0 : 1 } })) },
     route: { type: 'FeatureCollection', features: route },
   };
 }
