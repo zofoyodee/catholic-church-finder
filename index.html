@@ -3589,7 +3589,7 @@ function loadBible() {
 const bibleVisible = () => bible.data.places.filter(p => bible.group === 'all' || p.g.includes(bible.group));
 function bibleFeatures() {
   return { type: 'FeatureCollection', features: bibleVisible().map(p => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [p.ll[1], p.ll[0]] },
-    properties: { id: p.id, name: drawable(p.n), color: BIBLE_COLORS[mainGroup(p)], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
+    properties: { id: p.id, name: drawable(p.n), color: BIBLE_COLORS[bible.group === 'all' ? mainGroup(p) : bible.group], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
 }
 function addBibleLayers(lands) {
   const d = bible.data;
