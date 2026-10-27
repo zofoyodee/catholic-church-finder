@@ -506,5 +506,6 @@
   "voiceSearch": "Cari dengan Suara",
   "listening": "Mendengarkan… sebutkan gereja atau kota",
   "micBlocked": "Mikrofon diblokir. Izinkan di pengaturan peramban untuk mencari dengan suara.",
-  "voiceFailed": "Pencarian suara sedang tidak berfungsi. Silakan ketik pencarian Anda."
+  "voiceFailed": "Pencarian suara sedang tidak berfungsi. Silakan ketik pencarian Anda.",
+  "clearSearch": "Hapus Pencarian"
 }

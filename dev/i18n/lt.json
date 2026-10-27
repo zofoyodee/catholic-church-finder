@@ -525,5 +525,6 @@
   "voiceSearch": "Paieška Balsu",
   "listening": "Klausausi… pasakykite bažnyčią ar vietovę",
   "micBlocked": "Mikrofonas užblokuotas. Leiskite jį naršyklės nustatymuose, kad galėtumėte ieškoti balsu.",
-  "voiceFailed": "Paieška balsu dabar neveikia. Įveskite, ko ieškote."
+  "voiceFailed": "Paieška balsu dabar neveikia. Įveskite, ko ieškote.",
+  "clearSearch": "Išvalyti Paiešką"
 }

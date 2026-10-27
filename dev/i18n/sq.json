@@ -520,5 +520,6 @@
   "voiceSearch": "Kërko me Zë",
   "listening": "Po dëgjoj… thuaj një kishë ose qytet",
   "micBlocked": "Mikrofoni është i bllokuar. Lejoje te cilësimet e shfletuesit për të kërkuar me zë.",
-  "voiceFailed": "Kërkimi me zë nuk punon tani. Ju lutemi shkruani atë që kërkoni."
+  "voiceFailed": "Kërkimi me zë nuk punon tani. Ju lutemi shkruani atë që kërkoni.",
+  "clearSearch": "Pastro Kërkimin"
 }

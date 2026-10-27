@@ -543,5 +543,6 @@
   "voiceSearch": "Hlasové Vyhľadávanie",
   "listening": "Počúvam… povedzte kostol alebo obec",
   "micBlocked": "Mikrofón je zablokovaný. Povoľte ho v nastaveniach prehliadača, aby ste mohli hľadať hlasom.",
-  "voiceFailed": "Hlasové vyhľadávanie teraz nefunguje. Napíšte, prosím, čo hľadáte."
+  "voiceFailed": "Hlasové vyhľadávanie teraz nefunguje. Napíšte, prosím, čo hľadáte.",
+  "clearSearch": "Vymazať Vyhľadávanie"
 }

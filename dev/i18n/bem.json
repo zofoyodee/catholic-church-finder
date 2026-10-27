@@ -514,5 +514,6 @@
   "voiceSearch": "Fwailisheni Ishiwi",
   "listening": "Ndekutika… lumbuleni icalici nangu umusumba",
   "micBlocked": "Maikolofoni naiikwa. Isuminisheni mu fyakupanga fya browser pa kufwaya ku ishiwi.",
-  "voiceFailed": "Ukufwaya ku ishiwi tafilebomba nomba. Mukwai lembeni ifyo mulefwaya."
+  "voiceFailed": "Ukufwaya ku ishiwi tafilebomba nomba. Mukwai lembeni ifyo mulefwaya.",
+  "clearSearch": "Fumyapo Ifyo Mulefwaya"
 }

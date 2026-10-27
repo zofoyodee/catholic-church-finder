@@ -239,28 +239,21 @@ button, input { font: inherit; color: inherit; }
 .results button { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: center; text-align: left; width: 100%; padding: 8px 10px; border: 0; background: transparent; border-radius: 9px; cursor: pointer; }
 .results button:hover, .results button[aria-selected="true"] { background: rgba(232, 184, 74, 0.12); }
 .search .results svg { position: static; }
-/* search by voice: a mic at the end of the bar (left of Whole Globe on phones); it glows while listening */
-.mic-btn { display: grid; place-items: center; position: absolute; z-index: 2; top: 5px; right: 5px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: transparent; cursor: pointer; padding: 0; }
-.mic-btn[hidden] { display: none; }
-.search .mic-btn svg { position: static; width: 20px; height: 20px; fill: none; stroke: var(--ink-soft); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.mic-btn:hover { background: rgba(232, 184, 74, 0.14); }
+/* the bar's end: an X to empty it, and the mic for search by voice (left of Whole Globe on phones) */
+.q-tools { position: absolute; z-index: 2; top: 5px; inset-inline-end: 5px; display: flex; gap: 2px; }
+.compact .q-tools { inset-inline-end: 41px; }
+.wide .q-tools { top: 6px; inset-inline-end: 7px; }
+.q-btn { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; border: 0; background: transparent; cursor: pointer; padding: 0; }
+.wide .q-btn { width: 38px; height: 38px; }
+.q-btn[hidden] { display: none; }
+.search .q-btn svg { position: static; width: 20px; height: 20px; fill: none; stroke: var(--ink-soft); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.wide .search .q-btn svg { stroke: var(--space); }
+@media (hover: hover) { .q-btn:hover { background: rgba(232, 184, 74, 0.14); } }
 .mic-btn.on { background: var(--gold); animation: micPulse 1.2s ease-in-out infinite; }
-.search .mic-btn.on svg { stroke: #1a1408; }
+.search .mic-btn.on svg, .wide .search .mic-btn.on svg { stroke: #1a1408; }
 @keyframes micPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(232, 184, 74, 0.55); } 50% { box-shadow: 0 0 0 7px rgba(232, 184, 74, 0); } }
 @media (prefers-reduced-motion: reduce) { .mic-btn.on { animation: none; } }
-.search:has(.mic-btn:not([hidden])) input { padding-right: 46px; }
-.compact .mic-btn { right: 41px; }
-.compact .search:has(.mic-btn:not([hidden])) input { padding-right: 82px; }
-[dir="rtl"] .mic-btn { right: auto; left: 5px; }
-[dir="rtl"].compact .mic-btn { left: 41px; }
-[dir="rtl"] .search:has(.mic-btn:not([hidden])) input { padding-right: 40px; padding-left: 46px; }
-[dir="rtl"].compact .search:has(.mic-btn:not([hidden])) input { padding-left: 82px; }
-.wide .mic-btn { top: 6px; right: 7px; width: 38px; height: 38px; }
-.wide .search .mic-btn svg { stroke: var(--space); }
-.wide .search .mic-btn.on svg { stroke: #1a1408; }
-.wide .search:has(.mic-btn:not([hidden])) input { padding-right: 52px; }
-[dir="rtl"].wide .mic-btn { right: auto; left: 7px; }
-[dir="rtl"].wide .search:has(.mic-btn:not([hidden])) input { padding: 0 46px 0 52px; }
+.search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }  /* our own X instead */
 .results button[data-loc] .loc { white-space: normal; }
 .results button.all .nm { color: var(--gold-soft); font-weight: 600; }
 .results button.all + button:not(.all) { margin-top: 4px; }
@@ -707,12 +700,12 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   .card .hero img.photo, .card .hero .vigil { transition: none; }
 }
 </style>
-<link rel="stylesheet" href="dev/app/engage.css?v=92">
-<link rel="stylesheet" href="dev/app/mobile.css?v=92">
-<link rel="stylesheet" href="dev/app/desktop.css?v=92">
+<link rel="stylesheet" href="dev/app/engage.css?v=96">
+<link rel="stylesheet" href="dev/app/mobile.css?v=96">
+<link rel="stylesheet" href="dev/app/desktop.css?v=96">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-27 00:19 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-27 03:45 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -730,7 +723,10 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
     <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków" aria-label="Search churches by name or town" aria-controls="results" data-i18n-attr="placeholder:searchPh;aria-label:searchLabel">
     <button id="globeBtn" class="globe-btn" type="button" title="Whole Globe" aria-label="Whole Globe" data-i18n-attr="title:wholeGlobe;aria-label:wholeGlobe"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
-    <button id="micBtn" class="mic-btn" type="button" hidden title="Search by Voice" aria-label="Search by Voice" aria-pressed="false" data-i18n-attr="title:voiceSearch;aria-label:voiceSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></button>
+    <div class="q-tools">
+      <button id="qClear" class="q-btn" type="button" hidden title="Clear Search" aria-label="Clear Search" data-i18n-attr="title:clearSearch;aria-label:clearSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button id="micBtn" class="q-btn mic-btn" type="button" hidden title="Search by Voice" aria-label="Search by Voice" aria-pressed="false" data-i18n-attr="title:voiceSearch;aria-label:voiceSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></button>
+    </div>
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
   <label class="langpick" title="Site Language" data-i18n-attr="title:siteLang"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><span class="lp-name" data-i18n="siteLang">Site Language</span><select id="langSel" aria-label="Site Language" data-i18n-attr="aria-label:siteLang"></select></label>
@@ -899,7 +895,7 @@ const EN = {
   searchPh: 'Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków', searchLabel: 'Search churches by name or town',
   chipsLabel: 'Show church types', nearMe: 'Churches near me', yourFavs: 'Your favorite churches', spin: 'Spin the Globe',
   zoomIn: 'Zoom in', zoomOut: 'Zoom out', home: 'Back to the whole globe', random: 'Visit a Random Church', menu: 'Menu', backList: 'List', backToList: 'Back to the list', navNear: 'Near Me', wholeGlobe: 'Whole Globe',
-  voiceSearch: 'Search by Voice', listening: 'Listening… say a church or town', micBlocked: 'The microphone is blocked. Allow it in your browser settings to search by voice.', voiceFailed: 'Voice search isn’t working right now. Please type your search.',
+  voiceSearch: 'Search by Voice', clearSearch: 'Clear Search', listening: 'Listening… say a church or town', micBlocked: 'The microphone is blocked. Allow it in your browser settings to search by voice.', voiceFailed: 'Voice search isn’t working right now. Please type your search.',
   aboutData: 'About the Data', footCredit: 'Places © Overture Maps Foundation · Basemap Natural Earth, streets © OpenStreetMap contributors via OpenFreeMap',
   nearYou: 'Near You', closeNear: 'Close nearby churches', favorites: 'Favorites', closeFavs: 'Close favorites',
   closeDetails: 'Close details', gallery: 'Photo gallery', prevPhoto: 'Previous photo', nextPhoto: 'Next photo', closeGallery: 'Close gallery',
@@ -3315,40 +3311,64 @@ qEl.addEventListener('input', () => {
   if (!qEl.value.trim() && mn.kind === 3 && mn.areaArgs && mn.areaArgs.ids) { showNear(false); endList(); }
   if (fold(qEl.value.trim()).length < 2 && scopeCache.q) refreshCounts();
 });
-// search by voice (phones only): the browser's own speech recognition, listening in the Site Language
+// the X that empties the search box, and the room the buttons at the bar's end need
+const qClear = $('qClear'), qTools = document.querySelector('.q-tools');
+function fitTools() {
+  qClear.hidden = !qEl.value;
+  const box = qEl.getBoundingClientRect(), t = qTools.getBoundingClientRect();
+  const room = t.width ? (i18n.rtl ? t.right - box.left : box.right - t.left) + 6 : 0;
+  qEl.style.paddingInlineEnd = room ? room + 'px' : '';
+}
+qEl.addEventListener('input', fitTools);
+new ResizeObserver(fitTools).observe(document.querySelector('.search'));
+qClear.addEventListener('click', () => {
+  qEl.value = ''; qEl.dispatchEvent(new Event('input')); resEl.hidden = true; qEl.focus();
+});
+// search by voice: the browser's own speech recognition, listening in the Site Language. It stops by itself
+// once you finish speaking (or after 8 seconds of quiet), and a second tap stops it at once.
 (() => {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition, btn = $('micBtn');
   if (!SR || !btn) return;
-  btn.hidden = false;
-  let rec = null, heard = '', tried = false;
-  const stop = () => { if (rec) rec.abort(); };
-  const done = () => { rec = null; btn.classList.remove('on'); btn.setAttribute('aria-pressed', 'false'); qEl.placeholder = tr('searchPh'); };
+  btn.hidden = false; fitTools();
+  let rec = null, heard = '', tried = false, quiet = 0;
+  function finish() {
+    if (!rec) return;
+    const r = rec; rec = null; clearTimeout(quiet);
+    r.onresult = r.onerror = r.onend = null;
+    try { r.abort(); } catch (e) {}
+    btn.classList.remove('on'); btn.setAttribute('aria-pressed', 'false'); qEl.placeholder = tr('searchPh');
+    qEl.value = heard; fitTools();
+    if (heard) { track('voice-search'); qEl.dispatchEvent(new Event('input')); clearTimeout(qTimer); loadSearch().catch(() => {}); runSearch(); }
+  }
+  const wait = (ms) => { clearTimeout(quiet); quiet = setTimeout(finish, ms); };
   function listen(lang) {
-    rec = new SR(); heard = '';
-    rec.lang = lang; rec.interimResults = true; rec.maxAlternatives = 1; rec.continuous = false;
-    rec.onresult = (e) => {
-      heard = [...e.results].map(r => r[0].transcript).join(' ').replace(/[.。!?¿¡]+$/u, '').trim();
-      qEl.value = heard;
+    const r = rec = new SR(); heard = '';
+    r.lang = lang; r.interimResults = true; r.maxAlternatives = 1; r.continuous = false;
+    r.onresult = (e) => {
+      heard = [...e.results].map(x => x[0].transcript).join(' ').replace(/[.。!?¿¡]+$/u, '').trim();
+      qEl.value = heard; fitTools();
+      if ([...e.results].every(x => x.isFinal)) finish(); else wait(2500);
     };
-    rec.onerror = (e) => {
+    r.onerror = (e) => {
       // a Site Language the phone can't hear (Latin, Bemba…) falls back to the phone's own language
-      if (e.error === 'language-not-supported' && !tried) { tried = true; rec.onend = null; done(); listen(navigator.language || 'en-US'); return; }
+      if (e.error === 'language-not-supported' && !tried) { tried = true; r.onend = null; rec = null; listen(navigator.language || 'en-US'); return; }
       if (e.error === 'not-allowed' || e.error === 'service-not-allowed') toast(tr('micBlocked'), 6000);
       else if (e.error !== 'no-speech' && e.error !== 'aborted') toast(tr('voiceFailed'), 4000);
+      finish();
     };
-    rec.onend = () => {
-      done();
-      if (heard) { track('voice-search'); qEl.dispatchEvent(new Event('input')); clearTimeout(qTimer); loadSearch().catch(() => {}); runSearch(); }
-    };
+    r.onend = finish;
     btn.classList.add('on'); btn.setAttribute('aria-pressed', 'true');
-    qEl.value = ''; qEl.placeholder = tr('listening'); resEl.hidden = true;
-    try { rec.start(); } catch (e) { done(); toast(tr('voiceFailed'), 4000); }
+    qEl.value = ''; qEl.placeholder = tr('listening'); resEl.hidden = true; fitTools();
+    wait(8000);
+    try { r.start(); } catch (e) { finish(); toast(tr('voiceFailed'), 4000); }
   }
   btn.addEventListener('click', () => {
-    if (rec) { stop(); return; }
+    if (rec) { finish(); return; }
     tried = false;
     listen(i18n.locale.replace(/-u-.*$/, ''));
   });
+  // leaving the page or switching apps stops listening too
+  document.addEventListener('visibilitychange', () => { if (document.hidden) finish(); });
 })();
 // the churches a search means, for the kinds of church now shown
 function searchMatch(q, raw = q, anyKind = false) {
@@ -3638,7 +3658,7 @@ async function setMode(m, { fly = true } = {}) {
   document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
   document.body.classList.toggle('jesus-mode', m === 'jesus');
   lifeStop(); $('life').hidden = m !== 'jesus' || !life.data;
-  closeCard(); showFavs(false); showNear(false); resEl.hidden = true; qEl.value = ''; tip.hidden = true; setHover(-1);
+  closeCard(); showFavs(false); showNear(false); resEl.hidden = true; qEl.value = ''; fitTools(); tip.hidden = true; setHover(-1);
   searchLabels();
   if (m === 'bible') {
     $('tagline').innerHTML = LOADER(tr('bLoading'), 'inline');
@@ -4344,8 +4364,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="dev/app/engage.js?v=92"></script>
-<script src="dev/app/mobile.js?v=92"></script>
+<script src="dev/app/engage.js?v=96"></script>
+<script src="dev/app/mobile.js?v=96"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script data-goatcounter="https://zofo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>

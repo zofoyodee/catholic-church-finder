@@ -530,5 +530,6 @@
   "voiceSearch": "Glasovno Iskanje",
   "listening": "Poslušam … povejte cerkev ali kraj",
   "micBlocked": "Mikrofon je blokiran. Dovolite ga v nastavitvah brskalnika, da boste lahko iskali z glasom.",
-  "voiceFailed": "Glasovno iskanje trenutno ne deluje. Prosimo, vpišite, kaj iščete."
+  "voiceFailed": "Glasovno iskanje trenutno ne deluje. Prosimo, vpišite, kaj iščete.",
+  "clearSearch": "Počisti Iskanje"
 }

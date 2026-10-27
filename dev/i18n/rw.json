@@ -514,5 +514,6 @@
   "voiceSearch": "Shakisha mu Ijwi",
   "listening": "Ndimo kumva… vuga kiliziya cyangwa umujyi",
   "micBlocked": "Mikoro yafunzwe. Yemere mu igenamiterere rya mushakisha kugira ngo ushakishe mu ijwi.",
-  "voiceFailed": "Gushakisha mu ijwi ntibikora ubu. Andika ibyo ushaka, ubishoboye."
+  "voiceFailed": "Gushakisha mu ijwi ntibikora ubu. Andika ibyo ushaka, ubishoboye.",
+  "clearSearch": "Siba Ibyo Ushakisha"
 }

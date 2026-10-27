@@ -514,5 +514,6 @@
   "voiceSearch": "Sakani ndi Mawu",
   "listening": "Ndikumvetsera… tchulani mpingo kapena tawuni",
   "micBlocked": "Maikolofoni yatsekedwa. Ilolezeni m’makonzedwe a msakatuli kuti musake ndi mawu.",
-  "voiceFailed": "Kusaka ndi mawu sikukugwira ntchito pano. Chonde lembani zomwe mukusaka."
+  "voiceFailed": "Kusaka ndi mawu sikukugwira ntchito pano. Chonde lembani zomwe mukusaka.",
+  "clearSearch": "Fufutani Zosaka"
 }
