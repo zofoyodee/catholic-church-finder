@@ -279,7 +279,8 @@ async function allHits(r) {
   const out = new Map();
   for (let page = 0; page < 5; page++) {
     let j;
-    try { j = await api('stats/hits', { ...r, limit: 100, exclude_paths: [...out.keys()] }); }
+    // GoatCounter reads exclude_paths as one comma-separated value; repeated, it only skipped one path
+    try { j = await api('stats/hits', { ...r, limit: 100, ...(out.size ? { exclude_paths: [...out.keys()].join(',') } : {}) }); }
     catch (e) { if (page) break; throw e; }  // a later page failing still leaves the first ones to show
     const before = out.size;
     for (const h of j.hits || []) if (!out.has(h.path_id)) out.set(h.path_id, h);
@@ -328,7 +329,7 @@ async function load() {
     console.error('GoatCounter', e.status || '', e.message, e.detail || '');
     const why = e.status ? ` (GoatCounter said: ${e.status}${e.detail ? ' ' + e.detail : ''})` : '';
     if (e.message === 'key') { store.set(KEY, ''); showSetup('That key was not accepted. Check that it has "Read statistics" ticked and that the site code is right.' + why); }
-    else if (e.message === 'blocked') showSetup('Your browser could not reach GoatCounter. An ad or tracker blocker (or Brave Shields, or Safari content blockers) often stops it: allow goatcounter.com on this page, or try another browser, then tap Show My Stats again. Your key is still saved.');
+    else if (e.message === 'blocked') showSetup('No answer came back from GoatCounter' + (e.detail ? ` (${e.detail})` : '') + '. Check your connection and tap Show My Stats again. If it keeps happening, an ad or tracker blocker (or Brave Shields, or Safari content blockers) may be stopping it: allow goatcounter.com on this page. Your key is still saved.');
     else if ($('dash').hidden) showSetup('GoatCounter could not send the stats' + why + '. Try again in a minute; your key is still saved.');
     else { $('dashErr').textContent = 'Could not refresh the stats. Try again in a minute.'; $('dashErr').hidden = false; }
   } finally { if (my === run) $('loading').hidden = true; }
