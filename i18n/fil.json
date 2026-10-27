@@ -522,5 +522,6 @@
   "voiceSearch": "Maghanap Gamit ang Boses",
   "listening": "Nakikinig… sabihin ang simbahan o bayan",
   "micBlocked": "Naka-block ang mikropono. Payagan ito sa settings ng browser para makapaghanap gamit ang boses.",
-  "voiceFailed": "Hindi gumagana ang paghahanap gamit ang boses ngayon. Paki-type na lang ang hinahanap mo."
+  "voiceFailed": "Hindi gumagana ang paghahanap gamit ang boses ngayon. Paki-type na lang ang hinahanap mo.",
+  "clearSearch": "Burahin ang Hinahanap"
 }

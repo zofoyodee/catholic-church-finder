@@ -512,5 +512,6 @@
   "voiceSearch": "Voce Quaere",
   "listening": "Audio… dic ecclesiam vel oppidum",
   "micBlocked": "Microphonum obstructum est. Id in optionibus navigatri permitte ut voce quaeras.",
-  "voiceFailed": "Quaestio voce nunc non procedit. Quaesumus, verba tua scribe."
+  "voiceFailed": "Quaestio voce nunc non procedit. Quaesumus, verba tua scribe.",
+  "clearSearch": "Quaestionem Dele"
 }

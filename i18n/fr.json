@@ -522,5 +522,6 @@
   "voiceSearch": "Recherche Vocale",
   "listening": "À l’écoute… dites une église ou une ville",
   "micBlocked": "Le micro est bloqué. Autorisez-le dans les réglages du navigateur pour chercher à la voix.",
-  "voiceFailed": "La recherche vocale ne fonctionne pas pour l’instant. Veuillez taper votre recherche."
+  "voiceFailed": "La recherche vocale ne fonctionne pas pour l’instant. Veuillez taper votre recherche.",
+  "clearSearch": "Effacer la Recherche"
 }

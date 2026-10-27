@@ -514,5 +514,6 @@
   "voiceSearch": "Hikaroka amin’ny Feo",
   "listening": "Mihaino… lazao ny fiangonana na tanàna",
   "micBlocked": "Voasakana ny mikrô. Avelao izy ao amin’ny fikirakirana ny navigateur mba hikarohana amin’ny feo.",
-  "voiceFailed": "Tsy mandeha amin’izao ny fikarohana amin’ny feo. Soraty azafady izay tadiavinao."
+  "voiceFailed": "Tsy mandeha amin’izao ny fikarohana amin’ny feo. Soraty azafady izay tadiavinao.",
+  "clearSearch": "Fafao ny Fikarohana"
 }

@@ -514,5 +514,6 @@
   "voiceSearch": "Maghanap Paagi sa Boses",
   "listening": "Nagdadangog… sabihon an simbahan o banwaan",
   "micBlocked": "Naka-block an mikropono. Tugotan ini sa settings kan browser tanganing makahanap paagi sa boses.",
-  "voiceFailed": "Dai naggagana ngonyan an paghanap paagi sa boses. Paki-type an saimong hinahanap."
+  "voiceFailed": "Dai naggagana ngonyan an paghanap paagi sa boses. Paki-type an saimong hinahanap.",
+  "clearSearch": "Paraon an Hinahanap"
 }

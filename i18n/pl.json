@@ -552,5 +552,6 @@
   "voiceSearch": "Szukaj Głosem",
   "listening": "Słucham… powiedz nazwę kościoła lub miejscowości",
   "micBlocked": "Mikrofon jest zablokowany. Zezwól na niego w ustawieniach przeglądarki, aby szukać głosem.",
-  "voiceFailed": "Wyszukiwanie głosowe teraz nie działa. Wpisz, czego szukasz."
+  "voiceFailed": "Wyszukiwanie głosowe teraz nie działa. Wpisz, czego szukasz.",
+  "clearSearch": "Wyczyść Wyszukiwanie"
 }

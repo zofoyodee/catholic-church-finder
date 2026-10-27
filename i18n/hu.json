@@ -522,5 +522,6 @@
   "voiceSearch": "Hangalapú Keresés",
   "listening": "Figyelek… mondj egy templomot vagy települést",
   "micBlocked": "A mikrofon le van tiltva. Engedélyezd a böngésző beállításaiban a hangalapú kereséshez.",
-  "voiceFailed": "A hangalapú keresés most nem működik. Kérjük, írd be, amit keresel."
+  "voiceFailed": "A hangalapú keresés most nem működik. Kérjük, írd be, amit keresel.",
+  "clearSearch": "Keresés Törlése"
 }

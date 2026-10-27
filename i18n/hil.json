@@ -514,5 +514,6 @@
   "voiceSearch": "Mangita Paagi sa Tingog",
   "listening": "Nagapamati… silinga ang simbahan ukon banwa",
   "micBlocked": "Naka-block ang mikropono. Tuguti ini sa settings sang browser agod makapangita paagi sa tingog.",
-  "voiceFailed": "Indi nagaandar subong ang pagpangita paagi sa tingog. Palihog i-type ang imo ginapangita."
+  "voiceFailed": "Indi nagaandar subong ang pagpangita paagi sa tingog. Palihog i-type ang imo ginapangita.",
+  "clearSearch": "Panason ang Ginapangita"
 }

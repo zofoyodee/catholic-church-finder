@@ -273,13 +273,18 @@ function tiles(total, stats, events) {
 
 /* ---------- loading ---------- */
 async function allHits(r) {
-  const out = [];
+  // more pages are asked for by leaving out the paths already seen; GoatCounter can send a path twice,
+  // so each one is kept once, and the asking stops before the address grows too long for the server
+  const out = new Map();
   for (let page = 0; page < 5; page++) {
-    const j = await api('stats/hits', { ...r, limit: 100, exclude_paths: out.map((h) => h.path_id) });
-    out.push(...(j.hits || []));
-    if (!j.more) break;
+    let j;
+    try { j = await api('stats/hits', { ...r, limit: 100, exclude_paths: [...out.keys()] }); }
+    catch (e) { if (page) break; throw e; }  // a later page failing still leaves the first ones to show
+    const before = out.size;
+    for (const h of j.hits || []) if (!out.has(h.path_id)) out.set(h.path_id, h);
+    if (!j.more || out.size === before || out.size >= 250) break;
   }
-  return out;
+  return [...out.values()];
 }
 const fromStats = (j, name = (s) => esc(s.name || 'Unknown')) => (j.stats || []).map((s) => ({ ...s, html: name(s) }));
 

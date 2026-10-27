@@ -522,5 +522,6 @@
   "voiceSearch": "Sprachsuche",
   "listening": "Ich höre zu … nenne eine Kirche oder einen Ort",
   "micBlocked": "Das Mikrofon ist blockiert. Erlaube es in den Browsereinstellungen, um per Sprache zu suchen.",
-  "voiceFailed": "Die Sprachsuche funktioniert gerade nicht. Bitte tippe deine Suche ein."
+  "voiceFailed": "Die Sprachsuche funktioniert gerade nicht. Bitte tippe deine Suche ein.",
+  "clearSearch": "Suche Löschen"
 }
