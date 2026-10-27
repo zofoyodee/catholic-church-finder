@@ -120,7 +120,8 @@ ol.rank ol.rank { grid-column: 1 / -1; margin: 4px 0 2px 12px; }
       <div class="chart" id="daily"></div>
     </section>
     <div class="grid">
-      <section class="panel"><h2>Where Visitors Are From</h2><p class="hint">Tap a country to see its states or regions.</p><div id="locations"></div></section>
+      <section class="panel"><h2>Where Visitors Are From</h2><p class="hint">Countries, most visitors first. Tap one to see its states or regions.</p><div id="locations"></div></section>
+      <section class="panel"><h2>Top States and Regions</h2><p class="hint">States, provinces and regions across the top countries, most visitors first.</p><div id="regions"></div></section>
       <section class="panel"><h2>Features Used</h2><p class="hint">Tabs, Mass and Confession Near Me, search, favorites, tours and more.</p><div id="features"></div></section>
       <section class="panel"><h2>Most-Opened Churches</h2><p class="hint">Churches whose details were opened most.</p><div id="churches"></div></section>
       <section class="panel"><h2>Bible Places Opened</h2><p class="hint">Places opened on the Bible Locations tab.</p><div id="bible"></div></section>
@@ -278,7 +279,8 @@ async function allHits(r) {
   const out = new Map();
   for (let page = 0; page < 5; page++) {
     let j;
-    try { j = await api('stats/hits', { ...r, limit: 100, exclude_paths: [...out.keys()] }); }
+    // GoatCounter reads exclude_paths as one comma-separated value; repeated, it only skipped one path
+    try { j = await api('stats/hits', { ...r, limit: 100, ...(out.size ? { exclude_paths: [...out.keys()].join(',') } : {}) }); }
     catch (e) { if (page) break; throw e; }  // a later page failing still leaves the first ones to show
     const before = out.size;
     for (const h of j.hits || []) if (!out.has(h.path_id)) out.set(h.path_id, h);
@@ -302,7 +304,9 @@ async function load() {
     tiles(total, total.stats || [], ev.reduce((a, h) => a + h.count, 0));
     $('dailyTitle').textContent = days === 1 ? 'Visitors Today' : 'Visitors per Day';
     lastDaily = total.stats || []; daily(lastDaily);
-    rank($('locations'), fromStats(lists.locations), { click: async (row) => fromStats(await api('stats/locations/' + encodeURIComponent(row.id), { ...r, limit: 100 })) });
+    const regionsOf = async (row) => fromStats(await api('stats/locations/' + encodeURIComponent(row.id), { ...r, limit: 100 }), (s) => esc(s.name || 'Unknown region'));
+    rank($('locations'), fromStats(lists.locations), { click: regionsOf });
+    $('regions').innerHTML = '<p class="empty">Loading…</p>';
     rank($('features'), ev.filter((h) => !/^(church|bible-place|language)\//.test(h.path)).map((h) => ({ count: h.count, html: featureName(h.path), tip: h.path })));
     rank($('churches'), byPrefix('church/').map((h) => ({ count: h.count, html: esc(h.path.slice(7)) + (h.title && h.title.split(' · ')[2] ? `<small>${esc(h.title.split(' · ')[2])}</small>` : ''), tip: h.title })));
     rank($('bible'), byPrefix('bible-place/').map((h) => ({ count: h.count, html: esc(h.path.slice(12)) })));
@@ -312,13 +316,20 @@ async function load() {
     rank($('browsers'), fromStats(lists.browsers));
     rank($('systems'), fromStats(lists.systems));
     rank($('languages'), fromStats(lists.languages));
+    // GoatCounter gives regions one country at a time, so gather them for the five busiest countries
+    const top = (lists.locations.stats || []).filter((c) => c.count > 0 && c.id).sort((a, b) => b.count - a.count).slice(0, 5), regions = [];
+    for (const c of top) {
+      try { (await regionsOf(c)).forEach((x) => regions.push({ ...x, html: x.html + `<small>${esc(c.name || c.id)}</small>` })); } catch (e) {}
+      if (my !== run) return;
+    }
+    rank($('regions'), regions);
     $('updated').textContent = 'Updated ' + new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
   } catch (e) {
     if (my !== run) return;
     console.error('GoatCounter', e.status || '', e.message, e.detail || '');
     const why = e.status ? ` (GoatCounter said: ${e.status}${e.detail ? ' ' + e.detail : ''})` : '';
     if (e.message === 'key') { store.set(KEY, ''); showSetup('That key was not accepted. Check that it has "Read statistics" ticked and that the site code is right.' + why); }
-    else if (e.message === 'blocked') showSetup('Your browser could not reach GoatCounter. An ad or tracker blocker (or Brave Shields, or Safari content blockers) often stops it: allow goatcounter.com on this page, or try another browser, then tap Show My Stats again. Your key is still saved.');
+    else if (e.message === 'blocked') showSetup('No answer came back from GoatCounter' + (e.detail ? ` (${e.detail})` : '') + '. Check your connection and tap Show My Stats again. If it keeps happening, an ad or tracker blocker (or Brave Shields, or Safari content blockers) may be stopping it: allow goatcounter.com on this page. Your key is still saved.');
     else if ($('dash').hidden) showSetup('GoatCounter could not send the stats' + why + '. Try again in a minute; your key is still saved.');
     else { $('dashErr').textContent = 'Could not refresh the stats. Try again in a minute.'; $('dashErr').hidden = false; }
   } finally { if (my === run) $('loading').hidden = true; }
