@@ -4367,6 +4367,8 @@ const mapReady = new Promise(res => map.once('load', res));
 <script src="dev/app/engage.js?v=96"></script>
 <script src="dev/app/mobile.js?v=96"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
-<script data-goatcounter="https://zofo.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
+if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }
+</script>
 </body>
 </html>

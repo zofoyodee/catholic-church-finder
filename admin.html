@@ -31,6 +31,10 @@ h1 { margin: 0; font: 600 26px/1.1 var(--font-display); letter-spacing: 0.06em; 
 .ranges { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid var(--line); background: var(--panel); color: var(--ink-soft); font: 500 13px var(--font-ui); cursor: pointer; }
 .chip:hover { color: var(--ink); }
+.chip.refresh { display: inline-flex; align-items: center; gap: 6px; color: var(--gold-soft); }
+.chip.refresh svg { width: 15px; height: 15px; }
+.chip.refresh.busy svg { animation: spin 0.9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
 .chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #1a1405; }
 .chip:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 2px; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 12px; }
@@ -86,11 +90,12 @@ ol.rank ol.rank { grid-column: 1 / -1; margin: 4px 0 2px 12px; }
       <p class="sub">Visits and feature use on the <a href="./">Catholic Church Finder</a> globe. Visitors are counted without cookies or names.</p>
     </div>
     <div class="ranges" id="ranges" role="group" aria-label="Time range" hidden>
-      <button class="chip" data-d="1">Today</button>
+      <button class="chip" data-d="1" aria-pressed="true">Today</button>
       <button class="chip" data-d="7">7 Days</button>
-      <button class="chip" data-d="30" aria-pressed="true">30 Days</button>
+      <button class="chip" data-d="30">30 Days</button>
       <button class="chip" data-d="90">90 Days</button>
       <button class="chip" data-d="365">1 Year</button>
+      <button class="chip refresh" id="refresh" title="Get the latest numbers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Refresh</button>
     </div>
   </header>
 
@@ -147,7 +152,7 @@ const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catc
 const KEY = 'ccf-stats-key', CODE = 'ccf-stats-code', DEFAULT_CODE = 'zofo';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const num = (n) => (n || 0).toLocaleString();
-let days = 30, run = 0, lastDaily = [];
+let days = 1, run = 0, lastDaily = [];
 
 const code = () => store.get(CODE) || DEFAULT_CODE;
 const base = () => 'https://' + code() + '.goatcounter.com';
@@ -292,7 +297,7 @@ const fromStats = (j, name = (s) => esc(s.name || 'Unknown')) => (j.stats || [])
 
 async function load() {
   const my = ++run, r = range();
-  $('loading').hidden = false; $('dashErr').hidden = true;
+  $('loading').hidden = $('dash').hidden === false; $('dashErr').hidden = true; $('refresh').classList.add('busy');
   try {
     const total = await api('stats/total', r), hits = await allHits(r);
     if (my !== run) return;
@@ -332,7 +337,7 @@ async function load() {
     else if (e.message === 'blocked') showSetup('No answer came back from GoatCounter' + (e.detail ? ` (${e.detail})` : '') + '. Check your connection and tap Show My Stats again. If it keeps happening, an ad or tracker blocker (or Brave Shields, or Safari content blockers) may be stopping it: allow goatcounter.com on this page. Your key is still saved.');
     else if ($('dash').hidden) showSetup('GoatCounter could not send the stats' + why + '. Try again in a minute; your key is still saved.');
     else { $('dashErr').textContent = 'Could not refresh the stats. Try again in a minute.'; $('dashErr').hidden = false; }
-  } finally { if (my === run) $('loading').hidden = true; }
+  } finally { if (my === run) { $('loading').hidden = true; $('refresh').classList.remove('busy'); } }
 }
 
 function showSetup(msg) {
@@ -352,8 +357,9 @@ $('save').onclick = () => {
 $('key').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('save').click(); });
 $('forget').onclick = () => { store.set(KEY, ''); showSetup(); };
 $('ranges').addEventListener('click', (e) => {
+  if (e.target.closest('#refresh')) { load(); return; }
   const b = e.target.closest('button[data-d]'); if (!b) return;
-  days = +b.dataset.d; $('ranges').querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b)); load();
+  days = +b.dataset.d; $('ranges').querySelectorAll('button[data-d]').forEach((x) => x.setAttribute('aria-pressed', x === b)); load();
 });
 // GoatCounter's own switch for leaving the owner's visits out of the counts (read by its count.js on the globe)
 function skipLabel() { $('skip').textContent = store.get('skipgc') === 't' ? 'This Browser Is Not Counted (Count It)' : "Don't Count My Visits"; }
