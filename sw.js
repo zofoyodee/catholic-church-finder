@@ -1,6 +1,6 @@
 // Offline support: every file the site loads is kept after its first use and served from the
 // cache while a fresh copy is fetched in the background. The page itself prefers the network.
-const CACHE = 'ccf-v114';
+const CACHE = 'ccf-v115';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'data/meta.json', 'icons/icon-192.png'];
 const CDN = /^https:\/\/cdn\.jsdelivr\.net\/npm\//;
 
