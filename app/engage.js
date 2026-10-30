@@ -185,7 +185,7 @@ async function fillToday() {
   const d = fromNo(today.n);
   const date = i18n ? i18n.date(d, { weekday: 'long', month: 'long', day: 'numeric' }, true) : d.toLocaleDateString('en', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
   let rec = null; try { rec = await ccf.shardFor(cotd.i); } catch (e) {}
-  const name = rec ? rec[0] : T('aChurch');
+  const name = rec ? ccf.churchName(cotd.i, rec[0]) : T('aChurch');
   const where = rec ? [rec[2], ccf.countryName(rec[5])].filter(Boolean).join(', ') : '';
   const s = today.saint;
   const why = cotd.why === 'feast' && s ? T('whyFeast') : cotd.why === 'named' && s ? T(s.rank === 'S' || s.rank === 'F' ? 'whyNamedFeast' : 'whyNamedSaint') : T('whyFeatured');

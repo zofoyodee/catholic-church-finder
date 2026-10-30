@@ -544,5 +544,8 @@
   "listening": "Počúvam… povedzte kostol alebo obec",
   "micBlocked": "Mikrofón je zablokovaný. Povoľte ho v nastaveniach prehliadača, aby ste mohli hľadať hlasom.",
   "voiceFailed": "Hlasové vyhľadávanie teraz nefunguje. Napíšte, prosím, čo hľadáte.",
-  "clearSearch": "Vymazať Vyhľadávanie"
+  "clearSearch": "Vymazať Vyhľadávanie",
+  "nm_c": "Katolícky kostol {x}",
+  "nm_k": "Katedrála {x}",
+  "nm_s": "Pútnické miesto {x}"
 }

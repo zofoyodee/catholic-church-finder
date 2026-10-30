@@ -515,5 +515,8 @@
   "listening": "Naminaw… isulti ang simbahan o lungsod",
   "micBlocked": "Naka-block ang mikropono. Tugoti kini sa settings sa browser aron makapangita gamit ang tingog.",
   "voiceFailed": "Dili molihok karon ang pagpangita gamit ang tingog. Palihug i-type ang imong pangitaon.",
-  "clearSearch": "Papasa ang Gipangita"
+  "clearSearch": "Papasa ang Gipangita",
+  "nm_c": "Simbahang Katoliko sa {x}",
+  "nm_k": "Katedral sa {x}",
+  "nm_s": "Santuwaryo sa {x}"
 }

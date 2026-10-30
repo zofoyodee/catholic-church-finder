@@ -515,5 +515,8 @@
   "listening": "Ndikumvetsera… tchulani mpingo kapena tawuni",
   "micBlocked": "Maikolofoni yatsekedwa. Ilolezeni m’makonzedwe a msakatuli kuti musake ndi mawu.",
   "voiceFailed": "Kusaka ndi mawu sikukugwira ntchito pano. Chonde lembani zomwe mukusaka.",
-  "clearSearch": "Fufutani Zosaka"
+  "clearSearch": "Fufutani Zosaka",
+  "nm_c": "Mpingo wa Katolika wa {x}",
+  "nm_k": "Katedrale ya {x}",
+  "nm_s": "Malo oyera a {x}"
 }

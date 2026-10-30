@@ -539,5 +539,8 @@
   "listening": "Slušam… recite crkvu ili mjesto",
   "micBlocked": "Mikrofon je blokiran. Dopustite ga u postavkama preglednika za glasovno pretraživanje.",
   "voiceFailed": "Glasovno pretraživanje trenutno ne radi. Molimo upišite što tražite.",
-  "clearSearch": "Očisti Pretragu"
+  "clearSearch": "Očisti Pretragu",
+  "nm_c": "Katolička crkva {x}",
+  "nm_k": "Katedrala {x}",
+  "nm_s": "Svetište {x}"
 }
