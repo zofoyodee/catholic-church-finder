@@ -79,6 +79,9 @@ ol.rank ol.rank { grid-column: 1 / -1; margin: 4px 0 2px 12px; }
 .err { color: var(--bad); margin-top: 10px; }
 .foot { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; margin-top: 20px; color: var(--ink-faint); font-size: 12px; }
 .foot button { background: none; border: 0; color: var(--gold-soft); font: 500 12px var(--font-ui); cursor: pointer; padding: 0; }
+.picked { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 0 12px; padding: 10px 14px; border-radius: 12px; background: rgba(232, 184, 74, 0.12); border: 1px solid rgba(232, 184, 74, 0.35); font-weight: 600; }
+.picked button { background: none; border: 0; color: var(--gold-soft); font: 500 13px var(--font-ui); cursor: pointer; padding: 0; text-decoration: underline; }
+.chart svg.pick rect[data-k] { cursor: pointer; }
 .loading { color: var(--ink-faint); padding: 40px 0; text-align: center; }
 </style>
 </head>
@@ -118,10 +121,11 @@ ol.rank ol.rank { grid-column: 1 / -1; margin: 4px 0 2px 12px; }
   </section>
 
   <div id="dash" hidden>
+    <p class="picked" id="picked" hidden><span id="pickedText"></span> <button id="unpick"></button></p>
     <div class="tiles" id="tiles"></div>
     <section class="panel">
       <h2 id="dailyTitle">Visitors per Day</h2>
-      <p class="hint">Unique visitors each day. Hover or tap a bar for the count.</p>
+      <p class="hint" id="dailyHint">Unique visitors each day. Tap a day to see where that day's visitors were from.</p>
       <div class="chart" id="daily"></div>
     </section>
     <div class="grid">
@@ -152,7 +156,8 @@ const store = { get: (k) => { try { return localStorage.getItem(k) || ''; } catc
 const KEY = 'ccf-stats-key', CODE = 'ccf-stats-code', DEFAULT_CODE = 'zofo';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const num = (n) => (n || 0).toLocaleString();
-let days = 1, run = 0, lastDaily = [];
+let days = 1, run = 0, lastDaily = [], pick = '';  // pick: one day (YYYY-MM-DD) tapped on the chart
+const dayName = (d, opt = { weekday: 'short', month: 'short', day: 'numeric' }) => new Date(d + 'T12:00:00').toLocaleDateString(undefined, opt);
 
 const code = () => store.get(CODE) || DEFAULT_CODE;
 const base = () => 'https://' + code() + '.goatcounter.com';
@@ -180,6 +185,11 @@ async function call(path, q) {
   }
 }
 function range() {
+  if (pick) {  // the tapped day, midnight to midnight in this browser's time zone
+    const [y, m, d] = pick.split('-').map(Number), s = new Date(y, m - 1, d), e = new Date(y, m - 1, d + 1);
+    s.setUTCMinutes(0, 0, 0); e.setUTCMinutes(0, 0, 0);
+    return { start: s.toISOString().replace(/\.\d+Z$/, 'Z'), end: e.toISOString().replace(/\.\d+Z$/, 'Z') };
+  }
   const end = new Date(); end.setUTCMinutes(0, 0, 0); end.setUTCHours(end.getUTCHours() + 1);
   const start = new Date(); start.setHours(0, 0, 0, 0); start.setDate(start.getDate() - (days - 1)); start.setUTCMinutes(0, 0, 0);
   return { start: start.toISOString().replace(/\.\d+Z$/, 'Z'), end: end.toISOString().replace(/\.\d+Z$/, 'Z') };
@@ -262,6 +272,7 @@ function daily(stats) {
   };
   svg.addEventListener('pointermove', (e) => { const r = e.target.closest('[data-k]'); show(r ? +r.dataset.k : -1); });
   svg.addEventListener('pointerleave', () => show(-1));
+  if (pts.length > 1) { svg.classList.add('pick'); svg.addEventListener('click', (e) => { const r = e.target.closest('[data-k]'); if (r && pts[+r.dataset.k].n) { pick = pts[+r.dataset.k].day; scrollTo({ top: 0, behavior: 'smooth' }); load(); } }); }
 }
 function niceStep(max) { const raw = max / 4, mag = Math.pow(10, Math.floor(Math.log10(raw || 1))); return [1, 2, 5, 10].map((m) => m * mag).find((s) => s >= raw) || 1; }
 
@@ -269,7 +280,7 @@ function tiles(total, stats, events) {
   const busiest = stats.reduce((a, s) => ((s.daily || 0) > (a ? a.daily : -1) ? s : a), null);
   const avg = stats.length ? total.total / stats.length : 0;
   const t = [
-    ['Visitors', num(total.total), days === 1 ? 'today' : `in the last ${days} days`],
+    ['Visitors', num(total.total), pick ? 'on ' + dayName(pick) : days === 1 ? 'today' : `in the last ${days} days`],
     ['Daily Average', num(Math.round(avg)), 'visitors a day'],
     ['Busiest Day', busiest && busiest.daily ? num(busiest.daily) : '0', busiest && busiest.daily ? new Date(busiest.day + 'T12:00:00').toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) : '—'],
     ['Feature Uses', num(events), 'buttons, tabs and churches opened'],
@@ -307,7 +318,10 @@ async function load() {
     const ev = hits.filter((h) => h.event), byPrefix = (p) => ev.filter((h) => h.path.startsWith(p));
     $('dash').hidden = false; $('foot').hidden = false; $('ranges').hidden = false; $('setup').hidden = true;  // shown first so the chart can measure itself
     tiles(total, total.stats || [], ev.reduce((a, h) => a + h.count, 0));
-    $('dailyTitle').textContent = days === 1 ? 'Visitors Today' : 'Visitors per Day';
+    $('dailyTitle').textContent = pick ? 'Visitors on ' + dayName(pick) : days === 1 ? 'Visitors Today' : 'Visitors per Day';
+    $('dailyHint').hidden = !!pick || days === 1;
+    $('picked').hidden = !pick;
+    if (pick) { $('pickedText').textContent = 'Showing only ' + dayName(pick, { weekday: 'long', month: 'long', day: 'numeric' }); $('unpick').textContent = 'Back to ' + $('ranges').querySelector('[aria-pressed="true"]').textContent; }
     lastDaily = total.stats || []; daily(lastDaily);
     const regionsOf = async (row) => fromStats(await api('stats/locations/' + encodeURIComponent(row.id), { ...r, limit: 100 }), (s) => esc(s.name || 'Unknown region'));
     rank($('locations'), fromStats(lists.locations), { click: regionsOf });
@@ -355,10 +369,12 @@ $('save').onclick = () => {
   $('full').href = base() + '/'; load();
 };
 $('key').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('save').click(); });
+$('unpick').onclick = () => { pick = ''; load(); };
 $('forget').onclick = () => { store.set(KEY, ''); showSetup(); };
 $('ranges').addEventListener('click', (e) => {
   if (e.target.closest('#refresh')) { load(); return; }
   const b = e.target.closest('button[data-d]'); if (!b) return;
+  pick = '';
   days = +b.dataset.d; $('ranges').querySelectorAll('button[data-d]').forEach((x) => x.setAttribute('aria-pressed', x === b)); load();
 });
 // GoatCounter's own switch for leaving the owner's visits out of the counts (read by its count.js on the globe)
