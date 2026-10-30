@@ -706,7 +706,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/desktop.css?v=103">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-30 17:02 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-30 17:06 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -722,7 +722,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   </div>
   <div class="search" role="search">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-    <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków" aria-label="Search churches by name or town" aria-controls="results" data-i18n-attr="placeholder:searchPh;title:searchPh;aria-label:searchLabel">
+    <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search a church or town, e.g. Notre-Dame, Guadalupe, Kraków" aria-label="Search churches by name or town" aria-controls="results" data-i18n-attr="placeholder:searchPh;aria-label:searchLabel">
     <button id="globeBtn" class="globe-btn" type="button" title="Whole Globe" aria-label="Whole Globe" data-i18n-attr="title:wholeGlobe;aria-label:wholeGlobe"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></button>
     <div class="q-tools">
       <button id="qClear" class="q-btn" type="button" hidden title="Clear Search" aria-label="Clear Search" data-i18n-attr="title:clearSearch;aria-label:clearSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -3726,10 +3726,8 @@ $('modeChurches').parentElement.addEventListener('keydown', (e) => {
   const at = MODE_TABS.findIndex(([, k]) => k === state.mode), step = (e.key === 'ArrowRight') !== !!i18n.rtl ? 1 : -1;
   const [id, next] = MODE_TABS[(at + step + MODE_TABS.length) % MODE_TABS.length]; setMode(next); $(id).focus();
 });
-// phones show the hint up to its examples ("Search a church or town"), which fits the narrow box;
-// the title keeps the whole hint for a mouse to read where the box cuts it short
+// phones show the hint up to its examples ("Search a church or town"), which fits the narrow box
 function setSearchPh(text) {
-  qEl.title = text;
   qEl.placeholder = phoneNow() ? text.split(/[,，、،(（:;]/)[0].trim() || text : text;
 }
 function searchLabels() {
