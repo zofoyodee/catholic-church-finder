@@ -523,8 +523,5 @@
   "listening": "Ouvindo… diga uma igreja ou cidade",
   "micBlocked": "O microfone está bloqueado. Permita-o nas configurações do navegador para pesquisar por voz.",
   "voiceFailed": "A pesquisa por voz não está funcionando agora. Digite sua pesquisa, por favor.",
-  "clearSearch": "Limpar Pesquisa",
-  "nm_c": "Igreja Católica de {x}",
-  "nm_k": "Catedral de {x}",
-  "nm_s": "Santuário de {x}"
+  "clearSearch": "Limpar Pesquisa"
 }

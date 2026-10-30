@@ -513,8 +513,5 @@
   "listening": "Audio… dic ecclesiam vel oppidum",
   "micBlocked": "Microphonum obstructum est. Id in optionibus navigatri permitte ut voce quaeras.",
   "voiceFailed": "Quaestio voce nunc non procedit. Quaesumus, verba tua scribe.",
-  "clearSearch": "Quaestionem Dele",
-  "nm_c": "Ecclesia catholica {x}",
-  "nm_k": "Ecclesia cathedralis {x}",
-  "nm_s": "Sanctuarium {x}"
+  "clearSearch": "Quaestionem Dele"
 }

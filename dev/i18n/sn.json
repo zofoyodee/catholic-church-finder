@@ -515,8 +515,5 @@
   "listening": "Ndiri kuteerera… taura chechi kana guta",
   "micBlocked": "Maikirofoni yakavharwa. Ibvumire mumasetingi ebrowser kuti utsvage neinzwi.",
   "voiceFailed": "Kutsvaga neinzwi hakusi kushanda izvozvi. Ndapota nyora zvauri kutsvaga.",
-  "clearSearch": "Dzima Zvaunotsvaga",
-  "nm_c": "Chechi yeKatorike, {x}",
-  "nm_k": "Katedhiraro, {x}",
-  "nm_s": "Nzvimbo tsvene, {x}"
+  "clearSearch": "Dzima Zvaunotsvaga"
 }
