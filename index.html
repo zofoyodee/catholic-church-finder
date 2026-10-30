@@ -3941,7 +3941,17 @@ const lifeEvents = () => life.era === 'rosary' ? life.data.mysteries : life.data
 const lifeColor = (e) => life.era === 'rosary' ? roColor(e) : life.data.color[e.e];
 // pull back from each place's close-up zoom so the town and the places around it stay in view
 // close enough to tell the towns apart, far enough to keep the neighbouring moments in view
-const lifeZoom = (p) => Math.min(p.z - 2, 9.5);
+// close in on the place, but keep its neighbours in view: the zoom at which the second-closest other
+// place of the life of Jesus sits within the open part of the screen (between 8 and 13)
+const lifeZoom = (p) => {
+  const others = life.data ? life.data.places.filter(q => q !== p) : [];
+  if (!others.length) return Math.min(p.z - 2, 9.5);
+  const near = others.map(q => metres(p.ll[0], p.ll[1], q.ll[0], q.ll[1])).filter(m => m > 300).sort((a, b) => a - b);
+  const d = near[Math.min(1, near.length - 1)] || 1e6;  // the second nearest, so a couple of neighbours show
+  const pad = lifePad(), open = Math.min(innerWidth - pad.left - pad.right, innerHeight - pad.top - pad.bottom);
+  const z = Math.log2(40075016 * Math.cos(p.ll[0] * Math.PI / 180) * Math.max(open, 120) * 0.42 / (512 * d));
+  return Math.max(8, Math.min(13, p.z - 2, z));
+};
 const lifeLL = (p) => [p.ll[1], p.ll[0]];
 // the globe can't draw every script: a name it would lose letters from is shown in English
 const lifeLabel = (p) => { const n = drawable(p.n); return n.length >= [...p.n].length * 0.8 || !p.en ? n : drawable(p.en.n); };
