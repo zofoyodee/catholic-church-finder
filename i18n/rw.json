@@ -515,5 +515,8 @@
   "listening": "Ndimo kumva… vuga kiliziya cyangwa umujyi",
   "micBlocked": "Mikoro yafunzwe. Yemere mu igenamiterere rya mushakisha kugira ngo ushakishe mu ijwi.",
   "voiceFailed": "Gushakisha mu ijwi ntibikora ubu. Andika ibyo ushaka, ubishoboye.",
-  "clearSearch": "Siba Ibyo Ushakisha"
+  "clearSearch": "Siba Ibyo Ushakisha",
+  "nm_c": "Kiliziya Gatolika ya {x}",
+  "nm_k": "Katedrali ya {x}",
+  "nm_s": "Ingoro y'ubutagatifu ya {x}"
 }

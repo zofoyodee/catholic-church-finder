@@ -526,5 +526,8 @@
   "listening": "Klausausi… pasakykite bažnyčią ar vietovę",
   "micBlocked": "Mikrofonas užblokuotas. Leiskite jį naršyklės nustatymuose, kad galėtumėte ieškoti balsu.",
   "voiceFailed": "Paieška balsu dabar neveikia. Įveskite, ko ieškote.",
-  "clearSearch": "Išvalyti Paiešką"
+  "clearSearch": "Išvalyti Paiešką",
+  "nm_c": "{x} katalikų bažnyčia",
+  "nm_k": "{x} katedra",
+  "nm_s": "{x} šventovė"
 }

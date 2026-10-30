@@ -523,5 +523,8 @@
   "listening": "Aan het luisteren… zeg een kerk of plaats",
   "micBlocked": "De microfoon is geblokkeerd. Sta hem toe in de browserinstellingen om met je stem te zoeken.",
   "voiceFailed": "Zoeken met spraak werkt nu niet. Typ je zoekopdracht alstublieft.",
-  "clearSearch": "Zoekopdracht Wissen"
+  "clearSearch": "Zoekopdracht Wissen",
+  "nm_c": "Katholieke kerk {x}",
+  "nm_k": "Kathedraal {x}",
+  "nm_s": "Bedevaartsoord {x}"
 }

@@ -515,5 +515,8 @@
   "listening": "Mihaino… lazao ny fiangonana na tanàna",
   "micBlocked": "Voasakana ny mikrô. Avelao izy ao amin’ny fikirakirana ny navigateur mba hikarohana amin’ny feo.",
   "voiceFailed": "Tsy mandeha amin’izao ny fikarohana amin’ny feo. Soraty azafady izay tadiavinao.",
-  "clearSearch": "Fafao ny Fikarohana"
+  "clearSearch": "Fafao ny Fikarohana",
+  "nm_c": "Fiangonana Katolika {x}",
+  "nm_k": "Katedralin’i {x}",
+  "nm_s": "Toerana masin’i {x}"
 }
