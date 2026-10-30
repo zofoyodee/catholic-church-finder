@@ -515,5 +515,8 @@
   "listening": "Ahendu… ere peteĩ tupao térã táva",
   "micBlocked": "Mikrófono ojejoko. Emoneĩ navegador ñemboheko rupi eheka hag̃ua ñe’ẽ rupi.",
   "voiceFailed": "Jeheka ñe’ẽ rupi ndoikói ko’ág̃a. Emoĩ ehekáva, ndegustaramo.",
-  "clearSearch": "Mbogue Jeheka"
+  "clearSearch": "Mbogue Jeheka",
+  "nm_c": "Tupao Católica {x}",
+  "nm_k": "Catedral {x}",
+  "nm_s": "Santuario {x}"
 }

@@ -515,5 +515,8 @@
   "listening": "Rona hela… temi igreja ka sidade ida",
   "micBlocked": "Mikrofone taka ona. Fó lisensa iha konfigurasaun browser nian atu buka ho lian.",
   "voiceFailed": "Buka ho lian la la’o agora. Favór hakerek buat ne’ebé ita buka.",
-  "clearSearch": "Hamoos Buka"
+  "clearSearch": "Hamoos Buka",
+  "nm_c": "Igreja Katólika {x}",
+  "nm_k": "Katedrál {x}",
+  "nm_s": "Santuáriu {x}"
 }
