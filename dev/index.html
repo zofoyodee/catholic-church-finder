@@ -476,6 +476,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .card .body { padding: 18px 20px 20px; overflow-y: auto; display: grid; gap: 18px; align-content: start; }
 .card h2 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 21px; line-height: 1.25; letter-spacing: 0.02em; text-wrap: balance; }
 .card .where { color: var(--ink-soft); margin-top: 6px; line-height: 1.45; }
+.card .orig { color: var(--ink-faint); font-size: 13px; margin-top: 3px; }
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 9px 16px; margin: 0; font-size: 13.5px; }
 .facts dt { color: var(--ink-faint); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 2px; }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
@@ -700,12 +701,12 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   .card .hero img.photo, .card .hero .vigil { transition: none; }
 }
 </style>
-<link rel="stylesheet" href="dev/app/engage.css?v=96">
-<link rel="stylesheet" href="dev/app/mobile.css?v=96">
-<link rel="stylesheet" href="dev/app/desktop.css?v=96">
+<link rel="stylesheet" href="dev/app/engage.css?v=101">
+<link rel="stylesheet" href="dev/app/mobile.css?v=101">
+<link rel="stylesheet" href="dev/app/desktop.css?v=101">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-30 16:39 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-30 16:42 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -928,7 +929,7 @@ const EN = {
   loadingName: 'Loading name…', clickDetails: 'Click for details',
   loading: 'Loading…', loadingMassNear: 'Finding Masses near you…', loadingConfNear: 'Finding Confession near you…', loadingLangList: 'Finding churches with Mass in {lang}…', loadingArea: 'Finding churches in {place}…', loadingView: 'Finding churches in this view…', loadingMore: 'Loading more churches…', detailsFailed: 'Details didn\'t load', checkConnection: 'Check your connection, then click the pin again.',
   onGlobe: 'Location on the globe', directions: 'Directions', parishSite: 'Parish Website', noParishSite: 'No parish website found', share: 'Share', emailLink: 'Email a Link',
-  copyLink: 'Copy Link', moreOptions: 'More Options…', flyHere: 'Fly Here', address: 'Address', phone: 'Phone',
+  copyLink: 'Copy Link', moreOptions: 'More Options…', flyHere: 'Fly Here', nm_c: '{x} Catholic Church', nm_k: '{x} Cathedral', nm_s: '{x} Shrine', address: 'Address', phone: 'Phone',
   website: 'Website', mediaTitle: 'Photos, Video and History', photosLink: 'Photos', videos: 'Videos',
   streetView: 'Street View', history: 'History',
   byName: 'Identified as Catholic by its name', listed: 'Listed as Roman Catholic',
@@ -1252,7 +1253,32 @@ async function shardFor(i) {
   const s = Math.floor(i / state.meta.shardSize);
   if (!state.shards.has(s)) state.shards.set(s, getJSON('data/d/' + s + '.json').catch(e => { state.shards.delete(s); throw e; }));
   const recs = await state.shards.get(s);
-  return recs[i - s * state.meta.shardSize];
+  const rec = recs[i - s * state.meta.shardSize];
+  if (rec && !namesX && OTHER_SCRIPT.test((rec[0] || '') + (rec[2] || ''))) await loadNamesX();
+  return rec;
+}
+// A name written only in Korean, Japanese, Chinese, Cyrillic, Thai, Arabic... reads in the page's own script
+// to everyone else: data/names-x.json (scripts/names/build.py) holds a romanized or translated name per church,
+// as "{x} Catholic Church" / "{x} Cathedral" / "{x} Shrine" wrapped in the page language, or a whole name.
+// Names the Life of Jesus and Bible content already translates (Basilica of the Annunciation...) use that.
+let namesX = null, namesXData = {};
+const OTHER_SCRIPT = /[^\u0000-\u036f\u1e00-\u1eff\u2000-\u2bff\ufe00-\ufe0f\u{1d400}-\u{1d7ff}\u{1f000}-\u{1faff}]/u;
+const NAME_LANG = { ko: 'ko', cyr: 'ru', ar: 'ar', th: 'th', el: 'el', ta: 'ta', ml: 'ml', deva: 'hi', he: 'he', ka: 'ka', hy: 'hy', et: 'am', lo: 'lo', km: 'km', si: 'si', bn: 'bn' };
+const LANG_SCRIPT = { ko: 'ko', zh: 'cjk', ja: 'cjk', ru: 'cyr', uk: 'cyr', ar: 'ar', ta: 'ta', ml: 'ml', hi: 'deva', gom: 'deva' };
+function loadNamesX() {
+  return namesX || (namesX = getJSON('data/names-x.json').then(d => { namesXData = d; }).catch(e => { namesX = null; }));
+}
+function churchTown(i, raw) {
+  const x = namesXData[i];
+  return x && x[3] && x[0] !== LANG_SCRIPT[i18n.code] && OTHER_SCRIPT.test(raw || '') ? x[3] : raw;
+}
+function churchName(i, raw) {
+  const x = namesXData[i];
+  if (!x) return raw ? td(raw) : raw;
+  if (x[0] === LANG_SCRIPT[i18n.code]) return raw;
+  const [, kind, text] = x;
+  if (!kind) return text || raw;
+  return text ? tr('nm_' + kind, { x: text }) : tr({ c: 'one_church', k: 'one_cathedral', s: 'one_shrine' }[kind]);
 }
 
 /* ---------- website checks and parish staff (data/web, built by scripts/web in GitHub Actions) ---------- */
@@ -1692,7 +1718,7 @@ async function renderArea() {
     (r, rec) => {
       const t = state.typ[r.i] & 7;
       if (notChurch(rec[0])) return '';
-      return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc([TYPE_BY_CODE[t].one, rec[2]].filter(Boolean).join(' · '))}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+      return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(churchName(r.i, rec[0]) || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc([TYPE_BY_CODE[t].one, churchTown(r.i, rec[2])].filter(Boolean).join(' · '))}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
     },
     a.total > rows.length ? `<p class="note">${esc(tr('areaMore', { k: fmt(rows.length), n: fmt(a.total) }))}</p>` : '',
     a.name ? tr('loadingArea', { place: a.name }) : tr('loadingView'));
@@ -1729,7 +1755,7 @@ async function renderMassNear() {
   fillList(rows, 150, head, (r, rec) => {
     const plain = mn.kind === 0, unknown = mn.kind === 1 && !r.n && !mf.data.c[r.i], site = rec[6] ? (/^https?:/.test(rec[6]) ? rec[6] : 'https://' + rec[6]) : '', t = state.typ[r.i] & 7, lang = mn.kind < 2 && r.n && r.n.lang ? mf.data.langs[r.n.lang] : '';
     if (notChurch(rec[0])) return '';
-    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span>${plain ? `<span class="loc">${esc(rec[2] || '')}</span>` : unknown ? `<span class="loc wrap">${esc(tr('timesUnknown'))}</span>` : `<span class="loc"><b class="when">${esc(r.n ? whenText(r.n) : tr('noTimesWeek'))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(rec[2] || '')}</span>`}</div></button><span class="dist">${fmtDist(r.m)}${unknown && site ? `<a class="site" href="${esc(site)}" target="_blank" rel="noopener">${esc(tr('websiteShort'))}</a>` : ''}</span></li>`;
+    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(churchName(r.i, rec[0]) || TYPE_BY_CODE[t].one)}</span>${plain ? `<span class="loc">${esc(churchTown(r.i, rec[2]) || '')}</span>` : unknown ? `<span class="loc wrap">${esc(tr('timesUnknown'))}</span>` : `<span class="loc"><b class="when">${esc(r.n ? whenText(r.n) : tr('noTimesWeek'))}</b>${lang ? ' · ' + esc(massLangName(lang)) : ''} · ${esc(churchTown(r.i, rec[2]) || '')}</span>`}</div></button><span class="dist">${fmtDist(r.m)}${unknown && site ? `<a class="site" href="${esc(site)}" target="_blank" rel="noopener">${esc(tr('websiteShort'))}</a>` : ''}</span></li>`;
   }, mn.kind ? `<p class="note">${esc(tr('timesCheck'))}</p>` : '',
   mn.kind === 2 ? tr('loadingLangList', { lang: massLangName(mf.lang) }) : tr(mn.kind ? 'loadingConfNear' : 'loadingChurchNear'));
 }
@@ -2226,7 +2252,7 @@ async function updateNames() {
   if (seq !== nameSeq) return;
   const features = [];
   ids.forEach((i, k) => {
-    const name = drawable(recs[k][0] || '');
+    const name = drawable(churchName(i, recs[k][0] || '') || '');
     if (name.length < 2) return;
     features.push({ type: 'Feature', geometry: { type: 'Point', coordinates: [state.lon[i] / 1e6, state.lat[i] / 1e6] }, properties: { name, rank: rank(i), i } });
   });
@@ -2257,11 +2283,12 @@ function syncSave(i) {
   b.title = on ? tr('favRemove') : tr('favAdd');
 }
 function renderFavs() {
+  if (!namesX && favs.some(f => OTHER_SCRIPT.test(f.name || ''))) loadNamesX().then(renderFavs);
   $('favCount').textContent = favs.length || '';
   $('favOpen').hidden = !favs.length;  // the heart shows up once there is something saved
   if (!favs.length && !$('favs').hidden) showFavs(false);
   $('favN').textContent = favs.length ? favs.length : '';
-  $('favList').innerHTML = favs.length ? favs.map(f => `<li><button class="go" data-i="${f.i}"><i style="background:${(TYPE_BY_CODE[f.t] || TYPE_BY_CODE[0]).color}"></i><div><span class="nm">${esc(f.name)}</span><span class="loc">${esc(f.place)}</span></div></button><button class="rm" data-i="${f.i}" aria-label="${esc(tr('favRemoveName', { name: f.name }))}" title="${esc(tr('remove'))}"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>`).join('')
+  $('favList').innerHTML = favs.length ? favs.map(f => `<li><button class="go" data-i="${f.i}"><i style="background:${(TYPE_BY_CODE[f.t] || TYPE_BY_CODE[0]).color}"></i><div><span class="nm">${esc(churchName(f.i, f.name))}</span><span class="loc">${esc(f.place)}</span></div></button><button class="rm" data-i="${f.i}" aria-label="${esc(tr('favRemoveName', { name: f.name }))}" title="${esc(tr('remove'))}"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>`).join('')
     : `<p class="empty">${tr('favEmpty', { save: `<b><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg> ${esc(tr('save'))}</b>` })}</p>`;
   syncFavRings();
 }
@@ -2780,8 +2807,8 @@ async function renderNear() {
   if (near !== nearRows) return;
   list.innerHTML = (myPlace ? `<li class="place-note"><p class="note">${esc(tr('placeUsing', { place: myPlace.name }))} <button class="linkish" data-loc="set">${esc(tr('useMyLoc'))}</button></p></li>` : '') + near.map((r, k) => {
     const rec = recs[k] || [], t = state.typ[r.i] & 7;
-    const place = [rec[1], rec[2]].filter(Boolean).join(', ');
-    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(rec[0] || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc(place)}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
+    const place = [rec[1], churchTown(r.i, rec[2])].filter(Boolean).join(', ');
+    return `<li><button class="go" data-i="${r.i}"><i style="background:${TYPE_BY_CODE[t].color}"></i><div><span class="nm">${esc(churchName(r.i, rec[0]) || TYPE_BY_CODE[t].one)}</span><span class="loc">${esc(place)}</span></div></button><span class="dist">${fmtDist(r.m)}</span></li>`;
   }).join('');
 }
 $('nearBtn').addEventListener('click', () => { if ($('near').hidden) findNear(); else showNear(false); });
@@ -2895,7 +2922,7 @@ map.on('mousemove', async (e) => {
   try {
     const rec = await shardFor(id);
     if (seq !== hoverSeq) return;
-    tip.innerHTML = `<b>${esc(rec[0])}</b><span>${esc([rec[2], countryName(rec[5])].filter(Boolean).join(', '))}</span><span style="display:block;color:var(--gold-soft)">${esc(tr('clickDetails'))}</span>`;
+    tip.innerHTML = `<b>${esc(churchName(id, rec[0]))}</b><span>${esc([churchTown(id, rec[2]), countryName(rec[5])].filter(Boolean).join(', '))}</span><span style="display:block;color:var(--gold-soft)">${esc(tr('clickDetails'))}</span>`;
   } catch (err) { /* tooltip stays generic */ }
 });
 map.getCanvas().addEventListener('mouseleave', () => { tip.hidden = true; hoverId = -1; hoverSeq++; setHover(-1); });
@@ -3079,9 +3106,10 @@ async function selectChurch(i, { fly = true } = {}) {
   if (state.selected !== i) return;
   const [name, street, town, region, postcode, cc, web0, phone, socials, conf, datasets, oid, how, updated] = rec;
   const web = webInfo.fix.web || web0;
+  const shown = churchName(i, name);  // the name in the page's script; the original stays beneath it
   const addr = postalLines(street, town, region, postcode, cc);
   const country = countryName(cc);
-  const place = [town, region && region !== town ? region : '', country].filter(Boolean).join(', ');
+  const place = [churchTown(i, town), region && region !== town ? region : '', country].filter(Boolean).join(', ');
   const q = encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   const qShort = encodeURIComponent([name, town].filter(Boolean).join(' '));
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
@@ -3105,7 +3133,7 @@ async function selectChurch(i, { fly = true } = {}) {
   const webSearch = 'https://www.google.com/search?q=' + encodeURIComponent([name, town, country].filter(Boolean).join(' '));
   $('cardBody').innerHTML = `
     <div>
-      <h2 id="cName">${esc(name)}</h2>
+      <h2 id="cName">${esc(shown)}</h2>${shown !== name ? `<div class="orig" lang="${esc(NAME_LANG[(namesXData[i] || [])[0]] || '')}">${esc(name)}</div>` : ''}
       <div class="where">${esc(place || tr('onGlobe'))}</div>
     </div>
     <div class="actions">
@@ -3293,10 +3321,11 @@ const fold = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 function loadSearch() {
   if (searchLoading) return searchLoading;
   searchLoading = (async () => {
-    const parts = await Promise.all(Array.from({ length: state.meta.searchChunks }, (_, k) => fetch(BASE + 'dev/data/search-' + k + '.txt').then(r => { if (!r.ok) throw new Error('search'); return r.text(); })));
+    const [parts] = await Promise.all([Promise.all(Array.from({ length: state.meta.searchChunks }, (_, k) => fetch(BASE + 'dev/data/search-' + k + '.txt').then(r => { if (!r.ok) throw new Error('search'); return r.text(); }))), loadNamesX()]);
     const lines = parts.join('\n').split('\n');
     const keys = new Array(lines.length);
     for (let i = 0; i < lines.length; i++) keys[i] = fold(lines[i]);
+    for (const i in namesXData) if (keys[i] !== undefined) { const x = fold(namesXData[i][2]); keys[i] += ' ' + x + (x.includes('-') ? ' ' + x.replace(/-/g, '') : ''); }  // "myeongdong" finds 명동성당
     searchIdx = { lines, keys };
   })().catch(e => { searchLoading = null; throw e; });
   return searchLoading;
@@ -3432,7 +3461,7 @@ async function runSearch() {
     + (hits.length > 1 && hits.length !== inTown.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
     + top.map((i, k) => {
     const [nm, town, cc] = lines[i].split('\t'); const t = TYPE_BY_CODE[state.typ[i] & 7];
-    return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(nm)}</span><span class="loc">${esc([here ? fmtDist(sc.get(i)) : '', t.one, town, countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
+    return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(churchName(i, nm))}</span><span class="loc">${esc([here ? fmtDist(sc.get(i)) : '', t.one, churchTown(i, town), countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
   }).join('');
 }
 let searchLists = null, searchAskedWhere = false;
@@ -3576,11 +3605,12 @@ $('langSel').addEventListener('change', async (e) => {
   if (!state.meta) return;
   searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
   if (life.data) { localizeLife(life.data); map.getSource('j-places').setData(lifeGeo().places); delete $('cardBody').dataset.jplace; }  // forget the open place so its heading is redrawn too
+  if (bible.data) { localizeBible(bible.data); map.getSource('b-places').setData(bibleFeatures()); map.getSource('b-labels').setData(bibleLandLabels()); }
   if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } if (!$('card').hidden && bible.sel) { if (bible.sel.land) openBibleLand(bible.sel.land, { fly: false }); else openBiblePlace(bible.sel.id, { fly: false }); } }
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && $('cardBody').dataset.rosary) openRosary(); else if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
   if (life.data && state.mode !== 'jesus') buildTimeline();
-  renderFavs(); if (mn.kind === 3) renderArea(); else if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels();
+  renderFavs(); if (mn.kind === 3) renderArea(); else if (mn.kind >= 0) renderMassNear(); else renderNear(); setCityLabels(); updateNames();
   if (map.getLayer('me-label')) map.setLayoutProperty('me-label', 'text-field', tr('youAreHere'));
   if (mf.data && !$('massChips').hidden) { if (state.only) applyMassFilter(); else renderMassChips(); }
   about.clear(); // history and patron saints come from Wikipedia in the reader's language
@@ -3601,8 +3631,18 @@ const BIBLE_RANK = new Set('jerusalem bethlehem nazareth sepulchre babylon ninev
 const CHURCH_LAYERS = ['cl-glow', 'cl', 'cl-count', 'pt-halo', 'pt', 'pt-name', 'notable', 'hover', 'fav-ring'];
 const BIBLE_LAYERS = ['b-land', 'b-land-hi', 'b-land-line', 'b-land-label', 'b-pt-glow', 'b-pt', 'b-pt-name', 'b-sel'];
 const mainGroup = (p) => ['jesus', 'church', 'deut', 'ot'].find(g => p.g.includes(g)) || 'ot';
+// the places and lands are written in English; td() puts them in the reader's language, keeping the English to switch back
+function localizeBible(d) {
+  const keep = (x, keys) => { x.en = x.en || Object.fromEntries(keys.map(k => [k, x[k]])); for (const k of keys) if (x.en[k]) x[k] = Array.isArray(x.en[k]) ? x.en[k].map(td) : td(x.en[k]); };
+  d.places.forEach(p => keep(p, ['n', 'a', 's', 'b', 't']));
+  Object.values(d.lands).forEach(l => { keep(l, ['n', 'a', 'also', 's', 'b', 't']); l.en.lab = l.en.lab || l.lab; l.lab = content[l.en.lab] ? content[l.en.lab].toLocaleUpperCase(i18n.locale) : l.en.lab; });
+}
+// the globe can't draw every script: a name it would lose letters from is shown in English
+const bibleLabel = (n, en) => { const s = drawable(n); return s.length >= [...n].length * 0.8 || !en ? s : drawable(en); };
+const bibleLandLabels = () => ({ type: 'FeatureCollection', features: Object.entries(bible.data.lands).map(([k, l]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: l.lp }, properties: { k, label: bibleLabel(l.lab, l.en.lab) } })) });
 function loadBible() {
   if (!bible.loading) bible.loading = Promise.all([getJSON('data/bible.json'), getJSON('data/bible-lands.json')]).then(([d, lands]) => {
+    localizeBible(d);
     d.byId = Object.fromEntries(d.places.map(p => [p.id, p]));
     bible.data = d; addBibleLayers(lands); paintTheme();
   }).catch(e => { bible.loading = null; throw e; });
@@ -3611,12 +3651,12 @@ function loadBible() {
 const bibleVisible = () => bible.data.places.filter(p => bible.group === 'all' || p.g.includes(bible.group));
 function bibleFeatures() {
   return { type: 'FeatureCollection', features: bibleVisible().map(p => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [p.ll[1], p.ll[0]] },
-    properties: { id: p.id, name: drawable(p.n), color: BIBLE_COLORS[bible.group === 'all' ? mainGroup(p) : bible.group], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
+    properties: { id: p.id, name: bibleLabel(p.n, p.en.n), color: BIBLE_COLORS[bible.group === 'all' ? mainGroup(p) : bible.group], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
 }
 function addBibleLayers(lands) {
   const d = bible.data;
   map.addSource('b-lands', { type: 'geojson', data: lands, tolerance: 0.5 });
-  map.addSource('b-labels', { type: 'geojson', data: { type: 'FeatureCollection', features: Object.entries(d.lands).map(([k, l]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: l.lp }, properties: { k, label: l.lab } })) } });
+  map.addSource('b-labels', { type: 'geojson', data: bibleLandLabels() });
   map.addSource('b-places', { type: 'geojson', data: bibleFeatures() });
   map.addSource('b-sel', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   const hide = { visibility: 'none' };
@@ -3712,8 +3752,8 @@ function bibleSearch(q) {
   const d = bible.data; if (!d) { resEl.innerHTML = `<div class="note">${LOADER(tr('bSearchLoading'), 'inline')}</div>`; return; }
   const toks = q.split(/\s+/).filter(Boolean);
   const hit = (s) => { const k = fold(s); return toks.every(t => k.includes(t)); };
-  const lands = Object.entries(d.lands).filter(([k, l]) => hit([l.n, l.a, l.also].join(' ')));
-  const places = d.places.filter(p => hit([p.n, p.a, d.lands[p.c].n, d.lands[p.c].a].join(' ')))
+  const lands = Object.entries(d.lands).filter(([k, l]) => hit([l.n, l.a, l.also, l.en.n, l.en.a, l.en.also].join(' ')));
+  const places = d.places.filter(p => hit([p.n, p.a, p.en.n, p.en.a, d.lands[p.c].n, d.lands[p.c].a].join(' ')))
     .sort((a, b) => (fold(a.n).startsWith(toks[0]) ? 0 : 1) - (fold(b.n).startsWith(toks[0]) ? 0 : 1));
   const ico = (c) => `<i style="width:9px;height:9px;border-radius:50%;background:${c};justify-self:center"></i>`;
   const rows = [...lands.map(([k, l]) => `<button role="option" data-l="${k}">${ico('transparent;box-shadow:inset 0 0 0 2px #e8b84a')}<div><span class="nm">${esc(l.n)}</span><span class="loc">${esc(tr('bCountryOnce', { a: l.a }))}</span></div></button>`),
@@ -3820,7 +3860,7 @@ async function fillNearby(p) {
   const recs = await Promise.all(near.map(([, i]) => shardFor(i).catch(() => null)));
   if ((state.mode === 'jesus' ? life.sel : bible.sel) !== p || !$('bNear')) return;
   box.innerHTML = near.map(([km, i], k) => { const r = recs[k]; const t = TYPE_BY_CODE[state.typ[i] & 7];
-    return `<button class="near" data-i="${i}"><i style="background:${t.color}"></i><span><b>${esc(r ? r[0] : t.one)}</b><small>${esc([t.one, r && r[2], km < 1 ? tr('awayM', { d: fmt(Math.round(km * 1000)) }) : tr('awayKm', { d: km.toLocaleString(i18n.locale, { maximumFractionDigits: 1, minimumFractionDigits: 1 }) })].filter(Boolean).join(' · '))}</small></span></button>`; }).join('');
+    return `<button class="near" data-i="${i}"><i style="background:${t.color}"></i><span><b>${esc(r ? churchName(i, r[0]) : t.one)}</b><small>${esc([t.one, r && churchTown(i, r[2]), km < 1 ? tr('awayM', { d: fmt(Math.round(km * 1000)) }) : tr('awayKm', { d: km.toLocaleString(i18n.locale, { maximumFractionDigits: 1, minimumFractionDigits: 1 }) })].filter(Boolean).join(' · '))}</small></span></button>`; }).join('');
 }
 $('cardBody').addEventListener('click', (e) => {
   const n = e.target.closest('button.near'); if (n) { const i = +n.dataset.i; setMode('churches', { fly: false }).then(() => selectChurch(i, { fly: true })); return; }
@@ -3830,7 +3870,7 @@ $('cardBody').addEventListener('click', (e) => {
   const l = e.target.closest('[data-goland]'); if (l) openBibleLand(l.dataset.goland);
 });
 const list = (items) => items && items.length ? `<ul class="bl">${items.map(t => `<li>${withRefs(t)}</li>`).join('')}</ul>` : '';
-const groupLabel = (k) => (bible.data.groups.find(g => g.k === k) || {}).label || k;
+const groupLabel = (k) => tr('bg_' + k);
 const bibleLink = (q) => location.origin + location.pathname + '?' + q;
 function bibleShare(url, title) {
   $('bShare').addEventListener('click', async () => {
@@ -3844,7 +3884,7 @@ const SHARE_ICON = '<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><ci
 async function openBiblePlace(id, { fly = true } = {}) {
   if (state.mode !== 'bible') await setMode('bible', { fly: false });
   const d = bible.data, p = d && d.byId[id]; if (!p) return;
-  if (!bible.sel || bible.sel.id !== id) track('bible-place/' + (p.n || id));
+  if (!bible.sel || bible.sel.id !== id) track('bible-place/' + (p.en.n || id));
   const land = d.lands[p.c], wide = innerWidth > 640;
   state.selected = -1; bibleSel(p); setLandHi(p.c); lastInteract = performance.now();
   if (fly) map.flyTo({ center: [p.ll[1], p.ll[0]], zoom: Math.max(map.getZoom(), 9.5), pitch: 30, speed: 1.3, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 }, essential: true });
@@ -4325,7 +4365,7 @@ document.addEventListener('ccf-lang', renderThemes);
 
 /* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
 const hooks = {};
-window.ccf = { track, map, state, selectChurch, closeCard, shardFor, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
+window.ccf = { track, map, state, selectChurch, closeCard, shardFor, churchName, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
   layers: new Promise(r => { hooks.layers = r; }), opened: new Promise(r => { hooks.opened = r; }) };
 
 /* ---------- boot ---------- */
@@ -4374,8 +4414,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="dev/app/engage.js?v=96"></script>
-<script src="dev/app/mobile.js?v=96"></script>
+<script src="dev/app/engage.js?v=101"></script>
+<script src="dev/app/mobile.js?v=101"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }

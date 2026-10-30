@@ -515,5 +515,8 @@
   "listening": "Ndiko ndumviriza… vuga ingoro y’Imana canke igisagara",
   "micBlocked": "Mikoro yabujijwe. Yemere mu mategeko ya mushakisha kugira urondere mw’ijwi.",
   "voiceFailed": "Kurondera mw’ijwi ntibikora ubu. Turagusavye wandike ico urondera.",
-  "clearSearch": "Futa Ivyo Urondera"
+  "clearSearch": "Futa Ivyo Urondera",
+  "nm_c": "Ishengero Gatolika rya {x}",
+  "nm_k": "Katedrale ya {x}",
+  "nm_s": "Ingoro nyeranda ya {x}"
 }
