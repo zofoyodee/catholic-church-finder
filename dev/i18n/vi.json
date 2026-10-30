@@ -507,5 +507,8 @@
   "listening": "Đang nghe… hãy nói tên nhà thờ hoặc thị trấn",
   "micBlocked": "Micrô đang bị chặn. Hãy cho phép trong cài đặt trình duyệt để tìm bằng giọng nói.",
   "voiceFailed": "Tìm bằng giọng nói hiện không hoạt động. Vui lòng gõ nội dung cần tìm.",
-  "clearSearch": "Xóa Tìm Kiếm"
+  "clearSearch": "Xóa Tìm Kiếm",
+  "nm_c": "Nhà thờ Công giáo {x}",
+  "nm_k": "Nhà thờ chính tòa {x}",
+  "nm_s": "Đền thánh {x}"
 }

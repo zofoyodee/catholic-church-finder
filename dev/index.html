@@ -706,7 +706,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/desktop.css?v=103">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-30 17:00 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-30 17:02 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -1140,6 +1140,7 @@ function applyStatic() {
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = tr(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-attr]').forEach(el => { for (const pair of el.dataset.i18nAttr.split(';')) { const [attr, key] = pair.split(':'); el.setAttribute(attr, tr(key)); } });
   document.title = tr('app');
+  try { searchLabels(); } catch (e) {}  // the search hint, cut to fit on phones
   const sel = $('langSel');
   if (!sel.options.length) sel.innerHTML = [...LANGS].sort((a, b) => a.name.localeCompare(b.name, 'en')).map(l => `<option value="${l.code}" lang="${l.code}">${l.name}</option>`).join('');
   sel.value = i18n.code; sel.setAttribute('aria-label', tr('language')); sel.parentNode.title = tr('language');
@@ -1266,7 +1267,7 @@ const OTHER_SCRIPT = /[^\u0000-\u036f\u1e00-\u1eff\u2000-\u2bff\ufe00-\ufe0f\u{1
 const NAME_LANG = { ko: 'ko', cyr: 'ru', ar: 'ar', th: 'th', el: 'el', ta: 'ta', ml: 'ml', deva: 'hi', he: 'he', ka: 'ka', hy: 'hy', et: 'am', lo: 'lo', km: 'km', si: 'si', bn: 'bn' };
 const LANG_SCRIPT = { ko: 'ko', zh: 'cjk', ja: 'cjk', ru: 'cyr', uk: 'cyr', ar: 'ar', ta: 'ta', ml: 'ml', hi: 'deva', gom: 'deva' };
 function loadNamesX() {
-  return namesX || (namesX = getJSON('data/names-x.json').then(d => { namesXData = d; }).catch(e => { namesX = null; }));
+  return namesX || (namesX = getJSON('dev/data/names-x.json').then(d => { namesXData = d; }).catch(e => { namesX = null; }));
 }
 function churchTown(i, raw) {
   const x = namesXData[i];
@@ -3365,7 +3366,7 @@ qClear.addEventListener('click', () => {
     const r = rec; rec = null; clearTimeout(quiet);
     r.onresult = r.onerror = r.onend = null;
     try { r.abort(); } catch (e) {}
-    btn.classList.remove('on'); btn.setAttribute('aria-pressed', 'false'); qEl.placeholder = qEl.title = tr('searchPh');
+    btn.classList.remove('on'); btn.setAttribute('aria-pressed', 'false'); setSearchPh(tr('searchPh'));
     qEl.value = heard; fitTools();
     if (heard) { track('voice-search'); qEl.dispatchEvent(new Event('input')); clearTimeout(qTimer); loadSearch().catch(() => {}); runSearch(); }
   }
@@ -3725,11 +3726,18 @@ $('modeChurches').parentElement.addEventListener('keydown', (e) => {
   const at = MODE_TABS.findIndex(([, k]) => k === state.mode), step = (e.key === 'ArrowRight') !== !!i18n.rtl ? 1 : -1;
   const [id, next] = MODE_TABS[(at + step + MODE_TABS.length) % MODE_TABS.length]; setMode(next); $(id).focus();
 });
+// phones show the hint up to its examples ("Search a church or town"), which fits the narrow box;
+// the title keeps the whole hint for a mouse to read where the box cuts it short
+function setSearchPh(text) {
+  qEl.title = text;
+  qEl.placeholder = phoneNow() ? text.split(/[,，、،(（:;]/)[0].trim() || text : text;
+}
 function searchLabels() {
   const pre = { bible: 'bS', jesus: 'jS' }[state.mode] || 's';
-  qEl.placeholder = qEl.title = tr(pre + 'earchPh');  // the title shows the whole hint where the box cuts it short
+  setSearchPh(tr(pre + 'earchPh'));
   qEl.setAttribute('aria-label', tr(pre + 'earchLabel'));
 }
+matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)').addEventListener('change', () => { if (!$('micBtn') || $('micBtn').getAttribute('aria-pressed') !== 'true') searchLabels(); });
 function bibleTagline() {
   const n = bibleVisible().length, lands = bible.group === 'all' ? Object.keys(bible.data.lands).length : new Set(bibleVisible().map(p => p.c)).size;
   $('tagline').innerHTML = tr('bTagline', { n, lands: fmt(lands) });
