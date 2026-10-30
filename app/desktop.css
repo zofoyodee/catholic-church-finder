@@ -46,7 +46,6 @@
 .wide .ctrls { justify-items: center; gap: 10px; }
 .wide .ctrls button { width: 44px; height: 44px; padding: 0; border-radius: 50%; display: grid; place-items: center; }
 .wide .ctrls svg { width: 20px; height: 20px; }
-.wide .ctrls #nearBtn svg { stroke: var(--gold); }
 .wide .ctrls .lbl { display: none; }
 
 /* the menu: a panel above the bottom bar, in two columns; a click anywhere else closes it */
