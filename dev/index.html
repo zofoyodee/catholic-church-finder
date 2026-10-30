@@ -705,7 +705,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/desktop.css?v=96">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-27 03:45 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-10-30 16:39 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -3943,7 +3943,17 @@ const lifeEvents = () => life.era === 'rosary' ? life.data.mysteries : life.data
 const lifeColor = (e) => life.era === 'rosary' ? roColor(e) : life.data.color[e.e];
 // pull back from each place's close-up zoom so the town and the places around it stay in view
 // close enough to tell the towns apart, far enough to keep the neighbouring moments in view
-const lifeZoom = (p) => Math.min(p.z - 2, 9.5);
+// close in on the place, but keep its neighbours in view: the zoom at which the second-closest other
+// place of the life of Jesus sits within the open part of the screen (between 8 and 13)
+const lifeZoom = (p) => {
+  const others = life.data ? life.data.places.filter(q => q !== p) : [];
+  if (!others.length) return Math.min(p.z - 2, 9.5);
+  const near = others.map(q => metres(p.ll[0], p.ll[1], q.ll[0], q.ll[1])).filter(m => m > 300).sort((a, b) => a - b);
+  const d = near[Math.min(1, near.length - 1)] || 1e6;  // the second nearest, so a couple of neighbours show
+  const pad = lifePad(), open = Math.min(innerWidth - pad.left - pad.right, innerHeight - pad.top - pad.bottom);
+  const z = Math.log2(40075016 * Math.cos(p.ll[0] * Math.PI / 180) * Math.max(open, 120) * 0.42 / (512 * d));
+  return Math.max(8, Math.min(13, p.z - 2, z));
+};
 const lifeLL = (p) => [p.ll[1], p.ll[0]];
 // the globe can't draw every script: a name it would lose letters from is shown in English
 const lifeLabel = (p) => { const n = drawable(p.n); return n.length >= [...p.n].length * 0.8 || !p.en ? n : drawable(p.en.n); };
