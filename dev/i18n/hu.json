@@ -523,8 +523,5 @@
   "listening": "Figyelek… mondj egy templomot vagy települést",
   "micBlocked": "A mikrofon le van tiltva. Engedélyezd a böngésző beállításaiban a hangalapú kereséshez.",
   "voiceFailed": "A hangalapú keresés most nem működik. Kérjük, írd be, amit keresel.",
-  "clearSearch": "Keresés Törlése",
-  "nm_c": "{x} katolikus templom",
-  "nm_k": "{x} székesegyház",
-  "nm_s": "{x} kegyhely"
+  "clearSearch": "Keresés Törlése"
 }

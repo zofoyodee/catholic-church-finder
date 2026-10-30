@@ -507,8 +507,5 @@
   "listening": "Mendengarkan… sebutkan gereja atau kota",
   "micBlocked": "Mikrofon diblokir. Izinkan di pengaturan peramban untuk mencari dengan suara.",
   "voiceFailed": "Pencarian suara sedang tidak berfungsi. Silakan ketik pencarian Anda.",
-  "clearSearch": "Hapus Pencarian",
-  "nm_c": "Gereja Katolik {x}",
-  "nm_k": "Katedral {x}",
-  "nm_s": "Tempat Ziarah {x}"
+  "clearSearch": "Hapus Pencarian"
 }

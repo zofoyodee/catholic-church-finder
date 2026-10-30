@@ -531,8 +531,5 @@
   "listening": "Poslušam … povejte cerkev ali kraj",
   "micBlocked": "Mikrofon je blokiran. Dovolite ga v nastavitvah brskalnika, da boste lahko iskali z glasom.",
   "voiceFailed": "Glasovno iskanje trenutno ne deluje. Prosimo, vpišite, kaj iščete.",
-  "clearSearch": "Počisti Iskanje",
-  "nm_c": "Katoliška cerkev {x}",
-  "nm_k": "Stolnica {x}",
-  "nm_s": "Božja pot {x}"
+  "clearSearch": "Počisti Iskanje"
 }
