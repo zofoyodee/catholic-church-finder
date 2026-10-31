@@ -12,6 +12,7 @@
 <link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar">
 <link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl">
 <link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem">
+<link rel="alternate" hreflang="ca" href="https://churchglobe.com/?lang=ca">
 <link rel="alternate" hreflang="ceb" href="https://churchglobe.com/?lang=ceb">
 <link rel="alternate" hreflang="cs" href="https://churchglobe.com/?lang=cs">
 <link rel="alternate" hreflang="de" href="https://churchglobe.com/?lang=de">
@@ -74,7 +75,7 @@
 <meta name="twitter:image" content="https://churchglobe.com/icons/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebSite","@id":"https://churchglobe.com/#website","name":"Catholic Church Finder","alternateName":"Church Globe","url":"https://churchglobe.com/","inLanguage":["en","ar","bcl","bem","ceb","cs","de","es","fil","fr","gn","gom","hi","hil","hr","ht","hu","id","ig","ilo","it","ja","ki","ko","la","lg","ln","lt","mg","ml","nl","ny","pl","pt","qu","rn","ru","rw","sk","sl","sn","sq","sw","ta","tet","uk","vi","war","yo","zh"]},
+{"@type":"WebSite","@id":"https://churchglobe.com/#website","name":"Catholic Church Finder","alternateName":"Church Globe","url":"https://churchglobe.com/","inLanguage":["en","ar","bcl","bem","ca","ceb","cs","de","es","fil","fr","gn","gom","hi","hil","hr","ht","hu","id","ig","ilo","it","ja","ki","ko","la","lg","ln","lt","mg","ml","nl","ny","pl","pt","qu","rn","ru","rw","sk","sl","sn","sq","sw","ta","tet","uk","vi","war","yo","zh"]},
 {"@type":"WebApplication","name":"Catholic Church Finder","url":"https://churchglobe.com/","isPartOf":{"@id":"https://churchglobe.com/#website"},"applicationCategory":"ReferenceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and WebGL","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"image":"https://churchglobe.com/icons/og-image.png","description":"Find a Catholic church anywhere in the world on an interactive 3D globe. See Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ."}
 ]}
 </script>
@@ -852,6 +853,7 @@ const LANGS = [
   ['gn', 'Avañeʼẽ'], ['ta', 'தமிழ்'], ['ny', 'Chichewa'], ['war', 'Winaray'], ['bem', 'Ichibemba', 'en'], ['ki', 'Gĩkũyũ'],
   ['yo', 'Yorùbá'], ['lt', 'Lietuvių'], ['sn', 'chiShona'], ['hi', 'हिन्दी'], ['sl', 'Slovenščina'], ['cs', 'Čeština'],
   ['tet', 'Tetun'], ['gom', 'Konknni'], ['ru', 'Русский'], ['ja', '日本語'], ['sq', 'Shqip'], ['la', 'Latina'],
+  ['ca', 'Català'],
 ].map(([code, name, wiki, locale]) => ({ code, name, wiki: wiki || code, locale: locale || code }));
 const LANG_BY = Object.fromEntries(LANGS.map(l => [l.code, l]));
 const RTL = new Set(['ar']);
