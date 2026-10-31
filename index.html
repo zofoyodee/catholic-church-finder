@@ -1138,6 +1138,8 @@ function applyStatic() {
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = tr(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-attr]').forEach(el => { for (const pair of el.dataset.i18nAttr.split(';')) { const [attr, key] = pair.split(':'); el.setAttribute(attr, tr(key)); } });
   document.title = tr('app');
+  const canvas = document.querySelector('#map canvas');  // MapLibre names its canvas "Map" in English
+  if (canvas) canvas.setAttribute('aria-label', tr('mapLabel'));
   try { searchLabels(); } catch (e) {}  // the search hint, cut to fit on phones
   const sel = $('langSel');
   if (!sel.options.length) sel.innerHTML = [...LANGS].sort((a, b) => a.name.localeCompare(b.name, 'en')).map(l => `<option value="${l.code}" lang="${l.code}">${l.name}</option>`).join('');
@@ -2066,6 +2068,7 @@ const map = new maplibregl.Map({
   attributionControl: false, renderWorldCopies: false, maxPitch: 60, dragRotate: true,
 });
 window.__map = map;
+langReady.then(() => map.getCanvas().setAttribute('aria-label', tr('mapLabel')));
 // On phones the padding a camera move leaves behind adds to a fit's own, and together they can leave
 // no room at all (MapLibre then quietly gives up). A fit there starts from none and shrinks its padding to fit.
 {
@@ -2467,7 +2470,10 @@ async function patronLocal(title, wiki) {
   const bio = saints && saints[base.key];
   if (bio) return { ...base, name: bio[0], feast: bio[1], text: bio[2], url: mine ? mine.url : '', wiki: true };
   if (mine && mine.text && OUTSIDER_BY[wiki]) return { ...base, name: mine.name, feast: '', text: mine.text, url: mine.url, wiki: true };
-  return base;
+  // nothing written in the reader's language: keep the name and picture, never the English text
+  const name = mine ? mine.name : td(base.name);
+  if (!mine && name === base.name) return null;
+  return { ...base, name, feast: '', text: '', url: mine ? mine.url : '', wiki: true };
 }
 async function patronInfo(title, wiki = 'en') {
   const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 9000);
@@ -2673,12 +2679,12 @@ async function showAbout(i, rec) {
   if (a.gallery.length > 1) hero.insertAdjacentHTML('beforeend', `<button class="gal-btn" data-g="0" aria-label="${esc(tr('openGallery', { n: a.gallery.length }))}">${icon.photo}<span>${esc(tr('photos', { n: a.gallery.length }))}</span></button>`);
   const pt = a.patron;
   const patronHTML = pt ? `<div class="patron">
-      ${pt.img ? `<a class="pimg" href="${esc(pt.img.page)}" target="_blank" rel="noopener" title="Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(pt.img.src)}" alt="${esc(pt.name)}"></a>` : ''}
+      ${pt.img ? `<a class="pimg" href="${esc(pt.img.page)}" target="_blank" rel="noopener" title="${esc(tr('photoCredit', { author: pt.img.author, license: pt.img.license }))}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(pt.img.src)}" alt="${esc(pt.name)}"></a>` : ''}
       <div><div class="plabel">${esc(tr(pt.sure ? 'dedicatedTo' : 'namedFor'))}</div><b>${esc(pt.name)}</b>
       ${pt.feast ? `<div class="feast">${esc(tr('feastDay', { feast: pt.feast }))}</div>` : ''}
       ${pt.text ? `<p>${esc(pt.text)}</p>` : ''}
       ${pt.url ? `<a class="more" href="${esc(pt.url)}" target="_blank" rel="noopener">${esc(pt.wiki ? tr('aboutOnWiki', { name: pt.name }) : tr('learnMoreFM'))}</a>` : ''}
-      ${pt.img ? `<small>Image: ${esc(pt.img.author)} · ${esc(pt.img.license)}</small>` : ''}</div>
+      ${pt.img ? `<small>${esc(tr('photoCredit', { author: pt.img.author, license: pt.img.license }))}</small>` : ''}</div>
     </div>` : '';
   if (!rows.length && !a.extract && a.gallery.length < 2 && !pt) { box.innerHTML = ''; return; }
   box.innerHTML = `<div class="sect about-church">
