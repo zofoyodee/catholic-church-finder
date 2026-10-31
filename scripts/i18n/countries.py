@@ -13,6 +13,8 @@ WIKI = {'fil': 'tlwiki', 'ig': 'igwiki', 'ilo': 'ilowiki', 'ht': 'htwiki', 'bcl'
         'zu': 'zuwiki', 'ak': 'twwiki'}
 # Natural Earth gives some ISO codes to an outlying piece first; these are the countries themselves
 FIX = {'AU': 'Q408', 'BR': 'Q155', 'FR': 'Q142', 'KZ': 'Q232'}
+# where that Wikipedia keeps the English title or has no article
+OVERRIDE = {'zu': {'IN': 'INdiya', 'PH': 'IPhilippines'}}
 
 ccq, sl = json.load(open(sys.argv[1])), json.load(open(sys.argv[2]))
 ccq.update(FIX)
@@ -24,5 +26,6 @@ for lang, wiki in WIKI.items():
         t = sl.get(q[1:], {}).get(wiki)
         if t:
             names[cc.replace('CN-', '')] = re.sub(r'\s*\([^)]*\)$', '', t.replace('_', ' '))
+    names.update(OVERRIDE.get(lang, {}))
     json.dump(dict(sorted(names.items())), open(os.path.join(out, lang + '.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
     print(lang, len(names))
