@@ -700,6 +700,10 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   .vigil .flame, .vigil .halo, .bstar { animation: none; }
   .card .hero img.photo, .card .hero .vigil { transition: none; }
 }
+/* globe names drawn as page text where the map font can't shape the script */
+.glabel { position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none; white-space: nowrap; font-size: 12.5px; font-weight: 500; line-height: 1.2; color: #fdf6e3;
+  text-shadow: 0 0 2px var(--halo, #05070d), 0 0 3px var(--halo, #05070d), 0 0 5px var(--halo, #05070d); }
+.glabel.land { font-size: 13px; letter-spacing: 0.1em; opacity: 0.85; color: #f3d58c; }
 </style>
 <link rel="stylesheet" href="dev/app/engage.css?v=106">
 <link rel="stylesheet" href="dev/app/mobile.css?v=106">
@@ -3628,6 +3632,7 @@ $('langSel').addEventListener('change', async (e) => {
   searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
   if (life.data) { localizeLife(life.data); map.getSource('j-places').setData(lifeGeo().places); delete $('cardBody').dataset.jplace; }  // forget the open place so its heading is redrawn too
   if (bible.data) { localizeBible(bible.data); map.getSource('b-places').setData(bibleFeatures()); map.getSource('b-labels').setData(bibleLandLabels()); }
+  htmlLabels.refresh();
   if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } if (!$('card').hidden && bible.sel) { if (bible.sel.land) openBibleLand(bible.sel.land, { fly: false }); else openBiblePlace(bible.sel.id, { fly: false }); } }
   else if (state.mode === 'jesus') { if (life.data) { renderLifeChips(); lifeTagline(); buildTimeline(); markTrack(); } if (!$('card').hidden && $('cardBody').dataset.rosary) openRosary(); else if (!$('card').hidden && life.sel) { if ($('cardBody').dataset.jk) openLifeMoment(+$('cardBody').dataset.jk); else openLifePlace(life.sel.id, { fly: false }); } }
   else { renderChips(); updateTagline(); }
@@ -3659,21 +3664,59 @@ function localizeBible(d) {
   d.places.forEach(p => keep(p, ['n', 'a', 's', 'b', 't']));
   Object.values(d.lands).forEach(l => { keep(l, ['n', 'a', 'also', 's', 'b', 't']); l.en.lab = l.en.lab || l.lab; l.lab = content[l.en.lab] ? content[l.en.lab].toLocaleUpperCase(i18n.locale) : l.en.lab; });
 }
+/* ---------- names in scripts the globe's font can't shape (Telugu, Hindi, Tamil...) are laid over it as page text ---------- */
+const htmlName = (shown, full) => full && shown !== drawable(full) ? full : '';
+const htmlLabels = (() => {
+  const SETS = {
+    'b-land-label': { feats: () => bible.data ? bibleLandLabels().features : [], show: (p, z) => z < 6, anchor: 'center', offset: [0, 0], cls: 'land' },
+    'b-pt-name': { feats: () => bible.data ? bibleFeatures().features : [], show: (p, z) => p.rank === 0 || z >= 5.6, anchor: 'top', offset: [0, 8], cls: 'pin' },
+    'j-pt-name': { feats: () => life.data ? lifeGeo().places.features : [], show: (p, z) => z >= 4.5 && (p.rank === 0 || z >= 8.5), anchor: 'top', offset: [0, 8], cls: 'pin' },
+  };
+  const live = new Map(); let feats = {}, raf = 0, hooked = false;
+  function draw() {
+    raf = 0; const z = map.getZoom(), want = new Set();
+    for (const [id, set] of Object.entries(SETS)) {
+      if (!map.getLayer(id) || map.getLayoutProperty(id, 'visibility') === 'none') continue;
+      const color = map.getPaintProperty(id, 'text-color'), halo = map.getPaintProperty(id, 'text-halo-color');
+      for (const f of feats[id] || []) {
+        const p = f.properties; if (!p.html || !set.show(p, z)) continue;
+        const key = id + '|' + (p.id || p.k) + '|' + p.html; want.add(key);
+        let mk = live.get(key);
+        if (!mk) {
+          const el = document.createElement('div'); el.className = 'glabel ' + set.cls; el.textContent = p.html; el.dataset.rank = p.rank;
+          mk = new maplibregl.Marker({ element: el, anchor: set.anchor, offset: set.offset, opacityWhenCovered: '0' }).setLngLat(f.geometry.coordinates).addTo(map); live.set(key, mk);
+        }
+        const el = mk.getElement(); if (typeof color === 'string') el.style.color = color; if (typeof halo === 'string') el.style.setProperty('--halo', halo);
+      }
+    }
+    for (const [k, mk] of live) if (!want.has(k)) { mk.remove(); live.delete(k); }
+    // like the map's own labels, a name that would overlap one already placed is left out (land names and main places first)
+    const kept = [], order = [...live].sort(([a], [b]) => rankOf(a) - rankOf(b));
+    for (const [k, mk] of order) {
+      const el = mk.getElement(); el.style.visibility = '';
+      const r = el.getBoundingClientRect(), box = [r.left - 3, r.top - 2, r.right + 3, r.bottom + 2];
+      if (kept.some(o => box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1])) el.style.visibility = 'hidden'; else if (r.width) kept.push(box);
+    }
+  }
+  const rankOf = (k) => k.startsWith('b-land-label') ? 0 : live.get(k).getElement().dataset.rank === '0' ? 1 : 2;
+  const later = () => { if (!raf) raf = requestAnimationFrame(draw); };
+  return { refresh() { if (!map.getLayer('b-pt-name') && !map.getLayer('j-pt-name')) return; if (!hooked) { hooked = true; map.on('zoom', later); map.on('moveend', later); } feats = Object.fromEntries(Object.entries(SETS).map(([id, s]) => [id, s.feats()])); later(); }, later };
+})();
 // the globe can't draw every script: a name it would lose letters from is shown in English
 const bibleLabel = (n, en) => { const s = drawable(n); return s.length >= [...n].length * 0.8 || !en ? s : drawable(en); };
-const bibleLandLabels = () => ({ type: 'FeatureCollection', features: Object.entries(bible.data.lands).map(([k, l]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: l.lp }, properties: { k, label: bibleLabel(l.lab, l.en.lab) } })) });
+const bibleLandLabels = () => ({ type: 'FeatureCollection', features: Object.entries(bible.data.lands).map(([k, l]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: l.lp }, properties: { k, label: bibleLabel(l.lab, l.en.lab), html: htmlName(bibleLabel(l.lab, l.en.lab), l.lab) } })) });
 function loadBible() {
   if (!bible.loading) bible.loading = Promise.all([getJSON('data/bible.json'), getJSON('data/bible-lands.json')]).then(([d, lands]) => {
     localizeBible(d);
     d.byId = Object.fromEntries(d.places.map(p => [p.id, p]));
-    bible.data = d; addBibleLayers(lands); paintTheme();
+    bible.data = d; addBibleLayers(lands); paintTheme(); htmlLabels.refresh();
   }).catch(e => { bible.loading = null; throw e; });
   return bible.loading;
 }
 const bibleVisible = () => bible.data.places.filter(p => bible.group === 'all' || p.g.includes(bible.group));
 function bibleFeatures() {
   return { type: 'FeatureCollection', features: bibleVisible().map(p => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [p.ll[1], p.ll[0]] },
-    properties: { id: p.id, name: bibleLabel(p.n, p.en.n), color: BIBLE_COLORS[bible.group === 'all' ? mainGroup(p) : bible.group], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
+    properties: { id: p.id, name: bibleLabel(p.n, p.en.n), html: htmlName(bibleLabel(p.n, p.en.n), p.n), color: BIBLE_COLORS[bible.group === 'all' ? mainGroup(p) : bible.group], rank: BIBLE_RANK.has(p.id) ? 0 : 1 } })) };
 }
 function addBibleLayers(lands) {
   const d = bible.data;
@@ -3691,11 +3734,11 @@ function addBibleLayers(lands) {
     'circle-color': ['get', 'color'], 'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, ['case', ['==', ['get', 'rank'], 0], 4, 3], 8, 7, 14, 10],
     'circle-stroke-color': '#05070d', 'circle-stroke-width': 1.4 } });
   map.addLayer({ id: 'b-land-label', type: 'symbol', source: 'b-labels', maxzoom: 6.5, layout: { ...hide,
-    'text-field': ['get', 'label'], 'text-font': ['NotoSansMedium'], 'text-letter-spacing': 0.25, 'text-max-width': 8,
+    'text-field': ['case', ['!=', ['get', 'html'], ''], '', ['get', 'label']], 'text-font': ['NotoSansMedium'], 'text-letter-spacing': 0.25, 'text-max-width': 8,
     'text-size': ['interpolate', ['linear'], ['zoom'], 2, 10, 5, 15] },
     paint: { 'text-color': '#f3d58c', 'text-opacity': ['interpolate', ['linear'], ['zoom'], 5.5, 0.85, 6.5, 0], 'text-halo-color': '#05070d', 'text-halo-width': 1.6 } });
   map.addLayer({ id: 'b-pt-name', type: 'symbol', source: 'b-places', layout: { ...hide,
-    'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'], 'text-size': ['interpolate', ['linear'], ['zoom'], 3, 10.5, 8, 13, 12, 14],
+    'text-field': ['case', ['!=', ['get', 'html'], ''], '', ['get', 'name']], 'text-font': ['NotoSansMedium'], 'text-size': ['interpolate', ['linear'], ['zoom'], 3, 10.5, 8, 13, 12, 14],
     'text-anchor': 'top', 'text-offset': [0, 0.8], 'text-max-width': 9, 'symbol-sort-key': ['get', 'rank'], 'text-padding': 3 },
     filter: ['any', ['>=', ['zoom'], 5.6], ['==', ['get', 'rank'], 0]],
     paint: { 'text-color': '#fdf6e3', 'text-halo-color': '#05070d', 'text-halo-width': 1.5, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 3, 0, 3.6, 1] } });
@@ -3735,6 +3778,7 @@ async function setMode(m, { fly = true } = {}) {
   for (const id of CHURCH_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'churches' ? 'visible' : 'none');
   for (const id of BIBLE_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'bible' ? 'visible' : 'none');
   for (const id of JESUS_LAYERS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', m === 'jesus' ? 'visible' : 'none');
+  htmlLabels.refresh();
   if (m === 'bible') { renderBibleChips(); bibleTagline(); if (fly) bibleOverview(); }
   else if (m === 'jesus') { renderLifeChips(); lifeTagline(); if (fly) { lifeOverview(); const first = lifeEvents()[0]; if (first) goEvent(first.i, { fly: false, card: true }); } }  // open on the first moment, details showing
   else { renderChips(); updateTagline(); map.once('idle', updateNames); if (fly) map.flyTo({ center: [-97.5, 38.5], zoom: innerWidth < 640 ? 2.3 : 3.3, pitch: 0, bearing: 0, padding: viewPad(), duration: reduceMotion ? 0 : 2400, essential: true }); }
@@ -3771,7 +3815,7 @@ $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'bible' || !b.dataset.g) return;
   bible.group = b.dataset.g === bible.group ? 'all' : b.dataset.g;
   renderBibleChips(); bibleTagline();
-  map.getSource('b-places').setData(bibleFeatures());
+  map.getSource('b-places').setData(bibleFeatures()); htmlLabels.refresh();
 });
 
 /* search over places and lands */
@@ -4001,7 +4045,7 @@ function loadLife() {
     const ro = d.rosary.sets.map(r => r.k);
     d.mysteries = d.events.filter(e => e.ro).sort((a, b) => ro.indexOf(a.ro[0]) - ro.indexOf(b.ro[0]) || a.ro[1] - b.ro[1]);
     for (const p of d.places) p.ev = d.events.filter(e => e.p === p.id);
-    life.data = d; addLifeLayers(); paintTheme(); buildTimeline();
+    life.data = d; addLifeLayers(); paintTheme(); buildTimeline(); htmlLabels.refresh();
   }).catch(e => { life.loading = null; throw e; });
   return life.loading;
 }
@@ -4032,7 +4076,7 @@ function lifeGeo() {
     if (a !== b) route.push({ type: 'Feature', geometry: { type: 'LineString', coordinates: [lifeLL(a), lifeLL(b)] }, properties: { i: evs[j].i, color: lifeColor(evs[j]) } });
   }
   return {
-    places: { type: 'FeatureCollection', features: [...first].map(([id, e]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(d.byId[id]) }, properties: { id, name: lifeLabel(d.byId[id]), color: lifeColor(e), rank: JESUS_RANK.has(id) ? 0 : 1 } })) },
+    places: { type: 'FeatureCollection', features: [...first].map(([id, e]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: lifeLL(d.byId[id]) }, properties: { id, name: lifeLabel(d.byId[id]), html: htmlName(lifeLabel(d.byId[id]), d.byId[id].n), color: lifeColor(e), rank: JESUS_RANK.has(id) ? 0 : 1 } })) },
     route: { type: 'FeatureCollection', features: route },
   };
 }
@@ -4049,7 +4093,7 @@ function addLifeLayers() {
     'circle-color': ['get', 'color'], 'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, ['case', ['==', ['get', 'rank'], 0], 4, 3], 8, 6, 14, 9],
     'circle-stroke-color': '#05070d', 'circle-stroke-width': 1.4 } });
   map.addLayer({ id: 'j-pt-name', type: 'symbol', source: 'j-places', layout: { ...hide,
-    'text-field': ['get', 'name'], 'text-font': ['NotoSansMedium'], 'text-size': ['interpolate', ['linear'], ['zoom'], 3, 10.5, 8, 12.5, 12, 14],
+    'text-field': ['case', ['!=', ['get', 'html'], ''], '', ['get', 'name']], 'text-font': ['NotoSansMedium'], 'text-size': ['interpolate', ['linear'], ['zoom'], 3, 10.5, 8, 12.5, 12, 14],
     'text-anchor': 'top', 'text-offset': [0, 0.8], 'text-max-width': 9, 'symbol-sort-key': ['get', 'rank'], 'text-padding': 3 },
     filter: ['any', ['>=', ['zoom'], 8.5], ['==', ['get', 'rank'], 0]],
     paint: { 'text-color': '#fdf6e3', 'text-halo-color': '#05070d', 'text-halo-width': 1.5, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 4, 0, 5, 1] } });
@@ -4087,7 +4131,7 @@ $('chips').addEventListener('click', (e) => {
 function setLifeEra(era) {
   life.era = era;
   lifePause(); renderLifeChips(); lifeTagline(); renderNow();
-  const g = lifeGeo(); map.getSource('j-places').setData(g.places); map.getSource('j-route').setData(g.route);
+  const g = lifeGeo(); map.getSource('j-places').setData(g.places); map.getSource('j-route').setData(g.route); htmlLabels.refresh();
   const cur = life.data.events[life.k];
   if (cur && !lifeEvents().includes(cur)) life.k = -1;
   buildTimeline(); markTrack();
@@ -4371,7 +4415,7 @@ function paintTheme() {
   set('places', 'text-color', ['interpolate', ['linear'], ['zoom'], 2, m.label[0], 8, m.label[1]]); set('places', 'text-halo-color', m.halo);
   // names beside pins: light on the dark themes, dark ink on Parchment
   for (const [id, light] of [['pt-name', '#f3e9cf'], ['b-pt-name', '#fdf6e3'], ['j-pt-name', '#fdf6e3'], ['me-label', '#cfe3ff']]) { set(id, 'text-color', m.pinText || light); set(id, 'text-halo-color', m.halo); }
-  set('b-land-label', 'text-color', m.pinText ? '#8a5c10' : '#f3d58c'); set('b-land-label', 'text-halo-color', m.halo);
+  set('b-land-label', 'text-color', m.pinText ? '#8a5c10' : '#f3d58c'); set('b-land-label', 'text-halo-color', m.halo); htmlLabels.later();
   const st = m.streets;
   set('st-water', 'fill-color', st.water); set('st-park', 'fill-color', st.park); set('st-green', 'fill-color', st.park); set('st-building', 'fill-color', st.building);
   set('st-minor', 'line-color', st.minor); set('st-mid', 'line-color', st.mid); set('st-major', 'line-color', st.major); set('st-motorway', 'line-color', st.motorway);
