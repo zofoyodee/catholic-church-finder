@@ -854,6 +854,7 @@ const LANGS = [
   ['gn', 'Avañeʼẽ'], ['ta', 'தமிழ்'], ['ny', 'Chichewa'], ['war', 'Winaray'], ['bem', 'Ichibemba', 'en'], ['ki', 'Gĩkũyũ'],
   ['yo', 'Yorùbá'], ['lt', 'Lietuvių'], ['sn', 'chiShona'], ['hi', 'हिन्दी'], ['sl', 'Slovenščina'], ['cs', 'Čeština'],
   ['tet', 'Tetun'], ['gom', 'Konknni'], ['ru', 'Русский'], ['ja', '日本語'], ['sq', 'Shqip'], ['la', 'Latina'],
+  ['ca', 'Català'], ['ro', 'Română'], ['mt', 'Malti'],
 ].map(([code, name, wiki, locale]) => ({ code, name, wiki: wiki || code, locale: locale || code }));
 const LANG_BY = Object.fromEntries(LANGS.map(l => [l.code, l]));
 const RTL = new Set(['ar']);
@@ -2096,7 +2097,8 @@ let places = null;
 // city names on the map: Natural Earth's own columns, or each language's Wikipedia titles (scripts/i18n/city_names_wiki.py);
 // the rest read English (the map can't draw Hindi, Tamil, Malayalam or Konkani, and Bemba and Hiligaynon have no Wikipedia)
 const cityNames = new Map(), CITY_FILES = new Set(['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja',
-  'bcl', 'ceb', 'cs', 'fil', 'gn', 'hr', 'ht', 'ig', 'ilo', 'la', 'lg', 'ln', 'lt', 'mg', 'ny', 'qu', 'rn', 'rw', 'sk', 'sl', 'sn', 'sq', 'sw', 'tet', 'war', 'yo', 'ki']);
+  'bcl', 'ceb', 'cs', 'fil', 'gn', 'hr', 'ht', 'ig', 'ilo', 'la', 'lg', 'ln', 'lt', 'mg', 'ny', 'qu', 'rn', 'rw', 'sk', 'sl', 'sn', 'sq', 'sw', 'tet', 'war', 'yo', 'ki',
+  'ca', 'ro', 'mt', 'zu', 'ak']);
 /* ---------- streets once you zoom into a town: OpenStreetMap vector tiles from OpenFreeMap (free, no key) ---------- */
 function addStreets() {
   map.addSource('osm', { type: 'vector', url: 'https://tiles.openfreemap.org/planet', minzoom: 0, maxzoom: 14 });

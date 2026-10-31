@@ -16,7 +16,8 @@ import json, sys, os, re
 WIKI = {'bcl': 'bclwiki', 'ceb': 'cebwiki', 'cs': 'cswiki', 'fil': 'tlwiki', 'gn': 'gnwiki', 'hr': 'hrwiki', 'ht': 'htwiki',
         'ig': 'igwiki', 'ilo': 'ilowiki', 'la': 'lawiki', 'lg': 'lgwiki', 'ln': 'lnwiki', 'lt': 'ltwiki', 'mg': 'mgwiki',
         'ny': 'nywiki', 'qu': 'quwiki', 'rn': 'rnwiki', 'rw': 'rwwiki', 'sk': 'skwiki', 'sl': 'slwiki', 'sn': 'snwiki',
-        'sq': 'sqwiki', 'sw': 'swwiki', 'tet': 'tetwiki', 'war': 'warwiki', 'yo': 'yowiki', 'ki': 'kiwiki'}
+        'sq': 'sqwiki', 'sw': 'swwiki', 'tet': 'tetwiki', 'war': 'warwiki', 'yo': 'yowiki', 'ki': 'kiwiki',
+        'ca': 'cawiki', 'ro': 'rowiki', 'mt': 'mtwiki', 'zu': 'zuwiki', 'ak': 'twwiki'}
 
 # "City of" words that small Wikipedias put in front of a city's name, and Japanese "-shi"
 PREFIX = re.compile(r'^(Dakbayan sa|Lungsod sa|Lungsod ng|Siyudad ng|Syudad han|Siyudad han|Bungto han|Jiji la|Mji wa) ')
