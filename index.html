@@ -2872,7 +2872,9 @@ map.on('moveend', () => spinStep());
 for (const ev of ['mousedown', 'touchstart', 'wheel', 'dragstart']) map.on(ev, () => { lastInteract = performance.now(); });
 setInterval(spinStep, 1200);
 $('spin').addEventListener('click', () => {
-  state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning);
+  // spin left on from another tab stalls while the globe is zoomed in: a press then starts it turning rather than switching it off
+  const stalled = state.spinning && (map.getZoom() >= 3.2 || !$('card').hidden);
+  state.spinning = stalled || !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning);
   if (!state.spinning) { map.stop(); return; }
   lastInteract = 0;
   if (state.mode === 'jesus') lifePause();  // the timeline would fly the globe away again
@@ -3710,6 +3712,7 @@ async function setMode(m, { fly = true } = {}) {
   for (const [id, k] of MODE_TABS) $(id).setAttribute('aria-selected', m === k);
   document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
   document.body.classList.toggle('jesus-mode', m === 'jesus');
+  if ($('today')) $('today').classList.remove('asked');  // a church of the day card opened on another tab steps aside
   lifeStop(); $('life').hidden = m !== 'jesus' || !life.data;
   // a new tab flies to its own view: stop the spin so the Spin button starts it again instead of switching it off
   if (state.spinning) { state.spinning = false; $('spin').setAttribute('aria-pressed', 'false'); }
