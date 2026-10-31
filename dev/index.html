@@ -1147,10 +1147,14 @@ function applyStatic() {
   if (!sel.options.length) sel.innerHTML = [...LANGS].sort((a, b) => a.name.localeCompare(b.name, 'en')).map(l => `<option value="${l.code}" lang="${l.code}">${l.name}</option>`).join('');
   sel.value = i18n.code; sel.setAttribute('aria-label', tr('language')); sel.parentNode.title = tr('language');
 }
+let langSeq = 0;
 async function useLang(code) {
-  let dict;
+  const seq = ++langSeq;  // a later pick wins even if an earlier one's files arrive after it
+  let dict, cont;
   try { dict = await loadDict(code); } catch (e) { code = 'en'; dict = EN; }
-  content = await loadContent(code);
+  cont = await loadContent(code);
+  if (seq !== langSeq) return false;
+  content = cont;
   const l = LANG_BY[code];
   Object.assign(i18n, { code, dict, locale: l.locale, wiki: l.wiki, rtl: RTL.has(code) });
   plurals = new Intl.PluralRules(l.locale);
@@ -3608,7 +3612,7 @@ $('contactBtn').addEventListener('click', async () => {
 $('langSel').addEventListener('change', async (e) => {
   const code = e.target.value; track('language/' + code);
   try { localStorage.setItem(LANG_KEY, code); } catch (err) {}
-  await useLang(code);
+  if (await useLang(code) === false) return;
   if (!state.meta) return;
   searchLabels(); document.dispatchEvent(new Event('ccf-lang'));
   if (life.data) { localizeLife(life.data); map.getSource('j-places').setData(lifeGeo().places); delete $('cardBody').dataset.jplace; }  // forget the open place so its heading is redrawn too
