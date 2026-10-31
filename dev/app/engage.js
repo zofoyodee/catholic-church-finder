@@ -213,6 +213,7 @@ async function saintPicture(title) {
 }
 function showToday(open, keep) {
   const el = $('today'); if (!el) return;
+  if (open && ccf.state.mode !== 'churches') ccf.closeCard();  // in the Scripture tabs the day's card takes the place of the open moment or place
   el.hidden = !open; el.classList.toggle('asked', !!open); $('season') && $('season').setAttribute('aria-expanded', open);
   if (!open && !keep) { try { localStorage.setItem(TODAY_KEY, String(today.n)); } catch (e) {} }
 }
@@ -612,8 +613,10 @@ function applyView(k) {
 
 /* ---------- Bible Places mode: the church-only extras step aside ---------- */
 const bibleMode = () => document.body.classList.contains('bible-mode');
+let wasBible = bibleMode();
 new MutationObserver(() => {
-  const on = bibleMode();
+  const on = bibleMode(), turned = on !== wasBible; wasBible = on;
+  if (!turned) return;  // other body classes change too: only react when the tab really changes, so Today in the Church can open there
   if (on) { endTour(); showTours(false); showToday(false, true); }
   for (const id of ['notable-glow', 'notable-pin']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'none' : 'visible');
   if (map.getLayer('density')) map.setLayoutProperty('density', 'visibility', !on && view.density ? 'visible' : 'none');

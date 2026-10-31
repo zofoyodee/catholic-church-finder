@@ -195,7 +195,12 @@ async function fillToday() {
       <div><h2>${esc(s ? td(s.title) : dayTitle(today))}</h2><div class="rank">${esc(s ? rankName(s.rank) + (s.title !== today.title && today.title && !(s.rank === 'S' || s.rank === 'F') ? ' · ' + dayTitle(today) : '') : '')}</div></div></div>
     <button class="cotd" id="cotdGo"><small>${esc(T('cotd'))} · ${esc(why)}</small><b>${esc(name)}</b><span>${esc(where)}</span></button>
     <div class="row"><button class="btn primary" id="cotdVisit">${esc(T('visitGlobe'))}</button>${s && s.wiki ? `<a href="https://en.wikipedia.org/wiki/${encodeURIComponent(s.wiki.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(T('aboutSaint', { name: i18n && i18n.lang !== 'en' ? td(s.title) : s.title.replace(/^The /, 'the ') }))}</a>` : ''}</div>`;
-  const go = () => { showToday(false, true); ccf.selectChurch(cotd.i, { fly: true }); };
+  const go = async () => {
+    showToday(false, true);
+    // from a Scripture tab, go back to the Churches tab first so the church can be shown
+    if (ccf.state.mode !== 'churches' && ccf.setMode) await ccf.setMode('churches', { fly: false });
+    ccf.selectChurch(cotd.i, { fly: true });
+  };
   $('cotdGo').addEventListener('click', go);
   $('cotdVisit').addEventListener('click', go);
   $('todayClose').addEventListener('click', () => showToday(false));
@@ -213,6 +218,7 @@ async function saintPicture(title) {
 }
 function showToday(open, keep) {
   const el = $('today'); if (!el) return;
+  if (open && ccf.state.mode !== 'churches') ccf.closeCard();  // in the Scripture tabs the day's card takes the place of the open moment or place
   el.hidden = !open; $('season') && $('season').setAttribute('aria-expanded', open);
   if (!open && !keep) { try { localStorage.setItem(TODAY_KEY, String(today.n)); } catch (e) {} }
 }
@@ -612,8 +618,10 @@ function applyView(k) {
 
 /* ---------- Bible Places mode: the church-only extras step aside ---------- */
 const bibleMode = () => document.body.classList.contains('bible-mode');
+let wasBible = bibleMode();
 new MutationObserver(() => {
-  const on = bibleMode();
+  const on = bibleMode(), turned = on !== wasBible; wasBible = on;
+  if (!turned) return;  // other body classes change too: only react when the tab really changes, so Today in the Church can open there
   if (on) { endTour(); showTours(false); showToday(false, true); }
   for (const id of ['notable-glow', 'notable-pin']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'none' : 'visible');
   if (map.getLayer('density')) map.setLayoutProperty('density', 'visibility', !on && view.density ? 'visible' : 'none');

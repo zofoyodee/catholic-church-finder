@@ -702,9 +702,9 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
   .card .hero img.photo, .card .hero .vigil { transition: none; }
 }
 </style>
-<link rel="stylesheet" href="app/engage.css?v=106">
-<link rel="stylesheet" href="app/mobile.css?v=106">
-<link rel="stylesheet" href="app/desktop.css?v=106">
+<link rel="stylesheet" href="app/engage.css?v=107">
+<link rel="stylesheet" href="app/mobile.css?v=107">
+<link rel="stylesheet" href="app/desktop.css?v=107">
 </head>
 <body>
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
@@ -2875,6 +2875,7 @@ $('spin').addEventListener('click', () => {
   state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning);
   if (!state.spinning) { map.stop(); return; }
   lastInteract = 0;
+  if (state.mode === 'jesus') lifePause();  // the timeline would fly the globe away again
   // the globe only turns when it is seen whole: close the card and step back out first
   if (!$('card').hidden) closeCard();
   if (map.getZoom() >= 3.2) map.flyTo({ zoom: phoneNow() ? 0.9 : 1.6, pitch: 0, bearing: 0, padding: viewPad(), duration: reduceMotion ? 0 : 1600 });
@@ -3710,6 +3711,9 @@ async function setMode(m, { fly = true } = {}) {
   document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
   document.body.classList.toggle('jesus-mode', m === 'jesus');
   lifeStop(); $('life').hidden = m !== 'jesus' || !life.data;
+  // a new tab flies to its own view: stop the spin so the Spin button starts it again instead of switching it off
+  if (state.spinning) { state.spinning = false; $('spin').setAttribute('aria-pressed', 'false'); }
+  if ($('today')) $('today').hidden = true;
   closeCard(); showFavs(false); showNear(false); resEl.hidden = true; qEl.value = ''; fitTools(); tip.hidden = true; setHover(-1);
   searchLabels();
   if (m === 'bible') {
@@ -4382,7 +4386,7 @@ document.addEventListener('ccf-lang', renderThemes);
 
 /* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
 const hooks = {};
-window.ccf = { track, map, state, selectChurch, closeCard, shardFor, churchName, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
+window.ccf = { track, map, state, setMode, selectChurch, closeCard, shardFor, churchName, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
   layers: new Promise(r => { hooks.layers = r; }), opened: new Promise(r => { hooks.opened = r; }) };
 
 /* ---------- boot ---------- */
@@ -4431,8 +4435,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="app/engage.js?v=106"></script>
-<script src="app/mobile.js?v=106"></script>
+<script src="app/engage.js?v=107"></script>
+<script src="app/mobile.js?v=107"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }
