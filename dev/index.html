@@ -1131,7 +1131,15 @@ function loadContent(code) {
   if (!contents.has(code)) contents.set(code, fetch(new URL('dev/i18n/content/' + code + '.json', document.baseURI)).then(r => r.ok ? r.json() : {}).catch(e => { contents.delete(code); return {}; }));
   return contents.get(code);
 }
-let regionNames = null, langNames = null;
+let regionNames = null, langNames = null, countryLocal = null;
+// browsers have no country names in these languages, so they come from each language's Wikipedia (scripts/i18n/countries.py)
+const COUNTRY_FILES = new Set(['fil', 'ig', 'ilo', 'ht', 'bcl', 'gn', 'ny', 'war', 'sn', 'tet', 'la', 'mt', 'zu', 'ak']);
+const countryFiles = new Map();
+function loadCountries(code) {
+  if (!COUNTRY_FILES.has(code)) return Promise.resolve(null);
+  if (!countryFiles.has(code)) countryFiles.set(code, fetch(new URL('dev/i18n/countries/' + code + '.json', document.baseURI)).then(r => r.ok ? r.json() : null).catch(e => { countryFiles.delete(code); return null; }));
+  return countryFiles.get(code);
+}
 const dicts = new Map([['en', Promise.resolve(EN)]]);
 function loadDict(code) {
   if (!dicts.has(code)) dicts.set(code, fetch(new URL('dev/i18n/' + code + '.json', document.baseURI)).then(r => { if (!r.ok) throw new Error('i18n ' + r.status); return r.json(); }).then(d => ({ ...EN, ...d })).catch(e => { dicts.delete(code); throw e; }));
@@ -1154,8 +1162,9 @@ async function useLang(code) {
   let dict, cont;
   try { dict = await loadDict(code); } catch (e) { code = 'en'; dict = EN; }
   cont = await loadContent(code);
+  const ctry = await loadCountries(code);
   if (seq !== langSeq) return false;
-  content = cont;
+  content = cont; countryLocal = ctry;
   const l = LANG_BY[code];
   Object.assign(i18n, { code, dict, locale: l.locale, wiki: l.wiki, rtl: RTL.has(code) });
   plurals = new Intl.PluralRules(l.locale);
@@ -1194,7 +1203,7 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<'
 const langName = (w) => { const c = w === 'tl' ? 'fil' : w; try { return (langNames && langNames.of(c)) || c; } catch (e) { return c; } };
 // Chinese Wikipedia serves each reader's script variant on request
 const wikiInit = (wiki, signal) => ({ signal, headers: wiki === 'zh' ? { 'Accept-Language': 'zh-CN' } : {} });
-const countryName = (cc) => { if (!cc) return ''; try { return regionNames ? regionNames.of(cc) : cc; } catch (e) { return cc; } };
+const countryName = (cc) => { if (!cc) return ''; if (countryLocal && countryLocal[cc]) return countryLocal[cc]; try { return regionNames ? regionNames.of(cc) : cc; } catch (e) { return cc; } };
 
 async function getJSON(path) { const r = await fetch(BASE + path); if (!r.ok) throw new Error(path + ' ' + r.status); return r.json(); }
 
