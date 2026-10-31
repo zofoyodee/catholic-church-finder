@@ -2886,7 +2886,9 @@ map.on('moveend', () => spinStep());
 for (const ev of ['mousedown', 'touchstart', 'wheel', 'dragstart']) map.on(ev, () => { lastInteract = performance.now(); });
 setInterval(spinStep, 1200);
 $('spin').addEventListener('click', () => {
-  state.spinning = !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning);
+  // spin left on from another tab stalls while the globe is zoomed in: a press then starts it turning rather than switching it off
+  const stalled = state.spinning && (map.getZoom() >= 3.2 || !$('card').hidden);
+  state.spinning = stalled || !state.spinning; $('spin').setAttribute('aria-pressed', state.spinning);
   if (!state.spinning) { map.stop(); return; }
   lastInteract = 0;
   // the globe only turns when it is seen whole: close the card and step back out first
@@ -3762,6 +3764,7 @@ async function setMode(m, { fly = true } = {}) {
   for (const [id, k] of MODE_TABS) $(id).setAttribute('aria-selected', m === k);
   document.body.classList.toggle('bible-mode', m !== 'churches');  // the church-only extras step aside in both Scripture modes
   document.body.classList.toggle('jesus-mode', m === 'jesus');
+  if ($('today')) $('today').classList.remove('asked');  // a church of the day card opened on another tab steps aside
   lifeStop(); $('life').hidden = m !== 'jesus' || !life.data;
   closeCard(); showFavs(false); showNear(false); resEl.hidden = true; qEl.value = ''; fitTools(); tip.hidden = true; setHover(-1);
   searchLabels();
@@ -4436,7 +4439,7 @@ document.addEventListener('ccf-lang', renderThemes);
 
 /* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
 const hooks = {};
-window.ccf = { track, map, state, selectChurch, closeCard, shardFor, churchName, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
+window.ccf = { track, map, state, setMode, selectChurch, closeCard, shardFor, churchName, getJSON, countryName, esc, reduceMotion, sky: () => themeMap().sky, nightOpacity: () => themeMap().night ?? 1,
   layers: new Promise(r => { hooks.layers = r; }), opened: new Promise(r => { hooks.opened = r; }) };
 
 /* ---------- boot ---------- */
