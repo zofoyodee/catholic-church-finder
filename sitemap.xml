@@ -5,6 +5,7 @@
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -35,6 +36,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -50,18 +52,82 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
+  </url>
+  <url>
+    <loc>https://churchglobe.com/?lang=ak</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
+    <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://churchglobe.com/?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="ceb" href="https://churchglobe.com/?lang=ceb"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://churchglobe.com/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://churchglobe.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://churchglobe.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="fil" href="https://churchglobe.com/?lang=fil"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://churchglobe.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="gn" href="https://churchglobe.com/?lang=gn"/>
+    <xhtml:link rel="alternate" hreflang="gom" href="https://churchglobe.com/?lang=gom"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://churchglobe.com/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="hil" href="https://churchglobe.com/?lang=hil"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://churchglobe.com/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://churchglobe.com/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://churchglobe.com/?lang=hu"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://churchglobe.com/?lang=id"/>
+    <xhtml:link rel="alternate" hreflang="ig" href="https://churchglobe.com/?lang=ig"/>
+    <xhtml:link rel="alternate" hreflang="ilo" href="https://churchglobe.com/?lang=ilo"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://churchglobe.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://churchglobe.com/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="ki" href="https://churchglobe.com/?lang=ki"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://churchglobe.com/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="la" href="https://churchglobe.com/?lang=la"/>
+    <xhtml:link rel="alternate" hreflang="lg" href="https://churchglobe.com/?lang=lg"/>
+    <xhtml:link rel="alternate" hreflang="ln" href="https://churchglobe.com/?lang=ln"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
+    <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
+    <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://churchglobe.com/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="qu" href="https://churchglobe.com/?lang=qu"/>
+    <xhtml:link rel="alternate" hreflang="rn" href="https://churchglobe.com/?lang=rn"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://churchglobe.com/?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://churchglobe.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="rw" href="https://churchglobe.com/?lang=rw"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://churchglobe.com/?lang=sk"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://churchglobe.com/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="sn" href="https://churchglobe.com/?lang=sn"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
+    <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
+    <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ar</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -92,6 +158,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -107,18 +174,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=bcl</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -149,6 +219,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -164,18 +235,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=bem</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -206,6 +280,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -221,18 +296,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ca</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -263,6 +341,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -278,18 +357,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ceb</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -320,6 +402,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -335,18 +418,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=cs</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -377,6 +463,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -392,18 +479,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=de</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -434,6 +524,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -449,18 +540,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=es</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -491,6 +585,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -506,18 +601,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=fil</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -548,6 +646,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -563,18 +662,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=fr</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -605,6 +707,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -620,18 +723,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=gn</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -662,6 +768,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -677,18 +784,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=gom</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -719,6 +829,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -734,18 +845,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=hi</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -776,6 +890,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -791,18 +906,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=hil</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -833,6 +951,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -848,18 +967,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=hr</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -890,6 +1012,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -905,18 +1028,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ht</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -947,6 +1073,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -962,18 +1089,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=hu</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1004,6 +1134,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1019,18 +1150,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=id</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1061,6 +1195,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1076,18 +1211,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ig</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1118,6 +1256,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1133,18 +1272,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ilo</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1175,6 +1317,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1190,18 +1333,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=it</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1232,6 +1378,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1247,18 +1394,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ja</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1289,6 +1439,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1304,18 +1455,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ki</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1346,6 +1500,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1361,18 +1516,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ko</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1403,6 +1561,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1418,18 +1577,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=la</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1460,6 +1622,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1475,18 +1638,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=lg</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1517,6 +1683,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1532,18 +1699,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ln</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1574,6 +1744,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1589,18 +1760,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=lt</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1631,6 +1805,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1646,18 +1821,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=mg</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1688,6 +1866,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1703,18 +1882,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ml</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1745,6 +1927,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1760,18 +1943,82 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
+  </url>
+  <url>
+    <loc>https://churchglobe.com/?lang=mt</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
+    <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://churchglobe.com/?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="ceb" href="https://churchglobe.com/?lang=ceb"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://churchglobe.com/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://churchglobe.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://churchglobe.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="fil" href="https://churchglobe.com/?lang=fil"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://churchglobe.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="gn" href="https://churchglobe.com/?lang=gn"/>
+    <xhtml:link rel="alternate" hreflang="gom" href="https://churchglobe.com/?lang=gom"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://churchglobe.com/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="hil" href="https://churchglobe.com/?lang=hil"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://churchglobe.com/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://churchglobe.com/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://churchglobe.com/?lang=hu"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://churchglobe.com/?lang=id"/>
+    <xhtml:link rel="alternate" hreflang="ig" href="https://churchglobe.com/?lang=ig"/>
+    <xhtml:link rel="alternate" hreflang="ilo" href="https://churchglobe.com/?lang=ilo"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://churchglobe.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://churchglobe.com/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="ki" href="https://churchglobe.com/?lang=ki"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://churchglobe.com/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="la" href="https://churchglobe.com/?lang=la"/>
+    <xhtml:link rel="alternate" hreflang="lg" href="https://churchglobe.com/?lang=lg"/>
+    <xhtml:link rel="alternate" hreflang="ln" href="https://churchglobe.com/?lang=ln"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
+    <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
+    <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://churchglobe.com/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="qu" href="https://churchglobe.com/?lang=qu"/>
+    <xhtml:link rel="alternate" hreflang="rn" href="https://churchglobe.com/?lang=rn"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://churchglobe.com/?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://churchglobe.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="rw" href="https://churchglobe.com/?lang=rw"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://churchglobe.com/?lang=sk"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://churchglobe.com/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="sn" href="https://churchglobe.com/?lang=sn"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
+    <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
+    <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=nl</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1802,6 +2049,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1817,18 +2065,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ny</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1859,6 +2110,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1874,18 +2126,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=pl</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1916,6 +2171,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1931,18 +2187,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=pt</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -1973,6 +2232,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -1988,18 +2248,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=qu</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2030,6 +2293,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2045,18 +2309,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=rn</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2087,6 +2354,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2102,18 +2370,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ro</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2144,6 +2415,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2159,18 +2431,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ru</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2201,6 +2476,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2216,18 +2492,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=rw</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2258,6 +2537,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2273,18 +2553,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=sk</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2315,6 +2598,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2330,18 +2614,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=sl</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2372,6 +2659,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2387,18 +2675,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=sn</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2429,6 +2720,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2444,18 +2736,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=sq</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2486,6 +2781,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2501,18 +2797,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=sw</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2543,6 +2842,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2558,18 +2858,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=ta</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2600,6 +2903,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2615,18 +2919,82 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
+  </url>
+  <url>
+    <loc>https://churchglobe.com/?lang=te</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
+    <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://churchglobe.com/?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="ceb" href="https://churchglobe.com/?lang=ceb"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://churchglobe.com/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://churchglobe.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://churchglobe.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="fil" href="https://churchglobe.com/?lang=fil"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://churchglobe.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="gn" href="https://churchglobe.com/?lang=gn"/>
+    <xhtml:link rel="alternate" hreflang="gom" href="https://churchglobe.com/?lang=gom"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://churchglobe.com/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="hil" href="https://churchglobe.com/?lang=hil"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://churchglobe.com/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://churchglobe.com/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://churchglobe.com/?lang=hu"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://churchglobe.com/?lang=id"/>
+    <xhtml:link rel="alternate" hreflang="ig" href="https://churchglobe.com/?lang=ig"/>
+    <xhtml:link rel="alternate" hreflang="ilo" href="https://churchglobe.com/?lang=ilo"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://churchglobe.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://churchglobe.com/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="ki" href="https://churchglobe.com/?lang=ki"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://churchglobe.com/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="la" href="https://churchglobe.com/?lang=la"/>
+    <xhtml:link rel="alternate" hreflang="lg" href="https://churchglobe.com/?lang=lg"/>
+    <xhtml:link rel="alternate" hreflang="ln" href="https://churchglobe.com/?lang=ln"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
+    <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
+    <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://churchglobe.com/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="qu" href="https://churchglobe.com/?lang=qu"/>
+    <xhtml:link rel="alternate" hreflang="rn" href="https://churchglobe.com/?lang=rn"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://churchglobe.com/?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://churchglobe.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="rw" href="https://churchglobe.com/?lang=rw"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://churchglobe.com/?lang=sk"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://churchglobe.com/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="sn" href="https://churchglobe.com/?lang=sn"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
+    <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
+    <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=tet</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2657,6 +3025,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2672,18 +3041,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=uk</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2714,6 +3086,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2729,18 +3102,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=vi</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2771,6 +3147,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2786,18 +3163,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=war</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2828,6 +3208,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2843,18 +3224,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=yo</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2885,6 +3269,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2900,18 +3285,21 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
   <url>
     <loc>https://churchglobe.com/?lang=zh</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
     <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
@@ -2942,6 +3330,7 @@
     <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
     <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
     <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
     <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
@@ -2957,11 +3346,74 @@
     <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
     <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
     <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
     <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
     <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
+  </url>
+  <url>
+    <loc>https://churchglobe.com/?lang=zu</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://churchglobe.com/"/>
+    <xhtml:link rel="alternate" hreflang="ak" href="https://churchglobe.com/?lang=ak"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://churchglobe.com/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="bcl" href="https://churchglobe.com/?lang=bcl"/>
+    <xhtml:link rel="alternate" hreflang="bem" href="https://churchglobe.com/?lang=bem"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://churchglobe.com/?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="ceb" href="https://churchglobe.com/?lang=ceb"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://churchglobe.com/?lang=cs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://churchglobe.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://churchglobe.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="fil" href="https://churchglobe.com/?lang=fil"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://churchglobe.com/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="gn" href="https://churchglobe.com/?lang=gn"/>
+    <xhtml:link rel="alternate" hreflang="gom" href="https://churchglobe.com/?lang=gom"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://churchglobe.com/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="hil" href="https://churchglobe.com/?lang=hil"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://churchglobe.com/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://churchglobe.com/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://churchglobe.com/?lang=hu"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://churchglobe.com/?lang=id"/>
+    <xhtml:link rel="alternate" hreflang="ig" href="https://churchglobe.com/?lang=ig"/>
+    <xhtml:link rel="alternate" hreflang="ilo" href="https://churchglobe.com/?lang=ilo"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://churchglobe.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://churchglobe.com/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="ki" href="https://churchglobe.com/?lang=ki"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://churchglobe.com/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="la" href="https://churchglobe.com/?lang=la"/>
+    <xhtml:link rel="alternate" hreflang="lg" href="https://churchglobe.com/?lang=lg"/>
+    <xhtml:link rel="alternate" hreflang="ln" href="https://churchglobe.com/?lang=ln"/>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://churchglobe.com/?lang=lt"/>
+    <xhtml:link rel="alternate" hreflang="mg" href="https://churchglobe.com/?lang=mg"/>
+    <xhtml:link rel="alternate" hreflang="ml" href="https://churchglobe.com/?lang=ml"/>
+    <xhtml:link rel="alternate" hreflang="mt" href="https://churchglobe.com/?lang=mt"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://churchglobe.com/?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="ny" href="https://churchglobe.com/?lang=ny"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://churchglobe.com/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://churchglobe.com/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="qu" href="https://churchglobe.com/?lang=qu"/>
+    <xhtml:link rel="alternate" hreflang="rn" href="https://churchglobe.com/?lang=rn"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://churchglobe.com/?lang=ro"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://churchglobe.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="rw" href="https://churchglobe.com/?lang=rw"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://churchglobe.com/?lang=sk"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://churchglobe.com/?lang=sl"/>
+    <xhtml:link rel="alternate" hreflang="sn" href="https://churchglobe.com/?lang=sn"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://churchglobe.com/?lang=sq"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw"/>
+    <xhtml:link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta"/>
+    <xhtml:link rel="alternate" hreflang="te" href="https://churchglobe.com/?lang=te"/>
+    <xhtml:link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war"/>
+    <xhtml:link rel="alternate" hreflang="yo" href="https://churchglobe.com/?lang=yo"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://churchglobe.com/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="zu" href="https://churchglobe.com/?lang=zu"/>
   </url>
 </urlset>
