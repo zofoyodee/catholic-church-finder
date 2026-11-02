@@ -126,6 +126,7 @@
   "aboutChurch": "Despre Această Biserică",
   "readMore": "Citește mai Mult pe Wikipedia",
   "readMoreLang": "Citește mai Mult pe Wikipedia ({lang})",
+  "machineTr": "Traducere automată din {lang}",
   "photos_one": "{n} fotografie",
   "photos_other": "{n} de fotografii",
   "openGallery_one": "Deschide galeria foto, {n} fotografie",

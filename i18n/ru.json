@@ -73,6 +73,7 @@
   "aboutChurch": "Об этом храме",
   "readMore": "Читать дальше в Википедии",
   "readMoreLang": "Читать дальше в Википедии ({lang})",
+  "machineTr": "Машинный перевод с языка: {lang}",
   "photos_one": "{n} фотография",
   "photos_few": "{n} фотографии",
   "photos_many": "{n} фотографий",

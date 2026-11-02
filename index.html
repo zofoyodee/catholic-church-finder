@@ -365,6 +365,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 
 /* about this church + gallery */
 .about-church .extract { margin: 0 0 6px; line-height: 1.55; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.about-church .mt { display: block; margin: 0 0 4px; font-size: 11.5px; color: var(--ink-faint, var(--ink-soft)); opacity: .8; }
 .about-church .more, .patron .more { color: var(--gold-soft); font-size: 13px; text-underline-offset: 3px; }
 .about-church .facts { margin-top: 12px; }
 .patron { display: grid; grid-template-columns: auto 1fr; gap: 12px; margin-top: 14px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.02); }
@@ -932,7 +933,7 @@ const EN = {
   fact_P571: 'Founded', fact_P1619: 'Opened', fact_P825: 'Dedicated to', fact_P708: 'Diocese', fact_P84: 'Architect',
   fact_P149: 'Style', fact_P1435: 'Heritage Status', fact_P5138: 'Part of',
   dedicatedTo: 'Dedicated to', namedFor: 'Named for', aboutOnWiki: 'About {name} on Wikipedia',
-  aboutChurch: 'About This Church', readMore: 'Read More on Wikipedia', readMoreLang: 'Read More on Wikipedia ({lang})',
+  aboutChurch: 'About This Church', readMore: 'Read More on Wikipedia', readMoreLang: 'Read More on Wikipedia ({lang})', machineTr: 'Machine translation from {lang}',
   photos_one: '{n} photo', photos_other: '{n} photos', openGallery_one: 'Open the photo gallery, {n} photo', openGallery_other: 'Open the photo gallery, {n} photos',
   photosOfChurch: 'Photos of This Church', openPhoto: 'Open photo {k} of {n}',
   noGeo: 'This browser can\'t share your location.', finding: 'Finding where you are…',
@@ -2465,6 +2466,23 @@ async function commonsGallery(cat, named) {
 }
 // The photo gallery on church cards is off for now: Commons often mixed in photos of other places (Jeff, 2026-11-02). true turns it back on.
 const SHOW_GALLERY = false;
+// A church history from another language's Wikipedia is machine-translated into the reader's language by Wikimedia's free MinT service, so a page never mixes languages.
+// If that fails, only the "Read More on Wikipedia (Indonesian)" link is shown, never the foreign text. Translations are kept in this browser.
+async function translateExtract(ex, to) {
+  if (!ex || !ex.text || ex.lang === to) return ex;
+  const key = 'mt:' + to + ':' + ex.url;
+  try { const hit = localStorage.getItem(key); if (hit) return { ...ex, text: hit, from: ex.lang, mt: true }; } catch (e) {}
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 12000);
+  try {
+    const r = await fetch(`https://cxserver.wikimedia.org/v2/translate/${ex.lang}/${to}/MinT`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ html: '<p>' + esc(ex.text) + '</p>' }), signal: ctl.signal });
+    if (!r.ok) throw new Error('mt ' + r.status);
+    const html = (await r.json()).contents || '';
+    const text = faithful(new DOMParser().parseFromString(html, 'text/html').body.textContent.trim(), 4, to);
+    if (!text) throw new Error('mt empty');
+    try { localStorage.setItem(key, text); } catch (e) {}
+    return { ...ex, text, from: ex.lang, mt: true };
+  } catch (e) { return { ...ex, text: '' }; } finally { clearTimeout(timer); }
+}
 function loadAbout(i, rec) {
   if (about.has(i)) return about.get(i);
   const cc = rec && rec[5], lang = WIKI_LANG[cc] || 'en', ui = i18n.wiki;
@@ -2474,7 +2492,7 @@ function loadAbout(i, rec) {
     if (who.qid) { try { ({ facts, cat, article, dedication } = await wikidataFacts(who.qid, lang, ui)); } catch (e) {} }
     if (!article && who.wiki) article = `https://${who.wiki.lang}.wikipedia.org/wiki/${encodeURIComponent(who.wiki.title.replace(/ /g, '_'))}`;
     const patronTitle = dedication || patronFromName(rec && rec[0]);
-    const [extract, gallery, patron] = await Promise.all([wikiExtract(article).catch(() => null), (SHOW_GALLERY ? commonsGallery(cat, who.named).catch(() => []) : []), patronTitle ? patronLocal(patronTitle, ui).catch(() => null) : null]);
+    const [extract, gallery, patron] = await Promise.all([wikiExtract(article).then(ex => translateExtract(ex, ui)).catch(() => null), (SHOW_GALLERY ? commonsGallery(cat, who.named).catch(() => []) : []), patronTitle ? patronLocal(patronTitle, ui).catch(() => null) : null]);
     if (patron) patron.sure = !!dedication;
     return { facts, extract, article, gallery, cat, patron };
   })();
@@ -2763,7 +2781,7 @@ async function showAbout(i, rec) {
   if (!rows.length && !a.extract && a.gallery.length < 2 && !pt) { box.innerHTML = ''; return; }
   box.innerHTML = `<div class="sect about-church">
       <h3>${esc(tr('aboutChurch'))}</h3>
-      ${a.extract ? `<p class="extract" lang="${esc(a.extract.lang === 'tl' ? 'fil' : a.extract.lang)}">${esc(a.extract.text)}</p><a class="more" href="${esc(a.extract.url)}" target="_blank" rel="noopener">${esc(a.extract.lang !== i18n.wiki ? tr('readMoreLang', { lang: langName(a.extract.lang) }) : tr('readMore'))}</a>` : ''}
+      ${a.extract ? `${a.extract.text ? `<p class="extract" lang="${esc(i18n.code)}">${esc(a.extract.text)}</p>` : ''}${a.extract.mt ? `<small class="mt">${esc(tr('machineTr', { lang: langName(a.extract.from) }))}</small>` : ''}<a class="more" href="${esc(a.extract.url)}" target="_blank" rel="noopener">${esc(a.extract.lang !== i18n.wiki ? tr('readMoreLang', { lang: langName(a.extract.lang) }) : tr('readMore'))}</a>` : ''}
       ${rows.length ? `<dl class="facts">${rows.join('')}</dl>` : ''}
       ${patronHTML}
       ${a.gallery.length > 1 ? `<div class="strip" role="list" aria-label="${esc(tr('photosOfChurch'))}">${a.gallery.map((g, k) => `<button role="listitem" data-g="${k}" aria-label="${esc(tr('openPhoto', { k: fmt(k + 1), n: a.gallery.length }))}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(g.thumb)}" alt=""></button>`).join('')}</div>` : ''}

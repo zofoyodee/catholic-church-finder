@@ -126,6 +126,7 @@
   "aboutChurch": "Bu Kilise Hakkında",
   "readMore": "Vikipedi'de Devamını Okuyun",
   "readMoreLang": "Vikipedi'de Devamını Okuyun ({lang})",
+  "machineTr": "{lang} dilinden makine çevirisi",
   "photos_one": "{n} fotoğraf",
   "photos_other": "{n} fotoğraf",
   "openGallery_one": "Fotoğraf galerisini açın, {n} fotoğraf",
