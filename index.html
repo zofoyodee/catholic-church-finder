@@ -2440,6 +2440,8 @@ async function commonsGallery(cat, named) {
   }
   return pages.map(galleryItem).filter(Boolean).slice(0, 30);
 }
+// The photo gallery on church cards is off for now: Commons often mixed in photos of other places (Jeff, 2026-11-02). true turns it back on.
+const SHOW_GALLERY = false;
 function loadAbout(i, rec) {
   if (about.has(i)) return about.get(i);
   const cc = rec && rec[5], lang = WIKI_LANG[cc] || 'en', ui = i18n.wiki;
@@ -2449,7 +2451,7 @@ function loadAbout(i, rec) {
     if (who.qid) { try { ({ facts, cat, article, dedication } = await wikidataFacts(who.qid, lang, ui)); } catch (e) {} }
     if (!article && who.wiki) article = `https://${who.wiki.lang}.wikipedia.org/wiki/${encodeURIComponent(who.wiki.title.replace(/ /g, '_'))}`;
     const patronTitle = dedication || patronFromName(rec && rec[0]);
-    const [extract, gallery, patron] = await Promise.all([wikiExtract(article).catch(() => null), commonsGallery(cat, who.named).catch(() => []), patronTitle ? patronLocal(patronTitle, ui).catch(() => null) : null]);
+    const [extract, gallery, patron] = await Promise.all([wikiExtract(article).catch(() => null), (SHOW_GALLERY ? commonsGallery(cat, who.named).catch(() => []) : []), patronTitle ? patronLocal(patronTitle, ui).catch(() => null) : null]);
     if (patron) patron.sure = !!dedication;
     return { facts, extract, article, gallery, cat, patron };
   })();
