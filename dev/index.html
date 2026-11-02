@@ -1254,15 +1254,15 @@ async function loadPoints() {
   state.typ = new Uint8Array(buf, n * 8, n);
 }
 
-// data/overrides.json marks a pin that repeats another church ("dup": index of the one to keep).
+// data/overrides.json marks a pin that repeats another church ("dup": index of the one to keep) or is not a church at all ("hide": true, e.g. a diocese office).
 // It moves to type 7, which no filter shows, so it leaves the globe, search, Near Me and the counts, and keeps every index in place.
 async function hideDuplicates() {
   state.dupOf = new Map();
   const o = await loadOverrides();
   for (const [k, v] of Object.entries(o)) {
     const i = +k, keep = v && v.dup;
-    if (!(i >= 0 && i < state.n) || !(keep >= 0 && keep < state.n)) continue;
-    state.dupOf.set(i, keep);
+    if (!(i >= 0 && i < state.n) || !((keep >= 0 && keep < state.n) || (v && v.hide))) continue;
+    if (keep >= 0 && keep < state.n) state.dupOf.set(i, keep);
     const t = state.typ[i] & 7; if (t === 7) continue;
     if (state.meta.types && state.meta.types[t]) state.meta.types[t]--;
     if (state.meta.count) state.meta.count--;
@@ -3142,6 +3142,7 @@ const icon = {
 let cardFrom = '';
 async function selectChurch(i, { fly = true } = {}) {
   if (state.dupOf && state.dupOf.has(i)) i = state.dupOf.get(i);  // a saved favourite of a removed duplicate opens the church it repeats
+  else if ((state.typ[i] & 7) === 7) return;  // a pin taken off the globe because it is not a church
   $('cardBack').hidden = !cardFrom; $('cardBack').dataset.to = cardFrom; cardFrom = '';
   if (state.selected !== i) shardFor(i).then(r => track('church/' + ([r[0], r[2]].filter(Boolean).join(', ') || i), [r[0], r[2], countryName(r[5])].filter(Boolean).join(' · '))).catch(() => {});
   state.selected = i;
@@ -3233,7 +3234,7 @@ async function selectChurch(i, { fly = true } = {}) {
   showAbout(i, rec);
   checkStreetView(i, lt, lng);
   checkPhotosLink(i, rec, name, town, lt, lng);
-  try { history.replaceState(null, '', '?church=' + i); } catch (e) {}
+  try { history.replaceState(null, '', location.pathname + '?church=' + i); } catch (e) {}
 }
 function closeCard() {
   $('cardBack').hidden = true;
@@ -4026,7 +4027,7 @@ async function openBiblePlace(id, { fly = true } = {}) {
   $('card').hidden = false;
   $('bFly').addEventListener('click', () => map.flyTo({ center: [p.ll[1], p.ll[0]], zoom: 14, pitch: 50, bearing: map.getBearing() + 30, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
   bibleShare(bibleLink('bible=' + p.id), tr('bShareTitle', { name: p.n }));
-  try { history.replaceState(null, '', '?bible=' + p.id); } catch (e) {}
+  try { history.replaceState(null, '', location.pathname + '?bible=' + p.id); } catch (e) {}
   $('cardBody').scrollTop = 0;
   fillNearby(p);
 }
@@ -4053,7 +4054,7 @@ async function openBibleLand(k, { fly = true } = {}) {
     <div class="prov">${esc(tr('bProvLand'))}</div>`;
   $('card').hidden = false;
   bibleShare(bibleLink('land=' + k), tr('bShareLand', { land: l.n, a: l.a }));
-  try { history.replaceState(null, '', '?land=' + k); } catch (e) {}
+  try { history.replaceState(null, '', location.pathname + '?land=' + k); } catch (e) {}
   $('cardBody').scrollTop = 0;
 }
 
@@ -4247,7 +4248,7 @@ async function goEvent(k, { fly = true, card } = {}) {
   renderNow(); markTrack(); lifeSel(p); lastInteract = performance.now();
   // the details panel follows the timeline: always beside the globe on wide screens, on phones only when asked for
   if (card ?? (!$('card').hidden || innerWidth > 640)) openLifeMoment(k);
-  try { history.replaceState(null, '', '?life=' + (k + 1)); } catch (err) {}
+  try { history.replaceState(null, '', location.pathname + '?life=' + (k + 1)); } catch (err) {}
   if (!fly) { lifeSchedule(LIFE_DWELL); return; }
   const bearing = ((k * 37) % 80) - 40;
   life.flying = true;
@@ -4354,7 +4355,7 @@ async function openLifePlace(id, { fly = true } = {}) {
     <div class="prov">${esc(tr('jProv'))}</div>`;
   $('jPlayHere').addEventListener('click', () => { const e = p.ev.find(x => life.era === 'all' || x.e === life.era) || p.ev[0]; life.auto = true; goEvent(e.i); });
   bibleShare(bibleLink('jesus=' + p.id), tr('jShareTitle', { name: p.n }));
-  try { history.replaceState(null, '', '?jesus=' + p.id); } catch (e) {}
+  try { history.replaceState(null, '', location.pathname + '?jesus=' + p.id); } catch (e) {}
   $('cardBody').scrollTop = scroll;
   fillNearby(p);
 }
@@ -4514,6 +4515,7 @@ const mapReady = new Promise(res => map.once('load', res));
       // open over the United States
       let shared = parseInt(new URLSearchParams(location.search).get('church'), 10);
       if (state.dupOf.has(shared)) shared = state.dupOf.get(shared);  // an old link to a removed duplicate opens the church it repeats
+      else if (shared >= 0 && shared < state.n && (state.typ[shared] & 7) === 7) shared = -1;  // or to a pin that is not a church: just the globe
       hooks.opened({ shared: shared >= 0 && shared < state.n });
       if (innerWidth > 640 || !(shared >= 0 && shared < state.n)) openFavsOnLoad();  // on phones a shared church's card gets the bottom of the screen
       if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link
