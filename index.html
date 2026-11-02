@@ -1918,6 +1918,13 @@ async function showPhoto(i) {
   let recP = null; const rec = () => recP || (recP = shardFor(i).catch(() => null));
   // each source in turn; when one has nothing, or its picture won't load, the next one gets a turn
   const sources = [
+    // a Street View picture picked by hand in data/overrides.json wins over everything found automatically
+    async () => {
+      const fix = GMAPS_KEY && (await loadOverrides())[i]; if (!fix || !fix.sv || !fix.sv.pano) return null;
+      const lat = state.lat[i] / 1e6, lng = state.lon[i] / 1e6, sv = await svPano(i, lat, lng); if (!sv) return null;
+      const r = await rec();
+      return { src: svImage(sv, lat, lng), file: r && r[0], author: 'Google', license: 'Street View', page: `https://www.google.com/maps/@?api=1&map_action=pano&pano=${encodeURIComponent(sv.pano)}`, sv: true };
+    },
     // fast path: the few cathedral and basilica photos shipped with the site
     async () => {
       const r = (await photoIndex()).get(i); if (!r) return null;
