@@ -1,4 +1,46 @@
 {
- "_note": "Corrections to the Overture data, keyed by church index (position in data/points.txt). Fields: web = website URL. Applied by the page and by scripts/web.",
- "68540": {"name": "Our Lady of Fatima Catholic Church, Albuquerque", "web": "https://fatimachurchabq.org/"}
+ "_note": "Corrections to the Overture data, keyed by church index (position in data/points.txt). Fields: web = website URL; sv = Street View panorama to show, with heading/pitch/fov, when the nearest one faces the wrong side; dup = index of the church this pin repeats (the pin is hidden and old links open that one); hide = not a church (an office), taken off the globe. Applied by the page and by scripts/web.",
+ "68540": {
+  "name": "Our Lady of Fatima Catholic Church, Albuquerque",
+  "web": "https://fatimachurchabq.org/"
+ },
+ "118675": {
+  "name": "Parroquia de San Pablo, Ibiza",
+  "sv": {
+   "pano": "L_H5t0JkeyfOuNW23ujIrg",
+   "heading": 250,
+   "pitch": 14,
+   "fov": 70
+  }
+ },
+ "118676": {
+  "name": "Parròquia de Santa Creu, Eivissa",
+  "sv": {
+   "pano": "AaDMEQcBYPkdsPYqwulapg",
+   "heading": 297,
+   "pitch": 18,
+   "fov": 90
+  }
+ },
+ "118677": {
+  "name": "Ibiza Old Town Cathedral (duplicate of Catedral de Santa Maria de la Neu)",
+  "dup": 118678
+ },
+ "118679": {
+  "name": "Ibiza City Cathedral (duplicate of Catedral de Santa Maria de la Neu, pinned near the port)",
+  "dup": 118678
+ },
+ "118681": {
+  "name": "Parroquia de Sant Salvador de la Marina, Ibiza",
+  "sv": {
+   "pano": "eVzFyp9LhkyUo0O4VU2Nqw",
+   "heading": 312,
+   "pitch": 14,
+   "fov": 85
+  }
+ },
+ "118682": {
+  "name": "Diócesis de Ibiza (bishop's office, not a church)",
+  "hide": true
+ }
 }

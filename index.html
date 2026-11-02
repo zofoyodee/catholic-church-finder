@@ -1320,8 +1320,11 @@ function churchName(i, raw) {
 /* ---------- website checks and parish staff (data/web, built by scripts/web in GitHub Actions) ---------- */
 const web = { shards: new Map(), meta: null };
 let overrides = null;  // data/overrides.json: hand corrections, keyed by church index
+// hand corrections change often and are small: skip the offline copy and the browser's saved copy so a fix shows on the first visit, not the second
+const loadOverrides = () => overrides || (overrides = (window.caches ? caches.keys().then(ks => Promise.all(ks.map(k => caches.open(k).then(c => c.delete(BASE + 'data/overrides.json', { ignoreSearch: true }))))).catch(() => {}) : Promise.resolve())
+  .then(() => getJSON('data/overrides.json?t=' + Date.now())).catch(() => ({})));
 async function webFor(i) {
-  if (!overrides) overrides = getJSON('data/overrides.json').catch(() => ({}));
+  loadOverrides();
   const s = Math.floor(i / state.meta.shardSize);
   if (!web.meta) web.meta = getJSON('data/web/meta.json').catch(() => ({}));
   if (!web.shards.has(s)) web.shards.set(s, getJSON('data/web/' + s + '.json').catch(() => { web.shards.delete(s); return {}; }));
@@ -2688,15 +2691,17 @@ function loadGmaps() {
 }
 const svSeen = new Map();  // church index -> Promise of the nearest outdoor panorama { pano, lat, lng }, or null when there is none
 function svPano(i, lat, lng) {
-  if (!svSeen.has(i)) svSeen.set(i, loadGmaps().then(async g => {
+  if (!svSeen.has(i)) svSeen.set(i, loadOverrides().then(o => o[i] && o[i].sv).then(fix => fix && fix.pano ? fix : loadGmaps().then(async g => {
     const r = await new g.StreetViewService().getPanorama({ location: { lat, lng }, radius: 100, source: g.StreetViewSource.OUTDOOR }).catch(() => null);
     const l = r && r.data && r.data.location;
     return l && l.pano ? { pano: l.pano, lat: l.latLng.lat(), lng: l.latLng.lng() } : null;
-  }).catch(e => { svSeen.delete(i); throw e; }));
+  })).catch(e => { svSeen.delete(i); throw e; }));
   return svSeen.get(i);
 }
-// a Street View picture taken from the nearest street, turned to face the church
+// a Street View picture taken from the nearest street, turned to face the church.
+// data/overrides.json can name a better panorama and heading for a church ("sv": {"pano", "heading", "pitch", "fov"}) when the nearest one only sees a side wall.
 function svImage(sv, lat, lng) {
+  if (sv.heading != null) return `https://maps.googleapis.com/maps/api/streetview?size=640x400&pano=${encodeURIComponent(sv.pano)}&heading=${sv.heading}&pitch=${sv.pitch ?? 12}&fov=${sv.fov ?? 80}&key=${encodeURIComponent(GMAPS_KEY)}`;
   const r = Math.PI / 180, y = Math.sin((lng - sv.lng) * r) * Math.cos(lat * r), x = Math.cos(sv.lat * r) * Math.sin(lat * r) - Math.sin(sv.lat * r) * Math.cos(lat * r) * Math.cos((lng - sv.lng) * r);
   const heading = Math.round((Math.atan2(y, x) / r + 360) % 360);
   return `https://maps.googleapis.com/maps/api/streetview?size=640x400&pano=${encodeURIComponent(sv.pano)}&heading=${heading}&pitch=12&fov=80&key=${encodeURIComponent(GMAPS_KEY)}`;
