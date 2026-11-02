@@ -10,10 +10,11 @@ import json, sys, os
 
 # Languages without a column get theirs from Wikipedia (city_names_wiki.py). MapLibre cannot shape Hindi, Tamil,
 # Malayalam, Telugu or Konkani, so the page lays those names over the globe as text. The page lists every file in CITY_FILES.
-LANGS = ['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja', 'hi']
+LANGS = ['en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja', 'hi', 'tr', 'el', 'he']
 NE_COL = {'en': 'NAME_EN', 'es': 'NAME_ES', 'pt': 'NAME_PT', 'fr': 'NAME_FR', 'it': 'NAME_IT', 'pl': 'NAME_PL', 'de': 'NAME_DE',
           'zh': 'NAME_ZH', 'nl': 'NAME_NL', 'id': 'NAME_ID', 'vi': 'NAME_VI', 'ko': 'NAME_KO', 'hu': 'NAME_HU', 'uk': 'NAME_UK', 'ar': 'NAME_AR',
-          'ru': 'NAME_RU', 'ja': 'NAME_JA', 'hi': 'NAME_HI'}
+          'ru': 'NAME_RU', 'ja': 'NAME_JA', 'hi': 'NAME_HI',
+          'tr': 'NAME_TR', 'el': 'NAME_EL', 'he': 'NAME_HE'}
 
 root = os.path.join(os.path.dirname(__file__), '..', '..')
 ne = json.load(open(sys.argv[1]))['features']

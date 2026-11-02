@@ -16,11 +16,13 @@
 <link rel="alternate" hreflang="ceb" href="https://churchglobe.com/?lang=ceb">
 <link rel="alternate" hreflang="cs" href="https://churchglobe.com/?lang=cs">
 <link rel="alternate" hreflang="de" href="https://churchglobe.com/?lang=de">
+<link rel="alternate" hreflang="el" href="https://churchglobe.com/?lang=el">
 <link rel="alternate" hreflang="es" href="https://churchglobe.com/?lang=es">
 <link rel="alternate" hreflang="fil" href="https://churchglobe.com/?lang=fil">
 <link rel="alternate" hreflang="fr" href="https://churchglobe.com/?lang=fr">
 <link rel="alternate" hreflang="gn" href="https://churchglobe.com/?lang=gn">
 <link rel="alternate" hreflang="gom" href="https://churchglobe.com/?lang=gom">
+<link rel="alternate" hreflang="he" href="https://churchglobe.com/?lang=he">
 <link rel="alternate" hreflang="hi" href="https://churchglobe.com/?lang=hi">
 <link rel="alternate" hreflang="hil" href="https://churchglobe.com/?lang=hil">
 <link rel="alternate" hreflang="hr" href="https://churchglobe.com/?lang=hr">
@@ -54,6 +56,7 @@
 <link rel="alternate" hreflang="sw" href="https://churchglobe.com/?lang=sw">
 <link rel="alternate" hreflang="ta" href="https://churchglobe.com/?lang=ta">
 <link rel="alternate" hreflang="tet" href="https://churchglobe.com/?lang=tet">
+<link rel="alternate" hreflang="tr" href="https://churchglobe.com/?lang=tr">
 <link rel="alternate" hreflang="uk" href="https://churchglobe.com/?lang=uk">
 <link rel="alternate" hreflang="vi" href="https://churchglobe.com/?lang=vi">
 <link rel="alternate" hreflang="war" href="https://churchglobe.com/?lang=war">
@@ -75,7 +78,7 @@
 <meta name="twitter:image" content="https://churchglobe.com/icons/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebSite","@id":"https://churchglobe.com/#website","name":"Catholic Church Finder","alternateName":"Church Globe","url":"https://churchglobe.com/","inLanguage":["en","ar","bcl","bem","ceb","cs","de","es","fil","fr","gn","gom","hi","hil","hr","ht","hu","id","ig","ilo","it","ja","ki","ko","la","lg","ln","lt","mg","ml","nl","ny","pl","pt","qu","rn","ru","rw","sk","sl","sn","sq","sw","ta","tet","uk","vi","war","yo","zh"]},
+{"@type":"WebSite","@id":"https://churchglobe.com/#website","name":"Catholic Church Finder","alternateName":"Church Globe","url":"https://churchglobe.com/","inLanguage":["en","ar","bcl","bem","ceb","cs","de","el","es","fil","fr","gn","gom","he","hi","hil","hr","ht","hu","id","ig","ilo","it","ja","ki","ko","la","lg","ln","lt","mg","ml","nl","ny","pl","pt","qu","rn","ru","rw","sk","sl","sn","sq","sw","ta","tet","tr","uk","vi","war","yo","zh"]},
 {"@type":"WebApplication","name":"Catholic Church Finder","url":"https://churchglobe.com/","isPartOf":{"@id":"https://churchglobe.com/#website"},"applicationCategory":"ReferenceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and WebGL","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"image":"https://churchglobe.com/icons/og-image.png","description":"Find a Catholic church anywhere in the world on an interactive 3D globe. See Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ."}
 ]}
 </script>
@@ -861,9 +864,10 @@ const LANGS = [
   ['yo', 'Yorùbá'], ['lt', 'Lietuvių'], ['sn', 'chiShona'], ['hi', 'हिन्दी'], ['sl', 'Slovenščina'], ['cs', 'Čeština'],
   ['tet', 'Tetun'], ['gom', 'Konknni'], ['ru', 'Русский'], ['ja', '日本語'], ['sq', 'Shqip'], ['la', 'Latina'],
   ['ca', 'Català'], ['ro', 'Română'], ['mt', 'Malti'], ['te', 'తెలుగు'], ['zu', 'isiZulu'], ['ak', 'Akan', 'tw'],
+  ['tr', 'Türkçe'], ['el', 'Ελληνικά'], ['he', 'עברית'],
 ].map(([code, name, wiki, locale]) => ({ code, name, wiki: wiki || code, locale: locale || code }));
 const LANG_BY = Object.fromEntries(LANGS.map(l => [l.code, l]));
-const RTL = new Set(['ar']);
+const RTL = new Set(['ar', 'he']);
 // Google Fonts for scripts that Figtree and Cinzel don't cover, fetched only for that language
 const SCRIPT_FONTS = {
   vi: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', uk: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600',
@@ -872,6 +876,7 @@ const SCRIPT_FONTS = {
   ru: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', ja: 'Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@500;600',
   hi: 'Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600', ta: 'Noto+Sans+Tamil:wght@400;500;600&family=Noto+Serif+Tamil:wght@500;600',
   yo: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', ig: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600',
+  el: 'Noto+Sans:wght@400;500;600&family=Noto+Serif:wght@500;600', he: 'Noto+Sans+Hebrew:wght@400;500;600&family=Noto+Serif+Hebrew:wght@500;600',
 };
 const LANG_KEY = 'ccf-lang';
 // the title starts the page over: no open church, filters or Bible view; favorites and language stay (both are saved)
@@ -1291,7 +1296,7 @@ async function shardFor(i) {
 let namesX = null, namesXData = {};
 const OTHER_SCRIPT = /[^\u0000-\u036f\u1e00-\u1eff\u2000-\u2bff\ufe00-\ufe0f\u{1d400}-\u{1d7ff}\u{1f000}-\u{1faff}]/u;
 const NAME_LANG = { ko: 'ko', cyr: 'ru', ar: 'ar', th: 'th', el: 'el', ta: 'ta', ml: 'ml', deva: 'hi', he: 'he', ka: 'ka', hy: 'hy', et: 'am', lo: 'lo', km: 'km', si: 'si', bn: 'bn' };
-const LANG_SCRIPT = { ko: 'ko', zh: 'cjk', ja: 'cjk', ru: 'cyr', uk: 'cyr', ar: 'ar', ta: 'ta', ml: 'ml', hi: 'deva', gom: 'deva' };
+const LANG_SCRIPT = { ko: 'ko', zh: 'cjk', ja: 'cjk', ru: 'cyr', uk: 'cyr', ar: 'ar', ta: 'ta', ml: 'ml', hi: 'deva', gom: 'deva', el: 'el', he: 'he' };
 function loadNamesX() {
   return namesX || (namesX = getJSON('dev/data/names-x.json').then(d => { namesXData = d; }).catch(e => { namesX = null; }));
 }
@@ -2117,7 +2122,7 @@ let places = null;
 // the rest read English (the map can't draw Hindi, Tamil, Malayalam or Konkani, and Bemba and Hiligaynon have no Wikipedia)
 const cityNames = new Map(), CITY_FILES = new Set(['hi', 'gom', 'ta', 'ml', 'te', 'en', 'es', 'pt', 'fr', 'it', 'pl', 'de', 'zh', 'nl', 'id', 'vi', 'ko', 'hu', 'uk', 'ar', 'ru', 'ja',
   'bcl', 'ceb', 'cs', 'fil', 'gn', 'hr', 'ht', 'ig', 'ilo', 'la', 'lg', 'ln', 'lt', 'mg', 'ny', 'qu', 'rn', 'rw', 'sk', 'sl', 'sn', 'sq', 'sw', 'tet', 'war', 'yo', 'ki',
-  'ca', 'ro', 'mt', 'zu', 'ak']);
+  'ca', 'ro', 'mt', 'zu', 'ak', 'tr', 'el', 'he']);
 /* ---------- streets once you zoom into a town: OpenStreetMap vector tiles from OpenFreeMap (free, no key) ---------- */
 function addStreets() {
   map.addSource('osm', { type: 'vector', url: 'https://tiles.openfreemap.org/planet', minzoom: 0, maxzoom: 14 });
@@ -2145,7 +2150,9 @@ async function setCityLabels() {
   if (f !== (CITY_FILES.has(i18n.code) ? i18n.code : 'en') || !places) return;
   // a name in a script the globe's font can't shape is left to the page (htmlLabels) and the map draws nothing there
   places.features.forEach((ft, k) => { const n = names[k] || ft.properties.name, page = drawable(n) !== n.trim() ? n : '';
-    ft.properties.label = page ? '' : n; ft.properties.html = page; });
+    ft.properties.label = page ? '' : n; ft.properties.html = page;
+    // the globe writes city names in capitals by the page language's rules (Greek drops its accents, Turkish i becomes İ)
+    if (ft.properties.label) ft.properties.cap = n.toLocaleUpperCase(i18n.locale); else delete ft.properties.cap; });
   const src = map.getSource('places'); if (src) src.setData(places);
   htmlLabels.refresh();
 }
@@ -2167,7 +2174,7 @@ async function addBasemap() {
     id: 'places', type: 'symbol', source: 'places',
     filter: ['<=', ['get', 'scalerank'], ['step', ['zoom'], 1, 3, 3, 4, 5, 5, 7, 6, 10]],
     layout: {
-      'text-field': ['coalesce', ['get', 'label'], ['get', 'name']], 'text-font': ['NotoSansMedium'], 'text-transform': 'uppercase',
+      'text-field': ['coalesce', ['get', 'cap'], ['get', 'label'], ['get', 'name']], 'text-font': ['NotoSansMedium'], 'text-transform': 'uppercase',
       // bigger cities get bigger names
       'text-size': ['interpolate', ['linear'], ['zoom'], ...[[2, 11], [6, 14], [10, 18], [14, 20]].flatMap(([z, px]) => [z, ['step', ['get', 'scalerank'], px * 1.3, 3, px * 1.12, 6, px * 0.95]])], 'text-letter-spacing': 0.12,
       'text-variable-anchor': ['top', 'bottom', 'left', 'right'], 'text-radial-offset': 0.4, 'symbol-sort-key': ['get', 'scalerank'],
@@ -2629,6 +2636,9 @@ const OUTSIDER_BY = {
   la: /veneratur|venerat|habetur|habitus|creditur|credunt|traditio|legend|fabul|mythus|islam|coran|muslim|protestant|orthodox|lutheran|anglican|methodist|religio|eruditi|historici|apocryph|christian/i,
   hi: /पूजनीय|पूजा जाता|माना जाता|मानते|विश्वास किया|परंपरा|किंवदंती|मिथक|पौराणिक|इस्लाम|कुरान|मुस्लिम|प्रोटेस्टेंट|रूढ़िवादी|लूथर|एंग्लिकन|मेथोडिस्ट|संप्रदाय|धर्म|विद्वान|इतिहासकार|ऐतिहासिकता|ईसाई/,
   ta: /போற்றப்ப|வணங்கப்ப|கருதப்ப|நம்பப்ப|நம்புகின்ற|மரபு|பாரம்பரிய|புராண|தொன்மம்|இசுலாம்|இஸ்லாம்|குர்ஆன்|முஸ்லிம்|சீர்திருத்த|மரபுவழி|லூதர|ஆங்கிலிக்க|மெதடிஸ்ட்|சமயப் பிரிவு|சமய|மதம்|அறிஞர்|வரலாற்றாசிரிய|கிறித்தவ|கிறிஸ்தவ/,
+  tr: /saygı gör|kabul edil|sayıl[ıa]|inanıl|inanır|inanmaktadır|gelenek|efsane|söylence|mit\b|mitos|islam|İslam|kuran|kur'an|Kur'an|müslüman|Müslüman|protestan|ortodoks|luteryen|lüteriyen|anglikan|metodist|mezhep|dinî|dini\b|dinler|akademisyen|bilim insan|tarihçi|apokrif|hristiyan|Hristiyan|hıristiyan|Hıristiyan/i,
+  el: /τιμάται|τιμώνται|σεβαστ|θεωρείται|θεωρούνται|θεωρούσαν|πιστεύεται|πιστεύουν|πιστεύει|παράδοσ|θρύλ|μύθ|ισλάμ|κοράνι|μουσουλμάν|προτεστάντ|ορθόδοξ|λουθηραν|αγγλικαν|μεθοδιστ|δόγμα|θρησκ|μελετητ|ιστορικοί|ιστορικότητ|απόκρυφ|χριστιαν/i,
+  he: /נערץ|נערצת|מוערץ|מוערצת|נחשב|מאמינים|מאמין ש|לפי המסורת|מסורת|אגדה|אגדות|מיתוס|אסלאם|קוראן|מוסלמ|פרוטסטנט|אורתודוקס|לותרנ|אנגליקנ|מתודיסט|הדת|דתי|דתות|זרמים|חוקרים|היסטוריונים|היסטוריות|אפוקריפ|נוצרי|הנצרות/,
 };
 function faithful(text, max = 2, lang = 'en') {
   const sentences = String(text || '').match(/[^.!?。！？؟]+(?:[.!?؟]+(?:\s|$)|[。！？]+)/g) || [];
@@ -3897,7 +3907,8 @@ const bookSlug = (b) => b === 'Psalm' ? 'psalms' : b.toLowerCase().replace(/\s+/
 const bookName = (b) => td('book:' + b).replace(/^book:/, '');
 const withRefs = (text) => esc(text).replace(REF, (m, book, ch) => `<a class="ref" href="https://bible.usccb.org/bible/${bookSlug(book)}/${ch}" target="_blank" rel="noopener" title="${esc(tr('bReadRef', { ref: bookName(book) + ' ' + ch }))}">${bookName(book)}${m.slice(book.length)}</a>`);
 
-/* card hero: a drawn desert dusk with the ancient name, then the live photo if one turns up */
+/* card hero: a drawn desert dusk with the ancient name, then the live photo if one turns up
+   (in Hebrew and Arabic the text starts at the right edge, since SVG text runs leftward there) */
 function bibleScene(title, sub) {
   const stars = Array.from({ length: 30 }, (_, k) => `<circle cx="${(k * 89) % 400}" cy="${(k * 47) % 100}" r="${k % 4 ? 0.7 : 1.3}" fill="#fff" opacity="${0.35 + (k % 5) / 10}"/>`).join('');
   return `<svg class="scene" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -3907,8 +3918,8 @@ function bibleScene(title, sub) {
     <circle class="bstar" cx="318" cy="38" r="26" fill="url(#bst)"/><path d="M318 22v32M302 38h32" stroke="#fff6d8" stroke-width="1.2" opacity=".9"/>
     <path d="M0 160c50-18 90-22 150-12s90 4 140-10 80-6 110 4v48H0z" fill="#1a1426"/>
     <path d="M0 176c70-10 140-14 220-6s130 0 180-6v26H0z" fill="#0d0b16"/>
-    <text x="24" y="104" fill="#f3d58c" font-family="Cinzel, serif" font-size="${title.length > 21 ? 17 : title.length > 16 ? 22 : 30}" font-weight="600" letter-spacing="3">${esc(title.toUpperCase())}</text>
-    ${sub ? `<text x="25" y="128" fill="#e9e4d6" opacity=".8" font-family="Figtree, sans-serif" font-size="12.5">${esc(sub)}</text>` : ''}
+    <text x="${i18n.rtl ? 376 : 24}" y="104" fill="#f3d58c" font-family="Cinzel, serif" font-size="${title.length > 21 ? 17 : title.length > 16 ? 22 : 30}" font-weight="600" letter-spacing="${i18n.rtl ? 0 : 3}">${esc(title.toUpperCase())}</text>
+    ${sub ? `<text x="${i18n.rtl ? 375 : 25}" y="128" fill="#e9e4d6" opacity=".8" font-family="Figtree, sans-serif" font-size="12.5">${esc(sub)}</text>` : ''}
   </svg>`;
 }
 const wikiPhotos = new Map();
