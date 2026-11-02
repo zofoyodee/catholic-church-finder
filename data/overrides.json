@@ -1,4 +1,16 @@
 {
- "_note": "Corrections to the Overture data, keyed by church index (position in data/points.txt). Fields: web = website URL. Applied by the page and by scripts/web.",
- "68540": {"name": "Our Lady of Fatima Catholic Church, Albuquerque", "web": "https://fatimachurchabq.org/"}
+ "_note": "Corrections to the Overture data, keyed by church index (position in data/points.txt). Fields: web = website URL; sv = Street View panorama to show, with heading/pitch/fov, when the nearest one faces the wrong side. Applied by the page and by scripts/web.",
+ "68540": {
+  "name": "Our Lady of Fatima Catholic Church, Albuquerque",
+  "web": "https://fatimachurchabq.org/"
+ },
+ "118681": {
+  "name": "Parroquia de Sant Salvador de la Marina, Ibiza",
+  "sv": {
+   "pano": "eVzFyp9LhkyUo0O4VU2Nqw",
+   "heading": 312,
+   "pitch": 14,
+   "fov": 85
+  }
+ }
 }
