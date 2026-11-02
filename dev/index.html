@@ -1254,6 +1254,22 @@ async function loadPoints() {
   state.typ = new Uint8Array(buf, n * 8, n);
 }
 
+// data/overrides.json marks a pin that repeats another church ("dup": index of the one to keep).
+// It moves to type 7, which no filter shows, so it leaves the globe, search, Near Me and the counts, and keeps every index in place.
+async function hideDuplicates() {
+  state.dupOf = new Map();
+  const o = await loadOverrides();
+  for (const [k, v] of Object.entries(o)) {
+    const i = +k, keep = v && v.dup;
+    if (!(i >= 0 && i < state.n) || !(keep >= 0 && keep < state.n)) continue;
+    state.dupOf.set(i, keep);
+    const t = state.typ[i] & 7; if (t === 7) continue;
+    if (state.meta.types && state.meta.types[t]) state.meta.types[t]--;
+    if (state.meta.count) state.meta.count--;
+    state.typ[i] = (state.typ[i] & ~7) | 7;
+  }
+}
+
 function buildGeoJSON() {
   const feats = [];
   const { lon, lat, typ, n, enabled } = state;
@@ -3125,6 +3141,7 @@ const icon = {
 // the list a church was opened from on a phone, for the card's back button
 let cardFrom = '';
 async function selectChurch(i, { fly = true } = {}) {
+  if (state.dupOf && state.dupOf.has(i)) i = state.dupOf.get(i);  // a saved favourite of a removed duplicate opens the church it repeats
   $('cardBack').hidden = !cardFrom; $('cardBack').dataset.to = cardFrom; cardFrom = '';
   if (state.selected !== i) shardFor(i).then(r => track('church/' + ([r[0], r[2]].filter(Boolean).join(', ') || i), [r[0], r[2], countryName(r[5])].filter(Boolean).join(' · '))).catch(() => {});
   state.selected = i;
@@ -3947,7 +3964,7 @@ function nearestChurches(lat, lon, n = 4, maxKm = 40) {
   if (!state.n) return [];
   const out = [], dLat = maxKm / 111;
   for (let i = 0; i < state.n; i++) {
-    const la = state.lat[i] / 1e6; if (Math.abs(la - lat) > dLat) continue;
+    const la = state.lat[i] / 1e6; if (Math.abs(la - lat) > dLat || (state.typ[i] & 7) === 7) continue;  // 7 = a hidden duplicate
     const km = metres(lat, lon, la, state.lon[i] / 1e6) / 1000; if (km <= maxKm) out.push([km, i]);
   }
   return out.sort((a, b) => a[0] - b[0]).slice(0, n);
@@ -4479,6 +4496,7 @@ const mapReady = new Promise(res => map.once('load', res));
     await mapReady;
     await addBasemap();
     await pts;
+    await hideDuplicates();
     setCityLabels();
     setProgress(0.85, tr('placing'));
     await new Promise(r => setTimeout(r, 30));
@@ -4494,7 +4512,8 @@ const mapReady = new Promise(res => map.once('load', res));
       $('veil').classList.add('gone');
       setTimeout(() => { photoIndex().catch(() => {}); loadPhoneLib().catch(() => {}); }, 5000); // warm the small photo index and phone formats once the globe is up
       // open over the United States
-      const shared = parseInt(new URLSearchParams(location.search).get('church'), 10);
+      let shared = parseInt(new URLSearchParams(location.search).get('church'), 10);
+      if (state.dupOf.has(shared)) shared = state.dupOf.get(shared);  // an old link to a removed duplicate opens the church it repeats
       hooks.opened({ shared: shared >= 0 && shared < state.n });
       if (innerWidth > 640 || !(shared >= 0 && shared < state.n)) openFavsOnLoad();  // on phones a shared church's card gets the bottom of the screen
       if (shared >= 0 && shared < state.n) { state.ready = true; selectChurch(shared, { fly: true }); return; } // opened from a shared link

@@ -1,5 +1,5 @@
 {
- "_note": "Corrections to the Overture data, keyed by church index (position in data/points.txt). Fields: web = website URL; sv = Street View panorama to show, with heading/pitch/fov, when the nearest one faces the wrong side. Applied by the page and by scripts/web.",
+ "_note": "Corrections to the Overture data, keyed by church index (position in data/points.txt). Fields: web = website URL; sv = Street View panorama to show, with heading/pitch/fov, when the nearest one faces the wrong side; dup = index of the church this pin repeats (the pin is hidden and old links open that one). Applied by the page and by scripts/web.",
  "68540": {
   "name": "Our Lady of Fatima Catholic Church, Albuquerque",
   "web": "https://fatimachurchabq.org/"
@@ -12,5 +12,13 @@
    "pitch": 14,
    "fov": 85
   }
+ },
+ "118677": {
+  "name": "Ibiza Old Town Cathedral (duplicate of Catedral de Santa Maria de la Neu)",
+  "dup": 118678
+ },
+ "118679": {
+  "name": "Ibiza City Cathedral (duplicate of Catedral de Santa Maria de la Neu, pinned near the port)",
+  "dup": 118678
  }
 }
