@@ -1311,7 +1311,9 @@ function churchName(i, raw) {
 /* ---------- website checks and parish staff (data/web, built by scripts/web in GitHub Actions) ---------- */
 const web = { shards: new Map(), meta: null };
 let overrides = null;  // data/overrides.json: hand corrections, keyed by church index
-const loadOverrides = () => overrides || (overrides = getJSON('data/overrides.json').catch(() => ({})));
+// hand corrections change often and are small: skip the offline copy and the browser's saved copy so a fix shows on the first visit, not the second
+const loadOverrides = () => overrides || (overrides = (window.caches ? caches.keys().then(ks => Promise.all(ks.map(k => caches.open(k).then(c => c.delete(BASE + 'data/overrides.json', { ignoreSearch: true }))))).catch(() => {}) : Promise.resolve())
+  .then(() => getJSON('data/overrides.json?t=' + Date.now())).catch(() => ({})));
 async function webFor(i) {
   loadOverrides();
   const s = Math.floor(i / state.meta.shardSize);
