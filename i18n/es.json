@@ -73,6 +73,7 @@
   "aboutChurch": "Sobre esta iglesia",
   "readMore": "Leer más en Wikipedia",
   "readMoreLang": "Leer más en Wikipedia ({lang})",
+  "machineTr": "Traducción automática del {lang}",
   "photos_one": "{n} foto",
   "photos_other": "{n} fotos",
   "openGallery_one": "Abrir la galería, {n} foto",

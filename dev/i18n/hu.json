@@ -73,6 +73,7 @@
   "aboutChurch": "A templomról",
   "readMore": "Bővebben a Wikipédián",
   "readMoreLang": "Bővebben a Wikipédián ({lang})",
+  "machineTr": "Gépi fordítás, eredeti nyelv: {lang}",
   "photos_one": "{n} fotó",
   "photos_other": "{n} fotó",
   "openGallery_one": "Galéria megnyitása, {n} fotó",

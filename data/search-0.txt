@@ -46696,12 +46696,12 @@ St. Peter Canisius International Catholic Parish	Jakarta Pusat	ID	Jakarta
 Canisius Catholic Chapel, Menteng	Jakarta Pusat	ID	
 GKTdI Kristus Raja	Jakarta	ID	
 Gereja Katedral Jakarta	Jakarta	ID	
-Catedral de Nuestra Señora de la Asunción Yakarta	Jakarta Pusat	ID	
+Gereja Katedral Jakarta	Jakarta Pusat	ID	
 MSC Provincial House	Jakarta Pusat	ID	
 Gua Maria Kapel Santa Maria Jakarta	Jakarta	ID	
 Shekinah Catholic Charismatic Center	Jakarta	ID	
-Gereja Pantekosta Cempaka Putih	Jakarta Pusat	ID	
-kapel_lourdes	Jakarta	ID	
+Gereja Katolik Santo Paskalis	Jakarta Pusat	ID	
+Kapel Lourdes	Jakarta	ID	
 Gereja Katolik Santo Vincentius Pallotti	Tangerang	ID	
 Gereja Katolik St Maria Immaculata	Tangerang Kabupaten	ID	BT
 Gereja St. Petrus & Paulus	Jakarta Barat	ID	
@@ -46709,7 +46709,7 @@ Pastoran Santo Petrus Paulus	Jakarta Barat	ID
 Gereja Santo Yohanes Bosco	Jakarta Utara	ID	
 St.santo paulus sunter	Jakarta	ID	
 PDPKK St.Alfonsus - Pademangan	Jakarta	ID	
-Gereja Katolik SaNto Lukas Sunter	Jakarta	ID	
+Gereja Katolik Santo Lukas Sunter	Jakarta	ID	
 Catholic Church of Stella Maris Pluit	Jakarta Utara	ID	
 Kapel Katolik Santa Faustina, Pluit	Jakarta Utara	ID	
 Gereja St Yacobus Kelapa Gading	Jakarta	ID	
@@ -46965,7 +46965,7 @@ Catholic Church of Santa Clara	Bekasi	ID
 Gereja Katolik Santo Bonaventura, Pulomas	Jakarta Timur	ID	
 Gereja Katolik Santo Yakobus	Jakarta Utara	ID	
 Gereja Katolik Stasi Pegangsaan 2	Jakarta Utara	ID	
-Seputar Gereja St. Albertus Agung Harapan Indah	Bekasi	ID	
+Gereja Santo Albertus Agung Harapan Indah	Bekasi	ID	
 Gereja Santo Marinus	Karawang	ID	
 Paroki Santo Fransiskus Xaverius	Jakarta	ID	
 Gereja Salib Suci Tugu Utara Priok	Jakarta	ID	
