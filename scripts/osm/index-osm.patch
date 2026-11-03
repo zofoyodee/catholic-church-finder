@@ -1,0 +1,97 @@
+diff --git a/index.html b/index.html
+index e2dcf7a..570543a 100644
+--- a/index.html
++++ b/index.html
+@@ -764,7 +764,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
+   <button id="aboutBtn" data-i18n="aboutData">About the data</button>
+   <button id="contactBtn" data-i18n="contact" hidden>Contact</button>
+   <label class="themepick" title="Theme" data-i18n-attr="title:themeLabel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.5-1-2.6 0-.9.7-1.6 1.6-1.6H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10" cy="7" r="1.2"/><circle cx="15" cy="7" r="1.2"/></svg><select id="themeSel" aria-label="Theme" data-i18n-attr="aria-label:themeLabel"></select></label>
+-  <span data-i18n="footCredit">Places © Overture Maps Foundation · Basemap Natural Earth, streets © OpenStreetMap contributors via OpenFreeMap</span>
++  <span data-i18n="footCredit">Churches © OpenStreetMap contributors, details © Overture Maps Foundation · Basemap Natural Earth, streets via OpenFreeMap</span>
+   <span class="coords" id="coords"></span>
+ </footer>
+ 
+@@ -914,7 +914,7 @@ const EN = {
+   chipsLabel: 'Show church types', nearMe: 'Churches near me', yourFavs: 'Your favorite churches', spin: 'Spin the Globe',
+   zoomIn: 'Zoom in', zoomOut: 'Zoom out', home: 'Back to the whole globe', random: 'Visit a Random Church', menu: 'Menu', backList: 'List', backToList: 'Back to the list', navNear: 'Near Me', wholeGlobe: 'Whole Globe',
+   voiceSearch: 'Search by Voice', clearSearch: 'Clear Search', listening: 'Listening… say a church or town', micBlocked: 'The microphone is blocked. Allow it in your browser settings to search by voice.', voiceFailed: 'Voice search isn’t working right now. Please type your search.',
+-  aboutData: 'About the Data', footCredit: 'Places © Overture Maps Foundation · Basemap Natural Earth, streets © OpenStreetMap contributors via OpenFreeMap',
++  aboutData: 'About the Data', footCredit: 'Churches © OpenStreetMap contributors, details © Overture Maps Foundation · Basemap Natural Earth, streets via OpenFreeMap',
+   nearYou: 'Near You', closeNear: 'Close nearby churches', favorites: 'Favorites', closeFavs: 'Close favorites',
+   closeDetails: 'Close details', gallery: 'Photo gallery', prevPhoto: 'Previous photo', nextPhoto: 'Next photo', closeGallery: 'Close gallery',
+   type_cathedral: 'Cathedrals', one_cathedral: 'Cathedral', type_basilica: 'Basilicas', one_basilica: 'Basilica',
+@@ -950,7 +950,7 @@ const EN = {
+   website: 'Website', mediaTitle: 'Photos, Video and History', photosLink: 'Photos', videos: 'Videos',
+   streetView: 'Street View', history: 'History',
+   byName: 'Identified as Catholic by its name', listed: 'Listed as Roman Catholic',
+-  source: 'Source: Overture Maps places ({datasets}).', sourceUpdated: 'Source: Overture Maps places ({datasets}), updated {date}.',
++  source: 'Source: Overture Maps places ({datasets}).', sourceOsm: 'Source: OpenStreetMap contributors.', sourceOsmUpdated: 'Source: OpenStreetMap contributors, checked {date}.', listedOsm: 'Mapped as Catholic on OpenStreetMap', sourceUpdated: 'Source: Overture Maps places ({datasets}), updated {date}.',
+   aChurch: 'A Catholic church', mailSubject: '{name} on Catholic Church Finder', mailBody: 'See it on the globe:',
+   copied: 'Link copied', copyFailed: 'Copy failed',
+   show: 'Show', all: 'All', allOn: 'Showing every kind of church', allAgain: 'Show every kind of church again',
+@@ -963,10 +963,10 @@ const EN = {
+   noMatch: 'No churches match “{q}”. Try the town name or a saint’s name.',
+   matches_one: '{n} match. Add a town to narrow it down.', matches_other: '{n} matches. Add a town to narrow it down.',
+   matchesMax: '400+ matches. Add a town to narrow it down.',
+-  aboutP1: 'The globe shows <b>{n}</b> Catholic churches, chapels, shrines, basilicas and cathedrals. They come from the {a1}Overture Maps places dataset{end} (release {release}), which gathers places from Meta, Microsoft and other open sources.',
+-  aboutP2: '{cat} places are listed in Overture as Roman Catholic places of worship. Another {name} are listed only as Christian places of worship, and the globe includes them because their names are clearly Catholic (for example “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Those carry a note in their details.',
++  aboutP1: 'The globe shows <b>{n}</b> Catholic churches, chapels, shrines, basilicas and cathedrals. Every pin is a church building mapped as Catholic on {a1}OpenStreetMap{end}, the free world map drawn by volunteers (data from {osm}).',
++  aboutP2: 'Phone numbers and websites for {cat} of them come from the {a1}Overture Maps places dataset{end} (release {release}), which gathers places from Meta, Microsoft and other open sources. The other {osm} come from OpenStreetMap alone.',
+   aboutP3: 'No open dataset lists every parish yet. Coverage is strongest in the Americas and Western Europe and thinner in parts of Africa and Asia, where many parishes are not yet mapped. Some entries may be duplicates, offices or closed buildings. When you open a church, the page looks for a photograph of it on {a1}Wikimedia Commons{end} and Wikipedia, matched by location and name and credited to its photographer. Churches without a matching photo keep a drawn scene. More photos, videos and Street View open from each card.',
+-  aboutCredits: 'Places data © Overture Maps Foundation, CDLA Permissive 2.0. Basemap from Natural Earth (public domain). Map rendering by MapLibre.',
++  aboutCredits: 'Church locations © OpenStreetMap contributors, ODbL. Places data © Overture Maps Foundation, CDLA Permissive 2.0. Basemap from Natural Earth (public domain). Map rendering by MapLibre.',
+   close: 'Close', unknown: 'Unknown', dirN: 'N', dirS: 'S', dirE: 'E', dirW: 'W',
+   nChurches_one: '{n} church', nChurches_other: '{n} churches', countOf: '{n} {kinds}',
+   feastDay: 'Feast day: {feast}', learnMoreFM: 'Learn More at Franciscan Media',
+@@ -2072,6 +2072,19 @@ async function fromWikidata(lat, lon, tokens, cc) {
+   if (!photo && !item) return null;
+   return { score: best ? best.score : -1, photo, qid: item && item.qid, itemScore: item ? item.score : -1, sure: !!item };
+ }
++// the Wikidata item OpenStreetMap names for the church: its picture (P18) wins, and it is surely the church
++async function fromQid(qid) {
++  const q = `SELECT ?img WHERE { OPTIONAL { wd:${qid} wdt:P18 ?img. } } LIMIT 1`;
++  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 9000);
++  let j;
++  try {
++    const r = await fetch('https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(q), { signal: ctl.signal });
++    if (!r.ok) throw new Error('wikidata ' + r.status); j = await r.json();
++  } finally { clearTimeout(timer); }
++  const b = j.results.bindings[0], file = b && b.img ? decodeURIComponent(b.img.value.split('/').pop()).replace(/_/g, ' ') : '';
++  const photo = file ? await fileInfo(file).catch(() => null) : null;
++  return { score: photo ? 5 : -1, photo, qid, itemScore: 9, sure: true };
++}
+ // Last resort: Commons search by church name and town, for photos that carry no location
+ async function fromCommonsSearch(name, town, tokens) {
+   if (!tokens.length) return null;
+@@ -2097,7 +2110,8 @@ function lookupPhoto(i, rec) {
+   const settle = (ps) => Promise.all(ps.map(p => p.catch(() => undefined)));
+   const pick = (found) => found.filter(f => f && f.photo).sort((a, b) => b.score - a.score)[0];
+   const job = (async () => {
+-    const first = await settle([fromCommons(lat, lon, tokens, town), fromWikidata(lat, lon, tokens, cc), ...langs.map(l => fromWikipedia(l, lat, lon, tokens))]);
++    const qid = rec && /^Q\d+$/.test(rec[14] || '') ? rec[14] : '';  // the church's Wikidata item, as tagged on OpenStreetMap
++    const first = await settle([...(qid ? [fromQid(qid)] : []), fromCommons(lat, lon, tokens, town), fromWikidata(lat, lon, tokens, cc), ...langs.map(l => fromWikipedia(l, lat, lon, tokens))]);
+     let best = pick(first);
+     if (!best || best.score < 1) { // nothing named for sure: also search Commons by name and town
+       const more = await settle([fromCommonsSearch(name, town, tokens)]);
+@@ -3260,8 +3274,8 @@ async function selectChurch(i, { fly = true } = {}) {
+     ${staffHTML(wentry, webInfo.checked, webUrl, host)}
+     <div id="cAbout"></div>
+     <div class="prov">
+-      ${conf < 0.55 ? `<span class="pill warn" title="${esc(tr('unverifiedTip'))}">${esc(tr('unverified'))}</span>` : ''}${how === 'name' ? `<span class="pill warn">${esc(tr('byName'))}</span>` : `<span class="pill">${esc(tr('listed'))}</span>`}
+-      <div style="margin-top:8px">${esc(tr(updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: /^\d{4}-\d\d-\d\d$/.test(updated) ? dateText(new Date(updated + 'T12:00:00'), { year: 'numeric', month: 'short', day: 'numeric' }) : updated }))}</div>
++      ${conf < 0.55 ? `<span class="pill warn" title="${esc(tr('unverifiedTip'))}">${esc(tr('unverified'))}</span>` : ''}${how === 'osm' ? `<span class="pill">${esc(tr('listedOsm'))}</span>` : how === 'name' ? `<span class="pill warn">${esc(tr('byName'))}</span>` : `<span class="pill">${esc(tr('listed'))}</span>`}
++      <div style="margin-top:8px">${esc(tr(how === 'osm' ? (updated ? 'sourceOsmUpdated' : 'sourceOsm') : updated ? 'sourceUpdated' : 'source', { datasets: (datasets || []).join(', ') || 'Overture', date: /^\d{4}-\d\d-\d\d$/.test(updated) ? dateText(new Date(updated + 'T12:00:00'), { year: 'numeric', month: 'short', day: 'numeric' }) : updated }))}</div>
+     </div>`;
+   if (phone && !phones.lib) loadPhoneLib().then(() => { if (state.selected === i && $('cPhone')) $('cPhone').innerHTML = phoneHTML(phone, cc); }).catch(() => {});
+   syncSave(i);
+@@ -3609,8 +3623,8 @@ $('aboutBtn').addEventListener('click', () => {
+   const half = Math.ceil(rows.length / 2);
+   $('aboutBox').innerHTML = `
+     <h2 id="aboutTitle">${esc(tr('aboutData'))}</h2>
+-    <p>${tr('aboutP1', { n: m.count, release: esc(m.release), a1: '<a href="https://docs.overturemaps.org/guides/places/" target="_blank" rel="noopener">', end: '</a>' })}</p>
+-    <p>${tr('aboutP2', { cat: fmt(m.byMatch.category || 0), name: fmt(m.byMatch.name || 0) })}</p>
++    <p>${tr('aboutP1', { n: fmt(m.count), osm: esc(m.osm || ''), a1: '<a href="https://www.openstreetmap.org/about" target="_blank" rel="noopener">', end: '</a>' })}</p>
++    <p>${tr('aboutP2', { cat: fmt((m.byMatch.category || 0) + (m.byMatch.name || 0)), osm: fmt(m.byMatch.osm || 0), release: esc(m.release), a1: '<a href="https://docs.overturemaps.org/guides/places/" target="_blank" rel="noopener">', end: '</a>' })}</p>
+     <p>${tr('aboutP3', { a1: '<a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">', end: '</a>' })}</p>
+     <div class="cols"><table>${rows.slice(0, half).join('')}</table><table>${rows.slice(half).join('')}</table></div>
+     <p style="font-size:12px">${tr('aboutCredits')}</p>
