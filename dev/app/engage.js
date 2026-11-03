@@ -22,6 +22,7 @@ const VIEW_KEY = 'ccf-view';
 const view = { satellite: false, daynight: true, sky: true, density: true, liturgical: true };
 try { Object.assign(view, JSON.parse(localStorage.getItem(VIEW_KEY) || '{}')); } catch (e) {}
 const saveView = () => { try { localStorage.setItem(VIEW_KEY, JSON.stringify(view)); } catch (e) {} };
+const VIEW_START = { ...view, satellite: false, daynight: true, sky: true, density: true, liturgical: true };
 
 /* ---------- the liturgical calendar ---------- */
 // dates are whole days counted from 1970-01-01, so time zones and daylight saving never shift them
@@ -433,6 +434,12 @@ function showMenu(open) {
 viewBtn.addEventListener('click', (e) => { e.stopPropagation(); showMenu(menu.hidden); });
 addEventListener('pointerdown', (e) => { if (!menu.hidden && !e.target.closest('#viewMenu, #viewBtn')) showMenu(false); });
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { e.stopImmediatePropagation(); showMenu(false); viewBtn.focus(); } }, true);
+// Reset (Menu): Globe View back to its starting switches
+document.addEventListener('ccf-reset', () => {
+  try { localStorage.removeItem(VIEW_KEY); localStorage.removeItem(TODAY_KEY); } catch (e) {}
+  Object.assign(view, VIEW_START); renderMenu(); try { applyView(); } catch (e) {}
+  showMenu(false);
+});
 menu.addEventListener('click', (e) => { if (e.target.closest('.vm-x')) { showMenu(false); viewBtn.focus(); } });
 menu.addEventListener('change', (e) => {
   const k = e.target.dataset.k; if (!k) return;
