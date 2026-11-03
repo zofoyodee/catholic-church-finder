@@ -522,5 +522,6 @@
   "nm_s": "Santuáriu {x}",
   "sourceOsm": "Fonte: kolaboradór OpenStreetMap.",
   "sourceOsmUpdated": "Fonte: kolaboradór OpenStreetMap, verifika iha {date}.",
-  "listedOsm": "Rejista hanesan katólika iha OpenStreetMap"
+  "listedOsm": "Rejista hanesan katólika iha OpenStreetMap",
+  "nearSearch": "Buka"
 }

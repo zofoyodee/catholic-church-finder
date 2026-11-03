@@ -522,5 +522,6 @@
   "nm_s": "Ebe nsọ {x}",
   "sourceOsm": "Isi mmalite: ndị na-enye aka na OpenStreetMap.",
   "sourceOsmUpdated": "Isi mmalite: ndị na-enye aka na OpenStreetMap, e lere ya na {date}.",
-  "listedOsm": "Edebanyere dị ka nke Katọlik na OpenStreetMap"
+  "listedOsm": "Edebanyere dị ka nke Katọlik na OpenStreetMap",
+  "nearSearch": "Chọọ"
 }

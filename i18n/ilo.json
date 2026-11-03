@@ -522,5 +522,6 @@
   "nm_s": "Santuario ti {x}",
   "sourceOsm": "Taudan: dagiti kontributor ti OpenStreetMap.",
   "sourceOsmUpdated": "Taudan: dagiti kontributor ti OpenStreetMap, nakita idi {date}.",
-  "listedOsm": "Nailista a Katoliko iti OpenStreetMap"
+  "listedOsm": "Nailista a Katoliko iti OpenStreetMap",
+  "nearSearch": "Agbiruk"
 }

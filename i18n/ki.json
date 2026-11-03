@@ -522,5 +522,6 @@
   "nm_s": "Kũndũ kwamũre kwa {x}",
   "sourceOsm": "Kũrĩa yumĩte: atethia a OpenStreetMap.",
   "sourceOsmUpdated": "Kũrĩa yumĩte: atethia a OpenStreetMap, ĩrorĩtwo {date}.",
-  "listedOsm": "Ĩandĩkĩtwo ta ya Gĩkatholiki kũrĩ OpenStreetMap"
+  "listedOsm": "Ĩandĩkĩtwo ta ya Gĩkatholiki kũrĩ OpenStreetMap",
+  "nearSearch": "Caria"
 }
