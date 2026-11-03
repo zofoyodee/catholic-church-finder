@@ -199,3 +199,6 @@ body.jesus-mode .ms-find .for-jesus, body.bible-mode:not(.jesus-mode) .ms-find .
 body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; }
 .ms-empty { margin: -4px 0 0; font-size: 12.5px; line-height: 1.4; color: var(--ink-faint); }
 .ms-empty[hidden] { display: none; }
+/* Find a Church: the kinds of church sit under their own small "Show" heading */
+#msShow .chips .lbl { display: block; margin-top: 10px; font-size: 11px; letter-spacing: .14em; color: var(--ink-faint); }
+.ms-acts button[data-for="listHere"] { grid-column: 1 / -1; }
