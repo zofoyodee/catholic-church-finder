@@ -87,6 +87,11 @@ body:has(#favs:not([hidden])) .float-card, body:has(#near:not([hidden])) .float-
 
 /* globe view switches */
 .viewmenu { position: fixed; z-index: 9; width: 250px; padding: 8px; background: var(--panel-solid); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 48px #000b; display: grid; gap: 2px; }
+.viewmenu .vm-x { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: none; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.viewmenu .vm-x:hover { border-color: color-mix(in srgb, var(--gold) 50%, transparent); }
+.viewmenu .vm-x svg { width: 14px; height: 14px; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+[dir="rtl"] .viewmenu .vm-x { right: auto; left: 8px; }
+.viewmenu h3 { min-height: 20px; display: flex; align-items: center; padding-inline-end: 36px; }
 .viewmenu h3 { margin: 6px 10px 6px; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
 .viewmenu label { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center; padding: 8px 10px; border-radius: 9px; cursor: pointer; }
 .viewmenu label:hover { background: rgba(255,255,255,.04); }

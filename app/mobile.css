@@ -15,18 +15,16 @@
 .compact .search > svg { top: 15px; }
 .compact .results { top: 52px; }
 
-/* side buttons: just churches near me; Whole Globe sits at the end of the search bar */
+/* side buttons: Near Me, Favorites and Whole Globe (the slim bar at the end of this file) */
 .compact .ctrls > :not(#nearBtn):not(#favOpen):not(#home) { display: none !important; }
 .globe-btn { display: none; }
 .compact .globe-btn {
-  display: grid; place-items: center; position: absolute; z-index: 2; right: 5px; top: 5px; width: 36px; height: 36px;
+  display: none; place-items: center; position: absolute; z-index: 2; right: 5px; top: 5px; width: 36px; height: 36px;
   border-radius: 50%; border: 0; background: transparent; cursor: pointer;
 }
 .compact .globe-btn:hover { background: rgba(232, 184, 74, 0.14); }
 .compact .search .globe-btn svg { position: static; width: 20px; height: 20px; stroke: var(--ink-soft); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.compact .search input { padding-right: 46px; }
 [dir="rtl"].compact .globe-btn { right: auto; left: 5px; }
-[dir="rtl"].compact .search input { padding: 0 40px 0 46px; }
 .compact .ctrls { bottom: calc(var(--nav-h) + 12px); }
 
 /* bottom tabs */
@@ -210,7 +208,9 @@ body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; 
 .compact .ctrls button { height: 34px; border: 0; border-radius: 0; background: transparent; padding: 0 12px 0 10px; gap: 6px; font-size: 12px; position: relative; }
 .compact .ctrls button + button { border-inline-start: 1px solid var(--line); }
 .compact .ctrls button[hidden] + button { border-inline-start: 0; }
-.compact .ctrls #nearBtn { background: rgba(232, 184, 74, 0.22); border-start-start-radius: 17px; border-end-start-radius: 17px; }
+.compact .ctrls #nearBtn { border-start-start-radius: 17px; border-end-start-radius: 17px; }
+/* gold only while its list is open */
+.compact .ctrls button[aria-expanded="true"], .compact .ctrls button[aria-pressed="true"] { background: rgba(232, 184, 74, 0.22); }
 .compact .ctrls #home { border-start-end-radius: 17px; border-end-end-radius: 17px; }
 .compact .ctrls svg { width: 16px; height: 16px; }
 .compact .ctrls .count { top: -7px; right: 2px; }
