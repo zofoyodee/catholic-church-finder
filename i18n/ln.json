@@ -522,5 +522,7 @@
   "nm_s": "Esika ya bosantu ya {x}",
   "sourceOsm": "Esika euti: basungi ya OpenStreetMap.",
   "sourceOsmUpdated": "Esika euti: basungi ya OpenStreetMap, etalami na {date}.",
-  "listedOsm": "Ekomamá lokola ya Katolike na OpenStreetMap"
+  "listedOsm": "Ekomamá lokola ya Katolike na OpenStreetMap",
+  "resetAll": "Zongisa",
+  "resetHint": "Zonga na bibongiseli ya ebandeli. Mangomba obombi ekotikala."
 }

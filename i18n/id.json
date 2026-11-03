@@ -514,5 +514,7 @@
   "nm_s": "Tempat Ziarah {x}",
   "sourceOsm": "Sumber: kontributor OpenStreetMap.",
   "sourceOsmUpdated": "Sumber: kontributor OpenStreetMap, diperiksa {date}.",
-  "listedOsm": "Tercatat sebagai Katolik di OpenStreetMap"
+  "listedOsm": "Tercatat sebagai Katolik di OpenStreetMap",
+  "resetAll": "Atur Ulang",
+  "resetHint": "Kembali ke pengaturan awal. Gereja yang Anda simpan tetap ada."
 }

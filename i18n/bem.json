@@ -522,5 +522,7 @@
   "nm_s": "Incende ishila iya {x}",
   "sourceOsm": "Ukwafuma: abaafwilisha OpenStreetMap.",
   "sourceOsmUpdated": "Ukwafuma: abaafwilisha OpenStreetMap, cafwailishiwe pa {date}.",
-  "listedOsm": "Iyalembwa nga iya Katolika pa OpenStreetMap"
+  "listedOsm": "Iyalembwa nga iya Katolika pa OpenStreetMap",
+  "resetAll": "Bwekeshapo",
+  "resetHint": "Bwelela ku fyo mwatendekele. Amacalici mwasunga yalashala."
 }

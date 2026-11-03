@@ -581,5 +581,7 @@
   "stops_many": "{n}-il waqfa",
   "sourceOsm": "Sors: il-kontributuri ta’ OpenStreetMap.",
   "sourceOsmUpdated": "Sors: il-kontributuri ta’ OpenStreetMap, iċċekkjat fl-{date}.",
-  "listedOsm": "Imniżżla bħala Kattolika fuq OpenStreetMap"
+  "listedOsm": "Imniżżla bħala Kattolika fuq OpenStreetMap",
+  "resetAll": "Erġa’ Issettja",
+  "resetHint": "Erġa’ lura għas-settings tal-bidu. Il-knejjes salvati jibqgħu."
 }

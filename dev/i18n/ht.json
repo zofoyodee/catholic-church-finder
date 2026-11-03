@@ -522,5 +522,7 @@
   "nm_s": "Sanktyè {x}",
   "sourceOsm": "Sous: kontribitè OpenStreetMap.",
   "sourceOsmUpdated": "Sous: kontribitè OpenStreetMap, verifye {date}.",
-  "listedOsm": "Anrejistre kòm katolik sou OpenStreetMap"
+  "listedOsm": "Anrejistre kòm katolik sou OpenStreetMap",
+  "resetAll": "Reyinisyalize",
+  "resetHint": "Retounen nan paramèt kòmansman yo. Legliz ou sove yo ap rete."
 }

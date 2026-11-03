@@ -561,5 +561,7 @@
   "nm_s": "مزار {x}",
   "sourceOsm": "المصدر: مساهمو OpenStreetMap.",
   "sourceOsmUpdated": "المصدر: مساهمو OpenStreetMap، تم التحقق في {date}.",
-  "listedOsm": "مسجّلة ككاثوليكية على OpenStreetMap"
+  "listedOsm": "مسجّلة ككاثوليكية على OpenStreetMap",
+  "resetAll": "إعادة الضبط",
+  "resetHint": "العودة إلى الإعدادات الأولى. تبقى الكنائس المحفوظة."
 }

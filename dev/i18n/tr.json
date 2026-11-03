@@ -530,5 +530,7 @@
   "massNoteTip": "Ayin ve Günah İtirafı saatleri cemaatlerin web sitelerinden okunur, bu yüzden yalnızca sitesi bunları listeleyen kiliseler süzülebilir",
   "sourceOsm": "Kaynak: OpenStreetMap katkıcıları.",
   "sourceOsmUpdated": "Kaynak: OpenStreetMap katkıcıları, {date} tarihinde kontrol edildi.",
-  "listedOsm": "OpenStreetMap’te Katolik olarak kayıtlı"
+  "listedOsm": "OpenStreetMap’te Katolik olarak kayıtlı",
+  "resetAll": "Sıfırla",
+  "resetHint": "Başlangıç ayarlarına dön. Kaydettiğiniz kiliseler kalır."
 }

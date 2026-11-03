@@ -522,5 +522,7 @@
   "nm_s": "Ojúbọ mímọ́ {x}",
   "sourceOsm": "Orísun: àwọn olùkópa OpenStreetMap.",
   "sourceOsmUpdated": "Orísun: àwọn olùkópa OpenStreetMap, a ṣàyẹ̀wò rẹ̀ ní {date}.",
-  "listedOsm": "A kọ sílẹ̀ bí ti Kátólíìkì lórí OpenStreetMap"
+  "listedOsm": "A kọ sílẹ̀ bí ti Kátólíìkì lórí OpenStreetMap",
+  "resetAll": "Tún Ṣètò",
+  "resetHint": "Padà sí ètò ìbẹ̀rẹ̀. Àwọn ṣọ́ọ̀ṣì tí o fipamọ́ yóò wà níbẹ̀."
 }

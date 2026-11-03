@@ -521,5 +521,7 @@
   "nm_s": "{x} तीर्थस्थल",
   "sourceOsm": "स्रोत: OpenStreetMap योगदानकर्ता।",
   "sourceOsmUpdated": "स्रोत: OpenStreetMap योगदानकर्ता, {date} को जाँचा गया।",
-  "listedOsm": "OpenStreetMap पर कैथोलिक के रूप में दर्ज"
+  "listedOsm": "OpenStreetMap पर कैथोलिक के रूप में दर्ज",
+  "resetAll": "रीसेट",
+  "resetHint": "शुरुआती सेटिंग्स पर लौटें। आपके सहेजे गए गिरजाघर बने रहेंगे।"
 }

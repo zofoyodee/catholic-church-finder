@@ -538,5 +538,7 @@
   "nm_s": "Božja pot {x}",
   "sourceOsm": "Vir: sodelavci OpenStreetMap.",
   "sourceOsmUpdated": "Vir: sodelavci OpenStreetMap, preverjeno {date}.",
-  "listedOsm": "Na OpenStreetMap vpisana kot katoliška"
+  "listedOsm": "Na OpenStreetMap vpisana kot katoliška",
+  "resetAll": "Ponastavi",
+  "resetHint": "Vrni začetne nastavitve. Shranjene cerkve ostanejo."
 }

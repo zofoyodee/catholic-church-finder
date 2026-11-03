@@ -550,5 +550,7 @@
   "nm_s": "Poutní místo {x}",
   "sourceOsm": "Zdroj: přispěvatelé OpenStreetMap.",
   "sourceOsmUpdated": "Zdroj: přispěvatelé OpenStreetMap, ověřeno {date}.",
-  "listedOsm": "V OpenStreetMap zapsán jako katolický"
+  "listedOsm": "V OpenStreetMap zapsán jako katolický",
+  "resetAll": "Obnovit",
+  "resetHint": "Vrátit původní nastavení. Uložené kostely zůstanou."
 }

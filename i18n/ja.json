@@ -514,5 +514,7 @@
   "nm_s": "{x}巡礼所",
   "sourceOsm": "出典：OpenStreetMap 寄稿者。",
   "sourceOsmUpdated": "出典：OpenStreetMap 寄稿者、{date} 確認。",
-  "listedOsm": "OpenStreetMap でカトリックとして登録"
+  "listedOsm": "OpenStreetMap でカトリックとして登録",
+  "resetAll": "リセット",
+  "resetHint": "最初の設定に戻します。保存した教会はそのまま残ります。"
 }

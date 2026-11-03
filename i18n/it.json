@@ -530,5 +530,7 @@
   "nm_s": "Santuario di {x}",
   "sourceOsm": "Fonte: contributori di OpenStreetMap.",
   "sourceOsmUpdated": "Fonte: contributori di OpenStreetMap, verificato il {date}.",
-  "listedOsm": "Registrata come cattolica su OpenStreetMap"
+  "listedOsm": "Registrata come cattolica su OpenStreetMap",
+  "resetAll": "Reimposta",
+  "resetHint": "Torna alle impostazioni iniziali. Le chiese salvate restano."
 }

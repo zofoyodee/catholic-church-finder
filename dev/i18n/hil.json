@@ -522,5 +522,7 @@
   "nm_s": "Santuwaryo sang {x}",
   "sourceOsm": "Ginhalinan: mga kontributor sang OpenStreetMap.",
   "sourceOsmUpdated": "Ginhalinan: mga kontributor sang OpenStreetMap, gintan-aw sang {date}.",
-  "listedOsm": "Nalista subong Katoliko sa OpenStreetMap"
+  "listedOsm": "Nalista subong Katoliko sa OpenStreetMap",
+  "resetAll": "I-reset",
+  "resetHint": "Balik sa umpisa nga mga setting. Magapabilin ang imo ginsave nga mga simbahan."
 }

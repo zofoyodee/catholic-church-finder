@@ -533,5 +533,7 @@
   "nm_s": "{x} šventovė",
   "sourceOsm": "Šaltinis: OpenStreetMap bendradarbiai.",
   "sourceOsmUpdated": "Šaltinis: OpenStreetMap bendradarbiai, patikrinta {date}.",
-  "listedOsm": "OpenStreetMap pažymėta kaip katalikiška"
+  "listedOsm": "OpenStreetMap pažymėta kaip katalikiška",
+  "resetAll": "Atstatyti",
+  "resetHint": "Grįžti prie pradinių nustatymų. Išsaugotos bažnyčios lieka."
 }
