@@ -730,12 +730,12 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 .glabel.city.big { font-size: 15px; color: #fdf6e3; }
 .glabel.land { font-size: 13px; letter-spacing: 0.1em; opacity: 0.85; color: #f3d58c; }
 </style>
-<link rel="stylesheet" href="dev/app/engage.css?v=119">
-<link rel="stylesheet" href="dev/app/mobile.css?v=119">
-<link rel="stylesheet" href="dev/app/desktop.css?v=119">
+<link rel="stylesheet" href="dev/app/engage.css?v=120">
+<link rel="stylesheet" href="dev/app/mobile.css?v=120">
+<link rel="stylesheet" href="dev/app/desktop.css?v=120">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-03 21:22 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-03 22:36 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -4692,13 +4692,15 @@ document.addEventListener('ccf-reset', () => {
     for (const k of [THEME_KEY, LANG_KEY, RADIUS_KEY, 'ccf-favs-closed']) { try { localStorage.removeItem(k); } catch (e) {} }
     // open panels and the search box
     closeCard(); if (!$('near').hidden) showNear(false); if (!$('favs').hidden) showFavs(false);
-    qEl.value = ''; qEl.dispatchEvent(new Event('input')); resEl.hidden = true;
+    // only what really changed is redone: rebuilding 300,000 pins stalls the globe's flight back out
+    if (qEl.value) { qEl.value = ''; qEl.dispatchEvent(new Event('input')); } resEl.hidden = true;
     // Church Near Me: back to 20 miles and the phone's own location; no Mass Language
     nearMiles = 20; forgetPlace();
-    if (mf.data) { mf.mode = ''; mf.lang = ''; if (mn.kind >= 0) endMassNear(); applyMassFilter(); renderMassChips(); }
+    const allKinds = state.enabled.size === TYPES.length;
+    if (mf.data) { const had = mf.mode || mf.lang || state.only; mf.mode = ''; mf.lang = ''; if (mn.kind >= 0) endMassNear(); if (had && allKinds) applyMassFilter(); else state.only = null; renderMassChips(); }
     // every kind of church, every period of Our Lord's life, every Bible place
-    showOpen = false; state.enabled = new Set(TYPES.map(t => t.code));
-    if (state.meta) { map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON()); }
+    showOpen = false;
+    if (!allKinds) { state.enabled = new Set(TYPES.map(t => t.code)); if (state.meta) { map.getSource('churches').setData(buildGeoJSON()); map.getSource('notable').setData(notableGeoJSON()); } }
     if (life.data && life.era !== 'all') setLifeEra('all');
     if (bible.data && bible.group !== 'all') { bible.group = 'all'; if (map.getSource('b-places')) map.getSource('b-places').setData(bibleFeatures()); htmlLabels.refresh(); }
     if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } } else if (state.mode === 'jesus') { if (life.data) renderLifeChips(); } else if (state.meta) { renderChips(); updateTagline(); }
@@ -4767,8 +4769,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="dev/app/engage.js?v=119"></script>
-<script src="dev/app/mobile.js?v=119"></script>
+<script src="dev/app/engage.js?v=120"></script>
+<script src="dev/app/mobile.js?v=120"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }

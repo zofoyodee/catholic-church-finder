@@ -437,7 +437,9 @@ addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { e
 // Reset (Menu): Globe View back to its starting switches
 document.addEventListener('ccf-reset', () => {
   try { localStorage.removeItem(VIEW_KEY); localStorage.removeItem(TODAY_KEY); } catch (e) {}
-  Object.assign(view, VIEW_START); renderMenu(); try { applyView(); } catch (e) {}
+  // redo only the Globe View settings that differ, so the globe's flight back out stays smooth
+  const changed = Object.keys(VIEW_START).filter(k => view[k] !== VIEW_START[k]);
+  Object.assign(view, VIEW_START); renderMenu(); for (const k of changed) { try { applyView(k); } catch (e) {} }
   showMenu(false);
 });
 menu.addEventListener('click', (e) => { if (e.target.closest('.vm-x')) { showMenu(false); viewBtn.focus(); } });
