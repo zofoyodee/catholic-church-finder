@@ -722,7 +722,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 <link rel="stylesheet" href="dev/app/desktop.css?v=107">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-03 04:28 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-03 04:40 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -3439,12 +3439,12 @@ const fold = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 function loadSearch() {
   if (searchLoading) return searchLoading;
   searchLoading = (async () => {
-    const [parts] = await Promise.all([Promise.all(Array.from({ length: state.meta.searchChunks }, (_, k) => fetch(BASE + 'dev/data/search-' + k + '.txt').then(r => { if (!r.ok) throw new Error('search'); return r.text(); }))), loadNamesX()]);
+    const [parts, , regionAlias] = await Promise.all([Promise.all(Array.from({ length: state.meta.searchChunks }, (_, k) => fetch(BASE + 'dev/data/search-' + k + '.txt').then(r => { if (!r.ok) throw new Error('search'); return r.text(); }))), loadNamesX(), getJSON('data/region-names.json').catch(() => ({}))]);
     const lines = parts.join('\n').split('\n');
     const keys = new Array(lines.length);
     for (let i = 0; i < lines.length; i++) keys[i] = fold(lines[i]);
     for (const i in namesXData) if (keys[i] !== undefined) { const x = fold(namesXData[i][2]); keys[i] += ' ' + x + (x.includes('-') ? ' ' + x.replace(/-/g, '') : ''); }  // "myeongdong" finds 명동성당
-    searchIdx = { lines, keys };
+    searchIdx = { lines, keys, regionAlias };
   })().catch(e => { searchLoading = null; throw e; });
   return searchLoading;
 }
@@ -3519,12 +3519,17 @@ qClear.addEventListener('click', () => {
 })();
 // the churches a search means, for the kinds of church now shown
 function searchMatch(q, raw = q, anyKind = false) {
-  const toks = q.replace(/[.,]/g, ' ').split(/\s+/).filter(Boolean);
+  // a saint or title written in another language ("our lady", "sagrado corazon") stands for all its spellings
+  const phrase = [];
+  for (const g of PHRASE_ALIAS) for (const v of g) if ((' ' + q + ' ').includes(' ' + v + ' ')) { phrase.push(g); q = (' ' + q + ' ').replace(' ' + v + ' ', ' ').trim(); break; }
+  let toks = q.replace(/[.,]/g, ' ').split(/\s+/).filter(Boolean);
+  if (phrase.length) toks = toks.filter(t => !/^(of|the|de|del|della|di|du|des|do|da|von|der|z|ze|od)$/.test(t));  // "our lady of guadalupe" = "nuestra senora de guadalupe"
+  if (!toks.length && !phrase.length) return { hits: [], townQ: new Set() };
   // any part of a name or town matches, so "fatima" finds every Fatima church and "denver" every church in Denver;
   // each word may stand for others ("abq", "st", "mt"), and a short last word may be a state ("santa fe nm")
   const { keys } = searchIdx;
   const city = CITY_ALIAS[toks.join(' ')];
-  const alts = city ? [city] : toks.map(t => [t, ...(CITY_ALIAS[t] || []), ...(WORD_ALIAS[t] || [])]);
+  const alts = [...phrase, ...(city ? [city] : toks.map(t => [t, ...(CITY_ALIAS[t] || []), ...(WORD_ALIAS[t] || []), ...(SAINT_ALIAS[t] || [])]))];
   // a state on its own: two letters ("nm"), or three in capitals ("NSW")
   const last = toks[toks.length - 1], alone = toks.length === 1 && (/^[a-z]{2}$/.test(last) || /^[A-Z]{3}$/.test(raw.trim()));
   const region = !city && (toks.length > 1 || alone) && /^[a-z]{2,3}$/.test(last) ? '\t' + last + ' ' : '';
@@ -3540,7 +3545,7 @@ function searchMatch(q, raw = q, anyKind = false) {
   let hits = region ? find([...alts.slice(0, -1), [region]]) : [];
   const inRegion = hits.length > 0;
   if (!inRegion) hits = find(region ? [...alts.slice(0, -1), [...alts[alts.length - 1], region]] : alts);
-  const townQ = new Set(city || [(inRegion ? toks.slice(0, -1) : toks).join(' ')]);
+  const townQ = phrase.length ? new Set() : new Set(city || [(inRegion ? toks.slice(0, -1) : toks).join(' ')]);
   return { hits, townQ };
 }
 async function runSearch() {
@@ -3551,13 +3556,18 @@ async function runSearch() {
   resEl.hidden = false;
   if (!searchIdx) { resEl.innerHTML = `<div class="note">${LOADER(tr('indexLoading'), 'inline')}</div>`; try { await loadSearch(); } catch (e) { resEl.innerHTML = `<div class="note">${esc(tr('indexFailed'))}</div>`; return; } }
   const { lines } = searchIdx;
-  const { hits, townQ } = searchMatch(q, qEl.value);
-  // a country typed on its own ("nigeria", "China", "Italia"): every church listed in it
-  const cc = countryFor(q);
-  const inCountry = cc ? countryIds(cc) : [];
-  // a state, province or region typed on its own ("Texas", "Lombardy", "New South Wales")
-  const reg = inCountry.length ? null : regionFor(q);
-  const inRegion = reg ? regionIds(reg) : [];
+  // a kind of church first or last ("basilicas in italy", "catedrales mexico", "cathedral"): only that kind, anywhere or in that place
+  const kind = kindIn(q), pq = kind ? kind.rest : q, only = (ids) => kind ? ids.filter(i => (state.typ[i] & 7) === kind.t) : ids;
+  const m0 = pq ? searchMatch(pq, kind ? pq : qEl.value) : { hits: kind ? kindIds(kind.t) : [], townQ: new Set() };
+  const hits = only(m0.hits), townQ = m0.townQ;
+  // a country or a part of the world typed on its own ("nigeria", "China", "Deutschland", "Africa"): every church listed in it
+  const cc = pq && countryFor(pq), area = !cc && pq && AREAS.find(a => a.names.includes(pq.replace(/\s+/g, ' ').trim()));
+  const inCountry = only(cc ? countryIds(cc) : area ? countryIds(area.cc) : []);
+  // a state, province or region typed on its own ("Texas", "Lombardia", "Bayern", "New South Wales")
+  const reg = inCountry.length || !pq ? null : regionFor(pq);
+  const inRegion = only(reg ? regionIds(reg) : []);
+  const placeName = cc ? countryName(cc) : area ? qEl.value.trim().replace(new RegExp('^' + (kind ? kind.word : '') + '\\s*', 'i'), '') : '';
+  const kindPre = kind ? TYPE_BY_CODE[kind.t].label + ' · ' : '';
   if (scopeCache.q !== qEl.value.trim()) refreshCounts();
   // nearest to you first: the first search asks where you are, and until then (or if you say no)
   // the middle of the globe's view stands in
@@ -3585,10 +3595,11 @@ async function runSearch() {
     else if (inRegion.length) top = [...inRegion].sort((a, b) => sc.get(a) - sc.get(b)).slice(0, 30);
   }
   const listIcon = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2;stroke-linecap:round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg>';
-  searchLists = { town: town ? { name: town[0], ids: inTown } : null, all: { q: qEl.value.trim(), ids: hits }, country: inCountry.length ? { name: countryName(cc), ids: inCountry } : null, region: inRegion.length ? { name: regionShown(reg, inRegion), ids: inRegion } : null };
+  searchLists = { town: town ? { name: town[0], ids: inTown } : null, all: { q: qEl.value.trim(), ids: hits }, country: inCountry.length ? { name: placeName, ids: inCountry } : null, region: inRegion.length ? { name: regionShown(reg, inRegion), ids: inRegion } : null };
+  if (kind && !inCountry.length && !inRegion.length && !town) searchLists.country = { name: pq || TYPE_BY_CODE[kind.t].label, ids: hits };
   resEl.innerHTML = (here || !navigator.geolocation ? '' : `<button role="option" class="all" data-loc="${geoDenied ? 'set' : 'search'}">${icon.map.replace('<svg', '<svg style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2"')}<div><span class="nm">${esc(tr(geoDenied ? 'placeAsk' : 'useMyLoc'))}</span><span class="loc">${esc(tr('nearestFirstTip'))}</span></div></button>`)
-    + (inCountry.length ? `<button role="option" class="all" data-all="country" id="rc">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inCountry.length), place: countryName(cc) }))}</span></div></button>` : '')
-    + (inRegion.length ? `<button role="option" class="all" data-all="region" id="rr">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inRegion.length), place: regionShown(reg, inRegion) }))}</span></div></button>` : '')
+    + (inCountry.length ? `<button role="option" class="all" data-all="country" id="rc">${listIcon}<div><span class="nm">${esc(kindPre + tr('allIn', { n: fmt(inCountry.length), place: placeName }))}</span></div></button>` : '')
+    + (inRegion.length ? `<button role="option" class="all" data-all="region" id="rr">${listIcon}<div><span class="nm">${esc(kindPre + tr('allIn', { n: fmt(inRegion.length), place: regionShown(reg, inRegion) }))}</span></div></button>` : '')
     + (town ? `<button role="option" class="all" data-all="town" id="rt">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inTown.length), place: town[0] }))}</span></div></button>` : '')
     + (hits.length > 1 && hits.length !== inTown.length && !inCountry.length && !inRegion.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
     + top.map((i, k) => {
@@ -3603,9 +3614,12 @@ function countryFor(q) {
   if (!countryNames || countryNames.lang !== i18n.code) {
     countryNames = new Map(); countryNames.lang = i18n.code;
     let en = null; try { en = new Intl.DisplayNames(['en'], { type: 'region' }); } catch (e) {}
+    // every site language's name for each country ("Deutschland", "Allemagne", "Niemcy", "中国"), the Site Language's own first
+    const dns = [en]; for (const l of LANGS) { try { dns.push(new Intl.DisplayNames([l.locale.replace(/-u-.*$/, '')], { type: 'region' })); } catch (e) {} }
     for (const [code] of (state.meta && state.meta.countries) || []) {
       if (!/^[A-Z]{2}$/.test(code)) continue;
-      for (const nm of [countryName(code), en && en.of(code)]) if (nm && nm !== code) countryNames.set(fold(nm), code);
+      const own = countryName(code); if (own && own !== code) countryNames.set(fold(own), code);
+      for (const d of dns) { let nm = ''; try { nm = d && d.of(code); } catch (e) {} if (nm && nm !== code && !countryNames.has(fold(nm))) countryNames.set(fold(nm), code); }
     }
     for (const [k, v] of Object.entries({ usa: 'US', america: 'US', 'united states of america': 'US', uk: 'GB', england: 'GB', 'great britain': 'GB', scotland: 'GB', wales: 'GB', holland: 'NL', 'south korea': 'KR', korea: 'KR', 'czech republic': 'CZ', 'ivory coast': 'CI', burma: 'MM', vatican: 'VA', 'vatican city': 'VA', drc: 'CD', 'dr congo': 'CD' })) if (!countryNames.has(k)) countryNames.set(k, v);
   }
@@ -3619,22 +3633,69 @@ function regionFor(q) {
     for (const l of searchIdx.lines) {
       const r = l.split('\t')[3]; if (!r || seen.has(r)) continue; seen.add(r);
       const m = r.match(/^[A-Z0-9]{2,3} (.+)$/), name = fold(m ? m[1] : r).trim();
-      if (name.length > 2 && !stateNames.has(name)) stateNames.set(name, r);
+      if (name.length > 2 && !stateNames.has(name)) stateNames.set(name, [r]);
     }
+    // local and other-language names from OpenStreetMap ("lombardia", "bayern", "baviere", "東京都"), data/region-names.json
+    for (const [k, v] of Object.entries(searchIdx.regionAlias || {})) if (!stateNames.has(k)) stateNames.set(k, Array.isArray(v) ? v : [v]);
   }
-  return stateNames.get(q.replace(/[.,]/g, ' ').replace(/\s+/g, ' ').trim()) || null;
+  const k = q.replace(/[.,]/g, ' ').replace(/\s+/g, ' ').trim();
+  const r = stateNames.get(k); if (!r) return null;
+  r.typed = k; return r;
 }
-// "New York, United States": the region's name with its country, so it reads apart from a town of the same name
-const regionShown = (r, ids) => [r.replace(/^[A-Z0-9]{2,3} /, '').replace(/^(District of Columbia) Washington$/, '$1').replace(/^(Ciudad de Mexico) CDMX Mexico City$/, '$1'), ids && ids.length ? countryName(searchIdx.lines[ids[0]].split('\t')[2]) : ''].filter(Boolean).join(', ');
-function regionIds(r) {
-  const out = [], { lines } = searchIdx;
-  for (let i = 0; i < lines.length; i++) if (state.enabled.has(state.typ[i] & 7) && lines[i].split('\t')[3] === r) out.push(i);
+// "New York, United States": the region's name (as typed when it came from another language) with its country
+const regionShown = (rs, ids) => [rs.length > 1 || fold(rs[0]).indexOf(rs.typed) < 0 ? qEl.value.trim().replace(/^\S+\s+(in|en|em|di|de|im|w|в|à|a)\s+/i, '') : rs[0].replace(/^[A-Z0-9]{2,3} /, '').replace(/^(District of Columbia) Washington$/, '$1').replace(/^(Ciudad de Mexico) CDMX Mexico City$/, '$1'), ids && ids.length ? countryName(searchIdx.lines[ids[0]].split('\t')[2]) : ''].filter(Boolean).join(', ');
+function regionIds(rs) {
+  const out = [], { lines } = searchIdx, want = new Set(rs);
+  for (let i = 0; i < lines.length; i++) if (state.enabled.has(state.typ[i] & 7) && want.has(lines[i].split('\t')[3])) out.push(i);
   return out;
 }
+function kindIds(t) { const out = []; for (let i = 0; i < state.n; i++) if ((state.typ[i] & 7) === t) out.push(i); return out; }
+// words for each kind of church in the site's languages (folded), singular and plural
+const KIND_WORDS = Object.entries({
+  1: 'cathedral cathedrals catedral catedrales catedrais cathedrale cathedrales cattedrale cattedrali kathedrale kathedralen dom duomo katedra katedry katedrala katedrale katedralis kathedraal kathedralen katedral katedrali 主教座堂 大聖堂 주교좌성당 كاتدرائية собор соборы',
+  2: 'basilica basilicas basilicas basilique basiliques basiliche basilika basiliken bazylika bazyliki bazilika bazilike basiliek bazilica 대성전 圣殿 بازيليكا базилика базилики',
+  3: 'shrine shrines santuario santuarios santuarios sanctuaire sanctuaires santuari wallfahrtskirche wallfahrtsort sanktuarium sanktuaria svetiste svetista heiligdom bedevaartsoord 성지 朝圣地 巡礼地 مزار святилище dambana',
+  4: 'abbey abbeys monastery monasteries convent convents abadia abadias abbaye abbayes abbazia abbazie abtei kloster kloster monasterio monasterios mosteiro mosteiros convento conventos klasztor klasztory opactwo samostan klooster abdij 수도원 修道院 دير монастырь',
+  5: 'chapel chapels capilla capillas capela capelas chapelle chapelles cappella cappelle kapelle kapellen kaplica kaplice kapel kapela kaple kapolna kapilya 경당 小堂 礼拝堂 часовня',
+  6: 'parish parishes parroquia parroquias paroquia paroquias paroisse paroisses parrocchia parrocchie pfarrei pfarreien pfarrkirche parafia parafie parochie farnost farnosti zupa plebania parokya parokia 본당 本堂 堂区 приход',
+}).flatMap(([t, w]) => w.split(' ').map(x => [x, +t]));
+const KIND = new Map(KIND_WORDS);
+const LINK = new Set('in en em no na nos nas di del della dello nel nella de du des la le im w we в во à a au aux of near around i sa ng da do dos das'.split(' '));
+function kindIn(q) {
+  const w = q.split(/\s+/).filter(Boolean); if (!w.length) return null;
+  let t = KIND.get(w[0]), word = w[0], rest = w.slice(1);
+  if (t === undefined && w.length > 1) { t = KIND.get(w[w.length - 1]); word = w[w.length - 1]; rest = w.slice(0, -1); }
+  if (t === undefined) return null;
+  while (rest.length && LINK.has(rest[0])) rest.shift();
+  return { t, word, rest: rest.join(' ') };
+}
+// parts of the world, in the site's main languages
+const AREAS = [
+  ['africa|afrique|afrika|áfrica|afryka|アフリカ|非洲|아프리카|افريقيا|أفريقيا|африка', 'DZ AO BJ BW BF BI CV CM CF TD KM CG CD CI DJ EG GQ ER SZ ET GA GM GH GN GW KE LS LR LY MG MW ML MR MU MA MZ NA NE NG RW ST SN SC SL SO ZA SS SD TZ TG TN UG ZM ZW RE YT'],
+  ['europe|europa|evropa|avrupa|ευρώπη|ヨーロッパ|欧洲|유럽|اوروبا|أوروبا|европа', 'AL AD AT BY BE BA BG HR CY CZ DK EE FI FR DE GR HU IS IE IT XK LV LI LT LU MT MD MC ME NL MK NO PL PT RO RU SM RS SK SI ES SE CH UA GB VA GI FO'],
+  ['asia|asie|asien|azja|asya|ασία|アジア|亚洲|아시아|اسيا|آسيا|азия', 'AF AM AZ BH BD BT BN KH CN GE HK IN ID IR IQ IL JP JO KZ KW KG LA LB MO MY MV MN MM NP KP OM PK PS PH QA SA SG KR LK SY TW TJ TH TL TR TM AE UZ VN YE'],
+  ['north america|america del norte|américa del norte|norteamerica|norteamérica|amerique du nord|amérique du nord|nordamerika|ameryka polnocna|ameryka północna|america do norte|américa do norte|america settentrionale|北美洲|북아메리카|северная америка', 'US CA MX GL BM PM'],
+  ['south america|america del sur|américa del sur|sudamerica|sudamérica|suramerica|suramérica|amerique du sud|amérique du sud|südamerika|ameryka poludniowa|ameryka południowa|america do sul|américa do sul|america meridionale|南美洲|남아메리카|южная америка', 'AR BO BR CL CO EC GY PY PE SR UY VE GF FK'],
+  ['central america|america central|américa central|centroamerica|centroamérica|amerique centrale|amérique centrale|mittelamerika|zentralamerika|ameryka srodkowa|ameryka środkowa|中美洲', 'BZ CR SV GT HN NI PA'],
+  ['latin america|america latina|américa latina|latinoamerica|latinoamérica|amerique latine|amérique latine|lateinamerika|ameryka lacinska|ameryka łacińska|拉丁美洲|라틴아메리카', 'AR BO BR CL CO CR CU DO EC SV GT HN MX NI PA PY PE PR UY VE'],
+  ['caribbean|the caribbean|caribe|el caribe|caraibes|caraïbes|karibik|karaiby|caraibi|antilles|加勒比', 'AG BS BB CU DM DO GD HT JM KN LC VC TT PR AW CW SX BQ VI VG KY TC AI MS GP MQ BL MF'],
+  ['oceania|océanie|oceanie|ozeanien|oceânia|pacific islands|大洋洲|오세아니아|океания', 'AU NZ PG FJ SB VU NC PF WS TO KI FM MH PW NR TV GU MP AS CK WF'],
+  ['middle east|medio oriente|oriente medio|moyen-orient|moyen orient|naher osten|nahost|bliski wschod|bliski wschód|oriente médio|中东|중동|الشرق الاوسط|الشرق الأوسط|ближний восток', 'BH CY EG IR IQ IL JO KW LB OM PS QA SA SY TR AE YE'],
+  ['holy land|tierra santa|terre sainte|terra santa|heiliges land|ziemia swieta|ziemia święta|聖地|성지 이스라엘', 'IL PS JO'],
+].map(([n, c]) => ({ names: n.split('|').map(fold), cc: c.split(' ') }));
+// the same saint or title in the site's languages: any spelling finds them all ("st joseph" finds San José, São José, Św. Józef)
+const SAINT_ALIAS = (() => {
+  const out = {};
+  for (const g of ['joseph jose giuseppe josef jozef jozsef josip giuse', 'john juan joao giovanni jean johannes janos ivan joan xoan', 'peter pedro pietro pierre petrus piotr petar pieter', 'paul pablo paulo paolo paulus pawel pavao pau', 'francis francisco francesco francois franziskus franciszek franjo ferenc francesc', 'anthony antonio antoine antonius antoni antun antal', 'michael miguel michele michel michal mihovil mihaly', 'mary maria marie marija maryja', 'james santiago jacques giacomo jakob jakub jacobo jaime tiago jakov', 'andrew andres andre andrea andreas andrzej andrija andras', 'therese teresa theresa terezie', 'nicholas nicolas nicola nikolaus mikolaj nikola miklos nicolau nicolaas', 'lawrence lorenzo laurent lorenz wawrzyniec lovro lourenco', 'stephen esteban stefano etienne stephan stefan szczepan stjepan istvan estevao', 'george jorge giorgio georges georg jerzy juraj gyorgy', 'catherine catalina caterina katharina katarzyna katarina katalin catarina', 'thomas tomas tommaso tomasz tamas tome', 'dominic domingo domenico dominique dominikus dominik', 'augustine agustin agostino augustin augustyn agostinho augustinus', 'sebastian sebastiao sebastiano sebastien sebestyen', 'benedict benito benedetto benoit benedikt benedykt bento', 'patrick patricio patrizio patrice patryk', 'vincent vicente vincenzo wincenty vinko', 'luke lucas luca luc lukas lukasz', 'matthew mateo matteo matthieu matthaus mateusz mateus', 'clare clara chiara claire klara', 'anne ana anna', 'rita', 'jude judas tadeo taddeo thaddaus', 'raphael rafael raffaele rafal', 'gabriel gabriele gabriela', 'martin martino marcin marton']) {
+    const w = g.split(' '); for (const x of w) out[x] = w.filter(y => y !== x);
+  }
+  return out;
+})();
+const PHRASE_ALIAS = ['our lady|nuestra senora|nossa senhora|notre dame|notre-dame|nostra signora|madonna|unsere liebe frau|liebfrauen|matki bozej|matka boza|gospa|onze lieve vrouw|birhen|mahal na birhen', 'holy family|sagrada familia|sacra famiglia|sainte famille|sainte-famille|heilige familie|swietej rodziny|svete obitelji', 'sacred heart|sagrado corazon|sagrado coracao|sacre coeur|sacre-coeur|sacro cuore|herz jesu|herz-jesu|najswietszego serca|presvetog srca', 'immaculate conception|inmaculada concepcion|imaculada conceicao|immacolata concezione|immaculee conception|unbefleckte empfangnis|niepokalanego poczecia', 'holy spirit|espiritu santo|espirito santo|spirito santo|saint-esprit|saint esprit|heiliger geist|heilig geist|ducha swietego|duha svetoga', 'holy cross|santa cruz|santa croce|sainte-croix|sainte croix|heilig kreuz|heilig-kreuz|swietego krzyza|svetog kriza', 'holy trinity|santisima trinidad|santissima trindade|santissima trinita|sainte-trinite|sainte trinite|dreifaltigkeit|trojcy swietej|presvetog trojstva', 'christ the king|cristo rey|cristo rei|cristo re|christ-roi|christ roi|christkonig|chrystusa krola|krista kralja', 'divine mercy|divina misericordia|divina misericórdia|misericorde divine|barmherzigkeit|milosierdzia bozego'].map(g => g.split('|').map(fold));
 // the churches listed in a country, for the kinds of church now shown
 function countryIds(cc) {
-  const out = [], { lines } = searchIdx;
-  for (let i = 0; i < lines.length; i++) if (state.enabled.has(state.typ[i] & 7) && lines[i].split('\t')[2] === cc) out.push(i);
+  const out = [], { lines } = searchIdx, want = new Set([].concat(cc));
+  for (let i = 0; i < lines.length; i++) if (state.enabled.has(state.typ[i] & 7) && want.has(lines[i].split('\t')[2])) out.push(i);
   return out;
 }
 // what people type for a city: a whole search that is one of these means that city (English and local names)
