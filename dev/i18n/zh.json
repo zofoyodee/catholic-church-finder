@@ -512,5 +512,6 @@
   "nm_s": "{x}朝圣地",
   "sourceOsm": "来源：OpenStreetMap 贡献者。",
   "sourceOsmUpdated": "来源：OpenStreetMap 贡献者，核实于 {date}。",
-  "listedOsm": "在 OpenStreetMap 上标为天主教"
+  "listedOsm": "在 OpenStreetMap 上标为天主教",
+  "nearSearch": "搜索"
 }

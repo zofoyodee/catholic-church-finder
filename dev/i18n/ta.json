@@ -522,5 +522,6 @@
   "nm_s": "{x} திருத்தலம்",
   "sourceOsm": "மூலம்: OpenStreetMap பங்களிப்பாளர்கள்.",
   "sourceOsmUpdated": "மூலம்: OpenStreetMap பங்களிப்பாளர்கள், {date} அன்று சரிபார்க்கப்பட்டது.",
-  "listedOsm": "OpenStreetMap இல் கத்தோலிக்கம் எனப் பதிவு"
+  "listedOsm": "OpenStreetMap இல் கத்தோலிக்கம் எனப் பதிவு",
+  "nearSearch": "தேடுக"
 }

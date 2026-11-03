@@ -522,5 +522,6 @@
   "nm_s": "Toerana masin’i {x}",
   "sourceOsm": "Loharano: mpandray anjara OpenStreetMap.",
   "sourceOsmUpdated": "Loharano: mpandray anjara OpenStreetMap, nojerena tamin’ny {date}.",
-  "listedOsm": "Voasoratra ho katolika ao amin’ny OpenStreetMap"
+  "listedOsm": "Voasoratra ho katolika ao amin’ny OpenStreetMap",
+  "nearSearch": "Hikaroka"
 }

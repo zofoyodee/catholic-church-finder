@@ -530,5 +530,6 @@
   "massNoteTip": "Els horaris de Missa i de Confessió es llegeixen dels webs de les parròquies, de manera que només es poden filtrar les esglésies que els publiquen",
   "sourceOsm": "Font: col·laboradors d’OpenStreetMap.",
   "sourceOsmUpdated": "Font: col·laboradors d’OpenStreetMap, revisat el {date}.",
-  "listedOsm": "Registrada com a catòlica a OpenStreetMap"
+  "listedOsm": "Registrada com a catòlica a OpenStreetMap",
+  "nearSearch": "Cerca"
 }
