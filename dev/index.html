@@ -730,12 +730,12 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 .glabel.city.big { font-size: 15px; color: #fdf6e3; }
 .glabel.land { font-size: 13px; letter-spacing: 0.1em; opacity: 0.85; color: #f3d58c; }
 </style>
-<link rel="stylesheet" href="dev/app/engage.css?v=114">
-<link rel="stylesheet" href="dev/app/mobile.css?v=114">
-<link rel="stylesheet" href="dev/app/desktop.css?v=114">
+<link rel="stylesheet" href="dev/app/engage.css?v=115">
+<link rel="stylesheet" href="dev/app/mobile.css?v=115">
+<link rel="stylesheet" href="dev/app/desktop.css?v=115">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-03 19:45 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-03 20:36 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -3366,15 +3366,16 @@ function renderChips() {
   const n = (t) => (counts[t.code] || 0) + (t.with ? counts[t.with] || 0 : 0);
   // a gold "Show" row like Mass Language's that opens the kinds of church below it
   const picked = all ? tr('all') : [...new Set(TYPES.filter(t => t.chip !== false && state.enabled.has(t.code)).map(t => t.label))].join(', ');
-  const arrow = '<svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
   const kinds = TYPES.filter(t => t.chip !== false && shown(t) && (!scope || n(t) || (!all && state.enabled.has(t.code))));
-  $('chips').innerHTML = `<button type="button" class="show-toggle" aria-expanded="${showOpen}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block" aria-hidden="true"><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2.5"/></svg><span>${esc(tr('show'))}</span><b>${esc(picked)}</b>${arrow}</button>`
+  $('chips').innerHTML = showToggle(picked)
     + (showOpen ? `<div class="show-list"><button class="chip" data-k="all" aria-pressed="${all}" title="${esc(tr(all ? 'allOn' : 'allAgain'))}">${esc(tr('all'))}</button>` + kinds.map(t =>
     `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${esc(tipFor(t))}">${tick}<i style="background:${t.color}"></i>${esc(t.label)} <small>${fmt(n(t))}</small></button>`).join('') + '</div>' : '');
 }
 let showOpen = false;
+// the gold "Show · All ⌄" row that opens the chips below it (Churches, Life of Jesus and Bible Locations alike)
+const showToggle = (picked) => `<button type="button" class="show-toggle" aria-expanded="${showOpen}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block" aria-hidden="true"><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2.5"/></svg><span>${esc(tr('show'))}</span><b>${esc(picked)}</b><svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>`;
 $('chips').addEventListener('click', (e) => {
-  if (e.target.closest('.show-toggle') && state.mode === 'churches') { showOpen = !showOpen; renderChips(); return; }
+  if (e.target.closest('.show-toggle')) { showOpen = !showOpen; if (state.mode === 'bible') renderBibleChips(); else if (state.mode === 'jesus') renderLifeChips(); else renderChips(); return; }
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'churches') return;
   const k = b.dataset.k;
   if (k === 'all') state.enabled = new Set(TYPES.map(t => t.code));
@@ -4057,8 +4058,8 @@ function bibleTagline() {
 function renderBibleChips() {
   const d = bible.data, count = (k) => d.places.filter(p => p.g.includes(k)).length;
   $('chips').classList.remove('filtered');
-  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-g="all" aria-pressed="${bible.group === 'all'}">${esc(tr('all'))}</button>` + d.groups.map(g =>
-    `<button class="chip" data-g="${g.k}" aria-pressed="${bible.group === g.k}" title="${esc(tr('bOnly', { group: tr('bg_' + g.k) }))}"><i style="background:${BIBLE_COLORS[g.k]}"></i>${esc(tr('bg_' + g.k))} <small>${fmt(count(g.k))}</small></button>`).join('');
+  $('chips').innerHTML = showToggle(bible.group === 'all' ? tr('all') : tr('bg_' + bible.group)) + (showOpen ? `<div class="show-list"><button class="chip" data-g="all" aria-pressed="${bible.group === 'all'}">${esc(tr('all'))}</button>` + d.groups.map(g =>
+    `<button class="chip" data-g="${g.k}" aria-pressed="${bible.group === g.k}" title="${esc(tr('bOnly', { group: tr('bg_' + g.k) }))}"><i style="background:${BIBLE_COLORS[g.k]}"></i>${esc(tr('bg_' + g.k))} <small>${fmt(count(g.k))}</small></button>`).join('') + '</div>' : '');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'bible' || !b.dataset.g) return;
@@ -4370,8 +4371,8 @@ function lifeTagline() {
 function renderLifeChips() {
   const d = life.data, count = (k) => d.events.filter(e => e.e === k).length;
   $('chips').classList.remove('filtered');
-  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-era="all" aria-pressed="${life.era === 'all'}">${esc(tr('all'))}</button>` + d.eras.map(e =>
-    `<button class="chip" data-era="${e.k}" aria-pressed="${life.era === e.k}"><i style="background:${e.color}"></i>${esc(tr('jEra_' + e.k))} <small>${fmt(count(e.k))}</small></button>`).join('');
+  $('chips').innerHTML = showToggle(life.era === 'all' ? tr('all') : life.era === 'rosary' ? tr('jRosary') : tr('jEra_' + life.era)) + (showOpen ? `<div class="show-list"><button class="chip" data-era="all" aria-pressed="${life.era === 'all'}">${esc(tr('all'))}</button>` + d.eras.map(e =>
+    `<button class="chip" data-era="${e.k}" aria-pressed="${life.era === e.k}"><i style="background:${e.color}"></i>${esc(tr('jEra_' + e.k))} <small>${fmt(count(e.k))}</small></button>`).join('') + '</div>' : '');
 }
 $('chips').addEventListener('click', (e) => {
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'jesus' || !b.dataset.era) return;
@@ -4738,8 +4739,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="dev/app/engage.js?v=114"></script>
-<script src="dev/app/mobile.js?v=114"></script>
+<script src="dev/app/engage.js?v=115"></script>
+<script src="dev/app/mobile.js?v=115"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }
