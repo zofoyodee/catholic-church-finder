@@ -60,7 +60,7 @@
   "micBlocked": "Il-mikrofonu huwa mblukkat. Ippermettih fis-settings tal-browser biex tfittex bil-vuċi.",
   "voiceFailed": "It-tfittxija bil-vuċi mhix taħdem bħalissa. Jekk jogħġbok, ikteb x'qed tfittex.",
   "aboutData": "Dwar it-Tagħrif",
-  "footCredit": "Postijiet © Overture Maps Foundation · Mappa bażi Natural Earth, toroq © il-kontributuri ta' OpenStreetMap permezz ta' OpenFreeMap",
+  "footCredit": "Knejjes © il-kontributuri ta’ OpenStreetMap, dettalji © Overture Maps Foundation · Mappa bażi Natural Earth, toroq permezz ta’ OpenFreeMap",
   "nearYou": "Qrib Tiegħek",
   "closeNear": "Agħlaq il-knejjes fil-qrib",
   "favorites": "Favoriti",
@@ -209,10 +209,10 @@
   "matches_one": "Riżultat wieħed. Żid belt biex tnaqqas it-tfittxija.",
   "matches_other": "{n} riżultat. Żid belt biex tnaqqas it-tfittxija.",
   "matchesMax": "Aktar minn 400 riżultat. Żid belt biex tnaqqas it-tfittxija.",
-  "aboutP1": "Il-globu juri <b>{n}</b> knejjes, kappelli, santwarji, bażiliki u katidrali Kattoliċi. Ġejjin mis-{a1}sett ta' tagħrif dwar postijiet ta' Overture Maps{end} (ħarġa {release}), li jiġbor postijiet minn Meta, Microsoft u sorsi miftuħa oħra.",
-  "aboutP2": "{cat} postijiet huma mniżżla f'Overture bħala postijiet tal-qima Kattoliċi Rumani. {name} oħra huma mniżżla biss bħala postijiet tal-qima Nsara, u l-globu jinkludihom għax isimhom huwa ċar li huwa Kattoliku (pereżempju “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Dawn għandhom nota fid-dettalji.",
+  "aboutP1": "Il-globu juri <b>{n}</b> knejjes, kappelli, santwarji, bażiliki u katidrali Kattoliċi. Kull marka hija bini ta’ knisja mniżżel bħala Kattoliku fuq {a1}OpenStreetMap{end}, il-mappa ħielsa tad-dinja magħmula minn voluntiera (dejta ta’ {osm}).",
+  "aboutP2": "In-numri tat-telefon u s-siti web ta’ {cat} minnhom ġejjin mis-{a1}sett ta’ postijiet ta’ Overture Maps{end} (ħarġa {release}), li jiġbor postijiet minn Meta, Microsoft u sorsi miftuħa oħra. L-oħrajn {osm} ġejjin minn OpenStreetMap biss.",
   "aboutP3": "Għad m'hemm l-ebda sett ta' tagħrif miftuħ li jkopri kull parroċċa. Il-kopertura hija l-aħjar fl-Amerika u fl-Ewropa tal-Punent u tnaqqas f'partijiet mill-Afrika u mill-Asja, fejn ħafna parroċċi għadhom mhumiex fuq il-mappa. Xi daħliet jistgħu jkunu doppji, uffiċċji jew bini magħluq. Meta tiftaħ knisja, il-paġna tfittex ritratt tagħha fuq {a1}Wikimedia Commons{end} u Wikipedia skont il-post u l-isem, u ssemmi lill-fotografu. Knejjes mingħajr ritratt iżommu tpinġija. Kull karta tiftaħ aktar ritratti, vidjows u Street View.",
-  "aboutCredits": "Tagħrif dwar il-postijiet © Overture Maps Foundation, CDLA Permissive 2.0. Mappa bażi Natural Earth (dominju pubbliku). Il-mappa tintwera b'MapLibre.",
+  "aboutCredits": "Il-postijiet tal-knejjes © il-kontributuri ta’ OpenStreetMap, ODbL. Dejta tal-postijiet © Overture Maps Foundation, CDLA Permissive 2.0. Mappa bażi minn Natural Earth (dominju pubbliku). Il-mappa mfassla b’MapLibre.",
   "close": "Agħlaq",
   "unknown": "Mhux magħruf",
   "dirN": "T",
@@ -578,5 +578,8 @@
   "jMoments_many": "{n}-il mument",
   "stops_two": "żewġ waqfiet",
   "stops_few": "{n} waqfiet",
-  "stops_many": "{n}-il waqfa"
+  "stops_many": "{n}-il waqfa",
+  "sourceOsm": "Sors: il-kontributuri ta’ OpenStreetMap.",
+  "sourceOsmUpdated": "Sors: il-kontributuri ta’ OpenStreetMap, iċċekkjat fl-{date}.",
+  "listedOsm": "Imniżżla bħala Kattolika fuq OpenStreetMap"
 }

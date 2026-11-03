@@ -18,7 +18,7 @@
   "home": "Vissza az egész földgömbhöz",
   "random": "Egy véletlen templom meglátogatása",
   "aboutData": "Az adatokról",
-  "footCredit": "Helyek © Overture Maps Foundation · Alaptérkép Natural Earth, utcák © OpenStreetMap közreműködők, OpenFreeMap",
+  "footCredit": "Templomok © OpenStreetMap közreműködők, részletek © Overture Maps Foundation · Alaptérkép Natural Earth, utcák az OpenFreeMapen át",
   "nearYou": "Az Ön közelében",
   "closeNear": "Közeli templomok bezárása",
   "favorites": "Kedvencek",
@@ -134,10 +134,10 @@
   "matches_one": "{n} találat. Adjon meg települést a szűkítéshez.",
   "matches_other": "{n} találat. Adjon meg települést a szűkítéshez.",
   "matchesMax": "Több mint 400 találat. Adjon meg települést a szűkítéshez.",
-  "aboutP1": "A földgömb <b>{n}</b> katolikus templomot, kápolnát, kegyhelyet, bazilikát és székesegyházat mutat. Ezek az {a1}Overture Maps helyadatbázisából{end} származnak ({release} kiadás), amely a Meta, a Microsoft és más nyílt források helyeit gyűjti össze.",
-  "aboutP2": "{cat} hely római katolikus istentiszteleti helyként szerepel az Overture-ben. További {name} csak keresztény istentiszteleti helyként szerepel; a földgömb azért veszi fel ezeket, mert a nevük egyértelműen katolikus (például „Parroquia”, „Paróquia”, „Basilica”, „Nossa Senhora”). A részleteiknél ezt jelzés mutatja.",
+  "aboutP1": "A földgömb <b>{n}</b> katolikus templomot, kápolnát, kegyhelyet, bazilikát és székesegyházat mutat. Minden jelölő egy templomépület, amely katolikusként szerepel az {a1}OpenStreetMapen{end}, az önkéntesek által rajzolt szabad világtérképen (adatok: {osm}).",
+  "aboutP2": "Közülük {cat} telefonszáma és honlapja az {a1}Overture Maps helyadatbázisából{end} származik ({release} kiadás), amely a Meta, a Microsoft és más nyílt források helyeit gyűjti. A többi {osm} csak az OpenStreetMapből származik.",
   "aboutP3": "Még egyetlen nyílt adatbázis sem tartalmaz minden plébániát. Amerikában és Nyugat-Európában a legteljesebb a lefedettség, Afrika és Ázsia egyes részein gyérebb, sok plébánia még nincs a térképen. Egyes bejegyzések lehetnek ismétlődők, irodák vagy bezárt épületek. Amikor megnyit egy templomot, az oldal a hely és a név alapján fotót keres róla a {a1}Wikimedia Commonson{end} és a Wikipédián, a fotós megnevezésével. A fotó nélküli templomoknál rajzolt kép látható. Minden kártyáról további fotók, videók és utcakép nyitható meg.",
-  "aboutCredits": "Helyadatok © Overture Maps Foundation, CDLA Permissive 2.0. Alaptérkép: Natural Earth (közkincs). A térképet a MapLibre rajzolja.",
+  "aboutCredits": "Templomok helye © OpenStreetMap közreműködők, ODbL. Helyadatok © Overture Maps Foundation, CDLA Permissive 2.0. Alaptérkép: Natural Earth (közkincs). Térképrajzolás: MapLibre.",
   "close": "Bezárás",
   "unknown": "Ismeretlen",
   "dirN": "É",
@@ -527,5 +527,8 @@
   "clearSearch": "Keresés Törlése",
   "nm_c": "{x} katolikus templom",
   "nm_k": "{x} székesegyház",
-  "nm_s": "{x} kegyhely"
+  "nm_s": "{x} kegyhely",
+  "sourceOsm": "Forrás: OpenStreetMap közreműködők.",
+  "sourceOsmUpdated": "Forrás: OpenStreetMap közreműködők, ellenőrizve: {date}.",
+  "listedOsm": "Az OpenStreetMapen katolikusként szerepel"
 }

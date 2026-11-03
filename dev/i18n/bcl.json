@@ -18,7 +18,7 @@
   "home": "Magbalik sa bilog na kinaban",
   "random": "Hilingon an maski anong simbahan",
   "aboutData": "Manongod sa datos",
-  "footCredit": "Mga lugar © Overture Maps Foundation · Basehan na mapa Natural Earth, mga tinampo © mga contributor kan OpenStreetMap paagi sa OpenFreeMap",
+  "footCredit": "Mga simbahan © mga kontributor kan OpenStreetMap, detalye © Overture Maps Foundation · Basehan na mapa Natural Earth, mga tinampo paagi sa OpenFreeMap",
   "nearYou": "Harani saimo",
   "closeNear": "Sarhan an haraning mga simbahan",
   "favorites": "Mga paborito",
@@ -133,10 +133,10 @@
   "matches_one": "{n} na resulta. Idugang an banwaan tanganing mapiho.",
   "matches_other": "{n} na resulta. Idugang an banwaan tanganing mapiho.",
   "matchesMax": "Labi sa 400 na resulta. Idugang an banwaan tanganing mapiho.",
-  "aboutP1": "An kinaban na ini nagpapahiling nin <b>{n}</b> na simbahan Katoliko, kapilya, santuwaryo, basilika asin katedral. Hale ini sa {a1}datos kan mga lugar kan Overture Maps{end} (release {release}), na nagtitipon nin mga lugar hale sa Meta, Microsoft asin iba pang bukas na ginikanan.",
-  "aboutP2": "Kaini, {cat} na lugar an nakalista sa Overture bilang Romano Katolikong lugar nin pagsamba. An iba pang {name} nakalista sana bilang Kristiyanong lugar nin pagsamba, asin kaibahan ini huli ta malinaw na Katoliko an saindang pangaran (arog kan “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). May nota an saindang detalye.",
+  "aboutP1": "Ipinapahiling kan globo an <b>{n}</b> na Katolikong simbahan, kapilya, santuwaryo, basilika asin katedral. An kada pin sarong gusali nin simbahan na nakalista bilang Katoliko sa {a1}OpenStreetMap{end}, an libreng mapa kan kinaban na ginibo kan mga boluntaryo (datos poon {osm}).",
+  "aboutP2": "An mga numero nin telepono asin website kan {cat} kaini hale sa {a1}dataset nin mga lugar kan Overture Maps{end} (release {release}), na nagtitipon nin mga lugar poon sa Meta, Microsoft asin iba pang bukas na ginikanan. An iba pang {osm} hale sana sa OpenStreetMap.",
   "aboutP3": "Mayo pang bukas na datos na nagkakaibahan kan kada parokya. Pinakakumpleto an Amerika asin Sulnupan na Europa, asin kulang sa nagkapirang kabtang kan Africa asin Asya, kun sain dakol na parokya an mayo pa sa mapa. An nagkapirang entry pwedeng doble, opisina o sarado nang building. Kun bubukasan mo an simbahan, hinahanap kan pahina an litrato kaini sa {a1}Wikimedia Commons{end} asin Wikipedia suno sa lokasyon asin pangaran, kaiba an pangaran kan litratista. An mga simbahan na mayong litrato nagpapahiling nin drowing. An kada kard may link sa dugang na litrato, video asin Street View.",
-  "aboutCredits": "Datos kan mga lugar © Overture Maps Foundation, CDLA Permissive 2.0. Basehan na mapa Natural Earth (publikong domain). Mapa ginibo sa MapLibre.",
+  "aboutCredits": "Lokasyon kan mga simbahan © mga kontributor kan OpenStreetMap, ODbL. Datos kan mga lugar © Overture Maps Foundation, CDLA Permissive 2.0. Basehan na mapa poon sa Natural Earth (pampublikong domain). Ginuhit an mapa gamit an MapLibre.",
   "close": "Sarhan",
   "unknown": "Dai aram",
   "dirN": "N",
@@ -519,5 +519,8 @@
   "clearSearch": "Paraon an Hinahanap",
   "nm_c": "Simbahang Katoliko kan {x}",
   "nm_k": "Katedral kan {x}",
-  "nm_s": "Santuwaryo kan {x}"
+  "nm_s": "Santuwaryo kan {x}",
+  "sourceOsm": "Ginikanan: mga kontributor kan OpenStreetMap.",
+  "sourceOsmUpdated": "Ginikanan: mga kontributor kan OpenStreetMap, sinusog kan {date}.",
+  "listedOsm": "Nakalista bilang Katoliko sa OpenStreetMap"
 }

@@ -18,7 +18,7 @@
   "home": "Laghachi n'ụwa niile",
   "random": "Hụ ụka ọ bụla",
   "aboutData": "Gbasara data",
-  "footCredit": "Ebe © Overture Maps Foundation · Map ntọala Natural Earth, okporo ụzọ © ndị nyere aka na OpenStreetMap site na OpenFreeMap",
+  "footCredit": "Ụka © ndị na-enye aka na OpenStreetMap, nkọwa © Overture Maps Foundation · Map ntọala Natural Earth, okporo ụzọ site na OpenFreeMap",
   "nearYou": "Nso gị",
   "closeNear": "Mechie ụka dị nso",
   "favorites": "Ndị a hụrụ n'anya",
@@ -133,10 +133,10 @@
   "matches_one": "Nsonaazụ {n}. Tinye obodo iji belata ya.",
   "matches_other": "Nsonaazụ {n}. Tinye obodo iji belata ya.",
   "matchesMax": "Karịa nsonaazụ 400. Tinye obodo iji belata ya.",
-  "aboutP1": "Ụwa a na-egosi ụka Katọlik, chapel, ebe nsọ, basilika na katidral <b>{n}</b>. Ha sitere na {a1}data ebe Overture Maps{end} (mbipụta {release}), nke na-achịkọta ebe sitere na Meta, Microsoft na isi mmalite ndị ọzọ mepere emepe.",
-  "aboutP2": "N'ime ha, ebe {cat} ka Overture depụtara dịka ebe ofufe Roman Katọlik. Ndị ọzọ {name} ka edepụtara naanị dịka ebe ofufe Ndị Kraịst, ụwa a tinyekwara ha n'ihi na aha ha doro anya na ọ bụ Katọlik (dịka “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Nkọwa ha nwere ndetu.",
+  "aboutP1": "Ụwa a na-egosi ụka, obere ụlọ ekpere, ebe nsọ, basilika na katidral Katọlik <b>{n}</b>. Akara ọ bụla bụ ụlọ ụka edebanyere dị ka nke Katọlik na {a1}OpenStreetMap{end}, map ụwa n’efu nke ndị ọrụ afọ ofufo na-ese (data nke {osm}).",
+  "aboutP2": "Nọmba ekwentị na weebụsaịtị nke {cat} n’ime ha si na {a1}nchịkọta ebe Overture Maps{end} (mbipụta {release}), nke na-achịkọta ebe site na Meta, Microsoft na isi mmalite ndị ọzọ mepere emepe. Ndị ọzọ {osm} si naanị na OpenStreetMap.",
   "aboutP3": "Ọ dịbeghị data mepere emepe nke nwere pari niile. Data kacha zuo oke n'Amerịka na Ọdịda Anyanwụ Europe, ọ dịkwa ntakịrị n'akụkụ ụfọdụ nke Africa na Asia, ebe ọtụtụ pari na-adịbeghị na map. Ụfọdụ ndenye nwere ike ịbụ ugboro abụọ, ọfịs, ma ọ bụ ụlọ e mechiri emechi. Mgbe ị meghere ụka, ibe a na-achọ foto ya na {a1}Wikimedia Commons{end} na Wikipedia site n'ebe ọ dị na aha ya, ma kpọọ aha onye sere ya. Ụka na-enweghị foto na-egosi ihe osise. Kaadị ọ bụla nwere njikọ gaa na foto, vidiyo na Street View ndị ọzọ.",
-  "aboutCredits": "Data ebe © Overture Maps Foundation, CDLA Permissive 2.0. Map ntọala Natural Earth (ọha). Map site na MapLibre.",
+  "aboutCredits": "Ebe ụka dị © ndị na-enye aka na OpenStreetMap, ODbL. Data ebe © Overture Maps Foundation, CDLA Permissive 2.0. Map ntọala si na Natural Earth (nke ọha). E ji MapLibre see map ahụ.",
   "close": "Mechie",
   "unknown": "Amaghị",
   "dirN": "Ug",
@@ -519,5 +519,8 @@
   "clearSearch": "Hichapụ Nchọta",
   "nm_c": "Ụka Katọlik {x}",
   "nm_k": "Katidral {x}",
-  "nm_s": "Ebe nsọ {x}"
+  "nm_s": "Ebe nsọ {x}",
+  "sourceOsm": "Isi mmalite: ndị na-enye aka na OpenStreetMap.",
+  "sourceOsmUpdated": "Isi mmalite: ndị na-enye aka na OpenStreetMap, e lere ya na {date}.",
+  "listedOsm": "Edebanyere dị ka nke Katọlik na OpenStreetMap"
 }

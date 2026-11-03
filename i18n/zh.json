@@ -18,7 +18,7 @@
   "home": "返回整个地球",
   "random": "随机参观一座教堂",
   "aboutData": "关于数据",
-  "footCredit": "地点 © Overture Maps Foundation · 底图 Natural Earth, 街道 © OpenStreetMap 贡献者，经由 OpenFreeMap",
+  "footCredit": "教堂 © OpenStreetMap 贡献者，详情 © Overture Maps Foundation · 底图 Natural Earth，街道来自 OpenFreeMap",
   "nearYou": "你的附近",
   "closeNear": "关闭附近的教堂",
   "favorites": "收藏",
@@ -128,10 +128,10 @@
   "noMatch": "没有与“{q}”相符的教堂。试试城镇名称或圣人的名字。",
   "matches_other": "{n} 个结果。加上城镇名称可缩小范围。",
   "matchesMax": "超过 400 个结果。加上城镇名称可缩小范围。",
-  "aboutP1": "地球仪上显示了 <b>{n}</b> 座天主教的教堂、小堂、朝圣地、宗座圣殿和主教座堂。数据来自 {a1}Overture Maps 地点数据集{end}（版本 {release}），汇集了 Meta、Microsoft 及其他开放来源的地点。",
-  "aboutP2": "其中 {cat} 处在 Overture 中登记为罗马天主教礼拜场所。另有 {name} 处仅登记为基督宗教礼拜场所，因名称明显属于天主教（例如 “Parroquia”、“Paróquia”、“Basilica”、“Nossa Senhora”）而被收录，详情中会有说明。",
+  "aboutP1": "地球仪显示 <b>{n}</b> 座天主教堂、小堂、朝圣地、宗座圣殿和主教座堂。每个标记都是在 {a1}OpenStreetMap{end}（由志愿者绘制的免费世界地图）上标为天主教的教堂建筑（数据日期 {osm}）。",
+  "aboutP2": "其中 {cat} 座的电话和网站来自 {a1}Overture Maps 地点数据集{end}（版本 {release}），该数据集汇集了 Meta、Microsoft 及其他开放来源的地点。其余 {osm} 座仅来自 OpenStreetMap。",
   "aboutP3": "目前还没有开放数据集收录所有堂区。美洲和西欧的覆盖最完整，非洲和亚洲部分地区较少，许多堂区尚未上图。部分条目可能重复，或是办公室、已关闭的建筑。打开一座教堂时，页面会按位置和名称在 {a1}维基共享资源{end} 和维基百科上寻找它的照片，并注明摄影者。没有照片的教堂会显示一幅插画。每张卡片还可以打开更多照片、视频和街景。",
-  "aboutCredits": "地点数据 © Overture Maps Foundation，CDLA Permissive 2.0。底图来自 Natural Earth（公有领域）。地图由 MapLibre 绘制。",
+  "aboutCredits": "教堂位置 © OpenStreetMap 贡献者，ODbL。地点数据 © Overture Maps Foundation，CDLA Permissive 2.0。底图来自 Natural Earth（公有领域）。地图由 MapLibre 绘制。",
   "close": "关闭",
   "unknown": "未知",
   "dirN": "北",
@@ -509,5 +509,8 @@
   "clearSearch": "清除搜索",
   "nm_c": "{x}天主堂",
   "nm_k": "{x}主教座堂",
-  "nm_s": "{x}朝圣地"
+  "nm_s": "{x}朝圣地",
+  "sourceOsm": "来源：OpenStreetMap 贡献者。",
+  "sourceOsmUpdated": "来源：OpenStreetMap 贡献者，核实于 {date}。",
+  "listedOsm": "在 OpenStreetMap 上标为天主教"
 }

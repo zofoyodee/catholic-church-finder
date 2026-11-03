@@ -18,7 +18,7 @@
   "home": "Retounen sou tout glòb la",
   "random": "Gade nenpòt legliz",
   "aboutData": "Konsènan done yo",
-  "footCredit": "Kote © Overture Maps Foundation · Kat debaz Natural Earth, lari yo © kontribitè OpenStreetMap atravè OpenFreeMap",
+  "footCredit": "Legliz © kontribitè OpenStreetMap, detay © Overture Maps Foundation · Kat debaz Natural Earth, lari atravè OpenFreeMap",
   "nearYou": "Toupre w",
   "closeNear": "Fèmen legliz ki toupre yo",
   "favorites": "Favori",
@@ -133,10 +133,10 @@
   "matches_one": "{n} rezilta. Ajoute yon vil pou jwenn mwens.",
   "matches_other": "{n} rezilta. Ajoute yon vil pou jwenn mwens.",
   "matchesMax": "Plis pase 400 rezilta. Ajoute yon vil pou jwenn mwens.",
-  "aboutP1": "Glòb sa a montre <b>{n}</b> legliz katolik, chapèl, sanktyè, bazilik ak katedral. Yo soti nan {a1}done kote Overture Maps{end} (vèsyon {release}), ki rasanble kote ki soti nan Meta, Microsoft ak lòt sous ouvè.",
-  "aboutP2": "Pami yo, {cat} kote anrejistre nan Overture kòm kote adorasyon katolik women. {name} lòt anrejistre sèlman kòm kote adorasyon kretyen, epi glòb la mete yo paske non yo montre klè yo katolik (tankou “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Detay yo gen yon nòt.",
+  "aboutP1": "Glòb la montre <b>{n}</b> legliz, chapèl, sanktyè, bazilik ak katedral katolik. Chak mak se yon batiman legliz ki anrejistre kòm katolik sou {a1}OpenStreetMap{end}, kat mondyal gratis volontè fè (done {osm}).",
+  "aboutP2": "Nimewo telefòn ak sit entènèt {cat} nan yo soti nan {a1}done kote Overture Maps{end} (vèsyon {release}), ki rasanble kote soti nan Meta, Microsoft ak lòt sous louvri. Lòt {osm} yo soti nan OpenStreetMap sèlman.",
   "aboutP3": "Poko gen done ouvè ki gen chak pawas. Done yo pi konplè nan Amerik ak Lwès Ewòp, epi pi piti nan kèk pati nan Afrik ak Azi, kote anpil pawas poko sou kat la. Kèk antre ka double, biwo, oswa bilding ki fèmen. Lè ou louvri yon legliz, paj la chèche foto li sou {a1}Wikimedia Commons{end} ak Wikipedia selon kote li ye ak non li, epi li bay non fotograf la. Legliz ki pa gen foto montre yon desen. Chak kat gen lyen pou plis foto, videyo ak Street View.",
-  "aboutCredits": "Done kote © Overture Maps Foundation, CDLA Permissive 2.0. Kat debaz Natural Earth (domèn piblik). Kat la fèt ak MapLibre.",
+  "aboutCredits": "Kote legliz yo ye © kontribitè OpenStreetMap, ODbL. Done kote © Overture Maps Foundation, CDLA Permissive 2.0. Kat debaz Natural Earth (domèn piblik). MapLibre desine kat la.",
   "close": "Fèmen",
   "unknown": "Enkoni",
   "dirN": "N",
@@ -519,5 +519,8 @@
   "clearSearch": "Efase Rechèch la",
   "nm_c": "Legliz Katolik {x}",
   "nm_k": "Katedral {x}",
-  "nm_s": "Sanktyè {x}"
+  "nm_s": "Sanktyè {x}",
+  "sourceOsm": "Sous: kontribitè OpenStreetMap.",
+  "sourceOsmUpdated": "Sous: kontribitè OpenStreetMap, verifye {date}.",
+  "listedOsm": "Anrejistre kòm katolik sou OpenStreetMap"
 }

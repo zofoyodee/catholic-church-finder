@@ -18,7 +18,7 @@
   "home": "지구 전체로 돌아가기",
   "random": "아무 성당이나 방문하기",
   "aboutData": "데이터 정보",
-  "footCredit": "장소 © Overture Maps Foundation · 배경 지도 Natural Earth, 도로 © OpenStreetMap 기여자, OpenFreeMap 제공",
+  "footCredit": "성당 © OpenStreetMap 기여자, 세부 정보 © Overture Maps Foundation · 기본 지도 Natural Earth, 도로는 OpenFreeMap 경유",
   "nearYou": "내 주변",
   "closeNear": "주변 성당 닫기",
   "favorites": "즐겨찾기",
@@ -128,10 +128,10 @@
   "noMatch": "“{q}”와 일치하는 성당이 없습니다. 도시 이름이나 성인 이름으로 찾아보세요.",
   "matches_other": "결과 {n}개. 도시를 추가해 범위를 좁히세요.",
   "matchesMax": "결과 400개 이상. 도시를 추가해 범위를 좁히세요.",
-  "aboutP1": "이 지구본에는 가톨릭 성당, 경당, 성지, 대성전, 주교좌성당 <b>{n}</b>곳이 있습니다. 데이터는 Meta, Microsoft 등 공개 출처의 장소를 모은 {a1}Overture Maps 장소 데이터{end}(릴리스 {release})에서 왔습니다.",
-  "aboutP2": "그중 {cat}곳은 Overture에 로마 가톨릭 예배 장소로 등록되어 있습니다. 다른 {name}곳은 그리스도교 예배 장소로만 등록되어 있지만 이름이 분명히 가톨릭이어서(예: “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”) 포함했습니다. 이런 곳의 상세 정보에는 안내가 붙어 있습니다.",
+  "aboutP1": "지구본에는 <b>{n}</b>곳의 가톨릭 성당, 경당, 성지, 대성전, 주교좌성당이 표시됩니다. 모든 핀은 자원봉사자들이 만드는 무료 세계 지도 {a1}OpenStreetMap{end}에 가톨릭으로 등록된 성당 건물입니다({osm} 기준 데이터).",
+  "aboutP2": "그중 {cat}곳의 전화번호와 웹사이트는 Meta, Microsoft 및 기타 공개 출처의 장소를 모은 {a1}Overture Maps 장소 데이터{end}(릴리스 {release})에서 가져왔습니다. 나머지 {osm}곳은 OpenStreetMap에서만 가져왔습니다.",
   "aboutP3": "아직 모든 본당을 담은 공개 데이터는 없습니다. 아메리카와 서유럽은 자료가 풍부하지만 아프리카와 아시아 일부 지역은 아직 지도에 없는 본당이 많습니다. 중복되거나 사무실, 문을 닫은 건물인 항목도 있을 수 있습니다. 성당을 열면 위치와 이름으로 {a1}위키미디어 공용{end}과 위키백과에서 사진을 찾고 촬영자를 밝힙니다. 사진이 없는 성당은 그림으로 표시됩니다. 각 카드에서 사진, 영상, 스트리트 뷰를 더 볼 수 있습니다.",
-  "aboutCredits": "장소 데이터 © Overture Maps Foundation, CDLA Permissive 2.0. 배경 지도 Natural Earth(퍼블릭 도메인). 지도 렌더링 MapLibre.",
+  "aboutCredits": "성당 위치 © OpenStreetMap 기여자, ODbL. 장소 데이터 © Overture Maps Foundation, CDLA Permissive 2.0. 기본 지도 Natural Earth(퍼블릭 도메인). 지도 렌더링 MapLibre.",
   "close": "닫기",
   "unknown": "알 수 없음",
   "dirN": "N",
@@ -509,5 +509,8 @@
   "clearSearch": "검색어 지우기",
   "nm_c": "{x} 성당",
   "nm_k": "{x} 주교좌성당",
-  "nm_s": "{x} 성지"
+  "nm_s": "{x} 성지",
+  "sourceOsm": "출처: OpenStreetMap 기여자.",
+  "sourceOsmUpdated": "출처: OpenStreetMap 기여자, {date} 확인.",
+  "listedOsm": "OpenStreetMap에 가톨릭으로 등록됨"
 }

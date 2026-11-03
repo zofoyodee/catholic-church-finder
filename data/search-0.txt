@@ -80238,3 +80238,4 @@ Iglesia Nuestra Señora de Guadalupe de las Caobas	Santo Domingo Oeste	DO
 Parroquia San Pedro Nolasco, Enriquillo, Herrera	Santo Domingo Oeste	DO	
 Casa de Oración Reina de la Paz	Santo Domingo Oeste	DO	
 Capilla Nuestra Senora de Las Mercedes	Santo Domingo Oeste	DO	
+Parroquia San Francisco Javier	Santo Domingo Oeste	DO	

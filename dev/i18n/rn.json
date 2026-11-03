@@ -18,7 +18,7 @@
   "home": "Subira ku isi yose",
   "random": "Raba ishengero iryo ari ryo ryose",
   "aboutData": "Ivyerekeye amakuru",
-  "footCredit": "Ahantu © Overture Maps Foundation · Ikarata y'ishingiro Natural Earth, amabarabara © abatanze umusanzu kuri OpenStreetMap biciye kuri OpenFreeMap",
+  "footCredit": "Ingoro z’Imana © abaterankunga ba OpenStreetMap, ibisobanuro © Overture Maps Foundation · Ikarata y’ishingiro Natural Earth, amabarabara biciye kuri OpenFreeMap",
   "nearYou": "Hafi yawe",
   "closeNear": "Ugara amashengero ari hafi",
   "favorites": "Ivyo ukunda",
@@ -133,10 +133,10 @@
   "matches_one": "Inyishu {n}. Ongeramwo igisagara kugira ugabanye.",
   "matches_other": "Inyishu {n}. Ongeramwo igisagara kugira ugabanye.",
   "matchesMax": "Inyishu zirenga 400. Ongeramwo igisagara kugira ugabanye.",
-  "aboutP1": "Iyi si yerekana amashengero Gatolika, amashapeli, ingoro nyeranda, bazilika na katedrale <b>{n}</b>. Biva mu {a1}makuru y'ahantu ya Overture Maps{end} (verisiyo {release}), akoranya ahantu avuye kuri Meta, Microsoft n'izindi nkomoko zuguruye.",
-  "aboutP2": "Muri ayo, ahantu {cat} handitswe muri Overture nk'ahasengerwa h'Abaroma Gatolika. Ahandi {name} handitswe gusa nk'ahasengerwa h'Abakirisu, kandi hashizwemwo kubera ko amazina yaho yerekana neza ko ari Gatolika (nk'akarorero “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Insiguro zaho zifise icitonderwa.",
+  "aboutP1": "Isi irerekana ingoro z’Imana, ingoro ntoya, ahantu heranda, bazilika na katedrali Gatolika <b>{n}</b>. Ikimenyetso cose ni inyubakwa y’ingoro y’Imana yanditswe nk’iya Gatolika kuri {a1}OpenStreetMap{end}, ikarata y’isi y’ubuntu ikorwa n’abitanga ku bushake (amakuru yo ku wa {osm}).",
+  "aboutP2": "Inomero za telefone n’imbuga za {cat} muri zo biva mu {a1}gikoranizo c’ahantu ca Overture Maps{end} (isohorwa {release}), gikoranya ahantu kuva kuri Meta, Microsoft n’ayandi masoko yuguruye. Izindi {osm} ziva kuri OpenStreetMap gusa.",
   "aboutP3": "Nta makuru yuguruye arimwo amaparuwase yose. Amakuru ni menshi muri Amerika no mu Buraya bw'Uburengero, ni make mu bice bimwe vya Afrika na Aziya, aho amaparuwase menshi ataragera ku ikarata. Bimwe bishobora kuba vyanditswe kabiri, ari ibiro, canke inyubakwa zugawe. Iyo ufunguye ishengero, urupapuro rurondera ifoto yaryo kuri {a1}Wikimedia Commons{end} na Wikipedia hakurikijwe aho riri n'izina ryaryo, rukavuga n'uwayifashe. Amashengero adafise ifoto yerekana igishushanyo. Ikarata yose ifise amahuza y'ayandi mafoto, amasanamu na Street View.",
-  "aboutCredits": "Amakuru y'ahantu © Overture Maps Foundation, CDLA Permissive 2.0. Ikarata y'ishingiro Natural Earth (rusangi). Ikarata ikoreshwa na MapLibre.",
+  "aboutCredits": "Aho ingoro z’Imana ziri © abaterankunga ba OpenStreetMap, ODbL. Amakuru y’ahantu © Overture Maps Foundation, CDLA Permissive 2.0. Ikarata y’ishingiro ya Natural Earth (rusangi). Ikarata yashushanijwe na MapLibre.",
   "close": "Ugara",
   "unknown": "Ntivyizwi",
   "dirN": "Ru",
@@ -519,5 +519,8 @@
   "clearSearch": "Futa Ivyo Urondera",
   "nm_c": "Ishengero Gatolika rya {x}",
   "nm_k": "Katedrale ya {x}",
-  "nm_s": "Ingoro nyeranda ya {x}"
+  "nm_s": "Ingoro nyeranda ya {x}",
+  "sourceOsm": "Isoko: abaterankunga ba OpenStreetMap.",
+  "sourceOsmUpdated": "Isoko: abaterankunga ba OpenStreetMap, vyarabwe ku wa {date}.",
+  "listedOsm": "Yanditswe nk’iya Gatolika kuri OpenStreetMap"
 }

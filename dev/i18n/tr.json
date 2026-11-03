@@ -60,7 +60,7 @@
   "micBlocked": "Mikrofon engellendi. Sesle aramak için tarayıcı ayarlarınızdan izin verin.",
   "voiceFailed": "Sesli arama şu anda çalışmıyor. Lütfen aramanızı yazın.",
   "aboutData": "Veriler Hakkında",
-  "footCredit": "Yerler © Overture Maps Foundation · Temel harita Natural Earth, sokaklar © OpenStreetMap katkıcıları, OpenFreeMap aracılığıyla",
+  "footCredit": "Kiliseler © OpenStreetMap katkıcıları, ayrıntılar © Overture Maps Foundation · Altlık harita Natural Earth, sokaklar OpenFreeMap üzerinden",
   "nearYou": "Yakınınızda",
   "closeNear": "Yakındaki kiliseleri kapat",
   "favorites": "Favoriler",
@@ -209,10 +209,10 @@
   "matches_one": "{n} sonuç. Daraltmak için bir şehir ekleyin.",
   "matches_other": "{n} sonuç. Daraltmak için bir şehir ekleyin.",
   "matchesMax": "400'den fazla sonuç. Daraltmak için bir şehir ekleyin.",
-  "aboutP1": "Küre <b>{n}</b> Katolik kilisesi, şapel, hac yeri, bazilika ve katedral gösterir. Bunlar, Meta, Microsoft ve diğer açık kaynaklardan yerleri bir araya getiren {a1}Overture Maps yerler veri kümesinden{end} (sürüm {release}) gelir.",
-  "aboutP2": "{cat} yer, Overture'da Roma Katolik ibadet yeri olarak kayıtlıdır. {name} yer daha yalnızca Hristiyan ibadet yeri olarak kayıtlıdır; adları açıkça Katolik olduğu için küre onları da içerir (ör. “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Bunların ayrıntılarında bir not bulunur.",
+  "aboutP1": "Küre <b>{n}</b> Katolik kilise, şapel, hac yeri, bazilika ve katedrali gösterir. Her işaret, gönüllülerin çizdiği özgür dünya haritası {a1}OpenStreetMap{end} üzerinde Katolik olarak kayıtlı bir kilise binasıdır ({osm} tarihli veri).",
+  "aboutP2": "Bunlardan {cat} tanesinin telefon ve web sitesi, Meta, Microsoft ve diğer açık kaynaklardan yerleri toplayan {a1}Overture Maps yer veri kümesinden{end} (sürüm {release}) gelir. Diğer {osm} tanesi yalnızca OpenStreetMap’ten gelir.",
   "aboutP3": "Henüz her cemaati listeleyen açık bir veri kümesi yok. Kapsam Amerika kıtası ve Batı Avrupa'da en güçlü, birçok cemaatin henüz haritaya işlenmediği Afrika ve Asya'nın bazı bölgelerinde daha zayıftır. Bazı kayıtlar yinelenen, ofis veya kapanmış binalar olabilir. Bir kiliseyi açtığınızda sayfa, konuma ve ada göre eşleşen bir fotoğrafını {a1}Wikimedia Commons{end} ve Vikipedi'de arar ve fotoğrafçısını belirtir. Eşleşen fotoğrafı olmayan kiliselerde bir çizim kalır. Her karttan daha fazla fotoğraf, video ve Street View açılabilir.",
-  "aboutCredits": "Yer verileri © Overture Maps Foundation, CDLA Permissive 2.0. Temel harita Natural Earth'ten (kamu malı). Harita çizimi MapLibre ile.",
+  "aboutCredits": "Kilise konumları © OpenStreetMap katkıcıları, ODbL. Yer verileri © Overture Maps Foundation, CDLA Permissive 2.0. Altlık harita Natural Earth’ten (kamu malı). Harita çizimi MapLibre.",
   "close": "Kapat",
   "unknown": "Bilinmiyor",
   "dirN": "K",
@@ -527,5 +527,8 @@
   "color_rose": "pembe",
   "color_white": "beyaz ve altın",
   "color_red": "kırmızı",
-  "massNoteTip": "Ayin ve Günah İtirafı saatleri cemaatlerin web sitelerinden okunur, bu yüzden yalnızca sitesi bunları listeleyen kiliseler süzülebilir"
+  "massNoteTip": "Ayin ve Günah İtirafı saatleri cemaatlerin web sitelerinden okunur, bu yüzden yalnızca sitesi bunları listeleyen kiliseler süzülebilir",
+  "sourceOsm": "Kaynak: OpenStreetMap katkıcıları.",
+  "sourceOsmUpdated": "Kaynak: OpenStreetMap katkıcıları, {date} tarihinde kontrol edildi.",
+  "listedOsm": "OpenStreetMap’te Katolik olarak kayıtlı"
 }

@@ -18,7 +18,7 @@
   "home": "Ad totum globum redi",
   "random": "Ecclesiam fortuitam visita",
   "aboutData": "De notitiis",
-  "footCredit": "Loca © Overture Maps Foundation · Tabula fundamentalis Natural Earth, viae © collaboratores OpenStreetMap per OpenFreeMap",
+  "footCredit": "Ecclesiae © collaboratores OpenStreetMap, singula © Overture Maps Foundation · Tabula fundamentalis Natural Earth, viae per OpenFreeMap",
   "nearYou": "Prope te",
   "closeNear": "Ecclesias propinquas claude",
   "favorites": "Carae",
@@ -133,10 +133,10 @@
   "matches_one": "{n} inventum. Oppidum adde ut contrahas.",
   "matches_other": "{n} inventa. Oppidum adde ut contrahas.",
   "matchesMax": "Plus quam 400 inventa. Oppidum adde ut contrahas.",
-  "aboutP1": "Globus ostendit ecclesias, sacella, sanctuaria, basilicas et cathedrales catholicas: <b>{n}</b>. Sumptae sunt ex {a1}collectione locorum Overture Maps{end} (editio {release}), quae loca a Meta, Microsoft aliisque fontibus apertis colligit.",
-  "aboutP2": "Loca in Overture ut loca cultus Romana Catholica inscripta: {cat}. Alia {name} tantum ut loca cultus christiana inscripta sunt; globus ea comprehendit quia nomina eorum manifeste catholica sunt (e.g. “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Haec notam in singulis habent.",
+  "aboutP1": "Globus ostendit <b>{n}</b> ecclesias, sacella, sanctuaria, basilicas et cathedrales catholicas. Quodque signum est aedificium ecclesiae ut catholicum inscriptum in {a1}OpenStreetMap{end}, tabula libera orbis a voluntariis delineata (data diei {osm}).",
+  "aboutP2": "Numeri telephonici et paginae interretiales {cat} earum ex {a1}collectione locorum Overture Maps{end} (editio {release}) veniunt, quae loca ex Meta, Microsoft aliisque fontibus apertis colligit. Ceterae {osm} ex solo OpenStreetMap veniunt.",
   "aboutP3": "Nulla adhuc collectio aperta omnes paroecias continet. Optime describuntur Americae et Europa occidentalis, minus partes Africae et Asiae, ubi multae paroeciae nondum in tabula sunt. Quaedam inscriptiones fortasse duplices sunt, officia vel aedificia clausa. Cum ecclesiam aperis, pagina imaginem eius in {a1}Vicimediorum Communibus{end} et Vicipaedia quaerit secundum locum et nomen, photographo nominato. Ecclesiae sine imagine picturam habent. Ex unaquaque charta plures imagines, pelliculae et Street View aperiuntur.",
-  "aboutCredits": "Notitiae locorum © Overture Maps Foundation, CDLA Permissive 2.0. Tabula fundamentalis Natural Earth (dominium publicum). Tabulam pingit MapLibre.",
+  "aboutCredits": "Situs ecclesiarum © collaboratores OpenStreetMap, ODbL. Data locorum © Overture Maps Foundation, CDLA Permissive 2.0. Tabula fundamentalis ex Natural Earth (publici iuris). Tabula a MapLibre picta.",
   "close": "Claude",
   "unknown": "Ignotum",
   "dirN": "Sept.",
@@ -517,5 +517,8 @@
   "clearSearch": "Quaestionem Dele",
   "nm_c": "Ecclesia catholica {x}",
   "nm_k": "Ecclesia cathedralis {x}",
-  "nm_s": "Sanctuarium {x}"
+  "nm_s": "Sanctuarium {x}",
+  "sourceOsm": "Fons: collaboratores OpenStreetMap.",
+  "sourceOsmUpdated": "Fons: collaboratores OpenStreetMap, inspectum {date}.",
+  "listedOsm": "Ut catholica in OpenStreetMap inscripta"
 }

@@ -18,7 +18,7 @@
   "home": "Wróć do całego globusa",
   "random": "Odwiedź losowy kościół",
   "aboutData": "O danych",
-  "footCredit": "Miejsca © Overture Maps Foundation · Mapa podkładowa Natural Earth, ulice © współtwórcy OpenStreetMap przez OpenFreeMap",
+  "footCredit": "Kościoły © współtwórcy OpenStreetMap, szczegóły © Overture Maps Foundation · Mapa bazowa Natural Earth, ulice przez OpenFreeMap",
   "nearYou": "W pobliżu",
   "closeNear": "Zamknij pobliskie kościoły",
   "favorites": "Ulubione",
@@ -142,10 +142,10 @@
   "matches_many": "{n} wyników. Dodaj miejscowość, aby zawęzić.",
   "matches_other": "{n} wyniku. Dodaj miejscowość, aby zawęzić.",
   "matchesMax": "Ponad 400 wyników. Dodaj miejscowość, aby zawęzić.",
-  "aboutP1": "Globus pokazuje <b>{n}</b> katolickich kościołów, kaplic, sanktuariów, bazylik i katedr. Pochodzą one ze {a1}zbioru miejsc Overture Maps{end} (wydanie {release}), który łączy miejsca z Meta, Microsoftu i innych otwartych źródeł.",
-  "aboutP2": "Miejsca oznaczone w Overture jako rzymskokatolickie świątynie: {cat}. Kolejne miejsca ({name}) są oznaczone tylko jako świątynie chrześcijańskie; globus je uwzględnia, bo ich nazwy są wyraźnie katolickie (na przykład „Parroquia”, „Paróquia”, „Basilica”, „Nossa Senhora”). W ich szczegółach jest odpowiednia uwaga.",
+  "aboutP1": "Globus pokazuje <b>{n}</b> katolickich kościołów, kaplic, sanktuariów, bazylik i katedr. Każda pinezka to budynek kościoła oznaczony jako katolicki w {a1}OpenStreetMap{end}, wolnej mapie świata tworzonej przez wolontariuszy (dane z {osm}).",
+  "aboutP2": "Telefony i strony internetowe {cat} z nich pochodzą ze {a1}zbioru miejsc Overture Maps{end} (wydanie {release}), który gromadzi miejsca z Meta, Microsoft i innych otwartych źródeł. Pozostałe {osm} pochodzą tylko z OpenStreetMap.",
   "aboutP3": "Żaden otwarty zbiór danych nie obejmuje jeszcze wszystkich parafii. Najlepiej pokryte są obie Ameryki i Europa Zachodnia, słabiej części Afryki i Azji, gdzie wiele parafii nie ma jeszcze na mapie. Niektóre wpisy mogą być duplikatami, biurami lub zamkniętymi budynkami. Po otwarciu kościoła strona szuka jego zdjęcia w {a1}Wikimedia Commons{end} i Wikipedii, według położenia i nazwy, z podaniem autora. Kościoły bez zdjęcia mają rysunek. Z każdej karty można otworzyć więcej zdjęć, filmy i Street View.",
-  "aboutCredits": "Dane o miejscach © Overture Maps Foundation, CDLA Permissive 2.0. Mapa podkładowa Natural Earth (domena publiczna). Mapę rysuje MapLibre.",
+  "aboutCredits": "Położenie kościołów © współtwórcy OpenStreetMap, ODbL. Dane miejsc © Overture Maps Foundation, CDLA Permissive 2.0. Mapa bazowa z Natural Earth (domena publiczna). Rysowanie mapy: MapLibre.",
   "close": "Zamknij",
   "unknown": "Nieznany",
   "dirN": "N",
@@ -557,5 +557,8 @@
   "clearSearch": "Wyczyść Wyszukiwanie",
   "nm_c": "Kościół katolicki {x}",
   "nm_k": "Katedra {x}",
-  "nm_s": "Sanktuarium {x}"
+  "nm_s": "Sanktuarium {x}",
+  "sourceOsm": "Źródło: współtwórcy OpenStreetMap.",
+  "sourceOsmUpdated": "Źródło: współtwórcy OpenStreetMap, sprawdzono {date}.",
+  "listedOsm": "Oznaczony jako katolicki w OpenStreetMap"
 }

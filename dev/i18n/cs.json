@@ -18,7 +18,7 @@
   "home": "Zpět na celý glóbus",
   "random": "Navštívit náhodný kostel",
   "aboutData": "O údajích",
-  "footCredit": "Místa © Overture Maps Foundation · Podkladová mapa Natural Earth, ulice © přispěvatelé OpenStreetMap přes OpenFreeMap",
+  "footCredit": "Kostely © přispěvatelé OpenStreetMap, podrobnosti © Overture Maps Foundation · Podkladová mapa Natural Earth, ulice přes OpenFreeMap",
   "nearYou": "Ve vaší blízkosti",
   "closeNear": "Zavřít blízké kostely",
   "favorites": "Oblíbené",
@@ -139,10 +139,10 @@
   "matches_few": "{n} výsledky. Přidejte obec pro zúžení.",
   "matches_other": "{n} výsledků. Přidejte obec pro zúžení.",
   "matchesMax": "Více než 400 výsledků. Přidejte obec pro zúžení.",
-  "aboutP1": "Glóbus zobrazuje katolické kostely, kaple, poutní místa, baziliky a katedrály: <b>{n}</b>. Pocházejí ze {a1}sady míst Overture Maps{end} (vydání {release}), která shromažďuje místa od společností Meta, Microsoft a z dalších otevřených zdrojů.",
-  "aboutP2": "Míst vedených v Overture jako římskokatolická místa bohoslužby: {cat}. Dalších {name} je vedeno jen jako křesťanská místa bohoslužby; glóbus je zahrnuje, protože jejich názvy jsou zjevně katolické (například „Parroquia“, „Paróquia“, „Basilica“, „Nossa Senhora“). V podrobnostech mají poznámku.",
+  "aboutP1": "Glóbus ukazuje <b>{n}</b> katolických kostelů, kaplí, poutních míst, bazilik a katedrál. Každý špendlík je budova kostela zapsaná jako katolická v {a1}OpenStreetMap{end}, svobodné mapě světa od dobrovolníků (data z {osm}).",
+  "aboutP2": "Telefony a weby {cat} z nich pocházejí ze {a1}sady míst Overture Maps{end} (vydání {release}), která shromažďuje místa od Meta, Microsoftu a dalších otevřených zdrojů. Ostatních {osm} pochází jen z OpenStreetMap.",
   "aboutP3": "Zatím žádná otevřená data nezahrnují každou farnost. Nejlepší pokrytí je v Americe a západní Evropě, slabší v částech Afriky a Asie, kde mnoho farností ještě není na mapě. Některé záznamy mohou být duplicitní, úřady nebo zavřené budovy. Když otevřete kostel, stránka hledá jeho fotografii na {a1}Wikimedia Commons{end} a Wikipedii podle polohy a názvu, s uvedením autora. Kostely bez fotografie mají nakreslenou scénu. Z každé karty lze otevřít další fotografie, videa a Street View.",
-  "aboutCredits": "Údaje o místech © Overture Maps Foundation, CDLA Permissive 2.0. Podkladová mapa Natural Earth (volné dílo). Mapu vykresluje MapLibre.",
+  "aboutCredits": "Polohy kostelů © přispěvatelé OpenStreetMap, ODbL. Data míst © Overture Maps Foundation, CDLA Permissive 2.0. Podkladová mapa Natural Earth (volné dílo). Vykreslení mapy MapLibre.",
   "close": "Zavřít",
   "unknown": "Neznámé",
   "dirN": "s. š.",
@@ -547,5 +547,8 @@
   "clearSearch": "Vymazat Hledání",
   "nm_c": "Katolický kostel {x}",
   "nm_k": "Katedrála {x}",
-  "nm_s": "Poutní místo {x}"
+  "nm_s": "Poutní místo {x}",
+  "sourceOsm": "Zdroj: přispěvatelé OpenStreetMap.",
+  "sourceOsmUpdated": "Zdroj: přispěvatelé OpenStreetMap, ověřeno {date}.",
+  "listedOsm": "V OpenStreetMap zapsán jako katolický"
 }

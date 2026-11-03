@@ -18,7 +18,7 @@
   "home": "Zonga na mokili mobimba",
   "random": "Tala lingomba nyonso",
   "aboutData": "Na ntina ya ba nsango",
-  "footCredit": "Bisika © Overture Maps Foundation · Karte ya moboko Natural Earth, babalabala © basali ya OpenStreetMap na nzela ya OpenFreeMap",
+  "footCredit": "Mangomba © basungi ya OpenStreetMap, makambo © Overture Maps Foundation · Kalati ya moboko Natural Earth, babalabala na nzela ya OpenFreeMap",
   "nearYou": "Pene na yo",
   "closeNear": "Kanga mangomba ya pene",
   "favorites": "Oyo olingaka",
@@ -133,10 +133,10 @@
   "matches_one": "Eyano {n}. Bakisa engumba mpo na kokitisa.",
   "matches_other": "Biyano {n}. Bakisa engumba mpo na kokitisa.",
   "matchesMax": "Biyano koleka 400. Bakisa engumba mpo na kokitisa.",
-  "aboutP1": "Mokili oyo elakisaka mangomba Katolike, bashapele, bisika ya bosantu, babazilika mpe bakatedrale <b>{n}</b>. Euti na {a1}ba nsango ya bisika ya Overture Maps{end} (version {release}), oyo esangisaka bisika euti na Meta, Microsoft mpe bisika mosusu ya polele.",
-  "aboutP2": "Kati na yango, bisika {cat} ekomami na Overture lokola bisika ya losambo ya Katolike ya Roma. Bisika mosusu {name} ekomami kaka lokola bisika ya losambo ya Baklisto, mpe ekotisami mpo ete bankombo na yango emonisi polele ete ezali Katolike (ndakisa “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Malimbisi na yango ezali na likebisi.",
+  "aboutP1": "Mokili oyo emonisaka mangomba, bashapele, bisika bya losambo, babazilika mpe bakatedrale ya Katolike <b>{n}</b>. Elembo nyonso ezali ndako ya ndako-Nzambe ekomamá lokola ya Katolike na {a1}OpenStreetMap{end}, kalati ya mokili ya ofele oyo basali na bolingo bazali kosala (ba-done ya {osm}).",
+  "aboutP2": "Ba nimero ya telefone mpe ba site ya {cat} kati na yango euti na {a1}etuluku ya bisika ya Overture Maps{end} (libimisi {release}), oyo esangisaka bisika kowuta na Meta, Microsoft mpe misisa mosusu ya polele. Mosusu {osm} euti kaka na OpenStreetMap.",
   "aboutP3": "Ba nsango ya polele oyo ezali na baparwasi nyonso ezali naino te. Ba nsango ezali mingi na Amerika mpe na Wɛsti ya Mpoto, mpe moke na bisika mosusu ya Afrika mpe Azia, epai baparwasi mingi ezali naino na karte te. Mosusu ekoki kozala mbala mibale, biro, to bandako oyo ekangami. Soki ofungoli lingomba, lokasa elukaka foto na yango na {a1}Wikimedia Commons{end} mpe Wikipedia na esika mpe nkombo, mpe ekomaka nkombo ya mobɛti-foto. Mangomba oyo ezali na foto te elakisaka elilingi. Kalati nyonso ezali na ba lien ya bafoto, bavideo mpe Street View mosusu.",
-  "aboutCredits": "Ba nsango ya bisika © Overture Maps Foundation, CDLA Permissive 2.0. Karte ya moboko Natural Earth (ya bato nyonso). Karte na MapLibre.",
+  "aboutCredits": "Bisika ya mangomba © basungi ya OpenStreetMap, ODbL. Ba-done ya bisika © Overture Maps Foundation, CDLA Permissive 2.0. Kalati ya moboko ya Natural Earth (ya bato nyonso). Kalati esalemi na MapLibre.",
   "close": "Kanga",
   "unknown": "Eyebani te",
   "dirN": "No",
@@ -519,5 +519,8 @@
   "clearSearch": "Longola Boluki",
   "nm_c": "Lingomba ya Katolike ya {x}",
   "nm_k": "Katedrale ya {x}",
-  "nm_s": "Esika ya bosantu ya {x}"
+  "nm_s": "Esika ya bosantu ya {x}",
+  "sourceOsm": "Esika euti: basungi ya OpenStreetMap.",
+  "sourceOsmUpdated": "Esika euti: basungi ya OpenStreetMap, etalami na {date}.",
+  "listedOsm": "Ekomamá lokola ya Katolike na OpenStreetMap"
 }

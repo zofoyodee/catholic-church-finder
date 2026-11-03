@@ -18,7 +18,7 @@
   "home": "Fila ba mundu tomak",
   "random": "Haree igreja ida",
   "aboutData": "Kona-ba dadus",
-  "footCredit": "Fatin sira © Overture Maps Foundation · Mapa baze Natural Earth, dalan sira © kolaboradór OpenStreetMap liuhusi OpenFreeMap",
+  "footCredit": "Igreja sira © kolaboradór OpenStreetMap, detallu © Overture Maps Foundation · Mapa baze Natural Earth, dalan sira liuhusi OpenFreeMap",
   "nearYou": "Besik ó",
   "closeNear": "Taka igreja besik sira",
   "favorites": "Favoritu sira",
@@ -133,10 +133,10 @@
   "matches_one": "Rezultadu {n}. Aumenta sidade atu hamenus.",
   "matches_other": "Rezultadu {n}. Aumenta sidade atu hamenus.",
   "matchesMax": "Rezultadu liu 400. Aumenta sidade atu hamenus.",
-  "aboutP1": "Mundu ne'e hatudu igreja katólika, kapela, santuáriu, bazílika no katedrál <b>{n}</b>. Sira mai husi {a1}dadus fatin Overture Maps{end} (versaun {release}), ne'ebé halibur fatin husi Meta, Microsoft no fonte nakloke seluk.",
-  "aboutP2": "Husi ne'e, fatin {cat} rejista iha Overture hanesan fatin adorasaun katólika romana. {name} seluk rejista de'it hanesan fatin adorasaun kristaun, no tama iha ne'e tanba sira-nia naran hatudu momoos katólika (ezemplu “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Sira-nia detalle iha nota ida.",
+  "aboutP1": "Globu hatudu igreja, kapela, santuáriu, bazílika no katedrál katólika <b>{n}</b>. Marka ida-idak mak edifísiu igreja ne’ebé rejista hanesan katólika iha {a1}OpenStreetMap{end}, mapa livre mundu nian ne’ebé voluntáriu sira halo (dadus husi {osm}).",
+  "aboutP2": "Telefone no website ba {cat} husi sira mai husi {a1}dadus fatin Overture Maps{end} (versaun {release}), ne’ebé halibur fatin husi Meta, Microsoft no fonte nakloke seluk. Sira seluk {osm} mai husi OpenStreetMap de’it.",
   "aboutP3": "Seidauk iha dadus nakloke ne'ebé iha paróquia hotu. Dadus kompletu liu iha Amérika no Europa Osidentál, no menus iha parte balu Áfrika no Ázia, iha ne'ebé paróquia barak seidauk iha mapa. Balu bele rejista dala rua, eskritóriu, ka edifísiu taka ona. Bainhira ó loke igreja ida, pájina buka nia foto iha {a1}Wikimedia Commons{end} no Wikipedia tuir fatin no naran, no temi fotógrafu nia naran. Igreja ne'ebé la iha foto hatudu dezeñu. Kartaun ida-idak iha ligasaun ba foto, vídeo no Street View barak liu.",
-  "aboutCredits": "Dadus fatin © Overture Maps Foundation, CDLA Permissive 2.0. Mapa baze Natural Earth (domíniu públiku). Mapa ho MapLibre.",
+  "aboutCredits": "Fatin igreja sira © kolaboradór OpenStreetMap, ODbL. Dadus fatin © Overture Maps Foundation, CDLA Permissive 2.0. Mapa baze husi Natural Earth (domíniu públiku). Mapa dezeña ho MapLibre.",
   "close": "Taka",
   "unknown": "La hatene",
   "dirN": "N",
@@ -519,5 +519,8 @@
   "clearSearch": "Hamoos Buka",
   "nm_c": "Igreja Katólika {x}",
   "nm_k": "Katedrál {x}",
-  "nm_s": "Santuáriu {x}"
+  "nm_s": "Santuáriu {x}",
+  "sourceOsm": "Fonte: kolaboradór OpenStreetMap.",
+  "sourceOsmUpdated": "Fonte: kolaboradór OpenStreetMap, verifika iha {date}.",
+  "listedOsm": "Rejista hanesan katólika iha OpenStreetMap"
 }

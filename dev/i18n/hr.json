@@ -18,7 +18,7 @@
   "home": "Natrag na cijeli globus",
   "random": "Posjeti nasumičnu crkvu",
   "aboutData": "O podatcima",
-  "footCredit": "Mjesta © Overture Maps Foundation · Podloga Natural Earth, ulice © suradnici OpenStreetMapa putem OpenFreeMapa",
+  "footCredit": "Crkve © suradnici OpenStreetMapa, pojedinosti © Overture Maps Foundation · Osnovna karta Natural Earth, ulice putem OpenFreeMapa",
   "nearYou": "U vašoj blizini",
   "closeNear": "Zatvori obližnje crkve",
   "favorites": "Omiljene",
@@ -138,10 +138,10 @@
   "matches_few": "{n} rezultata. Dodajte mjesto da suzite pretragu.",
   "matches_other": "{n} rezultata. Dodajte mjesto da suzite pretragu.",
   "matchesMax": "Više od 400 rezultata. Dodajte mjesto da suzite pretragu.",
-  "aboutP1": "Globus prikazuje katoličke crkve, kapele, svetišta, bazilike i katedrale: <b>{n}</b>. Preuzete su iz {a1}skupa podataka o mjestima Overture Maps{end} (izdanje {release}), koji okuplja mjesta iz Mete, Microsofta i drugih otvorenih izvora.",
-  "aboutP2": "Mjesta navedenih u Overtureu kao rimokatolička bogoslužna mjesta: {cat}. Još njih ({name}) navedeno je samo kao kršćanska bogoslužna mjesta; globus ih uključuje jer su im imena jasno katolička (na primjer „Parroquia”, „Paróquia”, „Basilica”, „Nossa Senhora”). U pojedinostima imaju napomenu.",
+  "aboutP1": "Globus prikazuje <b>{n}</b> katoličkih crkava, kapela, svetišta, bazilika i katedrala. Svaka oznaka je crkvena zgrada upisana kao katolička na {a1}OpenStreetMapu{end}, slobodnoj karti svijeta koju crtaju volonteri (podaci od {osm}).",
+  "aboutP2": "Telefoni i mrežne stranice za {cat} njih dolaze iz {a1}skupa mjesta Overture Maps{end} (izdanje {release}), koji okuplja mjesta iz Mete, Microsofta i drugih otvorenih izvora. Ostalih {osm} dolazi samo iz OpenStreetMapa.",
   "aboutP3": "Još nijedan otvoreni skup podataka ne obuhvaća svaku župu. Pokrivenost je najbolja u Americi i zapadnoj Europi, a slabija u dijelovima Afrike i Azije, gdje mnoge župe još nisu na karti. Neki unosi mogu biti dvostruki, uredi ili zatvorene zgrade. Kad otvorite crkvu, stranica traži njezinu fotografiju na {a1}Wikimedia Commons{end} i Wikipediji, prema mjestu i imenu, uz navođenje autora. Crkve bez fotografije imaju nacrtani prizor. Iz svake kartice otvaraju se dodatne fotografije, videozapisi i Street View.",
-  "aboutCredits": "Podatci o mjestima © Overture Maps Foundation, CDLA Permissive 2.0. Podloga Natural Earth (javno dobro). Kartu iscrtava MapLibre.",
+  "aboutCredits": "Položaji crkava © suradnici OpenStreetMapa, ODbL. Podaci o mjestima © Overture Maps Foundation, CDLA Permissive 2.0. Osnovna karta Natural Earth (javno dobro). Iscrtavanje karte: MapLibre.",
   "close": "Zatvori",
   "unknown": "Nepoznato",
   "dirN": "S",
@@ -543,5 +543,8 @@
   "clearSearch": "Očisti Pretragu",
   "nm_c": "Katolička crkva {x}",
   "nm_k": "Katedrala {x}",
-  "nm_s": "Svetište {x}"
+  "nm_s": "Svetište {x}",
+  "sourceOsm": "Izvor: suradnici OpenStreetMapa.",
+  "sourceOsmUpdated": "Izvor: suradnici OpenStreetMapa, provjereno {date}.",
+  "listedOsm": "Na OpenStreetMapu upisana kao katolička"
 }

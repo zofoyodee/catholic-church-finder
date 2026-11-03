@@ -18,7 +18,7 @@
   "home": "Balik sa tibuok kalibotan",
   "random": "Tan-awa ang bisan unsang simbahan",
   "aboutData": "Mahitungod sa datos",
-  "footCredit": "Mga dapit © Overture Maps Foundation · Basehang mapa Natural Earth, mga dalan © mga contributor sa OpenStreetMap pinaagi sa OpenFreeMap",
+  "footCredit": "Mga simbahan © mga kontributor sa OpenStreetMap, detalye © Overture Maps Foundation · Batakang mapa Natural Earth, mga dalan pinaagi sa OpenFreeMap",
   "nearYou": "Duol nimo",
   "closeNear": "Sirad-i ang duol nga mga simbahan",
   "favorites": "Mga paborito",
@@ -133,10 +133,10 @@
   "matches_one": "{n} ka resulta. Idugang ang lungsod aron mapiho.",
   "matches_other": "{n} ka resulta. Idugang ang lungsod aron mapiho.",
   "matchesMax": "Kapin sa 400 ka resulta. Idugang ang lungsod aron mapiho.",
-  "aboutP1": "Kining kalibotan nagpakita sa <b>{n}</b> ka simbahang Katoliko, kapilya, santuwaryo, basilika ug katedral. Gikan kini sa {a1}datos sa mga dapit sa Overture Maps{end} (release {release}), nga nagtigom sa mga dapit gikan sa Meta, Microsoft ug uban pang bukas nga gigikanan.",
-  "aboutP2": "Niini, {cat} ka dapit ang nalista sa Overture isip Romano Katolikong dapit sa pagsimba. Laing {name} ang nalista lang isip Kristohanong dapit sa pagsimba, ug giapil kini kay klaro nga Katoliko ang ilang ngalan (pananglitan “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Adunay nota ang ilang detalye.",
+  "aboutP1": "Gipakita sa globo ang <b>{n}</b> ka Katolikong simbahan, kapilya, dambana, basilika ug katedral. Ang matag pin usa ka bilding sa simbahan nga nakalista nga Katoliko sa {a1}OpenStreetMap{end}, ang gawasnong mapa sa kalibutan nga gihimo sa mga boluntaryo (datos gikan sa {osm}).",
+  "aboutP2": "Ang mga numero sa telepono ug website sa {cat} niini gikan sa {a1}dataset sa mga lugar sa Overture Maps{end} (release {release}), nga nagtigom og mga lugar gikan sa Meta, Microsoft ug uban pang bukas nga tinubdan. Ang laing {osm} gikan lamang sa OpenStreetMap.",
   "aboutP3": "Wala pay bukas nga datos nga naglakip sa matag parokya. Labing kompleto ang Amerika ug Kasadpang Europa, ug kulang sa pipila ka bahin sa Africa ug Asya, diin daghang parokya ang wala pa sa mapa. Ang pipila ka entry mahimong doble, opisina o sirado nang bilding. Kung ablihan nimo ang simbahan, mangita ang panid og litrato niini sa {a1}Wikimedia Commons{end} ug Wikipedia base sa lokasyon ug ngalan, uban ang ngalan sa litratista. Ang mga simbahan nga walay litrato magpakita og drowing. Ang matag kard adunay link sa dugang litrato, video ug Street View.",
-  "aboutCredits": "Datos sa mga dapit © Overture Maps Foundation, CDLA Permissive 2.0. Basehang mapa Natural Earth (publikong domain). Mapa gihimo sa MapLibre.",
+  "aboutCredits": "Lokasyon sa mga simbahan © mga kontributor sa OpenStreetMap, ODbL. Datos sa mga lugar © Overture Maps Foundation, CDLA Permissive 2.0. Batakang mapa gikan sa Natural Earth (publikong domain). Gidrowing ang mapa gamit ang MapLibre.",
   "close": "Sirad-i",
   "unknown": "Wala mahibaloi",
   "dirN": "A",
@@ -519,5 +519,8 @@
   "clearSearch": "Papasa ang Gipangita",
   "nm_c": "Simbahang Katoliko sa {x}",
   "nm_k": "Katedral sa {x}",
-  "nm_s": "Santuwaryo sa {x}"
+  "nm_s": "Santuwaryo sa {x}",
+  "sourceOsm": "Tinubdan: mga kontributor sa OpenStreetMap.",
+  "sourceOsmUpdated": "Tinubdan: mga kontributor sa OpenStreetMap, gisusi niadtong {date}.",
+  "listedOsm": "Nakalista nga Katoliko sa OpenStreetMap"
 }

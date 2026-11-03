@@ -18,7 +18,7 @@
   "home": "Rudi kwenye dunia nzima",
   "random": "Tembelea kanisa lolote",
   "aboutData": "Kuhusu data",
-  "footCredit": "Mahali © Overture Maps Foundation · Ramani ya msingi Natural Earth, barabara © wachangiaji wa OpenStreetMap kupitia OpenFreeMap",
+  "footCredit": "Makanisa © wachangiaji wa OpenStreetMap, maelezo © Overture Maps Foundation · Ramani ya msingi Natural Earth, barabara kupitia OpenFreeMap",
   "nearYou": "Karibu nawe",
   "closeNear": "Funga makanisa ya karibu",
   "favorites": "Vipendwa",
@@ -134,10 +134,10 @@
   "matches_one": "Tokeo {n}. Ongeza mji ili kupunguza.",
   "matches_other": "Matokeo {n}. Ongeza mji ili kupunguza.",
   "matchesMax": "Matokeo zaidi ya 400. Ongeza mji ili kupunguza.",
-  "aboutP1": "Dunia hii inaonyesha makanisa, vikanisa, madhabahu, basilika na makanisa makuu Katoliki <b>{n}</b>. Yanatoka kwenye {a1}hifadhidata ya mahali ya Overture Maps{end} (toleo {release}), inayokusanya mahali kutoka Meta, Microsoft na vyanzo vingine huru.",
-  "aboutP2": "Mahali {cat} yameorodheshwa kwenye Overture kama nyumba za ibada za Kanisa Katoliki la Roma. Mengine {name} yameorodheshwa tu kama nyumba za ibada za Kikristo, na dunia hii inayajumuisha kwa sababu majina yao ni ya Kikatoliki waziwazi (kwa mfano “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Haya yana maelezo maalum.",
+  "aboutP1": "Tufe linaonyesha makanisa, kanisa ndogo, madhabahu, basilika na makanisa makuu ya Kikatoliki <b>{n}</b>. Kila alama ni jengo la kanisa lililoandikishwa kama la Kikatoliki kwenye {a1}OpenStreetMap{end}, ramani huru ya dunia inayochorwa na watu wa kujitolea (data ya {osm}).",
+  "aboutP2": "Nambari za simu na tovuti za {cat} kati yake zinatoka kwenye {a1}mkusanyiko wa maeneo wa Overture Maps{end} (toleo {release}), unaokusanya maeneo kutoka Meta, Microsoft na vyanzo vingine huria. Mengine {osm} yanatoka OpenStreetMap peke yake.",
   "aboutP3": "Bado hakuna hifadhidata huru inayoorodhesha kila parokia. Data ni nyingi zaidi Amerika na Ulaya Magharibi na chache katika sehemu za Afrika na Asia, ambako parokia nyingi bado hazijawekwa kwenye ramani. Baadhi ya maingizo yanaweza kuwa nakala, ofisi au majengo yaliyofungwa. Unapofungua kanisa, ukurasa unatafuta picha yake kwenye {a1}Wikimedia Commons{end} na Wikipedia, kwa mahali na jina, na kumtaja mpiga picha. Makanisa yasiyo na picha yanabaki na mchoro. Picha zaidi, video na Street View hufunguka kutoka kila kadi.",
-  "aboutCredits": "Data ya mahali © Overture Maps Foundation, CDLA Permissive 2.0. Ramani ya msingi kutoka Natural Earth (mali ya umma). Ramani imechorwa kwa MapLibre.",
+  "aboutCredits": "Mahali pa makanisa © wachangiaji wa OpenStreetMap, ODbL. Data ya maeneo © Overture Maps Foundation, CDLA Permissive 2.0. Ramani ya msingi kutoka Natural Earth (umma). Ramani imechorwa na MapLibre.",
   "close": "Funga",
   "unknown": "Haijulikani",
   "dirN": "Kask",
@@ -527,5 +527,8 @@
   "clearSearch": "Futa Utafutaji",
   "nm_c": "Kanisa Katoliki {x}",
   "nm_k": "Kanisa Kuu {x}",
-  "nm_s": "Madhabahu ya {x}"
+  "nm_s": "Madhabahu ya {x}",
+  "sourceOsm": "Chanzo: wachangiaji wa OpenStreetMap.",
+  "sourceOsmUpdated": "Chanzo: wachangiaji wa OpenStreetMap, imekaguliwa {date}.",
+  "listedOsm": "Imeandikishwa kama ya Kikatoliki kwenye OpenStreetMap"
 }

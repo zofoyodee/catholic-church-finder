@@ -18,7 +18,7 @@
   "home": "Padà sí gbogbo àgbáyé",
   "random": "Wo ṣọ́ọ̀ṣì èyíkéyìí",
   "aboutData": "Nípa àkọsílẹ̀",
-  "footCredit": "Àwọn ibi © Overture Maps Foundation · Máàpù ìpìlẹ̀ Natural Earth, àwọn ojú ọ̀nà © àwọn olùkópa OpenStreetMap nípasẹ̀ OpenFreeMap",
+  "footCredit": "Àwọn ṣọ́ọ̀ṣì © àwọn olùkópa OpenStreetMap, àlàyé © Overture Maps Foundation · Máàpù ìpìlẹ̀ Natural Earth, ojú ọ̀nà nípasẹ̀ OpenFreeMap",
   "nearYou": "Nítòsí rẹ",
   "closeNear": "Pa àwọn ṣọ́ọ̀ṣì nítòsí dé",
   "favorites": "Àwọn àyànfẹ́",
@@ -133,10 +133,10 @@
   "matches_one": "Èsì {n}. Fi ìlú kún un láti dín in kù.",
   "matches_other": "Èsì {n}. Fi ìlú kún un láti dín in kù.",
   "matchesMax": "Ó ju èsì 400 lọ. Fi ìlú kún un láti dín in kù.",
-  "aboutP1": "Àgbáyé yìí ń fi ṣọ́ọ̀ṣì Kátólíìkì, ṣápẹ́lì, ojúbọ mímọ́, basílíkà àti kàtídírà <b>{n}</b> hàn. Wọ́n wá láti {a1}àkọsílẹ̀ ibi Overture Maps{end} (ẹ̀dà {release}), tí ó ń kó àwọn ibi jọ láti Meta, Microsoft àti àwọn orísun ṣíṣí mìíràn.",
-  "aboutP2": "Nínú wọn, ibi {cat} ni Overture kọ sílẹ̀ bí ibi ìjọsìn Roman Kátólíìkì. Àwọn {name} mìíràn ni a kọ sílẹ̀ bí ibi ìjọsìn Kristẹni nìkan, a sì fi wọ́n kún un nítorí pé orúkọ wọn fi hàn kedere pé Kátólíìkì ni wọ́n (bí “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Àlàyé wọn ní àkíyèsí.",
+  "aboutP1": "Àgbáyé yìí ń fi <b>{n}</b> ṣọ́ọ̀ṣì, ilé àdúrà kékeré, ibi mímọ́, basilika àti katidira Kátólíìkì hàn. Àmì kọ̀ọ̀kan jẹ́ ilé ṣọ́ọ̀ṣì tí a kọ sílẹ̀ bí ti Kátólíìkì lórí {a1}OpenStreetMap{end}, máàpù àgbáyé ọ̀fẹ́ tí àwọn olùyọ̀ǹda ń yà (dátà ti {osm}).",
+  "aboutP2": "Nọ́mbà fóònù àti ojúlé wẹ́ẹ̀bù {cat} nínú wọn wá láti {a1}àkójọ ibi Overture Maps{end} (ẹ̀dà {release}), tí ó ń kó àwọn ibi jọ láti Meta, Microsoft àti àwọn orísun ṣíṣí mìíràn. Àwọn {osm} yòókù wá láti OpenStreetMap nìkan.",
   "aboutP3": "Kò tíì sí àkọsílẹ̀ ṣíṣí tí ó ní gbogbo párìṣì. Àkọsílẹ̀ pọ̀ jù ní Amẹ́ríkà àti Ìwọ̀-oòrùn Yúróòpù, ó sì kéré ní àwọn apá kan ní Áfíríkà àti Éṣíà, níbi tí ọ̀pọ̀ párìṣì kò tíì sí lórí máàpù. Àwọn kan lè jẹ́ àdàkọ, ọ́fíìsì, tàbí ilé tí a ti tì. Nígbà tí o bá ṣí ṣọ́ọ̀ṣì kan, ojú-ìwé yìí ń wá àwòrán rẹ̀ lórí {a1}Wikimedia Commons{end} àti Wikipedia nípa ibi àti orúkọ rẹ̀, ó sì ń dárúkọ ayàwòrán náà. Àwọn ṣọ́ọ̀ṣì tí kò ní àwòrán ń fi àwòrán ọwọ́ hàn. Káàdì kọ̀ọ̀kan ní ìjápọ̀ sí àwòrán, fídíò àti Street View síi.",
-  "aboutCredits": "Àkọsílẹ̀ ibi © Overture Maps Foundation, CDLA Permissive 2.0. Máàpù ìpìlẹ̀ Natural Earth (ti gbogbo ènìyàn). Máàpù láti ọwọ́ MapLibre.",
+  "aboutCredits": "Ibi tí àwọn ṣọ́ọ̀ṣì wà © àwọn olùkópa OpenStreetMap, ODbL. Dátà ibi © Overture Maps Foundation, CDLA Permissive 2.0. Máàpù ìpìlẹ̀ láti Natural Earth (ti gbogbo ènìyàn). MapLibre ló ya máàpù náà.",
   "close": "Pa dé",
   "unknown": "A kò mọ̀",
   "dirN": "Àr",
@@ -519,5 +519,8 @@
   "clearSearch": "Pa Ìṣàwárí Rẹ́",
   "nm_c": "Ṣọ́ọ̀ṣì Kátólíìkì {x}",
   "nm_k": "Kàtídírà {x}",
-  "nm_s": "Ojúbọ mímọ́ {x}"
+  "nm_s": "Ojúbọ mímọ́ {x}",
+  "sourceOsm": "Orísun: àwọn olùkópa OpenStreetMap.",
+  "sourceOsmUpdated": "Orísun: àwọn olùkópa OpenStreetMap, a ṣàyẹ̀wò rẹ̀ ní {date}.",
+  "listedOsm": "A kọ sílẹ̀ bí ti Kátólíìkì lórí OpenStreetMap"
 }

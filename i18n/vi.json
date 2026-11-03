@@ -18,7 +18,7 @@
   "home": "Trở về toàn cầu",
   "random": "Thăm một nhà thờ ngẫu nhiên",
   "aboutData": "Về dữ liệu",
-  "footCredit": "Địa điểm © Overture Maps Foundation · Bản đồ nền Natural Earth, đường phố © cộng tác viên OpenStreetMap qua OpenFreeMap",
+  "footCredit": "Nhà thờ © những người đóng góp OpenStreetMap, chi tiết © Overture Maps Foundation · Bản đồ nền Natural Earth, đường phố qua OpenFreeMap",
   "nearYou": "Gần bạn",
   "closeNear": "Đóng danh sách nhà thờ gần đây",
   "favorites": "Yêu thích",
@@ -128,10 +128,10 @@
   "noMatch": "Không có nhà thờ nào khớp với “{q}”. Hãy thử tên thành phố hoặc tên một vị thánh.",
   "matches_other": "{n} kết quả. Thêm tên thành phố để thu hẹp.",
   "matchesMax": "Hơn 400 kết quả. Thêm tên thành phố để thu hẹp.",
-  "aboutP1": "Quả địa cầu hiển thị <b>{n}</b> nhà thờ, nhà nguyện, đền thánh, vương cung thánh đường và nhà thờ chính tòa Công giáo. Dữ liệu lấy từ {a1}bộ dữ liệu địa điểm của Overture Maps{end} (phiên bản {release}), tập hợp địa điểm từ Meta, Microsoft và các nguồn mở khác.",
-  "aboutP2": "{cat} địa điểm được Overture ghi là nơi thờ phượng Công giáo Rôma. {name} địa điểm khác chỉ được ghi là nơi thờ phượng Kitô giáo, và quả địa cầu đưa vào vì tên gọi rõ ràng là Công giáo (ví dụ “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Phần chi tiết của chúng có ghi chú.",
+  "aboutP1": "Quả địa cầu hiển thị <b>{n}</b> nhà thờ, nhà nguyện, đền thánh, vương cung thánh đường và nhà thờ chính tòa Công giáo. Mỗi điểm ghim là một ngôi nhà thờ được ghi là Công giáo trên {a1}OpenStreetMap{end}, bản đồ thế giới tự do do tình nguyện viên vẽ (dữ liệu ngày {osm}).",
+  "aboutP2": "Số điện thoại và trang web của {cat} nơi lấy từ {a1}bộ dữ liệu địa điểm Overture Maps{end} (bản {release}), tập hợp địa điểm từ Meta, Microsoft và các nguồn mở khác. {osm} nơi còn lại chỉ lấy từ OpenStreetMap.",
   "aboutP3": "Chưa có bộ dữ liệu mở nào ghi đủ mọi giáo xứ. Dữ liệu đầy đủ nhất ở châu Mỹ và Tây Âu, còn mỏng ở một số vùng châu Phi và châu Á, nơi nhiều giáo xứ chưa được đưa lên bản đồ. Một số mục có thể trùng, là văn phòng hoặc nhà thờ đã đóng. Khi bạn mở một nhà thờ, trang sẽ tìm ảnh của nhà thờ đó trên {a1}Wikimedia Commons{end} và Wikipedia theo vị trí và tên, kèm ghi công người chụp. Nhà thờ chưa có ảnh sẽ giữ một hình vẽ. Từ mỗi thẻ có thể mở thêm ảnh, video và Street View.",
-  "aboutCredits": "Dữ liệu địa điểm © Overture Maps Foundation, CDLA Permissive 2.0. Bản đồ nền từ Natural Earth (phạm vi công cộng). Bản đồ vẽ bằng MapLibre.",
+  "aboutCredits": "Vị trí nhà thờ © những người đóng góp OpenStreetMap, ODbL. Dữ liệu địa điểm © Overture Maps Foundation, CDLA Permissive 2.0. Bản đồ nền từ Natural Earth (phạm vi công cộng). Bản đồ vẽ bằng MapLibre.",
   "close": "Đóng",
   "unknown": "Không rõ",
   "dirN": "B",
@@ -511,5 +511,8 @@
   "clearSearch": "Xóa Tìm Kiếm",
   "nm_c": "Nhà thờ Công giáo {x}",
   "nm_k": "Nhà thờ chính tòa {x}",
-  "nm_s": "Đền thánh {x}"
+  "nm_s": "Đền thánh {x}",
+  "sourceOsm": "Nguồn: những người đóng góp OpenStreetMap.",
+  "sourceOsmUpdated": "Nguồn: những người đóng góp OpenStreetMap, kiểm tra ngày {date}.",
+  "listedOsm": "Được ghi là Công giáo trên OpenStreetMap"
 }

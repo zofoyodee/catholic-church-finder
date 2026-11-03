@@ -18,7 +18,7 @@
   "home": "Späť na celý glóbus",
   "random": "Navštíviť náhodný kostol",
   "aboutData": "O údajoch",
-  "footCredit": "Miesta © Overture Maps Foundation · Podkladová mapa Natural Earth, ulice © prispievatelia OpenStreetMap cez OpenFreeMap",
+  "footCredit": "Kostoly © prispievatelia OpenStreetMap, podrobnosti © Overture Maps Foundation · Podkladová mapa Natural Earth, ulice cez OpenFreeMap",
   "nearYou": "Vo vašej blízkosti",
   "closeNear": "Zavrieť blízke kostoly",
   "favorites": "Obľúbené",
@@ -138,10 +138,10 @@
   "matches_few": "{n} výsledky. Pridajte obec na zúženie.",
   "matches_other": "{n} výsledkov. Pridajte obec na zúženie.",
   "matchesMax": "Viac ako 400 výsledkov. Pridajte obec na zúženie.",
-  "aboutP1": "Glóbus zobrazuje katolícke kostoly, kaplnky, pútnické miesta, baziliky a katedrály: <b>{n}</b>. Pochádzajú zo {a1}súboru miest Overture Maps{end} (vydanie {release}), ktorý spája miesta od spoločností Meta, Microsoft a z ďalších otvorených zdrojov.",
-  "aboutP2": "Miesta vedené v Overture ako rímskokatolícke bohoslužobné miesta: {cat}. Ďalšie ({name}) sú vedené len ako kresťanské bohoslužobné miesta; glóbus ich zahŕňa, lebo ich názvy sú zjavne katolícke (napríklad „Parroquia“, „Paróquia“, „Basilica“, „Nossa Senhora“). V podrobnostiach majú poznámku.",
+  "aboutP1": "Glóbus ukazuje <b>{n}</b> katolíckych kostolov, kaplniek, pútnických miest, bazilík a katedrál. Každý špendlík je budova kostola zapísaná ako katolícka v {a1}OpenStreetMap{end}, slobodnej mape sveta od dobrovoľníkov (údaje z {osm}).",
+  "aboutP2": "Telefóny a weby {cat} z nich pochádzajú zo {a1}súboru miest Overture Maps{end} (vydanie {release}), ktorý zhromažďuje miesta od Meta, Microsoftu a ďalších otvorených zdrojov. Ostatných {osm} pochádza len z OpenStreetMap.",
   "aboutP3": "Zatiaľ žiadny otvorený súbor údajov nezahŕňa každú farnosť. Najlepšie pokrytie je v Amerike a západnej Európe, slabšie v častiach Afriky a Ázie, kde mnohé farnosti ešte nie sú na mape. Niektoré záznamy môžu byť duplicitné, úrady alebo zatvorené budovy. Keď otvoríte kostol, stránka hľadá jeho fotografiu na {a1}Wikimedia Commons{end} a Wikipédii podľa polohy a názvu, s uvedením autora. Kostoly bez fotografie majú nakreslenú scénu. Z každej karty sa dajú otvoriť ďalšie fotografie, videá a Street View.",
-  "aboutCredits": "Údaje o miestach © Overture Maps Foundation, CDLA Permissive 2.0. Podkladová mapa Natural Earth (voľné dielo). Mapu vykresľuje MapLibre.",
+  "aboutCredits": "Polohy kostolov © prispievatelia OpenStreetMap, ODbL. Údaje miest © Overture Maps Foundation, CDLA Permissive 2.0. Podkladová mapa Natural Earth (voľné dielo). Vykreslenie mapy MapLibre.",
   "close": "Zavrieť",
   "unknown": "Neznáme",
   "dirN": "S",
@@ -548,5 +548,8 @@
   "clearSearch": "Vymazať Vyhľadávanie",
   "nm_c": "Katolícky kostol {x}",
   "nm_k": "Katedrála {x}",
-  "nm_s": "Pútnické miesto {x}"
+  "nm_s": "Pútnické miesto {x}",
+  "sourceOsm": "Zdroj: prispievatelia OpenStreetMap.",
+  "sourceOsmUpdated": "Zdroj: prispievatelia OpenStreetMap, overené {date}.",
+  "listedOsm": "V OpenStreetMap zapísaný ako katolícky"
 }

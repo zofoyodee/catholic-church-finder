@@ -18,7 +18,7 @@
   "home": "Zurück zum ganzen Globus",
   "random": "Eine zufällige Kirche besuchen",
   "aboutData": "Über die Daten",
-  "footCredit": "Orte © Overture Maps Foundation · Grundkarte Natural Earth, Straßen © OpenStreetMap-Mitwirkende über OpenFreeMap",
+  "footCredit": "Kirchen © OpenStreetMap-Mitwirkende, Details © Overture Maps Foundation · Grundkarte Natural Earth, Straßen über OpenFreeMap",
   "nearYou": "In Ihrer Nähe",
   "closeNear": "Kirchen in der Nähe schließen",
   "favorites": "Favoriten",
@@ -134,10 +134,10 @@
   "matches_one": "{n} Treffer. Fügen Sie einen Ort hinzu, um einzugrenzen.",
   "matches_other": "{n} Treffer. Fügen Sie einen Ort hinzu, um einzugrenzen.",
   "matchesMax": "Über 400 Treffer. Fügen Sie einen Ort hinzu, um einzugrenzen.",
-  "aboutP1": "Der Globus zeigt <b>{n}</b> katholische Kirchen, Kapellen, Wallfahrtsorte, Basiliken und Kathedralen. Sie stammen aus dem {a1}Orte-Datensatz von Overture Maps{end} (Ausgabe {release}), der Orte von Meta, Microsoft und anderen offenen Quellen zusammenführt.",
-  "aboutP2": "{cat} Orte sind bei Overture als römisch-katholische Gotteshäuser verzeichnet. Weitere {name} sind nur als christliche Gotteshäuser verzeichnet; der Globus nimmt sie auf, weil ihr Name eindeutig katholisch ist (zum Beispiel „Parroquia“, „Paróquia“, „Basilica“, „Nossa Senhora“). Ihre Details tragen einen Hinweis.",
+  "aboutP1": "Der Globus zeigt <b>{n}</b> katholische Kirchen, Kapellen, Wallfahrtsorte, Basiliken und Kathedralen. Jede Markierung ist ein Kirchengebäude, das auf {a1}OpenStreetMap{end}, der freien Weltkarte von Freiwilligen, als katholisch eingetragen ist (Daten vom {osm}).",
+  "aboutP2": "Telefonnummern und Websites von {cat} davon stammen aus dem {a1}Orte-Datensatz von Overture Maps{end} (Version {release}), der Orte von Meta, Microsoft und anderen offenen Quellen sammelt. Die übrigen {osm} stammen nur aus OpenStreetMap.",
   "aboutP3": "Noch kein offener Datensatz erfasst jede Pfarrei. Am besten ist die Abdeckung in Amerika und Westeuropa, dünner in Teilen Afrikas und Asiens, wo viele Pfarreien noch nicht kartiert sind. Manche Einträge können doppelt sein, Büros oder geschlossene Gebäude. Wenn Sie eine Kirche öffnen, sucht die Seite auf {a1}Wikimedia Commons{end} und Wikipedia nach einem Foto, abgeglichen nach Ort und Name und mit Nennung des Fotografen. Kirchen ohne passendes Foto behalten eine gezeichnete Szene. Weitere Fotos, Videos und Street View öffnen sich von jeder Karte aus.",
-  "aboutCredits": "Ortsdaten © Overture Maps Foundation, CDLA Permissive 2.0. Grundkarte von Natural Earth (gemeinfrei). Kartendarstellung mit MapLibre.",
+  "aboutCredits": "Kirchenstandorte © OpenStreetMap-Mitwirkende, ODbL. Ortsdaten © Overture Maps Foundation, CDLA Permissive 2.0. Grundkarte von Natural Earth (gemeinfrei). Kartendarstellung mit MapLibre.",
   "close": "Schließen",
   "unknown": "Unbekannt",
   "dirN": "N",
@@ -527,5 +527,8 @@
   "clearSearch": "Suche Löschen",
   "nm_c": "Katholische Kirche {x}",
   "nm_k": "Kathedrale {x}",
-  "nm_s": "Wallfahrtskirche {x}"
+  "nm_s": "Wallfahrtskirche {x}",
+  "sourceOsm": "Quelle: OpenStreetMap-Mitwirkende.",
+  "sourceOsmUpdated": "Quelle: OpenStreetMap-Mitwirkende, geprüft am {date}.",
+  "listedOsm": "Auf OpenStreetMap als katholisch eingetragen"
 }

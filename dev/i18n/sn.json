@@ -18,7 +18,7 @@
   "home": "Dzokera kupasi rose",
   "random": "Ona chechi ipi neipi",
   "aboutData": "Nezveruzivo",
-  "footCredit": "Nzvimbo © Overture Maps Foundation · Mepu yepasi Natural Earth, migwagwa © vabatsiri veOpenStreetMap kuburikidza neOpenFreeMap",
+  "footCredit": "Machechi © vabatsiri veOpenStreetMap, ruzivo © Overture Maps Foundation · Mepu yepasi Natural Earth, migwagwa kuburikidza neOpenFreeMap",
   "nearYou": "Pedyo newe",
   "closeNear": "Vhara machechi ari pedyo",
   "favorites": "Zvaunoda",
@@ -133,10 +133,10 @@
   "matches_one": "Mhinduro {n}. Wedzera guta kuti udzikise.",
   "matches_other": "Mhinduro {n}. Wedzera guta kuti udzikise.",
   "matchesMax": "Mhinduro dzinopfuura 400. Wedzera guta kuti udzikise.",
-  "aboutP1": "Pasi iri rinoratidza machechi eKaturike, machapera, nzvimbo tsvene, mabhasirika nemakatedhiraro <b>{n}</b>. Zvinobva ku{a1}ruzivo rwenzvimbo rweOverture Maps{end} (shanduro {release}), runounganidza nzvimbo kubva kuMeta, Microsoft nedzimwe nzvimbo dzakavhurika.",
-  "aboutP2": "Pazviri, nzvimbo {cat} dzakanyorwa muOverture senzvimbo dzekunamatira dzeRoma Katurike. Dzimwe {name} dzakanyorwa chete senzvimbo dzekunamatira dzechiKristu, uye dzakaiswa nekuti mazita adzo anoratidza zvakajeka kuti ndedzeKaturike (semuenzaniso “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Ruzivo rwadzo rune chiyeuchidzo.",
+  "aboutP1": "Nyika iyi inoratidza machechi, machechi madiki, nzvimbo dzinoyera, mabasilika nemakatedhiraru eKaturike <b>{n}</b>. Chiratidzo chimwe nechimwe chivakwa chechechi chakanyorwa sechaKaturike paOpenStreetMap ({a1}OpenStreetMap{end}), mepu yenyika yemahara inodhirowewa nevanozvipira (data ya{osm}).",
+  "aboutP2": "Nhamba dzenhare nemawebhusaiti e{cat} pakati pawo zvinobva ku{a1}muunganidzwa wenzvimbo weOverture Maps{end} (shanduro {release}), unounganidza nzvimbo kubva kuMeta, Microsoft nemamwe matsime akavhurika. Mamwe {osm} anobva kuOpenStreetMap chete.",
   "aboutP3": "Hapana ruzivo rwakavhurika runosanganisira maparishi ese. Ruzivo rwakawanda muAmerica nekuMadokero kweEurope, uye rushoma mune dzimwe nzvimbo dzeAfrica neAsia, uko maparishi mazhinji asati ava pamepu. Zvimwe zvinogona kunge zvakanyorwa kaviri, mahofisi, kana zvivakwa zvakavharwa. Kana ukavhura chechi, peji rinotsvaga mufananidzo wayo pa{a1}Wikimedia Commons{end} neWikipedia zvichienderana nenzvimbo nezita, uye rinodudza mutori wemufananidzo. Machechi asina mufananidzo anoratidza mufananidzo wakadhirowewa. Kadhi rimwe nerimwe rine zvinongedzo zvemimwe mifananidzo, mavhidhiyo neStreet View.",
-  "aboutCredits": "Ruzivo rwenzvimbo © Overture Maps Foundation, CDLA Permissive 2.0. Mepu yepasi Natural Earth (yeruzhinji). Mepu neMapLibre.",
+  "aboutCredits": "Nzvimbo dzemachechi © vabatsiri veOpenStreetMap, ODbL. Data yenzvimbo © Overture Maps Foundation, CDLA Permissive 2.0. Mepu yepasi kubva kuNatural Earth (yeruzhinji). Mepu yakadhirowewa neMapLibre.",
   "close": "Vhara",
   "unknown": "Hazvizivikanwi",
   "dirN": "Ch",
@@ -519,5 +519,8 @@
   "clearSearch": "Dzima Zvaunotsvaga",
   "nm_c": "Chechi yeKatorike, {x}",
   "nm_k": "Katedhiraro, {x}",
-  "nm_s": "Nzvimbo tsvene, {x}"
+  "nm_s": "Nzvimbo tsvene, {x}",
+  "sourceOsm": "Kwakabva: vabatsiri veOpenStreetMap.",
+  "sourceOsmUpdated": "Kwakabva: vabatsiri veOpenStreetMap, zvakaongororwa {date}.",
+  "listedOsm": "Yakanyorwa seyaKaturike paOpenStreetMap"
 }

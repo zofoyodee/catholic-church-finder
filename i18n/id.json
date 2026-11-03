@@ -18,7 +18,7 @@
   "home": "Kembali ke seluruh bola dunia",
   "random": "Kunjungi gereja acak",
   "aboutData": "Tentang data",
-  "footCredit": "Tempat © Overture Maps Foundation · Peta dasar Natural Earth, jalan © kontributor OpenStreetMap melalui OpenFreeMap",
+  "footCredit": "Gereja © kontributor OpenStreetMap, detail © Overture Maps Foundation · Peta dasar Natural Earth, jalan melalui OpenFreeMap",
   "nearYou": "Di dekat Anda",
   "closeNear": "Tutup gereja terdekat",
   "favorites": "Favorit",
@@ -128,10 +128,10 @@
   "noMatch": "Tidak ada gereja yang cocok dengan “{q}”. Coba nama kota atau nama santo/santa.",
   "matches_other": "{n} hasil. Tambahkan kota untuk mempersempit.",
   "matchesMax": "Lebih dari 400 hasil. Tambahkan kota untuk mempersempit.",
-  "aboutP1": "Bola dunia ini menampilkan <b>{n}</b> gereja, kapel, tempat ziarah, basilika, dan katedral Katolik. Datanya berasal dari {a1}dataset tempat Overture Maps{end} (rilis {release}), yang menghimpun tempat dari Meta, Microsoft, dan sumber terbuka lainnya.",
-  "aboutP2": "{cat} tempat tercatat di Overture sebagai tempat ibadah Katolik Roma. {name} lainnya hanya tercatat sebagai tempat ibadah Kristen, dan bola dunia ini memasukkannya karena namanya jelas Katolik (misalnya “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Rinciannya diberi catatan.",
+  "aboutP1": "Globe ini menampilkan <b>{n}</b> gereja, kapel, tempat ziarah, basilika, dan katedral Katolik. Setiap penanda adalah bangunan gereja yang tercatat sebagai Katolik di {a1}OpenStreetMap{end}, peta dunia bebas buatan relawan (data per {osm}).",
+  "aboutP2": "Nomor telepon dan situs web untuk {cat} di antaranya berasal dari {a1}dataset tempat Overture Maps{end} (rilis {release}), yang menghimpun tempat dari Meta, Microsoft, dan sumber terbuka lainnya. {osm} lainnya hanya berasal dari OpenStreetMap.",
   "aboutP3": "Belum ada dataset terbuka yang mencatat setiap paroki. Cakupan paling lengkap di Amerika dan Eropa Barat, dan lebih tipis di sebagian Afrika dan Asia, tempat banyak paroki belum dipetakan. Beberapa entri mungkin ganda, kantor, atau bangunan yang sudah tutup. Saat Anda membuka sebuah gereja, halaman ini mencari fotonya di {a1}Wikimedia Commons{end} dan Wikipedia, menurut lokasi dan nama, dengan menyebut fotografernya. Gereja tanpa foto tetap menampilkan gambar ilustrasi. Foto lain, video, dan Street View dapat dibuka dari setiap kartu.",
-  "aboutCredits": "Data tempat © Overture Maps Foundation, CDLA Permissive 2.0. Peta dasar dari Natural Earth (domain publik). Peta digambar dengan MapLibre.",
+  "aboutCredits": "Lokasi gereja © kontributor OpenStreetMap, ODbL. Data tempat © Overture Maps Foundation, CDLA Permissive 2.0. Peta dasar dari Natural Earth (domain publik). Peta digambar dengan MapLibre.",
   "close": "Tutup",
   "unknown": "Tidak diketahui",
   "dirN": "U",
@@ -511,5 +511,8 @@
   "clearSearch": "Hapus Pencarian",
   "nm_c": "Gereja Katolik {x}",
   "nm_k": "Katedral {x}",
-  "nm_s": "Tempat Ziarah {x}"
+  "nm_s": "Tempat Ziarah {x}",
+  "sourceOsm": "Sumber: kontributor OpenStreetMap.",
+  "sourceOsmUpdated": "Sumber: kontributor OpenStreetMap, diperiksa {date}.",
+  "listedOsm": "Tercatat sebagai Katolik di OpenStreetMap"
 }

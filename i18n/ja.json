@@ -18,7 +18,7 @@
   "home": "地球全体に戻る",
   "random": "どこかの教会を訪ねる",
   "aboutData": "データについて",
-  "footCredit": "場所 © Overture Maps Foundation · 基図 Natural Earth, 道路 © OpenStreetMap 貢献者、OpenFreeMap 経由",
+  "footCredit": "教会 © OpenStreetMap 寄稿者、詳細 © Overture Maps Foundation · 基図 Natural Earth、道路は OpenFreeMap 経由",
   "nearYou": "近くの教会",
   "closeNear": "近くの教会を閉じる",
   "favorites": "お気に入り",
@@ -128,10 +128,10 @@
   "noMatch": "「{q}」に一致する教会はありません。町の名前や聖人の名前で試してください。",
   "matches_other": "{n} 件。町を加えると絞り込めます。",
   "matchesMax": "400 件以上。町を加えると絞り込めます。",
-  "aboutP1": "この地球儀には、カトリックの教会、礼拝堂、巡礼所、バシリカ、司教座聖堂が <b>{n}</b> 件あります。データは Meta、Microsoft などの公開情報を集めた {a1}Overture Maps の場所データ{end}（リリース {release}）によるものです。",
-  "aboutP2": "そのうち {cat} 件は Overture にローマ・カトリックの礼拝所として登録されています。ほかの {name} 件はキリスト教の礼拝所としてだけ登録されていますが、名前が明らかにカトリックなので（例：「Parroquia」「Paróquia」「Basilica」「Nossa Senhora」）含めています。それらの詳細には注記があります。",
+  "aboutP1": "地球儀には <b>{n}</b> のカトリック教会、聖堂、巡礼地、バシリカ、司教座聖堂が表示されています。各ピンは、ボランティアが作る自由な世界地図 {a1}OpenStreetMap{end} でカトリックと登録された教会の建物です（{osm} 時点のデータ）。",
+  "aboutP2": "そのうち {cat} か所の電話番号とウェブサイトは {a1}Overture Maps の場所データセット{end}（リリース {release}）から得ており、Meta、Microsoft などの公開データを集めたものです。残りの {osm} か所は OpenStreetMap のみによります。",
   "aboutP3": "すべての小教区を網羅した公開データはまだありません。南北アメリカと西ヨーロッパは充実していますが、アフリカやアジアの一部はまだ地図にない小教区が多くあります。重複や事務所、閉鎖された建物が含まれることもあります。教会を開くと、場所と名前をもとに {a1}ウィキメディア・コモンズ{end}とウィキペディアで写真を探し、撮影者を表示します。写真のない教会にはイラストが表示されます。各カードからさらに写真、動画、ストリートビューを開けます。",
-  "aboutCredits": "場所データ © Overture Maps Foundation、CDLA Permissive 2.0。基図 Natural Earth（パブリックドメイン）。地図描画 MapLibre。",
+  "aboutCredits": "教会の位置 © OpenStreetMap 寄稿者、ODbL。場所データ © Overture Maps Foundation、CDLA Permissive 2.0。基図は Natural Earth（パブリックドメイン）。地図描画は MapLibre。",
   "close": "閉じる",
   "unknown": "不明",
   "dirN": "北緯",
@@ -511,5 +511,8 @@
   "clearSearch": "検索をクリア",
   "nm_c": "{x}カトリック教会",
   "nm_k": "{x}司教座聖堂",
-  "nm_s": "{x}巡礼所"
+  "nm_s": "{x}巡礼所",
+  "sourceOsm": "出典：OpenStreetMap 寄稿者。",
+  "sourceOsmUpdated": "出典：OpenStreetMap 寄稿者、{date} 確認。",
+  "listedOsm": "OpenStreetMap でカトリックとして登録"
 }

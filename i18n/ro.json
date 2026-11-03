@@ -60,7 +60,7 @@
   "micBlocked": "Microfonul este blocat. Permite-l în setările browserului ca să cauți cu vocea.",
   "voiceFailed": "Căutarea vocală nu merge acum. Te rog, scrie ce cauți.",
   "aboutData": "Despre Date",
-  "footCredit": "Locuri © Overture Maps Foundation · Hartă de bază Natural Earth, străzi © contribuitorii OpenStreetMap prin OpenFreeMap",
+  "footCredit": "Biserici © contribuitorii OpenStreetMap, detalii © Overture Maps Foundation · Hartă de bază Natural Earth, străzi prin OpenFreeMap",
   "nearYou": "Lângă Tine",
   "closeNear": "Închide bisericile din apropiere",
   "favorites": "Preferate",
@@ -209,10 +209,10 @@
   "matches_one": "{n} rezultat. Adaugă o localitate ca să restrângi căutarea.",
   "matches_other": "{n} de rezultate. Adaugă o localitate ca să restrângi căutarea.",
   "matchesMax": "Peste 400 de rezultate. Adaugă o localitate ca să restrângi căutarea.",
-  "aboutP1": "Globul arată <b>{n}</b> biserici, capele, sanctuare, bazilici și catedrale catolice. Ele provin din {a1}setul de date despre locuri Overture Maps{end} (versiunea {release}), care adună locuri de la Meta, Microsoft și alte surse deschise.",
-  "aboutP2": "{cat} locuri sunt înregistrate în Overture ca lăcașuri de cult romano-catolice. Alte {name} sunt înregistrate doar ca lăcașuri de cult creștine, iar globul le include pentru că numele lor sunt clar catolice (de exemplu „Parroquia”, „Paróquia”, „Basilica”, „Nossa Senhora”). Acestea au o notă în detalii.",
+  "aboutP1": "Globul arată <b>{n}</b> biserici, capele, sanctuare, bazilici și catedrale catolice. Fiecare reper este o clădire de biserică înregistrată ca catolică pe {a1}OpenStreetMap{end}, harta liberă a lumii făcută de voluntari (date din {osm}).",
+  "aboutP2": "Telefoanele și site-urile pentru {cat} dintre ele provin din {a1}setul de locuri Overture Maps{end} (versiunea {release}), care adună locuri de la Meta, Microsoft și alte surse deschise. Celelalte {osm} provin doar din OpenStreetMap.",
   "aboutP3": "Încă nu există un set de date deschis care să cuprindă toate parohiile. Acoperirea este cea mai bună în Americi și în Europa de Vest și mai slabă în unele părți ale Africii și Asiei, unde multe parohii nu sunt încă pe hartă. Unele intrări pot fi dubluri, birouri sau clădiri închise. Când deschizi o biserică, pagina caută o fotografie a ei pe {a1}Wikimedia Commons{end} și pe Wikipedia, după loc și nume, și îl menționează pe fotograf. Bisericile fără fotografie păstrează un desen. Din fiecare fișă se deschid mai multe fotografii, videoclipuri și Street View.",
-  "aboutCredits": "Date despre locuri © Overture Maps Foundation, CDLA Permissive 2.0. Hartă de bază Natural Earth (domeniu public). Afișarea hărții cu MapLibre.",
+  "aboutCredits": "Locațiile bisericilor © contribuitorii OpenStreetMap, ODbL. Date despre locuri © Overture Maps Foundation, CDLA Permissive 2.0. Hartă de bază Natural Earth (domeniu public). Desenarea hărții: MapLibre.",
   "close": "Închide",
   "unknown": "Necunoscut",
   "dirN": "N",
@@ -544,5 +544,8 @@
   "bTagline_few": "<b>{n}</b> locuri din Biblie în <b>{lands}</b> țări de azi · atinge un pin sau o țară",
   "jTagline_few": "<b>{n}</b> momente din viața Domnului nostru în <b>{p}</b> locuri · atinge cronologia sau un pin",
   "jMoments_few": "{n} momente",
-  "stops_few": "{n} opriri"
+  "stops_few": "{n} opriri",
+  "sourceOsm": "Sursa: contribuitorii OpenStreetMap.",
+  "sourceOsmUpdated": "Sursa: contribuitorii OpenStreetMap, verificat la {date}.",
+  "listedOsm": "Înregistrată ca catolică pe OpenStreetMap"
 }
