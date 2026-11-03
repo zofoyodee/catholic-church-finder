@@ -3553,17 +3553,20 @@ async function runSearch() {
   // a country typed on its own ("nigeria", "China", "Italia"): every church listed in it
   const cc = countryFor(q);
   const inCountry = cc ? countryIds(cc) : [];
+  // a state, province or region typed on its own ("Texas", "Lombardy", "New South Wales")
+  const reg = inCountry.length ? null : regionFor(q);
+  const inRegion = reg ? regionIds(reg) : [];
   if (scopeCache.q !== qEl.value.trim()) refreshCounts();
   // nearest to you first: the first search asks where you are, and until then (or if you say no)
   // the middle of the globe's view stands in
   if (!here && !searchAskedWhere) { searchAskedWhere = true; hereOrCenter().then(() => { if (here && !resEl.hidden && qEl.value.trim()) runSearch(); }); }
   const c = here || [map.getCenter().lng, map.getCenter().lat];
-  const sc = new Map([...hits, ...inCountry].map(i => [i, metres(c[1], c[0], state.lat[i] / 1e6, state.lon[i] / 1e6)]));
+  const sc = new Map([...hits, ...inCountry, ...inRegion].map(i => [i, metres(c[1], c[0], state.lat[i] / 1e6, state.lon[i] / 1e6)]));
   hits.sort((a, b) => sc.get(a) - sc.get(b));
   // a country search lists that country's churches (nearest first), not churches that only carry its name (China, Texas)
-  const top = (inCountry.length ? [...inCountry].sort((a, b) => sc.get(a) - sc.get(b)) : hits).slice(0, 30);
+  let top = (inCountry.length ? [...inCountry].sort((a, b) => sc.get(a) - sc.get(b)) : hits).slice(0, 30);
   activeRes = -1;
-  if (!top.length && !inCountry.length) {
+  if (!top.length && !inCountry.length && !inRegion.length) {
     // not a church or a town we know by name: maybe a place the map service knows (a postal code, a district)
     searchLists = null;
     resEl.innerHTML = `<button role="option" class="all" data-geo="1" id="rg">${icon.map.replace('<svg', '<svg style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2"')}<div><span class="nm">${esc(tr('churchesNearQ', { q: qEl.value.trim() }))}</span></div></button><div class="note">${esc(tr('noMatch', { q: qEl.value.trim() }))}</div>`;
@@ -3574,12 +3577,18 @@ async function runSearch() {
   for (const i of hits) { const town = lines[i].split('\t')[1]; if (town && townQ.has(fold(town))) towns.set(town, (towns.get(town) || 0) + 1); }
   const town = inCountry.length ? null : [...towns].sort((a, b) => b[1] - a[1])[0];  // "China" means the country, not China, Texas
   const inTown = town ? hits.filter(i => lines[i].split('\t')[1] === town[0]) : [];
+  // a place typed on its own lists the churches in it, nearest first: a country, else a town, else a state or region
+  if (!inCountry.length) {
+    if (inTown.length) top = inTown.slice(0, 30);
+    else if (inRegion.length) top = [...inRegion].sort((a, b) => sc.get(a) - sc.get(b)).slice(0, 30);
+  }
   const listIcon = '<svg viewBox="0 0 24 24" style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2;stroke-linecap:round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg>';
-  searchLists = { town: town ? { name: town[0], ids: inTown } : null, all: { q: qEl.value.trim(), ids: hits }, country: inCountry.length ? { name: countryName(cc), ids: inCountry } : null };
+  searchLists = { town: town ? { name: town[0], ids: inTown } : null, all: { q: qEl.value.trim(), ids: hits }, country: inCountry.length ? { name: countryName(cc), ids: inCountry } : null, region: inRegion.length ? { name: regionShown(reg, inRegion), ids: inRegion } : null };
   resEl.innerHTML = (here || !navigator.geolocation ? '' : `<button role="option" class="all" data-loc="${geoDenied ? 'set' : 'search'}">${icon.map.replace('<svg', '<svg style="width:16px;height:16px;justify-self:center;stroke:var(--gold-soft);fill:none;stroke-width:2"')}<div><span class="nm">${esc(tr(geoDenied ? 'placeAsk' : 'useMyLoc'))}</span><span class="loc">${esc(tr('nearestFirstTip'))}</span></div></button>`)
     + (inCountry.length ? `<button role="option" class="all" data-all="country" id="rc">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inCountry.length), place: countryName(cc) }))}</span></div></button>` : '')
+    + (inRegion.length ? `<button role="option" class="all" data-all="region" id="rr">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inRegion.length), place: regionShown(reg, inRegion) }))}</span></div></button>` : '')
     + (town ? `<button role="option" class="all" data-all="town" id="rt">${listIcon}<div><span class="nm">${esc(tr('allIn', { n: fmt(inTown.length), place: town[0] }))}</span></div></button>` : '')
-    + (hits.length > 1 && hits.length !== inTown.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
+    + (hits.length > 1 && hits.length !== inTown.length && !inCountry.length && !inRegion.length ? `<button role="option" class="all" data-all="all" id="ra">${listIcon}<div><span class="nm">${esc(tr('allMatching', { n: fmt(hits.length), q: qEl.value.trim() }))}</span></div></button>` : '')
     + top.map((i, k) => {
     const [nm, town, cc] = lines[i].split('\t'); const t = TYPE_BY_CODE[state.typ[i] & 7];
     return `<button role="option" data-i="${i}" id="r${k}"><i style="width:9px;height:9px;border-radius:50%;background:${t.color};justify-self:center"></i><div><span class="nm">${esc(churchName(i, nm))}</span><span class="loc">${esc([here ? fmtDist(sc.get(i)) : '', t.one, churchTown(i, town), countryName(cc)].filter(Boolean).join(' · '))}</span></div></button>`;
@@ -3599,6 +3608,26 @@ function countryFor(q) {
     for (const [k, v] of Object.entries({ usa: 'US', america: 'US', 'united states of america': 'US', uk: 'GB', england: 'GB', 'great britain': 'GB', scotland: 'GB', wales: 'GB', holland: 'NL', 'south korea': 'KR', korea: 'KR', 'czech republic': 'CZ', 'ivory coast': 'CI', burma: 'MM', vatican: 'VA', 'vatican city': 'VA', drc: 'CD', 'dr congo': 'CD' })) if (!countryNames.has(k)) countryNames.set(k, v);
   }
   return countryNames.get(q.replace(/[.,]/g, ' ').replace(/\s+/g, ' ').trim()) || null;
+}
+// states, provinces and regions as the search index lists them ("NM New Mexico", "Lombardy"): typed name -> label
+let stateNames = null;
+function regionFor(q) {
+  if (!stateNames) {
+    stateNames = new Map(); const seen = new Set();
+    for (const l of searchIdx.lines) {
+      const r = l.split('\t')[3]; if (!r || seen.has(r)) continue; seen.add(r);
+      const m = r.match(/^[A-Z0-9]{2,3} (.+)$/), name = fold(m ? m[1] : r).trim();
+      if (name.length > 2 && !stateNames.has(name)) stateNames.set(name, r);
+    }
+  }
+  return stateNames.get(q.replace(/[.,]/g, ' ').replace(/\s+/g, ' ').trim()) || null;
+}
+// "New York, United States": the region's name with its country, so it reads apart from a town of the same name
+const regionShown = (r, ids) => [r.replace(/^[A-Z0-9]{2,3} /, '').replace(/^(District of Columbia) Washington$/, '$1').replace(/^(Ciudad de Mexico) CDMX Mexico City$/, '$1'), ids && ids.length ? countryName(searchIdx.lines[ids[0]].split('\t')[2]) : ''].filter(Boolean).join(', ');
+function regionIds(r) {
+  const out = [], { lines } = searchIdx;
+  for (let i = 0; i < lines.length; i++) if (state.enabled.has(state.typ[i] & 7) && lines[i].split('\t')[3] === r) out.push(i);
+  return out;
 }
 // the churches listed in a country, for the kinds of church now shown
 function countryIds(cc) {
