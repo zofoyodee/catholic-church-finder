@@ -560,5 +560,6 @@
   "nm_s": "Sanktuarium {x}",
   "sourceOsm": "Źródło: współtwórcy OpenStreetMap.",
   "sourceOsmUpdated": "Źródło: współtwórcy OpenStreetMap, sprawdzono {date}.",
-  "listedOsm": "Oznaczony jako katolicki w OpenStreetMap"
+  "listedOsm": "Oznaczony jako katolicki w OpenStreetMap",
+  "nearSearch": "Szukaj"
 }

@@ -556,5 +556,6 @@
   "nm_s": "Святиня {x}",
   "sourceOsm": "Джерело: учасники OpenStreetMap.",
   "sourceOsmUpdated": "Джерело: учасники OpenStreetMap, перевірено {date}.",
-  "listedOsm": "Позначено як католицький в OpenStreetMap"
+  "listedOsm": "Позначено як католицький в OpenStreetMap",
+  "nearSearch": "Пошук"
 }

@@ -560,5 +560,6 @@
   "nm_s": "Святилище {x}",
   "sourceOsm": "Источник: участники OpenStreetMap.",
   "sourceOsmUpdated": "Источник: участники OpenStreetMap, проверено {date}.",
-  "listedOsm": "Отмечен как католический в OpenStreetMap"
+  "listedOsm": "Отмечен как католический в OpenStreetMap",
+  "nearSearch": "Поиск"
 }
