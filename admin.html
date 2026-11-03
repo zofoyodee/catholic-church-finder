@@ -184,15 +184,37 @@ async function call(path, q) {
     return res.json();
   }
 }
-function range() {
-  if (pick) {  // the tapped day, midnight to midnight in this browser's time zone
-    const [y, m, d] = pick.split('-').map(Number), s = new Date(y, m - 1, d), e = new Date(y, m - 1, d + 1);
-    s.setUTCMinutes(0, 0, 0); e.setUTCMinutes(0, 0, 0);
-    return { start: s.toISOString().replace(/\.\d+Z$/, 'Z'), end: e.toISOString().replace(/\.\d+Z$/, 'Z') };
+// GoatCounter files countries, devices, browsers and languages by whole UTC day, so every card here counts
+// whole UTC days too; otherwise "Today" in the totals and in those cards would cover different hours
+const ymd = (t) => new Date(t).toISOString().slice(0, 10);
+const iso = (t) => new Date(t).toISOString().replace(/\.\d+Z$/, 'Z');
+function days_() {  // first and last UTC day shown, as YYYY-MM-DD
+  if (pick) return [pick, pick];
+  const today = Date.UTC(...ymd(Date.now()).split('-').map((x, k) => +x - (k === 1)));
+  return [ymd(today - (days - 1) * 864e5), ymd(today)];
+}
+function range() {  // for the hourly counts: UTC midnight to UTC midnight
+  const [a, b] = days_();
+  return { start: a + 'T00:00:00Z', end: iso(Date.parse(b + 'T00:00:00Z') + 864e5) };
+}
+function dayRange() {  // for the cards GoatCounter keeps by day: noon UTC names the same date in any account time zone
+  const [a, b] = days_();
+  return { start: a + 'T12:00:00Z', end: b + 'T13:00:00Z' };
+}
+// GoatCounter groups the daily chart by the account's time zone; this regroups it by UTC day
+let tz = '';
+const tzOffset = (t) => {  // minutes ahead of UTC in the account's zone at time t
+  try { const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: tz || 'UTC', hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).formatToParts(t).map((x) => [x.type, x.value]));
+    return (Date.UTC(+p.year, p.month - 1, +p.day, +p.hour, +p.minute) - Math.floor(t / 6e4) * 6e4) / 6e4; } catch (e) { return 0; }
+};
+function utcDays(stats) {
+  const [a, b] = days_(), out = new Map();
+  for (let t = Date.parse(a + 'T00:00:00Z'); t <= Date.parse(b + 'T00:00:00Z'); t += 864e5) out.set(ymd(t), 0);
+  for (const s of stats) {
+    if (!Array.isArray(s.hourly)) { if (out.has(s.day)) out.set(s.day, out.get(s.day) + (s.daily || 0)); continue; }
+    s.hourly.forEach((n, h) => { const local = Date.parse(s.day + 'T00:00:00Z') + h * 36e5, d = ymd(local - tzOffset(local) * 6e4); if (out.has(d)) out.set(d, out.get(d) + (n || 0)); });
   }
-  const end = new Date(); end.setUTCMinutes(0, 0, 0); end.setUTCHours(end.getUTCHours() + 1);
-  const start = new Date(); start.setHours(0, 0, 0, 0); start.setDate(start.getDate() - (days - 1)); start.setUTCMinutes(0, 0, 0);
-  return { start: start.toISOString().replace(/\.\d+Z$/, 'Z'), end: end.toISOString().replace(/\.\d+Z$/, 'Z') };
+  return [...out].map(([day, daily]) => ({ day, daily }));
 }
 
 /* ---------- names for what the globe counts (see track() in index.html) ---------- */
@@ -307,23 +329,25 @@ async function allHits(r) {
 const fromStats = (j, name = (s) => esc(s.name || 'Unknown')) => (j.stats || []).map((s) => ({ ...s, html: name(s) }));
 
 async function load() {
-  const my = ++run, r = range();
+  const my = ++run, r = range(), dr = dayRange();
+  if (tz === '') { try { const me = await api('me'); tz = String(me.user.settings.timezone || '').split('@').pop() || 'UTC'; } catch (e) { tz = 'UTC'; } }
   $('loading').hidden = $('dash').hidden === false; $('dashErr').hidden = true; $('refresh').classList.add('busy');
   try {
     const total = await api('stats/total', r), hits = await allHits(r);
     if (my !== run) return;
     const lists = {};
-    for (const page of ['locations', 'toprefs', 'sizes', 'browsers', 'systems', 'languages']) lists[page] = await api('stats/' + page, { ...r, limit: 100 });
+    for (const page of ['locations', 'toprefs', 'sizes', 'browsers', 'systems', 'languages']) lists[page] = await api('stats/' + page, { ...(page === 'toprefs' ? r : dr), limit: 100 });
     if (my !== run) return;
     const ev = hits.filter((h) => h.event), byPrefix = (p) => ev.filter((h) => h.path.startsWith(p));
     $('dash').hidden = false; $('foot').hidden = false; $('ranges').hidden = false; $('setup').hidden = true;  // shown first so the chart can measure itself
-    tiles(total, total.stats || [], ev.reduce((a, h) => a + h.count, 0));
+    const perDay = utcDays(total.stats || []);
+    tiles(total, perDay, ev.reduce((a, h) => a + h.count, 0));
     $('dailyTitle').textContent = pick ? 'Visitors on ' + dayName(pick) : days === 1 ? 'Visitors Today' : 'Visitors per Day';
     $('dailyHint').hidden = !!pick || days === 1;
     $('picked').hidden = !pick;
     if (pick) { $('pickedText').textContent = 'Showing only ' + dayName(pick, { weekday: 'long', month: 'long', day: 'numeric' }); $('unpick').textContent = 'Back to ' + $('ranges').querySelector('[aria-pressed="true"]').textContent; }
-    lastDaily = total.stats || []; daily(lastDaily);
-    const regionsOf = async (row) => fromStats(await api('stats/locations/' + encodeURIComponent(row.id), { ...r, limit: 100 }), (s) => esc(s.name || 'Unknown region'));
+    lastDaily = perDay; daily(lastDaily);
+    const regionsOf = async (row) => fromStats(await api('stats/locations/' + encodeURIComponent(row.id), { ...dr, limit: 100 }), (s) => esc(s.name || 'Unknown region'));
     rank($('locations'), fromStats(lists.locations), { click: regionsOf });
     $('regions').innerHTML = '<p class="empty">Loading…</p>';
     rank($('features'), ev.filter((h) => !/^(church|bible-place|language)\//.test(h.path)).map((h) => ({ count: h.count, html: featureName(h.path), tip: h.path })));
@@ -342,7 +366,8 @@ async function load() {
       if (my !== run) return;
     }
     rank($('regions'), regions);
-    $('updated').textContent = 'Updated ' + new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+    const t = (ms) => new Date(ms).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }), mid = Date.parse(ymd(Date.now()) + 'T00:00:00Z');
+    $('updated').textContent = 'Updated ' + t(Date.now()) + ' · Each day runs midnight to midnight UTC, the way GoatCounter files it' + (new Date(mid).getTimezoneOffset() ? ` (${t(mid)} to ${t(mid)} your time)` : '') + '.';
   } catch (e) {
     if (my !== run) return;
     console.error('GoatCounter', e.status || '', e.message, e.detail || '');
