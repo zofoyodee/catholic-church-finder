@@ -42,7 +42,7 @@
 
 /* side buttons: Near Me, zoom, whole globe, all the same round button in one straight column (the names show
    on hover); everything else is in the menu */
-.wide .ctrls > :not(#nearBtn):not(#zin):not(#zout):not(#home) { display: none !important; }
+.wide .ctrls > :not(#nearBtn):not(#favOpen):not(#zin):not(#zout):not(#home) { display: none !important; }
 .wide .ctrls { justify-items: center; gap: 10px; }
 .wide .ctrls button { width: 44px; height: 44px; padding: 0; border-radius: 50%; display: grid; place-items: center; }
 .wide .ctrls svg { width: 20px; height: 20px; }

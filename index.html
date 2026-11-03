@@ -285,7 +285,14 @@ button, input { font: inherit; color: inherit; }
 #massChips .chip[aria-pressed="true"] { border-color: color-mix(in srgb, var(--gold) 60%, transparent); color: var(--ink); background: rgba(232,184,74,0.14); }
 #massChips .tick { fill: none; stroke: currentColor; stroke-width: 2; width: 13px; height: 13px; margin: 0; }
 #massChips .lang { cursor: default; padding-right: 6px; }
-#massChips .wide-row { flex-basis: 100%; box-sizing: border-box; justify-content: flex-start; }
+#massChips .wide-row { flex-basis: 100%; box-sizing: border-box; justify-content: flex-start; height: 40px; border-radius: 14px; border-color: color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232,184,74,0.10); color: var(--ink); font-size: 14px; }
+#massChips .wide-row select { font-size: 14px; }
+.show-toggle { flex-basis: 100%; display: flex; align-items: center; gap: 7px; height: 40px; padding: 0 12px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232,184,74,0.10); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; text-align: start; min-width: 0; }
+.show-toggle .tick { fill: none; stroke: currentColor; stroke-width: 2; width: 13px; height: 13px; flex: none; }
+.show-toggle b { margin-inline-start: auto; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.show-toggle .caret { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; flex: none; transition: transform .15s; }
+.show-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+.show-list { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; padding-top: 2px; }
 #massChips .wide-row select { margin-inline-start: auto; text-align: end; }
 #massChips .near-big { flex-basis: 100%; display: flex; align-items: center; gap: 8px; box-sizing: border-box; padding: 4px 8px 4px 4px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232,184,74,0.10); }
 #massChips .near-big.on { background: rgba(232,184,74,0.18); }
@@ -327,6 +334,7 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
 .ctrls button.fav-open { position: relative; animation: pop .45s cubic-bezier(.3,1.6,.5,1); }
 .ctrls button[hidden] { display: none; }
 @keyframes pop { from { transform: scale(.3); opacity: 0; } }
+.ctrls button[hidden] { display: none !important; }
 .ctrls .count { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--gold); color: #1a1406; font-size: 11px; font-weight: 600; line-height: 18px; text-align: center; font-variant-numeric: tabular-nums; }
 .ctrls .count:empty { display: none; }
 .favs {
@@ -722,9 +730,9 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 .glabel.city.big { font-size: 15px; color: #fdf6e3; }
 .glabel.land { font-size: 13px; letter-spacing: 0.1em; opacity: 0.85; color: #f3d58c; }
 </style>
-<link rel="stylesheet" href="app/engage.css?v=108">
-<link rel="stylesheet" href="app/mobile.css?v=108">
-<link rel="stylesheet" href="app/desktop.css?v=108">
+<link rel="stylesheet" href="app/engage.css?v=109">
+<link rel="stylesheet" href="app/mobile.css?v=109">
+<link rel="stylesheet" href="app/desktop.css?v=109">
 </head>
 <body>
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
@@ -3355,10 +3363,17 @@ function renderChips() {
   const tipFor = (t) => tr('desc_' + t.key) + '\n' + tr(all ? 'onlyType' : state.enabled.has(t.code) ? 'hideType' : 'alsoType', { type: low(t.label) });
   $('chips').classList.toggle('filtered', !all);
   const n = (t) => (counts[t.code] || 0) + (t.with ? counts[t.with] || 0 : 0);
-  $('chips').innerHTML = `<span class="lbl">${esc(tr('show'))}</span><button class="chip" data-k="all" aria-pressed="${all}" title="${esc(tr(all ? 'allOn' : 'allAgain'))}">${esc(tr('all'))}</button>` + TYPES.filter(t => t.chip !== false && shown(t) && (!scope || n(t) || (!all && state.enabled.has(t.code)))).map(t =>
-    `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${esc(tipFor(t))}">${tick}<i style="background:${t.color}"></i>${esc(t.label)} <small>${fmt(n(t))}</small></button>`).join('');
+  // a gold "Show" row like Mass Language's that opens the kinds of church below it
+  const picked = all ? tr('all') : [...new Set(TYPES.filter(t => t.chip !== false && state.enabled.has(t.code)).map(t => t.label))].join(', ');
+  const arrow = '<svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+  const kinds = TYPES.filter(t => t.chip !== false && shown(t) && (!scope || n(t) || (!all && state.enabled.has(t.code))));
+  $('chips').innerHTML = `<button type="button" class="show-toggle" aria-expanded="${showOpen}"><svg class="tick" viewBox="0 0 24 24" style="display:inline-block" aria-hidden="true"><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2.5"/></svg><span>${esc(tr('show'))}</span><b>${esc(picked)}</b>${arrow}</button>`
+    + (showOpen ? `<div class="show-list"><button class="chip" data-k="all" aria-pressed="${all}" title="${esc(tr(all ? 'allOn' : 'allAgain'))}">${esc(tr('all'))}</button>` + kinds.map(t =>
+    `<button class="chip" data-k="${t.code}" aria-pressed="${!all && state.enabled.has(t.code)}" title="${esc(tipFor(t))}">${tick}<i style="background:${t.color}"></i>${esc(t.label)} <small>${fmt(n(t))}</small></button>`).join('') + '</div>' : '');
 }
+let showOpen = false;
 $('chips').addEventListener('click', (e) => {
+  if (e.target.closest('.show-toggle') && state.mode === 'churches') { showOpen = !showOpen; renderChips(); return; }
   const b = e.target.closest('.chip'); if (!b || state.mode !== 'churches') return;
   const k = b.dataset.k;
   if (k === 'all') state.enabled = new Set(TYPES.map(t => t.code));
@@ -4722,8 +4737,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="app/engage.js?v=108"></script>
-<script src="app/mobile.js?v=108"></script>
+<script src="app/engage.js?v=109"></script>
+<script src="app/mobile.js?v=109"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }
