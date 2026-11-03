@@ -65,7 +65,7 @@ $('msClose').addEventListener('click', () => show(false));
 $('msReset').addEventListener('click', () => {
   for (const k of ['ccf-theme', 'ccf-lang', 'ccf-place', 'ccf-near-miles', 'ccf-view', 'ccf-favs-closed', 'ccf-today-closed']) { try { localStorage.removeItem(k); } catch (e) {} }
   document.dispatchEvent(new Event('ccf-reset'));  // index.html and app/engage.js put their own parts back
-  sync();
+  show(false); $('home').click();  // and the globe goes back out to the whole world
 });
 sheet.addEventListener('click', (e) => { if (e.target === sheet) show(false); });  // tap outside the box
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) { show(false); $('mnavMenu').focus(); } });
