@@ -520,5 +520,7 @@
   "nm_s": "Sanctuarium {x}",
   "sourceOsm": "Fons: collaboratores OpenStreetMap.",
   "sourceOsmUpdated": "Fons: collaboratores OpenStreetMap, inspectum {date}.",
-  "listedOsm": "Ut catholica in OpenStreetMap inscripta"
+  "listedOsm": "Ut catholica in OpenStreetMap inscripta",
+  "resetAll": "Restitue",
+  "resetHint": "Ad initia redi. Ecclesiae servatae manent."
 }

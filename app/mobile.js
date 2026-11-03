@@ -60,6 +60,12 @@ function sync() {
 const toggle = () => show(sheet.hidden);
 $('mnavMenu').addEventListener('click', toggle);
 $('msClose').addEventListener('click', () => show(false));
+// Reset: every choice this browser remembers goes back to the start (theme, Site Language, distance, place, map view,
+// filters); saved churches and stored translations stay. Reloading the plain address also clears the filters and search.
+$('msReset').addEventListener('click', () => {
+  for (const k of ['ccf-theme', 'ccf-lang', 'ccf-place', 'ccf-near-miles', 'ccf-view', 'ccf-favs-closed', 'ccf-today-closed']) { try { localStorage.removeItem(k); } catch (e) {} }
+  location.replace(location.pathname);
+});
 sheet.addEventListener('click', (e) => { if (e.target === sheet) show(false); });  // tap outside the box
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) { show(false); $('mnavMenu').focus(); } });
 sheet.addEventListener('click', (e) => {

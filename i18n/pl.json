@@ -560,5 +560,7 @@
   "nm_s": "Sanktuarium {x}",
   "sourceOsm": "Źródło: współtwórcy OpenStreetMap.",
   "sourceOsmUpdated": "Źródło: współtwórcy OpenStreetMap, sprawdzono {date}.",
-  "listedOsm": "Oznaczony jako katolicki w OpenStreetMap"
+  "listedOsm": "Oznaczony jako katolicki w OpenStreetMap",
+  "resetAll": "Resetuj",
+  "resetHint": "Przywróć ustawienia początkowe. Zapisane kościoły pozostaną."
 }

@@ -522,5 +522,7 @@
   "nm_s": "Santuario {x}",
   "sourceOsm": "Ypykue: OpenStreetMap pytyvõhára.",
   "sourceOsmUpdated": "Ypykue: OpenStreetMap pytyvõhára, ojehecha {date}.",
-  "listedOsm": "Ojehai katólika ramo OpenStreetMap-pe"
+  "listedOsm": "Ojehai katólika ramo OpenStreetMap-pe",
+  "resetAll": "Ñepyrũjey",
+  "resetHint": "Ejevy umi ñemboheko ypyrãme. Tupaokuéra eñongatuva’ekue opyta."
 }

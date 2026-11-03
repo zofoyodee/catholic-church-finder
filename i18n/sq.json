@@ -528,5 +528,7 @@
   "nm_s": "Shenjtërorja {x}",
   "sourceOsm": "Burimi: kontribuuesit e OpenStreetMap.",
   "sourceOsmUpdated": "Burimi: kontribuuesit e OpenStreetMap, kontrolluar më {date}.",
-  "listedOsm": "E regjistruar si katolike në OpenStreetMap"
+  "listedOsm": "E regjistruar si katolike në OpenStreetMap",
+  "resetAll": "Rivendos",
+  "resetHint": "Kthehu te cilësimet fillestare. Kishat e ruajtura mbeten."
 }

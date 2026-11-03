@@ -522,5 +522,7 @@
   "nm_s": "{x} Santuar",
   "sourceOsm": "स्रोत: OpenStreetMap योगदानकार.",
   "sourceOsmUpdated": "स्रोत: OpenStreetMap योगदानकार, {date} दिसा तपासलें.",
-  "listedOsm": "OpenStreetMap चेर कातोलिक म्हूण नोंद"
+  "listedOsm": "OpenStreetMap चेर कातोलिक म्हूण नोंद",
+  "resetAll": "रिसॅट",
+  "resetHint": "सुरवातेच्या सेटिंगांक परत वचात. तुमी सांबाळिल्लीं इगर्जो उरतलीं."
 }

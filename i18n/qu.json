@@ -522,5 +522,7 @@
   "nm_s": "Santuario {x}",
   "sourceOsm": "Pukyu: OpenStreetMap yanapaqkuna.",
   "sourceOsmUpdated": "Pukyu: OpenStreetMap yanapaqkuna, {date} punchawpi qhawasqa.",
-  "listedOsm": "OpenStreetMap nisqapi katolika hina qillqasqa"
+  "listedOsm": "OpenStreetMap nisqapi katolika hina qillqasqa",
+  "resetAll": "Qallariyman Kutichiy",
+  "resetHint": "Qallariy churasqakunaman kutiy. Waqaychasqayki iglesiakuna qhepanqa."
 }

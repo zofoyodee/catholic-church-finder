@@ -522,5 +522,7 @@
   "nm_s": "Ingoro nyeranda ya {x}",
   "sourceOsm": "Isoko: abaterankunga ba OpenStreetMap.",
   "sourceOsmUpdated": "Isoko: abaterankunga ba OpenStreetMap, vyarabwe ku wa {date}.",
-  "listedOsm": "Yanditswe nk’iya Gatolika kuri OpenStreetMap"
+  "listedOsm": "Yanditswe nk’iya Gatolika kuri OpenStreetMap",
+  "resetAll": "Subiza Ku Ntango",
+  "resetHint": "Subira ku vyo watanguye. Amashengero wabitse arasigara."
 }

@@ -530,5 +530,7 @@
   "nm_s": "Madhabahu ya {x}",
   "sourceOsm": "Chanzo: wachangiaji wa OpenStreetMap.",
   "sourceOsmUpdated": "Chanzo: wachangiaji wa OpenStreetMap, imekaguliwa {date}.",
-  "listedOsm": "Imeandikishwa kama ya Kikatoliki kwenye OpenStreetMap"
+  "listedOsm": "Imeandikishwa kama ya Kikatoliki kwenye OpenStreetMap",
+  "resetAll": "Weka Upya",
+  "resetHint": "Rudi kwenye mipangilio ya mwanzo. Makanisa uliyohifadhi yanabaki."
 }

@@ -547,5 +547,7 @@
   "stops_few": "{n} opriri",
   "sourceOsm": "Sursa: contribuitorii OpenStreetMap.",
   "sourceOsmUpdated": "Sursa: contribuitorii OpenStreetMap, verificat la {date}.",
-  "listedOsm": "Înregistrată ca catolică pe OpenStreetMap"
+  "listedOsm": "Înregistrată ca catolică pe OpenStreetMap",
+  "resetAll": "Resetează",
+  "resetHint": "Revino la setările inițiale. Bisericile salvate rămân."
 }

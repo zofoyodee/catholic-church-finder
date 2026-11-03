@@ -522,5 +522,7 @@
   "nm_s": "Santuwaryo kan {x}",
   "sourceOsm": "Ginikanan: mga kontributor kan OpenStreetMap.",
   "sourceOsmUpdated": "Ginikanan: mga kontributor kan OpenStreetMap, sinusog kan {date}.",
-  "listedOsm": "Nakalista bilang Katoliko sa OpenStreetMap"
+  "listedOsm": "Nakalista bilang Katoliko sa OpenStreetMap",
+  "resetAll": "I-reset",
+  "resetHint": "Bumalik sa enot na mga setting. Mantetener an mga simbahan na inimbak mo."
 }

@@ -530,5 +530,7 @@
   "nm_s": "Bedevaartsoord {x}",
   "sourceOsm": "Bron: OpenStreetMap-bijdragers.",
   "sourceOsmUpdated": "Bron: OpenStreetMap-bijdragers, gecontroleerd op {date}.",
-  "listedOsm": "Als katholiek op OpenStreetMap ingetekend"
+  "listedOsm": "Als katholiek op OpenStreetMap ingetekend",
+  "resetAll": "Herstellen",
+  "resetHint": "Terug naar de begininstellingen. Je bewaarde kerken blijven staan."
 }

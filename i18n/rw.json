@@ -522,5 +522,7 @@
   "nm_s": "Ingoro y'ubutagatifu ya {x}",
   "sourceOsm": "Inkomoko: abatanga umusanzu kuri OpenStreetMap.",
   "sourceOsmUpdated": "Inkomoko: abatanga umusanzu kuri OpenStreetMap, byagenzuwe ku wa {date}.",
-  "listedOsm": "Yanditswe nk’iya Gatolika kuri OpenStreetMap"
+  "listedOsm": "Yanditswe nk’iya Gatolika kuri OpenStreetMap",
+  "resetAll": "Subiza Ku Ntangiriro",
+  "resetHint": "Subira ku igenamiterere ry’ibanze. Amakiliziya wabitse arasigara."
 }
