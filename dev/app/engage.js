@@ -418,7 +418,7 @@ menu.id = 'viewMenu'; menu.className = 'viewmenu'; menu.hidden = true; menu.setA
 const SWITCHES = ['satellite', 'daynight', 'sky', 'density', 'liturgical'];
 function renderMenu() {
   menu.setAttribute('aria-label', T('globeView'));
-  menu.innerHTML = `<h3>${esc(T('globeView'))}</h3>` + SWITCHES.map(k => `<label><span>${esc(T('view_' + k))}</span><small>${esc(T('view_' + k + 'Hint'))}</small><input type="checkbox" data-k="${k}" ${view[k] ? 'checked' : ''}></label>`).join('');
+  menu.innerHTML = `<button type="button" class="vm-x" aria-label="${esc(T('close'))}" title="${esc(T('close'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><h3>${esc(T('globeView'))}</h3>` + SWITCHES.map(k => `<label><span>${esc(T('view_' + k))}</span><small>${esc(T('view_' + k + 'Hint'))}</small><input type="checkbox" data-k="${k}" ${view[k] ? 'checked' : ''}></label>`).join('');
 }
 renderMenu();
 document.body.appendChild(menu);
@@ -433,6 +433,7 @@ function showMenu(open) {
 viewBtn.addEventListener('click', (e) => { e.stopPropagation(); showMenu(menu.hidden); });
 addEventListener('pointerdown', (e) => { if (!menu.hidden && !e.target.closest('#viewMenu, #viewBtn')) showMenu(false); });
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { e.stopImmediatePropagation(); showMenu(false); viewBtn.focus(); } }, true);
+menu.addEventListener('click', (e) => { if (e.target.closest('.vm-x')) { showMenu(false); viewBtn.focus(); } });
 menu.addEventListener('change', (e) => {
   const k = e.target.dataset.k; if (!k) return;
   view[k] = e.target.checked; saveView(); applyView(k);
