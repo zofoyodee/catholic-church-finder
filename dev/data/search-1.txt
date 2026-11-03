@@ -1,4 +1,3 @@
-Parroquia San Francisco Javier	Santo Domingo Oeste	DO	
 Parroquia San Fco Javier Buenos Aires De Herrera	Santo Domingo Oeste	DO	
 Parroquia San Francisco Javier	Santo Domingo Oeste	DO	
 Parroquia San Jeronimo	Santo Domingo	DO	
@@ -92127,3 +92126,4 @@ Parafia Nawrócenia Św. Pawła Apostoła	Pyskowice	PL
 Kościół św. Wacława	Toszek	PL	
 Parafia Rzymskokatolicka NMP Matki Kościoła	Gliwice	PL	
 Kaplica Najświętszego Serca Pana Jezusa	Gliwice	PL	
+Parafia Wszystkich Świętych	Gliwice	PL	

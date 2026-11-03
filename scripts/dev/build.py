@@ -33,6 +33,13 @@ html = sub(r"getJSON\('data/names-x\.json'\)", "getJSON('dev/data/names-x.json')
 html = sub(r"BASE \+ 'data/overrides\.json'", "BASE + 'dev/data/overrides.json'", html, 1)
 html = sub(r"getJSON\('data/overrides\.json\?t='", "getJSON('dev/data/overrides.json?t='", html, 1)
 html = sub(r"if \('serviceWorker' in navigator", "if (false && 'serviceWorker' in navigator", html, 1)
+html = sub(r"new URL\('i18n/countries/'", "new URL('dev/i18n/countries/'", html, 1)
+html = sub(r"history\.replaceState\(null, '', '\?", "history.replaceState(null, '', location.pathname + '?", html)  # keep /dev/ in the address
+# the church pins themselves (data/points.txt, data/d/) are Dev's own when SOURCE_DIR has them in dev-data/
+own_pins = (src / 'dev-data' / 'points.txt').exists()
+if own_pins:
+    html = sub(r"BASE \+ 'data/points\.txt'", "BASE + 'dev/data/points.txt'", html, 1)
+    html = sub(r"getJSON\('data/d/' \+ s", "getJSON('dev/data/d/' + s", html, 1)
 html = html.replace('href="./" id="homeLink"', 'href="dev/" id="homeLink"')
 stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
 ribbon = ('<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;'
@@ -49,4 +56,8 @@ shutil.copytree(src / 'i18n', out / 'i18n')
 (out / 'data').mkdir()
 for f in [src / 'data' / 'meta.json', src / 'data' / 'names-x.json', src / 'data' / 'overrides.json', *sorted((src / 'data').glob('search-*.txt'))]:
     shutil.copy(f, out / 'data' / f.name)
+if own_pins:  # a rebuilt pin set under test (e.g. the OpenStreetMap switch): its points, details, search index, counts and corrections
+    for f in (src / 'dev-data').glob('*'):
+        if f.is_dir(): shutil.copytree(f, out / 'data' / f.name)
+        elif f.suffix in ('.txt', '.json'): shutil.copy(f, out / 'data' / f.name)
 print(f'built {out} from {src} ({stamp})')
