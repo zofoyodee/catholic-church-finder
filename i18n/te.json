@@ -530,6 +530,5 @@
   "massNoteTip": "దివ్యపూజ మరియు పాపసంకీర్తనం సమయాలు విచారణ వెబ్‌సైట్ల నుండి చదవబడతాయి, కాబట్టి వాటిని ప్రకటించే వెబ్‌సైట్ ఉన్న దేవాలయాలను మాత్రమే ఫిల్టర్ చేయగలం",
   "sourceOsm": "మూలం: OpenStreetMap సహకారులు.",
   "sourceOsmUpdated": "మూలం: OpenStreetMap సహకారులు, {date}న తనిఖీ చేయబడింది.",
-  "listedOsm": "OpenStreetMapలో కతోలిక అని నమోదైంది",
-  "nearSearch": "వెతకండి"
+  "listedOsm": "OpenStreetMapలో కతోలిక అని నమోదైంది"
 }

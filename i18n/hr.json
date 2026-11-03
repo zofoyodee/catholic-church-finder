@@ -546,6 +546,5 @@
   "nm_s": "Svetište {x}",
   "sourceOsm": "Izvor: suradnici OpenStreetMapa.",
   "sourceOsmUpdated": "Izvor: suradnici OpenStreetMapa, provjereno {date}.",
-  "listedOsm": "Na OpenStreetMapu upisana kao katolička",
-  "nearSearch": "Traži"
+  "listedOsm": "Na OpenStreetMapu upisana kao katolička"
 }
