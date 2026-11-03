@@ -530,6 +530,5 @@
   "nm_s": "{x} kegyhely",
   "sourceOsm": "Forrás: OpenStreetMap közreműködők.",
   "sourceOsmUpdated": "Forrás: OpenStreetMap közreműködők, ellenőrizve: {date}.",
-  "listedOsm": "Az OpenStreetMapen katolikusként szerepel",
-  "nearSearch": "Keresés"
+  "listedOsm": "Az OpenStreetMapen katolikusként szerepel"
 }

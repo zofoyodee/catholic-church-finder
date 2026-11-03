@@ -512,6 +512,5 @@
   "nm_s": "{x} 성지",
   "sourceOsm": "출처: OpenStreetMap 기여자.",
   "sourceOsmUpdated": "출처: OpenStreetMap 기여자, {date} 확인.",
-  "listedOsm": "OpenStreetMap에 가톨릭으로 등록됨",
-  "nearSearch": "검색"
+  "listedOsm": "OpenStreetMap에 가톨릭으로 등록됨"
 }

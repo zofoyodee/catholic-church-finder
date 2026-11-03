@@ -548,6 +548,5 @@
   "massNoteTip": "זמני המיסה והווידוי נקראים מאתרי הקהילות, ולכן ניתן לסנן רק כנסיות שהאתר שלהן מפרסם אותם",
   "sourceOsm": "מקור: תורמי OpenStreetMap.",
   "sourceOsmUpdated": "מקור: תורמי OpenStreetMap, נבדק ב־{date}.",
-  "listedOsm": "רשומה כקתולית ב־OpenStreetMap",
-  "nearSearch": "חיפוש"
+  "listedOsm": "רשומה כקתולית ב־OpenStreetMap"
 }
