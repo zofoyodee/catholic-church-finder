@@ -18,7 +18,7 @@
   "home": "Sogllea sonvsar-golar porot vochat",
   "random": "Khoinchoy igorz polloyat",
   "aboutData": "Data vixim",
-  "footCredit": "Zago © Overture Maps Foundation · Mul nakxa Natural Earth, रस्ते © OpenStreetMap योगदानकार, OpenFreeMap वरवीं",
+  "footCredit": "इगर्जी © OpenStreetMap योगदानकार, तपशील © Overture Maps Foundation · मूळ नकासो Natural Earth, रस्ते OpenFreeMap वरवीं",
   "nearYou": "Tumchea lagim",
   "closeNear": "Lagxilim igorzam band korat",
   "favorites": "Mogachim",
@@ -133,10 +133,10 @@
   "matches_one": "{n} fol. Unnem korunk xar ghalat.",
   "matches_other": "{n} fol. Unnem korunk xar ghalat.",
   "matchesMax": "400 parim chodd fol. Unnem korunk xar ghalat.",
-  "aboutP1": "Ho sonvsar-gol <b>{n}</b> Katolik igorzam, kapelam, santuarim, bazilikam ani katedralam dakhoita. Tim {a1}Overture Maps zagecho data{end} (avrutti {release}) hantlim, jo Meta, Microsoft ani her ugtte mull hantle zago ekttaita.",
-  "aboutP2": "Hantlim {cat} zago Overture-ant Romi Katolik bhokti-zago mhonn nondleat. Her {name} fokot Kristanv bhokti-zago mhonn nondleat, ani tanchim nanvam spoxtt Katolik dakhoitat (dekhik “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”) mhonn hanga ghaltat. Tanchea tepxilant ek nond asa.",
+  "aboutP1": "ग्लोबार <b>{n}</b> कातोलिक इगर्जी, कपेली, तीर्थस्थानां, बासिलिका आनी कॅथेड्रल दाखयल्यांत. दर एक पिन म्हळ्यार {a1}OpenStreetMap{end} चेर कातोलिक म्हूण नोंद केल्लें इगर्जेचें घर, स्वयंसेवकांनी केल्लो मुक्त संवसार नकासो ({osm} चो डेटा).",
+  "aboutP2": "तातूंतल्या {cat} चे फोन नंबर आनी वेबसायट {a1}Overture Maps सुवाते डेटासेटांतल्यान{end} (रिलीज {release}) येतात, जो Meta, Microsoft आनी हेर उक्त्या स्रोतांतल्यान सुवाते एकठांय करता. उरिल्ले {osm} फकत OpenStreetMap वयल्यान येतात.",
   "aboutP3": "Sogle firgoz aslolo ugtto data anink na. Amerik ani Ostomtte Europant data chodd purai, ani Afrik ani Axiyache thoddea vanttean unno, thoim zaitim firgoz anink nakxear nant. Thodde nond dôn pavtt, ofis vo band zalolim ghoram zaum yetat. Tumi ek igorz ugtti kortat tednam, pan zago ani nanv polloun {a1}Wikimedia Commons{end} ani Wikipedia-ar tachem foto sodhta, ani fotografachem nanv sangta. Foto naslolim igorzam chitr dakhoitat. Dor kardar odik foto, video ani Street View-che link asat.",
-  "aboutCredits": "Zagecho data © Overture Maps Foundation, CDLA Permissive 2.0. Mul nakxa Natural Earth (lokachem). Nakxa MapLibre vorvim.",
+  "aboutCredits": "इगर्जींचीं सुवाते © OpenStreetMap योगदानकार, ODbL. सुवाते डेटा © Overture Maps Foundation, CDLA Permissive 2.0. मूळ नकासो Natural Earth वयल्यान (सार्वजनीक). नकासो MapLibre वरवीं काडला.",
   "close": "Band korat",
   "unknown": "Khobor na",
   "dirN": "Ut",
@@ -519,5 +519,8 @@
   "clearSearch": "सोद पुसून उडय",
   "nm_c": "{x} Katolik Igorz",
   "nm_k": "{x} Katedral",
-  "nm_s": "{x} Santuar"
+  "nm_s": "{x} Santuar",
+  "sourceOsm": "स्रोत: OpenStreetMap योगदानकार.",
+  "sourceOsmUpdated": "स्रोत: OpenStreetMap योगदानकार, {date} दिसा तपासलें.",
+  "listedOsm": "OpenStreetMap चेर कातोलिक म्हूण नोंद"
 }

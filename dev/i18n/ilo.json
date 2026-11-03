@@ -18,7 +18,7 @@
   "home": "Agsubli iti intero a lubong",
   "random": "Kitaen ti uray ania a simbaan",
   "aboutData": "Maipapan iti datos",
-  "footCredit": "Lugar © Overture Maps Foundation · Batayan a mapa Natural Earth, dagiti kalsada © dagiti contributor ti OpenStreetMap babaen ti OpenFreeMap",
+  "footCredit": "Dagiti simbaan © dagiti kontributor ti OpenStreetMap, detalye © Overture Maps Foundation · Batayan a mapa Natural Earth, dagiti kalsada babaen ti OpenFreeMap",
   "nearYou": "Asideg kenka",
   "closeNear": "Irikep dagiti asideg a simbaan",
   "favorites": "Dagiti paborito",
@@ -133,10 +133,10 @@
   "matches_one": "{n} a resulta. Inayon ti ili tapno maipatingga.",
   "matches_other": "{n} a resulta. Inayon ti ili tapno maipatingga.",
   "matchesMax": "Nasurok a 400 a resulta. Inayon ti ili tapno maipatingga.",
-  "aboutP1": "Daytoy a lubong ipakpakitana ti <b>{n}</b> a simbaan a Katoliko, kapilia, santuario, basilika ken katedral. Naggapu dagitoy iti {a1}datos ti lugar ti Overture Maps{end} (release {release}), a mangur-urnong kadagiti lugar manipud iti Meta, Microsoft ken dadduma pay a nakalukat a nagtaudan.",
-  "aboutP2": "Kadagitoy, {cat} a lugar ti nailista iti Overture kas Romano Katoliko a pagdaydayawan. Ti dadduma pay a {name} nailista laeng kas Kristiano a pagdaydayawan, ket nairaman dagitoy gapu ta nalawag a Katoliko ti naganda (kas iti “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Adda nota ti detalyeda.",
+  "aboutP1": "Ipakita ti globo ti <b>{n}</b> a Katoliko a simbaan, kapilia, santuario, basilika ken katedral. Tunggal pin ket maysa a pasdek ti simbaan a nailista a Katoliko iti {a1}OpenStreetMap{end}, ti nawaya a mapa ti lubong nga inaramid dagiti boluntario (datos manipud {osm}).",
+  "aboutP2": "Dagiti numero ti telepono ken website ti {cat} kadagitoy ket naggapu iti {a1}dataset dagiti lugar ti Overture Maps{end} (release {release}), a mangurnong kadagiti lugar manipud Meta, Microsoft ken dadduma pay a nawaya a taudan. Ti dadduma a {osm} ket naggapu laeng iti OpenStreetMap.",
   "aboutP3": "Awan pay ti nakalukat a datos a mangiraman iti tunggal parokia. Kanayonan ti datos iti Amerika ken Laud nga Europa, ken kurang iti sumagmamano a paset ti Africa ken Asia, a sadiay adu a parokia ti awan pay iti mapa. Dadduma nga entry ket mabalin a doble, opisina wenno nairikepen a pasdek. No lukatam ti simbaan, birokenna ti panid ti ladawanna iti {a1}Wikimedia Commons{end} ken Wikipedia babaen ti lugar ken nagan, a kadua ti nagan ti nangala ti ladawan. Dagiti simbaan nga awan ladawanna ket mangipakita iti drowing. Tunggal kard ket addaan link iti ad-adu a ladawan, video ken Street View.",
-  "aboutCredits": "Datos ti lugar © Overture Maps Foundation, CDLA Permissive 2.0. Batayan a mapa Natural Earth (publiko a domain). Mapa babaen ti MapLibre.",
+  "aboutCredits": "Lokasion dagiti simbaan © dagiti kontributor ti OpenStreetMap, ODbL. Datos dagiti lugar © Overture Maps Foundation, CDLA Permissive 2.0. Batayan a mapa manipud Natural Earth (publiko a domain). Naiguhit ti mapa babaen ti MapLibre.",
   "close": "Irikep",
   "unknown": "Di ammo",
   "dirN": "Am",
@@ -519,5 +519,8 @@
   "clearSearch": "Punasen ti Birukem",
   "nm_c": "Simbaan Katoliko ti {x}",
   "nm_k": "Katedral ti {x}",
-  "nm_s": "Santuario ti {x}"
+  "nm_s": "Santuario ti {x}",
+  "sourceOsm": "Taudan: dagiti kontributor ti OpenStreetMap.",
+  "sourceOsmUpdated": "Taudan: dagiti kontributor ti OpenStreetMap, nakita idi {date}.",
+  "listedOsm": "Nailista a Katoliko iti OpenStreetMap"
 }

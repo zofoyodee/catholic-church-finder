@@ -18,7 +18,7 @@
   "home": "Miverina amin'ny tany manontolo",
   "random": "Jereo fiangonana iray",
   "aboutData": "Momba ny angona",
-  "footCredit": "Toerana © Overture Maps Foundation · Sarintany fototra Natural Earth, arabe © mpandray anjara OpenStreetMap amin'ny alalan'ny OpenFreeMap",
+  "footCredit": "Fiangonana © mpandray anjara OpenStreetMap, antsipiriany © Overture Maps Foundation · Sarintany fototra Natural Earth, arabe amin’ny OpenFreeMap",
   "nearYou": "Akaikinao",
   "closeNear": "Hidio ny fiangonana akaiky",
   "favorites": "Tiana",
@@ -133,10 +133,10 @@
   "matches_one": "Valiny {n}. Ampio tanàna hanafohezana.",
   "matches_other": "Valiny {n}. Ampio tanàna hanafohezana.",
   "matchesMax": "Valiny mihoatra ny 400. Ampio tanàna hanafohezana.",
-  "aboutP1": "Ity tany ity dia mampiseho fiangonana katolika, trano fivavahana kely, toerana masina, basilika ary katedraly <b>{n}</b>. Avy amin'ny {a1}angona toerana Overture Maps{end} (famoahana {release}) izy ireo, izay manangona toerana avy amin'ny Meta, Microsoft ary loharano malalaka hafa.",
-  "aboutP2": "Amin'ireo, toerana {cat} no voasoratra ao amin'ny Overture ho toeram-pivavahana katolika romana. Ny {name} hafa dia voasoratra ho toeram-pivavahana kristianina fotsiny, ary nampidirina satria mazava fa katolika ny anarany (ohatra “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Misy fanamarihana ny antsipirian'izy ireo.",
+  "aboutP1": "Mampiseho fiangonana, trano fivavahana kely, toerana masina, basilika ary katedraly katolika <b>{n}</b> ity tany ity. Ny marika tsirairay dia trano fiangonana voasoratra ho katolika ao amin’ny {a1}OpenStreetMap{end}, sarintanin’izao tontolo izao maimaim-poana ataon’ny mpilatsaka an-tsitrapo (angona tamin’ny {osm}).",
+  "aboutP2": "Ny laharan-telefaona sy tranonkala {cat} amin’ireo dia avy amin’ny {a1}angon-toerana Overture Maps{end} (famoahana {release}), izay manangona toerana avy amin’i Meta, Microsoft sy loharano misokatra hafa. Ny {osm} hafa dia avy amin’ny OpenStreetMap ihany.",
   "aboutP3": "Mbola tsy misy angona malalaka ahitana ny paroasy rehetra. Feno indrindra any Amerika sy Eoropa Andrefana ny angona, ary vitsy any amin'ny faritra sasany any Afrika sy Azia, izay mbola tsy eo amin'ny sarintany ny paroasy maro. Ny sasany mety ho in-droa, birao, na trano efa nakatona. Rehefa manokatra fiangonana ianao, dia mitady ny sariny ao amin'ny {a1}Wikimedia Commons{end} sy Wikipedia ny pejy araka ny toerana sy ny anarana, ary manonona ny mpaka sary. Ny fiangonana tsy manana sary dia mampiseho sary vita tanana. Ny karatra tsirairay dia manana rohy mankany amin'ny sary, horonantsary ary Street View hafa.",
-  "aboutCredits": "Angona toerana © Overture Maps Foundation, CDLA Permissive 2.0. Sarintany fototra Natural Earth (an'ny besinimaro). Sarintany avy amin'ny MapLibre.",
+  "aboutCredits": "Toeran’ny fiangonana © mpandray anjara OpenStreetMap, ODbL. Angon-toerana © Overture Maps Foundation, CDLA Permissive 2.0. Sarintany fototra avy amin’ny Natural Earth (fananam-bahoaka). Sarintany nataon’ny MapLibre.",
   "close": "Hidio",
   "unknown": "Tsy fantatra",
   "dirN": "Av",
@@ -519,5 +519,8 @@
   "clearSearch": "Fafao ny Fikarohana",
   "nm_c": "Fiangonana Katolika {x}",
   "nm_k": "Katedralin’i {x}",
-  "nm_s": "Toerana masin’i {x}"
+  "nm_s": "Toerana masin’i {x}",
+  "sourceOsm": "Loharano: mpandray anjara OpenStreetMap.",
+  "sourceOsmUpdated": "Loharano: mpandray anjara OpenStreetMap, nojerena tamin’ny {date}.",
+  "listedOsm": "Voasoratra ho katolika ao amin’ny OpenStreetMap"
 }

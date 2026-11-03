@@ -18,7 +18,7 @@
   "home": "Bweleleni ku calo conse",
   "random": "Moneni icalici ili lyonse",
   "aboutData": "Pa fyebo",
-  "footCredit": "Ifya ncende © Overture Maps Foundation · Mapu Natural Earth, imisebo © abaafwilisha OpenStreetMap ukupitila mu OpenFreeMap",
+  "footCredit": "Ifyalici © abaafwilisha OpenStreetMap, ifyebo © Overture Maps Foundation · Imapu ya ntendekelo Natural Earth, imisebo ukupitila mu OpenFreeMap",
   "nearYou": "Mupepi na imwe",
   "closeNear": "Isaleni amacalici ayapalamina",
   "favorites": "Ifyo mwatemwa",
@@ -133,10 +133,10 @@
   "matches_one": "Icasukwa {n}. Lundenipo umusumba pa kucefyako.",
   "matches_other": "Ifyasukwa {n}. Lundenipo umusumba pa kucefyako.",
   "matchesMax": "Ifyasukwa ukucila 400. Lundenipo umusumba pa kucefyako.",
-  "aboutP1": "Ici calo cilelanga amacalici ya Katolika, amacapeli, incende shishila, babasilika na bakatedrali <b>{n}</b>. Fyafuma ku {a1}fyebo fya ncende fya Overture Maps{end} (ubupya {release}), ifikuula incende ukufuma ku Meta, Microsoft na fimbi ifyaisuka.",
-  "aboutP2": "Muli ifi, incende {cat} shalembwa mu Overture nga incende sha kupepelamo isha Roma Katolika. Ishimbi {name} shalembwa fye nga incende sha kupepelamo isha Bena Kristu, kabili shalundwapo pantu amashina yasho yalelanga bwino ukuti ni sha Katolika (ica kumwenako “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Ifyebo fyasho fyalikwata icishibisho.",
+  "aboutP1": "Icalo ici cilelanga ifyalici, utwalici utunono, ifyakupepelamo, amabasilika na makatedrali ya Katolika <b>{n}</b>. Akashilo konse ng’anda ya calici iyalembwa nga iya Katolika pa {a1}OpenStreetMap{end}, imapu ya calo iya fye iipangwa na bantu abaitemenwe (ifyebo fya {osm}).",
+  "aboutP2": "Inambala sha foni ne fifulo fya pa intaneti fya {cat} muli fyo fifuma mu {a1}cilongelo ca fifulo ica Overture Maps{end} (ukufumishiwa {release}), icilonganya ifyifulo ukufuma ku Meta, Microsoft na kumbi ukwaisuka. Ifyashala {osm} fifuma fye ku OpenStreetMap.",
   "aboutP3": "Tapali ifyebo ifyaisuka ifyakwata amaparishi yonse. Ifyebo fyafula mu Amerika na ku Masamba ya Bulaya, kabili fyacepa mu ncende shimo isha Afrika na Asia, uko amaparishi ayengi tayalaba pa mapu. Fimo kuti fyalembwa imiku ibili, ama ofeshi, nangu amayanda ayaisalwa. Ilyo mwafungula icalici, ibula lilefwaya icikope calyo pa {a1}Wikimedia Commons{end} na Wikipedia ukulingana ne ncende ne shina, kabili lilelumbula uwakopele. Amacalici ayashikwete icikope yalelanga icikope icalembwa ku minwe. Kadi iliyonse yalikwata ama link ku fikope, amavidio na Street View fimbi.",
-  "aboutCredits": "Ifyebo fya ncende © Overture Maps Foundation, CDLA Permissive 2.0. Mapu Natural Earth (ya bantu bonse). Mapu ya MapLibre.",
+  "aboutCredits": "Ifyifulo fya fyalici © abaafwilisha OpenStreetMap, ODbL. Ifyebo fya fifulo © Overture Maps Foundation, CDLA Permissive 2.0. Imapu ya ntendekelo ukufuma ku Natural Earth (ya bantu bonse). Imapu yalembwa na MapLibre.",
   "close": "Isaleni",
   "unknown": "Tacaishibikwa",
   "dirN": "N",
@@ -519,5 +519,8 @@
   "clearSearch": "Fumyapo Ifyo Mulefwaya",
   "nm_c": "Icalici lya Katolika ilya {x}",
   "nm_k": "Katedrali ya {x}",
-  "nm_s": "Incende ishila iya {x}"
+  "nm_s": "Incende ishila iya {x}",
+  "sourceOsm": "Ukwafuma: abaafwilisha OpenStreetMap.",
+  "sourceOsmUpdated": "Ukwafuma: abaafwilisha OpenStreetMap, cafwailishiwe pa {date}.",
+  "listedOsm": "Iyalembwa nga iya Katolika pa OpenStreetMap"
 }

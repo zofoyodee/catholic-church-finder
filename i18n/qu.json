@@ -18,7 +18,7 @@
   "home": "Tukuy tiqsimuyuman kutiy",
   "random": "Mayqin iglesiatapas qhaway",
   "aboutData": "Willakuykunamanta",
-  "footCredit": "Maykunapas © Overture Maps Foundation · Mapa Natural Earth, ñankuna © OpenStreetMap yanapaqkuna OpenFreeMapnintakama",
+  "footCredit": "Iglesiakuna © OpenStreetMap yanapaqkuna, astawan willakuy © Overture Maps Foundation · Tiqsi mapa Natural Earth, ñankuna OpenFreeMap nisqawan",
   "nearYou": "Qayllaykipi",
   "closeNear": "Qayllapi iglesiakunata wichqay",
   "favorites": "Munasqakuna",
@@ -133,10 +133,10 @@
   "matches_one": "{n} tarisqa. Llaqtata yapay pisichinaykipaq.",
   "matches_other": "{n} tarisqakuna. Llaqtata yapay pisichinaykipaq.",
   "matchesMax": "400-manta aswan tarisqakuna. Llaqtata yapay pisichinaykipaq.",
-  "aboutP1": "Kay tiqsimuyu <b>{n}</b> katolika iglesiakunata, capillakunata, santuariokunata, basilicakunata, catedralkunatapas rikuchin. {a1}Overture Maps maykunap willakuyninmanta{end} (version {release}) hamunku, chayqa Meta, Microsoft, huk kichasqa maymantakunamantapas maykunata huñun.",
-  "aboutP2": "Chaykunamanta, {cat} maykuna Overturepi católica romana yupaychana wasi hina qillqasqa kanku. Huk {name} maykunaqa cristiano yupaychana wasi hinalla qillqasqa, sutinkuna sut'ita katolika kasqanta rikuchiptin yapasqa kanku (ahinataq “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Willakuyninkunapi huk willay kan.",
+  "aboutP1": "Kay pacha muyuqa <b>{n}</b> katolika iglesiakunata, capillakunata, santuariokunata, basilicakunata, catedralkunatapas rikuchin. Sapa unanchaqa {a1}OpenStreetMap{end} nisqapi katolika hina qillqasqa iglesia wasim, voluntariokunaq ruwasqan qispi pacha mapa ({osm} willakuykuna).",
+  "aboutP2": "{cat} iglesiakunaq telefonnin web raphinkunapas {a1}Overture Maps llaqtakuna huñusqanmanta{end} hamun ({release} lluqsiy), Meta, Microsoft, huk kichasqa pukyukunamantapas huñun. Wakin {osm} OpenStreetMapmanta sapallan hamun.",
   "aboutP3": "Manaraq kichasqa willakuykuna tukuy parroquiakunata hap'inchu. Américapi, Inti Chinkay Europapipas willakuykuna aswan hunt'a, Áfricap Asiap wakin suyunkunapitaq pisilla, chaypi achka parroquiakuna manaraq mapapi kanchu. Wakinqa iskay kuti qillqasqa, oficina, wichqasqa wasi ima kanman. Iglesiata kichaptiyki, raphiqa siq'inta {a1}Wikimedia Commons{end}-pi Wikipediapipas maypi kasqanmanta sutinmantawan maskan, siq'iqpa sutinta willan. Mana siq'iyuq iglesiakunaqa dibujota rikuchinku. Sapa tarjeta astawan siq'ikunaman, videokunaman, Street Viewman linkniyuq.",
-  "aboutCredits": "Maykunap willakuynin © Overture Maps Foundation, CDLA Permissive 2.0. Mapa Natural Earth (llapanpaq). Mapa MapLibrewan.",
+  "aboutCredits": "Iglesiakunaq maypichus kasqan © OpenStreetMap yanapaqkuna, ODbL. Llaqtakunaq willakuynin © Overture Maps Foundation, CDLA Permissive 2.0. Tiqsi mapa Natural Earth (llapanpaq). Mapataqa MapLibre nisqawan siqisqa.",
   "close": "Wichqay",
   "unknown": "Mana yachasqa",
   "dirN": "N",
@@ -519,5 +519,8 @@
   "clearSearch": "Maskayta Pichay",
   "nm_c": "Iglesia Católica {x}",
   "nm_k": "Catedral {x}",
-  "nm_s": "Santuario {x}"
+  "nm_s": "Santuario {x}",
+  "sourceOsm": "Pukyu: OpenStreetMap yanapaqkuna.",
+  "sourceOsmUpdated": "Pukyu: OpenStreetMap yanapaqkuna, {date} punchawpi qhawasqa.",
+  "listedOsm": "OpenStreetMap nisqapi katolika hina qillqasqa"
 }

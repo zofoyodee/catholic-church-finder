@@ -18,7 +18,7 @@
   "home": "Cooka thĩ yothe",
   "random": "Rora kanitha o wothe",
   "aboutData": "Ũhoro wa data",
-  "footCredit": "Kũndũ © Overture Maps Foundation · Mapu Natural Earth, barabara © andũ arĩa mateithĩtie OpenStreetMap na njĩra ya OpenFreeMap",
+  "footCredit": "Makanitha © atethia a OpenStreetMap, ũhoro © Overture Maps Foundation · Mũhianano wa thĩ Natural Earth, barabara kũgerera OpenFreeMap",
   "nearYou": "Hakuhĩ nawe",
   "closeNear": "Hinga makanitha ma hakuhĩ",
   "favorites": "Marĩa wendete",
@@ -133,10 +133,10 @@
   "matches_one": "Macokio {n}. Ongerera itũũra inene nĩguo ũnyihie.",
   "matches_other": "Macokio {n}. Ongerera itũũra inene nĩguo ũnyihie.",
   "matchesMax": "Macokio makĩria ma 400. Ongerera itũũra inene nĩguo ũnyihie.",
-  "aboutP1": "Thĩ ĩno nĩĩronania makanitha ma Katholiki, machapeli, kũndũ kwamũre, mabasilika na makathedrali <b>{n}</b>. Moimĩte {a1}data ya kũndũ ya Overture Maps{end} (gũthondekwo {release}), ĩrĩa ĩrongagia kũndũ kuuma Meta, Microsoft na kũndũ kũngĩ kũhingũre.",
-  "aboutP2": "Thĩinĩ wamo, kũndũ {cat} nĩkwandĩkĩtwo Overture ta kũndũ gwa kũhoya kwa Katholiki wa Roma. Kũngĩ {name} kwandĩkĩtwo tu ta kũndũ gwa kũhoya kwa Akristiano, na nĩkwongereirwo tondũ marĩĩtwa makuo nĩmonanagia wega atĩ nĩ ma Katholiki (ta “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Ũhoro wakuo nĩ ũrĩ na kĩmenyithia.",
+  "aboutP1": "Gĩkũndi gĩkĩ kĩonanagia makanitha, tũkanitha, kũndũ kwa gĩthathaiya, basilika na makanitha manene ma Gĩkatholiki <b>{n}</b>. O kĩmenyithia nĩ nyũmba ya kanitha ĩandĩkĩtwo ta ya Gĩkatholiki kũrĩ {a1}OpenStreetMap{end}, mũhianano wa thĩ wa tũhũ ũrĩa ũthondekagwo nĩ andũ meyendeire (data ya {osm}).",
+  "aboutP2": "Namba cia thimũ na tovuti cia {cat} ciumĩte {a1}mũigana wa kũndũ wa Overture Maps{end} (gĩcunjĩ {release}), ũrĩa ũcookanagĩrĩria kũndũ kuuma Meta, Microsoft na kũndũ kũngĩ kũhingũre. Ĩrĩa ĩngĩ {osm} yumĩte OpenStreetMap o yiki.",
   "aboutP3": "Gũtirĩ data ĩhingũre ĩrĩ na maparishi mothe. Data nĩ nyingĩ Amerika na Ithũĩro rĩa Ũrũaya, na nĩ nini kũndũ kũmwe kwa Afrika na Asia, kũrĩa maparishi maingĩ matarĩ mapu-inĩ. Imwe no ĩkorwo yandĩkĩtwo keerĩ, ofici, kana nyũmba ihingĩtwo. Ũngĩhingũra kanitha, rũrũa nĩrũcaragia mbica yaguo {a1}Wikimedia Commons{end} na Wikipedia kũringana na kũndũ na rĩĩtwa, na rũkagweta mũgucia mbica. Makanitha matarĩ na mbica nĩmonanagia mbica ya kũcorwo. O kadi nĩ ĩrĩ na link cia mbica, video na Street View ingĩ.",
-  "aboutCredits": "Data ya kũndũ © Overture Maps Foundation, CDLA Permissive 2.0. Mapu Natural Earth (ya andũ othe). Mapu ya MapLibre.",
+  "aboutCredits": "Kũndũ kwa makanitha © atethia a OpenStreetMap, ODbL. Data ya kũndũ © Overture Maps Foundation, CDLA Permissive 2.0. Mũhianano wa thĩ kuuma Natural Earth (wa andũ othe). Mũhianano ũcũrĩtwo na MapLibre.",
   "close": "Hinga",
   "unknown": "Ndĩĩkaine",
   "dirN": "N",
@@ -519,5 +519,8 @@
   "clearSearch": "Huragia Ũcaria",
   "nm_c": "Kanitha Gatholiki wa {x}",
   "nm_k": "Kathedrali ya {x}",
-  "nm_s": "Kũndũ kwamũre kwa {x}"
+  "nm_s": "Kũndũ kwamũre kwa {x}",
+  "sourceOsm": "Kũrĩa yumĩte: atethia a OpenStreetMap.",
+  "sourceOsmUpdated": "Kũrĩa yumĩte: atethia a OpenStreetMap, ĩrorĩtwo {date}.",
+  "listedOsm": "Ĩandĩkĩtwo ta ya Gĩkatholiki kũrĩ OpenStreetMap"
 }

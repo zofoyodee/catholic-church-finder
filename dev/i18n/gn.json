@@ -18,7 +18,7 @@
   "home": "Ejevy yvy apu'a pukukuépe",
   "random": "Ehecha oimeraẽ tupao",
   "aboutData": "Marandu rehegua",
-  "footCredit": "Tendakuéra © Overture Maps Foundation · Yvyra'ã Natural Earth, tape © OpenStreetMap pytyvõhára OpenFreeMap rupive",
+  "footCredit": "Tupao © OpenStreetMap pytyvõhára, mba’ekuaarã © Overture Maps Foundation · Yvyra’ã Natural Earth, tape OpenFreeMap rupive",
   "nearYou": "Nde ykére",
   "closeNear": "Emboty tupao hi'aguĩva",
   "favorites": "Rehayhuvéva",
@@ -133,10 +133,10 @@
   "matches_one": "{n} jejuhu. Embojoapy táva emomichĩ hag̃ua.",
   "matches_other": "{n} jejuhu. Embojoapy táva emomichĩ hag̃ua.",
   "matchesMax": "400 ári jejuhu. Embojoapy táva emomichĩ hag̃ua.",
-  "aboutP1": "Ko yvy apu'a ohechauka <b>{n}</b> tupao katólika, tupaomi, santuario, basílica ha catedral. Ou {a1}Overture Maps tendakuéra marandúgui{end} (versión {release}), ombyatýva tendakuéra Meta, Microsoft ha ambue ypykue ijurujáva guive.",
-  "aboutP2": "Ko'ãva apytégui, {cat} tenda ojehai Overture-pe tupao katólika romana ramo. Ambue {name} ojehai tupao cristiano ramónte, ha oñemoĩ ko'ápe héra ohechaukágui hesakã porãme katólika ha'eha (techapyrã “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Imba'emimi oguereko peteĩ jehaipy.",
+  "aboutP1": "Ko yvy apu’a ohechauka <b>{n}</b> tupao, tupaorãi, santuario, basílica ha catedral katólika. Peteĩteĩ jehechaukarã ha’e tupao ojehaíva katólika ramo {a1}OpenStreetMap{end}-pe, yvy mapa sãsõ ojapóva voluntario kuéra ({osm} mba’ekuaarã).",
+  "aboutP2": "{cat} tupao pumbyry ha ñanduti renda ou {a1}Overture Maps tendakuéra aty{end} guive ({release} ñembohasa), ombyatýva tenda Meta, Microsoft ha ambue ypykue ijurujáva guive. Umi ambue {osm} ou OpenStreetMap-gui añoite.",
   "aboutP3": "Ndaipóri gueteri marandu ijurujáva oguerekóva opa parroquia. Marandu henyhẽve América ha Europa Kuarahyreike gotyo, ha michĩve África ha Asia rendaguépe, oĩháme heta parroquia ndaipóri gueteri yvyra'ãme. Oĩ ikatúva ojehai mokõi jey, ofisina, térã óga oñembotýva. Reipe'a jave peteĩ tupao, kuatiarogue oheka ta'anga {a1}Wikimedia Commons{end} ha Wikipedia-pe tenda ha téra rupive, ha omombe'u ta'angahára réra. Tupao ndoguerekóiva ta'anga ohechauka ta'anga ojejapóva pópe. Opa tarjeta oguereko joajuha hetave ta'anga, video ha Street View-pe.",
-  "aboutCredits": "Tendakuéra marandu © Overture Maps Foundation, CDLA Permissive 2.0. Yvyra'ã Natural Earth (opavavépe g̃uarã). Yvyra'ã MapLibre rupive.",
+  "aboutCredits": "Tupao renda © OpenStreetMap pytyvõhára, ODbL. Tenda mba’ekuaarã © Overture Maps Foundation, CDLA Permissive 2.0. Yvyra’ã Natural Earth (opavavéva mba’e). Mapa ojehai MapLibre ndive.",
   "close": "Emboty",
   "unknown": "Ojekuaa'ỹva",
   "dirN": "Yv",
@@ -519,5 +519,8 @@
   "clearSearch": "Mbogue Jeheka",
   "nm_c": "Tupao Católica {x}",
   "nm_k": "Catedral {x}",
-  "nm_s": "Santuario {x}"
+  "nm_s": "Santuario {x}",
+  "sourceOsm": "Ypykue: OpenStreetMap pytyvõhára.",
+  "sourceOsmUpdated": "Ypykue: OpenStreetMap pytyvõhára, ojehecha {date}.",
+  "listedOsm": "Ojehai katólika ramo OpenStreetMap-pe"
 }

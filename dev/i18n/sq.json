@@ -18,7 +18,7 @@
   "home": "Kthehu te globi i plotë",
   "random": "Vizito një kishë të rastësishme",
   "aboutData": "Rreth të dhënave",
-  "footCredit": "Vendet © Overture Maps Foundation · Harta bazë Natural Earth, rrugët © kontribuuesit e OpenStreetMap përmes OpenFreeMap",
+  "footCredit": "Kishat © kontribuuesit e OpenStreetMap, hollësitë © Overture Maps Foundation · Harta bazë Natural Earth, rrugët përmes OpenFreeMap",
   "nearYou": "Pranë jush",
   "closeNear": "Mbyll kishat pranë",
   "favorites": "Të preferuarat",
@@ -134,10 +134,10 @@
   "matches_one": "{n} përputhje. Shtoni një qytet për ta ngushtuar.",
   "matches_other": "{n} përputhje. Shtoni një qytet për ta ngushtuar.",
   "matchesMax": "Mbi 400 përputhje. Shtoni një qytet për ta ngushtuar.",
-  "aboutP1": "Globi tregon <b>{n}</b> kisha, kapela, shenjtërore, bazilika dhe katedrale katolike. Ato vijnë nga {a1}grupi i vendeve Overture Maps{end} (versioni {release}), që mbledh vende nga Meta, Microsoft dhe burime të tjera të hapura.",
-  "aboutP2": "{cat} vende janë regjistruar në Overture si vende adhurimi katolike romake. Të tjera {name} janë regjistruar vetëm si vende adhurimi të krishtera, dhe globi i përfshin sepse emrat e tyre janë qartë katolikë (p.sh. “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Ato kanë një shënim në hollësi.",
+  "aboutP1": "Globi tregon <b>{n}</b> kisha, kapela, shenjtërore, bazilika dhe katedrale katolike. Çdo shenjë është një ndërtesë kishe e regjistruar si katolike në {a1}OpenStreetMap{end}, harta e lirë e botës e bërë nga vullnetarë (të dhëna nga {osm}).",
+  "aboutP2": "Telefonat dhe faqet e internetit për {cat} prej tyre vijnë nga {a1}grupi i vendeve Overture Maps{end} (botimi {release}), që mbledh vende nga Meta, Microsoft dhe burime të tjera të hapura. Të tjerat {osm} vijnë vetëm nga OpenStreetMap.",
   "aboutP3": "Ende asnjë grup i hapur të dhënash nuk përfshin çdo famulli. Mbulimi është më i mirë në Amerikë dhe Evropën Perëndimore dhe më i dobët në pjesë të Afrikës dhe Azisë, ku shumë famulli ende s'janë në hartë. Disa regjistrime mund të jenë dyfishe, zyra ose ndërtesa të mbyllura. Kur hapni një kishë, faqja kërkon një foto të saj në {a1}Wikimedia Commons{end} dhe Wikipedia sipas vendit dhe emrit, duke përmendur fotografin. Kishat pa foto kanë një vizatim. Nga çdo kartë hapen më shumë foto, video dhe Street View.",
-  "aboutCredits": "Të dhënat e vendeve © Overture Maps Foundation, CDLA Permissive 2.0. Harta bazë nga Natural Earth (domen publik). Vizatimi i hartës nga MapLibre.",
+  "aboutCredits": "Vendndodhjet e kishave © kontribuuesit e OpenStreetMap, ODbL. Të dhënat e vendeve © Overture Maps Foundation, CDLA Permissive 2.0. Harta bazë Natural Earth (domen publik). Vizatimi i hartës me MapLibre.",
   "close": "Mbyll",
   "unknown": "E panjohur",
   "dirN": "V",
@@ -525,5 +525,8 @@
   "clearSearch": "Pastro Kërkimin",
   "nm_c": "Kisha Katolike {x}",
   "nm_k": "Katedralja {x}",
-  "nm_s": "Shenjtërorja {x}"
+  "nm_s": "Shenjtërorja {x}",
+  "sourceOsm": "Burimi: kontribuuesit e OpenStreetMap.",
+  "sourceOsmUpdated": "Burimi: kontribuuesit e OpenStreetMap, kontrolluar më {date}.",
+  "listedOsm": "E regjistruar si katolike në OpenStreetMap"
 }

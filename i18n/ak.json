@@ -60,7 +60,7 @@
   "micBlocked": "Wɔasi maekrofon no kwan. Ma kwan wɔ browsa nhyehyɛe mu na wode wo nne ahwehwɛ.",
   "voiceFailed": "Nne nhwehwɛmu nyɛ adwuma mprempren. Yɛsrɛ wo, kyerɛw nea worehwehwɛ no.",
   "aboutData": "Fa nsɛm no ho",
-  "footCredit": "Mmeae © Overture Maps Foundation · Asase mfonini fapem Natural Earth, akwan © OpenStreetMap boafo, ɛnam OpenFreeMap so",
+  "footCredit": "Asɔredan © OpenStreetMap boafo, nsɛm pii © Overture Maps Foundation · Asase mfonini fapem Natural Earth, akwan ɛnam OpenFreeMap so",
   "nearYou": "Ɛbɛn wo",
   "closeNear": "To asɔredan a ɛbɛn no mu",
   "favorites": "Nea wopɛ",
@@ -209,10 +209,10 @@
   "matches_one": "Nea afi mu aba {n}. Fa kurow din ka ho na nhwehwɛmu no nyɛ ketewa.",
   "matches_other": "Nea afi mu aba {n}. Fa kurow din ka ho na nhwehwɛmu no nyɛ ketewa.",
   "matchesMax": "Nea afi mu aba boro 400. Fa kurow din ka ho na nhwehwɛmu no nyɛ ketewa.",
-  "aboutP1": "Asase bɔɔl no kyerɛ Katolek asɔredan, asɔrefi nketewa, kronkronbea, basilika ne Asɔre Akɛse <b>{n}</b> a efi {a1}Overture Maps mmeae nsɛm{end} (nea wɔde baa {release}) mu, a ɛboaboa mmeae ano fi Meta, Microsoft ne fibea afoforo a ɛda hɔ ma obiara.",
-  "aboutP2": "Mmeae {cat} na wɔakyerɛw wɔ Overture sɛ Roma Katolek ɔsom mmeae. Afoforo {name} na wɔakyerɛw sɛ Kristofo ɔsom mmeae kɛkɛ; asase bɔɔl no de ka ho efisɛ wɔn din da no adi pefee sɛ ɛyɛ Katolek (sɛ “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Wɔn nsɛm wɔ nkyerɛwee bi.",
+  "aboutP1": "Wiase yi kyerɛ Katolek asɔredan, nkyɛmu asɔredan, kronkronbea, basilika ne katedral <b>{n}</b>. Agyiraehyɛde biara yɛ asɔredan a wɔakyerɛw sɛ Katolek wɔ {a1}OpenStreetMap{end} so, wiase asase mfonini a ɛyɛ kwa a ɛfiri wɔn a wɔyɛ adwuma kwa nkyɛn ({osm} data).",
+  "aboutP2": "Wɔn mu {cat} telefon nɔma ne wɛbsaet firi {a1}Overture Maps mmeae nhyehyɛe{end} mu (ɔfa {release}), a ɛboaboa mmeae ano firi Meta, Microsoft ne afoforo a abue mu. Ɛkaa {osm} no firi OpenStreetMap nko ara.",
   "aboutP3": "Nsɛm a ɛda hɔ ma obiara a asɔrekuw biara wom nni hɔ mprempren. Ɛyɛ pa wɔ Amerika ne Atɔe Europa, na ɛsua wɔ Afrika ne Asia fa bi, baabi a asɔrekuw pii nni asase mfonini so mprempren. Nkyerɛwee bi betumi ayɛ mmɔho, adwumayɛbea anaa adan a wɔato mu. Sɛ wobue asɔredan bi a, krataafa no fa baabi ne din hwehwɛ ne mfonini wɔ {a1}Wikimedia Commons{end} ne Wikipedia so, na ɛkyerɛ nea ɔtwaa mfonini no. Asɔredan a mfonini nni hɔ no wɔ mfonini a wɔasiesie. Krataa biara tumi bue mfonini foforo, video ne Street View.",
-  "aboutCredits": "Mmeae nsɛm © Overture Maps Foundation, CDLA Permissive 2.0. Asase mfonini fapem Natural Earth (ɛyɛ obiara dea). Wɔde MapLibre na ɛkyerɛ asase mfonini no.",
+  "aboutCredits": "Asɔredan beae © OpenStreetMap boafo, ODbL. Mmeae data © Overture Maps Foundation, CDLA Permissive 2.0. Asase mfonini fapem firi Natural Earth (ɔmanfo dea). MapLibre na ɛtwee asase mfonini no.",
   "close": "To mu",
   "unknown": "Wonnim",
   "dirN": "At",
@@ -527,5 +527,8 @@
   "color_rose": "ahosu-kɔkɔɔ",
   "color_white": "fitaa ne sika kɔkɔɔ",
   "color_red": "kɔkɔɔ",
-  "massNoteTip": "Yɛkenkan Omisa ne Bɔnefakyɛ bere fi asɔrekuw wɛbsaet so, enti yetumi yiyi asɔredan a wɔwɔ wɛbsaet a ɛbɔ ho dawuru nko ara"
+  "massNoteTip": "Yɛkenkan Omisa ne Bɔnefakyɛ bere fi asɔrekuw wɛbsaet so, enti yetumi yiyi asɔredan a wɔwɔ wɛbsaet a ɛbɔ ho dawuru nko ara",
+  "sourceOsm": "Fibea: OpenStreetMap boafo.",
+  "sourceOsmUpdated": "Fibea: OpenStreetMap boafo, wɔhwɛɛ no {date}.",
+  "listedOsm": "Wɔakyerɛw sɛ Katolek wɔ OpenStreetMap so"
 }

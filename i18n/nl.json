@@ -18,7 +18,7 @@
   "home": "Terug naar de hele wereldbol",
   "random": "Een willekeurige kerk bezoeken",
   "aboutData": "Over de gegevens",
-  "footCredit": "Plaatsen © Overture Maps Foundation · Basiskaart Natural Earth, straten © OpenStreetMap-bijdragers via OpenFreeMap",
+  "footCredit": "Kerken © OpenStreetMap-bijdragers, details © Overture Maps Foundation · Basiskaart Natural Earth, straten via OpenFreeMap",
   "nearYou": "In uw buurt",
   "closeNear": "Kerken in de buurt sluiten",
   "favorites": "Favorieten",
@@ -134,10 +134,10 @@
   "matches_one": "{n} resultaat. Voeg een plaats toe om te verfijnen.",
   "matches_other": "{n} resultaten. Voeg een plaats toe om te verfijnen.",
   "matchesMax": "Meer dan 400 resultaten. Voeg een plaats toe om te verfijnen.",
-  "aboutP1": "De wereldbol toont <b>{n}</b> katholieke kerken, kapellen, bedevaartsoorden, basilieken en kathedralen. Ze komen uit de {a1}plaatsendataset van Overture Maps{end} (versie {release}), die plaatsen van Meta, Microsoft en andere open bronnen samenbrengt.",
-  "aboutP2": "{cat} plaatsen staan in Overture als rooms-katholieke gebedshuizen. Nog eens {name} staan er alleen als christelijke gebedshuizen; de wereldbol neemt ze op omdat hun naam duidelijk katholiek is (bijvoorbeeld ‘Parroquia’, ‘Paróquia’, ‘Basilica’, ‘Nossa Senhora’). Hun details vermelden dat.",
+  "aboutP1": "De wereldbol toont <b>{n}</b> katholieke kerken, kapellen, heiligdommen, basilieken en kathedralen. Elke markering is een kerkgebouw dat als katholiek staat op {a1}OpenStreetMap{end}, de vrije wereldkaart gemaakt door vrijwilligers (gegevens van {osm}).",
+  "aboutP2": "Telefoonnummers en websites van {cat} ervan komen uit de {a1}plaatsendataset van Overture Maps{end} (versie {release}), die plaatsen van Meta, Microsoft en andere open bronnen verzamelt. De overige {osm} komen alleen uit OpenStreetMap.",
   "aboutP3": "Nog geen enkele open dataset bevat elke parochie. De dekking is het best in Amerika en West-Europa en dunner in delen van Afrika en Azië, waar veel parochies nog niet in kaart zijn gebracht. Sommige vermeldingen kunnen dubbel zijn, kantoren of gesloten gebouwen. Als u een kerk opent, zoekt de pagina een foto op {a1}Wikimedia Commons{end} en Wikipedia, op locatie en naam, met vermelding van de fotograaf. Kerken zonder foto houden een getekend tafereel. Meer foto's, video's en Street View openen vanaf elke kaart.",
-  "aboutCredits": "Plaatsgegevens © Overture Maps Foundation, CDLA Permissive 2.0. Basiskaart van Natural Earth (publiek domein). Kaartweergave door MapLibre.",
+  "aboutCredits": "Kerklocaties © OpenStreetMap-bijdragers, ODbL. Plaatsgegevens © Overture Maps Foundation, CDLA Permissive 2.0. Basiskaart van Natural Earth (publiek domein). Kaartweergave met MapLibre.",
   "close": "Sluiten",
   "unknown": "Onbekend",
   "dirN": "N",
@@ -527,5 +527,8 @@
   "clearSearch": "Zoekopdracht Wissen",
   "nm_c": "Katholieke kerk {x}",
   "nm_k": "Kathedraal {x}",
-  "nm_s": "Bedevaartsoord {x}"
+  "nm_s": "Bedevaartsoord {x}",
+  "sourceOsm": "Bron: OpenStreetMap-bijdragers.",
+  "sourceOsmUpdated": "Bron: OpenStreetMap-bijdragers, gecontroleerd op {date}.",
+  "listedOsm": "Als katholiek op OpenStreetMap ingetekend"
 }

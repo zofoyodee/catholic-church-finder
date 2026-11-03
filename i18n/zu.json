@@ -60,7 +60,7 @@
   "micBlocked": "Imakrofoni ivinjiwe. Yivumele kuzilungiselelo zesiphequluli ukuze usesha ngezwi.",
   "voiceFailed": "Ukusesha ngezwi akusebenzi manje. Sicela ubhale okufunayo.",
   "aboutData": "Mayelana nemininingwane",
-  "footCredit": "Izindawo © Overture Maps Foundation · Imephu eyisisekelo Natural Earth, imigwaqo © abanikeli be-OpenStreetMap nge-OpenFreeMap",
+  "footCredit": "Amasonto © abanikeli be-OpenStreetMap, imininingwane © Overture Maps Foundation · Imephu eyisisekelo Natural Earth, imigwaqo nge-OpenFreeMap",
   "nearYou": "Eduze nawe",
   "closeNear": "Vala amasonto aseduze",
   "favorites": "Owathandayo",
@@ -209,10 +209,10 @@
   "matches_one": "Umphumela ongu-{n}. Engeza igama ledolobha ukuze unciphise ukusesha.",
   "matches_other": "Imiphumela engu-{n}. Engeza igama ledolobha ukuze unciphise ukusesha.",
   "matchesMax": "Imiphumela engaphezu kuka-400. Engeza igama ledolobha ukuze unciphise ukusesha.",
-  "aboutP1": "Imbulunga ikhombisa amasonto amaKatolika, amashaphele, izindawo ezingcwele, amabasilika namakhathedrali angu-<b>{n}</b> avela ku-{a1}imininingwane yezindawo ye-Overture Maps{end} (ukukhishwa {release}), eqoqa izindawo ezivela ku-Meta, Microsoft neminye imithombo evulekile.",
-  "aboutP2": "Izindawo ezingu-{cat} zibhalwe ku-Overture njengezindawo zokukhonza zamaRoma Katolika. Ezinye ezingu-{name} zibhalwe njengezindawo zokukhonza zamaKrestu kuphela; imbulunga iyazifaka ngoba amagama azo asobala ukuthi angamaKatolika (isb. “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Imininingwane yazo inombhalo.",
+  "aboutP1": "Imbulunga ibonisa amasonto, izindlu zokukhuleka, izindawo ezingcwele, amabasilika nezinkonzo ezinkulu zamaKatolika ezingu-<b>{n}</b>. Uphawu ngalunye luyisakhiwo sesonto esibhalwe njengesamaKatolika ku-{a1}OpenStreetMap{end}, imephu yomhlaba yamahhala eyenziwa amavolontiya (imininingwane ka-{osm}).",
+  "aboutP2": "Izinombolo zocingo namawebhusayithi ka-{cat} kuwo avela {a1}eqoqweni lezindawo le-Overture Maps{end} (ukukhishwa {release}), eliqoqa izindawo ku-Meta, Microsoft neminye imithombo evulekile. Amanye angu-{osm} avela ku-OpenStreetMap kuphela.",
   "aboutP3": "Akukabi khona uhlu oluvulekile oluqukethe wonke amapherishi. Ukufakwa kungcono emazweni aseMelika naseNtshonalanga Yurophu, kuncane ezingxenyeni ze-Afrika nase-Asia, lapho amapherishi amaningi engakabi semephini. Okunye okubhaliwe kungaba okuphindiwe, amahhovisi noma izakhiwo ezivaliwe. Uma uvula isonto, ikhasi lifuna isithombe salo ku-{a1}Wikimedia Commons{end} naku-Wikipedia ngendawo nangegama, futhi likhombisa umthwebuli. Amasonto angenazo izithombe anomdwebo. Ikhadi ngalinye lingavula ezinye izithombe, amavidiyo ne-Street View.",
-  "aboutCredits": "Imininingwane yezindawo © Overture Maps Foundation, CDLA Permissive 2.0. Imephu eyisisekelo Natural Earth (yomphakathi). Imephu iboniswa nge-MapLibre.",
+  "aboutCredits": "Izindawo zamasonto © abanikeli be-OpenStreetMap, ODbL. Imininingwane yezindawo © Overture Maps Foundation, CDLA Permissive 2.0. Imephu eyisisekelo evela ku-Natural Earth (yomphakathi). Imephu idwetshwe nge-MapLibre.",
   "close": "Vala",
   "unknown": "Akwaziwa",
   "dirN": "Ny",
@@ -527,5 +527,8 @@
   "color_rose": "opinki",
   "color_white": "omhlophe negolide",
   "color_red": "obomvu",
-  "massNoteTip": "Izikhathi zeMisa neSivumo zifundwa kuzingosi zewebhu zamapherishi, ngakho singahlunga kuphela amasonto anewebhusayithi ezimemezelayo"
+  "massNoteTip": "Izikhathi zeMisa neSivumo zifundwa kuzingosi zewebhu zamapherishi, ngakho singahlunga kuphela amasonto anewebhusayithi ezimemezelayo",
+  "sourceOsm": "Umthombo: abanikeli be-OpenStreetMap.",
+  "sourceOsmUpdated": "Umthombo: abanikeli be-OpenStreetMap, kuhlolwe ngo-{date}.",
+  "listedOsm": "Libhalwe njengelamaKatolika ku-OpenStreetMap"
 }

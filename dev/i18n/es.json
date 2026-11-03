@@ -18,7 +18,7 @@
   "home": "Volver al globo completo",
   "random": "Visitar una iglesia al azar",
   "aboutData": "Acerca de los datos",
-  "footCredit": "Lugares © Overture Maps Foundation · Mapa base Natural Earth, calles © colaboradores de OpenStreetMap vía OpenFreeMap",
+  "footCredit": "Iglesias © colaboradores de OpenStreetMap, detalles © Overture Maps Foundation · Mapa base Natural Earth, calles vía OpenFreeMap",
   "nearYou": "Cerca de ti",
   "closeNear": "Cerrar iglesias cercanas",
   "favorites": "Favoritas",
@@ -134,10 +134,10 @@
   "matches_one": "{n} resultado. Añade una ciudad para afinar la búsqueda.",
   "matches_other": "{n} resultados. Añade una ciudad para afinar la búsqueda.",
   "matchesMax": "Más de 400 resultados. Añade una ciudad para afinar la búsqueda.",
-  "aboutP1": "El globo muestra <b>{n}</b> iglesias, capillas, santuarios, basílicas y catedrales católicas. Provienen del {a1}conjunto de lugares de Overture Maps{end} (versión {release}), que reúne lugares de Meta, Microsoft y otras fuentes abiertas.",
-  "aboutP2": "{cat} lugares figuran en Overture como templos católicos romanos. Otros {name} figuran solo como templos cristianos, y el globo los incluye porque sus nombres son claramente católicos (por ejemplo «Parroquia», «Paróquia», «Basílica», «Nossa Senhora»). Estos llevan una nota en sus detalles.",
+  "aboutP1": "El globo muestra <b>{n}</b> iglesias, capillas, santuarios, basílicas y catedrales católicas. Cada marcador es un templo registrado como católico en {a1}OpenStreetMap{end}, el mapa libre del mundo hecho por voluntarios (datos de {osm}).",
+  "aboutP2": "Los teléfonos y sitios web de {cat} de ellas provienen del {a1}conjunto de lugares de Overture Maps{end} (versión {release}), que reúne lugares de Meta, Microsoft y otras fuentes abiertas. Las otras {osm} provienen solo de OpenStreetMap.",
   "aboutP3": "Todavía ningún conjunto de datos abierto recoge todas las parroquias. La cobertura es mayor en América y Europa occidental y menor en partes de África y Asia, donde muchas parroquias aún no están en el mapa. Algunas entradas pueden ser duplicados, oficinas o templos cerrados. Al abrir una iglesia, la página busca una fotografía suya en {a1}Wikimedia Commons{end} y Wikipedia, por ubicación y nombre, con el crédito de su autor. Las iglesias sin foto conservan una escena dibujada. Desde cada ficha se pueden abrir más fotos, videos y Street View.",
-  "aboutCredits": "Datos de lugares © Overture Maps Foundation, CDLA Permissive 2.0. Mapa base de Natural Earth (dominio público). Mapa dibujado con MapLibre.",
+  "aboutCredits": "Ubicación de las iglesias © colaboradores de OpenStreetMap, ODbL. Datos de lugares © Overture Maps Foundation, CDLA Permissive 2.0. Mapa base de Natural Earth (dominio público). Mapa dibujado con MapLibre.",
   "close": "Cerrar",
   "unknown": "Desconocido",
   "dirN": "N",
@@ -527,5 +527,8 @@
   "clearSearch": "Borrar Búsqueda",
   "nm_c": "Iglesia Católica de {x}",
   "nm_k": "Catedral de {x}",
-  "nm_s": "Santuario de {x}"
+  "nm_s": "Santuario de {x}",
+  "sourceOsm": "Fuente: colaboradores de OpenStreetMap.",
+  "sourceOsmUpdated": "Fuente: colaboradores de OpenStreetMap, revisado el {date}.",
+  "listedOsm": "Registrada como católica en OpenStreetMap"
 }

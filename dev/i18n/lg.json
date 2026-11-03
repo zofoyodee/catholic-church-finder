@@ -18,7 +18,7 @@
   "home": "Ddayo ku nsi yonna",
   "random": "Laba ekkanisa yonna",
   "aboutData": "Ebikwata ku data",
-  "footCredit": "Ebifo © Overture Maps Foundation · Maapu ey'omusingi Natural Earth, enguudo © abayambi ba OpenStreetMap nga bayita mu OpenFreeMap",
+  "footCredit": "Amakanisa © abayambi ba OpenStreetMap, ebikwata ku © Overture Maps Foundation · Maapu ey’omusingi Natural Earth, enguudo nga ziyita mu OpenFreeMap",
   "nearYou": "Okumpi naawe",
   "closeNear": "Ggalawo amakanisa ag'okumpi",
   "favorites": "By'oyagala",
@@ -133,10 +133,10 @@
   "matches_one": "Ekivudde mu kunoonya {n}. Yongerako ekibuga okukendeeza.",
   "matches_other": "Ebivudde mu kunoonya {n}. Yongerako ekibuga okukendeeza.",
   "matchesMax": "Ebisukka mu 400. Yongerako ekibuga okukendeeza.",
-  "aboutP1": "Ensi eno eraga amakanisa ga Katoliki, essabo, ebiggwa ebitukuvu, basilika ne kateedulo <b>{n}</b>. Biva mu {a1}data y'ebifo ya Overture Maps{end} (enkyusa {release}), ekung'aanya ebifo okuva ku Meta, Microsoft n'ensibuko endala enzigule.",
-  "aboutP2": "Mu bino, ebifo {cat} biwandiikiddwa mu Overture ng'ebifo by'okusinzizaamu ebya Katoliki ow'e Rooma. Ebirala {name} biwandiikiddwa nga bifo bya Bakristaayo byokka, era biteekeddwamu kubanga amannya gaabyo galaga bulungi nti bya Katoliki (ng'eky'okulabirako “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Ebibikwatako birina okulabula.",
+  "aboutP1": "Ensi eno eraga amakanisa, obusinzizo, ebifo eby’okusabiramu, basilika n’amakanisa amakulu aga Katulika <b>{n}</b>. Buli kabonero kizimbe ky’ekkanisa ekiwandiikiddwa nga kya Katulika ku {a1}OpenStreetMap{end}, maapu y’ensi ey’obwereere ekolebwa bannakyeyagalire (data ya {osm}).",
+  "aboutP2": "Ennamba z’essimu n’emikutu gya {cat} ku go biva mu {a1}kibinja ky’ebifo ekya Overture Maps{end} (enkyusa {release}), ekikung’aanya ebifo okuva mu Meta, Microsoft n’ensibuko endala eziggule. Amalala {osm} gava mu OpenStreetMap yokka.",
   "aboutP3": "Tewannabaawo data enzigule erimu ebigo byonna. Data esinga obungi mu Amerika ne Bulaaya ey'ebugwanjuba, ntono mu bitundu ebimu ebya Afrika ne Asia, gye kiri nti ebigo bingi tebinnaba ku maapu. Ebimu biyinza okuba nga biwandiikiddwa emirundi ebiri, ofiisi, oba ebizimbe ebyaggalwa. Bw'oggulawo ekkanisa, omuko gunoonya ekifaananyi kyayo ku {a1}Wikimedia Commons{end} ne Wikipedia okusinziira ku kifo n'erinnya, era gwogera n'eyakikuba. Amakanisa agatalina kifaananyi galaga ekifaananyi ekikubiddwa n'engalo. Buli kaadi erina linki ez'ebifaananyi, vidiyo ne Street View ebirala.",
-  "aboutCredits": "Data y'ebifo © Overture Maps Foundation, CDLA Permissive 2.0. Maapu ey'omusingi Natural Earth (ya bonna). Maapu ekoleddwa MapLibre.",
+  "aboutCredits": "Ebifo by’amakanisa © abayambi ba OpenStreetMap, ODbL. Data y’ebifo © Overture Maps Foundation, CDLA Permissive 2.0. Maapu ey’omusingi okuva mu Natural Earth (ya bonna). Maapu ekubiddwa ne MapLibre.",
   "close": "Ggalawo",
   "unknown": "Tekimanyiddwa",
   "dirN": "Bk",
@@ -519,5 +519,8 @@
   "clearSearch": "Sangula Ky’onoonya",
   "nm_c": "Ekkanisa Enkatoliki ey’e {x}",
   "nm_k": "Kateedulo ey’e {x}",
-  "nm_s": "Ekiggwa ekitukuvu eky’e {x}"
+  "nm_s": "Ekiggwa ekitukuvu eky’e {x}",
+  "sourceOsm": "Ensibuko: abayambi ba OpenStreetMap.",
+  "sourceOsmUpdated": "Ensibuko: abayambi ba OpenStreetMap, yakeberebwa {date}.",
+  "listedOsm": "Kiwandiikiddwa nga kya Katulika ku OpenStreetMap"
 }

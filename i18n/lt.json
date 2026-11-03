@@ -18,7 +18,7 @@
   "home": "Atgal į visą gaublį",
   "random": "Aplankyti atsitiktinę bažnyčią",
   "aboutData": "Apie duomenis",
-  "footCredit": "Vietos © Overture Maps Foundation · Pagrindo žemėlapis Natural Earth, gatvės © OpenStreetMap bendraautoriai per OpenFreeMap",
+  "footCredit": "Bažnyčios © OpenStreetMap bendradarbiai, išsamiau © Overture Maps Foundation · Pagrindo žemėlapis Natural Earth, gatvės per OpenFreeMap",
   "nearYou": "Šalia jūsų",
   "closeNear": "Uždaryti netolimas bažnyčias",
   "favorites": "Mėgstamos",
@@ -137,10 +137,10 @@
   "matches_few": "{n} atitikmenys. Pridėkite vietovę, kad susiaurintumėte.",
   "matches_other": "{n} atitikmenų. Pridėkite vietovę, kad susiaurintumėte.",
   "matchesMax": "Daugiau nei 400 atitikmenų. Pridėkite vietovę, kad susiaurintumėte.",
-  "aboutP1": "Gaublyje rodomos katalikų bažnyčios, koplyčios, šventovės, bazilikos ir katedros: <b>{n}</b>. Jos paimtos iš {a1}Overture Maps vietų rinkinio{end} (leidimas {release}), kuris renka vietas iš Meta, Microsoft ir kitų atvirų šaltinių.",
-  "aboutP2": "Overture kaip Romos katalikų maldos vietos nurodyta: {cat}. Dar {name} nurodytos tik kaip krikščionių maldos vietos; gaublys jas įtraukia, nes jų pavadinimai aiškiai katalikiški (pvz., „Parroquia“, „Paróquia“, „Basilica“, „Nossa Senhora“). Jų informacijoje yra pastaba.",
+  "aboutP1": "Gaublys rodo <b>{n}</b> katalikų bažnyčių, koplyčių, šventovių, bazilikų ir katedrų. Kiekviena žymė yra bažnyčios pastatas, pažymėtas kaip katalikiškas {a1}OpenStreetMap{end} – laisvame pasaulio žemėlapyje, kurį kuria savanoriai (duomenys iš {osm}).",
+  "aboutP2": "{cat} iš jų telefonai ir svetainės paimti iš {a1}Overture Maps vietų rinkinio{end} (leidimas {release}), kuris renka vietas iš Meta, Microsoft ir kitų atvirų šaltinių. Kitos {osm} paimtos tik iš OpenStreetMap.",
   "aboutP3": "Kol kas joks atviras rinkinys neapima kiekvienos parapijos. Geriausiai aprėptos Amerikos ir Vakarų Europa, silpniau – dalis Afrikos ir Azijos, kur daug parapijų dar nėra žemėlapyje. Kai kurie įrašai gali būti pasikartojantys, raštinės ar uždaryti pastatai. Atvėrus bažnyčią, puslapis ieško jos nuotraukos {a1}Vikiteka{end} ir Vikipedijoje pagal vietą ir pavadinimą, nurodydamas autorių. Bažnyčios be nuotraukos turi piešinį. Iš kiekvienos kortelės atveriama daugiau nuotraukų, vaizdo įrašų ir Street View.",
-  "aboutCredits": "Vietų duomenys © Overture Maps Foundation, CDLA Permissive 2.0. Pagrindo žemėlapis Natural Earth (viešasis domenas). Žemėlapį piešia MapLibre.",
+  "aboutCredits": "Bažnyčių vietos © OpenStreetMap bendradarbiai, ODbL. Vietų duomenys © Overture Maps Foundation, CDLA Permissive 2.0. Pagrindo žemėlapis Natural Earth (viešasis domenas). Žemėlapį piešia MapLibre.",
   "close": "Uždaryti",
   "unknown": "Nežinoma",
   "dirN": "š. pl.",
@@ -530,5 +530,8 @@
   "clearSearch": "Išvalyti Paiešką",
   "nm_c": "{x} katalikų bažnyčia",
   "nm_k": "{x} katedra",
-  "nm_s": "{x} šventovė"
+  "nm_s": "{x} šventovė",
+  "sourceOsm": "Šaltinis: OpenStreetMap bendradarbiai.",
+  "sourceOsmUpdated": "Šaltinis: OpenStreetMap bendradarbiai, patikrinta {date}.",
+  "listedOsm": "OpenStreetMap pažymėta kaip katalikiška"
 }

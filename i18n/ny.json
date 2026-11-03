@@ -18,7 +18,7 @@
   "home": "Bwererani ku dziko lonse",
   "random": "Onani mpingo uliwonse",
   "aboutData": "Za zambiri",
-  "footCredit": "Malo © Overture Maps Foundation · Mapu oyambira Natural Earth, misewu © othandizira a OpenStreetMap kudzera mu OpenFreeMap",
+  "footCredit": "Matchalitchi © othandizira a OpenStreetMap, zambiri © Overture Maps Foundation · Mapu yoyambira Natural Earth, misewu kudzera mu OpenFreeMap",
   "nearYou": "Pafupi nanu",
   "closeNear": "Tsekani mipingo yapafupi",
   "favorites": "Zokondedwa",
@@ -133,10 +133,10 @@
   "matches_one": "Zotsatira {n}. Onjezani mzinda kuti muchepetse.",
   "matches_other": "Zotsatira {n}. Onjezani mzinda kuti muchepetse.",
   "matchesMax": "Zotsatira zoposa 400. Onjezani mzinda kuti muchepetse.",
-  "aboutP1": "Dziko ili likuonetsa mipingo ya Katolika, machapeli, malo oyera, mabasilika ndi makatedrale <b>{n}</b>. Zimachokera ku {a1}zambiri za malo za Overture Maps{end} (mtundu {release}), zomwe zimasonkhanitsa malo kuchokera ku Meta, Microsoft ndi magwero ena otseguka.",
-  "aboutP2": "Mwa izi, malo {cat} alembedwa mu Overture ngati malo opembedzera a Roma Katolika. Ena {name} alembedwa ngati malo opembedzera a Chikhristu okha, ndipo aphatikizidwa chifukwa mayina awo akuonetsa bwino kuti ndi a Katolika (mwachitsanzo “Parroquia”, “Paróquia”, “Basilica”, “Nossa Senhora”). Tsatanetsatane wawo ali ndi chidziwitso.",
+  "aboutP1": "Dziko lapansi likuwonetsa matchalitchi, tchalitchi zazing’ono, malo opembedzera, mabasilika ndi makatedra a Katolika <b>{n}</b>. Chizindikiro chilichonse ndi nyumba ya tchalitchi yolembedwa ngati ya Katolika pa {a1}OpenStreetMap{end}, mapu aulere a dziko lapansi opangidwa ndi odzipereka (zambiri za {osm}).",
+  "aboutP2": "Manambala a foni ndi masamba a intaneti a {cat} mwa iwo amachokera ku {a1}gulu la malo la Overture Maps{end} (kutulutsidwa {release}), lomwe limasonkhanitsa malo kuchokera ku Meta, Microsoft ndi magwero ena otseguka. Ena {osm} amachokera ku OpenStreetMap kokha.",
   "aboutP3": "Palibe zambiri zotseguka zomwe zili ndi maparishi onse. Zambiri ndi zochuluka ku Amereka ndi Kumadzulo kwa Ulaya, ndipo ndi zochepa m'madera ena a Afirika ndi Asia, kumene maparishi ambiri sanafike pa mapu. Zina zikhoza kukhala zobwerezedwa, maofesi, kapena nyumba zotsekedwa. Mukatsegula mpingo, tsambali limasaka chithunzi chake pa {a1}Wikimedia Commons{end} ndi Wikipedia malinga ndi malo ndi dzina, ndipo limatchula wojambulayo. Mipingo yopanda chithunzi imaonetsa chojambula. Khadi lililonse lili ndi maulalo a zithunzi, makanema ndi Street View zina.",
-  "aboutCredits": "Zambiri za malo © Overture Maps Foundation, CDLA Permissive 2.0. Mapu oyambira Natural Earth (a anthu onse). Mapu a MapLibre.",
+  "aboutCredits": "Malo a matchalitchi © othandizira a OpenStreetMap, ODbL. Zambiri za malo © Overture Maps Foundation, CDLA Permissive 2.0. Mapu yoyambira kuchokera ku Natural Earth (ya anthu onse). Mapu ajambulidwa ndi MapLibre.",
   "close": "Tsekani",
   "unknown": "Sizikudziwika",
   "dirN": "Kp",
@@ -519,5 +519,8 @@
   "clearSearch": "Fufutani Zosaka",
   "nm_c": "Mpingo wa Katolika wa {x}",
   "nm_k": "Katedrale ya {x}",
-  "nm_s": "Malo oyera a {x}"
+  "nm_s": "Malo oyera a {x}",
+  "sourceOsm": "Gwero: othandizira a OpenStreetMap.",
+  "sourceOsmUpdated": "Gwero: othandizira a OpenStreetMap, zidawunikidwa pa {date}.",
+  "listedOsm": "Yolembedwa ngati ya Katolika pa OpenStreetMap"
 }

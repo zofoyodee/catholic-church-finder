@@ -60,7 +60,7 @@
   "micBlocked": "El micròfon està bloquejat. Permet-lo a la configuració del navegador per cercar per veu.",
   "voiceFailed": "La cerca per veu no funciona ara mateix. Escriu la cerca, si us plau.",
   "aboutData": "Sobre les Dades",
-  "footCredit": "Llocs © Overture Maps Foundation · Mapa base Natural Earth, carrers © col·laboradors d'OpenStreetMap via OpenFreeMap",
+  "footCredit": "Esglésies © col·laboradors d’OpenStreetMap, detalls © Overture Maps Foundation · Mapa base Natural Earth, carrers via OpenFreeMap",
   "nearYou": "A Prop Teu",
   "closeNear": "Tanca les esglésies properes",
   "favorites": "Preferides",
@@ -209,10 +209,10 @@
   "matches_one": "{n} coincidència. Afegeix una població per concretar.",
   "matches_other": "{n} coincidències. Afegeix una població per concretar.",
   "matchesMax": "Més de 400 coincidències. Afegeix una població per concretar.",
-  "aboutP1": "El globus mostra <b>{n}</b> esglésies, capelles, santuaris, basíliques i catedrals catòliques. Provenen del {a1}conjunt de dades de llocs d'Overture Maps{end} (versió {release}), que reuneix llocs de Meta, Microsoft i altres fonts obertes.",
-  "aboutP2": "{cat} llocs figuren a Overture com a llocs de culte catòlics romans. Uns altres {name} hi figuren només com a llocs de culte cristians, i el globus els inclou perquè el seu nom és clarament catòlic (per exemple «Parroquia», «Paróquia», «Basilica», «Nossa Senhora»). Aquests porten una nota als detalls.",
+  "aboutP1": "El globus mostra <b>{n}</b> esglésies, capelles, santuaris, basíliques i catedrals catòliques. Cada marcador és un temple registrat com a catòlic a {a1}OpenStreetMap{end}, el mapa lliure del món fet per voluntaris (dades del {osm}).",
+  "aboutP2": "Els telèfons i webs de {cat} d’elles provenen del {a1}conjunt de llocs d’Overture Maps{end} (versió {release}), que aplega llocs de Meta, Microsoft i altres fonts obertes. Les altres {osm} provenen només d’OpenStreetMap.",
   "aboutP3": "Encara no hi ha cap conjunt de dades obert que reculli totes les parròquies. La cobertura és més completa a les Amèriques i a l'Europa occidental, i més escassa en zones d'Àfrica i d'Àsia, on moltes parròquies encara no són al mapa. Algunes entrades poden ser duplicats, oficines o edificis tancats. Quan obres una església, la pàgina en busca una fotografia a {a1}Wikimedia Commons{end} i a la Viquipèdia, segons la ubicació i el nom, i n'esmenta el fotògraf. Les esglésies sense foto conserven un dibuix. Des de cada fitxa s'obren més fotos, vídeos i Street View.",
-  "aboutCredits": "Dades de llocs © Overture Maps Foundation, CDLA Permissive 2.0. Mapa base de Natural Earth (domini públic). Representació del mapa amb MapLibre.",
+  "aboutCredits": "Ubicació de les esglésies © col·laboradors d’OpenStreetMap, ODbL. Dades de llocs © Overture Maps Foundation, CDLA Permissive 2.0. Mapa base de Natural Earth (domini públic). Mapa dibuixat amb MapLibre.",
   "close": "Tanca",
   "unknown": "Desconegut",
   "dirN": "N",
@@ -527,5 +527,8 @@
   "color_rose": "rosat",
   "color_white": "blanc i daurat",
   "color_red": "vermell",
-  "massNoteTip": "Els horaris de Missa i de Confessió es llegeixen dels webs de les parròquies, de manera que només es poden filtrar les esglésies que els publiquen"
+  "massNoteTip": "Els horaris de Missa i de Confessió es llegeixen dels webs de les parròquies, de manera que només es poden filtrar les esglésies que els publiquen",
+  "sourceOsm": "Font: col·laboradors d’OpenStreetMap.",
+  "sourceOsmUpdated": "Font: col·laboradors d’OpenStreetMap, revisat el {date}.",
+  "listedOsm": "Registrada com a catòlica a OpenStreetMap"
 }
