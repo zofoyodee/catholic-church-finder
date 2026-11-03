@@ -3558,9 +3558,10 @@ async function runSearch() {
   // the middle of the globe's view stands in
   if (!here && !searchAskedWhere) { searchAskedWhere = true; hereOrCenter().then(() => { if (here && !resEl.hidden && qEl.value.trim()) runSearch(); }); }
   const c = here || [map.getCenter().lng, map.getCenter().lat];
-  const sc = new Map(hits.map(i => [i, metres(c[1], c[0], state.lat[i] / 1e6, state.lon[i] / 1e6)]));
+  const sc = new Map([...hits, ...inCountry].map(i => [i, metres(c[1], c[0], state.lat[i] / 1e6, state.lon[i] / 1e6)]));
   hits.sort((a, b) => sc.get(a) - sc.get(b));
-  const top = hits.slice(0, 30);
+  // a country search lists that country's churches (nearest first), not churches that only carry its name (China, Texas)
+  const top = (inCountry.length ? [...inCountry].sort((a, b) => sc.get(a) - sc.get(b)) : hits).slice(0, 30);
   activeRes = -1;
   if (!top.length && !inCountry.length) {
     // not a church or a town we know by name: maybe a place the map service knows (a postal code, a district)
