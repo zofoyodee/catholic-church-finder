@@ -16,7 +16,7 @@
 .compact .results { top: 52px; }
 
 /* side buttons: just churches near me; Whole Globe sits at the end of the search bar */
-.compact .ctrls > :not(#nearBtn):not(#favOpen) { display: none !important; }
+.compact .ctrls > :not(#nearBtn):not(#favOpen):not(#home) { display: none !important; }
 .globe-btn { display: none; }
 .compact .globe-btn {
   display: grid; place-items: center; position: absolute; z-index: 2; right: 5px; top: 5px; width: 36px; height: 36px;
@@ -205,3 +205,16 @@ body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; 
 .ms-reset { margin-inline-start: auto; display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 15px; border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232,184,74,0.10); color: var(--ink); font: inherit; font-size: 12.5px; font-weight: 500; letter-spacing: normal; text-transform: none; cursor: pointer; }
 .ms-reset svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
 .wide .ms-find { padding-inline-end: 0; }
+/* phones: Near Me, Favorites and Whole Globe as one slim bar, centered above the tabs */
+.compact .ctrls { left: 50%; right: auto !important; transform: translateX(-50%); display: flex; gap: 0; padding: 0; border-radius: 18px; border: 1px solid var(--line); background: var(--panel); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.compact .ctrls button { height: 34px; border: 0; border-radius: 0; background: transparent; padding: 0 12px 0 10px; gap: 6px; font-size: 12px; position: relative; }
+.compact .ctrls button + button { border-inline-start: 1px solid var(--line); }
+.compact .ctrls button[hidden] + button { border-inline-start: 0; }
+.compact .ctrls #nearBtn { background: rgba(232, 184, 74, 0.22); border-start-start-radius: 17px; border-end-start-radius: 17px; }
+.compact .ctrls #home { border-start-end-radius: 17px; border-end-end-radius: 17px; }
+.compact .ctrls svg { width: 16px; height: 16px; }
+.compact .ctrls .count { top: -7px; right: 2px; }
+@media (max-height: 500px) and (orientation: landscape) { .compact .ctrls { left: calc(50% + var(--rail) / 2); } }
+.compact .ctrls { max-width: calc(100vw - 12px); }
+.compact .ctrls button { flex: 0 1 auto; min-width: 0; }
+.compact .ctrls .lbl { overflow: hidden; text-overflow: ellipsis; }
