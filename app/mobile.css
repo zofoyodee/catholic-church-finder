@@ -209,8 +209,8 @@ body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; 
 .compact .ctrls button + button { border-inline-start: 1px solid var(--line); }
 .compact .ctrls button[hidden] + button { border-inline-start: 0; }
 .compact .ctrls #nearBtn { border-start-start-radius: 17px; border-end-start-radius: 17px; }
-/* gold only while its list is open */
-.compact .ctrls button[aria-expanded="true"], .compact .ctrls button[aria-pressed="true"] { background: rgba(232, 184, 74, 0.22); }
+/* no pressed look in the slim bar (Jeff) */
+.compact .ctrls button, .compact .ctrls button[aria-expanded="true"], .compact .ctrls button[aria-pressed="true"], .compact .ctrls button.lit-on { background: transparent; }
 .compact .ctrls #home { border-start-end-radius: 17px; border-end-end-radius: 17px; }
 .compact .ctrls svg { width: 16px; height: 16px; }
 .compact .ctrls .count { top: -7px; right: 2px; }
