@@ -522,5 +522,6 @@
   "nm_s": "Malo oyera a {x}",
   "sourceOsm": "Gwero: othandizira a OpenStreetMap.",
   "sourceOsmUpdated": "Gwero: othandizira a OpenStreetMap, zidawunikidwa pa {date}.",
-  "listedOsm": "Yolembedwa ngati ya Katolika pa OpenStreetMap"
+  "listedOsm": "Yolembedwa ngati ya Katolika pa OpenStreetMap",
+  "nearSearch": "Sakani"
 }

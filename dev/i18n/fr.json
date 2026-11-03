@@ -530,5 +530,6 @@
   "nm_s": "Sanctuaire de {x}",
   "sourceOsm": "Source : contributeurs d’OpenStreetMap.",
   "sourceOsmUpdated": "Source : contributeurs d’OpenStreetMap, vérifié le {date}.",
-  "listedOsm": "Enregistrée comme catholique sur OpenStreetMap"
+  "listedOsm": "Enregistrée comme catholique sur OpenStreetMap",
+  "nearSearch": "Rechercher"
 }

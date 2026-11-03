@@ -514,5 +514,6 @@
   "nm_s": "Tempat Ziarah {x}",
   "sourceOsm": "Sumber: kontributor OpenStreetMap.",
   "sourceOsmUpdated": "Sumber: kontributor OpenStreetMap, diperiksa {date}.",
-  "listedOsm": "Tercatat sebagai Katolik di OpenStreetMap"
+  "listedOsm": "Tercatat sebagai Katolik di OpenStreetMap",
+  "nearSearch": "Cari"
 }

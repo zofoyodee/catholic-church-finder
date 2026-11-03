@@ -522,5 +522,6 @@
   "nm_s": "Santuario {x}",
   "sourceOsm": "Ypykue: OpenStreetMap pytyvõhára.",
   "sourceOsmUpdated": "Ypykue: OpenStreetMap pytyvõhára, ojehecha {date}.",
-  "listedOsm": "Ojehai katólika ramo OpenStreetMap-pe"
+  "listedOsm": "Ojehai katólika ramo OpenStreetMap-pe",
+  "nearSearch": "Eheka"
 }

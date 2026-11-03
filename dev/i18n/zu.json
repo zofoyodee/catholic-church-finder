@@ -530,5 +530,6 @@
   "massNoteTip": "Izikhathi zeMisa neSivumo zifundwa kuzingosi zewebhu zamapherishi, ngakho singahlunga kuphela amasonto anewebhusayithi ezimemezelayo",
   "sourceOsm": "Umthombo: abanikeli be-OpenStreetMap.",
   "sourceOsmUpdated": "Umthombo: abanikeli be-OpenStreetMap, kuhlolwe ngo-{date}.",
-  "listedOsm": "Libhalwe njengelamaKatolika ku-OpenStreetMap"
+  "listedOsm": "Libhalwe njengelamaKatolika ku-OpenStreetMap",
+  "nearSearch": "Sesha"
 }

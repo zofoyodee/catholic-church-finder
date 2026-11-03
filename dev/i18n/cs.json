@@ -550,5 +550,6 @@
   "nm_s": "Poutní místo {x}",
   "sourceOsm": "Zdroj: přispěvatelé OpenStreetMap.",
   "sourceOsmUpdated": "Zdroj: přispěvatelé OpenStreetMap, ověřeno {date}.",
-  "listedOsm": "V OpenStreetMap zapsán jako katolický"
+  "listedOsm": "V OpenStreetMap zapsán jako katolický",
+  "nearSearch": "Hledat"
 }

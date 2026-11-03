@@ -522,5 +522,6 @@
   "nm_s": "Santuwaryo kan {x}",
   "sourceOsm": "Ginikanan: mga kontributor kan OpenStreetMap.",
   "sourceOsmUpdated": "Ginikanan: mga kontributor kan OpenStreetMap, sinusog kan {date}.",
-  "listedOsm": "Nakalista bilang Katoliko sa OpenStreetMap"
+  "listedOsm": "Nakalista bilang Katoliko sa OpenStreetMap",
+  "nearSearch": "Hanapon"
 }

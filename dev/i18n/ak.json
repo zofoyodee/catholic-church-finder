@@ -530,5 +530,6 @@
   "massNoteTip": "Yɛkenkan Omisa ne Bɔnefakyɛ bere fi asɔrekuw wɛbsaet so, enti yetumi yiyi asɔredan a wɔwɔ wɛbsaet a ɛbɔ ho dawuru nko ara",
   "sourceOsm": "Fibea: OpenStreetMap boafo.",
   "sourceOsmUpdated": "Fibea: OpenStreetMap boafo, wɔhwɛɛ no {date}.",
-  "listedOsm": "Wɔakyerɛw sɛ Katolek wɔ OpenStreetMap so"
+  "listedOsm": "Wɔakyerɛw sɛ Katolek wɔ OpenStreetMap so",
+  "nearSearch": "Hwehwɛ"
 }
