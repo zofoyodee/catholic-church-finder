@@ -213,3 +213,5 @@ body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; 
 .compact .ctrls .lbl { overflow: hidden; text-overflow: ellipsis; }
 /* Bible Locations: Whole Globe stands alone in the bar, so it is round at both ends with no divider (Jeff) */
 .compact body.bible-mode .ctrls #home { border-inline-start: 0; border-radius: 17px; }
+/* List Churches on Screen: gold, like Mass Language and Show (Jeff) */
+.ms-acts button[data-for="listHere"] { border-color: color-mix(in srgb, var(--gold) 55%, transparent); background: rgba(232,184,74,0.10); border-radius: 14px; }
