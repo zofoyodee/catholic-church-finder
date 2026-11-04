@@ -60,8 +60,8 @@
 .wide .ms-box > * { break-inside: avoid; margin: 0 0 14px; }
 .wide .ms-box > .ms-h { margin: 0 0 10px; }
 .wide .ms-box > .ms-h ~ .ms-h { padding-top: 14px; }
-/* Find a Church fills the left column; My Churches starts the right */
-.wide .ms-box > h3[data-i18n="mMine"] { break-before: column; border-top: 0; padding-top: 0; }
+/* Find a Church fills the left column; Explore starts the right */
+.wide .ms-box > h3[data-i18n="mExplore"] { break-before: column; border-top: 0; padding-top: 0; }
 .wide #msHead:empty, .wide #msFoot:empty { display: none; }
 .wide .ms-acts button { min-height: 0; }
 .wide .ms-x { z-index: 1; }
