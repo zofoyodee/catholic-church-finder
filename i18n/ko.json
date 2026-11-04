@@ -243,7 +243,7 @@
   "tourFinish": "마치기",
   "tourBegin": "시작",
   "tourNext": "다음",
-  "globeView": "지구본 보기",
+  "globeView": "지구본 설정",
   "view_satellite": "위성 사진",
   "view_satelliteHint": "구름 없는 Sentinel-2 지구 사진입니다. 데이터를 더 씁니다.",
   "view_daynight": "낮과 밤",

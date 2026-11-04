@@ -729,9 +729,9 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 .glabel.city.big { font-size: 15px; color: #fdf6e3; }
 .glabel.land { font-size: 13px; letter-spacing: 0.1em; opacity: 0.85; color: #f3d58c; }
 </style>
-<link rel="stylesheet" href="app/engage.css?v=121">
-<link rel="stylesheet" href="app/mobile.css?v=121">
-<link rel="stylesheet" href="app/desktop.css?v=121">
+<link rel="stylesheet" href="app/engage.css?v=122">
+<link rel="stylesheet" href="app/mobile.css?v=122">
+<link rel="stylesheet" href="app/desktop.css?v=122">
 </head>
 <body>
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
@@ -813,7 +813,7 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
     </div>
     <h3 class="ms-h" data-i18n="mSettings">Settings</h3>
     <div class="ms-acts">
-      <button type="button" data-for="viewBtn"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg><span class="ms-t"><span data-i18n="globeView">Globe View</span><small class="ms-hint" data-i18n="hint_viewBtn">Change how the map looks</small></span></button>
+      <button type="button" data-for="viewBtn"><svg viewBox="0 0 24 24"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg><span class="ms-t"><span data-i18n="globeView">Globe Settings</span><small class="ms-hint" data-i18n="hint_viewBtn">Change how the map looks</small></span></button>
     </div>
     <div class="ms-picks" id="msPicks"></div>
     <div id="msFoot"></div>
@@ -1099,7 +1099,7 @@ const EN = {
   tourGuide: 'Tour Guide', tourEnd: 'End the Tour', stopOf: 'Stop {k} of {n}', stopsLabel: 'Stops', stopName: 'Stop {k}: {name}',
   tourPrev: 'Previous stop', tourPause: 'Pause the tour', tourPlay: 'Play the tour', churchDetails: 'Church Details',
   tourFinish: 'Finish', tourBegin: 'Begin', tourNext: 'Next',
-  globeView: 'Globe View',
+  globeView: 'Globe Settings',
   themeLabel: 'Theme', theme_night: 'Night Sky', theme_marian: 'Marian Blue', theme_stone: 'Cathedral Stone', theme_parchment: 'Parchment', theme_liturgical: 'Liturgical Season', theme_contrast: 'High Contrast',
   view_satellite: 'Satellite Imagery', view_satelliteHint: 'Cloud-free Sentinel-2 photos of the Earth. Uses more data.',
   view_daynight: 'Day and Night', view_daynightHint: 'Shades the half of the world where the sun has set.',
@@ -4767,8 +4767,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="app/engage.js?v=121"></script>
-<script src="app/mobile.js?v=121"></script>
+<script src="app/engage.js?v=122"></script>
+<script src="app/mobile.js?v=122"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }
