@@ -34,7 +34,6 @@
 .wide .mnav button[aria-pressed="true"] { background: var(--gold); color: #1a1406; font-weight: 600; }
 .wide .mnav #mnavMenu { color: var(--ink); }
 .wide .mnav #mnavMenu[aria-expanded="true"] { background: rgba(232, 184, 74, 0.16); color: var(--gold-soft); }
-.wide .mnav #mnavMenu[data-n]:not([data-n=""])::after { top: 2px; left: auto; right: 4px; }
 
 /* everything that sat along the bottom now sits above the bar */
 .wide .life { bottom: calc(40px + var(--dock) + 10px + env(safe-area-inset-bottom, 0px)); right: calc(max(16px, env(safe-area-inset-right, 0px)) + 54px); }
