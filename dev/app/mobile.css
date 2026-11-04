@@ -218,3 +218,5 @@ body.bible-mode .ms-acts:not(:has(> button:not(.church-only))) { display: none; 
 .compact .ctrls { max-width: calc(100vw - 12px); }
 .compact .ctrls button { flex: 0 1 auto; min-width: 0; }
 .compact .ctrls .lbl { overflow: hidden; text-overflow: ellipsis; }
+/* Bible Locations: Whole Globe stands alone in the bar, so it is round at both ends with no divider (Jeff) */
+.compact body.bible-mode .ctrls #home { border-inline-start: 0; border-radius: 17px; }
