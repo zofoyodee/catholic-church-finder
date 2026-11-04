@@ -729,9 +729,9 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 .glabel.city.big { font-size: 15px; color: #fdf6e3; }
 .glabel.land { font-size: 13px; letter-spacing: 0.1em; opacity: 0.85; color: #f3d58c; }
 </style>
-<link rel="stylesheet" href="app/engage.css?v=122">
-<link rel="stylesheet" href="app/mobile.css?v=122">
-<link rel="stylesheet" href="app/desktop.css?v=122">
+<link rel="stylesheet" href="app/engage.css?v=123">
+<link rel="stylesheet" href="app/mobile.css?v=123">
+<link rel="stylesheet" href="app/desktop.css?v=123">
 </head>
 <body>
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
@@ -799,11 +799,6 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
       <button type="button" data-for="listHere" class="church-only"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.3"/><circle cx="4.5" cy="12" r="1.3"/><circle cx="4.5" cy="18" r="1.3"/></svg><span class="ms-t"><span data-i18n="listHere">List Churches on Screen</span><small class="ms-hint" data-i18n="hint_listHere">Every church in the part of the map you see</small></span></button>
     </div>
     <div id="msShow" class="ms-sect"></div>
-    <h3 class="ms-h" data-i18n="mMine">My Churches</h3>
-    <p class="ms-empty" data-i18n="mineEmpty">Tap the heart on a church to save it here.</p>
-    <div class="ms-acts ms-mine">
-      <button type="button" data-for="favOpen"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg><span class="ms-t"><span data-i18n="favorites">Favorites</span><small class="ms-hint" data-i18n="hint_favOpen">The churches you have saved</small></span></button>
-    </div>
     <h3 class="ms-h" data-i18n="mExplore">Explore</h3>
     <div class="ms-acts">
       <button type="button" data-for="season"><span class="ic" aria-hidden="true">✠</span><span class="ms-t"><span data-i18n="todayLabel">Today in the Church</span><small class="ms-hint" data-i18n="hint_season">The season, feast and church of the day</small></span></button>
@@ -4767,8 +4762,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="app/engage.js?v=122"></script>
-<script src="app/mobile.js?v=122"></script>
+<script src="app/engage.js?v=123"></script>
+<script src="app/mobile.js?v=123"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }
