@@ -257,7 +257,7 @@
   "tourFinish": "終了",
   "tourBegin": "始める",
   "tourNext": "次へ",
-  "globeView": "地球儀の表示",
+  "globeView": "地球儀の設定",
   "view_satellite": "衛星写真",
   "view_satelliteHint": "Sentinel-2 による雲のない地球の写真。データ量が増えます。",
   "view_daynight": "昼と夜",

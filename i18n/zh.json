@@ -243,7 +243,7 @@
   "tourFinish": "完成",
   "tourBegin": "开始",
   "tourNext": "下一站",
-  "globeView": "地球仪显示",
+  "globeView": "地球仪设置",
   "view_satellite": "卫星影像",
   "view_satelliteHint": "来自 Sentinel-2 的无云地球照片。会使用更多流量。",
   "view_daynight": "昼夜",
