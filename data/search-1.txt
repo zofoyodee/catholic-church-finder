@@ -818,7 +818,7 @@ Iglesia Catedral Victoria	La Guácima	CR	Alajuela
 Iglesia San Antonio Del Tejar	San Antonio	CR	Alajuela
 Parroquia San Antonio	San Antonio	CR	Alajuela
 Capilla Calvario Jehová Shama Alajuela	Rio Segundo	CR	Alajuela
-Parroquia Santa Cecilia del Coyol de Alajuela ⛪	San Jose	CR	Alajuela
+Parroquia Santa Cecilia del Coyol de Alajuela	San Jose	CR	Alajuela
 Diaconia San Francisco de Asis	San Jose	CR	Alajuela
 Iglesia Católica de Nuestra Señora de la Candelaria	San Jose	CR	Alajuela
 Curia Diocesana de Alajuela	Garita	CR	Alajuela
@@ -1089,7 +1089,7 @@ Iglesia Guadalupe de Alajuela	Alajuela	CR	Heredia
 Parroquia San José de la Montaña, Barva de Heredia	San Jose de la Montaña	CR	Heredia
 Iglesia San Jose De La Montaña	San Jose de la Montaña	CR	Heredia
 Iglesia de Concepción	Concepcion	CR	Heredia
-capilla maria auxiliadora	Concepcion	CR	Heredia
+Capilla María Auxiliadora	Concepcion	CR	Heredia
 Iglesia San Gabriel Arcángel	San Pablo	CR	Heredia
 Parroquia Santo Domingo de Guzmán El Roble de Heredia. Oficial	Santo Domingo	CR	Heredia
 Iglesia Católica de San Isidro	San Isidro	CR	Alajuela
@@ -3477,7 +3477,7 @@ Parroquia Sagrado Corazón de Jesús	San Antonio de Los Altos	VE	Miranda
 La Capilla de las Pias Dicipulas	Caracas	VE	Miranda
 Parroquia Santo Domingo Savio Coche 	Caracas	VE	Miranda
 Iglesia Santa Maria Madre de Dios	Caracas	VE	Miranda
-iglesia.laluz.coche	Caracas	VE	Miranda
+Iglesia La Luz, Coche	Caracas	VE	Miranda
 Santuario Divino Niño, La Rinconada	Caracas	VE	Miranda
 Iglesia Nuestra Señora Del Rosario	Caracas	VE	Miranda
 Iglesia Catolica Alemana	Caracas	VE	Miranda
@@ -3844,7 +3844,7 @@ Comunidad Católica La Hoyada	Managua	NI	Managua
 Capilla San Judas Tadeo	Managua	NI	Managua
 Capilla Cruz Paraiso	Managua	NI	Managua
 Parroquia Verbo Divino	Managua	NI	Managua
-parroquia san judas tadeo	Managua	NI	Managua
+Parroquia San Judas Tadeo	Managua	NI	Managua
 Basílica De La Asunción De María, León	Managua	NI	Managua
 Capilla SUD, Reparto San Juan Managua	Managua	NI	Managua
 Iglesia Nuestra Señora del Plilar	Managua	NI	Managua
@@ -5296,7 +5296,7 @@ Diócesis de Punto Fijo	Carirubana	VE	Falcon
 Parroquia San Juan Bosco	Punto Fijo	VE	Falcon
 Basilica of St. Anne	Curacao	CW	
 Santa Anna church	Curacao	CW	
-st.rosa	Curacao	CW	
+St. Rosa	Curacao	CW	
 Parokia La Birgen di Altagracia	Curacao	CW	
 Queen of the Most Holy Rosary Cathedral	Curacao	CW	
 Parokia Coromoto Curacao	Curacao	CW	
@@ -11434,7 +11434,7 @@ St. Thomas Apostle Catholic Church	Washington	US	DC District of Columbia Washing
 Annunciation Church	Washington	US	DC District of Columbia Washington
 Santuario Del Sagrado Corazon	Washington	US	DC District of Columbia Washington
 Spanish Catholic Center	Washington	US	DC District of Columbia Washington
-St Augustine Church⛪	Washington	US	DC District of Columbia Washington
+St Augustine Church	Washington	US	DC District of Columbia Washington
 Saint Martin of Tours Catholic Church	Washington	US	DC District of Columbia Washington
 Notre Dame Chapel	Washington	US	DC District of Columbia Washington
 Usccb	Washington	US	DC District of Columbia Washington
@@ -13895,7 +13895,7 @@ Most Blessed Sacrament Parish	Toledo	US	OH Ohio
 St Martin De Porres Church	Toledo	US	OH Ohio
 St. Sebastian Catholic Community	Toledo	US	OH Ohio
 Our Lady Queen of the Most Holy Rosary Cathedral	Toledo	US	OH Ohio
-St. Hedwig Catholic Church Toledo, Ohio, USA	Toledo	US	OH Ohio
+St. Hedwig Catholic Church	Toledo	US	OH Ohio
 Saints Adalbert & Hedwig Parish	Toledo	US	OH Ohio
 St. Catherine of Siena	Toledo	US	OH Ohio
 St Clement Catholic Church	Toledo	US	OH Ohio
@@ -14107,7 +14107,7 @@ St Michael's Catholic Church	Newton Falls	US	OH Ohio
 St. Ambrose Church	Garrettsville	US	OH Ohio
 St. Barnabas Catholic Parish	Northfield	US	OH Ohio
 Our Lady of Guadalupe Church	Macedonia	US	OH Ohio
-S S Cosmas & Damian Church	Twinsburg	US	OH Ohio
+Ss. Cosmas & Damian Church	Twinsburg	US	OH Ohio
 Catholic Twinsburg	Twinsburg	US	OH Ohio
 Saint Mary Roman Catholic Church	Bedford	US	OH Ohio
 St John Byzantine Cath Church	Solon	US	OH Ohio
@@ -15813,7 +15813,7 @@ St. Mary's Syro Malabar Catholic Church	London	CA	ON Ontario
 Holy Cross Santa Cruz	London	CA	ON Ontario
 St. Patrick's Catholic Church	London	CA	ON Ontario
 Mary Immaculate Parish	London	CA	ON Ontario
-our lady of victory catholic church	London	CA	ON Ontario
+Our Lady of Victory Catholic Church	London	CA	ON Ontario
 St. Andrew the Apostle Parish	London	CA	ON Ontario
 Sacred Heart Ingersoll CWL	Ingersoll	CA	ON Ontario
 Saint Patrick Parish	Lucan Biddulph	CA	ON Ontario
@@ -16663,7 +16663,7 @@ Our Lady Help of Christian	Lykens	US	PA Pennsylvania
 Emmanuel Wesleyan Church	Lykens	US	PA Pennsylvania
 St Patricks Church	Trevorton	US	PA Pennsylvania
 Sacred Heart of Jesus	Williamstown	US	PA Pennsylvania
-S S Peter & Paul Roman Catholic Church	Tower City	US	PA Pennsylvania
+Ss. Peter & Paul Roman Catholic Church	Tower City	US	PA Pennsylvania
 Saint Mary Roman Catholic Church	Hamburg	US	PA Pennsylvania
 Saint Mary Roman Catholic Church	Hamburg	US	PA Pennsylvania
 Most Blessed Trinity Parish	Tremont	US	PA Pennsylvania
@@ -19767,7 +19767,7 @@ St Anthony Of Padua Parish	New Bedford	US	MA Massachusetts
 Our Lady of Guadalupe Parish at St. James Church	New Bedford	US	MA Massachusetts
 St Joseph's of Fairhaven	Fairhaven	US	MA Massachusetts
 Our Lady of Perpetual Help	New Bedford	US	MA Massachusetts
-st anthony.s parish	Mattapoisett	US	MA Massachusetts
+St. Anthony's Parish	Mattapoisett	US	MA Massachusetts
 St. Thomas Chapel	Falmouth	US	MA Massachusetts
 St. Patrick's Catholic Church	Falmouth	US	MA Massachusetts
 St. Anthony's Catholic Church	East Falmouth	US	MA Massachusetts
@@ -21802,7 +21802,7 @@ Paróquia da Graça - Funchal	Funchal	PT	Madeira
 Paróquia da Visitação	Funchal	PT	Madeira
 Paróquia dos Álamos	Funchal	PT	Madeira
 Paróquia São Martinho	Funchal	PT	Madeira
-Paróquia São Roque Roque	Funchal	PT	Madeira
+Paróquia São Roque	Funchal	PT	Madeira
 Capela Imaculada Conceição	Funchal	PT	Madeira
 Paróquia de Santa Luzia	Funchal	PT	Madeira
 Fontenário de Nossa Senhora do Monte	Funchal	PT	Madeira
@@ -24474,7 +24474,7 @@ Parroquia Nuestra Sra del Carmen	Cartagena	ES	Murcia
 Parroquia de San Pablo	Cartagena	ES	Murcia
 Parroquia San Isidoro - Los Mateos	Cartagena	ES	Murcia
 Parroquia de San Vicente de Paúl	Cartagena	ES	Murcia
-Parroquia San Francisco Javier -Cartagena-	Cartagena	ES	Murcia
+Parroquia San Francisco Javier - Cartagena	Cartagena	ES	Murcia
 Parroquia San Fulgencio	Cartagena	ES	Murcia
 Parroquia de Santa Florentina	Cartagena	ES	Murcia
 Parroquia San Ginés de la Jara	Cartagena	ES	Murcia
@@ -26585,7 +26585,7 @@ Igreja de Nossa Senhora dos Meninos	Lamego	PT	Viseu
 Paróquia de Almacave - Lamego	Lamego	PT	Viseu
 Igreja de Santa Maria de Almacave	Lamego	PT	Viseu
 Igreja das Chagas	Lamego	PT	Viseu
-Paróquia da Sé - Lamego, Portugal	Lamego	PT	Viseu
+Catedral de Lamego	Lamego	PT	Viseu
 Santuário Nossa Senhora dos Remédios	Peniche	PT	Viseu
 Lamego Cathedral	Lamego	PT	Viseu
 Catedral de Lamego	Lamego	PT	Viseu
@@ -29386,7 +29386,7 @@ PARROQUIA de SAN LORENZO de FORNELOS Fornelos de Montes	Fornelos de Montes	ES	Ga
 Capela de a Toxa	O Grove	ES	Galicia
 Parroquia San Martín de O Grove	O Grove	ES	Galicia
 Igrexa De San Bieito	Ribadumia	ES	Galicia
-Parroquia Sta.Maria de Cambados	Cambados	ES	Galicia
+Parroquia Santa María de Cambados	Cambados	ES	Galicia
 Iglesia de Nuestra Senora del Carmen	Marín	ES	Galicia
 Parroquia de Mogor	Marín	ES	Galicia
 Santa María del Puerto de Marín	Marín	ES	Galicia
@@ -30809,7 +30809,7 @@ Iglesia de Santiago el Mayor	Sangüesa	ES	Navarre
 Parroquia de Sangüesa	Sangüesa	ES	Navarre
 Iglesia de Santa María la Real (Sangüesa)	Sangüesa	ES	Navarre
 Basílica de Santa María (Aibar)	Aibar	ES	Navarre
-Basílica De San Francisco Javier, Plaza San Francisco Javier, 31411 Javier, Navarra, Spain	Javier	ES	Navarre
+Basílica de San Francisco Javier	Javier	ES	Navarre
 Iglesia de la Purificación de Nuestra Señora	Ibargoiti	ES	Navarre
 Iglesia de Santa María de la Asunción	Lumbier	ES	Navarre
 Iglesia de la Anunciación de Nuestra Señora	Sigüés	ES	Aragon
@@ -32417,7 +32417,7 @@ Cathedral of Saint Helena	Helena	US	MT Montana
 Montana Catholic Conference	Helena	US	MT Montana
 Saint Mary Catholic Community - Helena	Helena	US	MT Montana
 Our Lady of the Valley Church	Helena	US	MT Montana
-S S Cyril and Methodius Catholic	East Helena	US	MT Montana
+Ss. Cyril and Methodius Catholic Church	East Helena	US	MT Montana
 St Bartholomew's Catholic Church	White Sulphur Springs	US	MT Montana
 St Joseph Catholic Church	Harlowton	US	MT Montana
 Judith Gap Immaculate Conception Catholic Church	Judith Gap	US	MT Montana
@@ -34936,7 +34936,7 @@ Paroisse Ste-Thérèse d'Avila	Belle-Baie	CA	NB New Brunswick
 Notre Dame du Rosaire	Bathurst	CA	NB New Brunswick
 Église catholique Saint-Polycarpe	Belle-Baie	CA	NB New Brunswick
 St Irenee Catholic Church	Tracadie	CA	NB New Brunswick
-Notre-Dame-de-la-Salette Church Church	Tracadie	CA	NB New Brunswick
+Notre-Dame-de-la-Salette Church	Tracadie	CA	NB New Brunswick
 Sanctuaire Saint-Joseph	Tracadie	CA	NB New Brunswick
 Sainte-Rose-de-Lima Catholic Church	Tracadie	CA	NB New Brunswick
 St Augustin Catholic Church	Hautes-Terres	CA	NB New Brunswick
@@ -35099,7 +35099,7 @@ Eglise Saint Antoine	Val de Virvée	FR	Aquitaine
 Chapelle des Templiers	Saint-Laurent-d'Arce	FR	Aquitaine
 Paroisses de Blaye et de Bourg	Blaye	FR	Aquitaine
 Église Saint-Romain de Blaye	Blaye	FR	Aquitaine
-chapelle sainte luce	Blaye	FR	Aquitaine
+Chapelle Sainte Luce	Blaye	FR	Aquitaine
 Eglise Saint Pierre	Cars	FR	Aquitaine
 Église Saint Saturnin	Berson	FR	Aquitaine
 Eglise Saint Sulpice de Lafosse	Pugnac	FR	Aquitaine
@@ -37609,7 +37609,7 @@ St Margaret Mary Church	Coleford	GB	England
 Framilode St Peter Church	Gloucester	GB	England
 St Joseph’s Catholic Church, Stonehouse	Stonehouse	GB	England
 St Mary’s Church Woodchester Gloucestershire	Stroud	GB	England
-St Dominics Church, Woodchester,	Stroud	GB	England
+St Dominic's Church, Woodchester	Stroud	GB	England
 The Parish Church of Saint Mary Woodchester	Stroud	GB	England
 St Mary of the Angels Church	Stroud	GB	England
 The Immaculate Conception Catholic Church	Stroud	GB	England
@@ -41553,7 +41553,7 @@ St. Monica's Catholic Church	Jos	NG	Plateau
 St. Gabriel's Catholic Church	Jos	NG	Plateau
 St. Peter's Catholic Church	Jos	NG	Plateau
 St Louis Catholic Church	Jos	NG	Plateau
-st. theresa catholic church	Jos	NG	Plateau
+St. Theresa Catholic Church	Jos	NG	Plateau
 St Moses Parish, T/Wada: Catholic Archdiocese of Jos	Jos	NG	Plateau
 Sacred Heart Parish, Kabong.	Jos	NG	Plateau
 St. Michael's Catholic Church	Jos	NG	Plateau
@@ -42352,7 +42352,7 @@ St. Xavier's Church	Kottayam Sub-District	IN	Kerala
 Mar Sleeva Cherpunkal Church	Meenachil	IN	Kerala
 Holy Cross Forane Church	Meenachil	IN	Kerala
 St. Joseph's Church	Meenachil	IN	Kerala
-Ss. Gervasis & Prothasis Forane Church Kothanalloor,Kottayam,Kerala,India	Vaikom	IN	Kerala
+Ss. Gervasis & Prothasis Forane Church, Kothanalloor	Vaikom	IN	Kerala
 St. John's Knanaya Catholic Church Chamakala	Vaikom	IN	Kerala
 St. Xavier's Church Mannarapara Palli Kuruppanthara,Kerala686603	Vaikom	IN	Kerala
 St. Alphonsa Bhavan Chapel	Vaikom	IN	Kerala
@@ -44163,7 +44163,7 @@ Nativity of Our Lord Church	Mumbai	IN	Maharashtra
 St. Kuriakose Elias Chavara Church	Mumbai	IN	Maharashtra
 Holy Cross Chapel	Mumbai	IN	Maharashtra
 Our Lady of Remedy Church	Mumbai	IN	Maharashtra
-St. John Bosco Church ⛪️	Mumbai	IN	Maharashtra
+St. John Bosco Church	Mumbai	IN	Maharashtra
 Our Lady Of Immaculate Conception Church - Borivali, Mumbai	Mumbai	IN	Maharashtra
 Our Lady of the Immaculate Conception Church (IC Church)	Mumbai	IN	Maharashtra
 St. Anthony of Padua Church	Thane	IN	Maharashtra
@@ -45207,7 +45207,7 @@ Chiesa Immacolata Agrigento	Agrigento	IT	Sicily
 Santuario di San Calogero	Agrigento	IT	Sicily
 Chiesa del Santissimo Crocifisso	Agrigento	IT	Sicily
 Piazza Del Vespro - Villaggio Mosè	Agrigento	IT	Sicily
-Parrocchia "Cuore Immacolato di Maria" - Agrigento -	Agrigento	IT	Sicily
+Parrocchia "Cuore Immacolato di Maria" - Agrigento	Agrigento	IT	Sicily
 Parrocchia di S. Calogero	Favara	IT	Sicily
 Parrocchia San Giuseppe Artigiano - Favara	Favara	IT	Sicily
 Cappella Adorazione Quotidiana	Favara	IT	Sicily
@@ -45830,7 +45830,7 @@ Chiesa di San Giovanni	Enna	IT	Sicily
 Chiesa di San Francesco d'Assisi all'Immacolata - Enna	Enna	IT	Sicily
 Parrocchia Maria SS. della Visitazione - Enna	Enna	IT	Sicily
 Parrocchia Santa Lucia - Enna Bassa	Enna	IT	Sicily
-Parrocchia Sant'Anna - Enna- 	Enna	IT	Sicily
+Parrocchia Sant'Anna - Enna	Enna	IT	Sicily
 Chiesa di San Francesco d'Assisi all'Immacolata - Enna	Enna	IT	Sicily
 Santuario Monte Scalpello	Agira	IT	Sicily
 Parrocchia Immacolata Concezione	Raddusa	IT	Sicily
@@ -46373,7 +46373,7 @@ Parrocchia Anime Sante	Alcamo	IT	Sicily
 Parrocchia San Giuseppe	Alcamo	IT	Sicily
 Chiesa della Trinita	Alcamo	IT	Sicily
 Chiesa di Sant'Agostino	Alcamo	IT	Sicily
-Cupola della Basilica di Santa Maria Assunta	Alcamo	IT	Sicily
+Basilica di Santa Maria Assunta	Alcamo	IT	Sicily
 Chiesa di San Pietro Apostolo	Alcamo	IT	Sicily
 Basilica of Our Lady of the Assumption	Alcamo	IT	Sicily
 Church of Ecce Homo	Alcamo	IT	Sicily
@@ -47368,7 +47368,7 @@ Parrocchia San Leonardo Longobardi	Vibo Valentia	IT	Calabria
 Parrocchia San Pietro in Bivona	Vibo Valentia	IT	Calabria
 Parrocchia Maria SS. del Rosario di Pompei - Vibo Marina	Vibo Valentia	IT	Calabria
 Parrocchia di Maria SS. Immacolata e San Ferdinando Re	Pizzo	IT	Calabria
-Duomo San Giorgio Martire.Pizzo di Calabria	Pizzo	IT	Calabria
+Duomo San Giorgio Martire, Pizzo	Pizzo	IT	Calabria
 Chiesa Dell'immacolata di Pizzo C.	Pizzo	IT	Calabria
 Parrocchia Risurrezione di Gesù - Pizzo VV	Pizzo	IT	Calabria
 Santuario di San Francesco di Paola	Pizzo	IT	Calabria
@@ -47727,7 +47727,7 @@ Catedral-Basílica de Santa María de Mallorca	Palma	ES	Balearic Islands
 Parroquia De San Nicolas	Palma	ES	Balearic Islands
 Esglesia de Monti-sion de Palma	Palma	ES	Balearic Islands
 Esglèsia de Sant Francesc	Palma	ES	Balearic Islands
-Iglesia Nstra.Señora del Socorro,Santa Rita	Palma	ES	Balearic Islands
+Iglesia Nuestra Señora del Socorro, Santa Rita	Palma	ES	Balearic Islands
 Gran Orgue Santa Creu Mallorca	Palma	ES	Balearic Islands
 Parroquia San Nicolas	Palma	ES	Balearic Islands
 Basilica de San Miguel Palma de Mallorca	Palma	ES	Balearic Islands
@@ -48809,7 +48809,7 @@ Parrocchia S. Barbara Senorbi	Senorbì	IT	Sardinia
 Parrocchia S. Barbara - Furtei	Furtei	IT	Sardinia
 Chiesa Parrocchiale Beata Vergine della Neve	Pabillonis	IT	Sardinia
 Oratorio San Giovanni Bosco	Uras	IT	Sardinia
-Parrocchia S.maria Maddalena Abitaz.del Parroco	Uras	IT	Sardinia
+Parrocchia Santa Maria Maddalena	Uras	IT	Sardinia
 Chiesa del Santissimo Salvatore	Uras	IT	Sardinia
 Oratorio Terralba	Terralba	IT	Sardinia
 Chiesa di Sant'Antioco	Mogoro	IT	Sardinia
@@ -49007,7 +49007,7 @@ Parrocchia Sant'Ignazio di Loyola - Oliena	Oliena	IT	Sardinia
 Chiesa della Madonna di Bonaria	Oliena	IT	Sardinia
 Santuario Nostra Signora di Monserrato	Ulìana/Oliena	IT	Sardinia
 Parrocchia Del Sacro Cuore di Gesù	Nuoro	IT	Sardinia
-Parrocchia Nostra Signora Delle Grazie -Nuoro-	Nuoro	IT	Sardinia
+Parrocchia Nostra Signora Delle Grazie - Nuoro	Nuoro	IT	Sardinia
 Vecchio santuario Madonna delle Grazie	Nuoro	IT	Sardinia
 Oratorio San Domenico Savio Nuoro	Nuoro	IT	Sardinia
 Diocesi di Nuoro	Nuoro	IT	Sardinia
@@ -49215,7 +49215,7 @@ Chiesa di San Francesco	Tempio Pausania	IT	Sardinia
 Chiesa di San Lussorio	Agghju/Aggius	IT	Sardinia
 Chiesa Madonna d'Itria	Aggius	IT	Sardinia
 Sacro Cuore di Gesu'	Badesi	IT	Sardinia
-Parrocchia SS Trinità               Trinità D'agultu e Vignola	Trinità d'Agultu e Vignola	IT	Sardinia
+Parrocchia SS. Trinità - Trinità d'Agultu e Vignola	Trinità d'Agultu e Vignola	IT	Sardinia
 Parrocchia San Sebastiano Berchidda	Berchidda	IT	Sardinia
 Chiesa della Madonna della Neve	Tèmpiu/Tempio Pausania	IT	Sardinia
 San Paolo Di Monti	Monti	IT	Sardinia
@@ -50056,7 +50056,7 @@ Notre Dame de Beauvoir	Istres	FR	Provence-Alpes-Cote d'Azur
 Paroisse de Saint Chamas	Saint Chamas	FR	Provence-Alpes-Cote d'Azur
 Église Saint-Louis de Miramas	Miramas	FR	Provence-Alpes-Cote d'Azur
 Chapelle Sainte Rosalie	La Fare-les-Oliviers	FR	Provence-Alpes-Cote d'Azur
-eglise du bon pasteur	Vitrolles	FR	Provence-Alpes-Cote d'Azur
+Eglise du Bon Pasteur	Vitrolles	FR	Provence-Alpes-Cote d'Azur
 Église Notre-Dame-de-l'Assomption	Cabriès	FR	Provence-Alpes-Cote d'Azur
 Chapelle Notre-Dame-de-la-Salette de Calas	Cabriès	FR	Provence-Alpes-Cote d'Azur
 Chapelle Notre-Dame de l'Espérance	Bouc-Bel-Air	FR	Provence-Alpes-Cote d'Azur
@@ -50189,7 +50189,7 @@ Eglise Notre-Dame du Grand-Castel	Puymirol	FR	Midi-Pyrenees
 Église Saint-Robert	Saint-Robert	FR	Aquitaine
 Chapelle Saint Germain	Laroque-Timbaut	FR	Aquitaine
 Eglise Sainte Eulalie	Cauzac	FR	Aquitaine
-chapelle saint clair	Cauzac	FR	Aquitaine
+Chapelle Saint Clair	Cauzac	FR	Aquitaine
 Église Saint-Jacques	Beauville	FR	Aquitaine
 Église Saint-Pierre-aux-Liens	Engayrac	FR	Aquitaine
 Eglise Saint-Caprais de Marcoux	Beauville	FR	Aquitaine
@@ -50271,7 +50271,7 @@ Diocese d'Albi	Albi	FR	Midi-Pyrenees
 Oratoire Paroisse Albi Madeleine	Albi	FR	Midi-Pyrenees
 Église Notre Dame du Breuil	Albi	FR	Midi-Pyrenees
 Chapelle Saint Martin	Albi	FR	Midi-Pyrenees
-paroisse sainte madeleine albi	Albi	FR	Midi-Pyrenees
+Paroisse Sainte Madeleine Albi	Albi	FR	Midi-Pyrenees
 Église Notre-Dame-de-l'Assomption	Alban	FR	Midi-Pyrenees
 Monastère des Bénédictines Notre-Dame d'Orient	Laval-Roquecezière	FR	Midi-Pyrenees
 Église Saint Corneille	Puycelsi	FR	Midi-Pyrenees
@@ -51104,7 +51104,7 @@ Notre-Dame de la Vière	Carnoules	FR	Provence-Alpes-Cote d'Azur
 Paroisse de Carnoules	Carnoules	FR	Provence-Alpes-Cote d'Azur
 Église Catholique Collégiale de la Nativité de Notre Dame	Pignans	FR	Provence-Alpes-Cote d'Azur
 Chapelle de la Roquebrussane	La Roquebrussanne	FR	Provence-Alpes-Cote d'Azur
-Église Saint Sauveur⛪	Brignoles	FR	Provence-Alpes-Cote d'Azur
+Église Saint Sauveur	Brignoles	FR	Provence-Alpes-Cote d'Azur
 Paroisse de Brignoles	Brignoles	FR	Provence-Alpes-Cote d'Azur
 Chapelle Saint Sébastien	Camps-la-Source	FR	Provence-Alpes-Cote d'Azur
 Monastere Saint Benoit	Brignoles	FR	Provence-Alpes-Cote d'Azur
@@ -51324,7 +51324,7 @@ Ordine Francescano Secolare Grosseto	Grosseto	IT	Tuscany
 Parrocchia Santa Lucia, Grosseto	Grosseto	IT	Tuscany
 Chiesa della Santa Famiglia	Grosseto	IT	Tuscany
 Parrocchia Madre Teresa di Calcutta	Grosseto	IT	Tuscany
-Parrocchia SS. Salvatore -Istia d'Ombrone-	Grosseto	IT	Tuscany
+Parrocchia SS. Salvatore - Istia d'Ombrone	Grosseto	IT	Tuscany
 Chiesa di San Sebastiano	Grosseto	IT	Tuscany
 Cappella della Scala Santa (Vetulonia)	Castiglione della Pescaia	IT	Tuscany
 Cappella di Sant'Uberto	Grosseto	IT	Tuscany
@@ -52584,7 +52584,7 @@ Parrocchia S. Pio X In Gagno	Pisa	IT	Tuscany
 Santuario della Madonna dell'Acqua	San Giuliano Terme	IT	Tuscany
 Cathedral Sevilla, Spain	San Giuliano Terme	IT	Tuscany
 Eremo di San Bernardo	Calci	IT	Tuscany
-santuario madonna delle grazie	Calci	IT	Tuscany
+Santuario Madonna delle Grazie	Calci	IT	Tuscany
 Presepe di Tre Colli	Calci	IT	Tuscany
 Parrocchia San Giovanni Battista	San Giuliano Terme	IT	Tuscany
 Parrocchia dei Santi Simone e Giuda	Vecchiano	IT	Tuscany
@@ -52750,7 +52750,7 @@ Chiesa S. Maria a Lungotuono	Castelfiorentino	IT	Tuscany
 Pieve dei Santi Ippolito e Biagio	Castelfiorentino	IT	Tuscany
 Collegiata di S.Maria Assunta	Castelfiorentino	IT	Tuscany
 Church of San Lorenzo	Empoli	IT	Tuscany
-Parrocchia Di San Bartolo Apostolo - Martignana, Italy	Montespertoli	IT	Tuscany
+Parrocchia Di San Bartolo Apostolo - Martignana	Montespertoli	IT	Tuscany
 Pieve di Santa Maria a Coeli Aula	Montespertoli	IT	Tuscany
 Pieve of San Pancrazio	San Casciano in Val di Pesa	IT	Tuscany
 Chiesa di Santo Stefano	Montespertoli	IT	Tuscany
@@ -52836,7 +52836,7 @@ Chiesa di San Bartolomeo a Monte Oliveto	Firenze	IT	Tuscany
 Piazza Santo Spirito	Firenze	IT	Tuscany
 Chiesa di Santa Monaca	Firenze	IT	Tuscany
 Chiesa di San Carlo dei Barnabiti	Firenze	IT	Tuscany
-Santa Monaca Church, Florence, Italy	Firenze	IT	Tuscany
+Chiesa di Santa Monaca	Firenze	IT	Tuscany
 Cappella Corsini	Firenze	IT	Tuscany
 Basilica di Santo Spirito	Firenze	IT	Tuscany
 Chiesa di San Frediano in Cestello	Firenze	IT	Tuscany
@@ -54479,7 +54479,7 @@ Parrocchia SS. Pietro e Paolo Cerzeto CS	Cerzeto	IT	Calabria
 Parrocchia Santa Caterina V. M. di Mongrassano	Mongrassano	IT	Calabria
 Chiesa San Nicola di Bari	Cervicati	IT	Calabria
 AC Immacolata Concezione Diamante	Diamante	IT	Calabria
-Parrocchia S. Biagio Vescovo e Martire - Diamante -	Diamante	IT	Calabria
+Parrocchia S. Biagio Vescovo e Martire - Diamante	Diamante	IT	Calabria
 Parrocchia San Francesco di Paola Cittadella del Capo-Cs	San Lorenzo del Vallo	IT	Calabria
 Parrocchia S. Maria Maddalena	Bonifati	IT	Calabria
 Santuario della Beata Vergine del Rosario	Bonifati	IT	Calabria
@@ -54641,7 +54641,7 @@ Santuario di Santa Maria delle Armi	Cerchiara di Calabria	IT	Calabria
 Santuario Santa Maria delle Armi	Cerchiara di Calabria	IT	Calabria
 Parrocchia Ss. Maria Del Piano, Villapiana	Villapiana	IT	Calabria
 Oratorio dell'Amicizia "Mons.Stamati" Plataci	Plataci	IT	Calabria
-Parrocchia San Giovanni Battista, Plataci, Italia	Plataci	IT	Calabria
+Parrocchia San Giovanni Battista, Plataci	Plataci	IT	Calabria
 Cappella San Giuseppe	Trebisacce	IT	Calabria
 Church of Saint Mary Della Pietà	Trebisacce	IT	Calabria
 Parrocchia Cuore della Beata Vergine Maria	Trebisacce	IT	Calabria
@@ -55645,7 +55645,7 @@ Parrocchia San Benedetto Abate	Sant'Andrea del Garigliano	IT	Latium
 Parrocchia San Benedetto Abate	Sant'Andrea del Garigliano	IT	Latium
 Chiesa di Santo Stefano	Galluccio	IT	Campania
 Comunità Ecclesiale Conca della Campania	Conca della Campania	IT	Campania
-Parrocchia Santa Maria Maggiore -Rocca D'Evandro-	Rocca d'Evandro	IT	Campania
+Parrocchia Santa Maria Maggiore - Rocca D'Evandro	Rocca d'Evandro	IT	Campania
 Chiesa San Giorgio martire	San Giorgio a Liri	IT	Latium
 Parrocchia SS.mo Salvatore	Pignataro Interamna	IT	Latium
 Chiesa San Pietro Apostolo Cassino	Cassino	IT	Latium
@@ -56851,7 +56851,7 @@ Parrocchie di Torrice	Torrice	IT	Latium
 Santuario S.S Trinità  Boville Ernica	Boville Ernica	IT	Latium
 Collegiata Santa Maria della Valle	Monte San Giovanni Campano	IT	Latium
 Parrocchia Beata Vergine Maria Immacolata-La Lucca	Monte San Giovanni Campano	IT	Latium
-Collegiata San Michele Arcangelo -Boville Ernica-	Boville Ernica	IT	Latium
+Collegiata San Michele Arcangelo - Boville Ernica	Boville Ernica	IT	Latium
 Parrocchia dei Santi Pietro e Paolo	Arce	IT	Latium
 Cappella Santa Lucia	MADONNA DI PARIS	IT	Latium
 Santuario S Eleuterio ARCE	Arce	IT	Latium
@@ -56861,7 +56861,7 @@ Parrocchia Sant'Anna -Anitrella-	Monte San Giovanni Campano	IT	Latium
 Chiesa Maria SS.ma del Pianto	Monte San Giovanni Campano	IT	Latium
 Chiesa di San Sosio Martire	Arpino	IT	Latium
 Santuario di Santa Maria di Civita	Arpino	IT	Latium
-Parrocchie San Michele Arcangelo e Santa Maria di Civita - Arpino -	Arpino	IT	Latium
+Parrocchie San Michele Arcangelo e Santa Maria di Civita - Arpino	Arpino	IT	Latium
 Cattedrale di Santa Maria Assunta e San Benedetto abate	Cassino	IT	Latium
 Basilica di Santa Maria in Foro Claudio	Cassino	IT	Latium
 Parrocchia Sant'Antonio di Padova Cassino	Cassino	IT	Latium
@@ -58877,12 +58877,12 @@ Santuario Madonna della Salute	Castelmauro	IT	Molise
 Santuario Madonna della Salute	Castelmauro	IT	Molise
 Parrocchia S. Maria Assunta - Riccia	Riccia	IT	Molise
 Chiesa di San Bartolomeo Apostolo	Gambatesa	IT	Molise
-Parrocchia San Nicola di Mira - San Marco la Catola -	San Marco la Catola	IT	Apulia
+Parrocchia San Nicola di Mira - San Marco la Catola	San Marco la Catola	IT	Apulia
 Santuario Maria SS. della Sanita	Volturara Appula	IT	Apulia
 Parrocchia Santa Croce	Celenza Valfortore	IT	Apulia
 Parrocchia S. Maria Assunta - Monacilioni	Monacilioni	IT	Molise
 Parrocchia San Nicola di Mira Macchia Valfortore	Macchia Valfortore	IT	Molise
-Parrocchia San Donato Vescovo e Martire - Carlantino -	Carlantino	IT	Apulia
+Parrocchia San Donato Vescovo e Martire - Carlantino	Carlantino	IT	Apulia
 Oratorio "S. Maria delle Grazie"	Casalvecchio di Puglia	IT	Apulia
 Parrocchia Santa Maria Assunta in Pietramontecorvino	Pietramontecorvino	IT	Apulia
 Parrocchia San Pio Decimo Lucera	Lucera	IT	Apulia
@@ -59162,7 +59162,7 @@ Chiesa Cristo RE	Cariati	IT	Calabria
 Cattedrale S.michele Arcangelo Cariati	Cariati	IT	Calabria
 Centro Socio Pastorale	Marina Di Pescoluse	IT	Apulia
 Chiesa Madonna del Casale	Ugento	IT	Apulia
-sant andrea apostolo	Presicce-Acquarica	IT	Apulia
+Sant'Andrea Apostolo	Presicce-Acquarica	IT	Apulia
 Azione Cattolica -  Alliste	Alliste	IT	Apulia
 Parrocchia S. Quintino - Alliste	Alliste	IT	Apulia
 Parrocchia San Giorgio Martire - Racale	Racale	IT	Apulia
@@ -59847,7 +59847,7 @@ Chiesa M. SS. Immacolata	Noicattaro	IT	Apulia
 Parrocchia Santa Maria del Soccorso -Noicattaro	Noicattaro	IT	Apulia
 Church Stella Maris	Conversano	IT	Apulia
 Chiesa del Purgatorio	Conversano	IT	Apulia
-Parrocchia Maria SS.ma del Carmine -Conversano-	Conversano	IT	Apulia
+Parrocchia Maria SS.ma del Carmine - Conversano	Conversano	IT	Apulia
 Santuario Santa Rita Conversano	Conversano	IT	Apulia
 Diocesi di Conversano-Monopoli	Conversano	IT	Apulia
 Chiesa di Santa Chiara Conversano - Ba	Conversano	IT	Apulia
@@ -60238,7 +60238,7 @@ Basilica di San Felice da Cantalice	Cantalice	IT	Latium
 Chiesa di San Francesco al terminillo	Rieti	IT	Latium
 Parrocchia San Giovanni Battista Poggio Bustone	Poggio Bustone	IT	Latium
 Santuario Francescano	Poggio Bustone	IT	Latium
-Parrocchia San Matteo Apostolo Borgo Velino - Rieti -	Borgo Velino	IT	Latium
+Parrocchia San Matteo Apostolo Borgo Velino - Rieti	Borgo Velino	IT	Latium
 Santa Maria Extra Moenia	Antrodoco	IT	Latium
 Parrocchia Santa Maria Assunta	Antrodoco	IT	Latium
 Parrocchia S. Pietro Apostolo Coppito	L'Aquila	IT	Abruzzo
@@ -60252,7 +60252,7 @@ Abbazia di Santa Lucia	Rocca di Cambio	IT	Abruzzo
 Oratorio di San Pellegrino e Chiesa di Santa Maria Assunta a Bominaco	Caporciano	IT	Abruzzo
 Chiesa di S. Maria Assunta	Fossa	IT	Abruzzo
 Basilica di Santa Maria di Collemaggio	L'Aquila	IT	Abruzzo
-Parrocchia San Lorenzo  -S.Elia-	L'Aquila	IT	Abruzzo
+Parrocchia San Lorenzo - Sant'Elia	L'Aquila	IT	Abruzzo
 Parrocchia San Francesco di Paola - L'Aquila	L'Aquila	IT	Abruzzo
 Chiesa di San Marco	L'Aquila	IT	Abruzzo
 Cattedrale di San Massimo	L'Aquila	IT	Abruzzo
@@ -60857,7 +60857,7 @@ Chiesa di San Bartolomeo, Pergo.	Cortona	IT	Tuscany
 San Michele a Metelliano	Cortona	IT	Tuscany
 Parrocchia delle SS. Agata e Caterina-Fratta di Cortona	Cortona	IT	Tuscany
 Santuario Madonna del Bagno Pergo		IT	Tuscany
-Basilica of Saint Margarita,	Cortona	IT	Tuscany
+Basilica of Saint Margarita	Cortona	IT	Tuscany
 Santa Maria delle Grazie al Calcinaio	Cortona	IT	Tuscany
 Church of the Holy Spirit	Cortona	IT	Tuscany
 Parrocchia di Cortona	Cortona	IT	Tuscany
@@ -61169,7 +61169,7 @@ Cattedrale San Settimio	Jesi	IT	The Marches
 Duomo di Jesi	Jesi	IT	The Marches
 Parrocchia San Giuseppe	Jesi	IT	The Marches
 Parrocchia S. Marcello	San Marcello	IT	The Marches
-Parrocchia Cuore Immacolato di Maria Maria	Monte San Vito	IT	The Marches
+Parrocchia Cuore Immacolato di Maria	Monte San Vito	IT	The Marches
 Oratorio Koinè	Monte San Vito	IT	The Marches
 Chiesa Camerata-Grancetta	Camerata Picena	IT	The Marches
 Parrocchia Buon Pastore Collevario	Macerata	IT	The Marches
@@ -61823,7 +61823,7 @@ Parrocchia S. Giovanni In Compito	Savignano sul Rubicone	IT	Emilia-Romagna
 Parrocchia di Budrio S.Maria di Cleofa	Longiano	IT	Emilia-Romagna
 Parrocchia Bulgaria S.Biagio V.M.	Cesena	IT	Emilia-Romagna
 Fulgor - Parrocchia di Gambettola	Gambettola	IT	Emilia-Romagna
-Chiesa di Santa Maria Bambina -Castelvecchio-	Savignano sul Rubicone	IT	Emilia-Romagna
+Chiesa di Santa Maria Bambina - Castelvecchio	Savignano sul Rubicone	IT	Emilia-Romagna
 Chiesa del Suffragio	Savignano sul Rubicone	IT	Emilia-Romagna
 Parrocchia Castelvecchio Abitazione Parroco	Savignano sul Rubicone	IT	Emilia-Romagna
 Azione Cattolica Savignano Sul Rubicone	Savignano sul Rubicone	IT	Emilia-Romagna
@@ -62163,7 +62163,7 @@ Sala del Pio Suffragio	Imola	IT	Emilia-Romagna
 Basilica Cattedrale San Cassiano - IMOLA	Imola	IT	Emilia-Romagna
 Duomo di Imola	Imola	IT	Emilia-Romagna
 Istituto Sostentamento Clero Diocesi Imola	Imola	IT	Emilia-Romagna
-santuario della beata vergine de le grazie	Imola	IT	Emilia-Romagna
+Santuario della Beata Vergine delle Grazie	Imola	IT	Emilia-Romagna
 Parrocchia Santo Spirito	Imola	IT	Emilia-Romagna
 Church of Saint Mary dei Servi	Imola	IT	Emilia-Romagna
 Oratorio San Giacomo Aps Imola	Imola	IT	Emilia-Romagna
@@ -62397,7 +62397,7 @@ Chiesa Cattolica Parrocchiale S. Massimiano	Ravenna	IT	Emilia-Romagna
 Parrocchie Alfonsine	Alfonsine	IT	Emilia-Romagna
 Santuario della Madonna del Bosco	Alfonsine	IT	Emilia-Romagna
 Parrocchia San Giuseppe Marina di Ravenna	Ravenna	IT	Emilia-Romagna
-casa di riposo san giuliano	Argenta	IT	Emilia-Romagna
+Casa di Riposo San Giuliano	Argenta	IT	Emilia-Romagna
 Parrocchia di San Francesco - Lido di Spina - FE	Comacchio	IT	Emilia-Romagna
 Parish of Saint Peter	Castello d'Argile	IT	Emilia-Romagna
 Frati San Martino Secchia	Carpi	IT	Emilia-Romagna
@@ -62668,7 +62668,7 @@ Manastir Sveti Jovan	Пантелеј	RS	Central Serbia
 Church of the Holy Mother of God, Donja Kamenica		RS	Central Serbia
 Crkva svetog Ivana Krstitelja		BA	Federation of Bosnia and Herzegovina
 Crkva Bezgrešnog Začeća Blažene Djevice Marije	Livno	BA	Federation of Bosnia and Herzegovina
-Samostan-tomislavgrad.info - Franjevački samostan Tomislavgrad	Tomislavgrad	BA	Federation of Bosnia and Herzegovina
+Franjevački samostan Tomislavgrad	Tomislavgrad	BA	Federation of Bosnia and Herzegovina
 Crkva Svetog Franje Asiškog	Livno	BA	Federation of Bosnia and Herzegovina
 Crkva Gospe od Anđela	Livno	BA	Federation of Bosnia and Herzegovina
 Crkva Svih Svetih	Livno	BA	Federation of Bosnia and Herzegovina
@@ -62768,7 +62768,7 @@ Holy Cross Catholic Church	Lefkoşa	CY	Lefkosia
 St Barnabas Catholic Church Lefkosa, Cyprus 	Lefkoşa	CY	Lefkosia
 St Elizabeth of Hungary Roman Catholic Church	Girne	CY	Keryneia
 Paros - Saint Fokas -	Πάρος	GR	South Aegean
-Καθολική Ενορία Μεταμορφώσεως -Ναύπλιο-	Ναύπλιο	GR	Peloponnese
+Καθολική Ενορία Μεταμορφώσεως - Ναύπλιο	Ναύπλιο	GR	Peloponnese
 Parafia Przemieninia Pańskiego w Nafplio Grecja	Ναύπλιο	GR	Peloponnese
 Cattedrale di San Pietro (Argo)	Άργος	GR	Peloponnese
 Μονή Αγίου Βλασίου Μεγάρων	Μέγαρα	GR	Attica
@@ -66423,7 +66423,7 @@ Banban Catholic Church	Siquijor	PH	Central Visayas
 Our Lady of Fatima Banahaw Chapel	Lazi	PH	Central Visayas
 St. Vincent Ferrer Catholic Church	Larena	PH	Central Visayas
 CFC-Kids for Christ Siquijor	Larena	PH	Central Visayas
-St. Vincent Ferrer Church Camanjac,	Dumaguete City	PH	Central Visayas
+St. Vincent Ferrer Church, Camanjac	Dumaguete City	PH	Central Visayas
 Saint Vicente Ferrer Quasi-Parish Church	Sibulan	PH	Central Visayas
 Sto. Niño Parish, Mabinay, Negros Oriental	Dumaguete City	PH	Central Visayas
 St. Andrew Church, Amlan Negros Oriental	Dumaguete City	PH	Central Visayas
@@ -66941,7 +66941,7 @@ Our Lady of Guadalupe Chapel	Victorias	PH	Western Visayas
 Mary Help of Christians Church	Victorias	PH	Western Visayas
 Canetown Cathedral, Vmc	Enrique B. Magalona	PH	Western Visayas
 St. Joseph the Worker Parish Church	Victorias	PH	Western Visayas
-Sto.rosario Parish Brgy.paraiso	Sagay City	PH	Western Visayas
+Santo Rosario Parish, Paraiso	Sagay City	PH	Western Visayas
 GKK Bunyag Chapel	Escalante	PH	Western Visayas
 Mount Carmel Parish Church	Escalante	PH	Western Visayas
 Mt Carmel Parish Church, Escalante City	Escalante	PH	Western Visayas
@@ -67010,7 +67010,7 @@ Pandanan Parish Catholic Church	Sagay City	PH	Western Visayas
 Catholic Church	Cadiz	PH	Western Visayas
 St. James the Greater Parish	Sagay City	PH	Western Visayas
 San Vicente Ferrer Church		PH	Western Visayas
-Vito Church,brgy.vito,sagay City	Sagay City	PH	Western Visayas
+Vito Church, Sagay City	Sagay City	PH	Western Visayas
 Immaculate Concepcion Parish	Concepcion	PH	Western Visayas
 San Isidro Labrador Parish Church	Doong	PH	Central Visayas
 Saint Peter & Paul Parish Church Bantayan Island	Bantayan	PH	Central Visayas
@@ -71346,7 +71346,7 @@ Our Lady of Salvation Parish, Anislag Daraga Albay	Daraga	PH	Bicol
 St. Joseph the Worker Parish Church - Banquerohan, Legazpi City, Albay (Diocese of Legazpi)	Legazpi City	PH	Bicol
 Our Lady of the Holy Rosary Parish	Bicol Region	PH	Bicol
 San Pedro Calungsod Quasi Parish - Bascaran	Daraga	PH	Bicol
-St Claire Monastery Tabon Tabon Daraga Albay	Legazpi City	PH	Bicol
+St. Clare Monastery, Daraga	Legazpi City	PH	Bicol
 Mission Church - Nuestra Señora De Peñafrancia - Peñafrancia, Daraga, Albay	Daraga	PH	Bicol
 San Isidro Labrador - Bgy. Inarado	Daraga	PH	Bicol
 Naga Basilica Church	Daraga	PH	Bicol
@@ -72306,7 +72306,7 @@ Visita del Santo Cristo de Kapitangan - Paombong, Bulacan	Paombong	PH	Central Lu
 Capilla de San Isidro Labrador	Paombong	PH	Central Luzon
 San Vicente Chapel - San Vicente, Paombong, Bulacan	Paombong	PH	Central Luzon
 Capilla de San Jose	Paombong	PH	Central Luzon
-Capilla de Sto.Niño - Paombong	Paombong	PH	Central Luzon
+Capilla de Sto. Niño - Paombong	Paombong	PH	Central Luzon
 Capilla del Santisimo Rosario de Paombong	Paombong	PH	Central Luzon
 Capilla del Santisimo Rosario de Paombong	Paombong	PH	Central Luzon
 Bisita ng Mahal na Birhen ng Santo Rosario	Malolos	PH	Central Luzon
@@ -73925,7 +73925,7 @@ Our lady of Lourdes chapel - Tanay,Rizal	Tanay	PH	Calabarzon
 Regina Statue	Tanay	PH	Calabarzon
 Regina RICA	Tanay	PH	Calabarzon
 Padre Pio Chapel	Plaza Aldea	PH	Calabarzon
-St Martins Of Tours Catholic Church @ Camp Gen Mateo Capinpin, Tanay, Rizal	Tanay	PH	Calabarzon
+St. Martin of Tours Catholic Church, Camp Capinpin	Tanay	PH	Calabarzon
 St. Philomena Chapel	Tanay	PH	Calabarzon
 Diocesan Shrine of the Holy Face of Manoppello	Tanay	PH	Calabarzon
 St. Jude Thaddeus Parish Sampaloc Tanay Rizal	Tanay	PH	Calabarzon
@@ -74427,7 +74427,7 @@ Anastacia Village Chapel	Marikina	PH	Calabarzon
 Sto. Niño Parish - San Mateo	San Mateo	PH	Calabarzon
 San Jose Parish	San Mateo	PH	Calabarzon
 Rafaela II Church	San Mateo	PH	Calabarzon
-Queen of Peace Chapel Marvi Hills Subd.san Mateo Rizal	San Mateo	PH	Calabarzon
+Queen of Peace Chapel, Marvi Hills	San Mateo	PH	Calabarzon
 Nuestra Senora dela Annunciata Parish Church	Antipolo	PH	Calabarzon
 Sto. Niño de Cebu	Antipolo	PH	Calabarzon
 Sto Rosario Parish Church	Malabon	PH	Metro Manila
@@ -78323,7 +78323,7 @@ Jamsil Catholic Church	잠실본동	KR	Gyeonggi-do
 천주교 잠실3동성당	Seoul	KR	Gyeonggi-do
 천주교 태평동 성당 수녀원	수정구	KR	Gyeonggi-do
 단대동성당	성남시	KR	Gyeonggi-do
-천주교 천주교 신흥동교회	성남시	KR	Gyeonggi-do
+천주교 신흥동교회	성남시	KR	Gyeonggi-do
 신흥동성당		KR	Gyeonggi-do
 세곡동성당		KR	Gyeonggi-do
 천주교 수서동성당	서울	KR	Gyeonggi-do
@@ -78754,7 +78754,7 @@ Igreja Catolica De Iga カトリック上野教会	伊賀市	JP	Mie
 カトリック池田教会	池田市	JP	Osaka
 カトリック箕面教会	箕面市	JP	Osaka
 Minoh International Church	箕面市	JP	Osaka
-Catholic Church Church	茨木市	JP	Osaka
+Catholic Church	茨木市	JP	Osaka
 カトリック枚方教会	枚方市	JP	Osaka
 カトリック高槻教会	高槻市	JP	Osaka
 カトリック日生中央教会	川辺郡猪名川町	JP	Osaka

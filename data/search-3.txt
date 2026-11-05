@@ -2134,7 +2134,7 @@ San Esteban	Arminon	ES	Basque Country
 Iglesia de San Quirico y Julita	Uribarri Kuartango	ES	Basque Country
 Iglesia de Santiago	Villamanca	ES	Castille and Leon
 Iglesia de San Román	Arriano	ES	Castille and Leon
-iglesia	Artxua / Archúa	ES	Castille and Leon
+Iglesia	Artxua / Archúa	ES	Castille and Leon
 iglesia de San Andrés	Luna	ES	Castille and Leon
 Iglesia de Santiago	Urbina de Basabe	ES	Castille and Leon
 Iglesia de San Martín	Jokano	ES	Basque Country
@@ -2458,7 +2458,7 @@ Ermita de Santiago	Ribadesella	ES	Asturias
 Iglesia de San Miguel de Ucio	Ribadesella	ES	Asturias
 Ermita de San Julián	Ribadesella	ES	Asturias
 Ermita de San Martín	Ribadesella	ES	Asturias
-capilla	Ribadesella	ES	Asturias
+Capilla	Ribadesella	ES	Asturias
 Iglesia de San Pedro	Ribadesella	ES	Asturias
 San Antonio	Ribadesella	ES	Asturias
 Capilla Santa Ana	Ribadesella	ES	Asturias
@@ -3866,7 +3866,7 @@ Ermita de Santiago de Laukariz	Mungia	ES	Basque Country
 Madaleneko ermita	Mungia	ES	Basque Country
 Andra Maria eta Done Petri	Mungia	ES	Basque Country
 San Anton baseliza	Mungia	ES	Basque Country
-sede de la religion de la virjen de los milagros	Gatika	ES	Basque Country
+Sede de la Religion de la Virjen de los Milagros	Gatika	ES	Basque Country
 Andra Mariaren Zeruratzea	Gatika	ES	Basque Country
 Santindere	Gatika	ES	Basque Country
 Ermita de Santa Mariñe y San Ignacio	Mungia	ES	Basque Country
@@ -10089,7 +10089,7 @@ Maison paroissiale	Saint-Herblain	FR	Pays de la Loire
 Église Saint-Michel	Nantes	FR	Pays de la Loire
 Église Saint-Thomas	Saint-Herblain	FR	Pays de la Loire
 Église Saint-Luc	Nantes	FR	Pays de la Loire
-chapelle	Sautron	FR	Pays de la Loire
+Chapelle	Sautron	FR	Pays de la Loire
 Église Sainte-Bernadette	Orvault	FR	Pays de la Loire
 Chapelle des Franciscains	Nantes	FR	Pays de la Loire
 Chapelle Saint-Michel	Nantes	FR	Pays de la Loire
@@ -10558,7 +10558,7 @@ Mausolée des ducs de Brissac	Brissac-Quince	FR	Pays de la Loire
 Église Saint-Vincent	Brissac-Quince	FR	Pays de la Loire
 Église Saint-Pierre de Charcé	Brissac-Quince	FR	Pays de la Loire
 Église Saint-Pierre	Blaison-Gohier	FR	Pays de la Loire
-cathédrale de verdure	Savennieres	FR	Pays de la Loire
+Cathédrale de Verdure	Savennieres	FR	Pays de la Loire
 Église Saint-Aubin	Savennieres	FR	Pays de la Loire
 Notre-Dame de Ruzebouc	Bouchemaine	FR	Pays de la Loire
 Église Saint-Venant	Murs-Erigne	FR	Pays de la Loire
@@ -10703,7 +10703,7 @@ Chapelle Notre-Dame-sous-Terre	Angers	FR	Pays de la Loire
 Chapelle Notre-Dame de Pitié	Angers	FR	Pays de la Loire
 Église de la Trinité	Angers	FR	Pays de la Loire
 Chapelle du Carmel	Angers	FR	Pays de la Loire
-chapelle	Angers	FR	Pays de la Loire
+Chapelle	Angers	FR	Pays de la Loire
 Chapelle du Crucifix	Angers	FR	Pays de la Loire
 Chapelle	Angers	FR	Pays de la Loire
 Chapelle Saint-Jean	Angers	FR	Pays de la Loire
@@ -15095,7 +15095,7 @@ Saint Laurence	Petersfield	GB	England
 Cowdray Old RC Chapel	Midhurst	GB	England
 Saint Agnes	Liss	GB	England
 St Anselm's	Hindhead	GB	England
-SS PETER AND PAUL	Kingsclere	GB	England
+SS Peter and Paul	Kingsclere	GB	England
 Holy Family	Farnham	GB	England
 Church of St Thomas More	Hook	GB	England
 St. Michael's Abbey Church	Farnborough	GB	England
@@ -15180,7 +15180,7 @@ St. Clement's	Ewell	GB	England
 Holy Family Catholic Church	Carshalton	GB	England
 Our Lady of Lourdes	Thames Ditton	GB	England
 Our Lady Immaculate	Surbiton	GB	England
-Emmanuel Church!	Morden	GB	England
+Emmanuel Church	Morden	GB	England
 St John The Baptist	Purley	GB	England
 St Gertrude’s Catholic Church South Croydon	South Croydon	GB	England
 Chapel	Carshalton	GB	England
@@ -15306,7 +15306,7 @@ St Matthew's Roman Catholic Church	Liverpool	GB	England
 St Paul's Roman Catholic Church	Knowsley	GB	England
 St Aidan's R.C. Church	Huyton	GB	England
 St Timothy's RC Church	Knowsley	GB	England
-ST COLUMBA'S CATHOLIC CHURCH	Huyton	GB	England
+St Columba's Catholic Church	Huyton	GB	England
 St Michael's and All Angels	Belmont	GB	England
 Our Lady Queen of Peace	Worcester	GB	England
 Church of the Sacred Heart and Our Lady	Tenbury Wells	GB	England
@@ -16602,17 +16602,17 @@ Paroquia San Pedro de Lia	Bata	GQ	Litoral
 Iglesia de San José	Evinayong	GQ	Centro Sur
 Iglesia Católica	Rio Campo	GQ	Litoral
 Iglesia Católica de Moka		GQ	Bioko Sur
-DIOCESE DE KRIBI. PAROISSE SAINT LAURENT DE NZIOU	Kribi	CM	South Province
-PAROISSE SAINT JUDE D'AFAN MABE	Kribi	CM	South Province
+Diocese de Kribi. Paroisse Saint Laurent de Nziou	Kribi	CM	South Province
+Paroisse Saint Jude d'Afan Mabe	Kribi	CM	South Province
 Paroisse anglophone St Benoît	Kribi	CM	South Province
 Évêché de Kribi	Kribi	CM	South Province
 Catedrál de Santa Isabel	Malabo	GQ	Bioko Norte
 Iglesia de San Fernando	Malabo	GQ	Bioko Norte
-st peter and paul catholic church	batoke	CM	South-West Province
+St Peter and Paul Catholic Church	batoke	CM	South-West Province
 Roman Catholic Missi	Bota	CM	South-West Province
-SAINT PETER'S PARISH LIMBE	Limbe	CM	South-West Province
+Saint Peter's Parish Limbe	Limbe	CM	South-West Province
 Catholic Our Lady Lourdes	Limbe	CM	South-West Province
-HOLY FAMILY PAREH	Limbe	CM	South-West Province
+Holy Family Parish	Limbe	CM	South-West Province
 Catholic Church	Limbe	CM	South-West Province
 Chapelle Ucac-Icam	Douala	CM	Littoral
 Eglise Catholique Boko	Douala	CM	Littoral
@@ -16644,7 +16644,7 @@ Immaculate Heart Sisters Convent, Okere Community, Warri City	Warri City	NG	Delt
 Holy Family Catholic Church	Warri	NG	Delta
 St.Michaels Catholic church		NG	Imo
 St Anthony's Catholic Church Obokofia		NG	Imo
-st peters	aba city	NG	Abia
+St Peters	aba city	NG	Abia
 Our Lady of Mount Carmel Catholic Church, Emekuku	Owerri	NG	Imo
 St Anne's Parish Ofeama na Umuezie Nguru	Nguru Aboh Mbaise	NG	Imo
 Cathedral of Maria Mater Ecclesiae		NG	Imo
@@ -16693,7 +16693,7 @@ Chapelle de Nkoho	Dschang	CM	West
 Mission Catholique de Nkong-Mbet	Dschang	CM	West
 église catholique de Bangouo	Mbouda	CM	West
 eglise catholique de bamegua II	Mbouda	CM	West
-eglise catholique de bameghuie	Mbouda	CM	West
+Eglise Catholique de Bameghuie	Mbouda	CM	West
 église catholique de Mada	Mbouda	CM	West
 Paroisse St Bonifasse de Kynengo	Bafoussam	CM	West
 Paroisse Saint Barnabe	Bafoussam	CM	West
@@ -16728,7 +16728,7 @@ Basankusu Cathedral		CD	Equateur
 Notre Dame	Bumba	CD	Equateur
 Cathédrale Saint Joseph	Sangmelima	CM	South Province
 Église Notre Dame des Sept Douleurs	Akono	CM	Centre
-église catholique	Mbalmayo	CM	Centre
+Église Catholique	Mbalmayo	CM	Centre
 Cathedral Saint-Rosaire	Mbalmayo	CM	Centre
 Cathédrale (Eglise catholique)		CM	East
 Eglise Catholique		CM	Centre
@@ -16829,7 +16829,7 @@ Quasi-Paroisse Sainte Trinite de Melik	Saa	CM	Centre
 Paroisse Catholique Saint Joseph l'Artisan		CM	Centre
 Grotte mariale	Saa	CM	Centre
 Quasi-Paroisse Saint Jacques d'Eyene	Saa	CM	Centre
-église catholique	Saa	CM	Centre
+Église Catholique	Saa	CM	Centre
 Paroisse Précieux-Sang de Mvom-Nnam	Saa	CM	Centre
 Chapelle Saint Charles Lwanga	Mbandjok	CM	Centre
 Sanctuaire Marial de la paroisse notre dame des champs	Mbandjok	CM	Centre
@@ -16917,7 +16917,7 @@ Paroisse Saint Antoine de Padoue	Lome	TG	Maritime
 Eglise catholique Saint jean Baptiste	Lome	TG	Maritime
 Paroisse Sainte Lucie de Baguida	Lome	TG	Maritime
 Quasi Proisse Notre Dame de la Trinité Afanoukopé	Lomé	TG	Maritime
-EGLISE CATHOLIQUE STE THERESE DE L'ENANT JESUS ET DE LA STE FACE DE KEGUE	Lome	TG	Maritime
+Eglise Catholique Ste Therese de l'Enant Jesus et de la Ste Face de Kegue	Lome	TG	Maritime
 Eglise Catholique Marie Reine de la Paix d''Athiémé	Lome	TG	Maritime
 Eglise catholique de Madjikpeto (Paroisse Marie-Mère du rédempteur)		TG	Maritime
 Eglise Catholique Sainte Therèse d'Avila de Kognito		TG	Maritime
@@ -16952,7 +16952,7 @@ Eglise catholique	Tsevie	TG	Maritime
 Eglise Catholique		TG	Maritime
 Eglise Catholique Saint Antoine	Tsevie	TG	Maritime
 Église catholique St Joseph	Tsevie	TG	Maritime
-ÉGLISE CATHOLIQUE		TG	Maritime
+Église Catholique		TG	Maritime
 Église catholique paroisse saint Michel Archange de Tchékpo Dedekpoe		TG	Maritime
 Eglise catholique de Esse Zogbédji		TG	Maritime
 Église catholique sainte Famille		TG	Maritime
@@ -16976,7 +16976,7 @@ Eglises Catholique St Esprit	Kpalime	TG	Plateaux
 Eglises Catholique	Kpalime	TG	Plateaux
 Eglise catholique de Tové-Dzigbé	Kpalime	TG	Plateaux
 Eglise Catholique	Kpalime	TG	Plateaux
-eglise catholique sacre coeur de jesus christ	Kpalime	TG	Plateaux
+Eglise Catholique Sacre Coeur de Jesus Christ	Kpalime	TG	Plateaux
 St Theresa Catholic Church	Kpalime	TG	Plateaux
 Eglise catholique Ste famille hanyigba	Kpalime	TG	Plateaux
 Cathédrale	Kpalime	TG	Plateaux
@@ -16993,7 +16993,7 @@ Eglise Catholique	Kpalime	TG	Plateaux
 Eglise Catholique	Kpalime	TG	Plateaux
 Eglise Catholique	Kpalime	TG	Plateaux
 Eglise Catholique Sacré coeur	Kpalime	TG	Plateaux
-église catholique		TG	Plateaux
+Église Catholique		TG	Plateaux
 Eglise Catholique Ste Thèrèse de l'enfant Jésus		TG	Plateaux
 Eglise Catholique		TG	Plateaux
 Eglise Catholique		TG	Plateaux
@@ -17070,10 +17070,10 @@ Eglise Catholique Sainte Jeanne d'Arc d'Allada	Allada	BJ	Atlantique
 Chapelle Hopital la Croix de Zinvié		BJ	Atlantique
 Paroisse St Jean L'évangéliste de Zinvié		BJ	Atlantique
 Église catholique de Saint Antoine de Padhou	Porto-Novo	BJ	Queme
-PAROISE SAINT MARTIN DE TOURS DE HOUNSA	Porto-Novo	BJ	Queme
+Paroisse Saint Martin de Tours de Hounsa	Porto-Novo	BJ	Queme
 Eglise Catholique Saint Michel de HETIN SOTA	Porto-Novo	BJ	Queme
-PAROISSE DJEVIE-WADON	Porto-Novo	BJ	Queme
-PAROISSE SACRÉ CŒUR DE WADON	Porto-Novo	BJ	Queme
+Paroisse Djevie-Wadon	Porto-Novo	BJ	Queme
+Paroisse Sacré Cœur de Wadon	Porto-Novo	BJ	Queme
 Paroisse Sacré Cœur de Wadon	Porto-Novo	BJ	Queme
 Congrégation chrétienne de l'ordre sacré éternel des chérubins et séraphin	Porto-Novo	BJ	Queme
 EGLISE SAINTE D'ISRAËL	Porto-Novo	BJ	Queme
@@ -17129,7 +17129,7 @@ Abbatiale de l'Ascension		GH	Volta
 St. Anthony Catholic Church, Likpe Kukurantumi		GH	Volta
 Roman Catholic Church		GH	Volta
 Catholique d'Awounadzassi		TG	Plateaux
-catholique	Alati kpota	TG	Plateaux
+Catholique	Alati kpota	TG	Plateaux
 Catholic Church		GH	Volta
 Paroisse Notre-Dame du Rosaire de Kpélé Agavé		TG	Plateaux
 Catholique	Badou	TG	Plateaux
@@ -17140,7 +17140,7 @@ Cathédrale	Abomey	BJ	Zou
 Église Catholique Christ Roi de Djimè	Bohicon	BJ	Zou
 Eglise catholique Adjozoumè	Ketou	BJ	Plateau
 Paroise Jean-Paul II de Kétou	Ketou	BJ	Plateau
-église catholique de sodji	Ketou	BJ	Plateau
+Église Catholique de Sodji	Ketou	BJ	Plateau
 Eglise catholique d'Adaplamè	Ketou	BJ	Plateau
 Eglise catholique Ste Cécile d'Omou	Ketou	BJ	Plateau
 Eglise Catholique Issèlou	Imeko	NG	Ogun
@@ -17161,10 +17161,10 @@ Sanctuaire marial Notre Dame d'Arigbo	Dassa-Zoume	BJ	Collines
 Paroisse Cathédrale Nôtre Dame de Fourvière de Dassa	Dassa-Zoume	BJ	Collines
 Mission catholique sacre-coeur Dassa	Dassa-Zoume	BJ	Collines
 SS Peter & Paul Catholic Church	Ibadan	NG	Oyo
-catholic	ado	NG	Ekiti
+Catholic	ado	NG	Ekiti
 Pastoral Institute	Ede	NG	Osun
 Our Lady of Lourdes Catholic Church	Ogbomoso	NG	Oyo
-LAUTECH CATHOLIC CHAPEL OGBOMOSO	Ogbomoso	NG	Oyo
+Lautech Catholic Chapel Ogbomoso	Ogbomoso	NG	Oyo
 St Joseph's Catholic Parish Isiozi-Akah	Orodo	NG	Imo
 St Pauls Station	Ihiala	NG	Anambra
 St Joseph Catholic Parish, Nempi	Nempi	NG	Anambra
@@ -17322,7 +17322,7 @@ Mission catholique		CM	North Province
 Eglise Cathilique de Langui		CM	North Province
 Eglise Cathilique de Djide		CM	North Province
 Eglise Catholic de Badjouma Centre		CM	North Province
-Eglise Cathilique de de Babaye Moundang		CM	North Province
+Eglise Cathilique de Babaye Moundang		CM	North Province
 Église Catholique de Sekande	Pitoa	CM	North Province
 Eglise Catholique de Lagam Bainawa		CM	North Province
 Eglise Catholique de Badjengo		CM	North Province
@@ -17450,7 +17450,7 @@ Chapelle catholique Lwangongo	Butembo	CD	Nord Kivu
 Chapelle de l'hôpital	Butembo	CD	Nord Kivu
 Eglise Catholique poroisse de Kitatumba	Butembo	CD	Nord Kivu
 Chapelle Catholique Katovovo	Butembo	CD	Nord Kivu
-maison_lwanga	Butembo	CD	Nord Kivu
+Maison_lwanga	Butembo	CD	Nord Kivu
 Chapelle catholique Mulungulu	Butembo	CD	Nord Kivu
 Chapelle Catholique	Butembo	CD	Nord Kivu
 Chapelle Catholique	Butembo	CD	Nord Kivu
@@ -17486,7 +17486,7 @@ Chapelle Catholique Vuhakya	Butembo	CD	Nord Kivu
 Chapelle Catholique Kighumo	Butembo	CD	Nord Kivu
 Chapelle Catholique	Butembo	CD	Nord Kivu
 Chapelle Catholique	Butembo	CD	Nord Kivu
-chapelle kanyatsi	Butembo	CD	Nord Kivu
+Chapelle Kanyatsi	Butembo	CD	Nord Kivu
 Chapelle Catholique Vulambo	Butembo	CD	Nord Kivu
 Chapelle Catholique Munyabu	Butembo	CD	Nord Kivu
 Chapelle Catholique Punza	Butembo	CD	Nord Kivu
@@ -17563,7 +17563,7 @@ Eglise Catholique Paida	Beni	CD	Nord Kivu
 Eglise Catholique Calvaire	Beni	CD	Nord Kivu
 Eglise Catholique Sainte Lucien	Beni	CD	Nord Kivu
 Eglise Catholique Macampagne	Beni	CD	Nord Kivu
-saint matia mulumba catholic church		UG	Western Region
+Saint Matia Mulumba Catholic Church		UG	Western Region
 Katsungiro Church of Uganda (COU)		UG	Western Region
 Kahendero Roman Catholic Church	Kasese	UG	Western Region
 Iganza Roman Catholic Church	Kilembe	UG	Western Region
@@ -17756,7 +17756,7 @@ St Mary Roman Catholic church	Kiryandongo	UG	Western Region
 St. Joseph Catholic Church		UG	Western Region
 Adukut church		UG	Eastern Region
 St. Joseph's Catholic Church	Aputon	UG	Eastern Region
-catholic church	Soroti	UG	Eastern Region
+Catholic Church	Soroti	UG	Eastern Region
 Asina Chapel Catholic Church	Paidha	UG	Northern Region
 Gira Catholic Church	Paidha	UG	Northern Region
 Oturgang Catholic Church	Paidha	UG	Northern Region
@@ -17794,7 +17794,7 @@ Labongo Catholic Church	Amuru	UG	Northern Region
 Lacor Catholic Church	Gulu	UG	Northern Region
 Lacor Parish Catholic Church	Gulu	UG	Northern Region
 All Saints Catholic Church, Keyo	Gulu	UG	Northern Region
-st. peters catholic church	Gulu	UG	Northern Region
+St. Peters Catholic Church	Gulu	UG	Northern Region
 Awa Chapel	Oyam	UG	Northern Region
 ST.AThanacious	Lira Diocese	UG	Northern Region
 Aorotom Roman Catholic Church		UG	Eastern Region
@@ -17830,7 +17830,7 @@ Abia Catholic Church	Arua	UG	Northern Region
 Fee Catholic Church	Arua	UG	Northern Region
 Sainte Marie		CD	Eastern Province
 St Mathew Catholic Church	Maracha	UG	Northern Region
-okutum chapel	Maracha	UG	Northern Region
+Okutum Chapel	Maracha	UG	Northern Region
 Toligamago Roman Catholic Chruch	Koboko	UG	Northern Region
 Bienh. Joseph Alamanu		SS	Western Equatoria
 Cathédrale Saints Martyrs de l’Ouganda	Dungu	SS	Western Equatoria
@@ -17846,7 +17846,7 @@ Daudi Okello and Gildo Erwa Curch	Gulu	UG	Northern Region
 Apaa Catholic Church		UG	Northern Region
 Odoa Catholic Church	Maracha	UG	Northern Region
 Ila Roman Catholic Church	Maracha	UG	Northern Region
-nyadri parish	Maracha	UG	Northern Region
+Nyadri Parish	Maracha	UG	Northern Region
 Pajama Catholic Church	Maracha	UG	Northern Region
 Obiyo Catholic Church	Maracha	UG	Northern Region
 Durua Catholic Church		UG	Northern Region
@@ -17924,7 +17924,7 @@ St. Paul's Catholic Church Kanduyi	Bungoma	KE	Bungoma
 Kisiwa Parish	Bungoma	KE	Bungoma
 Our Lady of Imacculate Conception - Chimoi Parish	Webuye	KE	Bungoma
 St Patrick Catholic Church	Eldama Ravine	KE	Baringo
-nyahururu catholic church, mary immaculate	Nyahururu	KE	Laikipia
+Nyahururu Catholic Church, Mary Immaculate	Nyahururu	KE	Laikipia
 Saint Philips Manguo Church	Nyahururu	KE	Laikipia
 Shine of the holy spirite	Nyahururu	KE	Laikipia
 St. Martin Catholic Church- Mutanga Parish	Ndogoni	KE	Laikipia
@@ -17955,7 +17955,7 @@ ST. Peters Parish Catholic Church		KE	Trans Nzoia
 ST. Joseph catholic Church	Kitale	KE	Trans Nzoia
 St. James Church Matisi	Kitale	KE	Trans Nzoia
 Catholic church Sibanga	Kitale	KE	Trans Nzoia
-st francis catholic church	Mbale	UG	Eastern Region
+St Francis Catholic Church	Mbale	UG	Eastern Region
 St. Austins catholic Parish	Mbale	UG	Eastern Region
 st Andrew Community Centre	Mbale	UG	Eastern Region
 Mooni Catholic Church	Mbale	UG	Eastern Region
@@ -17979,10 +17979,10 @@ Gogoltim Catholic Church		KE	Samburu
 Ndonyo Wasin Catholic Church		KE	Samburu
 St. John Catholic Church	Ngora	UG	Eastern Region
 St John's Catholic Church	Ngora	UG	Eastern Region
-koreng catholic church		UG	Eastern Region
-kadacar catholic church		UG	Eastern Region
-st stephen catholic church	Katakwi	UG	Eastern Region
-st stephen catholic purish katakwi	Katanga	UG	Eastern Region
+Koreng Catholic Church		UG	Eastern Region
+Kadacar Catholic Church		UG	Eastern Region
+St Stephen Catholic Church	Katakwi	UG	Eastern Region
+St. Stephen Catholic Parish, Katakwi	Katanga	UG	Eastern Region
 All Saints Catholic Church	Kainuk	KE	West Pokot
 Matany Catholic Church		UG	Northern Region
 Christ the King Parish, Lokichar	Lokichar	KE	Turkana
@@ -18007,7 +18007,7 @@ Holy Cross Catholic Parish (Don Bosco)		UG	Northern Region
 St Mark Main Church		UG	Northern Region
 Saint John the Evangelist Catholic Church	Lokichokio	UG	Northern Region
 St. Stephen Catholic Church	Losajait	KE	Turkana
-Sts.Titus and Timothy Church, Kaeris	Kaeris	KE	Turkana
+Sts. Titus and Timothy Church, Kaeris	Kaeris	KE	Turkana
 Baqaqa Catholic Church		ET	Oromiya
 St. Joseph's Catholic Church		SS	Eastern Equatoria
 St. James the Greater Catholic Church	Kaikor	 and People's Region"	"Southern Nations
@@ -18060,7 +18060,7 @@ Notre dame du Borgou	Banikoara	BJ	Alibori
 Église Notre-Dame du Perpétuel Secours	Niamey	NE	Niamey
 Eglise Saint Gabriel de Garbado	Niamey	NE	Niamey
 St Mary's Nursery and primary school Bagauda/Wak	Garun Malam	NG	Kano
-first catholic church	Hotoro	NG	Kano
+First Catholic Church	Hotoro	NG	Kano
 NACC Family House	Tudun Wada	NG	Kano
 Église Catholique	Tillaberi	NE	Tillaberi
 Église Mission Catholique	Tahoua	NE	Tahoua
@@ -18121,7 +18121,7 @@ St.Antony's Church	Trivandrum	IN	Kerala
 St Antony's Church, Kurishadi	Trivandrum	IN	Kerala
 Mount Carmel Church	Neyyattinkara	IN	Kerala
 Amalolbhavamatha Church	Amalapuram	IN	Kerala
-kurishadi	Neyyattinkara	IN	Kerala
+Kurishadi	Neyyattinkara	IN	Kerala
 St. Marys Church Anakunnu	Trivandrum	IN	Kerala
 CSI Church Peringamala	Kovalam	IN	Kerala
 St Antony's Church shrine	Trivandrum	IN	Kerala
@@ -18150,7 +18150,7 @@ St. Xavier's Chruch Grounds	Thiruvananthapuram	IN	Kerala
 st.Antony Church	Thiruvananthapuram	IN	Kerala
 St. Peter's Church	Thiruvananthapuram	IN	Kerala
 Lourdes Syro Malabar Forane Church	Thiruvananthapuram	IN	Kerala
-st marys church building	Thiruvananthapuram	IN	Kerala
+St Marys Church Building	Thiruvananthapuram	IN	Kerala
 St. Mary's Malankara Syrian Catholic Cathedral	Thiruvananthapuram	IN	Kerala
 S.F.S church	Thiruvananthapuram	IN	Kerala
 Pallithura Velankkani Shrine	Thiruvananthapuram	IN	Kerala
@@ -18164,9 +18164,9 @@ Kunnumpuram Catholic Church	Thiruvananthapuram	IN	Kerala
 Holy Cross Muttada Church	Thiruvananthapuram	IN	Kerala
 Saint Thomas Malankara Catholic Church	thiruvananthapuram	IN	Kerala
 St. Mary's Malankara Catholic Church	Thiruvananthapuram	IN	Kerala
-lourdes hill syro malabar church	Thiruvananthapuam	IN	Kerala
-fathima matha catholic church	thiruvananthapuram	IN	Kerala
-mary giri ashram, minor seminary	thiruvananthapuram	IN	Kerala
+Lourdes Hill Syro Malabar Church	Thiruvananthapuam	IN	Kerala
+Fathima Matha Catholic Church	thiruvananthapuram	IN	Kerala
+Mary Giri Ashram, Minor Seminary	thiruvananthapuram	IN	Kerala
 St. Augustine Roman Catholics Latin Church	Thiruvananthapuram	IN	Kerala
 St Antony	Nedumangad	IN	Kerala
 csi	nemon school jn	IN	Kerala
@@ -18191,7 +18191,7 @@ Saint Jude Sirian Malankara Catholic Church	Nedumangad	IN	Kerala
 St. George Roman Catholic Latin Church	Thiruvanathapuram	IN	Kerala
 Malankara Syrian Catholic Church		IN	Kerala
 St. Sebastian's Latin Catholic Church	Idinjar	IN	Kerala
-st george shrine	Kollam	IN	Kerala
+St George Shrine	Kollam	IN	Kerala
 St. Johns the baptist Church Eravipuram	Kollam	IN	Kerala
 Nithyasahaya Matha Church, Kakkathope, Eravipuram Parish	Kollam	IN	Kerala
 To jesus through mary chapel	Kollam	IN	Kerala
@@ -18202,12 +18202,12 @@ Holy Family Roman Catholic Church Mukkad	kollam	IN	Kerala
 Mukkad Church Kurisadi	Kavanad	IN	Kerala
 St. Joseph's Roman catholic church, Perumon Mundackal	Kollam	IN	Kerala
 St. Andrews Church, Kovilthottam	Panmana	IN	Kerala
-st alphonsa chapel,sinkarappally	Panmana	IN	Kerala
-church	Panmana	IN	Kerala
+St Alphonsa Chapel, Sinkarappally	Panmana	IN	Kerala
+Church	Panmana	IN	Kerala
 St George Malankara Catholic Church	Oyoor	IN	Kerala
 St George Malankara Catholic Church		IN	Kerala
 St Sebastian Shrine	Kollam	IN	Kerala
-st mary's church	kollam	IN	Kerala
+St Mary's Church	kollam	IN	Kerala
 St Jude Church	Kollam	IN	Kerala
 St. Marys Malankara Catholica Church	Pooyappally	IN	Kerala
 St Amadeus Catholica Church	Meeyannoor	IN	Kerala
@@ -18218,9 +18218,9 @@ St. Joseph church		IN	Kerala
 St Marys Malankara Catholic Church	Punalur	IN	Kerala
 Christuraj	Kollam	IN	Kerala
 St.Joseph's Church Padappakara	Kollam	IN	Kerala
-perayam shrine	Kollam	IN	Kerala
+Perayam Shrine	Kollam	IN	Kerala
 St. Michael's Church	Kollam	IN	Kerala
-shrine of mary heil of christians	kollam	IN	Kerala
+Shrine of Mary Heil of Christians	kollam	IN	Kerala
 St George Malankara Syrian Catholic Church	kollam	IN	Kerala
 Holy Trinity Malankara Catholic Church	Punalur	IN	Kerala
 Lattin Prayer Hall	Panmana	IN	Kerala
@@ -18231,7 +18231,7 @@ St Benedict Malankara Catholic Church	Punalur	IN	Kerala
 St.Thomas Malankara Catholic Church	Elampal	IN	Kerala
 St. Jude Shrine	Punalur	IN	Kerala
 Sacred heart Malankara Catholic church	Adur	IN	Kerala
-ST,GEORGE CATHOLIC CHURCH	Adur	IN	Kerala
+St. George Catholic Church	Adur	IN	Kerala
 St. Joseph Latin	Adur	IN	Kerala
 St.george Malankara Catholic Church	Pidavoor	IN	Kerala
 immanuel marthoma church	Pathanapuram	IN	Kerala
@@ -18244,29 +18244,29 @@ St.Athisaya Arockia Annai Church	Adaikalapuram,Tiruchendur	IN	Tamil Nadu
 St. Charles Borromeo Church	Korampallam	IN	Tamil Nadu
 Kayamkulam  Kadeesha Orthdox Cathedral	Kayamkulam	IN	Kerala
 St. Mary’s Malankara Syrian Catholic Church	Kattanam	IN	Kerala
-st josephs rc church	Mavelikara	IN	Kerala
-st joseph mc church	Mavelikara	IN	Kerala
-grotto	Mavelikara	IN	Kerala
-st sebastian rc church	Mavelikara	IN	Kerala
-st alphonsa roman catholic church	Mavelikara	IN	Kerala
-shrine	Mavelikara	IN	Kerala
-madathumpady pally grotto	chennithala	IN	Kerala
+St Josephs RC Church	Mavelikara	IN	Kerala
+St Joseph Mc Church	Mavelikara	IN	Kerala
+Grotto	Mavelikara	IN	Kerala
+St Sebastian RC Church	Mavelikara	IN	Kerala
+St Alphonsa Roman Catholic Church	Mavelikara	IN	Kerala
+Shrine	Mavelikara	IN	Kerala
+Madathumpady Pally Grotto	chennithala	IN	Kerala
 Marthoma Church , Ulunthy	Mavelikara	IN	Kerala
-st george malankara catholic church,orippurum	Mavelikara	IN	Kerala
-st jude shrine,orippuram	Mavelikara	IN	Kerala
+St George Malankara Catholic Church, Orippurum	Mavelikara	IN	Kerala
+St Jude Shrine, Orippuram	Mavelikara	IN	Kerala
 Saint Mary's MC Church	Mavelikara	IN	Kerala
 Bethel Malankara Catholic Church	Chengannur	IN	Kerala
 Bethlehem malankara catholic church	Chengannur	IN	Kerala
-marsleeva church		IN	Kerala
-small church		IN	Kerala
-lourde matha churuch	Changanacheri	IN	Kerala
+Marsleeva Church		IN	Kerala
+Small Church		IN	Kerala
+Lourdes Matha Church	Changanacheri	IN	Kerala
 St. John's Marthoma Church	Tiruvalla	IN	Kerala
 Catholic Church	thiruvalla	IN	Kerala
 Saint Jude Chapal Road	Alleppey	IN	Kerala
 St. Thomas Church, Pallathuruthy	Alappuzha	IN	Kerala
 Xth Pius church	Alleppey	IN	Kerala
 Kollamuttam Fathima Matha Church	PULINCUNNOO	IN	Kerala
-church	pulincunnoo	IN	Kerala
+Church	pulincunnoo	IN	Kerala
 St.MIchael's Chapel	Changanacheri	IN	Kerala
 Fathimapuram Church	changanacherry	IN	Kerala
 St. Thomas Church	Changanacheri	IN	Kerala
@@ -18285,7 +18285,7 @@ St. Marys Church	Changanacherry	IN	Kerala
 St Antonys Kurishady, St. Antonys Jn	Changanacheri	IN	Kerala
 Josephine Convent	Changanacheri	IN	Kerala
 St sebastians Church,Kodinatumkunnu	changanacherry	IN	Kerala
-st mary's church mundupalam	changanacherry	IN	Kerala
+St Mary's Church Mundupalam	changanacherry	IN	Kerala
 Little Flower Church Elamkunnu, Madappally	Changanacheri	IN	Kerala
 St. Thomas Malankara Catholic church	Tiruvalla	IN	Kerala
 St.Johns latin catholicate church	Adur	IN	Kerala
@@ -18319,7 +18319,7 @@ St. Mary's Church		IN	Kerala
 S T Joseph Church Vaipur ( NEW )	vaipur	IN	Kerala
 S H convent	chakkalakunnu	IN	Kerala
 S T Antony's Church	mundathanam	IN	Kerala
-st.Martin de Porres cupola		IN	Kerala
+St. Martin de Porres Church		IN	Kerala
 St Joseph Roman Latin Catholic Church		IN	Kerala
 St. Joseph Malankara Catholic Church		IN	Kerala
 St. Thomas RC Church		IN	Kerala
@@ -18362,7 +18362,7 @@ Chapel	Kottayam	IN	Kerala
 Holy Family Knanaya Catholic Church	Kottayam	IN	Kerala
 St Jude Cheriya Pally	Parippu	IN	Kerala
 STAntonys	kottayam	IN	Kerala
-sh mount monastery parish church	Kottayam	IN	Kerala
+Sh Mount Monastery Parish Church	Kottayam	IN	Kerala
 എസ്.എച്ച് മൗണ്ട് പളളി	kottayam	IN	Kerala
 St. george Kanaya Church	Kottayam	IN	Kerala
 St.Sebastian roman catholic church	Kottayam	IN	Kerala
@@ -18372,7 +18372,7 @@ St.sebastain's church	Athirampuzha	IN	Kerala
 St.sebastain church	Athirampuzha	IN	Kerala
 st Sebastian chapel	Palackattumala	IN	Kerala
 St. Thomas Church Vellappally, Punnathura	Palackattumala	IN	Kerala
-punnathura kurishupally	kottatam	IN	Kerala
+Punnathura Kurishupally	kottatam	IN	Kerala
 St. George's Church	Vayalar	IN	Kerala
 St. Antony's  Church	Vayalar	IN	Kerala
 St. Xavier's Latin Catholic Church	Vayalar	IN	Kerala
@@ -18380,12 +18380,12 @@ St Sebastions Church	Pallithode	IN	Kerala
 St. Marys forane church Muttom	Vayalar	IN	Kerala
 St. Thomas Chruch	Vayalar	IN	Kerala
 St. Mathews Church	Vaikam	IN	Kerala
-kurushu palli	Vaikam	IN	Kerala
+Kurushu Palli	Vaikam	IN	Kerala
 Mattel Church	Vaikam	IN	Kerala
 St. Mathew's Catholic Chruch, Kottackupuram	Kottayam	IN	Kerala
-ST.JUDE CHRCH	ATHIRAMPUZHA	IN	Kerala
+St. Jude Church	ATHIRAMPUZHA	IN	Kerala
 St.Mary's Chruch Vedagiri	Kottayam	IN	Kerala
-st xaviers church	Palackattumala	IN	Kerala
+St Xaviers Church	Palackattumala	IN	Kerala
 St. Mary's Forane Church Kidangoor	Palackattumala	IN	Kerala
 Mar Sleeva Church	Cherpunkal	IN	Kerala
 Mar Sleeva Church (OLD)	Cherpunkal	IN	Kerala
@@ -18418,7 +18418,7 @@ Kudakkachira Kurisupally	Palackattumala	IN	Kerala
 Missinories of Compassion	Palackattumala	IN	Kerala
 Chethimattam Kurishupally	Palackattumala	IN	Kerala
 St. Stephans Church, Uzhavoor	Palackattumala	IN	Kerala
-christian	Palackattumala	IN	Kerala
+Christian	Palackattumala	IN	Kerala
 Kondad Church	Palackattumala	IN	Kerala
 St.Joseph RC Chapel Erumpayam	Piravam	IN	Kerala
 Saint Mary's Church Marangoly	Piravam	IN	Kerala
@@ -18427,7 +18427,7 @@ Poovakulam Church	Palackattumala	IN	Kerala
 Fathima Matha Church		IN	Kerala
 St John The Baptist's Forane Church		IN	Kerala
 St.John the Baptist's church chapel		IN	Kerala
-chambakkara church	karukachal	IN	Kerala
+Chambakkara Church	karukachal	IN	Kerala
 St. Mary's Church Kadayanikkad		IN	Kerala
 Saint Basil Church, Manimala		IN	Kerala
 St. Mary's Syro Malabar Church, Cheruvally		IN	Kerala
@@ -18492,16 +18492,16 @@ St. Marys Church	Palackattumala	IN	Kerala
 St. Mary Magdalene's	Lalam	IN	Kerala
 St Joseph's Navanazrath Church, Vezhanganam, Kanjiramattom ward, Bharananganam Panchayath	Pala	IN	Kerala
 ST.pauls church vakakkad	moonnilavu	IN	Kerala
-st.sebastian church	teekoy,kottayam	IN	Kerala
-st.antony's churh	teekoy,kottayam	IN	Kerala
+St. Sebastian Church	teekoy,kottayam	IN	Kerala
+St. Antony's Church	teekoy,kottayam	IN	Kerala
 St.George Syro Malabar Church		IN	Kerala
 Chakkampuzha Church	Palackattumala	IN	Kerala
 St Anthony's Church,of parish Kadanad	Kollappally	IN	Kerala
 St. Augustine's Forane Church	Ramapuram	IN	Kerala
 St.John's Church	Lalam	IN	Kerala
 St Joseph church neeloor	Neeloor	IN	Kerala
-st. mary's church	Maryland	IN	Kerala
-st' mary's	Maryland	IN	Kerala
+St. Mary's Church	Maryland	IN	Kerala
+St. Mary's	Maryland	IN	Kerala
 St. Thomas Church, Melukavumattom	Melukavumattom	IN	Kerala
 St.George Chappal, Melukavu	Erattupetta	IN	Kerala
 Carmel Mount Chapel	Erattupetta	IN	Kerala
@@ -18524,7 +18524,7 @@ St. Pauls Malankara Church	Kattappana	IN	Tamil Nadu
 St George Forane Church	kattappana	IN	Tamil Nadu
 Amalamanohari Church	Companipadi	IN	Tamil Nadu
 st. Isidore church	Gudalur	IN	Tamil Nadu
-ST.JOSEPH CHURCH [OLD KOCHERA]	Gudalur	IN	Tamil Nadu
+St. Joseph Church (Old Kochera)	Gudalur	IN	Tamil Nadu
 St.Lawrence Church Manthippara,Idukki	Gudalur	IN	Tamil Nadu
 Moonkippalam kurisady	cumbummettu	IN	Tamil Nadu
 St.Joseph Syro Malabar Church,Cumbummettu	cumbummettu	IN	Tamil Nadu
@@ -18556,17 +18556,17 @@ Infant Jesus Church	Ernakulam	IN	Kerala
 St.Little Plower Church	Elur	IN	Kerala
 Little Flower Church	Elur	IN	Kerala
 St.Antony´s Church	Kerala	IN	Kerala
-st joseph vchurch	Piravam	IN	Kerala
+St. Joseph Church	Piravam	IN	Kerala
 St. Mary's Church	Kumbalam	IN	Kerala
 Bharatha Rani Church	Ernakulam	IN	Kerala
 Mother Of Perpetual Succour Church, Chathamma	Arukutti	IN	Kerala
-ST.SEBASTINE ROMAN CATHOLIC CHURCH	Kumbalam, Ernakulam	IN	Kerala
+St. Sebastian Roman Catholic Church	Kumbalam, Ernakulam	IN	Kerala
 St. Jude Roman Catholic Church, Kureekkad	Kureekkad	IN	Kerala
 St Antonys Roman Catholic Latin Church	Arukutti	IN	Kerala
 St Mary's Catholic church	Piravam	IN	Kerala
 St.Mary's Syro Malabar Catholic Church	Piravam	IN	Kerala
 Saint Mary's Church	Piravam	IN	Kerala
-thottakara church	thottakara	IN	Kerala
+Thottakara Church	thottakara	IN	Kerala
 St. George & St. Sebastians' Church Thottakkara	Muvattupuzha	IN	Kerala
 Arikuzha Church	Muvattupuzha	IN	Kerala
 Sacred Heart Monastery Church	Cochin	IN	Kerala
@@ -18590,9 +18590,9 @@ Vazhakulam St. George Forane Church	Muvattupula	IN	Kerala
 St.Antony's Chapel	Muvattupuzha	IN	Kerala
 St. Joseph's Pilgrim Church Peringuzha	Peringuzha	IN	Kerala
 St. Sebastian's Church	Muvattupula	IN	Kerala
-st george chapel	Muvattupula	IN	Kerala
-queen mary's syromalabar catholic church	Ramamangalam	IN	Kerala
-nirmala matha	Muvattupula	IN	Kerala
+St George Chapel	Muvattupula	IN	Kerala
+Queen Mary's Syromalabar Catholic Church	Ramamangalam	IN	Kerala
+Nirmala Matha	Muvattupula	IN	Kerala
 Randar Church	Muvattupula	IN	Kerala
 St. Joseph Chapel	മുവാറ്റുപുഴ	IN	Kerala
 ലിസിയക്സ് സെന്റർ	മുവാറ്റുപുഴ	IN	Kerala
@@ -18620,21 +18620,21 @@ Holycross Church	Kadalvathuruth	IN	Kerala
 St. Louis Churuch Thuruthipuram	Kodungallur	IN	Kerala
 May Rani Alayam Chapel	Vadakkumpuram	IN	Kerala
 St. Mary"s Church	Ernakulam	IN	Kerala
-palli	Kodungallur	IN	Kerala
+Palli	Kodungallur	IN	Kerala
 St Sebastian's Church Gothuruth	Ernakulam	IN	Kerala
 St. Antony's Church Karottukara	Kodungallur	IN	Kerala
 St.Paul Church	Kodungallur	IN	Kerala
 Saint George Forane Old Church	Elur	IN	Kerala
 Arogyamatha Church	Elur	IN	Kerala
-st.sebastain church	Elur	IN	Kerala
+St. Sebastian Church	Elur	IN	Kerala
 Saint Paul's Church	Elur	IN	Kerala
-st paules	Perumbavoor	IN	Kerala
-st thomas church	thamarachal	IN	Kerala
+St. Paul's	Perumbavoor	IN	Kerala
+St Thomas Church	thamarachal	IN	Kerala
 St Mary's Church, Nochima	Aluva West	IN	Kerala
 St. Jude Shrine - Ettekkar Pally	Aluva	IN	Kerala
 Mariyapuram Catholic Church	Aluva	IN	Kerala
 Little Flower Church	Aluva	IN	Kerala
-ST JOSEPH CHURCH,CHUNANGAMVELY	ALUVA	IN	Kerala
+St Joseph Church, Chunangamvely	ALUVA	IN	Kerala
 ST JOSEPH CATECHISM SCHOOL	Aluva	IN	Kerala
 Infant Jesus Church	Aluva	IN	Kerala
 St. Ann's Church	Aluva	IN	Kerala
@@ -18652,7 +18652,7 @@ St Vincent de Paul chapel	Angamali	IN	Kerala
 St Mary's Church	Angamali	IN	Kerala
 St Joseph's Church,Kodussery	Angamali	IN	Kerala
 St Sebastians Church, North Champannoor	Angamali	IN	Kerala
-little flower church	Angamali	IN	Kerala
+Little Flower Church	Angamali	IN	Kerala
 Saint Martin	KALADY	IN	Kerala
 Saint Joseph Church	Perumpavur	IN	Kerala
 Kapela	Angamali	IN	Kerala
@@ -18669,17 +18669,17 @@ St.John The Baptist Church Yordhanapuram	Angamali	IN	Kerala
 St. Joseph's Shrine, Kalambattupuram	Ernakulam	IN	Kerala
 Mary Immaculate Catholic Church	Perumpavur	IN	Kerala
 St Peter & Paul's church	Perumpavur	IN	Kerala
-olph church ayathupady	koovappady	IN	Kerala
+Olph Church Ayathupady	koovappady	IN	Kerala
 st.mary's Church	Kotamangalam	IN	Kerala
 St. George Church  Koodalappd	Perumbavoor	IN	Kerala
 Kristhuraja Kappela	Perumpavur	IN	Kerala
-chrithuraj chapel neeleeswaram	Angamali	IN	Kerala
+Chrithuraj Chapel Neeleeswaram	Angamali	IN	Kerala
 Assumption Monastry Church	Perumpavur	IN	Kerala
 St. Joseph Chapel	Perumpavur	IN	Kerala
 Infant Jesus Church	Palackattumala	IN	Kerala
 St. Sebastians Church Purapuzha	Palackattumala	IN	Kerala
 St. George's Church		IN	Kerala
-kalayanthani st marys church		IN	Kerala
+Kalayanthani St Marys Church		IN	Kerala
 St George Church Kurishupalli. Angamvetti	manakkad	IN	Kerala
 Todupuzha Town Church		IN	Kerala
 De Paul Church		IN	Kerala
@@ -18691,7 +18691,7 @@ Cheenikuzhi Church	Idukki	IN	Kerala
 St. Mary's Church Thannikandam	Idukki	IN	Kerala
 Holy Family Latin Church	Cheruthony	IN	Kerala
 St. Marys Church	Idukki	IN	Kerala
-st sebastians church		IN	Kerala
+St Sebastians Church		IN	Kerala
 St Joseph Church Mulakuvally	Idukki	IN	Kerala
 St. Mary's Church	Idukki	IN	Kerala
 Holy family church, Bethlehem	Muvattupula	IN	Kerala
@@ -18704,7 +18704,7 @@ Little Flower Church Koduvely		IN	Kerala
 Chalakamuk kappela ,Chapel		IN	Kerala
 St. Thomas church		IN	Kerala
 St. Rithas Church, Kaliyar		IN	Kerala
-st. francis assisi church		IN	Kerala
+St. Francis Assisi Church		IN	Kerala
 carmelgiri college Chappel	Adimali	IN	Kerala
 St Marys Church	Udayagiri	IN	Kerala
 St. Joseph`s Church, Upputhode	Mariyapuram	IN	Kerala
@@ -18712,23 +18712,23 @@ Christuraj Church, Rajamudi	Idukki	IN	Kerala
 Holy Family Church Kiliyarkandam	Kiliyarkandam	IN	Kerala
 St. Mariya Gorethi Church	Thopramkudy	IN	Kerala
 St. Mary's Church	Perinchamkutty	IN	Kerala
-ST JAMES KNANAYA CATHOLIC CHURCH , POOTHALY	KONNATHADY	IN	Kerala
+St James Knanaya Catholic Church , Poothaly	KONNATHADY	IN	Kerala
 Deivamatha		IN	Kerala
 Devamatha Church		IN	Kerala
-st joseph church kallarukutty	Munnar	IN	Kerala
+St Joseph Church Kallarukutty	Munnar	IN	Kerala
 Mariya Gorothy Catholic Church Kappela	Kuruvila city	IN	Kerala
 St. Josephs Catholic Church	Kotamangalam	IN	Kerala
 Little Flower Forane Church, Oonnukal	Kotamangalam	IN	Kerala
-st.marys church ambikapuram	allungal	IN	Kerala
-sr.joseph church thalakode	Kotamangalam	IN	Kerala
+St. Mary's Church, Ambikapuram	allungal	IN	Kerala
+St. Joseph Church, Thalakode	Kotamangalam	IN	Kerala
 Chapel, Neendapara		IN	Kerala
 St Antonys Chappel,Paraithottam	Kotamangalam	IN	Kerala
-ST. ANTONY'S CHAPEL	Kotamangalam	IN	Kerala
+St. Antony's Chapel	Kotamangalam	IN	Kerala
 Saint Joseph Church Velielchal	Kuttampuzha	IN	Kerala
 St. Mary's Church, Mankulam	Mankulam	IN	Kerala
 St. George Church Georgiar	Mankulam, Kerala 685561	IN	Kerala
 Grotto Of Divine Mysteries		IN	Kerala
-st josephs church anakulam	anakulam	IN	Kerala
+St Josephs Church Anakulam	anakulam	IN	Kerala
 Anakulam Church Kurishadi	Anakulam	IN	Kerala
 St Michael’s Cathedral, Kottapuram	Kodungallur	IN	Kerala
 St. Jude Church Methala	Kodungallur	IN	Kerala
@@ -18752,7 +18752,7 @@ Spirituality Center	Irinjalakuda	IN	Kerala
 Don Bosco Church	Irinjalakuda	IN	Kerala
 St.Xaviers's Church	Pulloor	IN	Kerala
 Infant Jesus Church	Irinjalakuda	IN	Kerala
-seminary	irinjalakuda	IN	Kerala
+Seminary	irinjalakuda	IN	Kerala
 St. Mary's church parekkattukara	Irinjalakuda	IN	Kerala
 Kumbidy Church	Angamali	IN	Kerala
 Infant Jesus Church	Kizhake Chalakudi	IN	Kerala
@@ -18769,13 +18769,13 @@ Saint Sebastians Chruch Kallur	Chalakudy	IN	Kerala
 St Joseph's Church, Vynthala	Kizhake Chalakudi	IN	Kerala
 Jai Jesus Chapel	Angamali	IN	Kerala
 Infant jesus curch,kadukutty	Kizhake Chalakudi	IN	Kerala
-st.sebastians church	Kizhake Chalakudi	IN	Kerala
-mullaparamab kapela	Kizhake Chalakudi	IN	Kerala
+St. Sebastian's Church	Kizhake Chalakudi	IN	Kerala
+Mullaparamab Kapela	Kizhake Chalakudi	IN	Kerala
 St Mary's Forane Church	Chalakudy , Thrissur	IN	Kerala
 St Joseph's Church Konoor	Kizhake Chalakudi	IN	Kerala
-st jospesh's church	Kizhake Chalakudi	IN	Kerala
-st.sebastians church muringoor	Muringoor	IN	Kerala
-st.sebastians curch devagiri	Angamali	IN	Kerala
+St. Joseph's Church	Kizhake Chalakudi	IN	Kerala
+St. Sebastian's Church, Muringoor	Muringoor	IN	Kerala
+St. Sebastian's Church, Devagiri	Angamali	IN	Kerala
 Thabore Church	thabore	IN	Kerala
 Saint Martin De Porres Church	Angamali	IN	Kerala
 മുരിങ്ങൂർ ഡിവൈൻ റിട്രീറ്റ്	Kizhake Chalakudi	IN	Kerala
@@ -18786,14 +18786,14 @@ Our Lady of Fathima Church	Kizhake Chalakudi	IN	Kerala
 St. Sebastian's Church	Chalakudy	IN	Kerala
 St. Mary's kappela	Kizhake Chalakudi	IN	Kerala
 St Peters church Povathingal	Kizhake Chalakudi	IN	Kerala
-ST ANTONY'S CHURCH KONNAKUZHY	Thrissur	IN	Kerala
+St Antony's Church Konnakuzhy	Thrissur	IN	Kerala
 St.Antony Church Chaippankuzhy	Kizhake Chalakudi	IN	Kerala
 St. Thomas Church Anathadam	Kizhake Chalakudi	IN	Kerala
 St Annes Chapel	Kizhake Chalakudi	IN	Kerala
 St.Antonys Kapola	Chowka	IN	Kerala
-ST. JOSEPH CHURCH METTIPADAM	Kizhake Chalakudi	IN	Kerala
+St. Joseph Church Mettipadam	Kizhake Chalakudi	IN	Kerala
 St. Thomas Shrine Kurishumudi, Kanakamala	Kizhake Chalakudi	IN	Kerala
-st.mary's church mankuttipadam	Kizhake Chalakudi	IN	Kerala
+St. Mary's Church, Mankuttipadam	Kizhake Chalakudi	IN	Kerala
 St Marys Church, Pulingara	Kizhake Chalakudi	IN	Kerala
 Pillappara kappela		IN	Kerala
 Porathissery church	Irinjalakuda	IN	Kerala
@@ -18806,16 +18806,16 @@ St Thomas Church Vallachira	Trichur	IN	Kerala
 Jeruselem Retreat Centre	Thrissur	IN	Kerala
 Carmel church	Trichur	IN	Kerala
 Jerusalem Retreat Centre	Trichur	IN	Kerala
-infant jesus cmi church	Thalore,Thrissur	IN	Kerala
+Infant Jesus Cmi Church	Thalore,Thrissur	IN	Kerala
 St. Josephs Church	Trichur	IN	Kerala
-st antony's chruch	Trichur	IN	Kerala
+St. Antony's Church	Trichur	IN	Kerala
 Little Flower Convent	Trichur	IN	Kerala
 Kappela ,palakkal center	THRISSUR	IN	Kerala
 St. Mathews Church	Thrissur	IN	Kerala
 St. Joseph's Church Avinissery	Trichur	IN	Kerala
 St. Raphael Chappel	Ollur,Thrissur	IN	Kerala
 st Joseph church ponnukara	Trichur	IN	Kerala
-VIJAYAMATHA CHURCH	URC THRISSUR	IN	Kerala
+Vijayamatha Church	URC THRISSUR	IN	Kerala
 St Joseph's Chapel	Trichur	IN	Kerala
 St Mary's Grotto	Trichur	IN	Kerala
 St. Anne's Church	thrissur	IN	Kerala
@@ -18832,12 +18832,12 @@ CSI Immanuel church	sholavandhan	IN	Tamil Nadu
 Sacred Heart Church - N. Panjampatti	Dindigul	IN	Tamil Nadu
 VC Kurusadi	Dindigul	IN	Tamil Nadu
 St. Antony the Great Church	Vedasandur	IN	Tamil Nadu
-calvery chapel	Guruvayur	IN	Kerala
+Calvery Chapel	Guruvayur	IN	Kerala
 Brahmakulam church	Brahmakulam	IN	Kerala
-velankanni matha chapel	Guruvayur	IN	Kerala
+Velankanni Matha Chapel	Guruvayur	IN	Kerala
 Muthyema chapel	Guruvayur	IN	Kerala
 Amala Hospital Chappel	Avanoor	IN	Kerala
-mary matha church kuttur	Edakkulam	IN	Kerala
+Mary Matha Church Kuttur	Edakkulam	IN	Kerala
 sion center	Edakkulam	IN	Kerala
 Nithyasahaya Matha church	Thrissur	IN	Kerala
 St Joseph's Church Madakkathara	Madakkathara	IN	Kerala
@@ -18850,7 +18850,7 @@ St. George	Avanoor	IN	Kerala
 ABBA FC Convent	Edakkulam	IN	Kerala
 St. Cyriac's Church Vylathur	Guruvayur	IN	Kerala
 St.Thomas Catholic Church	kunnamkulam	IN	Kerala
-old church	Kunnamkulam	IN	Kerala
+Old Church	Kunnamkulam	IN	Kerala
 Kapelle	Avanoor	IN	Kerala
 St. Antonys Church	Avanoor	IN	Kerala
 St. Xavier's Church	Thrissur	IN	Kerala
@@ -18898,7 +18898,7 @@ St Anthony's church	Gampaha	LK	Western
 St. Joseph Church	Hatton	LK	Central
 St. Mary's Catholic Church Yatantota		LK	Western
 Madha Church	Hatton	LK	Central
-ANTHONY ALOSIYAS	Chrystlers Farm	LK	Central
+Anthony Alosiyas	Chrystlers Farm	LK	Central
 Thangakelle Church	maria	LK	Central
 St. John the Baptist	Hatton	LK	Central
 St. Francis Xavier Church	Nuwara Eliya	LK	Central
@@ -18994,8 +18994,8 @@ St. Theresas Church		IN	Kerala
 St. Joseph's Church	Kunduthode	IN	Kerala
 Sophia Church Chathengottunada	Nadapuram	IN	Kerala
 St. Mary's Church	Karingad	IN	Kerala
-ST'SEBASTIANS CHURCH KARIMBIL	KARIMBIL	IN	Kerala
-puthussery church	thondenadu	IN	Kerala
+St. Sebastian's Church, Karimbil	KARIMBIL	IN	Kerala
+Puthussery Church	thondenadu	IN	Kerala
 St. Thomas Orthodox Church	Cannanore	IN	Kerala
 St. Mary's Church	Nirmalagiri	IN	Kerala
 CSI Immanuel Church	Valapattanam	IN	Kerala
@@ -19030,13 +19030,13 @@ St Antony's Shrine	Edoor	IN	Kerala
 St Anthony's Church		IN	Kerala
 St. Mary's Forane Church,Edoor	Edoor	IN	Kerala
 St alphonsa shrine	Edoor	IN	Kerala
-nellikkampoil church		IN	Kerala
+Nellikkampoil Church		IN	Kerala
 CMC Convent		IN	Kerala
-ulikkal		IN	Kerala
+Ulikkal		IN	Kerala
 Merciful Jesus Church, Anappanthi	Anapanthi	IN	Karnataka
 St. Joseph's Church		IN	Karnataka
 Sacred Heart Church, Angadikadavu	Angadikadavu	IN	Karnataka
-puravayal church		IN	Kerala
+Puravayal Church		IN	Kerala
 St. Antony's Church, Anara	Manikkadavu	IN	Kerala
 Infant Jesus Church കുരിശുപള്ളി	Vaniyappara	IN	Karnataka
 St. Sebastian Church, Charal	Charal	IN	Karnataka
@@ -19059,7 +19059,7 @@ St. George Church, Adampara	Chandanakkampara	IN	Karnataka
 St.Jude chappel (Kurishupalli)	Kanhangad	IN	Kerala
 Holy Spirit Church, Ennappara	thayannur	IN	Kerala
 St. Sebastian Church, Attakandam	Attakandam	IN	Kerala
-sabhamatha church eriya	KodomBelur	IN	Kerala
+Sabhamatha Church Eriya	KodomBelur	IN	Kerala
 St Jude Church, Attenganam	Attenganam	IN	Kerala
 Kodom Belur Panchayath Office		IN	Kerala
 St. Mary's Church, Badiadka	Badiadka	IN	Kerala
@@ -19128,7 +19128,7 @@ Ondayangadi Palli	Panamaram	IN	Kerala
 St. Sebastian's church	Panamaram	IN	Kerala
 St. Sebastian Church Padichira	Panamaram	IN	Kerala
 St jude knanaya church 60 kavala		IN	Kerala
-St.Mary's Church.Kabanigiri		IN	Kerala
+St. Mary's Church, Kabanigiri		IN	Kerala
 Bishop House (RC)	Salem	IN	Tamil Nadu
 Our Lady of Good Health Chruch	Salem	IN	Tamil Nadu
 St. Antony Chruch	Salem	IN	Tamil Nadu
@@ -19213,7 +19213,7 @@ Mugrumpoi Chapel	Verna	IN	Goa
 Old Church Sancoale	Cortalim	IN	Goa
 Church of St. Lawrence	Agaçaim	IN	Goa
 Holy Trinity Church	Bellary	IN	Karnataka
-church	jammalamadugu	IN	Andhra Pradesh
+Church	jammalamadugu	IN	Andhra Pradesh
 St. Francis Xavier Chapel	Taleigao	IN	Goa
 Candolim Chapel	Candolim	IN	Goa
 Reis Magos Church	Panaji	IN	Goa
@@ -19291,14 +19291,14 @@ St. Anne Church	Mumbai	IN	Maharashtra
 Our Lady of Perpetual Succour Church	Mumbai	IN	Maharashtra
 St. Mary's Malankara Catholic Church	Artist Village	IN	Maharashtra
 Cross INRI	Mumbai	IN	Maharashtra
-sacred heart church	Mumbai	IN	Maharashtra
+Sacred Heart Church	Mumbai	IN	Maharashtra
 Mary Matha Church	Powai	IN	Maharashtra
 St. Anthony,s Church	Powai	IN	Maharashtra
 St. John The Evangelist Church, Marol	Powai	IN	Maharashtra
-ST THOMAS	Borivli	IN	Maharashtra
+St Thomas	Borivli	IN	Maharashtra
 Sister adorers	Powai	IN	Maharashtra
 St.Vincent Pallotti Church	Mumbai	IN	Maharashtra
-st stephen's church	Thane	IN	Maharashtra
+St Stephen's Church	Thane	IN	Maharashtra
 St Anthony	Powai	IN	Maharashtra
 St. Gonsalo Garcia Church	Vasai-virar	IN	Maharashtra
 St. Thomas Catholic Church	Virar West	IN	Maharashtra
@@ -19316,13 +19316,13 @@ B M Church	Rahuri	IN	Maharashtra
 Mother of God Chapel	Uplat, Patilpada	IN	Dadra and Nagar Haveli
 St Pauls	Diu	IN	Daman and Diu
 Bom Jesus Church	Daman	IN	Daman and Diu
-valbeneti india	vanshiyali	IN	Gujarat
+Valbeneti	vanshiyali	IN	Gujarat
 Don Bosco Church	Nashik	IN	Maharashtra
 Kapuchin Ashram	Nashik	IN	Maharashtra
-church		IN	Telangana
+Church		IN	Telangana
 Church	Suriapet	IN	Telangana
 RCM church	DORNAKAL	IN	Telangana
-RCM CHURCH	Khammam	IN	Telangana
+Rcm Church	Khammam	IN	Telangana
 Sacred Heart Church (RCM), Karepalli	karepalli	IN	Telangana
 Carmel  Church	PALAKURTHY	IN	Telangana
 Cathalic Church	Damera	IN	Telangana
@@ -19331,7 +19331,7 @@ Reddypalem Church	Warangal	IN	Telangana
 Aganampudi Church	Visakhapatnam	IN	Andhra Pradesh
 CHURCH	visakhaptnam	IN	Andhra Pradesh
 Calvary Church	Bellampalli	IN	Telangana
-church	damanjodi	IN	Odisha
+Church	damanjodi	IN	Odisha
 Dhanora Catholic Church	Nainpur	IN	Madhya Pradesh
 Sacred Heart Church	Bilaspur	IN	Chhattisgarh
 Sacred Heart Catholic Church	Kharagpur	IN	West Bengal
@@ -19358,7 +19358,7 @@ Saint Elizabeth	Abu Ghaush	IL	Jerusalem
 Church of Saint John of the Desert	Abu Ghaush	IL	Jerusalem
 כנסיית הביקור	Battir	IL	Jerusalem
 Franciscan Seminary	Al-Qubeibah	PS	West Bank
-Saint.Cleophas Church	Al-Qubeibah	PS	West Bank
+St. Cleophas Church	Al-Qubeibah	PS	West Bank
 The Annunciation Church - Ein Arik	Ein 'Arik	PS	West Bank
 מנזר אנטוניוס הקדוש (מרוני)	Tel Aviv	IL	Tel Aviv
 Saint Anthony's Catholic Church	Tel Aviv	IL	Tel Aviv
@@ -19372,7 +19372,7 @@ Our Lady of Fatima Parish	Beit Sahour	PS	West Bank
 المعهد اللإكليركي لبطريركية اللاتين في القدس	بيت جالا	PS	West Bank
 Latin Patriachate	Khallat Hamamah	PS	West Bank
 מאר אליאס	Khallat Hamamah	PS	West Bank
-CASA SACRI CUORI	Jerusalem	IL	Jerusalem
+Casa Sacri Cuori	Jerusalem	IL	Jerusalem
 מנזר סנט קלייר	Jerusalem	IL	Jerusalem
 كنيسة القديس بطرس في غاليكانتو	Jerusalem	IL	Jerusalem
 علية صهيون	Jerusalem	IL	Jerusalem
@@ -19444,9 +19444,9 @@ St. Mary Melkite Greek Church	Sidon	LB	Liban-Sud
 Lady of Annunciation Church	Jezzine	LB	Liban-Sud
 Saint Micheal Church	Jezzine	LB	Liban-Sud
 Saint George Church	Jezzine	LB	Liban-Sud
-st john baptist church	Jezzine	LB	Liban-Sud
+St John Baptist Church	Jezzine	LB	Liban-Sud
 St. Joseph Church	Jezzine	LB	Liban-Sud
-holy mary of bisri church	Jezzine	LB	Liban-Sud
+Holy Mary of Bisri Church	Jezzine	LB	Liban-Sud
 كنيسة القديس جاورجيوس للروم الكاثوليك	Joubb Jannine	LB	Beqaa
 سيدة التلة	دير القمر	LB	Mont-Liban
 كنيسة القديس بولص الرسول	Darayya	SY	Rif-dimashq
@@ -21598,7 +21598,7 @@ Duomo San Nicola di Bari	Termini Imerese	IT	Sicily
 Chiesa del Santissimo Sacramento	Trabia	IT	Sicily
 Cappelletta di Santa Rosalia	Trabia	IT	Sicily
 Cappella del Calvario	Trabia	IT	Sicily
-cappella	Trabia	IT	Sicily
+Cappella	Trabia	IT	Sicily
 Oasi della speranza	Ciaculli	IT	Sicily
 Convento di Santa Maria di Gesù	Ciaculli	IT	Sicily
 Chiesa del Santo Spirito	Palermo	IT	Sicily
@@ -21607,7 +21607,7 @@ San Girolamo	Ficarazzi	IT	Sicily
 San Francesco	Ficarazzi	IT	Sicily
 San Pietro (chiesa vecchia)	Bagheria	IT	Sicily
 cappelletta Padre Pio	Bagheria	IT	Sicily
-cappella	Bagheria	IT	Sicily
+Cappella	Bagheria	IT	Sicily
 cappella Cuore di Gesù	Bagheria	IT	Sicily
 Chiesa di San Giovanni dei Lebbrosi	Ciaculli	IT	Sicily
 Chiesa di S. Giuseppe al Collegio di Maria del Carmine	Palermo	IT	Sicily
@@ -21637,7 +21637,7 @@ Chiesa San Giorgio e San Leonardo	Cefalu	IT	Sicily
 Chiesa Madonna della Catena	Cefalu	IT	Sicily
 Oratorio del Santissimo Sacramento	Cefalu	IT	Sicily
 San Bartolicchio	Ustica	IT	Sicily
-chiesa	Ustica	IT	Sicily
+Chiesa	Ustica	IT	Sicily
 Chiesa di San Pietro	Pollina	IT	Sicily
 Chiesa di San Gaetano	Pollina	IT	Sicily
 Chiesa di San Giuliano	Pollina	IT	Sicily
@@ -22352,7 +22352,7 @@ Chiesa della Madonna di Loreto	Polia	IT	Calabria
 Chiesa di Santa Maria della Pietra	Chiaravalle Centrale	IT	Calabria
 Chiesa di San Nicola Vescovo	Gagliato	IT	Calabria
 Calvario di Petrizzi	Petrizzi	IT	Calabria
-CHIESA DI SAN BRUNO E BEATO LANUINO	Gasperina	IT	Calabria
+Chiesa di San Bruno e Beato Lanuino	Gasperina	IT	Calabria
 Santuario Santa Maria della Luce	Palermiti	IT	Calabria
 Chiesa di San Nicola Vescovo	Gasperina	IT	Calabria
 Santa Madre della Speranza	Acconia	IT	Calabria
@@ -22398,7 +22398,7 @@ Chiesa dello Spirito Santo	Tiriolo	IT	Calabria
 Maria SS. Assunta	Gimigliano	IT	Calabria
 Chiesa dell'immacolata	Gimigliano	IT	Calabria
 Santuario Maria Santissima della Rocca	Tiriolo	IT	Calabria
-madonnina	Catanzaro	IT	Calabria
+Madonnina	Catanzaro	IT	Calabria
 Convento Cappuccini	Catanzaro	IT	Calabria
 Chiesa del Monte dei Morti e della Misericordia	Catanzaro	IT	Calabria
 Chiesa di Santa Maria del Mezzogiorno	Catanzaro	IT	Calabria
@@ -23026,7 +23026,7 @@ Sant Joan de la Muntanya	Sant Marti Sarroca	ES	Catalonia
 la Mercè	Sant Marti Sarroca	ES	Catalonia
 Sant Salvador de Pontons	Sant Marti Sarroca	ES	Catalonia
 Ermita de la Mare de Déu de Foix	Sant Marti Sarroca	ES	Catalonia
-Santuari de de la Mare de Déu Foix	Sant Marti Sarroca	ES	Catalonia
+Santuari de la Mare de Déu Foix	Sant Marti Sarroca	ES	Catalonia
 Sant Jaume d'Esblada	Querol	ES	Catalonia
 Capella de les Fonts de Sant Magí	Bellprat	ES	Catalonia
 Sant Magí de Brufaganya	Bellprat	ES	Catalonia
@@ -23494,7 +23494,7 @@ Ermita de San José	Castillazuelo	ES	Aragon
 Iglesia de San Julián	Barbastro	ES	Aragon
 Iglesia de San José de Calasanz	Barbastro	ES	Aragon
 Capilla de Santa Ana	Barbastro	ES	Aragon
-ermita del plano	Salas Altas	ES	Aragon
+Ermita del Plano	Salas Altas	ES	Aragon
 Ermita de San José	Fonz	ES	Aragon
 Iglesia de San Juan	Fonz	ES	Aragon
 Santuario de la Carrodilla	Estadilla	ES	Aragon
@@ -26069,7 +26069,7 @@ Santuario di San Matteo	Lula	IT	Sardinia
 Nostra Signora del Miracolo	Lula	IT	Sardinia
 San Michele Arcangelo	Irgoli	IT	Sardinia
 Sant'Elena Imperatrice	Irgoli	IT	Sardinia
-santu juanne istranzu	onifai	IT	Sardinia
+Santu Juanne Istranzu	onifai	IT	Sardinia
 Sant'Antonio Abate	Orosei	IT	Sardinia
 San Giacomo	Siniscola	IT	Sardinia
 Nostra Signora del Rimedio	Lode	IT	Sardinia
@@ -29855,7 +29855,7 @@ Notre-Dame de la Médaille Miraculeuse	Lattes	FR	Languedoc-Roussillon
 Église Notre-Dame-des-Sablons	Aigues-Mortes	FR	Languedoc-Roussillon
 Chapelle Saint-Lucien	Marseille 09	FR	Provence-Alpes-Cote d'Azur
 Église Saint-Édouard	Marseille 09	FR	Provence-Alpes-Cote d'Azur
-chapelle des pénitents noirs	La Ciotat	FR	Provence-Alpes-Cote d'Azur
+Chapelle des Pénitents Noirs	La Ciotat	FR	Provence-Alpes-Cote d'Azur
 Chapelle Saint-Joseph	La Ciotat	FR	Provence-Alpes-Cote d'Azur
 Chapelle Sainte-Anne	La Ciotat	FR	Provence-Alpes-Cote d'Azur
 Chapelle des Pénitents bleus	La Ciotat	FR	Provence-Alpes-Cote d'Azur
@@ -30940,7 +30940,7 @@ Collégiale Saint-Rémy	Lautrec	FR	Midi-Pyrenees
 Église Saint-Pierre	Brassac	FR	Midi-Pyrenees
 Église Saint-Agnan	Brassac	FR	Midi-Pyrenees
 Église Saint-Georges	Brassac	FR	Midi-Pyrenees
-Église Notre-Dame de Jaladieu,	Brassac	FR	Midi-Pyrenees
+Église Notre-Dame de Jaladieu	Brassac	FR	Midi-Pyrenees
 Église Notre-Dame-de-la-Visitation	Brassac	FR	Midi-Pyrenees
 Rotonde d'Oulias	Brassac	FR	Midi-Pyrenees
 Église Saint-Laurent de Soulègre	FONTRIEU	FR	Midi-Pyrenees
@@ -35439,7 +35439,7 @@ Chapelle Sainte Croix	Falicon	FR	Provence-Alpes-Cote d'Azur
 Église Saint-Jean-Baptiste	Drap	FR	Provence-Alpes-Cote d'Azur
 Chapelle Sainte-Catherine	Drap	FR	Provence-Alpes-Cote d'Azur
 Église Saint-Joseph	Cantaron	FR	Provence-Alpes-Cote d'Azur
-chapelle principale	La Turbie	FR	Provence-Alpes-Cote d'Azur
+Chapelle Principale	La Turbie	FR	Provence-Alpes-Cote d'Azur
 Sanctuaire Notre-Dame de Laghet	La Turbie	FR	Provence-Alpes-Cote d'Azur
 Église Saint-Augustin	Cantaron	FR	Provence-Alpes-Cote d'Azur
 Église Sainte-Thècle	Peillon	FR	Provence-Alpes-Cote d'Azur
@@ -39777,7 +39777,7 @@ Chiesa di San Romano martire	San Romano in Garfagnana	IT	Tuscany
 Oratorio di Sant'Antonio	San Romano	IT	Tuscany
 Oratorio di San Rocco	San Romano	IT	Tuscany
 San Lorenzo martire alle Verrucole	San Romano	IT	Tuscany
-madonna del monte	San Romano	IT	Tuscany
+Madonna del Monte	San Romano	IT	Tuscany
 Chiesa di San Giovanni Battista	Piazza al Serchio-San Michele	IT	Tuscany
 Oratorio di Sant'Antonio da Padova	San Romano	IT	Tuscany
 Chiesa Parrocchiale di San Magno	Pieve Fosciana	IT	Tuscany
@@ -39971,7 +39971,7 @@ Cappella dei Frascari	Camugnano	IT	Emilia-Romagna
 San Michele	Castiglione dei Pepoli	IT	Emilia-Romagna
 Pilastrino	San Benedetto Val di Sambro	IT	Emilia-Romagna
 Chiesa di San Giorgio	San Benedetto Val di Sambro	IT	Emilia-Romagna
-cappellina	Gaggio Montano	IT	Emilia-Romagna
+Cappellina	Gaggio Montano	IT	Emilia-Romagna
 Oratorio di Sant'Antonino	Montese	IT	Emilia-Romagna
 Chiesa di San Giovanni Battista	Montese	IT	Emilia-Romagna
 Oratorio di Santa Maria Maddalena	Montese	IT	Emilia-Romagna
@@ -40164,7 +40164,7 @@ XIV	Genoa	IT	Liguria
 XV	Genoa	IT	Liguria
 Chiesa parrocchiale Santa Margherita	Genoa	IT	Liguria
 Convento Suore Brignoline	Genoa	IT	Liguria
-casa di riposo	Genoa	IT	Liguria
+Casa di Riposo	Genoa	IT	Liguria
 Convento - Monastero Carmelitane Scalze	Genoa	IT	Liguria
 Chiesa del Righi	Genoa	IT	Liguria
 Tempio dei Suffragi	Genoa	IT	Liguria
@@ -42195,7 +42195,7 @@ Santuario della Madonna del Monte Vivo XVI sec.	Sacco	IT	Campania
 Cappella cimitero	Roscigno	IT	Campania
 Chiesa San Nicola di Bari	Roscigno	IT	Campania
 Cappella di San Rocco	Roscigno	IT	Campania
-CONVENTO DI SANTA MARIA DELLE GRAZIE	Bellosguardo	IT	Campania
+Convento di Santa Maria delle Grazie	Bellosguardo	IT	Campania
 Santa Maria a Cetrella	Capri	IT	Campania
 Chiesa di San Michele Arcangelo	Anacapri	IT	Campania
 San Salvatore	Capri	IT	Campania
@@ -42980,7 +42980,7 @@ Sant'Anna	Mondragone	IT	Campania
 Santi Rocco e Martino (Sec. XVI)	Falciano del Massico	IT	Campania
 San Pietro Apostolo (Sec.XVII)	Falciano del Massico	IT	Campania
 Chiesa Vecchia	Sant'Andrea-Pizzone-Ciamprisco	IT	Campania
-MARIA SANTISSIMA DELLE GRAZIE	Sant'Andrea-Pizzone-Ciamprisco	IT	Campania
+Maria Santissima delle Grazie	Sant'Andrea-Pizzone-Ciamprisco	IT	Campania
 Chiesa di San Germano Vescovo	Francolise	IT	Campania
 Cattedrale di Carinola	Carinola	IT	Campania
 Convento di San Francesco	Casanova	IT	Campania
@@ -45573,10 +45573,10 @@ Saint Pius of Petrelcina Messonghi	Agios Matthaios	GR	Ionian Islands
 Άγιος Φραγκίσκος	Κέρκυρα	GR	Ionian Islands
 Τένεδος	Kerkyra	GR	Ionian Islands
 Kisha e Manastirit të Shën Marisë Mavrodhivrit	Dhiver	AL	Vlore
-KISHA E SHËN MËHILLIT	Mesopotam	AL	Vlore
+Kisha e shën mëhillit	Mesopotam	AL	Vlore
 Kisha Katolike	Delvinë	AL	Vlore
 Kisha e Manastirit të Shën Triadhës	Delvine	AL	Vlore
-KISHA E SHËN MËRISË SË DRIANOS	Kakavije	AL	Gjirokaster
+Kisha e shën mërisë së drianos	Kakavije	AL	Gjirokaster
 Kisha Katolike Krishti Mbret	Gjirokaster	AL	Gjirokaster
 Kisha Katolike Shen Francesko e Shen Klara	Bilisht	AL	Korce
 Chiesetta di San Lorenzo - confraternita della Visitazione di Maria Vergine	Putignano	IT	Apulia
@@ -47259,7 +47259,7 @@ Chiesa di San Michele Arcangelo	Piazza San Michele	IT	Umbria
 Chiesa di Sant'Antonio	Panicale	IT	Umbria
 Santuario Madonna del Busso	Panicale	IT	Umbria
 Badia dei 7 frati	Piegaro	IT	Umbria
-chiesa del paese	Tavernelle	IT	Umbria
+Chiesa del Paese	Tavernelle	IT	Umbria
 Chiesa di Santa Maria Assunta	Tavernelle	IT	Umbria
 Chiesa di S.Apollinare	Fontignano	IT	Umbria
 Chiesa di Santa Maria Assunta	Fontignano	IT	Umbria
@@ -49160,7 +49160,7 @@ Chiesa di San Cristoforo a Monna	Caprese Michelangelo	IT	Tuscany
 Chiesa di San Paolo a Monna	Caprese Michelangelo	IT	Tuscany
 Abbazia di Tifi	Caprese Michelangelo	IT	Tuscany
 Pieve dei Santi Ippolito e Cassiano	Caprese Michelangelo	IT	Tuscany
-la torre	Caprese Michelangelo	IT	Tuscany
+La Torre	Caprese Michelangelo	IT	Tuscany
 Collegiata di Santo Stefano	Pieve Santo Stefano	IT	Tuscany
 Tempietto di Santa Maria del Colledestro	Pieve Santo Stefano	IT	Tuscany
 Eremo di Cerbaiolo	Pieve Santo Stefano	IT	Tuscany
@@ -49703,7 +49703,7 @@ Chiesa Santa Famiglia	Fano	IT	The Marches
 Casa Betania	Fenile	IT	The Marches
 chiesa di San Pietro	Montegridolfo	IT	Emilia-Romagna
 Chiesa di Ca' Baldo	Padiglione	IT	The Marches
-maestà - celletta	Morciano di Romagna	IT	Emilia-Romagna
+Maestà - Celletta	Morciano di Romagna	IT	Emilia-Romagna
 Chiesa San Fabiano	Villa Ceccolini	IT	The Marches
 Santi Paterniano e Vitale	Borgo Santa Maria	IT	The Marches
 Santa Lucia	San Giovanni in Marignano	IT	Emilia-Romagna
@@ -50440,7 +50440,7 @@ crkva svetog Nikole biskupa	Hrvace	HR	Splitsko-Dalmatinska
 crkva svetog Luke	Otok	HR	Splitsko-Dalmatinska
 crkva Svih Svetih	Gala	HR	Splitsko-Dalmatinska
 crkva svetog Jeronima	Gala	HR	Splitsko-Dalmatinska
-crkva hrvatskih mučenika		HR	Sibensko-Kniniska
+Crkva hrvatskih mučenika		HR	Sibensko-Kniniska
 crkva svetog Ilije	Drnis	HR	Sibensko-Kniniska
 Kraljica mira	Drnis	HR	Sibensko-Kniniska
 Pokrova Presvete Bogorodice	Drnis	HR	Sibensko-Kniniska
@@ -50755,7 +50755,7 @@ Kapela sv. Franje		HR	Zadarska
 Sv. Juraj	Gracac	HR	Zadarska
 crkva svetog Jurja	Gracac	HR	Zadarska
 crkva svetih Petra i Pavla apostola	Gracac	HR	Zadarska
-crkva hrvatskih mučenika		BA	Federation of Bosnia and Herzegovina
+Crkva hrvatskih mučenika		BA	Federation of Bosnia and Herzegovina
 kapelica svetog Marka		BA	Federation of Bosnia and Herzegovina
 crkva svetog Jurja mučenika		HR	Licko-Senjska
 crkva svetog Ivana Pavla II.	Orasac	BA	Federation of Bosnia and Herzegovina
@@ -52135,7 +52135,7 @@ St. Mathew's Catholic Church	کراچی	PK	Sindh
 St. Paul's Church	Karachi	PK	Sindh
 UPR Church Head Office	Karachi	PK	Sindh
 Holy Trinity Anglican Cathedral	Karachi	PK	Sindh
-ST. ANDREWS CHURCH (AKH/KASHMIR COLONY)	Jamshed Town	PK	Sindh
+St. Andrews Church (akh/kashmir Colony)	Jamshed Town	PK	Sindh
 Church of Living Christ Pakistan	Jamshed Town	PK	Sindh
 St. Thomas Church	Karachi	PK	Sindh
 کیتھولک کلیسیا	کراچی	PK	Sindh
@@ -52176,7 +52176,7 @@ Immaculate Conception Church	Shrirampur	IN	West Bengal
 Khrist Raz	Satkhira	BD	Khulna
 St. Thomas Catholic Church	Nagarukhra	IN	West Bengal
 Holy Cross Church	Hazaribagh	IN	Jharkhand
-suthirmath church	Baharampur	IN	West Bengal
+Suthirmath Church	Baharampur	IN	West Bengal
 City Church, Rajshahi সিটি চার্চ, রাজশাহী	Rajshahi	BD	Rajshahi
 Northern Evangelical Lutheran Church	Malda, West Bengal	IN	West Bengal
 St. Mark's Church সেন্ট মার্ক এর চার্চ	NOgaon	BD	Rajshahi
@@ -52844,7 +52844,7 @@ St. Joseph the Worker Church	Alimono	PH	Western Visayas
 San Roque Parish Church	Viejo Daan Banua	PH	Western Visayas
 Our Lady of Victory Parish Church	Victorias	PH	Western Visayas
 Church of the Cartwheels	Manapla	PH	Western Visayas
-Sto.Niño Parish Church	Cadiz	PH	Western Visayas
+Sto. Niño Parish Church	Cadiz	PH	Western Visayas
 Sto Rosario	Bantayan	PH	Central Visayas
 Berhin sa Lourdes	Bantayan	PH	Central Visayas
 San Roque	Bantayan	PH	Central Visayas
@@ -53257,7 +53257,7 @@ San Antonio de Padua Parish Church	Tagbilaran	PH	Central Visayas
 Our Lady of the Village Parish	Corella	PH	Central Visayas
 Holy Trinity Parish Church	De la Paz	PH	Central Visayas
 Virgen de la Paz Y Buen Viaje	De la Paz	PH	Central Visayas
-birhen sa panabang	Cortes	PH	Central Visayas
+Birhen Sa Panabang	Cortes	PH	Central Visayas
 Santa Cruz Chapel	Loon	PH	Central Visayas
 Saint Joseph the Worker Parish Church	Jagna	PH	Central Visayas
 Santa Cruz	Mambool	PH	Central Visayas
@@ -53790,7 +53790,7 @@ Yawan Chapel	Yawan	PH	Western Visayas
 Mina-a Chapel	Mina-a	PH	Western Visayas
 San Isidro Labrador Church	Linabuan Sur	PH	Western Visayas
 Monlaque chapel	Monlaque	PH	Western Visayas
-catholic church	Dungon	PH	Western Visayas
+Catholic Church	Dungon	PH	Western Visayas
 San Jose Chapel	Ibajay	PH	Western Visayas
 Saint Rita of Cascia Parish Church	Naile	PH	Western Visayas
 Nuestra Señora de la Paz y Buen Viaje Chapel	Tangalan	PH	Western Visayas
@@ -54322,7 +54322,7 @@ Santa Rita Chapel I	Santa Teresa First	PH	Central Luzon
 Santa Rita Chapel II	San Francisco	PH	Central Luzon
 Sitio Maligaya San Miguel Chapel	San Francisco	PH	Central Luzon
 Santa Maria Chapel	Santa Teresa First	PH	Central Luzon
-SAN AGUSTIN CHAPEL	Santa Cruz	PH	Central Luzon
+San Agustin Chapel	Santa Cruz	PH	Central Luzon
 Santa Catalina Chapel	Lubao	PH	Central Luzon
 San Agustin Chapel	Santa Teresa First	PH	Central Luzon
 Jesus Is Lord Church	Lubao	PH	Central Luzon
@@ -55048,7 +55048,7 @@ Shrine of Saint Joseph	Mandaluyong City	PH	Metro Manila
 Barangay 859 Chapel	Quiapo	PH	Metro Manila
 Mary Help of Christians Chapel	Mandaluyong	PH	Metro Manila
 St. John Bosco Chapel	Mandaluyong	PH	Metro Manila
-Sto.Rosario Kanluran Chapel	Pateros	PH	Calabarzon
+Sto. Rosario Kanluran Chapel	Pateros	PH	Calabarzon
 Mater Dolorosa Parish	Taguig	PH	Calabarzon
 San Nicolas Chapel	Makati City	PH	Metro Manila
 Samahang the Happy XII, Inc.	Makati City	PH	Metro Manila
@@ -55296,7 +55296,7 @@ Sacred Heart Chapel	Malanday	PH	Calabarzon
 Immaculate Conception Chapel	Sub-urban	PH	Calabarzon
 Chapel	San Vicente	PH	Bicol
 San Jose Chapel	Talisay	PH	Bicol
-SAN ROQUE CHURCH	Vinzons	PH	Bicol
+San Roque Church	Vinzons	PH	Bicol
 Quasi-Parish of St. Paul the Apostle	Sabang Indan	PH	Bicol
 Diocesan Shrine of Jesus the Black Nazarene of Capalonga and Parish of St. Lucy, Virgin and Martyr	Capalonga	PH	Bicol
 Parish of St. Roque	Paracale	PH	Bicol
@@ -55376,7 +55376,7 @@ San Pascual Chapel	Santo Domingo	PH	Central Luzon
 Saint Dominic de Guzman Parish	Santo Domingo	PH	Central Luzon
 San Geronimo Parish Church	Baloc	PH	Central Luzon
 Saint John Paul II Parish Church	Camiling	PH	Central Luzon
-chapel n hindi tapos	Tarlac	PH	Central Luzon
+Chapel N Hindi Tapos	Tarlac	PH	Central Luzon
 Our Lady of Miraculous Medal Church	Paniqui	PH	Central Luzon
 Capilla de Sta. Lucia	Paniqui	PH	Central Luzon
 San Roque Church	Parian	PH	Ilocos
@@ -55753,11 +55753,11 @@ Mercy Heights Convent	Tamuning-Tumon-Harmon Village	GU	Tamuning
 Blessed Diego Saint Pedro Shrine	Tamuning	GU	Dededo
 St Paul's Chapel	Dededo Village	GU	Dededo
 Our Lady of Holy Rosary Church	Nawabganj	BD	Dhaka
-ST. JOHN CATHOLIC CHURCH HANTHAWADDY	ဟံသာဝတီ	MM	Chin
-CATHOLIC CHURCH	SHILLONG	IN	Meghalaya
+St. John Catholic Church Hanthawaddy	ဟံသာဝတီ	MM	Chin
+Catholic Church	SHILLONG	IN	Meghalaya
 St. Francis Xavier's Church	Mawsynram	IN	Meghalaya
 Don Bosco Shrine	Cherrapunji	IN	Meghalaya
-NONGJRI CATHOLIC CHURCH		IN	Meghalaya
+Nongjri Catholic Church		IN	Meghalaya
 Hsipaw Christ Canaan Church		MM	Shan
 Catholic Church		MM	Shan
 St Joseph Catholic Church	ကသာ	MM	Kachin
@@ -55765,7 +55765,7 @@ St Paul Catholic Church စိန့်ပေါကက်သလစ်ဘုရ�
 St.Patrick Catholic Church		MM	Kachin
 St. Mary Catholic Church		MM	Kachin
 St. Peter's Catholic Church		MM	Kachin
-CATHOLIC CHURCH	NENGKHRA AWE	IN	Meghalaya
+Catholic Church	NENGKHRA AWE	IN	Meghalaya
 Shrine of Jesus christ	Shillong	IN	Meghalaya
 Divine Saviour Parish	Shillong	IN	Meghalaya
 St. Joseph	Shillong	IN	Meghalaya
@@ -55780,7 +55780,7 @@ Catholic Churcj Jotsoma	Jotsoma	IN	Nagaland
 Christ King Church	Kohima	IN	Nagaland
 Holy Cross church	Dimapur	IN	Nagaland
 Sacred Heart Church		IN	Assam
-TULI TOWN CHURCH	DIMAPUR	IN	Assam
+Tuli Town Church	DIMAPUR	IN	Assam
 St. Paul’s Catholic Church	Rangapara, Assam	IN	Assam
 SFS Church	Telam	IN	Assam
 Fransalian Church	Jonai	IN	Arunachal Pradesh
@@ -63981,7 +63981,7 @@ Cappella di San Luigi	Salbertrand	IT	Piedmont
 Cappella di Sant'Ippolito	Salbertrand	IT	Piedmont
 Cappella di San Pancrazio	Salbertrand	IT	Piedmont
 Cappella di Santa Margherita	Salbertrand	IT	Piedmont
-CHIESA DELLA SS ANNUNZIATA	Usseaux	IT	Piedmont
+Chiesa della SS Annunziata	Usseaux	IT	Piedmont
 Chiesa Parrocchiale di San Pietro	Usseaux	IT	Piedmont
 Capella di San Giacomo Apostolo	Bardonecchia	IT	Piedmont
 Santa Maddalena	Bardonecchia	IT	Piedmont
@@ -65951,7 +65951,7 @@ Cappella della Madonna delle Grazie	Le Chardonney	IT	Aosta Valley
 Chiesa Parrocchiale di San Nicola	Champorcher	IT	Aosta Valley
 Esaltazione Santa Croce	Champorcher	IT	Aosta Valley
 Cappella Notre Dame des Neiges	La Place	IT	Aosta Valley
-oratorio di sant'anna	Champorcher	IT	Aosta Valley
+Oratorio di Sant'Anna	Champorcher	IT	Aosta Valley
 Cappella di Santa Margherita	Pont-Bozet	IT	Aosta Valley
 Cappella Di San Grato	Hone	IT	Aosta Valley
 Cappella del Saint Sudaire	Issogne	IT	Aosta Valley
@@ -68928,7 +68928,7 @@ Saint Christophe	Verbier	CH	Valais
 Notre-Dame de la Nativité	Vernayaz	CH	Valais
 Chapelle Saint-Étienne	Bagnes	CH	Valais
 Chapelle Saint-Marc	Bagnes	CH	Valais
-chapelle	Fully	CH	Valais
+Chapelle	Fully	CH	Valais
 Cœur Immaculé de Marie	Riddes	CH	Valais
 Sainte-Catherine	Saillon	CH	Valais
 Chapelle St. Laurent	Saillon	CH	Valais
@@ -69713,7 +69713,7 @@ Chiesa di San Giorgio Martire	Arena Po	IT	Lombardy
 Chiesa di Sant'Agostino	Spessa	IT	Lombardy
 Chiesa parrocchiale di Santa Maria Assunta	Costa de' Nobili	IT	Lombardy
 Chiesa di Santo Stefano Protomartire	Corteolona	IT	Lombardy
-parrocchia santa cristina	Santa Cristina	IT	Lombardy
+Parrocchia Santa Cristina	Santa Cristina	IT	Lombardy
 Oratorio di Santa Maria in Valle	Chignolo Po	IT	Lombardy
 Chiesa parrocchiale di Maria Santissima Annunziata	Chignolo Po	IT	Lombardy
 Madonna dei Monti	San Colombano al Lambro	IT	Lombardy
@@ -71781,7 +71781,7 @@ Il Trepol o chiesetta di san Rocco	Costa-Barco	IT	Lombardy
 Chiesa di San Michele Arcangelo	Cazzago San Martino-Calino	IT	Lombardy
 Chiesa della Madonna della Zucchella	Costa-Barco	IT	Lombardy
 Chiesetta di Sant'Antonio	Bornato	IT	Lombardy
-chiesa della fuga in egitto	Paderno Franciacorta	IT	Lombardy
+Chiesa della Fuga in Egitto	Paderno Franciacorta	IT	Lombardy
 Chiesa di San Pancrazio	Paderno Franciacorta	IT	Lombardy
 Chiesa di Santo Stefano	Cazzago San Martino-Calino	IT	Lombardy
 Chiesa di San Vigilio	Bornato	IT	Lombardy
@@ -71852,7 +71852,7 @@ Chiesa di San Carlo	Provaglio d'Iseo	IT	Lombardy
 Chiesa di San Bernardo	Fontane-Zurane-Gresine	IT	Lombardy
 Chiesa dei Santi Pietro e Paolo Apostoli	Fontane-Zurane-Gresine	IT	Lombardy
 Chiesa di San Rocco	Fontane-Zurane-Gresine	IT	Lombardy
-chiesa di san rocco	Provezze	IT	Lombardy
+Chiesa di San Rocco	Provezze	IT	Lombardy
 Chiesa della BV di Lourdes	Provezze	IT	Lombardy
 Chiesa di San Zenone	Parmezzana Calzana	IT	Lombardy
 Chiesa di San Michele	Provezze	IT	Lombardy
@@ -72244,7 +72244,7 @@ San Vincenzo	Poiano	IT	Veneto
 Comunità degli Stimmatini di Sezano	Grezzana	IT	Veneto
 Santa Maria in Stelle	Grezzana	IT	Veneto
 Santa Maria della neve	Montorio	IT	Veneto
-san rocco	San Pietro	IT	Veneto
+San Rocco	San Pietro	IT	Veneto
 Chiesa di San Vincenzo Ferreri	Fittà	IT	Veneto
 Chiesa di Santa Maria Maddalena	Montecchia di Crosara	IT	Veneto
 Chiesa di San Giorgio	Illasi	IT	Veneto
@@ -72462,7 +72462,7 @@ Chiesa di San Giovanni Battista	Taino	IT	Lombardy
 Chiesa di San Quirico	Ranco	IT	Lombardy
 Chiesa dela Beata Vergine del Rosario	Angera	IT	Lombardy
 Chiesa dei Santi Simone e Giuda	Golasecca	IT	Lombardy
-cappella votiva	Golasecca	IT	Lombardy
+Cappella Votiva	Golasecca	IT	Lombardy
 Oratorio di Sant'Anna	Castelletto Sopra Ticino	IT	Piedmont
 Chiesa di Santa Maria d'Egro	Castelletto Sopra Ticino	IT	Piedmont
 Chiesa del sacro Cuore di Gesù	Castelletto Sopra Ticino	IT	Piedmont
@@ -75640,7 +75640,7 @@ Chiesa di Sant'Antonio abate	Fiave	IT	Trentino-Alto Adige
 chiesa dell'Assunta	Fiave	IT	Trentino-Alto Adige
 chiesa di San Lorenzo	Fiave	IT	Trentino-Alto Adige
 Cappella di San Rocco	Fiave	IT	Trentino-Alto Adige
-battistero	Fiave	IT	Trentino-Alto Adige
+Battistero	Fiave	IT	Trentino-Alto Adige
 Chiesa di Santa Maria Assunta e San Giovanni Battista	Tione di Trento	IT	Trentino-Alto Adige
 chiesa di San Zeno	Bolbeno	IT	Trentino-Alto Adige
 Chiesa di San Martino	Zuclo	IT	Trentino-Alto Adige
@@ -75753,7 +75753,7 @@ San Rocco	Cavedine	IT	Trentino-Alto Adige
 chiesa di San Rocco	Cavedine	IT	Trentino-Alto Adige
 Madonna della Grotta	Cavedine	IT	Trentino-Alto Adige
 chiesa dei Santi Martiri	Cavedine	IT	Trentino-Alto Adige
-chiesetta	Cavedine	IT	Trentino-Alto Adige
+Chiesetta	Cavedine	IT	Trentino-Alto Adige
 Chiesa Sant'Antonio Abate	Cavedine	IT	Trentino-Alto Adige
 Chiesetta di San Maurizio	Cimoneri	IT	Trentino-Alto Adige
 Chiesa di Santa Lucia	Pietramurata	IT	Trentino-Alto Adige
@@ -75762,7 +75762,7 @@ chiesa di San Pietro	Lasino	IT	Trentino-Alto Adige
 chiesa di Santa Maria Lauretana	Calavino	IT	Trentino-Alto Adige
 Chiesa della Madonna del Carmine	Calavino	IT	Trentino-Alto Adige
 Chiesa di Santa Maria Assunta	Calavino	IT	Trentino-Alto Adige
-chiesetta degli sciatori scomparsi in montagna	Ravina	IT	Trentino-Alto Adige
+Chiesetta degli Sciatori Scomparsi in Montagna	Ravina	IT	Trentino-Alto Adige
 Chiesa della Madonna della Neve	Ravina	IT	Trentino-Alto Adige
 Cappella dell'Immacolata	Aldeno	IT	Trentino-Alto Adige
 San Modesto	Aldeno	IT	Trentino-Alto Adige
@@ -76068,7 +76068,7 @@ chiesa di Santa Maria Maddalena	Padergnone	IT	Trentino-Alto Adige
 Cappella di Sant'Antonio di Padova	Padergnone	IT	Trentino-Alto Adige
 chiesa di Santa Massenza	Padergnone	IT	Trentino-Alto Adige
 Santuario Madonna del Caravaggio	San Lorenzo in Banale	IT	Trentino-Alto Adige
-cappella del crocifisso	Padergnone	IT	Trentino-Alto Adige
+Cappella del Crocifisso	Padergnone	IT	Trentino-Alto Adige
 chiesa dei Santi Filippo e Giacomo	Padergnone	IT	Trentino-Alto Adige
 chiesa di San Valentino	Vezzano	IT	Trentino-Alto Adige
 Chiesa dei Santi Vigilio e Valentino	Vezzano	IT	Trentino-Alto Adige
@@ -78625,7 +78625,7 @@ Chiesa dei Santi Cornelio e Cipriano	Piotta	CH	Ticino
 Chiesa di Sant'Ambrogio	Quinto	CH	Ticino
 Oratorio di San Martino di Tours	Quinto	CH	Ticino
 Santa Maria Maddalena	Faido	CH	Ticino
-cappelletta	Faido	CH	Ticino
+Cappelletta	Faido	CH	Ticino
 San Carlo	Airolo	CH	Ticino
 Oratorio di San Bernardo	Faido	CH	Ticino
 Chiesa di San Pellegrino	Bodio	CH	Ticino

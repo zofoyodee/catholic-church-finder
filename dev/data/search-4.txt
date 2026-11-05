@@ -4042,7 +4042,7 @@ Chapelle Saint-Roch	Haybes	FR	Champagne-Ardenne
 Église Saint-Remacle	Fromelennes	FR	Champagne-Ardenne
 Église Notre-Dame	Froidchapelle	BE	Wallonia
 Église Sainte-Aldegonde	Rance	BE	Wallonia
-chapelle	Froidchapelle	BE	Wallonia
+Chapelle	Froidchapelle	BE	Wallonia
 Église Sainte-Aldegonde	Froidchapelle	BE	Wallonia
 Église Notre-Dame	Froidchapelle	BE	Wallonia
 Église Saint-Denis	Philippeville	BE	Wallonia
@@ -10077,7 +10077,7 @@ St.-Nikolaus	Geltendorf	DE	Bavaria
 Kapelle	Geltendorf	DE	Bavaria
 St. Jakobskapelle	Geltendorf	DE	Bavaria
 St. Georg	Moorenweis	DE	Bavaria
-St. Maria,	Moorenweis	DE	Bavaria
+St. Maria	Moorenweis	DE	Bavaria
 St. Margareth	Moorenweis	DE	Bavaria
 St. Johannes Baptist	Moorenweis	DE	Bavaria
 St. Michael	Greifenberg	DE	Bavaria
@@ -16767,7 +16767,7 @@ Marienkapelle	Neunkirchen am Brand	DE	Bavaria
 St. Michael	Neunkirchen am Brand	DE	Bavaria
 Augustinuskapelle	Neunkirchen am Brand	DE	Bavaria
 Heilig-Grab-Kapelle	Neunkirchen am Brand	DE	Bavaria
-Kath.Kirche Maria Unbefleckte Empfängnis	Eckental	DE	Bavaria
+Kath. Kirche Maria Unbefleckte Empfängnis	Eckental	DE	Bavaria
 Kreuzerhöhung	Igensdorf	DE	Bavaria
 St. Ägidius	Igensdorf	DE	Bavaria
 Unsere liebe Frau vom Rosenkranz	Hetzles	DE	Bavaria
@@ -17107,7 +17107,7 @@ Deutschordenskirche	Frankfurt am Main	DE	Hesse
 Sankt Ignatius	Frankfurt am Main	DE	Hesse
 Allerheiligenkirche	Frankfurt am Main	DE	Hesse
 Sankt Michael	Frankfurt am Main	DE	Hesse
-comunita cattolica italiana	Offenbach	DE	Hesse
+Comunita Cattolica Italiana	Offenbach	DE	Hesse
 Sankt Pancratius	Offenbach	DE	Hesse
 Heilig-Kreuz-Kirche	Frankfurt am Main	DE	Hesse
 Heilig Geist	Frankfurt am Main	DE	Hesse
@@ -18271,10 +18271,10 @@ Chiesa di Santa Giustina vergine e martire	Baone	IT	Veneto
 Chiesa di San Nicola	Marendole	IT	Veneto
 Chiesetta Santa Rosa	Monselice	IT	Veneto
 Statio ad San Sebastianum	Monselice	IT	Veneto
-STATIO AD S. LAURENTIUM EXTRA MUROS	Monselice	IT	Veneto
-STATIO AD SS. PETRUM ET PAULUM	Monselice	IT	Veneto
-STATIO AD S. CRUCEM IN JERUSALEM	Monselice	IT	Veneto
-STATIO AD S. JOANNEM IN LATERANO	Monselice	IT	Veneto
+Statio Ad S. Laurentium Extra Muros	Monselice	IT	Veneto
+Statio Ad SS. Petrum et Paulum	Monselice	IT	Veneto
+Statio Ad S. Crucem in Jerusalem	Monselice	IT	Veneto
+Statio Ad S. Joannem in Laterano	Monselice	IT	Veneto
 Santuario di San Giorgio	Monselice	IT	Veneto
 Eremo di Santa Domenica	Arqua Petrarca	IT	Veneto
 Chiesta Arcipretale di San Martino	Tribano	IT	Veneto
@@ -19305,7 +19305,7 @@ Chiesa Madonna delle Grazie	Gallio	IT	Veneto
 Santuario della Madonna del Caravaggio al Buso	Foza	IT	Veneto
 Cappella San Lorenzo	Grigno	IT	Trentino-Alto Adige
 chiesa di Santa Giuliana	Levico Terme	IT	Trentino-Alto Adige
-capitello	Levico Terme	IT	Trentino-Alto Adige
+Capitello	Levico Terme	IT	Trentino-Alto Adige
 Chiesetta della Madonna del Pèzo	Levico Terme	IT	Trentino-Alto Adige
 Capitello della Madonna di Piné	Levico Terme	IT	Trentino-Alto Adige
 chiesa di San Taddeo	Levico Terme	IT	Trentino-Alto Adige
@@ -21582,8 +21582,8 @@ crkva Presvetog Srca Isusova	Karlovac	HR	Karlovacka
 crkva Presvetog Trojstva	Karlovac	HR	Karlovacka
 Franjevački samostan	Karlovac	HR	Karlovacka
 crkva Blažene Djevice Marije Snježne	Karlovac	HR	Karlovacka
-crkva sveta tri kralja	Karlovac	HR	Karlovacka
-pastoralni centar hrvatskih mučenika	Karlovac	HR	Karlovacka
+Crkva sveta tri kralja	Karlovac	HR	Karlovacka
+Pastoralni centar hrvatskih mučenika	Karlovac	HR	Karlovacka
 crkva svetog Martina	Karlovac	HR	Karlovacka
 crkva svetog Roka	Karlovac	HR	Karlovacka
 crkva svetog Ivana Krstitelja	Karlovac	HR	Karlovacka
@@ -27402,7 +27402,7 @@ kapela svetog Antuna Padovanskog	Daruvar	HR	Bjelovarsko-Bilogorska
 crkva Presvetog Srca Isusovog	Grubisno Polje	HR	Bjelovarsko-Bilogorska
 Crkva svetog Duha	Vocin	HR	Virovitick-Podravska
 crkva Uznesenja Blažene Djevice Marije	Jaksic	HR	Pozesko-Slavonska
-kapela oproštenja	Velika	HR	Pozesko-Slavonska
+Kapela oproštenja	Velika	HR	Pozesko-Slavonska
 kapela svetog Marka	Velika	HR	Pozesko-Slavonska
 kapela Imena Isusova	Kaptol	HR	Pozesko-Slavonska
 crkva svetih Petra i Pavla apostola	Kaptol	HR	Pozesko-Slavonska
@@ -27658,7 +27658,7 @@ crkva svetog Josipa	Darda	HR	Osjecko-Baranjska
 kapelica svetog Antuna	Darda	HR	Osjecko-Baranjska
 crkva Presvetog Srca Isusova	Čeminac	HR	Osjecko-Baranjska
 Crkva sv. Martina	Ceminac	HR	Osjecko-Baranjska
-kapela papinskog blagoslova	Apatin	RS	Autonomna Pokrajina Vojvodina
+Kapela papinskog blagoslova	Apatin	RS	Autonomna Pokrajina Vojvodina
 Kapela Kristova Uzašašća	Vukovar	HR	Vukovarsko-Srijemska
 kapela svetog Roka	Vukovar	HR	Vukovarsko-Srijemska
 Светог Илије	Vukovar	HR	Vukovarsko-Srijemska
@@ -27800,7 +27800,7 @@ Iskolakápolna	Kisdér	HU	Baranya
 Szent Nándor-templom	Harkany	HU	Baranya
 Iskolakápolna	Pellerd	HU	Baranya
 Jézus Szíve kápolna (Zsolnay-kápolna)	Harkany	HU	Baranya
-római katolikus iskolakápolna	Szilvás	HU	Baranya
+Római katolikus iskolakápolna	Szilvás	HU	Baranya
 Szent László-templom	Kozarmisleny	HU	Baranya
 Krisztus király templom	Királyegyháza	HU	Baranya
 Iskolakápolna	Szentlorinc	HU	Baranya
@@ -29978,7 +29978,7 @@ Misézőhely	Diosd	HU	Pest
 Szily-kápolna	Biatorbágy	HU	Pest
 Szűz Mária bemutatása-templom	Toeroekbalint	HU	Pest
 Xavéri Szent Ferenc-kápolna	Toeroekbalint	HU	Pest
-temetői kápolna	Toeroekbalint	HU	Pest
+Temetői kápolna	Toeroekbalint	HU	Pest
 Mária-segíts kápolna	Toeroekbalint	HU	Pest
 Misézőhely	Budaors	HU	Pest
 Kálvária kápolna	Budaors	HU	Pest
@@ -34529,7 +34529,7 @@ Kuratiekirche zur Heiligen Dreifaltigkeit	Plattling	DE	Bavaria
 Mariä Heimsuchung	Deggendorf	DE	Bavaria
 Sankt Urban	Deggendorf	DE	Bavaria
 Heiligen Nepomuk	Niederalteich	DE	Bavaria
-Wallfahrtskirche Zur Schmerzhaften Muttergottes,	Deggendorf	DE	Bavaria
+Wallfahrtskirche Zur Schmerzhaften Muttergottes	Deggendorf	DE	Bavaria
 Sankt Konrad	Deggendorf	DE	Bavaria
 Sankt Erasmus	Deggendorf	DE	Bavaria
 Filialkirche St. Maria Magdalena	Stephansposching	DE	Bavaria
@@ -34833,7 +34833,7 @@ Dorfkapelle Hochdorf	Bischofsmais	DE	Bavaria
 Matzelsrieder Kapelle	Regen	DE	Bavaria
 Hofkapelle Ebenhof	Regen	DE	Bavaria
 Weißensteiner Kapelle	Regen	DE	Bavaria
-kapelle	Kirchdorf im Wald	DE	Bavaria
+Kapelle	Kirchdorf im Wald	DE	Bavaria
 St. Katharina	Eppenschlag	DE	Bavaria
 Dorfkapelle St. Christophorus	Eppenschlag	DE	Bavaria
 Wallfahrtskirche Frauenbrünnl	Rinchnach	DE	Bavaria
@@ -34955,7 +34955,7 @@ Sv. Benedikta	Philippsreut	DE	Bavaria
 Panny Marie, sv. Josefa a sv. Jana Nepomuckého	Borova Lada	CZ	Jihocesky
 Kostel Jména Ježíš	Volary	CZ	Jihocesky
 svatý Florián	Volary	CZ	Jihocesky
-kaple	Volary	CZ	Jihocesky
+Kaple	Volary	CZ	Jihocesky
 Kostel sv. Magdalény	Volary	CZ	Jihocesky
 kleine Wegkapelle	Volary	CZ	Jihocesky
 Sv. Vít	Volary	CZ	Jihocesky
@@ -35005,11 +35005,11 @@ Kaplička sv. Antonína	Kasperske Hory	CZ	Plzensky
 kaple sv. Jana	Kasperske Hory	CZ	Plzensky
 Kaple	Kasperske Hory	CZ	Plzensky
 Kaplička sv. Antonína Paduánského	Stachy	CZ	Jihocesky
-kaplička	Kasperske Hory	CZ	Plzensky
+Kaplička	Kasperske Hory	CZ	Plzensky
 Kostel sv. Petra a Pavla	Susice	CZ	Plzensky
 Kaple sv. Anny	Susice	CZ	Plzensky
 Kostel narození panny Marie	Kasperske Hory	CZ	Plzensky
-kaple	Vacov	CZ	Jihocesky
+Kaple	Vacov	CZ	Jihocesky
 Kostel Proměnění Páně	Susice	CZ	Plzensky
 Kostel Navštívení Panny Marie	Vimperk	CZ	Jihocesky
 sv. Rodina	Vimperk	CZ	Jihocesky
@@ -36176,7 +36176,7 @@ Kostel sv. Anny	Věžovatá Pláně	CZ	Jihocesky
 Nejsvětější Trojice	Horni Plana	CZ	Jihocesky
 Kostel svatého Martina	Chvalsiny	CZ	Jihocesky
 sv. Máří Magdaléna	Chvalšiny	CZ	Jihocesky
-kaplička	Cesky Krumlov	CZ	Jihocesky
+Kaplička	Cesky Krumlov	CZ	Jihocesky
 Kaple sv. Terezie	Kájov	CZ	Jihocesky
 Kostelík Zesnutí Panny Marie	Kajov	CZ	Jihocesky
 Kostel Nanebevzetí Panny Marie	Kájov	CZ	Jihocesky
@@ -36343,7 +36343,7 @@ Schlader	Dobersberg	AT	Lower Austria
 Zur schmerzhaften Muttergottes	Raabs an der Thaya	AT	Lower Austria
 Pfarrkirche hl. Nikolaus	Raabs an der Thaya	AT	Lower Austria
 Sv. Bartoloměje	Brloh	CZ	Jihocesky
-kaplička	Brloh	CZ	Jihocesky
+Kaplička	Brloh	CZ	Jihocesky
 Kaple sv. Ondřeje	Brloh	CZ	Jihocesky
 Narození Panny Marie	Brloh	CZ	Jihocesky
 Kaple Chlum	Kremze	CZ	Jihocesky
@@ -36362,7 +36362,7 @@ Panny Marie Bolestné	Dubne	CZ	Jihocesky
 Kaple sv. Andělů strážných	Dubne	CZ	Jihocesky
 Kostel Nanebevzetí Panny Marie	Lhenice	CZ	Jihocesky
 sv. Filip a Jakub	Lhenice	CZ	Jihocesky
-kaplička	Lhenice	CZ	Jihocesky
+Kaplička	Lhenice	CZ	Jihocesky
 Kaple	Lhenice	CZ	Jihocesky
 kaple sv. Václava	Lhenice	CZ	Jihocesky
 Kaple sv. Víta (1882)	Dubne	CZ	Jihocesky
@@ -36391,7 +36391,7 @@ Nejsvětější Trojice	Litvinovice	CZ	Jihocesky
 Kaplička	Srubec	CZ	Jihocesky
 Kaplička	Srubec	CZ	Jihocesky
 Panna Marie	Srubec	CZ	Jihocesky
-kaplička	Srubec	CZ	Jihocesky
+Kaplička	Srubec	CZ	Jihocesky
 secesní kaple sv. Prokopa 1908	Srubec	CZ	Jihocesky
 Kaple 1889	Borovany	CZ	Jihocesky
 svatý Jan Nepomucký	Borovany	CZ	Jihocesky
@@ -36777,7 +36777,7 @@ rotunda sv. Kateřiny	Znojmo	CZ	South Moravian
 Panna Maria Bolestná	Znojmo	CZ	South Moravian
 svatý Jan Křtitel	Znojmo	CZ	South Moravian
 Sv. Archanděl Michael	Znojmo	CZ	South Moravian
-kaple	Znojmo	CZ	South Moravian
+Kaple	Znojmo	CZ	South Moravian
 Nalezení svatého Kříže	Znojmo	CZ	South Moravian
 svatý Jan Nepomucký	Dobsice	CZ	South Moravian
 Nanebevzetí Panny Marie	Tasovice	CZ	South Moravian
@@ -37017,10 +37017,10 @@ Kostel svatého Jakuba Staršího	Moravske Budejovice	CZ	Vysocina
 Kostel Navštívení Panny Marie	Zeletava	CZ	Vysocina
 Nejsvětější Trojice	Zeletava	CZ	Vysocina
 svatý Bartoloměj	Telc	CZ	Vysocina
-kaple	Telc	CZ	Vysocina
+Kaple	Telc	CZ	Vysocina
 Navštívení Panny Marie	Zeletava	CZ	Vysocina
-kaple	Zeletava	CZ	Vysocina
-kaple	Zeletava	CZ	Vysocina
+Kaple	Zeletava	CZ	Vysocina
+Kaple	Zeletava	CZ	Vysocina
 Panna Marie	Zeletava	CZ	Vysocina
 Panna Marie	Zeletava	CZ	Vysocina
 Svatá Kateřina Alexandrijská	Zeletava	CZ	Vysocina
@@ -37952,7 +37952,7 @@ svatý Martin	Klenci pod Cerchovem	CZ	Plzensky
 svatá Markéta	Postrekov	CZ	Plzensky
 Kaple sv. Václava	Mrakov	CZ	Plzensky
 svatý Vavřinec	Mrakov	CZ	Plzensky
-hřbitovní kaple	Mrakov	CZ	Plzensky
+Hřbitovní kaple	Mrakov	CZ	Plzensky
 Nejsvětější Trojice	Kout na Sumave	CZ	Plzensky
 Nanebevzetí Panny Marie	Domazlice	CZ	Plzensky
 Kaple Panny Marie	Klenci pod Cerchovem	CZ	Plzensky
@@ -38003,7 +38003,7 @@ Kaple sv. Rocha	Susice	CZ	Plzensky
 Kaple Nejsvětější Trojice	Susice	CZ	Plzensky
 Kaple sv. Jana Nepomuckého	Susice	CZ	Plzensky
 Kaple sv. Anděla strážce	Susice	CZ	Plzensky
-kaple 14 sv. pomocníků v nouzi	Susice	CZ	Plzensky
+Kaple 14 sv. pomocníků v nouzi	Susice	CZ	Plzensky
 Kaple sv. Valburgy	Hradek	CZ	Plzensky
 sv. Vavřinec	Hradek	CZ	Plzensky
 Kaple sv. Marty	Kolinec	CZ	Plzensky
@@ -38146,7 +38146,7 @@ Kostel Narození panny Marie	Chotesov	CZ	Plzensky
 Výklenková kaple	Chotesov	CZ	Plzensky
 Svatých Andělů strážných	Chotesov	CZ	Plzensky
 Kaple Panny Marie Pomocné	Chlumcany	CZ	Plzensky
-ústavní kostel	Dobrany	CZ	Plzensky
+Ústavní kostel	Dobrany	CZ	Plzensky
 svatý Vít	Dobrany	CZ	Plzensky
 svatý Mikuláš	Dobrany	CZ	Plzensky
 sv. Jan Křtitel	Kladruby	CZ	Plzensky
@@ -38523,7 +38523,7 @@ Nanebevzetí Panny Marie	Marianske Lazne	CZ	Karlovarsky
 Zvěstování Páně	Klaster	CZ	Karlovarsky
 Nejsvětější Trojice	Mesto	CZ	Karlovarsky
 svatý Jiljí	Mesto	CZ	Karlovarsky
-klášter	Klaster	CZ	Karlovarsky
+Klášter	Klaster	CZ	Karlovarsky
 Kaplička	Mesto	CZ	Karlovarsky
 Svatý Jiří	Horni Slavkov	CZ	Karlovarsky
 Narození Panny Marie	Touzim	CZ	Karlovarsky
@@ -39040,11 +39040,11 @@ Kostel sv. Jiljí	Zruc nad Sazavou	CZ	Central Bohemia
 ‎Kostel sv. Bartoloměje	Ledec nad Sazavou	CZ	Vysocina
 ‎Kostel Nejsvětější Trojice	Ledec nad Sazavou	CZ	Vysocina
 Kostel sv. Petra a Pavla	Ledeč nad Sázavou	CZ	Vysocina
-kaple	Ledec nad Sazavou	CZ	Vysocina
+Kaple	Ledec nad Sazavou	CZ	Vysocina
 Kaple	Svetla nad Sazavou	CZ	Vysocina
 Kostel svatého Václava	Světlá nad Sázavou	CZ	Vysocina
 Kaple Panny Marie	Ledec nad Sazavou	CZ	Vysocina
-kaple	Svetla nad Sazavou	CZ	Vysocina
+Kaple	Svetla nad Sazavou	CZ	Vysocina
 Kostel Nanebevzetí Panny Marie	Ledec nad Sazavou	CZ	Vysocina
 ‎Kaple sv. Jana Nepomuckého	Svetla nad Sazavou	CZ	Vysocina
 Svatý Antonín Paduánský	Divisov	CZ	Central Bohemia
@@ -39103,7 +39103,7 @@ svatý Václav	Knezice	CZ	Vysocina
 Nejsvětější Trojice	Knezice	CZ	Vysocina
 Sv. Anna	Knezice	CZ	Vysocina
 Svatý Bartoloměj	Knezice	CZ	Vysocina
-kaple	Knezice	CZ	Vysocina
+Kaple	Knezice	CZ	Vysocina
 Panny Marie Karmelské	Okrisky	CZ	Vysocina
 Kostel svatého Petra v okovech	Starec	CZ	Vysocina
 Kaple	Okrisky	CZ	Vysocina
@@ -39115,15 +39115,15 @@ Blahoslavené Juliány	Brtnice	CZ	Vysocina
 Panna Maria Pomocná	Brtnice	CZ	Vysocina
 svatý Martin	Dolni Cerekev	CZ	Vysocina
 Nanebevzetí Panny Marie	Dolni Cerekev	CZ	Vysocina
-kaple	Dolni Cerekev	CZ	Vysocina
+Kaple	Dolni Cerekev	CZ	Vysocina
 Svatý Florián	Jihlava	CZ	Vysocina
 sv. Barbora	Brtnice	CZ	Vysocina
 kostel svaté Kunhuty	Dolni Cerekev	CZ	Vysocina
-kaple	Dolni Cerekev	CZ	Vysocina
+Kaple	Dolni Cerekev	CZ	Vysocina
 svatý Jan Nepomucký	Dolni Cerekev	CZ	Vysocina
 sv. Petra a Pavla	Jihlava	CZ	Vysocina
 sv. Petr a Pavel	Jihlava	CZ	Vysocina
-kaple	Jihlava	CZ	Vysocina
+Kaple	Jihlava	CZ	Vysocina
 Nanebevstoupení Páně (kaple)	Jihlava	CZ	Vysocina
 Panna Maria Zellská	Jihlava	CZ	Vysocina
 Kaple Nanebevzetí Panny Marie	Jihlava	CZ	Vysocina
@@ -39186,8 +39186,8 @@ sv. Petra a Pavla (kaple)	Jihlava	CZ	Vysocina
 sv. Jan Nepomucký	Jihlava	CZ	Vysocina
 Kaple sv. Václava	Jihlava	CZ	Vysocina
 svatý Jan Křtitel	Jihlava	CZ	Vysocina
-kaple	Jihlava	CZ	Vysocina
-kaple	Jihlava	CZ	Vysocina
+Kaple	Jihlava	CZ	Vysocina
+Kaple	Jihlava	CZ	Vysocina
 sv. Florián	Jihlava	CZ	Vysocina
 Nanebevzetí P. Marie	Heralec	CZ	Vysocina
 Panny Marie (kaple)	Dobronin	CZ	Vysocina
@@ -39199,7 +39199,7 @@ Kostel sv. Kateřiny	Polna	CZ	Vysocina
 sv. Markéta	Polna	CZ	Vysocina
 sv. Jan Nepomucký	Bohdalov	CZ	Vysocina
 kostel Povýšení sv. Kříže	Stoky	CZ	Vysocina
-kaple	Stoky	CZ	Vysocina
+Kaple	Stoky	CZ	Vysocina
 Kaple sv. Václava	Lipa	CZ	Vysocina
 ‎Kaple sv. Maří Magdaleny	Stoky	CZ	Vysocina
 Nalezení svatého Kříže	Lipa	CZ	Vysocina
@@ -39300,7 +39300,7 @@ Narození Panny Marie	Adamov	CZ	South Moravian
 svatá Kateřina	Adamov	CZ	South Moravian
 Božského srdce Páně	Blansko	CZ	South Moravian
 Všech svatých	Lipuvka	CZ	South Moravian
-mariánská kaplička	Blansko	CZ	South Moravian
+Mariánská kaplička	Blansko	CZ	South Moravian
 svatý Jan Nepomucký	Rajecko	CZ	South Moravian
 svatá Anna	Rajecko	CZ	South Moravian
 Kaple sv. Barbory	Jedovnice	CZ	South Moravian
@@ -39319,7 +39319,7 @@ kaple Obrácení sv. Pavla	Nedvedice	CZ	South Moravian
 svaté Kunhuty	Nedvedice	CZ	South Moravian
 svatý Václav	Nedvedice	CZ	South Moravian
 Panna Marie	Lomnice	CZ	South Moravian
-zámecká kaple	Lomnice	CZ	South Moravian
+Zámecká kaple	Lomnice	CZ	South Moravian
 Navštívení Panny Marie	Lomnice	CZ	South Moravian
 svatý Antonín Paduánský	Lomnice	CZ	South Moravian
 Povýšení svatého Kříže	Nedvedice	CZ	South Moravian
@@ -39406,7 +39406,7 @@ Kaple Panny Marie Bolestné	Chotebor	CZ	Vysocina
 Panna Maria	Krizova	CZ	Vysocina
 sv. Anna	Krizova	CZ	Vysocina
 Navštívení Panny Marie	Chotebor	CZ	Vysocina
-výklenková kaple	Chotěboř	CZ	Vysocina
+Výklenková kaple	Chotěboř	CZ	Vysocina
 ‎Kostel sv. Jakuba Většího	Chotebor	CZ	Vysocina
 kostel sv. Jiljí	Chotebor	CZ	Vysocina
 sv. Michal	Krizova	CZ	Vysocina
@@ -39709,7 +39709,7 @@ Nanebevzetí Panny Marie	Mukarov	CZ	Central Bohemia
 svatý Jakub Větší	Vestec	CZ	Central Bohemia
 svatý František z Assisi	Pruhonice	CZ	Central Bohemia
 svatý František z Assisi	Branik	CZ	Praha
-hřbitovní kaple	Branik	CZ	Praha
+Hřbitovní kaple	Branik	CZ	Praha
 svatá Anežka	Praha 4	CZ	Praha
 Narození Panny Marie	Vysehrad	CZ	Praha
 svatý Jakub Větší	Pruhonice	CZ	Central Bohemia
@@ -39883,7 +39883,7 @@ svatý Jan Křtitel	Celakovice	CZ	Central Bohemia
 Svatý Václav	Prerov nad Labem	CZ	Central Bohemia
 Panna Maria	Lysa nad Labem	CZ	Central Bohemia
 svatá Maří Magdaléna	Prerov nad Labem	CZ	Central Bohemia
-kaple	Lysa nad Labem	CZ	Central Bohemia
+Kaple	Lysa nad Labem	CZ	Central Bohemia
 Panna Maria	Sadska	CZ	Central Bohemia
 kaple Šnepov	Milovice	CZ	Central Bohemia
 Bolestné Panny Marie	Sadska	CZ	Central Bohemia
@@ -39892,8 +39892,8 @@ Kostel Nanebevzetí Panny Marie	Poděbrady	CZ	Central Bohemia
 kaple v Doubravě	Sadska	CZ	Central Bohemia
 Kostel sv. Jiří	Nymburk	CZ	Central Bohemia
 svatý Jiljí	Nymburk	CZ	Central Bohemia
-kaple	Podebrady	CZ	Central Bohemia
-kaple	Podebrady	CZ	Central Bohemia
+Kaple	Podebrady	CZ	Central Bohemia
+Kaple	Podebrady	CZ	Central Bohemia
 kaplička ve Dvorcích	Lysa nad Labem	CZ	Central Bohemia
 Zámecká kaple sv. Tří králů	Lysa nad Labem	CZ	Central Bohemia
 svatý Jan Křtitel	Lysá nad Labem	CZ	Central Bohemia
@@ -39904,9 +39904,9 @@ sv. Simeon	Lysa nad Labem	CZ	Central Bohemia
 svatý Jakub Starší	Benatky nad Jizerou	CZ	Central Bohemia
 Svatý Václav	Lustenice	CZ	Central Bohemia
 kaple v Lánech	Milovice	CZ	Central Bohemia
-kaple	Milovice	CZ	Central Bohemia
-kaple	Nymburk	CZ	Central Bohemia
-kaple	Nymburk	CZ	Central Bohemia
+Kaple	Milovice	CZ	Central Bohemia
+Kaple	Nymburk	CZ	Central Bohemia
+Kaple	Nymburk	CZ	Central Bohemia
 svatý Vavřinec	Nymburk	CZ	Central Bohemia
 Nanebevzetí Panny Marie	Milovice	CZ	Central Bohemia
 svatý Jan Křtitel	Loucen	CZ	Central Bohemia
@@ -40013,7 +40013,7 @@ Rozeslání apoštolů	Ustek	CZ	Ustecky
 svatý Petr a Pavel	Ustek	CZ	Ustecky
 Kaple Nalezení sv. Kříže	Ustek	CZ	Ustecky
 Kaple Povýšení sv. Kříže	Ustek	CZ	Ustecky
-skalní kaplička	Ustek	CZ	Ustecky
+Skalní kaplička	Ustek	CZ	Ustecky
 Kostel Nanebevzetí Panny Marie	Ustek	CZ	Ustecky
 svatý Václav	Ustek	CZ	Ustecky
 svatý Petr a Pavel	Steti	CZ	Ustecky
@@ -40161,7 +40161,7 @@ svatá Anna	Mnichovo Hradiste	CZ	Central Bohemia
 Kaplička	Mnichovo Hradiste	CZ	Central Bohemia
 svatý Jan Nepomucký	Mnichovo Hradiste	CZ	Central Bohemia
 Kaplička	Knezmost	CZ	Central Bohemia
-kaplička	Knezmost	CZ	Central Bohemia
+Kaplička	Knezmost	CZ	Central Bohemia
 Kaplička	Zd'ar	CZ	Central Bohemia
 svatý Václav	Bela pod Bezdezem	CZ	Central Bohemia
 kaple sv. Jana Nepomuckého	Mnichovo Hradiste	CZ	Central Bohemia
@@ -40228,7 +40228,7 @@ sv. Jan Křtitel	Turnov	CZ	Liberecky
 Navštívení Panny Marie	Turnov	CZ	Liberecky
 svatý Jan Nepomucký	Turnov	CZ	Liberecky
 svatý Jan Křtitel	Turnov	CZ	Liberecky
-výklenková kaple	Turnov	CZ	Liberecky
+Výklenková kaple	Turnov	CZ	Liberecky
 svatý Jiří	Rovensko pod Troskami	CZ	Liberecky
 sv. Václav	Rovensko pod Troskami	CZ	Liberecky
 sv. Jan Nepomucký	Rovensko pod Troskami	CZ	Liberecky
@@ -40305,13 +40305,13 @@ Svatý Jiří	Prelouc	CZ	Pardubicky
 sv. Petr a Pavel	Lazne Bohdanec	CZ	Pardubicky
 Nanebevzetí Panny Marie	Lazne Bohdanec	CZ	Pardubicky
 Sv. Petr a Pavel	Opatovice nad Labem	CZ	Pardubicky
-kaple	Lazne Bohdanec	CZ	Pardubicky
+Kaple	Lazne Bohdanec	CZ	Pardubicky
 Nejsvětější Trojice	Stezery	CZ	Pardubicky
 svatý Vavřinec	Opatovice nad Labem	CZ	Pardubicky
 Svatý Filip a Jakub	Chlumec nad Cidlinou	CZ	Kralovehradecky
 Svatá Markéta	Novy Bydzov	CZ	Kralovehradecky
 Svatý Stanislav	Novy Bydzov	CZ	Kralovehradecky
-hřbitovní kaple	Novy Bydzov	CZ	Kralovehradecky
+Hřbitovní kaple	Novy Bydzov	CZ	Kralovehradecky
 kostel Sv. Petra a Pavla	Nechanice	CZ	Kralovehradecky
 Svatý Bartoloměj	Nechanice	CZ	Kralovehradecky
 kostel sv. Vavřince	Novy Bydzov	CZ	Kralovehradecky
@@ -40323,12 +40323,12 @@ Hřbitovní kaple	Stare Nechanice	CZ	Kralovehradecky
 Nanebevzetí Panny Marie	Nechanice	CZ	Kralovehradecky
 Kostel Nejsvětější Trojice	Stare Nechanice	CZ	Kralovehradecky
 Kostel Nanebevzetí Panny Marie	Stezery	CZ	Kralovehradecky
-kaplička pod zámkem	Nechanice	CZ	Kralovehradecky
-kaplička	Nechanice	CZ	Kralovehradecky
-kaple	Nechanice	CZ	Kralovehradecky
+Kaplička pod zámkem	Nechanice	CZ	Kralovehradecky
+Kaplička	Nechanice	CZ	Kralovehradecky
+Kaple	Nechanice	CZ	Kralovehradecky
 Kostel sv. Marka	Stezery	CZ	Kralovehradecky
 Božské srdce Páně	Hradec Králové	CZ	Kralovehradecky
-hřbitovní kaple	Nechanice	CZ	Kralovehradecky
+Hřbitovní kaple	Nechanice	CZ	Kralovehradecky
 Zámecká kaple	Stezery	CZ	Kralovehradecky
 Hřbitovní kaple	Vsestary	CZ	Kralovehradecky
 Kostel Všech svatých	Dolní Přím	CZ	Kralovehradecky
@@ -40440,8 +40440,8 @@ Navštívení Panny Marie	Kraliky	CZ	Pardubicky
 sv. Alois	Kraliky	CZ	Pardubicky
 Kościół fil. pw. Świętego Floriana	Miedzylesie	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Jana Chrzciciela	Miedzylesie	PL	Lower Silesian Voivodeship
-kaplica	Miedzylesie	PL	Lower Silesian Voivodeship
-kaplica	Miedzylesie	PL	Lower Silesian Voivodeship
+Kaplica	Miedzylesie	PL	Lower Silesian Voivodeship
+Kaplica	Miedzylesie	PL	Lower Silesian Voivodeship
 Kościół filialny pw. Świętych Piotra i Pawła	Goworów	PL	Lower Silesian Voivodeship
 Kościół fil. pw. Świętego Michała Archanioła	Miedzylesie	PL	Lower Silesian Voivodeship
 Kościół par. pw. św. Sebastiana	Poręba	PL	Lower Silesian Voivodeship
@@ -40644,7 +40644,7 @@ Kaplica Matki Bożej Królowej Pokoju	Szczytna	PL	Lower Silesian Voivodeship
 Kościół p.w Świętego Jana Chrzciciela	Szczytna	PL	Lower Silesian Voivodeship
 Kaplica Matki Bożej Bolesnej	Polanica-Zdroj	PL	Lower Silesian Voivodeship
 Kościół Wniebowzięcia NMP	Bystrzyca Klodzka	PL	Lower Silesian Voivodeship
-kaplica przedpogrzebowa	Bystrzyca Klodzka	PL	Lower Silesian Voivodeship
+Kaplica przedpogrzebowa	Bystrzyca Klodzka	PL	Lower Silesian Voivodeship
 Kościół św. Marii Magdaleny	Wójtowice	PL	Lower Silesian Voivodeship
 Kościół św. Anny	Zalesie	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Jana Nepomucena	Bystrzyca Klodzka	PL	Lower Silesian Voivodeship
@@ -40677,7 +40677,7 @@ Kaplica Świętej Anny	Polanica-Zdroj	PL	Lower Silesian Voivodeship
 Kaplica Świętej Marii Magdaleny	Polanica-Zdroj	PL	Lower Silesian Voivodeship
 Kościół pw. śś. Szymona i Tadeusza	Klodzko	PL	Lower Silesian Voivodeship
 Kościół pw. św. Jana Chrzciciela	Jaszkowa Dolna	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Jaszkowa Dolna	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Jaszkowa Dolna	PL	Lower Silesian Voivodeship
 Kościół pw. Podwyższenia Krzyża Świętego	Klodzko	PL	Lower Silesian Voivodeship
 Kościół św. Jerzego i św. Wojciecha	Kłodzko	PL	Lower Silesian Voivodeship
 Kaplica pw. Świętych Apostołów Piotra i Pawła	Kłodzko	PL	Lower Silesian Voivodeship
@@ -42810,7 +42810,7 @@ Fájdalmas Szent Szűz-templom	Mátraderecske	HU	Heves
 Szűz Mária neve-kápolna	Petervasara	HU	Heves
 Szent Kereszt felmagasztalása templom	Recsk	HU	Heves
 Szent Lőrinc vértanú-templom	Recsk	HU	Heves
-régi templom	Recsk	HU	Heves
+Régi templom	Recsk	HU	Heves
 Szentlélek-templom	Petervasara	HU	Heves
 Alexandriai Szent Katalin-templom	Sirok	HU	Heves
 Kisboldogasszony-kápolna	Eger	HU	Heves
@@ -42825,7 +42825,7 @@ Kálvária-kápolna	Matraverebely	HU	Nograd
 Szabadtéri misézőhely	Matraverebely	HU	Nograd
 Szent Szűz kápolna	Matraverebely	HU	Nograd
 Kápolna	Matraverebely	HU	Nograd
-kápolna	Matraverebely	HU	Nograd
+Kápolna	Matraverebely	HU	Nograd
 Szent István király templom	Batonyterenye	HU	Nograd
 Szent István vértanú-templom	Batonyterenye	HU	Nograd
 Munkás Szent József-kápolna	Matraverebely	HU	Nograd
@@ -45395,7 +45395,7 @@ Narodenia Panny Márie	Novoť	SK	Zilinsky
 Kaplica w Glince	Glinka	PL	Silesian Voivodeship
 1825	Ujsoly	PL	Silesian Voivodeship
 Kostol sv. Márie Magdalény	Mútne	SK	Zilinsky
-kaplica	Sol	PL	Silesian Voivodeship
+Kaplica	Sol	PL	Silesian Voivodeship
 Kaplica	Rycerka Dolna	PL	Silesian Voivodeship
 Kościół Matki Bożej Częstochowskiej	Sol	PL	Silesian Voivodeship
 Kaplica pw. Miłosierdzia Bożego w Nickulinie	Rajcza	PL	Silesian Voivodeship
@@ -45937,7 +45937,7 @@ Nejsvětější Trojice	Stare Mesto	CZ	Olomoucky
 Kostel svatého Isidora	Hanusovice	CZ	Olomoucky
 sv. Anny	Stare Mesto	CZ	Olomoucky
 Řeznická kaple	Stare Mesto	CZ	Olomoucky
-kaplička	Stare Mesto	CZ	Olomoucky
+Kaplička	Stare Mesto	CZ	Olomoucky
 Kostel Archanděla Michaela	Stare Mesto	CZ	Olomoucky
 Zjevení Páně	Stare Mesto	CZ	Olomoucky
 Kaple na Červenohorském sedle	Loucna nad Desnou	CZ	Olomoucky
@@ -46009,7 +46009,7 @@ Kostel svatého Petra a Pavla	Hněvošice	CZ
 Nanebevzetí Panny Marie	Koberice	CZ	
 sv. Hedvika	Darkovice	CZ	Moravskoslezsky
 Nanebevzetí Panny Marie	Silherovice	CZ	Moravskoslezsky
-kaplička	Hat'	CZ	
+Kaplička	Hat'	CZ	
 Kostel sv. Vavřince	Píšť	CZ	
 Kościół parafialny pw. św. Augustyna	Borucin	PL	Silesian Voivodeship
 Kaplica cmentarna	Borucin	PL	Silesian Voivodeship
@@ -46183,9 +46183,9 @@ sv. František z Assisi	Vidnava	CZ	Olomoucky
 Kościół parafialny pw. Narodzenia Najświętszej Maryi Panny	Kałków	PL	Opole Voivodeship
 Kościół parafialny pw. św. Marii Magdaleny	Dziewiętlice	CZ	Olomoucky
 Kościół parafialny pw. św. Marcina Biskupa	Otmuchow	PL	Opole Voivodeship
-kaplica cmentarna	Otmuchow	PL	Opole Voivodeship
+Kaplica cmentarna	Otmuchow	PL	Opole Voivodeship
 Kościół parafialny pw. św. Jadwigi	Otmuchow	PL	Opole Voivodeship
-kaplica cmentarna	Wilamowa	PL	Opole Voivodeship
+Kaplica cmentarna	Wilamowa	PL	Opole Voivodeship
 Kościół pw. Matki Bożej Szkaplerznej	Paczkow	PL	Opole Voivodeship
 Kościół Podwyższenia Krzyża Świętego	Vidnava	PL	Opole Voivodeship
 Panna Maria Růžencová	Mikulovice	CZ	Olomoucky
@@ -46202,7 +46202,7 @@ Svatý Roch	Mikulovice	CZ	Olomoucky
 Kościół parafialny pw. św. Michała Archanioła	Gierałcice	CZ	Olomoucky
 Kościół pw. św. Józefa Robotnika	Bodzanów	PL	Opole Voivodeship
 Kościół parafialny pw. św. Bartłomieja Apostoła	Jarnołtówek	CZ	Olomoucky
-kaplica polowa	Moszczanka	PL	Opole Voivodeship
+Kaplica polowa	Moszczanka	PL	Opole Voivodeship
 Kaplica polowa	Pokrzywna	PL	Opole Voivodeship
 Kościół parafialny pw. Podwyższenia Świętego Krzyża	Moszczanka	PL	Opole Voivodeship
 Kaplica przydrożna	Moszczanka	PL	Opole Voivodeship
@@ -46391,7 +46391,7 @@ Kaplica cmentarna	Wiekszyce	PL	Opole Voivodeship
 Kościół parafialny pw. św. Marii Magdaleny	Długomiłowice	PL	Opole Voivodeship
 Kościół filialny pw. Św. Marii Magdaleny	Kozle	PL	Opole Voivodeship
 Kościół Najświętszego Serca Pana Jezusa	Cisek	PL	Opole Voivodeship
-kaplica cmentarna	Cisek	PL	Opole Voivodeship
+Kaplica cmentarna	Cisek	PL	Opole Voivodeship
 Kościół pw. Nawiedzenia Najświętszej Maryi Panny	Cisek	PL	Opole Voivodeship
 Kościół parafialny pw. Trójcy Świętej	Bierawa	PL	Opole Voivodeship
 Kościół parafialny pw. św. Jana Nepomucena	Stare Koźle	PL	Opole Voivodeship
@@ -46626,7 +46626,7 @@ Kościół pw. św. Jana Chrzciciela w Pawłowicach	Pawłowice	PL	Silesian Voivo
 Kaplica	Pawłowice	PL	Silesian Voivodeship
 Kościół pw. Podwyższenia Krzyża ŚwiętegoParafia Podwyższenia Krzyża Świętego w Pawłowicach Śląskich	Pawlowice	PL	Silesian Voivodeship
 Kaplica cmentarna	Pawlowice	PL	Silesian Voivodeship
-Kaplica Kaplica Matki Bożej Częstochowskiej 1867	Strumien	PL	Silesian Voivodeship
+Kaplica Matki Bożej Częstochowskiej 1867	Strumien	PL	Silesian Voivodeship
 Kościół pw. Świętego Jakuba Starszego Apostoła w Wiśle Małej	Wisła Mała	PL	Silesian Voivodeship
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny w Studzionce	Studzionka	PL	Silesian Voivodeship
 Kaplica cmentarna	Studzionka	PL	Silesian Voivodeship
@@ -46688,7 +46688,7 @@ Kościół św. Marii Magdaleny	Rudy	PL	Silesian Voivodeship
 Kaplica cmentarna	Dziergowice	PL	Opole Voivodeship
 Kościół pw. Świętej Anny	Dziergowice	PL	Opole Voivodeship
 Kościół pw. Najświętszego Serca Pana Jezusa	Sosnicowice	PL	Silesian Voivodeship
-kaplica przydrożna	Pilchowice	PL	Silesian Voivodeship
+Kaplica przydrożna	Pilchowice	PL	Silesian Voivodeship
 Kościół par. pw. św. Marcina	Pilchowice	PL	Silesian Voivodeship
 Kościół pw Trójcy Świętej	Rudy	PL	Silesian Voivodeship
 Kościół pw. Świętego Mikołaja w Wilczy	Wilcza	PL	Silesian Voivodeship
@@ -46815,7 +46815,7 @@ Kaplica Hallerów	Zaborze	PL	Lesser Poland Voivodeship
 Kościół pw. Świętej Jadwigi Królowej w Gorzowie	Gorzów	PL	Lesser Poland Voivodeship
 Kaplica szpitalna	Chelmek	PL	Lesser Poland Voivodeship
 Kościół pw. Przenajświętszej Trójcy w Bobrku	Bobrek	PL	Lesser Poland Voivodeship
-kaplica cmentarna	Chelmek	PL	Lesser Poland Voivodeship
+Kaplica cmentarna	Chelmek	PL	Lesser Poland Voivodeship
 Kaplica cmentarna	Gieraltowice	PL	Lesser Poland Voivodeship
 Kaplica pw. Świętej Katarzyny Sieneńskiej	Przybradz	PL	Lesser Poland Voivodeship
 Kościół pw. Świętego Marcina w Gierałtowicach	Gierałtowice	PL	Lesser Poland Voivodeship
@@ -46913,7 +46913,7 @@ Kościół Wniebowzięcia Najświętszej Maryi Panny	Katowice	PL	Silesian Voivod
 Kościół Opatrzności Bożej	Katowice	PL	Silesian Voivodeship
 Kaplica pw. Aniołów Stróżów	Katowice	PL	Silesian Voivodeship
 kaplica Najświętszego Serca Pana Jezusa	Katowice	PL	Silesian Voivodeship
-kaplica ogrójca	Katowice	PL	Silesian Voivodeship
+Kaplica ogrójca	Katowice	PL	Silesian Voivodeship
 Kaplica	Sosnowiec	PL	Silesian Voivodeship
 Kapliczka Jarlików (św. Jana Chrzciciela)	Myslowice	PL	Silesian Voivodeship
 Kościół pw. Świętego Krzyża w Mysłowicach	Mysłowice	PL	Silesian Voivodeship
@@ -46926,7 +46926,7 @@ Kościół pw. Miłosierdzia Bożego	Sosnowiec	PL	Silesian Voivodeship
 Kaplica szpitalna	Sosnowiec	PL	Silesian Voivodeship
 Kaplica pw. Świętego Łukasza Ewangelisty	Sosnowiec	PL	Silesian Voivodeship
 Kaplica pw. św. Brata Alberta i św. Rafała Kalinowskiego	Sosnowiec	PL	Silesian Voivodeship
-kaplica parafialna	Jaworzno	PL	Silesian Voivodeship
+Kaplica parafialna	Jaworzno	PL	Silesian Voivodeship
 Dom zakonny Sióstr Służebniczek Starowiejskich	Jaworzno	PL	Silesian Voivodeship
 Kościół pw. Najświętszej Maryi Panny Anielskiej	Jaworzno	PL	Silesian Voivodeship
 Kaplica pw. Narodzenia Pańskiego	Myslowice	PL	Silesian Voivodeship
@@ -47008,7 +47008,7 @@ Kościół pw św. Gerarda	Gliwice	PL	Silesian Voivodeship
 Kościół Wszystkich Świętych	Bojszów	PL	Silesian Voivodeship
 Nawiedzenia NMP	Bojszów	PL	Silesian Voivodeship
 Kościół pw. Św. Jadwigi	Sosnicowice	PL	Silesian Voivodeship
-kaplica cmentarna	Gliwice	PL	Silesian Voivodeship
+Kaplica cmentarna	Gliwice	PL	Silesian Voivodeship
 Kaplica cmentarna	Pyskowice	PL	Silesian Voivodeship
 Kościół filialny pw. św. Jadwigi	Niezdrowice	PL	Opole Voivodeship
 Kościół Nawiedzienia NMP	Ujazd	PL	Opole Voivodeship
@@ -48576,7 +48576,7 @@ Kościół pw. Najświętszej Maryi Panny Częstochowskiej w Kamienicy Górnej	K
 Kościół pw. Św. Jana Chrzciciela	Pstrągówka	PL	Subcarpathian Voivodeship
 Kościół pw. Dobrego Pasterza	Jaszczurowa	PL	Subcarpathian Voivodeship
 Kościół pw. św. Jadwigi Królowej	Wielopole Skrzynskie	PL	Subcarpathian Voivodeship
-kaplica cmentarna	Wielopole Skrzynskie	PL	Subcarpathian Voivodeship
+Kaplica cmentarna	Wielopole Skrzynskie	PL	Subcarpathian Voivodeship
 Kaplica pw. św. Doroty	Kozłówek	PL	Subcarpathian Voivodeship
 Kościół pw. NMP Królowej Świata	Wiśniowa	PL	Subcarpathian Voivodeship
 Kaplica grobowa Mycielskich w Wiśniowej	Wisniowa	PL	Subcarpathian Voivodeship
@@ -48731,7 +48731,7 @@ Kościół pw. Matki Bożej Szkaplerznej	Kąkolówka	PL	Subcarpathian Voivodeshi
 Kaplica cmentarna	Futoma	PL	Subcarpathian Voivodeship
 Kościół pw. Matki Bożej Królowej Polski	Piątkowa	PL	Subcarpathian Voivodeship
 Kaplica cmentarna	Blazowa	PL	Subcarpathian Voivodeship
-kaplica cmentarna	Blazowa	PL	Subcarpathian Voivodeship
+Kaplica cmentarna	Blazowa	PL	Subcarpathian Voivodeship
 Kościół pw. Matki Bożej Nieustającej Pomocy	Nowy Borek	PL	Subcarpathian Voivodeship
 Kościół pw. Świętego Franciszka z Asyżu	Błażowa Dolna	PL	Subcarpathian Voivodeship
 Kościół pw. Najświętszej Maryi Panny Wspomożycielki Wiernych	Hyżne	PL	Subcarpathian Voivodeship
@@ -49046,7 +49046,7 @@ Kościół pw. Niepokalanego Serca Najświętszej Maryi Panny	Gorzków	PL	Lesser
 Parafia Rzymskokatolicka pw. Matki Bożej Pięknej Miłości	Proszówki	PL	Lesser Poland Voivodeship
 Kościół pw. Świętego Joachima w Krzyżanowicach	Krzyżanowice	PL	Lesser Poland Voivodeship
 Kaplica cmentarna	Krzeczow	PL	Lesser Poland Voivodeship
-kaplica cmentarna	Krzeczow	PL	Lesser Poland Voivodeship
+Kaplica cmentarna	Krzeczow	PL	Lesser Poland Voivodeship
 Kościół Matki Bożej Nieustającej Pomocy w Krzeczowie	Krzeczów	PL	Lesser Poland Voivodeship
 Kościół pw. Świętej Anny na Bocheńcu	Jadowniki	PL	Lesser Poland Voivodeship
 Kościół Najświętszej Maryi Panny Wniebowziętej w Jasieniu	Jasien	PL	Lesser Poland Voivodeship
@@ -49095,7 +49095,7 @@ Kaplica	Wierzchoslawice	PL	Lesser Poland Voivodeship
 Kościół pw. Najświętszej Maryi Panny Częstochowskiej w Bogumiłowicach	Bogumiłowice	PL	Lesser Poland Voivodeship
 Kościół Podwyższenia Krzyża Świętego w Zbylitowskiej Górze	Zbylitowska Góra	PL	Lesser Poland Voivodeship
 Kaplica cmentarna	Koszyce Wielkie	PL	Lesser Poland Voivodeship
-kaplica cmentarna	Plesna	PL	Lesser Poland Voivodeship
+Kaplica cmentarna	Plesna	PL	Lesser Poland Voivodeship
 Kościół pw. Ducha Świętego w Rzuchowej	Koszyce	PL	Lesser Poland Voivodeship
 Kościół św. Maksymiliana Marii Kolbego w Świebodzinie	Świebodzin	PL	Lesser Poland Voivodeship
 Kaplica cmentarna	Tuchow	PL	Lesser Poland Voivodeship
@@ -49185,7 +49185,7 @@ Kościół pw. Świętego Wojciecha w Bolesławiu	Bolesław	PL	Lesser Poland Voi
 Kościół św. Katarzyny w Oleśnie	Olesno	PL	Lesser Poland Voivodeship
 Kościół św. Stanisława Biskupa i Męczennika w Smęgorzowie	Smęgorzów	PL	Lesser Poland Voivodeship
 Kościół św. Maksymiliana Kolbe w Gruszowie Wielkim	Gruszów Wielki	PL	Lesser Poland Voivodeship
-kaplica dojazdowa	Radgoszcz	PL	Lesser Poland Voivodeship
+Kaplica dojazdowa	Radgoszcz	PL	Lesser Poland Voivodeship
 Kościół Przemienienia Pańskiego w Dąbrówkach Breńskich	Dąbrówki Breńskie	PL	Lesser Poland Voivodeship
 Kościół pw. Najświętszej Maryi Panny Wniebowziętej w Woli Mędrzechowskiej	Wola Mędrzechowska	PL	Lesser Poland Voivodeship
 Kaplica pw. Świętego Jana Nepomucena	Michałówka	PL	Lesser Poland Voivodeship
@@ -52250,7 +52250,7 @@ Heilig Huisje	Crisnee	BE	Wallonia
 Chapelle Saint-Eloi	Oreye	BE	Wallonia
 Sint-Pieterskerk	Crisnee	BE	Wallonia
 Sint-Evermaruskapel	Tongeren	BE	Flanders
-kapel	Heers	BE	Flanders
+Kapel	Heers	BE	Flanders
 Drie-Morenkerk	Heers	BE	Flanders
 Sint-Pieterskapel	Heers	BE	Flanders
 Onze-Lieve-Vrouw Hemelvaartkerk	Borgloon	BE	Flanders
@@ -53530,7 +53530,7 @@ Mother of Good Counsel Catholic Church	Clare	GB	England
 Our Lady & St Philip RC Church	Newmarket	GB	England
 St John the Evangelist	Bury St Edmunds	GB	England
 St. Joseph's	Ipswich	GB	England
-chapel	Ipswich	GB	England
+Chapel	Ipswich	GB	England
 Catholic Church of St Thomas of Canterbury	Woodbridge	GB	England
 St Clare's Catholic Church	Framlingham	GB	England
 Church of Our Lady of Consolation and Saint Stephen	Mundford	GB	England
@@ -54788,7 +54788,7 @@ Munsterkerk	Roermond	NL	Limburg
 Onze-Lieve-Vrouw van Goede Raad en Heilige Jozefkerk	Leeuwen	NL	Limburg
 Kerkhofkapel Sint Ludwig	Vlodrop	NL	Limburg
 Sint-Laurentiuskerk	Leeuwen	NL	Limburg
-kapel	Leeuwen	NL	Limburg
+Kapel	Leeuwen	NL	Limburg
 Theresia van het Kindje Jezuskerk	Leeuwen	NL	Limburg
 Sint-Aldegundiskapel	Haelen	NL	Limburg
 Sint-Dionysiuskerk	Leeuwen	NL	Limburg
@@ -55800,7 +55800,7 @@ Kapel van Onze Lieve Vrouw in 't Rooth	Maasbree	NL	Limburg
 Sint-Jozefkerk	Tegelen	NL	Limburg
 Onze Lieve Vrouw van Zeven Smartenkapel	Tegelen	NL	Limburg
 Johannes de Doperkerk	Venlo	NL	Limburg
-kapel	Maasbree	NL	Limburg
+Kapel	Maasbree	NL	Limburg
 Kapel	Maasbree	NL	Limburg
 Heilige Theresia van het Kind Jezus	Maasbree	NL	Limburg
 Onze-Lieve-Vrouw-van-Zeven-Smartenkapel	Maasbree	NL	Limburg
@@ -55847,14 +55847,14 @@ Kapel	Venray	NL	Limburg
 Heilige Matthiaskerk	Venray	NL	Limburg
 Vredeskapel	Arcen	NL	Limburg
 Mariakapel	Wellerlooi	NL	Limburg
-kapel	Arcen	NL	Limburg
+Kapel	Arcen	NL	Limburg
 Onze Lieve Vrouw van Altijddurende Bijstand	Arcen	NL	Limburg
 Barbarakapel	Arcen	NL	Limburg
 Annakapel	Arcen	NL	Limburg
 Kapelle mit dem Schönstätter Marienbild	Straelen	DE	North Rhine-Westphalia
 Petrus- en Pauluskerk	Arcen	NL	Limburg
 Mariakapel	Arcen	NL	Limburg
-kapel	Arcen	NL	Limburg
+Kapel	Arcen	NL	Limburg
 Heilige Naam Jezuskerk	Broekhuizenvorst	NL	Limburg
 Sint-Paul	Arcen	NL	Limburg
 Antonius-Kapellchen	Arcen	DE	North Rhine-Westphalia
@@ -58887,7 +58887,7 @@ Kaple Narození Panny Marie	Ceska Kamenice	CZ	Ustecky
 Evangelický kostel	Ceska Kamenice	CZ	Ustecky
 svatý Justin	Ustek	CZ	Ustecky
 Všech svatých	Ustek	CZ	Ustecky
-skalní kaple	Ceska Lipa	CZ	Liberecky
+Skalní kaple	Ceska Lipa	CZ	Liberecky
 Bílá kaple	Ceska Lipa	CZ	Liberecky
 svatá Máří Magdalena	Ceska Lipa	CZ	Liberecky
 Nejsvětější trojice	Ceska Lipa	CZ	Liberecky
@@ -58915,8 +58915,8 @@ Knäspelova kaple	Kamenicky Senov	CZ	Ustecky
 Nejsvětější Trojice	Novy Bor	CZ	Ustecky
 Záhořínská kaple	Novy Bor	CZ	Liberecky
 Nanebevzetí Panny Marie	Brniste	CZ	Liberecky
-skalní kaple	Brniste	CZ	Liberecky
-hřbitovní kaple	Brniste	CZ	Liberecky
+Skalní kaple	Brniste	CZ	Liberecky
+Hřbitovní kaple	Brniste	CZ	Liberecky
 sv. Mikuláš	Brniste	CZ	Liberecky
 Skalní kaple	Cvikov	CZ	Liberecky
 svatý Antonín	Jablonne v Podjestedi	CZ	
@@ -58951,7 +58951,7 @@ Nejsvětější Trojice	Krasna Lipa	CZ	Ustecky
 kaple Panny Marie Karmelské	Stare Krecany	CZ	Ustecky
 svatý František z Assisi	Varnsdorf	CZ	Ustecky
 Kostel svaté Máří Magdaleny	Děčínský vikariát	CZ	Ustecky
-bývalý kostel	Stare Krecany	CZ	Ustecky
+Bývalý kostel	Stare Krecany	CZ	Ustecky
 kaple Nejsvětější Trojice	Stare Krecany	CZ	Ustecky
 svatý Jan Nepomucký	Stare Krecany	CZ	Ustecky
 svatý Bartoloměj	Rumburk	CZ	Ustecky
@@ -59313,7 +59313,7 @@ Kościół pw. Świętego Michała Archanioła	Pasiecznik	PL	Lower Silesian Voiv
 Kaplica pw. Wniebowzięcia Najświętszej Maryi Panny	Maciejowiec	PL	Lower Silesian Voivodeship
 Kaplica pw. Świętego Józefa Kalasancjusza	Jelenia Góra	PL	Lower Silesian Voivodeship
 Tymczasowa kaplica parafialna	Jelenia Góra	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Jelenia Gora	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Jelenia Gora	PL	Lower Silesian Voivodeship
 Kaplica domowa	Jelenia Gora	PL	Lower Silesian Voivodeship
 Kościół pw. Matki Bożej Jasnogórskiej	Dąbrowica	PL	Lower Silesian Voivodeship
 Kaplica przedpogrzebowa	Dąbrowica	PL	Lower Silesian Voivodeship
@@ -59359,7 +59359,7 @@ Kościół pw. Błogosławionego Piotra Jerzego Frassati	Wojcieszów	PL	Lower Si
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny	Wojcieszów	PL	Lower Silesian Voivodeship
 Kościół pw. Św. Józefa Oblubieńca NMP	Wierzchosławice	PL	Lower Silesian Voivodeship
 Kościół pw. Narodzenia NMP	Stare Bogaczowice	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Bolków	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Bolków	PL	Lower Silesian Voivodeship
 Kościół pw. Świętej Jadwigi	Bolkow	PL	Lower Silesian Voivodeship
 Kaplica cmentarna	Lipa	PL	Lower Silesian Voivodeship
 Kościół Rzymskokatolicki pw. Podwyższenia Krzyża Świętego	Bolkow	PL	Lower Silesian Voivodeship
@@ -59454,7 +59454,7 @@ Kościół pw. Świętej Jadwigi	Mokrzeszów	PL	Lower Silesian Voivodeship
 Kościół pw. Matki Bożej Fatimskiej	Witków	PL	Lower Silesian Voivodeship
 Kościół pw. Niepokalanego Poczęcia	Stary Jaworów	PL	Lower Silesian Voivodeship
 Kościół parafialny pw. Ducha Świętego	Swidnica	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Stare Bogaczowice	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Stare Bogaczowice	PL	Lower Silesian Voivodeship
 Kościół filialny św. Jadwigi w Szymanowie	Szymanów	PL	Lower Silesian Voivodeship
 Kościół pw. Trójcy Świętej	Olszany	PL	Lower Silesian Voivodeship
 Kościół filialny pw. Świętego Jakuba i Świętej Anny	Kłaczyna	PL	Lower Silesian Voivodeship
@@ -59709,7 +59709,7 @@ Kościół pw. Świętych Piotra i Pawła	Kosiska	PL	Lower Silesian Voivodeship
 Kościół pw. Matki Bożej Ostrobramskiej	Biernatki	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Wawrzyńca	Wrocisławice	PL	Lower Silesian Voivodeship
 Kaplica	Wrocisławice	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Ciechow	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Ciechow	PL	Lower Silesian Voivodeship
 Kościół pw. św. Jadwigi	Ciechow	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Antoniego	Zarow	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Stanisława Biskupa i Męczennika	Buków	PL	Lower Silesian Voivodeship
@@ -59728,7 +59728,7 @@ Kapliczka	Katy Wroclawskie	PL	Lower Silesian Voivodeship
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny	Zachowice	PL	Lower Silesian Voivodeship
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny	Katy Wroclawskie	PL	Lower Silesian Voivodeship
 Kościół parafialny pw. Świętej Filomeny	Gniechowice	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Gniechowice	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Gniechowice	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Jana Nepomucena	Wojtkowice	PL	Lower Silesian Voivodeship
 Kościół Świętych Szymona i Judy Tadeusza	Nowa Wieś Kącka	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Mikołaja	Katy Wroclawskie	PL	Lower Silesian Voivodeship
@@ -60081,11 +60081,11 @@ Kościół filialny pw. Wniebowzięcia Najświętszej Marii Panny	Zaborów	PL	Lo
 Kościół pw. Chrystusa Króla	Dłużyce	PL	Lower Silesian Voivodeship
 Kościół pw. św. Piotra i Pawła	Scinawa	PL	Lower Silesian Voivodeship
 Kościół pw. Narodzenia Najświętszej Marii Panny	Ręszów	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Scinawa	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Scinawa	PL	Lower Silesian Voivodeship
 Kaplica domowa	Scinawa	PL	Lower Silesian Voivodeship
 Kościół pw. Podwyższenia Krzyża Świętego	Ścinawa	PL	Lower Silesian Voivodeship
 Kościół Niepokalanego Poczęcia Najświętszej Maryi Panny	Małowice	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Scinawa	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Scinawa	PL	Lower Silesian Voivodeship
 Kościół pw. Świętych Piotra i Pawła	Orzeszków	PL	Lower Silesian Voivodeship
 Kaplica pw. Narodzenia Najświętszej Marii Panny	Składowice	PL	Lower Silesian Voivodeship
 Kaplica cmentarna	Składowice	PL	Lower Silesian Voivodeship
@@ -60118,7 +60118,7 @@ Kościół św. Andrzeja Boboli	Baszyn	PL	Lower Silesian Voivodeship
 Kościół św. Michała Archanioła	Smogorzów Wielki	PL	Lower Silesian Voivodeship
 Kościół pw. Świętej Trójcy	Wińsko	PL	Lower Silesian Voivodeship
 Kościół pw. Niepokalanego Serca Najświętszej Maryi Panny	Piskorzyna	PL	Lower Silesian Voivodeship
-kaplica mszalna	Winsko	PL	Lower Silesian Voivodeship
+Kaplica mszalna	Winsko	PL	Lower Silesian Voivodeship
 Kaplica Matki Boskiej Bolesnej w Trzcinicy Wołowskiej	Winsko	PL	Lower Silesian Voivodeship
 Kościół Rzymskokatolicki p.w. Narodzenia NMP	Białawy Małe	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Marcina	Barkowo	PL	Lower Silesian Voivodeship
@@ -60195,7 +60195,7 @@ Kościół pw. Św. Mikołaja	Zielona Góra	PL	Lubusz
 Kościół pw. Matki Bożej Wspomożenia Wiernych	Zielona Góra	PL	Lubusz
 Kościół Filialny pw. Niepokalanego Serca NMP w Nowym Kisielinie	Zielona Góra	PL	Lubusz
 Kaplica Wniebowzięcia Najświętszej Maryi Panny	Bobrowniki	PL	Lubusz
-Kościół pw. NMP Królowej Polski,	Droszków	PL	Lubusz
+Kościół pw. NMP Królowej Polski	Droszków	PL	Lubusz
 Kościół pw. św. Jadwigi	Bojadla	PL	Lubusz
 Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny	Zielona Gora	PL	Lubusz
 Kościół pw. Wniebowzięcia NMP	Przytok	PL	Lubusz
@@ -60682,7 +60682,7 @@ pw. św. Jana Chrzciciela	Szczaniec	PL	Lubusz
 pw. św. Świętego Krzyża	Szczaniec	PL	Lubusz
 Kościół pw. Matki Bożej Królowej Polski	Myszęcin	PL	Lubusz
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny	Szczaniec	PL	Lubusz
-Kościół filialny pw. Chrystusa Króla,	Szczaniec	PL	Lubusz
+Kościół filialny pw. Chrystusa Króla	Szczaniec	PL	Lubusz
 Kościół pw. Świętego Stanisława	Zbaszynek	PL	Lubusz
 Kościół pw. Przemienienia Pańskiego	Kręcko	PL	Lubusz
 Kościół pw. Świętych Apostołów Piotra i Pawła	Zbąszynek	PL	Lubusz
@@ -61102,7 +61102,7 @@ Kaplica przedpogrzebowa	Myśliborzyce	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Józefa	Trzcinna	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Józefa	Ławy	PL	West Pomeranian Voivodeship
 Kościół pw. Matki Bożej Królowej Polski	Nowogródek Pomorski	PL	West Pomeranian Voivodeship
-kaplica cmentarna	Nowogrodek Pomorski	PL	West Pomeranian Voivodeship
+Kaplica cmentarna	Nowogrodek Pomorski	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Antoniego	Karsko	PL	West Pomeranian Voivodeship
 Kościół pw. Najświętszego Zbawiciela	Gorzów Wielkopolski	PL	Lubusz
 Kościół (w budowie)	Gorzow Wielkopolski	PL	Lubusz
@@ -61222,7 +61222,7 @@ Kościół pw. Matki Bożej Fatimskiej	Czepino	PL	West Pomeranian Voivodeship
 Kaplica szpitalna	Kolbaskowo	PL	West Pomeranian Voivodeship
 Kościół pw. Bożego Ciała	Kamieniec	PL	West Pomeranian Voivodeship
 Kościół Świętej Trójcy w Kołbaskowie	Kolbaskowo	PL	West Pomeranian Voivodeship
-kaplica z 1892 roku	Przeclaw	PL	West Pomeranian Voivodeship
+Kaplica z 1892 roku	Przeclaw	PL	West Pomeranian Voivodeship
 Kościół Rzymskokatolicki pw. Niepokalanego Poczęcia NMP	Przeclaw	PL	West Pomeranian Voivodeship
 Kościół pw. Najświętszej Maryi Panny Matki Kościoła	Żelisławiec	PL	West Pomeranian Voivodeship
 Kaplica pw. Miłosierdzia Bożego	Wysoka Gryfińska	PL	West Pomeranian Voivodeship
@@ -61397,7 +61397,7 @@ Kościół pw. Matki Bożej Bolesnej	Biała	PL	West Pomeranian Voivodeship
 Kościół pw. Świętej Anny	Długie	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Stanisława	Górecko	PL	Lubusz
 Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny	Zwierzyn	PL	Lubusz
-kaplica cmentarna	Zwierzyn	PL	Lubusz
+Kaplica cmentarna	Zwierzyn	PL	Lubusz
 Kościół rzymskokatolicki filialny pod wezwaniem świętego Andrzeja Boboli	Żółwin	PL	Lubusz
 Kościół pw. Niepokalanego Poczęcia NMP	Stare Kurowo	PL	Lubusz
 Kościół Rzymskokatolicki pw. Jezusa Miłosiernego	Brzoza	PL	Lubusz
@@ -61406,7 +61406,7 @@ Kościół kolegiacki pw. Matki Bożej Różańcowej	Strzelce Krajeńskie	PL	Lub
 Kościół fil. pw. Chrystusa Króla	Bronowice	PL	Lubusz
 Kościół pw. Narodzenia Najświętszej Maryi Panny	Łącznica	PL	Lubusz
 Kościół pw. śś. Piotra i Pawła	Stare Kurowo	PL	Lubusz
-tymczasowa kaplica	Stare Kurowo	PL	Lubusz
+Tymczasowa kaplica	Stare Kurowo	PL	Lubusz
 Kościół pw. Matki Bożej Królowej Polski	Drezdenko	PL	Lubusz
 Kościół pw. św. Jana Kantego w Niegosławiu	Niegosław	PL	Lubusz
 Kościół pw. Matki Boskiej Królowej Polski	Drawsko	PL	Greater Poland Voivodeship
@@ -61435,7 +61435,7 @@ Kościół pw. Świętego Józefa Robotnika	Mielęcin	PL	West Pomeranian Voivode
 Kościół pw. Świętego Jana Chrzciciela	Krzęcin	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Józefa Oblubieńca Najświętszej Maryi Panny	Objezierze	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Izydora	Pławno	PL	West Pomeranian Voivodeship
-kaplica cmentarna	Bierzwnik	PL	West Pomeranian Voivodeship
+Kaplica cmentarna	Bierzwnik	PL	West Pomeranian Voivodeship
 Kościół pw. Matki Bożej Szkaplerznej	Bierzwnik	PL	West Pomeranian Voivodeship
 Kościół pw. Matki Bożej Królowej Korony Polskiej	Klasztorne	PL	Lubusz
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny	Słowin	PL	Lubusz
@@ -61635,7 +61635,7 @@ Kościół pw. Matki Bożej Bolesnej	Cieplowody	PL	Lower Silesian Voivodeship
 Kaplica mszalna pw. Św. Anny	Henrykow	PL	Lower Silesian Voivodeship
 Kościół pw. św. Jadwigi	Krzelków	PL	Lower Silesian Voivodeship
 Kościół pw. św. Marcina	Henrykow	PL	Lower Silesian Voivodeship
-kaplica	Henrykow	PL	Lower Silesian Voivodeship
+Kaplica	Henrykow	PL	Lower Silesian Voivodeship
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny i św. Jana Chrzciciela	Henrykow	PL	Lower Silesian Voivodeship
 Kościół pw. św. Andrzeja	Henryków	PL	Lower Silesian Voivodeship
 Kościół pw. Niepokalanego Poczęcia Najświętszej Maryi Panny	Cieplowody	PL	Lower Silesian Voivodeship
@@ -61726,7 +61726,7 @@ Kościół pw. Najświętszej Maryi Panny	Zorawina	PL	Lower Silesian Voivodeship
 Kościół filialny pw. Świętego Michała Archanioła	Wierzbno	PL	Lower Silesian Voivodeship
 Kościół pw. Wniebowzięcia Matki Boskiej	Wierzbno	PL	Lower Silesian Voivodeship
 Kościół pw. świętej Barbary	Częstocice	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Wiazow	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Wiazow	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Wawrzyńca	Wiazow	PL	Lower Silesian Voivodeship
 Kaplica św. Maksymiliana Marii Kolbego - Mauzoelum rodziny Yorck von Wartenburg	Wiazow	PL	Lower Silesian Voivodeship
 Kościół filialny pw. Świętej Jadwigi	Kłosów	PL	Opole Voivodeship
@@ -61882,7 +61882,7 @@ Kościół parafialny pw. Najświętszego Serca Pana Jezusa	Żerniki Wrocławski
 Kościół pw. Świętej Katarzyny Aleksandryjskiej	Swieta Katarzyna	PL	Lower Silesian Voivodeship
 Kościół pw. Miłosierdzia Bożego	Wrocław	PL	Lower Silesian Voivodeship
 Kościół Świętego Jerzego	Radwanice	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Radwanice	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Radwanice	PL	Lower Silesian Voivodeship
 Kościół pw. Matki Boskiej Różańcowej	Radwanice	PL	Lower Silesian Voivodeship
 Kościół pw. Świętej Małgorzaty	Gajków	PL	Lower Silesian Voivodeship
 Kościół pw. Narodzenia Najświętszej Maryi Panny	Smolec	PL	Lower Silesian Voivodeship
@@ -61910,7 +61910,7 @@ Kościół Świętych Piotra i Pawła	Wroclaw	PL	Lower Silesian Voivodeship
 Kolegiata Świętego Krzyża i Świętego Bartłomieja	Wroclaw	PL	Lower Silesian Voivodeship
 Kościół Świętego Idziego	Wroclaw	PL	Lower Silesian Voivodeship
 Kościół Świętego Marcina	Wrocław	PL	Lower Silesian Voivodeship
-kaplica zakonna	Wroclaw	PL	Lower Silesian Voivodeship
+Kaplica zakonna	Wroclaw	PL	Lower Silesian Voivodeship
 Kaplica pw. Jezusa Ukrzyżowanego	Wroclaw	PL	Lower Silesian Voivodeship
 Kościół Świętego Bonifacego	Wroclaw	PL	Lower Silesian Voivodeship
 Kościół pw. Świętej Teresy od Dzieciątka Jezus	Wrocław	PL	Lower Silesian Voivodeship
@@ -61942,7 +61942,7 @@ Kościół pw. Narodzenia Najświętszej Maryi Panny	Wójcice	PL	Lower Silesian 
 Kościół pw. Świętych Apostołów Piotra i Pawła	Bystrzyca	PL	Lower Silesian Voivodeship
 Kościół pw. Najświętszej Maryi Panny Królowej Aniołów	Bystrzyca	PL	Lower Silesian Voivodeship
 Kościół par. pw. Wniebowzięcia Najświętszej Panny Marii	Wilkow	PL	Opole Voivodeship
-kaplica cmentarna	Wilkow	PL	Opole Voivodeship
+Kaplica cmentarna	Wilkow	PL	Opole Voivodeship
 Kaplica dojazdowa	Kopalina	PL	Lower Silesian Voivodeship
 Kościół Trójcy Świętej	Miłocice	PL	Lower Silesian Voivodeship
 Kościół pw. Najświętszego Serca Pana Jezusa	Przeczów	PL	Lower Silesian Voivodeship
@@ -61961,12 +61961,12 @@ Kościół pw. Najświętszej Maryi Panny Fatimskiej	Wrocław	PL	Lower Silesian 
 Kościół pw. Świętej Agnieszki	Psary	PL	Lower Silesian Voivodeship
 Kościół pw. Najświętszej Marii Panny Matki Kościoła	Wrocław	PL	Lower Silesian Voivodeship
 Kościół pw. Najświętszej Maryi Panny Królowej Polski	Psary	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Psary	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Psary	PL	Lower Silesian Voivodeship
 Kościół pw. Świętej Jadwigi Śląskiej	Wrocław	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Psary	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Psary	PL	Lower Silesian Voivodeship
 Kościół pw. Miłosierdzia Bożego	Paniowice	PL	Lower Silesian Voivodeship
 Kościół pw. św. Marcina	Kotowice	PL	Lower Silesian Voivodeship
-kaplica cmentarna	Psary	PL	Lower Silesian Voivodeship
+Kaplica cmentarna	Psary	PL	Lower Silesian Voivodeship
 Kościół pw. św. Jana Chrzciciela	Ozorowice	PL	Lower Silesian Voivodeship
 Kościół pw. Świętego Jana Apostoła	Wrocław	PL	Lower Silesian Voivodeship
 Kościół pw. Najświętszego Serca Pana Jezusa	Mirkow	PL	Lower Silesian Voivodeship
@@ -61982,7 +61982,7 @@ Kaplica Najświętszej Maryi Panny Nieustającej Pomocy	Golędzinów	PL	Lower Si
 Kościół pw. Podwyższenia Krzyża Świętego	Psary	PL	Lower Silesian Voivodeship
 Kościół Najświętszego Serca Pana Jezusa	Piotrkowiczki	PL	Lower Silesian Voivodeship
 Kościół pw. Niepokalanego Serca NMP	Wysoki Kościół	PL	Lower Silesian Voivodeship
-kaplica	Oborniki Slaskie	PL	Lower Silesian Voivodeship
+Kaplica	Oborniki Slaskie	PL	Lower Silesian Voivodeship
 Kościół pw. Świętej Anny	Kowale	PL	Lower Silesian Voivodeship
 Kościół pw. Podwyższenia Krzyża Świętego	Głuchów Górny	PL	Lower Silesian Voivodeship
 Kościół Miłosierdzia Bożego	Boleścin	PL	Lower Silesian Voivodeship
@@ -62058,7 +62058,7 @@ Kaplica klasztorna	Wolczyn	PL	Opole Voivodeship
 Kaplica pogrzebowa	Wołczyn	PL	Opole Voivodeship
 Kościół pw. św. Jacka	Wierzbica Górna	PL	Opole Voivodeship
 Kościół filialny Podwyższenia Krzyża Świętego	Wierzbica Dolna	PL	Opole Voivodeship
-kaplica cmentarna	Wolczyn	PL	Opole Voivodeship
+Kaplica cmentarna	Wolczyn	PL	Opole Voivodeship
 Kaplica szpitalna	Kluczbork	PL	Opole Voivodeship
 Kościół pw. Podwyższenia Krzyża Świętego	Smardy Górne	PL	Opole Voivodeship
 Kaplica pw. Świętego Józefa	Smardy Górne	PL	Opole Voivodeship
@@ -62267,7 +62267,7 @@ Kaplica pw. Matki Boskiej Nieustającej Pomocy w Lgoczance	Lgoczanka	PL	Silesian
 Kościół pw. Świętego Marcina	Lelów	PL	Silesian Voivodeship
 Kościół Niepokalanego Poczęcia Najświętszej Maryi Panny	Potok Zloty	PL	Silesian Voivodeship
 Kościół pw. św. Bartłomieja	Żuraw	PL	Silesian Voivodeship
-kaplica cmentarna	Przyrow	PL	Silesian Voivodeship
+Kaplica cmentarna	Przyrow	PL	Silesian Voivodeship
 Kościół Św. Mikołaja w Przyrowie	Przyrow	PL	Silesian Voivodeship
 Kaplica św. Brata Alberta Chmielowskiego w Mełchowie	Mełchów	PL	Silesian Voivodeship
 Kościół pw. Matki Bożej Częstochowskiej w Drochlinie	Drochlin	PL	Silesian Voivodeship
@@ -62427,7 +62427,7 @@ Kościół pw. Świętego Brata Alberta Chmielowskiego	Nietuszyna	PL	Lodz Voivod
 Kościół pw. Świętych Joachima i Anny	Kraszkowice	PL	Lodz Voivodeship
 Kaplica pw. św. Jana Chrzciciela	Niżankowice	PL	Lodz Voivodeship
 Kościół pw. Świętej Zofii Wdowy	Krzeczów	PL	Lodz Voivodeship
-kaplica przedpogrzebowa	Wierzchlas	PL	Lodz Voivodeship
+Kaplica przedpogrzebowa	Wierzchlas	PL	Lodz Voivodeship
 Kaplica pw. Świętych Apostołów Piotra i Pawła	Wierzchlas	PL	Lodz Voivodeship
 Kościół pw. Świętego Jana Pawła II	Sieniec	PL	Lodz Voivodeship
 Kościół pw. Najświętszej Maryi Panny Śnieżnej	Osjakow	PL	Lodz Voivodeship
@@ -63157,7 +63157,7 @@ Kaplica Jezusa Miłosiernego	Lodz	PL	Lodz Voivodeship
 Kościół Najświętszej Maryi Panny Królowej Pokoju	Łódź	PL	Lodz Voivodeship
 Kościół św. Marka	Łódź	PL	Lodz Voivodeship
 Kaplica cmentarna św. Wincentego á Paulo	Łódź	PL	Lodz Voivodeship
-kaplica cmentarna	Lodz	PL	Lodz Voivodeship
+Kaplica cmentarna	Lodz	PL	Lodz Voivodeship
 Kościół Najświętszego Serca Jezusowego i Świętej Marii Małgorzaty Alacoque	Łódź	PL	Lodz Voivodeship
 Kaplica szpitalna pw. św. Ojca Pio	Lodz	PL	Lodz Voivodeship
 Kościół św. Teresy od Dzieciątka Jezus	Łódź	PL	Lodz Voivodeship
@@ -64006,7 +64006,7 @@ Kaplica św. Franciszki Siedliskiej	Rzeczyca	PL	Lodz Voivodeship
 Kościół pw. Świętej Marii Magdaleny w Łęgonicach Małych	Łęgonice Małe	PL	Masovian Voivodeship
 Kościół parafialny pw. św. Jana Chrzciciela	Łęgonice	PL	Masovian Voivodeship
 Kościół św. Rocha na Górce Zgody w Łęgonicach	Nowe Łęgonice	PL	Masovian Voivodeship
-kaplica cmentarna	Sadkowice	PL	Lodz Voivodeship
+Kaplica cmentarna	Sadkowice	PL	Lodz Voivodeship
 Dom Rekolekcyjny imienia bł. Franciszki Siedliskiej	Sadkowice	PL	Lodz Voivodeship
 Kaplica Klasztorna	Sadkowice	PL	Lodz Voivodeship
 Kościół parafialny pw. św. Anny i św. Mikołaja Biskupa	Żdżary	PL	Lodz Voivodeship
@@ -64124,7 +64124,7 @@ Kościół pw. Zesłania Ducha Świętego	Jasieniec	PL	Masovian Voivodeship
 Kościół parafialny pw. św. Marcina biskupa	Chojnata	PL	Lodz Voivodeship
 Kaplica cmentarna	Osuchów	PL	Masovian Voivodeship
 Kościół parafialny pw. Świętej Trójcy	Lutkówka	PL	Masovian Voivodeship
-kaplica dojazdowa	Pniewy	PL	Masovian Voivodeship
+Kaplica dojazdowa	Pniewy	PL	Masovian Voivodeship
 Kościół parafialny pw. Matki Bożej Anielskiej	Korabiewice	PL	Masovian Voivodeship
 Kaplica cmentarna	Mszczonow	PL	Masovian Voivodeship
 Kościół pw. św. Kazimierza Królewicza	Radziejowice	PL	Masovian Voivodeship
@@ -64265,8 +64265,8 @@ Kościół pw. Świętego Wawrzyńca	Sieciechów	PL	Lublin Voivodeship
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny	Opactwo	PL	Lublin Voivodeship
 Kaplica dojazdowa	Prażmów	PL	Lublin Voivodeship
 Kościół parafialny pw. św. Marcina	Stężyca	PL	Lublin Voivodeship
-kapliczka	Kozienice	PL	Masovian Voivodeship
-kapliczka	Kozienice	PL	Masovian Voivodeship
+Kapliczka	Kozienice	PL	Masovian Voivodeship
+Kapliczka	Kozienice	PL	Masovian Voivodeship
 Kościół Matki Bożej Częstochowskiej	Nowa Wieś	PL	Masovian Voivodeship
 Kaplica pw. Matki Kościoła	Cudów	PL	Masovian Voivodeship
 Kościół pw. Wniebowzięcia Najświętszej Maryi Panny	Wróble-Wargocin	PL	Masovian Voivodeship
@@ -64301,7 +64301,7 @@ Kaplica pw. św. Apostołów Piotra i Pawła	Piotrowice Wielkie	PL	Lublin Voivod
 Kaplica pw. św. Judy Tadeusza w Borkowie	Borków	PL	Lublin Voivodeship
 Kaplica pw. Matki Boskiej Różańcowej w Woli Przybysławskiej	Garbow	PL	Lublin Voivodeship
 Kościół pw. Matki Bożej Anielskiej w Starościnie	Starościn	PL	Lublin Voivodeship
-kaplica	Zastawie	PL	Lublin Voivodeship
+Kaplica	Zastawie	PL	Lublin Voivodeship
 Kościół pw. Matki Kościoła w Dębie	Dęba	PL	Lublin Voivodeship
 Kaplica	Abramów	PL	Lublin Voivodeship
 Kościół pw. Matki Bożej Szkaplerznej w Abramowie	Abramów	PL	Lublin Voivodeship
@@ -64830,7 +64830,7 @@ Kościół pw. Narodzenia Najświętszej Maryi Panny	Dabie	PL	Greater Poland Voi
 Kościół pw. Świętego Marcina Biskupa	Chwalborzyce	PL	Greater Poland Voivodeship
 Kaplica domowa	Swinice Warckie	PL	Lodz Voivodeship
 Kościół parafialny pw. Świętych Apostołów Piotra i Pawła	Grodzisko	PL	Lodz Voivodeship
-kaplica cmentarna	Dabie	PL	Greater Poland Voivodeship
+Kaplica cmentarna	Dabie	PL	Greater Poland Voivodeship
 Kaplica bł. Bogumiła	Brudzew	PL	Greater Poland Voivodeship
 Kaplica cmentarna	Kolo	PL	Greater Poland Voivodeship
 Kaplica Matki Bożej Fatimskiej	Grzegorzew	PL	Greater Poland Voivodeship
@@ -65517,7 +65517,7 @@ Kaplica domowa	Chelmno	PL	Kujawsko-Pomorskie
 Kościół pw. Świętej Katarzyny Aleksandryjskiej	Wielkie Czyste	PL	Kujawsko-Pomorskie
 Kaplica pw. Miłosierdzia Bożego	Bartlewo	PL	Kujawsko-Pomorskie
 Kaplica pw. Miłosierdzia Bożego	Stolno	PL	Kujawsko-Pomorskie
-kaplica cmentarna	Chelmno	PL	Kujawsko-Pomorskie
+Kaplica cmentarna	Chelmno	PL	Kujawsko-Pomorskie
 Kościół pw. Świętego Bartłomieja Apostoła i Świętej Anny	Wabcz	PL	Kujawsko-Pomorskie
 Kaplica pw. Świętej Rodziny	Chelmno	PL	Kujawsko-Pomorskie
 Kościół pw. Świętego Wawrzyńca w Przysiersku	Przysiersk	PL	Kujawsko-Pomorskie
@@ -65684,7 +65684,7 @@ Kościół parafialny pw. św. Wawrzyńca Diakona i Męczennika	Pacyna	PL	Masovi
 Kościół parafialny pw. św. Józefa Oblubieńca Najświętszej Maryi Panny	Sanniki	PL	Masovian Voivodeship
 Kościół parafialny pw. św. Andrzeja Apostoła	Brzozów Stary	PL	Masovian Voivodeship
 Kościół pw. Podwyższenia Krzyża Świętego	Iłów	PL	Masovian Voivodeship
-kaplica cmentarna	Ilow	PL	Masovian Voivodeship
+Kaplica cmentarna	Ilow	PL	Masovian Voivodeship
 Kościół parafialny pw. św. Marcina Biskupa	Słubice	PL	Masovian Voivodeship
 Kaplica klasztorna	Rybno	PL	Masovian Voivodeship
 Kościół pw. Świętego Bartłomieja	Rybno	PL	Masovian Voivodeship
@@ -65778,7 +65778,7 @@ Kaplica św Pawła Apostoła	Mokotow	PL	Masovian Voivodeship
 Kościół Najświętszej Maryi Panny Matki Miłosierdzia	Warszawa	PL	Masovian Voivodeship
 Kaplica cmentarna	Wilanow	PL	Masovian Voivodeship
 Kaplica Niepokalanego Poczęcia Najświętszej Maryi Panny	Mokotow	PL	Masovian Voivodeship
-kaplica szpitalna	Mokotow	PL	Masovian Voivodeship
+Kaplica szpitalna	Mokotow	PL	Masovian Voivodeship
 Kaplica Matki Bożej Królowej Misji	Mokotow	PL	Masovian Voivodeship
 Kaplica Karmelitów Bosych pod wezwaniem świętego Józefa	Warszawa	PL	Masovian Voivodeship
 kaplica pw. Św. Rodziny	Mokotow	PL	Masovian Voivodeship
@@ -65813,14 +65813,14 @@ Kaplica Wieczystej Adoracji	Wola	PL	Masovian Voivodeship
 Kościół pw. Świętego Józefa Oblubieńca Najświętszej Maryi Panny	Warszawa	PL	Masovian Voivodeship
 kaplica pw. MB Nieustającej Pomocy	Wola	PL	Masovian Voivodeship
 kaplica pw. MB Częstochowskiej	Wola	PL	Masovian Voivodeship
-kaplica karmelitanek bosych	Wola	PL	Masovian Voivodeship
+Kaplica karmelitanek bosych	Wola	PL	Masovian Voivodeship
 Kaplica pw. Błogosławionego Józefa Stanka	Warszawa	PL	Masovian Voivodeship
 Kaplica Matki Boskiej Częstochowskiej	Warszawa	PL	Masovian Voivodeship
 Kościół Wszystkich Świętych	Warszawa	PL	Masovian Voivodeship
 Kościół św. Brata Alberta i św. Andrzeja Apostoła	Warszawa	PL	Masovian Voivodeship
 Kaplica domowa	Wola	PL	Masovian Voivodeship
 Katedra polowa Wojska Polskiego Najświętszej Maryi Panny Królowej Polski	Warszawa	PL	Masovian Voivodeship
-kaplica sióstr felicjanek	Srodmiescie	PL	Masovian Voivodeship
+Kaplica sióstr felicjanek	Srodmiescie	PL	Masovian Voivodeship
 Kaplica Matki Bożej Niepokalanie Poczętej	Warsaw	PL	Masovian Voivodeship
 Kaplica pw. Matki Bożej Nieustającej Pomocy	Warszawa	PL	Masovian Voivodeship
 Kościół Świętego Aleksandra	Warszawa	PL	Masovian Voivodeship
@@ -65854,8 +65854,8 @@ Kaplica pw. Matki Bożej Częstochowskiej	Bielany	PL	Masovian Voivodeship
 Kaplica rekolekcyjna	Bielany	PL	Masovian Voivodeship
 Kaplica pw. Świętego Brata Alberta	Praga Polnoc	PL	Masovian Voivodeship
 Kościół pw. Matki Boskiej Częstochowskiej (murowany)	Warszawa	PL	Masovian Voivodeship
-kaplica domowa	Targowek	PL	Masovian Voivodeship
-kaplica	Warszawa	PL	Masovian Voivodeship
+Kaplica domowa	Targowek	PL	Masovian Voivodeship
+Kaplica	Warszawa	PL	Masovian Voivodeship
 Kaplica pw. bł. Stefana Wyszyńskiego	Targowek	PL	Masovian Voivodeship
 Kaplica klasztorna	Targowek	PL	Masovian Voivodeship
 Kaplica pw. Świętego Józefa Oblubieńca Najświętszej Maryi Panny	Zabki	PL	Masovian Voivodeship
@@ -65866,7 +65866,7 @@ Kaplica grobowa Trębickich	Dziekanow Lesny	PL	Masovian Voivodeship
 Kościół parafialny pw. Matki Bożej Królowej Rodzin	Dziekanów Polski	PL	Masovian Voivodeship
 Kościół pw. Redemptoris Mater	Warszawa	PL	Masovian Voivodeship
 Kościół pw. Świętego Jakuba Apostoła	Warszawa	PL	Masovian Voivodeship
-kaplica cmentarna	Bialoleka	PL	Masovian Voivodeship
+Kaplica cmentarna	Bialoleka	PL	Masovian Voivodeship
 Kaplica pw. Świętego Józefa Oblubieńca	Bialoleka	PL	Masovian Voivodeship
 Kaplica pw. Matki Bożej Nieustającej Pomocy	Bialoleka	PL	Masovian Voivodeship
 Kościół pw. Narodzenia Najświętszej Maryi Panny	Warszawa	PL	Masovian Voivodeship
@@ -65954,7 +65954,7 @@ Kaplica pw. Matki Bożej Fatimskiej	Legionowo	PL	Masovian Voivodeship
 Kaplica pw. Błogosławionego Ojca Honorata Koźmińskiego	Legionowo	PL	Masovian Voivodeship
 Kościół pw. Miłosierdzia Bożego	Legionowo	PL	Masovian Voivodeship
 Kaplica szpitalna	Wieliszew	PL	Masovian Voivodeship
-kaplica cmentarna	Wieliszew	PL	Masovian Voivodeship
+Kaplica cmentarna	Wieliszew	PL	Masovian Voivodeship
 Kaplica pw. Świętego Kazimierza Królewicza	Zegrze Południowe	PL	Masovian Voivodeship
 Kościół pw. Świętego Antoniego Padewskiego	Wola Kiełpińska	PL	Masovian Voivodeship
 Kościół pw. Świętego Stanisława Kostki	Szczytno	PL	Masovian Voivodeship
@@ -66062,7 +66062,7 @@ Kościół pw. Świętego Andrzeja Boboli	Marki	PL	Masovian Voivodeship
 Kościół pw. Świętego Jana Chrzciciela	Nadma	PL	Masovian Voivodeship
 Kaplica pw. Matki Bożej Nieustającej Pomocy	Wolomin	PL	Masovian Voivodeship
 Kaplica pw. Świętego Alojzego Orione	Wolomin	PL	Masovian Voivodeship
-kaplica	Wolomin	PL	Masovian Voivodeship
+Kaplica	Wolomin	PL	Masovian Voivodeship
 Kościół pw. Świętego Ojca Pio	Zagościniec	PL	Masovian Voivodeship
 Kościół pw. Chrystusa Miłosiernego	Zabraniec	PL	Masovian Voivodeship
 Kościół pw. Świętego Jana Chrzciciela i Świętego Wojciecha Biskupa Męczennika	Poświętne	PL	Masovian Voivodeship
@@ -66085,7 +66085,7 @@ Kościół pw. Matki Bożej Nieustającej Pomocy	Guzew	PL	Masovian Voivodeship
 Kaplica pw. Najświętszego Serca Pana Jezusa	Mrozy	PL	Masovian Voivodeship
 Kaplica dojazdowa Matki Bożej Częstochowskiej w Nowych Groszkach	Nowe Groszki	PL	Masovian Voivodeship
 Kościół pw. Św. Antoniego Padewskiego	Kotun	PL	Masovian Voivodeship
-kaplica cmentarna	Kotun	PL	Masovian Voivodeship
+Kaplica cmentarna	Kotun	PL	Masovian Voivodeship
 Kościół pw. Najświętszej Rodziny	Śmiary	PL	Masovian Voivodeship
 Kościół Najświętszego Serca Jezusowego	Wisniew	PL	Masovian Voivodeship
 Kościół pw. Świętego Andrzeja z Awelinu	Zabłocie	PL	Masovian Voivodeship
@@ -66340,7 +66340,7 @@ Kościół pw. Świętego Stanisława Kostki w Rostkowie	Rostkowo	PL	Masovian Vo
 Kościół pw. Świętych Klary i Józefa	Przasnysz	PL	Masovian Voivodeship
 Kościół pw. Świętych Apostołów Piotra i Pawła	Chodkowo-Załogi	PL	Masovian Voivodeship
 Kościół parafialny pw. Narodzenia NMP	Grabowo	PL	Masovian Voivodeship
-kaplica cmentarna	Lubowidz	PL	Masovian Voivodeship
+Kaplica cmentarna	Lubowidz	PL	Masovian Voivodeship
 Kościół pw. Świętego Jana Nepomucena	Lubowidz	PL	Masovian Voivodeship
 Kościół pw. Świętego Marcina	Zielona	PL	Masovian Voivodeship
 Kościół pw. Matki Bożej Anielskiej	Bryńsk	PL	Warmian-Masurian Voivodeship
@@ -66516,7 +66516,7 @@ Kościół pw. Trójcy Przenajświętszej	Parciaki	PL	Masovian Voivodeship
 Kościół pw. Świętego Maksymiliana Marii Kolbego	Ziomek	PL	Masovian Voivodeship
 Kościół pw. Świętego Michała Archanioła	Brodowe Łąki	PL	Masovian Voivodeship
 Kaplica pw. Miłosierdzia Bożego	Baranowo	PL	Masovian Voivodeship
-kaplica cmentarna	Ostroleka	PL	Masovian Voivodeship
+Kaplica cmentarna	Ostroleka	PL	Masovian Voivodeship
 Kaplica domowa	Ostroleka	PL	Masovian Voivodeship
 Kościół pw. Miłosierdzia Bożego	Łęg Starościński	PL	Masovian Voivodeship
 Kaplica więzienna	Troszyn	PL	Masovian Voivodeship
@@ -66710,7 +66710,7 @@ Kościół pw. Świętego Floriana	Radzanek	PL	West Pomeranian Voivodeship
 Kościół pw. Matki Bożej Częstochowskiej	Danowo	PL	West Pomeranian Voivodeship
 Kaplica pw. Świętego Brata Alberta	Maszewo	PL	West Pomeranian Voivodeship
 Kościół pw. Matki Bożej Nieustającej Pomocy	Goleniów	PL	West Pomeranian Voivodeship
-kaplica cmentarna	Goleniów	PL	West Pomeranian Voivodeship
+Kaplica cmentarna	Goleniów	PL	West Pomeranian Voivodeship
 Kaplica szpitalna	Goleniow	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Stanisława Kostki	Podańsko	PL	West Pomeranian Voivodeship
 Kościół pw. Wniebowstąpienia Pańskiego	Marszewo	PL	West Pomeranian Voivodeship
@@ -67133,7 +67133,7 @@ Kościół pw. Świętego Stanisława Biskupa Męczennika	Ramlewo	PL	West Pomera
 Kościół pw. Matki Boskiej Różańcowej	Goscino	PL	West Pomeranian Voivodeship
 Kościół pw. Świętych Apostołów Piotra i Pawła	Robuń	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Kazimierza	Karwin	PL	West Pomeranian Voivodeship
-kaplica cmentarna	Gościno	PL	West Pomeranian Voivodeship
+Kaplica cmentarna	Gościno	PL	West Pomeranian Voivodeship
 Kościół pw. Świętego Andrzeja Boboli	Gościno	PL	West Pomeranian Voivodeship
 Kaplica szpitalna	Goscino	PL	West Pomeranian Voivodeship
 Kościół pw. Matki Bożej Różańcowej	Pobłocie Małe	PL	West Pomeranian Voivodeship
@@ -67471,7 +67471,7 @@ Kościół Miłosierdzia Bożego	Miastko	PL	Pomeranian Voivodeship
 Kaplica cmentarna	Miastko	PL	Pomeranian Voivodeship
 Cerkiew pw. Świętych Włodzimierza i Olgi	Miastko	PL	Pomeranian Voivodeship
 Kościół pw. Najświętszej Maryi Panny Wspomożycielki Wiernych	Miastko	PL	Pomeranian Voivodeship
-kaplica cmentarna	Łodzierz	PL	Pomeranian Voivodeship
+Kaplica cmentarna	Łodzierz	PL	Pomeranian Voivodeship
 Kaplica pw. Przemienienia Pańskiego	Miastko	PL	Pomeranian Voivodeship
 Kościół pw. Świętego Mikołaja	Starzno	PL	Pomeranian Voivodeship
 Kościół pw. Narodzenia Najświętszej Maryi Panny	Świeszyno	PL	Pomeranian Voivodeship
@@ -68083,7 +68083,7 @@ Kościół pw. Wszystkich Świętych	Elbląg	PL	Warmian-Masurian Voivodeship
 Kaplica pw. Niepokalanego Poczęcia Najświętszej Maryi Panny	Elbląg	PL	Warmian-Masurian Voivodeship
 Kościół pw. Świętego Kazimierza	Elbląg	PL	Warmian-Masurian Voivodeship
 Kościół parafialny pw. Błogosławionej Doroty z Mątów	Elbląg	PL	Warmian-Masurian Voivodeship
-kaplica cmentarna	Gronowo Gorne	PL	Warmian-Masurian Voivodeship
+Kaplica cmentarna	Gronowo Gorne	PL	Warmian-Masurian Voivodeship
 Kaplica Cmentarna	Elbląg	PL	Warmian-Masurian Voivodeship
 Kościół pw. Matki Bożej Fatimskiej i Świętego Jana Pawła II	Elbląg	PL	Warmian-Masurian Voivodeship
 Kościół pw. Najświętszego Serca Pana Jezusa	Zastawno	PL	Warmian-Masurian Voivodeship
@@ -68138,7 +68138,7 @@ Kaplica polowa	Rozewie	PL	Pomeranian Voivodeship
 Kaplica pw. Świętego Andrzeja Boboli	Jastrzebia Gora	PL	Pomeranian Voivodeship
 Kaplica klasztorna	Jastrzebia Gora	PL	Pomeranian Voivodeship
 Kościół pw. Matki Boskiej Nieustającej Pomocy	Jurata	PL	Pomeranian Voivodeship
-kaplica cmentarna	Jastarnia	PL	Pomeranian Voivodeship
+Kaplica cmentarna	Jastarnia	PL	Pomeranian Voivodeship
 Kościół pw. Wniebowstąpienia Pańskiego	Mortęgi	PL	Warmian-Masurian Voivodeship
 Kościół pw. Świętej Katarzyny Aleksandryjskiej	Prątnica	PL	Warmian-Masurian Voivodeship
 Kaplica pw. Świętego Jerzego	Lubawa	PL	Warmian-Masurian Voivodeship
@@ -68951,7 +68951,7 @@ Mănăstire Catolică	Baia de Cris	RO	Hunedoara
 Biserica Romano-Catolică Sfântul Nicolae	Abrud	RO	Alba
 Biserica Greco-Catolică	Rosia Montana	RO	Alba
 Biserica Greco-Catolică Corna (1926)	Blidesti	RO	Alba
-chapel	Rosia Montana	RO	Alba
+Chapel	Rosia Montana	RO	Alba
 Biserica Greco-Catolică „Nașterea Sfântului Ioan Botezătorul”	Vadu Motilor	RO	Alba
 Biserica Sfântul Ioan Nepomuk	Zlatna	RO	Alba
 Biserica Romano-Catolică Sfinții Apostoli Petru și Pavel	Ighiu	RO	Alba
@@ -69399,7 +69399,7 @@ Biserica Romano-Catolică Fântânița	Micestii de Campie	RO	Bistrita-Nasaud
 Biserica Greco-Catolică Milaș	Milas	RO	Bistrita-Nasaud
 Biserica Sf Treime	Breaza	RO	Mures
 Biserica Greco-Catolică Frunzeni	Cozma	RO	Mures
-biserica catolică	Ocnita	RO	Bistrita-Nasaud
+Biserica catolică	Ocnita	RO	Bistrita-Nasaud
 Biserica Greco Catolică	Teaca	RO	Bistrita-Nasaud
 Biserica Romano Catolică	Teaca	RO	Bistrita-Nasaud
 Capela Greco-Catolică	Taga	RO	Cluj
@@ -69409,7 +69409,7 @@ Biserica Greco-Catolică	Țentea	RO	Bistrita-Nasaud
 Biserica Greco-Catolică	Gherla	RO	Cluj
 Biserica Armeană Solomon	Gherla	RO	Cluj
 Capela Catolică	Gherla	RO	Cluj
-Biserica ”Sfinţii Arhangheli Mihail şi Gavril”:	Mintiu Gherlii	RO	Cluj
+Biserica ”Sfinţii Arhangheli Mihail şi Gavril”	Mintiu Gherlii	RO	Cluj
 Biserica Romano-Catolică	Sanmartin	RO	Cluj
 Biserica Catolică	Nuseni	RO	Bistrita-Nasaud
 Biserica Greco-Catolică Fântânele	Matei	RO	Bistrita-Nasaud
@@ -70975,7 +70975,7 @@ Kościół pw. NMP Królowej Świata	Huta Brzuska	PL	Subcarpathian Voivodeship
 Kościół pw. Narodzenia Najświętszej Maryi Panny	Olszany	PL	Subcarpathian Voivodeship
 Kościół pw. Aniołów Stróżów	Aksmanice	PL	Subcarpathian Voivodeship
 Cerkiew Zaśnięcia Najświętszej Maryi Panny na Świętej Górze Zjawlinia	Fredropol	PL	Subcarpathian Voivodeship
-kapliczka	Fredropol	PL	Subcarpathian Voivodeship
+Kapliczka	Fredropol	PL	Subcarpathian Voivodeship
 Kościół pw. Narodzenia NMP	Kormanice	PL	Subcarpathian Voivodeship
 Церква святого Йосафата	Fredropol	PL	Subcarpathian Voivodeship
 Костел Пресвятої Трійці	Fredropol	PL	Subcarpathian Voivodeship
@@ -71938,7 +71938,7 @@ Kościół pw. Nawiedzenia NMP	Tuczempy	PL	Subcarpathian Voivodeship
 Kościół pw. Chrystusa Króla	Jaroslaw	PL	Subcarpathian Voivodeship
 Kościół pw. św. Józefa	Munina	PL	Subcarpathian Voivodeship
 Kościół filialny św. Maksymiliana Kolbego w Zgodzie	Ostrow	PL	Subcarpathian Voivodeship
-kaplica cmentarna	Ostrow	PL	Subcarpathian Voivodeship
+Kaplica cmentarna	Ostrow	PL	Subcarpathian Voivodeship
 Kościół parafialny pw. Narodzenia Najświętszej Maryi Panny	Ostrow	PL	Subcarpathian Voivodeship
 Kościół pw. Matki Bożej Różańcowej	Żurawiczki	PL	Subcarpathian Voivodeship
 Kościół pw. Matki Bożej Fatimskiej	Ożańsk	PL	Subcarpathian Voivodeship
@@ -71966,7 +71966,7 @@ Kościół pw. Najświętszego Serca Pana Jezusa	Szówsko	PL	Subcarpathian Voivo
 Kościół pw. Trójcy Przenajświętszej	Makowisko	PL	Subcarpathian Voivodeship
 Kościół pw. Matki Bożej Częstochowskiej	Piwoda	PL	Subcarpathian Voivodeship
 Kościół pw. św. Walentego i Narodzenia Najświętszej Maryi Panny	Wiązownica	PL	Subcarpathian Voivodeship
-kościół filialny	Wiazownica	PL	Subcarpathian Voivodeship
+Kościół filialny	Wiazownica	PL	Subcarpathian Voivodeship
 Kościół pw. św. Antoniego z Padwy	Cetula	PL	Subcarpathian Voivodeship
 Kościół pw. Narodzenia NMP	Święte	PL	Subcarpathian Voivodeship
 Kościół pw. Najświętszego Serca Pana Jezusa	Grabowiec	PL	Subcarpathian Voivodeship
@@ -72364,7 +72364,7 @@ Kościół pw. Nawiedzenia Najświętszej Maryi Panny w Wożuczynie	Michalow	PL	
 Kościół pw. św. Floriana	Pukarzów	PL	Lublin Voivodeship
 Kościół pw. Przemienienia Pańskiego w Czartowcu	Czartowiec	PL	Lublin Voivodeship
 Kaplica pw. Matki Bożej Królowej Polski	Kraczew	PL	Lublin Voivodeship
-kaplica	Przewale	PL	Lublin Voivodeship
+Kaplica	Przewale	PL	Lublin Voivodeship
 Kaplica cmentarna	Tyszowce	PL	Lublin Voivodeship
 Kościół pw. Narodzenia Najświętszej Maryi Panny w Nabrożu-Kolonii	Nabróż-Kolonia	PL	Lublin Voivodeship
 Kościół pw. Narodzenia Najświętszej Maryi Panny w Starej Wsi	Stara Wieś	PL	Lublin Voivodeship
@@ -73462,7 +73462,7 @@ Kaplica Dojazdowa	Parczew	PL	Lublin Voivodeship
 Kościół pw. Najświętszego Serca Jezusowego	Dębowa Kłoda	PL	Lublin Voivodeship
 Kościół pw. Narodzenia Najświętszej Marii Panny	Kodeniec	PL	Lublin Voivodeship
 kaplica Tomaszówka	Tomaszówka	PL	Lublin Voivodeship
-kaplica dojazdowa	Osowa	PL	Lublin Voivodeship
+Kaplica dojazdowa	Osowa	PL	Lublin Voivodeship
 Kościół pw. Matki Boskiej Częstochowskiej	Stary Brus	PL	Lublin Voivodeship
 Kościół parafialny pw. Najświętszej Maryi Panny Królowej Polski	Dubeczno	PL	Lublin Voivodeship
 Kaplica parafii pw. Najświętszego Serca Jezusowego	Okuninka	PL	Lublin Voivodeship
@@ -73490,7 +73490,7 @@ Kościół św. Tomasza Biskupa z Willanowy w Jabłoniu	Jabłoń	PL	Lublin Voivo
 Kościół parafialny pw. Najświętszego Serca Jezusowego	Horodyszcze	PL	Lublin Voivodeship
 Kościół pw. Najświętszego Serca Pana Jezusa	Komarówka Podlaska	PL	Lublin Voivodeship
 Kościół pw. Opieki Najświętszej Maryi Panny	Brzeziny	PL	Lublin Voivodeship
-kaplica dojazdowa	Komarowka Podlaska	PL	Lublin Voivodeship
+Kaplica dojazdowa	Komarowka Podlaska	PL	Lublin Voivodeship
 Kościół pw św. Jana Ewangelisty	Polubicze WIejskie Pierwsze	PL	Lublin Voivodeship
 Parafia Św. Andrzeja Boboli w Gąsiorach	Radzyn Podlaski	PL	Lublin Voivodeship
 Kościół pw. Najświętszego Serca Pana Jezusa	Zarzecz Łukowski	PL	Lublin Voivodeship
@@ -74166,7 +74166,7 @@ Kaplica pw. Świętego Michała Archanioła	Woźnawieś	PL	Podlasie
 Kościół pw. Matki Bożej Gromnicznej	Wiśniowo Ełckie	PL	Warmian-Masurian Voivodeship
 Kaplica dojazdowa	Sypitki	PL	Podlasie
 Kaplica cmentarna	Rajgród	PL	Podlasie
-kapliczka	Rajgrod	PL	Podlasie
+Kapliczka	Rajgrod	PL	Podlasie
 Kościół pw. Matki Bożej Częstochowskiej	Pruska	PL	Podlasie
 Kaplica pw. Matki Bożej Królowej Pokoju	Jagłowo	PL	Podlasie
 Kaplica pw. Matki Boskiej Częstochowskiej	Rutkowszczyzna	PL	Podlasie
