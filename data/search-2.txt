@@ -481,7 +481,7 @@ Paroisse Saint Pierre de Vézère	Montignac-Lascaux	FR	Aquitaine
 Eglise Saint-Denis	Nadaillac	FR	Limousin
 Église Notre-Dame de Ladornac	La Dornac	FR	Limousin
 Chapelle Saint-Remy	Auriac-du-Périgord	FR	Aquitaine
-Church of Saint-Etienne	Auriac-du-Périgord	FR	Aquitaine
+Église Saint-Étienne d'Auriac-du-Périgord	Auriac-du-Périgord	FR	Aquitaine
 Église Notre-Dame-et-Saint-Jean-Baptiste	Condat-sur-Vézère	FR	Aquitaine
 Chapelle Notre-Dame-de-Bonne-Espérance	Azerat	FR	Aquitaine
 Paroisse St Front	Périgueux	FR	Aquitaine
@@ -583,7 +583,7 @@ Chapelle Notre Dame du Roc Vignonnet	Antignac	FR	Auvergne
 Eglise Saint-Come et Saint-Damien	Chamboulive	FR	Limousin
 Chapelle des Pénitents	Corrèze	FR	Limousin
 Église Sainte-Croix de Rosiers-d'Égletons	Rosiers-d'Égletons	FR	Limousin
-Church of Saint Martial	Lestards	FR	Limousin
+Église Saint-Martial de Lestards	Lestards	FR	Limousin
 Eglise Sainte-Catherine-d'Alexandrie de Masseret	Masseret	FR	Limousin
 Chapelle Notre-Dame-du-bon-Secours	Saint-Gilles-les-Forêts	FR	Limousin
 Eglise Notre-Dame	Champagnac	FR	Auvergne
@@ -624,7 +624,7 @@ Eglise Sainte-Jeanne-d'Arc	Limoges	FR	Limousin
 Paroisse Jean-Paul II	Limoges	FR	Limousin
 Paroisse Saint Jean Paul II de Limoges	Limoges	FR	Limousin
 Église du Sacré-Cœur de Limoges	Limoges	FR	Limousin
-Church of St. Joseph	Limoges	FR	Limousin
+Église Saint-Joseph	Limoges	FR	Limousin
 Chapelle Saint Aurélien de Limoges	Limoges	FR	Limousin
 Eglise Saint-Michel-des-Lions	Limoges	FR	Limousin
 Paroisse Sainte Marie	Limoges	FR	Limousin
@@ -695,7 +695,7 @@ Church of Notre Dame	La Souterraine	FR	Limousin
 Eglise Notre Dame	La Souterraine	FR	Limousin
 Paroisse Saint Jacques	La Souterraine	FR	Limousin
 Église Saint Sulpice de Saint-Sulpice-le-Dunois	Saint-Sulpice-le-Dunois	FR	Limousin
-Church of Saint-Martin of Parsac	Parsac-Rimondeix	FR	Limousin
+Église Saint-Martin de Parsac	Parsac-Rimondeix	FR	Limousin
 Église Saint-Nicolas des Forges	Gouzon	FR	Limousin
 Église Saint-Martin de Gouzon	Gouzon	FR	Limousin
 Abbatiale Sainte-Valerie	Chambon-sur-Voueize	FR	Limousin
@@ -721,7 +721,7 @@ Paroisse Louise-Thérèse de Montluçon	Montluçon	FR	Auvergne
 Paroisse Saint-Pierre	Montluçon	FR	Auvergne
 Chapelle du Sacré coeur	Montluçon	FR	Auvergne
 Paroisse Saint-Paul	Montluçon	FR	Auvergne
-Church of St. Therese	Montluçon	FR	Auvergne
+Église Sainte-Thérèse	Montluçon	FR	Auvergne
 Église Saint-Paul de Montluçon	Montluçon	FR	Auvergne
 Église Notre-Dame	Huriel	FR	Auvergne
 Roman Catholic Diocese of Saint-Flour	Saint-Flour	FR	Auvergne
@@ -740,7 +740,7 @@ Abbaye Notre-Dame de Pébrac	Pébrac	FR	Auvergne
 Ensemble Paroissial la Trinité	Lavoûte-Chilhac	FR	Auvergne
 Chapelle Notre-Dame de Valentine	Ségur-les-Villas	FR	Auvergne
 Église Saint Nicolas	Auriac-l'Église	FR	Auvergne
-Church of Saint-Blaise	Marcenat	FR	Auvergne
+Église Saint-Blaise de Marcenat	Marcenat	FR	Auvergne
 Église Saint-Blaise de Leyvaux	Leyvaux	FR	Auvergne
 Église de Massiac	Massiac	FR	Auvergne
 Église Sainte-Madeleine	Saint-Ilpize	FR	Auvergne
@@ -757,7 +757,7 @@ Eglise Saint-Andre	Prades	FR	Auvergne
 Chapelle Sainte-Marie-des-Chazes	Saint-Julien-des-Chazes	FR	Auvergne
 Église Saint-Rémy	Vergezac	FR	Auvergne
 St. Joseph’s of Bon Espoir Shrine-Basilica	Espaly-Saint-Marcel	FR	Auvergne
-Church of St. Martin	Polignac	FR	Auvergne
+Église Saint-Martin de Polignac	Polignac	FR	Auvergne
 Eglise Sainte-Therese	Le Puy-en-Velay	FR	Auvergne
 Cure de Saint Antoine	Le Puy-en-Velay	FR	Auvergne
 EP Notre Dame du Puy	Le Puy-en-Velay	FR	Auvergne
@@ -814,7 +814,7 @@ Basilique Notre-Dame d'Orcival	Orcival	FR	Auvergne
 Abbaye Notre-Dame de Randol	Cournols	FR	Auvergne
 Abbaye Notre Dame de Randol		FR	Auvergne
 Chapelle Sainte-Magdeleine de Saint-Saturnin	Saint-Saturnin	FR	Auvergne
-Church of Notre Dame in Saint-Saturnin	Saint-Saturnin	FR	Auvergne
+Église Notre-Dame de Saint-Saturnin	Saint-Saturnin	FR	Auvergne
 Paroisse Saint Ephrem de la Serre	Saint-Amant-Tallende	FR	Auvergne
 Abbatiale Saint Austremoine	Issoire	FR	Auvergne
 Paroisse Saint Austremoine	Issoire	FR	Auvergne
@@ -827,7 +827,7 @@ Quartier Des Forts 63730 Les Martres De Veyre	Les Martres-de-Veyre	FR	Auvergne
 Église Saint Pierre	Arlanc	FR	Auvergne
 Paroisse Saint Jacques du Haut Forez	Saint-Bonnet-le-Château	FR	Rhone-Alpes
 Église de l'Assomption-de-la-Vierge	Montarcher	FR	Rhone-Alpes
-Church of Saint Jean in Ambert	Ambert	FR	Auvergne
+Église Saint-Jean d'Ambert	Ambert	FR	Auvergne
 Paroisse Saint Jean-François Régis	Ambert	FR	Auvergne
 Notre Dame De L’esperance	Tours-sur-Meymont	FR	Auvergne
 Église Saint Prix	Bertignat	FR	Auvergne
@@ -845,7 +845,7 @@ Ancienne église de Saint-Jean-de-Muzols	Saint-Jean-de-Muzols	FR	Rhone-Alpes
 Paroisse Saint Vincent de l'Hermitage 	Tain-l'Hermitage	FR	Rhone-Alpes
 Église Saint-Priest	Satillieu	FR	Rhone-Alpes
 Basilique Saint-Régis de Lalouvesc	Lalouvesc	FR	Rhone-Alpes
-Church of Saint-Martin de Dunières	Dunières	FR	Auvergne
+Église Saint-Martin de Dunières	Dunières	FR	Auvergne
 Foyer Marie Jean	Saint-Julien-Vocance	FR	Rhone-Alpes
 Paroisse St Didier	Saint-Didier-en-Velay	FR	Auvergne
 Eglise Saint-Blaise	Saint-Sauveur-en-Rue	FR	Rhone-Alpes
@@ -1051,7 +1051,7 @@ Eglise Saint-Loup	Sauviat	FR	Auvergne
 Eglise Sainte-Croix d'Augerolles	Augerolles	FR	Auvergne
 Église Saint-Martin de Courpière	Courpière	FR	Auvergne
 Église Notre-Dame d'Espinasse	Aubusson-d'Auvergne	FR	Auvergne
-Church of St. Maurice	Vollore-Ville	FR	Auvergne
+Église Saint-Maurice de Vollore-Ville	Vollore-Ville	FR	Auvergne
 Notre-Dame de l'Hermitage	Noirétable	FR	Rhone-Alpes
 Église Saint-Bonnet	Néronde-sur-Dore	FR	Auvergne
 Chapelle Saint-Roch	Thiers	FR	Auvergne
@@ -1072,11 +1072,11 @@ Chapelle Notre Dame Du Rosaire	Roanne	FR	Rhone-Alpes
 Paroisse de St Etienne	Roanne	FR	Rhone-Alpes
 Paroisses Saint Pierre et Saint Paul de Roanne	Roanne	FR	Rhone-Alpes
 Abbatiale Saint-Léger	Ébreuil	FR	Auvergne
-Church of Saint Aignan	Bègues	FR	Auvergne
+Église Saint-Aignan de Bègues	Bègues	FR	Auvergne
 Église Saint-Maurice de Vicq	Vicq	FR	Auvergne
 Église Saint-Martin de Senat	Taxat-Senat	FR	Auvergne
 Paroisse Sainte-Croix	Gannat	FR	Auvergne
-Church of Saint Saturnin	Mazerier	FR	Auvergne
+Église Saint-Saturnin de Mazerier	Mazerier	FR	Auvergne
 Eglise Sainte Radegonde	Cognat-Lyonne	FR	Auvergne
 Prieuré Notre-dame De Banelle	Escurolles	FR	Auvergne
 Église Saint-Blaise	Vichy	FR	Auvergne
@@ -1095,16 +1095,16 @@ Ancienne église Saint André	Barberier	FR	Auvergne
 Église Saint Didier	Saint-Didier-la-Forêt	FR	Auvergne
 Church of Notre-Dame	Saint-Germain-des-Fossés	FR	Auvergne
 Basilique Notre-Dame	Saint-Germain-des-Fossés	FR	Auvergne
-Church of Saint Martial	Seuillet	FR	Auvergne
+Église Saint-Martial de Seuillet	Seuillet	FR	Auvergne
 Église Saint-Vincent-de-Paul	Magnet	FR	Auvergne
 Église Saint Marcel	Saint-Marcel-en-Murat	FR	Auvergne
 Église Sainte Anne	Chappes	FR	Auvergne
-Church of Saint Nicolas	Murat	FR	Auvergne
-Church of Saint Georges	Bransat	FR	Auvergne
+Église Saint-Nicolas de Murat	Murat	FR	Auvergne
+Église Saint-Georges de Bransat	Bransat	FR	Auvergne
 Paroisse Saint Vincent	Saint-Pourçain-sur-Sioule	FR	Auvergne
 Église Sainte-Croix	Saint-Pourçain-sur-Sioule	FR	Auvergne
 Chapelle Notre-Dame de Briailles	Saint-Pourçain-sur-Sioule	FR	Auvergne
-Church of Saint Julien	Saint-Gérand-le-Puy	FR	Auvergne
+Église Saint-Julien de Saint-Gérand-le-Puy	Saint-Gérand-le-Puy	FR	Auvergne
 Paroisse de Varennes	Varennes-sur-Allier	FR	Auvergne
 Église Saint-Léger	Arronnes	FR	Auvergne
 Eglise Notre-Dame de Chatel-Montagne	Châtel-Montagne	FR	Auvergne
@@ -1117,7 +1117,7 @@ Chapelle du Verger	Saint-Voir	FR	Auvergne
 Chapelle de Saint-Martin-la-Vallée	Semur	FR	Bourgogne
 Église Saint-Pierre-et-Saint-Paul	Montceaux-l'Étoile	FR	Bourgogne
 Église Notre-Dame	Feurs	FR	Rhone-Alpes
-Parish Of St Martin L'Argentiere	Saint-Laurent-de-Chamousset	FR	Rhone-Alpes
+Paroisse Saint-Martin-l'Argentière	Saint-Laurent-de-Chamousset	FR	Rhone-Alpes
 Chapelle de Ripan	Bessenay	FR	Rhone-Alpes
 Paroisse de Pontcharra	Vindry-sur-Turdine	FR	Rhone-Alpes
 Église Saint-Blaise	Brindas	FR	Rhone-Alpes
@@ -1136,7 +1136,7 @@ Paroisse Sainte Blandine	Lyon	FR	Rhone-Alpes
 Église Notre Dame du Rosaire	Saint-Fons	FR	Rhone-Alpes
 Paroisse catholique de Saint Fons	Saint-Fons	FR	Rhone-Alpes
 Paroisse Orthodoxe Serbe Saints Cyrille et Methode	Lyon	FR	Rhone-Alpes
-Church of St. Joan of Arc	Vénissieux	FR	Rhone-Alpes
+Église Sainte-Jeanne-d'Arc de Vénissieux	Vénissieux	FR	Rhone-Alpes
 Ensemble Paroissial Notre-Dame de la Miséricorde	Lyon	FR	Rhone-Alpes
 Église Saint Jacques	Lyon	FR	Rhone-Alpes
 Église Saint-Michel	Lyon	FR	Rhone-Alpes
@@ -1176,7 +1176,7 @@ Escalier Basilique de Fourviere	Lyon	FR	Rhone-Alpes
 Basilique Saint-Bonaventure de Lyon	Lyon	FR	Rhone-Alpes
 Comunidade Católica Portuguesa de Lyon	Lyon	FR	Rhone-Alpes
 Église Saint-Paul	Lyon	FR	Rhone-Alpes
-Church of Notre Dame Saint-Vincent	Lyon	FR	Rhone-Alpes
+Église Notre-Dame-Saint-Vincent de Lyon	Lyon	FR	Rhone-Alpes
 Église Notre-Dame Saint-Vincent	Lyon	FR	Rhone-Alpes
 رعية العائلة المقدسة للسريان الكاثوليك في ليون/ فرنسا	Caluire-et-Cuire	FR	Rhone-Alpes
 Église Saint-Polycarpe	Lyon	FR	Rhone-Alpes
@@ -1299,7 +1299,7 @@ Aumônerie militaire catholique La Valbonne-Ambérieu	Béligneux	FR	Rhone-Alpes
 Église Saint Roch	Blyes	FR	Rhone-Alpes
 Chapelle de Marcilleux	Saint-Vulbas	FR	Rhone-Alpes
 Paroisse de Saint André de Corcy	Saint-André-de-Corcy	FR	Rhone-Alpes
-Church of Saint Mary Magdalene	Pérouges	FR	Rhone-Alpes
+Église Sainte-Marie-Madeleine de Pérouges	Pérouges	FR	Rhone-Alpes
 Chapelle Notre Dame de Lorette	Sainte-Julie	FR	Rhone-Alpes
 Eglise de Meximieux	Meximieux	FR	Rhone-Alpes
 La petite église de Mollon	Villieu-Loyes-Mollon	FR	Rhone-Alpes
@@ -1348,7 +1348,7 @@ Eglise de Prissé (71)	Prissé	FR	Bourgogne
 Chapelle des Moines de Berzé-la-Ville	Berzé-la-Ville	FR	Bourgogne
 Église Notre-Dame de la Purification	Berzé-la-Ville	FR	Bourgogne
 Eglise Saint-Germain	Igé	FR	Bourgogne
-Parish St. Vincent de Paul	Mâcon	FR	Bourgogne
+Paroisse Saint-Vincent-de-Paul	Mâcon	FR	Bourgogne
 Chapelle Saint-Criat	Verzé	FR	Bourgogne
 Carmel Saint Joseph	Saint-Martin-Belle-Roche	FR	Bourgogne
 Église Saint-Martin Vieux Clocher	Saint-Martin-Belle-Roche	FR	Bourgogne
@@ -1435,7 +1435,7 @@ Chapelle Notre-Dame de la Trinité	Cluis	FR	Centre
 Eglise de Aigurande	Aigurande	FR	Centre
 Church of Notre Dame	Nouziers	FR	Centre
 Chapelle De Bussolles	Barrais-Bussolles	FR	Centre
-Church of Saint Aubin	Crevant	FR	Centre
+Église Saint-Aubin de Crevant	Crevant	FR	Centre
 Chapelle Notre-Dame de Vaudouan de Briantes	Briantes	FR	Centre
 Église Saint-Pierre	Feusines	FR	Centre
 Église du prieuré Saint-Étienne	Chassignolles	FR	Centre
@@ -1520,9 +1520,9 @@ Chapelle Notre-Dame-de-Pitié	Fontevraud-l'Abbaye	FR	Pays de la Loire
 Église Saint-Michel	Fontevraud-l'Abbaye	FR	Pays de la Loire
 Abbaye Notre-Dame de Fontevraud	Fontevraud-l'Abbaye	FR	Pays de la Loire
 Eglise Notre-Dame de Riviere	Rivière	FR	Centre
-Parish Church of Saint Maurice	Chinon	FR	Centre
+Église Saint-Maurice de Chinon	Chinon	FR	Centre
 Paroisse Sainte-Jeanne-d'Arc-en-Chinonais	Chinon	FR	Centre
-Collegiate Church of Saint-Mexme in Chinon	Chinon	FR	Centre
+Collégiale Saint-Mexme de Chinon	Chinon	FR	Centre
 Chapelle Sainte-Radegonde	Chinon	FR	Centre
 Presbytère	Beaumont-en-Véron	FR	Centre
 Le Sanctuaire Carolingien De Cravant	Cravant-les-Côteaux	FR	Centre
@@ -1569,7 +1569,7 @@ Eglise Saint Denis	Tours	FR	Centre
 Eglise Saint-Etienne	Tours	FR	Centre
 Diocesan Leadership de l'Enseignement Catholique	Tours	FR	Centre
 Archevêché	Tours	FR	Centre
-Church of Saint-Gregoire of Minimes	Tours	FR	Centre
+Église Saint-Grégoire des Minimes	Tours	FR	Centre
 Mission Étudiante Catholique	Tours	FR	Centre
 Cathédrale Saint-Gatien	Tours	FR	Centre
 Paroisse saint-Maurice - Cathédrale de Tours	Tours	FR	Centre
@@ -1690,9 +1690,9 @@ Chapelle Sainte Scholastique	St-Benoît-Sur-Loire	FR	Centre
 Église Sainte-Jeanne-d'Arc	Gien	FR	Centre
 Paroisse de Gien	Gien	FR	Centre
 Église Saint-Martin	Ouzouer-sur-Trézée	FR	Centre
-Church of Saint Germain	Sauvagny	FR	Auvergne
+Église Saint-Germain de Sauvagny	Sauvagny	FR	Auvergne
 Église Saint-Martin de Chavenon	Chavenon	FR	Auvergne
-Church of Saint Maurice	Buxières-les-Mines	FR	Auvergne
+Église Saint-Maurice de Buxières-les-Mines	Buxières-les-Mines	FR	Auvergne
 Eglise Saint-Georges	Bourbon-l'Archambault	FR	Auvergne
 Eglise Saint Martin	Besson	FR	Auvergne
 Paroisse de Pouilly en Auxois		FR	Auvergne
@@ -1822,7 +1822,7 @@ Basilique Notre Dame de Beaune	Beaune	FR	Bourgogne
 Collégiale Notre-Dame	Beaune	FR	Bourgogne
 Église Saint-Cassien	Savigny-lès-Beaune	FR	Bourgogne
 Église Saint-Nicolas	Beaune	FR	Bourgogne
-Church of St. Anne	Corgoloin	FR	Bourgogne
+Église Sainte-Anne de Corgoloin	Corgoloin	FR	Bourgogne
 Chapelle Du Vouillot	Diconne	FR	Bourgogne
 Église Notre-Dame-de-l'Assomption de Ciel	Ciel	FR	Bourgogne
 Eglise de la Nativité de la Vierge	Allerey-sur-Saône	FR	Bourgogne
@@ -1912,7 +1912,7 @@ Basilique Saint Andoche de Saulieu	Saulieu	FR	Bourgogne
 Église Saint-Maurice	Thoisy-le-Désert	FR	Bourgogne
 Église Saint-Thibault	Saint-Thibault	FR	Bourgogne
 Eglise Saint Germain	Vitteaux	FR	Bourgogne
-Church of St. Blaise	Velars-sur-Ouche	FR	Bourgogne
+Église Saint-Blaise de Velars-sur-Ouche	Velars-sur-Ouche	FR	Bourgogne
 Paroisse de Saint Seine l'Abbaye	Saint-Seine-l'Abbaye	FR	Bourgogne
 Paroisse de nuit Saint Georges	Nuits-Saint-Georges	FR	Bourgogne
 Abbaye Notre-Dame de Cîteaux	Saint-Nicolas-lès-Cîteaux	FR	Bourgogne
@@ -1926,7 +1926,7 @@ Notre-Dame (Auxonne)	Auxonne	FR	Bourgogne
 Eglise Nôtre-Dame	Auxonne	FR	Bourgogne
 Pelerinage Notre-Dame de Fatima au Mont Roland	Jouhe	FR	Franche-Comte
 Sanctuaire Notre-Dame de Mont-Roland	Jouhe	FR	Franche-Comte
-Church Saint Bonnet	Authume	FR	Franche-Comte
+Église Saint-Bonnet	Authume	FR	Franche-Comte
 Sanctuaire de Mont-Roland	Jouhe	FR	Franche-Comte
 Église Sainte Élisabeth de la Trinité	Dijon	FR	Bourgogne
 Chapelle Sainte Thérèse	Chenôve	FR	Bourgogne
@@ -2100,7 +2100,7 @@ Eglise Saint-Maurice	Bourg-Saint-Maurice	FR	Rhone-Alpes
 Chapelle Saint Michel	Bourg-Saint-Maurice	FR	Rhone-Alpes
 Santuario Grotta di Nostra Signora di Lourdes	Coazze	IT	Piedmont
 Parrocchia S. Lorenzo M.	Giaveno	IT	Piedmont
-Church of Saint Mary del Pino	Coazze	IT	Piedmont
+Chiesa di Santa Maria del Pino	Coazze	IT	Piedmont
 Santuario del Selvaggio	Giaveno	IT	Piedmont
 Oratorio Più Bello Del Mondo	GIAVENO	IT	Piedmont
 Cappella Immacolata	Giaveno	IT	Piedmont
@@ -2121,24 +2121,24 @@ Oratorio Orbassano	Orbassano	IT	Piedmont
 Parrocchia Rivalta di Torino	Rivalta di Torino	IT	Piedmont
 Cappella Di S. Vittore	Rivalta di Torino	IT	Piedmont
 Parrocchia Di Rivalta Chiesa Santi Pietro E Andrea	Rivalta di Torino	IT	Piedmont
-Church of Saint Michael Archangel	Rosta	IT	Piedmont
+Chiesa di San Michele Arcangelo	Rosta	IT	Piedmont
 Oratorio Rosta	Rosta	IT	Piedmont
 Parocchia di san Martino, via san Martino, Rivoli, Torino	Rivoli	IT	Piedmont
 Chiesa Collegiata di Santa Maria della Stella	Rivoli	IT	Piedmont
 Parrocchia Tetti Neirotti	Rivoli	IT	Piedmont
 Saint Bernard Parish	Rivoli	IT	Piedmont
-Parish of Santa Maria della Stella	Rivoli	IT	Piedmont
+Parrocchia di Santa Maria della Stella	Rivoli	IT	Piedmont
 Parrocchia San Paolo Apostolo Rivoli	Rivoli	IT	Piedmont
 Congregazione Suore Carmelitane di Santa Teresa di Torino	Rivoli	IT	Piedmont
 Oratorio Giovanni Paolo II	Beinasco	IT	Piedmont
 Parrocchia S. Edoardo Re	Nichelino	IT	Piedmont
 Chiesa della Visitazione e di San Barnaba	Torino	IT	Piedmont
 Chiesa Di San Carlo Borromeo -Frati servi di Maria-	Poirino	IT	Piedmont
-Church of Blessed Frederick Albert and Blessed Clemente Marchisio	Torino	IT	Piedmont
-Church of Saint John Vianney	Torino	IT	Piedmont
+Chiesa dei Beati Federico Albert e Clemente Marchisio	Torino	IT	Piedmont
+Chiesa di San Giovanni Vianney	Torino	IT	Piedmont
 Parrocchia Sacro Cuore di Gesu	Torino	IT	Piedmont
 Parrocchia Gesú Redentore	Torino	IT	Piedmont
-Church of Saint John Bosco	Torino	IT	Piedmont
+Chiesa di San Giovanni Bosco	Torino	IT	Piedmont
 Church of Jesus the Redeemer	Torino	IT	Piedmont
 Parrocchia Natale del Signore	Torino	IT	Piedmont
 Basilica Di Superga, Torino	Torino	IT	Piedmont
@@ -2155,14 +2155,14 @@ Parrocchia Santa Monica	Torino	IT	Piedmont
 San Giuseppe	Torino	IT	Piedmont
 Oratorio	Torino	IT	Piedmont
 Parrocchia San Pietro in Vincoli Cavoretto	Torino	IT	Piedmont
-Church of Our Lady delle Rose	Torino	IT	Piedmont
+Chiesa della Madonna delle Rose	Torino	IT	Piedmont
 Parrocchia Patrocinio di San Giuseppe	Torino	IT	Piedmont
 Monte Dei Cappuccini Torino	Torino	IT	Piedmont
 Parrocchia Madonna Addolorata	Torino	IT	Piedmont
 Cappella Della Maddalena	MONCALIERI	IT	Piedmont
 Parrocchia Ss. Nome di Maria	Torino	IT	Piedmont
 Santuario di Santa Rita da Cascia	Torino	IT	Piedmont
-Church of Saint Ignatius of Loyola	Torino	IT	Piedmont
+Chiesa di Sant'Ignazio di Loyola	Torino	IT	Piedmont
 Parrocchia S. Francesco di Sales di Torino	Torino	IT	Piedmont
 Oratorio/Circolo Anspi " Don Bosco"  Montafia	Montafia	IT	Piedmont
 Chiesa Sant'Antonio Padova	Grugliasco	IT	Piedmont
@@ -2184,7 +2184,7 @@ Parrocchia San Leonardo Murialdo	Torino	IT	Piedmont
 Chiesa Cattolica Parrocchiale La Visitazione	Torino	IT	Piedmont
 Chiesa Parrocchiale della Nativita di Maria Vergine	Torino	IT	Piedmont
 Chiesa Parrocchiale di Santa Rosa da Lima	Torino	IT	Piedmont
-Parish San Pellegrino Laziosi	Torino	IT	Piedmont
+Parrocchia di San Pellegrino Laziosi	Torino	IT	Piedmont
 Parrocchia Sant'anna	Torino	IT	Piedmont
 Oratorio Sant'Anna - APS	Torino	IT	Piedmont
 Saint Mary Goretti parish	Torino	IT	Piedmont
@@ -2205,33 +2205,33 @@ Parrocchia Santa Teresina - Torino	Torino	IT	Piedmont
 Chiesa delle Grazie	Torino	IT	Piedmont
 Parrocchia Ss.angeli Custodi	Torino	IT	Piedmont
 Church of Saints Peter and Paul Apostles	Torino	IT	Piedmont
-Church of Saint Maximus	Torino	IT	Piedmont
+Chiesa di San Massimo	Torino	IT	Piedmont
 Educativa di Strada - Oratorio Salesiano San Luigi Torino	Torino	IT	Piedmont
 Azione Cattolica	Torino	IT	Piedmont
 ACR Torind	Torino	IT	Piedmont
 San Carlo Borromeo	Torino	IT	Piedmont
 Chiesa della Visitazione	Torino	IT	Piedmont
-Church of the Immaculate Conception	Torino	IT	Piedmont
+Chiesa dell'Immacolata Concezione	Torino	IT	Piedmont
 Istituto Diocesano Sostentamento del Clero	Torino	IT	Piedmont
 Chiesa di San Michele Arcangelo	Torino	IT	Piedmont
-Church of Saint Pelagia	Torino	IT	Piedmont
+Chiesa di Santa Pelagia	Torino	IT	Piedmont
 Parrocchia SS. Annunziata - Torino	Torino	IT	Piedmont
 Chiesa di Santa Maria del Monte dei Cappuccini	Torino	IT	Piedmont
 Parrocchia Gran Madre Torino	Torino	IT	Piedmont
 Chiesa Della Gran Madre di Dio	Torino	IT	Piedmont
 Santuario Sant'Antonio di Padova	Torino	IT	Piedmont
-Church of Mary Regina delle Missioni	Torino	IT	Piedmont
+Chiesa di Maria Regina delle Missioni	Torino	IT	Piedmont
 Santuario N. S. di Lourdes - Torino	Torino	IT	Piedmont
 Chiesa di Santa Teresa di Gesu	Torino	IT	Piedmont
-Church of Saint Thomas the Apostle	Torino	IT	Piedmont
+Chiesa di San Tommaso	Torino	IT	Piedmont
 Maria Madre di Misericordia	Torino	IT	Piedmont
 Parrocchia San Giovanni Battista	Torino	IT	Piedmont
 Parrocchia Santa Barbara Vergine e Martire	Torino	IT	Piedmont
-Church of Saint Francis of Assisi	Torino	IT	Piedmont
-Sanctuary of Santa Maria di Piazza	Torino	IT	Piedmont
+Chiesa di San Francesco d'Assisi	Torino	IT	Piedmont
+Chiesa di Santa Maria di Piazza	Torino	IT	Piedmont
 Cappella della Pia Congregazione dei Banchieri e dei Mercanti	Torino	IT	Piedmont
 Chiesa di San Filippo Neri	Torino	IT	Piedmont
-Church of Saint Francis of Paola	Torino	IT	Piedmont
+Chiesa di San Francesco da Paola	Torino	IT	Piedmont
 Chiesa di San Lorenzo	Torino	IT	Piedmont
 Basilica of Corpus Domini	Torino	IT	Piedmont
 Chiesa di San Giovanni Battista	Torino	IT	Piedmont
@@ -2244,7 +2244,7 @@ Parrocchia di Santa Barbara e Rettoria di Madonna del Carmine di Torino	Torino	I
 Santuario della Consolata	Torino	IT	Piedmont
 Chiesa della Consolata	Torino	IT	Piedmont
 Basilica of Saints Maurice and Lazarus	Torino	IT	Piedmont
-Church of Saint Alphonsus	Torino	IT	Piedmont
+Chiesa di Sant'Alfonso Maria De' Liguori	Torino	IT	Piedmont
 Immacolata Concezione e San Donato	Torino	IT	Piedmont
 Parrocchia Santa Zita	Torino	IT	Piedmont
 Parrocchia delle Stimmate di San Francesco d'Assisi	Torino	IT	Piedmont
@@ -2261,7 +2261,7 @@ Casa Santa Giulia	Torino	IT	Piedmont
 Chiesa di Santa Giulia	Torino	IT	Piedmont
 Centro Ascolto Parrocchia Santa Giulia	Torino	IT	Piedmont
 Parrocchia SS Nome di Gesù	Torino	IT	Piedmont
-Church of the Holy Cross	Torino	IT	Piedmont
+Chiesa della Santa Croce	Torino	IT	Piedmont
 Chiese Cattoliche Parrocchiali - S	Torino	IT	Piedmont
 Madonna del Pilone	Torino	IT	Piedmont
 Parrocchia Gesù Operaio	Torino	IT	Piedmont
@@ -2283,12 +2283,12 @@ Parrocchia San Secondo Givoletto e San Lorenzo La Cassa	Givoletto	IT	Piedmont
 Santuario di Santa Maria Ausiliatrice	Givoletto	IT	Piedmont
 Parrocchia San Giuseppe	Collegno	IT	Piedmont
 Oratorio Sangiuseppecollegno	Collegno	IT	Piedmont
-Church of Blessed Pier Giorgio Frassati	Torino	IT	Piedmont
+Chiesa del Beato Pier Giorgio Frassati	Torino	IT	Piedmont
 Parrocchia Santi Bernardo e Brigida - Lucento	Torino	IT	Piedmont
 Parrocchia Santa Famiglia di Nazaret	Torino	IT	Piedmont
 Chiesa di Santa Caterina da Siena	Torino	IT	Piedmont
 Parrocchia Sacro Cuore di Gesu	Collegno	IT	Piedmont
-Church of Saint Francis of Assisi	Venaria Reale	IT	Piedmont
+Chiesa di San Francesco d'Assisi	Venaria Reale	IT	Piedmont
 ADMA Venaria	Venaria Reale	IT	Piedmont
 Parrocchia San Lorenzo	Venaria Reale	IT	Piedmont
 Servizio Pastorale Battesimale della Diocesi di Torino	Torino	IT	Piedmont
@@ -2299,7 +2299,7 @@ Chiesa della Salute - Torino	Torino	IT	Piedmont
 Oratorio SxA	Torino	IT	Piedmont
 Parrocchia Madonna di Campagna	Torino	IT	Piedmont
 Chiesa Cattolica Parrocchiale Madonna di Campagna	Torino	IT	Piedmont
-Church of Saint Anthony Abbott	Torino	IT	Piedmont
+Chiesa di Sant'Antonio Abate	Torino	IT	Piedmont
 Chiesa Cattolica Parrocchiale Sant'antonio Abate	Torino	IT	Piedmont
 Parrocchia Risurrezione del Signore	Torino	IT	Piedmont
 Parrocchia di San Giacomo Apostolo	Torino	IT	Piedmont
@@ -2310,7 +2310,7 @@ Cappella Campestre Di San Marchese	VENARIA	IT	Piedmont
 Parrocchia Druento	Druento	IT	Piedmont
 Church of Saint Hubert	Venaria Reale	IT	Piedmont
 Cappella di Sant'Umberto	Venaria Reale	IT	Piedmont
-Church of the Nativity of Saint Mary	Venaria Reale	IT	Piedmont
+Chiesa della Natività di Maria Vergine	Venaria Reale	IT	Piedmont
 Parrocchia Assunzione	Borgaro Torinese	IT	Piedmont
 Parrocchia di Nostra Signora del Sacro Cuore di Gesu	Mappano	IT	Piedmont
 Santuario di Nostra Signora della Saletta	Viù	IT	Piedmont
@@ -2318,7 +2318,7 @@ Cappella Della BV Consolata	Ceres	IT	Piedmont
 Santuario Nostra Signora Di Lourdes A Martassina	Ala di Stura	IT	Piedmont
 Parrocchia Ala di Stura e Balme	Ala di Stura	IT	Piedmont
 Cappella Madonna degli Angeli.	Ceres	IT	Piedmont
-Sanctuary of Santa Cristina	Cantoira	IT	Piedmont
+Santuario di Santa Cristina	Cantoira	IT	Piedmont
 Santuario di San Vito	Nole	IT	Piedmont
 Parrocchia di San Mauro Abate	Mathi	IT	Piedmont
 Oratorio San Raffaele Mathi	Mathi	IT	Piedmont
@@ -2374,7 +2374,7 @@ Oratorio Salesiano Giovannino Bosco - Castelnuovo Don Bosco	Castelnuovo Don Bosc
 Santuario della Madonna del Castello	Castelnuovo Don Bosco	IT	Piedmont
 Basilica Of Don Bosco - Colle Don Bosco	CASTELNUOVO DON BOSCO	IT	Piedmont
 Chiesa di Santa Maria di Cornareto	Castelnuovo Don Bosco	IT	Piedmont
-Church of Saint Benedict Abbott	San Mauro Torinese	IT	Piedmont
+Chiesa di San Benedetto Abate	San Mauro Torinese	IT	Piedmont
 Parrocchia di Pulcherada.	Settimo Torinese	IT	Piedmont
 Parrocchia San Giuseppe Artigiano Settimo Torinese	Settimo Torinese	IT	Piedmont
 Parrocchia San Michele Arcangelo	Gassino Torinese	IT	Piedmont
@@ -2441,7 +2441,7 @@ Parrocchia San Salvatore Vercelli	Vercelli	IT	Piedmont
 Basilica di Sant'Andrea	Vercelli	IT	Piedmont
 Parrocchia di S. Bernardo	Vercelli	IT	Piedmont
 Parrocchia di Sant'Agnese in San Francesco	Vercelli	IT	Piedmont
-Church of Santa Maria Maggiore	Vercelli	IT	Piedmont
+Chiesa di Santa Maria Maggiore	Vercelli	IT	Piedmont
 Arcidiocesi di Vercelli	Vercelli	IT	Piedmont
 Cattedrale di Sant'Eusebio	Vercelli	IT	Piedmont
 Vercelli Duomo	Vercelli	IT	Piedmont
@@ -2456,7 +2456,7 @@ Cappella Barchero	Sparone	IT	Piedmont
 Parrocchia Sant'Andrea Apostolo Prascorsano	Prascorsano	IT	Piedmont
 Santuario di Belmonte	Valperga	IT	Piedmont
 Oratorio San Caravario	Cuorgnè	IT	Piedmont
-Parish Of St. Giovanni Battista	Salassa	IT	Piedmont
+Chiesa di San Giovanni Battista	Salassa	IT	Piedmont
 Oratorio San Giuseppe Valperga	Valperga	IT	Piedmont
 Parrocchia San Giorgio Martire di Valperga	Valperga	IT	Piedmont
 Oratorio "La Rotonda"	Castellamonte	IT	Piedmont
@@ -2507,7 +2507,7 @@ Oratorio San Biagio	Borriana	IT	Piedmont
 Parrocchia San Paolo Biella	Biella	IT	Piedmont
 Basilica S. Sebastiano	Biella	IT	Piedmont
 Parrocchia San Giacomo	Biella	IT	Piedmont
-Church Of The Ss. Trinity	Biella	IT	Piedmont
+Chiesa della Santissima Trinità	Biella	IT	Piedmont
 Biella Cathedral	Biella	IT	Piedmont
 Parrocchia Santo Stefano	Biella	IT	Piedmont
 Oratorio Santo Stefano	Biella	IT	Piedmont
@@ -2550,7 +2550,7 @@ Santuario del Rossiglione	Portula	IT	Piedmont
 Santuario della Brugarola	Ailoche	IT	Piedmont
 Parrocchia Beata Vergine Assunta	Crevacuore	IT	Piedmont
 Parrocchia Romagnano Sesia	Romagnano Sesia	IT	Piedmont
-Church of Saint Martin	Romagnano Sesia	IT	Piedmont
+Chiesa di San Martino di Breclema	Romagnano Sesia	IT	Piedmont
 Oratorio di Sant'Emiliano	Sostegno	IT	Piedmont
 Oratorio Don Balocco	Serravalle Sesia	IT	Piedmont
 Santuario di Sant'Euseo	Serravalle Sesia	IT	Piedmont
@@ -2872,7 +2872,7 @@ Oratorio di San Lorenzo	Boccioleto	IT	Piedmont
 Chiesa di San Filiberto	Pella	IT	Piedmont
 Chiesa della Madonna dell'Assunta	Arola	IT	Piedmont
 Basilica di San Giulio	Orta San Giulio	IT	Piedmont
-Church of Saint Roch	Orta San Giulio	IT	Piedmont
+Chiesa di San Rocco	Orta San Giulio	IT	Piedmont
 Chiesa Parrocchiale di Santa Maria Assunta	Armeno	IT	Piedmont
 Parrocchie Armeno, Sovazza e Coiromonte	Armeno	IT	Piedmont
 Oratorio del Saliente	Quarna Sotto	IT	Piedmont
@@ -2926,7 +2926,7 @@ Chapelle de Corin	Crans-Montana	CH	Valais
 Église Sainte-Catherine	Sierre	CH	Valais
 Römisch-katholisches	Ergisch	CH	Valais
 Parrocchia Beata V. Del Rosario	Villadossola	IT	Piedmont
-Church of Santa Maria Assunta	Villadossola	IT	Piedmont
+Chiesa della Beata Vergine Assunta	Villadossola	IT	Piedmont
 Oratorio San Domenico Savio Villadossola	Villadossola	IT	Piedmont
 Chiesa di San Bartolomeo	Villadossola	IT	Piedmont
 Collegiata dei Santi Gervaso e Protaso	Domodossola	IT	Piedmont
@@ -3002,7 +3002,7 @@ Chiesa Parrocchiale dei Santi Pietro e Paolo	Cilavegna	IT	Lombardy
 Parrocchia Beata Vergine Assunta	Gravellona Lomellina	IT	Lombardy
 Chiesa di S. Rocco	Tromello	IT	Lombardy
 Oratorio San Giovanni Bosco	Garlasco	IT	Lombardy
-Sanctuary of the Madonna Bozzola	Garlasco	IT	Lombardy
+Santuario della Madonna della Bozzola	Garlasco	IT	Lombardy
 Oratorio della Chiesa dei Santi Gaudenzio ed Eusebio	Gambolò	IT	Lombardy
 Chiesa del Sacro Cuore	Pavia	IT	Lombardy
 Parrocchia del SS. Salvatore	Pavia	IT	Lombardy
@@ -3024,7 +3024,7 @@ Chiesa della Madonna degli Angeli	Vigevano	IT	Lombardy
 Chiesa della Madonna degli Angeli - Vigevano 	Vigevano	IT	Lombardy
 Santuario della Madonna di Pompei	Vigevano	IT	Lombardy
 Parrocchia B. V. Immacolata - Vigevano	Vigevano	IT	Lombardy
-Church of Saint Christopher	Vigevano	IT	Lombardy
+Chiesa di San Cristoforo	Vigevano	IT	Lombardy
 Chiesa di Santa Maria del Popolo	Vigevano	IT	Lombardy
 Chiesa di San Francesco d'Assisi	Vigevano	IT	Lombardy
 Cattedrale di Sant’Ambrogio	Vigevano	IT	Lombardy
@@ -3035,7 +3035,7 @@ Parrocchia Di San Francesco	Vigevano	IT	Lombardy
 Parrocchia San Giuseppe al Cascame Vigevano	Vigevano	IT	Lombardy
 Oratorio San Giuseppe	Vigevano	IT	Lombardy
 Oratorio B. V. Addolorata	Vigevano	IT	Lombardy
-Church of San Giovanni Bosco in Cristo Re	Vigevano	IT	Lombardy
+Chiesa di Cristo Re	Vigevano	IT	Lombardy
 Oratorio S. Luigi	Besate	IT	Lombardy
 Chiesa di San Giovanni Battista	Motta Visconti	IT	Lombardy
 Parrocchia di Giovenzano e Vellezzo	Vellezzo Bellini	IT	Lombardy
@@ -3052,7 +3052,7 @@ Parrocchia dei SS. Giovanni Battista e Stefano - Binasco	Binasco	IT	Lombardy
 Oratorio San Luigi Binasco	Binasco	IT	Lombardy
 Parrocchia Santo Spirito	Noviglio	IT	Lombardy
 Santuario Madonna di Caravaggio	Corvino San Quirico	IT	Lombardy
-Parish of Santa Maria Assunta	Pietra de' Giorgi	IT	Lombardy
+Parrocchia di Santa Maria Assunta	Pietra de' Giorgi	IT	Lombardy
 Basilica di San Pietro Apostolo	Broni	IT	Lombardy
 Cappella di San Contardo	Broni	IT	Lombardy
 Monte Di San Contardo, Broni	Broni	IT	Lombardy
@@ -3072,9 +3072,9 @@ Parrocchia di San Michele Arcangelo	Belgioioso	IT	Lombardy
 Oratorio di Filighera	Filighera	IT	Lombardy
 Parrocchia Santa Maria Assunta in Portalbera	Portalbera	IT	Lombardy
 Pieve di Parpanese	Arena Po	IT	Lombardy
-Church of San Giovanni Battista	Badia Pavese	IT	Lombardy
+Chiesa di San Giovanni Battista	Badia Pavese	IT	Lombardy
 Oratorio San Giovanni Bosco - Miradolo Terme	Miradolo Terme	IT	Lombardy
-Parish of St. Michele Arcangelo	Miradolo Terme	IT	Lombardy
+Chiesa di San Michele Arcangelo	Miradolo Terme	IT	Lombardy
 Santuario di Santa Maria del Monte Aureto	Miradolo Terme	IT	Lombardy
 Parrocchia San Michele Arcangelo	Gragnano Trebbiense	IT	Emilia-Romagna
 Santuario della B. V. del Pilastro	Gragnano Trebbiense	IT	Emilia-Romagna
@@ -3287,7 +3287,7 @@ Madonna di San Cassiano	Cameri	IT	Piedmont
 Parrocchie di Cassolnovo, Molino e Villanova	Cassolnovo	IT	Lombardy
 Parrocchia San Siro Ozzero	Ozzero	IT	Lombardy
 Oratorio Di San Luigi	ABBIATEGRASSO	IT	Lombardy
-Basilica of Santa Maria Nuova	Abbiategrasso	IT	Lombardy
+Basilica di Santa Maria Nuova	Abbiategrasso	IT	Lombardy
 Chiesa S.pietro Apostolo Abbiategrasso	Abbiategrasso	IT	Lombardy
 Parrocchia Sacro Cuore di Gesù	Abbiategrasso	IT	Lombardy
 Parrocchia Sant' Antonio Abate di Castelletto Abbiategrasso 	Abbiategrasso	IT	Lombardy
@@ -3296,7 +3296,7 @@ San Giovanni Battista Church	Robecco sul Naviglio	IT	Lombardy
 Oratorio San Giovanni Bosco	Robecco sul Naviglio	IT	Lombardy
 Chiesa di San Zenone	Vermezzo con Zelo	IT	Lombardy
 Oratorio di Vermezzo Zelo Gudo	Vermezzo con Zelo	IT	Lombardy
-Church of St. James	Zibido San Giacomo	IT	Lombardy
+Chiesa di San Giacomo	Zibido San Giacomo	IT	Lombardy
 Santuario di Sant'Invenzio	Gaggiano	IT	Lombardy
 Oratorio di Gaggiano	Milano	IT	Lombardy
 Oratorio Romano Banco	Buccinasco	IT	Lombardy
@@ -3348,7 +3348,7 @@ Oratorio San Luigi Gonzaga	Casorezzo	IT	Lombardy
 Parrocchia Santi Fermo e Rustico	Cusago	IT	Lombardy
 Oratorio San Luigi - Bareggio	Bareggio	IT	Lombardy
 Parrocchia S.s.nazaro e Celso	Bareggio	IT	Lombardy
-Church of Our Lady Pellegrina	Bareggio	IT	Lombardy
+Chiesa della Madonna Pellegrina	Bareggio	IT	Lombardy
 Oratorio San Martino	Bareggio	IT	Lombardy
 Oratorio San Pietro All'olmo	Cornaredo	IT	Lombardy
 Santa Marcellina in Muggiano	Milano	IT	Lombardy
@@ -3370,7 +3370,7 @@ Church of the Patron Saints of Italy	Milano	IT	Lombardy
 Parrocchia Sant'Anselmo da Baggio	Milano	IT	Lombardy
 Oratorio Santi Nabore e Felice	Milano	IT	Lombardy
 Duomo A Milano	Milano	IT	Lombardy
-Church of Saint Mary of the Angels and Saint Francis	Milano	IT	Lombardy
+Chiesa di Santa Maria degli Angeli e San Francesco	Milano	IT	Lombardy
 Chiesa di San Giuseppe Calasanzio	Milano	IT	Lombardy
 Oratorio San Giuseppe Calasanzio (Mi)	Milano	IT	Lombardy
 Santuario diocesano del beato don Gnocchi	Milano	IT	Lombardy
@@ -3417,7 +3417,7 @@ Oratorio S. G. Bosco	Pero	IT	Lombardy
 Parrocchia Della Visitazione di Maria Vergine	Pero	IT	Lombardy
 Oratorio Pio Xi	Milano	IT	Lombardy
 Parrocchia Santa Agnese Vergine e Martire	Milano	IT	Lombardy
-Church of Saint Lucia Martyr	Milano	IT	Lombardy
+Chiesa di Santa Lucia Martire	Milano	IT	Lombardy
 Chiesa Nostra Signora della Misericordia	Baranzate	IT	Lombardy
 Oratorio San Giovanni Bosco	Baranzate	IT	Lombardy
 Parrocchia della Resurrezione - Milano - Vialba	Milano	IT	Lombardy
@@ -3428,7 +3428,7 @@ Chiesa Parrocchiale Di Bellinzago Novarese	Bellinzago Novarese	IT	Piedmont
 Oratorio S. Luigi	Turbigo	IT	Lombardy
 Parrocchia di Robecchetto	Robecchetto con Induno	IT	Lombardy
 Oratorio Paolo Vi, San Zenone	CASTANO PRIMO	IT	Lombardy
-Church of Our Lady dei Poveri	Castano Primo	IT	Lombardy
+Chiesa della Madonna dei Poveri	Castano Primo	IT	Lombardy
 Chiesa di Santa Maria in Agro (Madonna di Grée)	Castano Primo	IT	Lombardy
 Oratorio Vandoni	Bellinzago Novarese	IT	Piedmont
 Oratorio Don Luigi Franzi - San Giovanni	Oleggio	IT	Piedmont
@@ -3447,20 +3447,20 @@ Oratorio Parrocchiale	Borgomanero	IT	Piedmont
 San Gottardo	Borgomanero	IT	Piedmont
 Chiesa Cattolica, Borgomanero	Borgomanero	IT	Piedmont
 Unità parrocchiale S. Giovanni Paolo II Agrate Conturbia e Divignano	Agrate Conturbia	IT	Piedmont
-Church of Saint Mary V. of the Assumption	Borgo Ticino	IT	Piedmont
-Church of Saint Vincent	Marano Ticino	IT	Piedmont
+Chiesa di Santa Maria Assunta	Borgo Ticino	IT	Piedmont
+Chiesa di San Vincenzo in Castro	Marano Ticino	IT	Piedmont
 Oratorio Maddalena	Somma Lombardo	IT	Lombardy
 Duomo Milan	Ferno	IT	Lombardy
 Oratorio Di Samarate	Samarate	IT	Lombardy
 Parrocchia SS Trinità	Samarate	IT	Lombardy
-Church of Saint Anastasius	Cardano al Campo	IT	Lombardy
+Chiesa di Sant'Anastasio	Cardano al Campo	IT	Lombardy
 Parrocchia SS Nazzaro e Celso	Gallarate	IT	Lombardy
 Oratorio Cuoricino - Cardano Al Campo	Cardano al Campo	IT	Lombardy
 Parrocchia Natività di Maria Vergine	Cardano al Campo	IT	Lombardy
 Aloisianum	Gallarate	IT	Lombardy
-Church of Our Lady della Speranza	Gallarate	IT	Lombardy
+Chiesa della Madonna della Speranza	Gallarate	IT	Lombardy
 Oratorio Ronchi	Gallarate	IT	Lombardy
-Church of Saint Mary of the Assumption	Golasecca	IT	Lombardy
+Chiesa di Santa Maria Assunta	Golasecca	IT	Lombardy
 Saint Peter's Church, Vatican City	Somma Lombardo	IT	Lombardy
 Basilica Somma Lombardo	Somma Lombardo	IT	Lombardy
 Chiesa di San Rocco	Gallarate	IT	Lombardy
@@ -3485,7 +3485,7 @@ Santuario di San Felice	Parabiago	IT	Lombardy
 Chiesa dei Santi Gervasio e Protasio	Parabiago	IT	Lombardy
 Oratorio Canegrate	Canegrate	IT	Lombardy
 Chiesa della Beata Vergine Assunta	Canegrate	IT	Lombardy
-Church of Saint Michael Archangel	Magnago	IT	Lombardy
+Chiesa di San Michele Arcangelo	Magnago	IT	Lombardy
 Chiesa Bienate	Magnago	IT	Lombardy
 Parrocchia - Oratorio di Borsano	Busto Arsizio	IT	Lombardy
 Oratorio e Teatro San Giovanni Bosco	Busto Arsizio	IT	Lombardy
@@ -3525,12 +3525,12 @@ Santa Messa in Latino a Legnano	Legnano	IT	Lombardy
 Oratorio SS. Redentore	Legnano	IT	Lombardy
 Cenacolo Regina della Pace	Legnano	IT	Lombardy
 Oratorio San Pietro	Legnano	IT	Lombardy
-Church of the Saint Magi	Legnano	IT	Lombardy
+Chiesa dei Santi Magi	Legnano	IT	Lombardy
 Oratorio Olmina OFFICIAL	Legnano	IT	Lombardy
 Oratorio Don Bosco - Rescaldina	Rescaldina	IT	Lombardy
 Parrocchia SS Bernardo e Giuseppe	Rescaldina	IT	Lombardy
 Chiesa Maria Madre della Chiesa	Nerviano	IT	Lombardy
-Church of Saint Rita of Cascia	Pogliano Milanese	IT	Lombardy
+Chiesa di Santa Rita da Cascia	Pogliano Milanese	IT	Lombardy
 Chiesa Parrocchiale di San Paolo	Rho	IT	Lombardy
 Oratorio San Carlo	Rho	IT	Lombardy
 Parrocchia San Vittore	Rho	IT	Lombardy
@@ -3565,14 +3565,14 @@ Oratorio San Carlo	Novate Milanese	IT	Lombardy
 Oratorio San Filippo Neri	Bollate	IT	Lombardy
 Parrocchia S. Martino	Bollate	IT	Lombardy
 Parrocchia S. Antonio di Padova	Bollate	IT	Lombardy
-Church of San Bernardino	Arese	IT	Lombardy
+Chiesa di San Bernardino	Arese	IT	Lombardy
 Parrocchia di SAN Guglielmo	Bollate	IT	Lombardy
 Oratorio Bariana	Garbagnate Milanese	IT	Lombardy
 Oratorio S.Maria Rossa Garbagnate	Garbagnate Milanese	IT	Lombardy
 Chiesa Parrocchiale di San Giovanni Battista	Garbagnate Milanese	IT	Lombardy
 Oratorio San Giovanni Bosco	Bollate	IT	Lombardy
 Parrocchia San Bernardo	Bollate	IT	Lombardy
-Church of San Bartolomeo	Cerro Maggiore	IT	Lombardy
+Chiesa di San Bartolomeo	Cerro Maggiore	IT	Lombardy
 Santuario della Madonna del Bosco	Origgio	IT	Lombardy
 Oratorio San Pio	Uboldo	IT	Lombardy
 Parrocchia dei Santi Apostoli Pietro e Paolo	Uboldo	IT	Lombardy
@@ -3594,7 +3594,7 @@ Oratorio Sacro Cuore	Limbiate	IT	Lombardy
 Oratorio San Luigi	Solaro	IT	Lombardy
 Limbiate Chiesa S.giorgio	Limbiate	IT	Lombardy
 Oratorio San Giorgio Limbiate	Limbiate	IT	Lombardy
-Parish St. Francis	Limbiate	IT	Lombardy
+Parrocchia di San Francesco	Limbiate	IT	Lombardy
 Oratorio San Francesco d'Assisi Limbiate	Solaro	IT	Lombardy
 Parrocchia S. Antonio DA Padova	Limbiate	IT	Lombardy
 Oratorio Santissimo Redentore - Busto A.	Busto Arsizio	IT	Lombardy
@@ -3604,11 +3604,11 @@ Parrocchia Nativita di Maria Vergine	Samarate	IT	Lombardy
 Parrocchia San Luigi e Beata Giuliana	Busto Arsizio	IT	Lombardy
 Chiesa di San Bernardino	Busto Arsizio	IT	Lombardy
 Oratorio San Giuseppe - Busto Arsizio	Busto Arsizio	IT	Lombardy
-Church of the Saint Apostles	Busto Arsizio	IT	Lombardy
+Chiesa dei Santi Apostoli	Busto Arsizio	IT	Lombardy
 Centro Parrocchiale Paolo Vi	Gallarate	IT	Lombardy
 Parrocchia Santuario della Madonna in Campagna	Gallarate	IT	Lombardy
 Parrocchia Madonna In Campagna	Gallarate	IT	Lombardy
-Basilica of Saint Mary of the Assumption	Gallarate	IT	Lombardy
+Basilica di Santa Maria Assunta	Gallarate	IT	Lombardy
 Chiesa di Sant'Antonio Abate	Gallarate	IT	Lombardy
 Parrocchia S. Maria Nascente	Marnate	IT	Lombardy
 Oratorio Maschile Centro Familiare San Stefano	Olgiate Olona	IT	Lombardy
@@ -3647,7 +3647,7 @@ Church Regina Pacis	Saronno	IT	Lombardy
 Oratorio_prealpi	Saronno	IT	Lombardy
 Parrocchia Sacra Famiglia	Saronno	IT	Lombardy
 ADORAZIONE EUCARISTICA PERPETUA - Santuario della Rete Mondiale di Preghiera del Papa Saronno	Saronno	IT	Lombardy
-Church of St. Antonio Abate	Saronno	IT	Lombardy
+Chiesa di Sant'Antonio Abate	Saronno	IT	Lombardy
 Parrocchia di S. Giovanni Battista	Saronno	IT	Lombardy
 Oratorio di Cassina Ferrara	Saronno	IT	Lombardy
 Chiesa di San Giulio	Cislago	IT	Lombardy
@@ -3684,7 +3684,7 @@ Parrocchia S. Giorgio	Bregnano	IT	Lombardy
 Parrocchia di San Siro	Misinto	IT	Lombardy
 Oratorio San Luigi Lazzate	Lazzate	IT	Lombardy
 Parrocchia S. Lorenzo M.	Lazzate	IT	Lombardy
-Church of Saint Vitus Martyr	Lentate sul Seveso	IT	Lombardy
+Chiesa di San Vito Martire	Lentate sul Seveso	IT	Lombardy
 Oratorio di S. Stefano	Lentate sul Seveso	IT	Lombardy
 Oratorio di Mocchirolo	Lentate sul Seveso	IT	Lombardy
 Parrocchia San Vito e Modesto	Cermenate	IT	Lombardy
@@ -3703,14 +3703,14 @@ Parrocchia Santi Pietro e Paolo	Opera	IT	Lombardy
 Oratorio San Carlo - SGM	San Giuliano Milanese	IT	Lombardy
 Parrocchia Civesio	San Giuliano Milanese	IT	Lombardy
 Oratorio San Luigi	San Giuliano Milanese	IT	Lombardy
-Church of Saint Julian Martyr	San Giuliano Milanese	IT	Lombardy
+Chiesa di San Giuliano Martire	San Giuliano Milanese	IT	Lombardy
 Parrocchia	San Giuliano Milanese	IT	Lombardy
 Parrocchia SAN CARLO Borromeo	San Giuliano Milanese	IT	Lombardy
 Parrocchia S.M. Madre Della Chiesa	Milano	IT	Lombardy
 ChiesaGratosoglio	Milano	IT	Lombardy
 Madre Teresa alle Terrazze	Milano	IT	Lombardy
 Oratorio Baronacom	Milano	IT	Lombardy
-Church of Saint Anthony Maria Zaccaria	Milano	IT	Lombardy
+Chiesa di Sant'Antonio Maria Zaccaria	Milano	IT	Lombardy
 Parrocchia SAMZ Milano	Milano	IT	Lombardy
 Chiesa Santa Bernardetta	Milano	IT	Lombardy
 Parrocchia San Giovanni Bono	Milano	IT	Lombardy
@@ -3718,12 +3718,12 @@ Parrocchia San Giovanni Bono	Milano	IT	Lombardy
 Santuario di Santa Rita da Cascia	Milano	IT	Lombardy
 Oratorio Santa Rita	Milano	IT	Lombardy
 Church of Saints Nazarius and Celsus	Milano	IT	Lombardy
-Church of Saint Mary alla Fonte	Milano	IT	Lombardy
+Chiesa di Santa Maria alla Fonte	Milano	IT	Lombardy
 Santa Maria Annunciata in Chiesa Rossa	Milano	IT	Lombardy
 Parrocchia San Gregorio Barbarigo	Milano	IT	Lombardy
 Parrocchia SS Giacomo e Giovanni	Milano	IT	Lombardy
-Church of Our Lady of Fatima	Milano	IT	Lombardy
-Church of Saint Mary Liberatrice	Milano	IT	Lombardy
+Chiesa della Madonna di Fatima	Milano	IT	Lombardy
+Chiesa di Santa Maria Liberatrice	Milano	IT	Lombardy
 Chiesa Santa Rita Milano Corvetto	Milano	IT	Lombardy
 Parrocchia di S. Michele Arcangelo e S. Rita	Milano	IT	Lombardy
 Saint Pietro and Paolo	San Giuliano Milanese	IT	Lombardy
@@ -3776,10 +3776,10 @@ Basilica di San Lorenzo Maggiore	Milano	IT	Lombardy
 Saint Bernardino at Nuns	Milano	IT	Lombardy
 Chiesa di San Giorgio al Palazzo	Milano	IT	Lombardy
 Chiesa di Sant'Alessandro in Zebedia	Milano	IT	Lombardy
-Church of Saint Andrew	Milano	IT	Lombardy
+Chiesa di Sant'Andrea	Milano	IT	Lombardy
 Chiese Cattoliche Parrocchiali Angeli Custodi	Milano	IT	Lombardy
 Oratorio Degli Angeli Custodi Via Colletta Milano	Milano	IT	Lombardy
-Church of Saint Louis Gonzaga	Milano	IT	Lombardy
+Chiesa di San Luigi Gonzaga	Milano	IT	Lombardy
 Parrocchia San Luigi Gonzaga Milano	Milano	IT	Lombardy
 Chiesa vecchia della Madonna della Medaglia Miracolosa	Milano	IT	Lombardy
 Parrocchia Sant'Eugenio	Milano	IT	Lombardy
@@ -3794,7 +3794,7 @@ Chiesa di San Francesco di Sales	Milano	IT	Lombardy
 Church of Saints Sylvester and Martin	Milano	IT	Lombardy
 Chiesa dei Santi Silvestro e Martino	Milano	IT	Lombardy
 Oratorio Silvestrianum	Milano	IT	Lombardy
-Basilica of San Nazarius in Brolo	Milano	IT	Lombardy
+Basilica di San Nazaro in Brolo	Milano	IT	Lombardy
 Basilica dei Santi Apostoli e Nazaro Maggiore	Milan	IT	Lombardy
 Chiesa di San Gottardo in Corte	Milano	IT	Lombardy
 Chiesa di Santa Maria presso San Satiro	Milano	IT	Lombardy
@@ -3811,7 +3811,7 @@ Oratorio del Turchino	Milano	IT	Lombardy
 Chiesa di Santa Maria del Suffragio	Milano	IT	Lombardy
 Parrocchia Preziosissimo Sangue	Milano	IT	Lombardy
 Oratorio di San Pietro in Sala	Milano	IT	Lombardy
-Church of Saint Protasius	Milano	IT	Lombardy
+Chiesa di San Protaso	Milano	IT	Lombardy
 Parrocchia San Protaso	Milano	IT	Lombardy
 Parrocchia Mater Amabilis	Milano	IT	Lombardy
 Chiesa Sacra Famiglia	Milano	IT	Lombardy
@@ -3821,7 +3821,7 @@ Madonna del Grembiule	Milano	IT	Lombardy
 Chiesa di Santa Maria alla Porta	Milano	IT	Lombardy
 San Nicolao	Milano	IT	Lombardy
 Rito Ambrosiano Antico - Milano	Milano	IT	Lombardy
-Church of St. Thomas in Terramara	Milano	IT	Lombardy
+Chiesa di San Tomaso in Terramara	Milano	IT	Lombardy
 Chiesa Di Santa Maria Della Passione	Milano	IT	Lombardy
 Chiesa Parrocchiale di Santa Maria Segreta	Milano	IT	Lombardy
 Chiesa del Carmine	Milano	IT	Lombardy
@@ -3841,15 +3841,15 @@ Basilica Santuario Sant'Antonio	Milano	IT	Lombardy
 duomo	Milano	IT	Lombardy
 Chiese Cattoliche Non Parrocchiali Duomo	Milano	IT	Lombardy
 Duomo Milano Italia	Milano	IT	Lombardy
-Basilica of San Carlo al Corso	Milano	IT	Lombardy
+Chiesa di San Carlo al Corso	Milano	IT	Lombardy
 Parrocchia Maronita Milano	Milano	IT	Lombardy
-Church of Santa Maria Annunciata in Camposanto	Milano	IT	Lombardy
+Chiesa di Santa Maria Annunciata in Camposanto	Milano	IT	Lombardy
 Приход святителя Амвросия Медиоланского в Милане	Milano	IT	Lombardy
 San Giuseppe	Milano	IT	Lombardy
 Chiesa di San Fedele	Milano	IT	Lombardy
 Santa Maria della Passione	Milano	IT	Lombardy
 Chiesa Sacro Cuore di Gesu	Milano	IT	Lombardy
-Church of Saint Francis of Paola	Milano	IT	Lombardy
+Chiesa di San Francesco di Paola	Milano	IT	Lombardy
 Duomo - Milão, Itália	Milano	IT	Lombardy
 Chiesa Parrocchiale di San Marco	Milano	IT	Lombardy
 Chiesa della Santa Croce	Milano	IT	Lombardy
@@ -3860,11 +3860,11 @@ Chiesa di Santa Francesca Romana	Milano	IT	Lombardy
 Duomo	Milano	IT	Lombardy
 Il Duomo, Milan, Italia	Milano	IT	Lombardy
 Duomo Di Milano, Italy	Milano	IT	Lombardy
-Church of Saint Joachim	Milano	IT	Lombardy
+Chiesa di San Gioachimo	Milano	IT	Lombardy
 Santuario di San Camillo de Lellis	Milano	IT	Lombardy
 Duomo At Milan, Italy	Milano	IT	Lombardy
 Oratorio San Giuseppe - Milano	Milano	IT	Lombardy
-Church of St. John 'in Laterano'	Milano	IT	Lombardy
+Chiesa di San Giovanni 'in Laterano'	Milano	IT	Lombardy
 Chiesa di San Pio X	Milano	IT	Lombardy
 Chiesa del Santissimo Redentore	Milano	IT	Lombardy
 Suore Missionarie Nostra Signora degli Apostoli	Milano	IT	Lombardy
@@ -3883,7 +3883,7 @@ Chiesa della Madonna del Rosario	Segrate	IT	Lombardy
 Oratorio di Novegro	Segrate	IT	Lombardy
 Parrocchia dei SS Carlo e Anna In Segrate	Segrate	IT	Lombardy
 Monastero delle Carmelitane Scalze	Milano	IT	Lombardy
-Church of Saint Joseph della Pace	Milano	IT	Lombardy
+Chiesa di San Giuseppe della Pace	Milano	IT	Lombardy
 Parrocchia del Sacro Cuore di Gesu	Milano	IT	Lombardy
 Oratorio Sacro Cuore di Gesu alla Cagnola	Milano	IT	Lombardy
 Oratorio San Gaetano	Milano	IT	Lombardy
@@ -3900,11 +3900,11 @@ E G Casa Immacolata Concezione delle Selasiane di Don Bosco	Milano	IT	Lombardy
 Catheral Duomo, Milan	Milano	IT	Lombardy
 Parrocchia di S. Agostino	Milano	IT	Lombardy
 Basilica di Sant’Agostino	Milano	IT	Lombardy
-Church of Saint Mary 'Bianca' of Misericords	Milano	IT	Lombardy
+Chiesa di Santa Maria Bianca della Misericordia	Milano	IT	Lombardy
 Abbazia di Casoretto	Milano	IT	Lombardy
-Church of Saint Mary Beltrade	Milano	IT	Lombardy
+Chiesa di Santa Maria Beltrade	Milano	IT	Lombardy
 Chiesa San Gabriele Arcangelo	Milano	IT	Lombardy
-Church of Saint John Chrysostom	Milano	IT	Lombardy
+Chiesa di San Giovanni Chrysostom	Milano	IT	Lombardy
 Parrocchia San Paolo Oratorio	Milano	IT	Lombardy
 Basilica Di San Paolo	Milano	IT	Lombardy
 Parrocchia Santa Angela Merici	Milano	IT	Lombardy
@@ -3934,10 +3934,10 @@ Parrocchia San Leone Magno	Milano	IT	Lombardy
 Chiesa di Maria Vergine Immacolata	Segrate	IT	Lombardy
 Parrocchia Beata Vergine Immacolata	Segrate	IT	Lombardy
 Parrocchia SAN Giuseppe dei Morenti Cappelletti Adrio	Milano	IT	Lombardy
-Church of Saint Jerome Emiliani	Milano	IT	Lombardy
+Chiesa di San Girolamo Emiliani	Milano	IT	Lombardy
 Chiesa di San Basilio	Milano	IT	Lombardy
 Parrocchia Dio Padre MI2	Segrate	IT	Lombardy
-Church of Saint Stephen	Segrate	IT	Lombardy
+Chiesa di Santo Stefano	Segrate	IT	Lombardy
 Oratorio S.ambrogio ad Fontes Segrate	Segrate	IT	Lombardy
 Oratorio San Luigi	Milano	IT	Lombardy
 Chiesa di Santa Maria Rossa	Milano	IT	Lombardy
@@ -3951,7 +3951,7 @@ Parrocchia di SAN Nicolo'	Vimodrone	IT	Lombardy
 P.le Pier Giorgio Frassati 2 Parrocchia DIO Trinita' D' Amore	Vimodrone	IT	Lombardy
 Oratorio Paolo VI	Vimodrone	IT	Lombardy
 Parrocchia di SAN Giuliano	Cologno Monzese	IT	Lombardy
-Church of Saint Ambrose	Settala	IT	Lombardy
+Chiesa di Sant'Ambrogio	Settala	IT	Lombardy
 Parrocchia S. Giorgio M.	Pioltello	IT	Lombardy
 Oratorio Lavagna	Comazzo	IT	Lombardy
 Chiesa di San Gerolamo	Liscate	IT	Lombardy
@@ -4052,11 +4052,11 @@ Comunita Pastorale Visitazione di Maria Vergine	Cormano	IT	Lombardy
 Parrocchia San Martino e l'Immacolata	Cusano Milanino	IT	Lombardy
 Santuario della Madonna della Cintura	Cusano Milanino	IT	Lombardy
 Parrocchia Madonna della Misericordia	Bresso	IT	Lombardy
-Sanctuary of the Madonna del Pilastrello	Bresso	IT	Lombardy
+Santuario della Madonna del Pilastrello	Bresso	IT	Lombardy
 Parrocchia San Nazaro e Celso	Bresso	IT	Lombardy
 Santuario Caravaggio	Sesto San Giovanni	IT	Lombardy
 Oratorio Sant'Andrea	Sesto San Giovanni	IT	Lombardy
-Church of Saint Joseph	Sesto San Giovanni	IT	Lombardy
+Chiesa di San Giuseppe	Sesto San Giovanni	IT	Lombardy
 Istituto Presentazione	Sesto San Giovanni	IT	Lombardy
 Chiesa San Giovanni Bosco	Sesto San Giovanni	IT	Lombardy
 Parrocchia S. Giovanni Bosco	Sesto San Giovanni	IT	Lombardy
@@ -4066,7 +4066,7 @@ Parrocchia Santa Maria Ausiliatrice	Sesto San Giovanni	IT	Lombardy
 Santuario San Martino in Balsamo	Cinisello Balsamo	IT	Lombardy
 Oratorio Pio XI	Cinisello Balsamo	IT	Lombardy
 Parrocchia di San Pietro Martire	Cinisello Balsamo	IT	Lombardy
-Church of Saint Mary Nascente	Paderno Dugnano	IT	Lombardy
+Chiesa di Santa Maria Nascente	Paderno Dugnano	IT	Lombardy
 Oratorio San Domenico Savio	Paderno Dugnano	IT	Lombardy
 Parrocchia dei Santi Nazaro e Celso	Paderno Dugnano	IT	Lombardy
 Parrocchia Regina Pacis	Cusano Milanino	IT	Lombardy
@@ -4087,7 +4087,7 @@ Duomo, Milano	Sesto San Giovanni	IT	Lombardy
 Oratorio San Carlo Sesto S.g.	Cinisello Balsamo	IT	Lombardy
 Oratorio San Carlo al Restellone Sesto San Giovanni	Sesto San Giovanni	IT	Lombardy
 Chiesa di San Giorgio alle Ferriere	Sesto San Giovanni	IT	Lombardy
-Church of Saint Maurice	Cologno Monzese	IT	Lombardy
+Chiesa di San Maurizio	Cologno Monzese	IT	Lombardy
 Oratorio San Luigi	Cologno Monzese	IT	Lombardy
 Parrocchia San Maurizio Al Lambro	Cologno Monzese	IT	Lombardy
 Parrocchia Santi Marco e Gregorio	Cologno Monzese	IT	Lombardy
@@ -4101,7 +4101,7 @@ Parrocchia San Fruttuoso	Monza	IT	Lombardy
 Oratorio San Giuseppe, Monza	Monza	IT	Lombardy
 Chiesa di Sant'Anna e Santi Cosma e Damiano	Brugherio	IT	Lombardy
 Parrocchia santa maria NASC S.carlo	Monza	IT	Lombardy
-Church of Saint Mary of the Assumption	Paderno Dugnano	IT	Lombardy
+Chiesa di Santa Maria Assunta	Paderno Dugnano	IT	Lombardy
 St. Martin Parish	Paderno Dugnano	IT	Lombardy
 Parrocchia San Martino	Paderno Dugnano	IT	Lombardy
 Oratorio Palazzolo Milanese	Paderno Dugnano	IT	Lombardy
@@ -4124,7 +4124,7 @@ Oratorio San Giovanni Bosco in Triante	Monza	IT	Lombardy
 Oratorio S. Carlo	Monza	IT	Lombardy
 Chiesa di Santa Maria Maddalena e Santa Teresa	Monza	IT	Lombardy
 Santa Maria in Strada	Monza	IT	Lombardy
-Church of Santa Maria degli Angeli	Monza	IT	Lombardy
+Chiesa di Santa Maria degli Angeli	Monza	IT	Lombardy
 chiesa di Santa Marta	Monza	IT	Lombardy
 Oratorio San Biagio	Monza	IT	Lombardy
 Chiesa Di Sant Andrea	Monza	IT	Lombardy
@@ -4144,10 +4144,10 @@ Missionarie Dell'Immacolata	Monza	IT	Lombardy
 Oratorio Alberto Marvelli	Monza	IT	Lombardy
 Chiesa del Sacro Cuore	Lissone	IT	Lombardy
 CP Ascensione del Signore - Monza	Monza	IT	Lombardy
-Church of Saint Gemma Galgani	Monza	IT	Lombardy
+Chiesa di Santa Gemma	Monza	IT	Lombardy
 Oratorio San Luigi	Lissone	IT	Lombardy
 Oratorio San Luigi Gonzaga	Vedano al Lambro	IT	Lombardy
-Church of Saint Joseph Artisan	Lissone	IT	Lombardy
+Chiesa di San Giuseppe Artigiano	Lissone	IT	Lombardy
 Parrocchia S. Anastasia	Villasanta	IT	Lombardy
 Parrocchia S. Fiorano	Villasanta	IT	Lombardy
 Oratorio Vedano Al Lambro	Vedano al Lambro	IT	Lombardy
@@ -4182,7 +4182,7 @@ Oratorio Busnago	Busnago	IT	Lombardy
 Santuario di Santa Maria delle Grazie	Cesano Maderno	IT	Lombardy
 Binzago	Cesano Maderno	IT	Lombardy
 Oratorio San Luigi di Binzago	Cesano Maderno	IT	Lombardy
-Church of Saint Stephen	Cesano Maderno	IT	Lombardy
+Chiesa di Santo Stefano Protomartire	Cesano Maderno	IT	Lombardy
 Catechesi in un clic	Desio	IT	Lombardy
 Oratorio Don Bosco	Cesano Maderno	IT	Lombardy
 Parrocchia S.pio X	Cesano Maderno	IT	Lombardy
@@ -4222,7 +4222,7 @@ Chiesa di Sant'Antonino Martire	Triuggio	IT	Lombardy
 Parrocchia S. Maria Assunta	Lesmo	IT	Lombardy
 Chiesa Madonna Di Fatima Meda Sud	Meda	IT	Lombardy
 Santuario del Santissimo Crocifisso	Meda	IT	Lombardy
-Church of San Vittore	Meda	IT	Lombardy
+Chiesa di San Vittore	Meda	IT	Lombardy
 Parrocchia S. Giacomo	Meda	IT	Lombardy
 Parrocchia S.maria Nascente Di Cabiati	Cabiate	IT	Lombardy
 Parrocchia di Carate	Carate Brianza	IT	Lombardy
@@ -4265,7 +4265,7 @@ Oratorio Di Solza	Solza	IT	Lombardy
 Parrocchia Sant'Alessandro Martire	Robbiate	IT	Lombardy
 Parrocchia di S. Pietro Apostolo	Merate	IT	Lombardy
 Oratorio San Giovanni Bosco	Merate	IT	Lombardy
-Church of Saint Ambrose	Merate	IT	Lombardy
+Chiesa di Sant'Ambrogio	Merate	IT	Lombardy
 Gruppo Parrocchiale Calusco d'Adda	Calusco d'Adda	IT	Lombardy
 Oratory Don Bosco	Carvico	IT	Lombardy
 Oratorio Annunciazione Cassano d'Adda	Cassano d'Adda	IT	Lombardy
@@ -4304,7 +4304,7 @@ Santuario Campi Veri	Cividate al Piano	IT	Lombardy
 Parrocchia di Santa Maria Assunta	Cologno al Serio	IT	Lombardy
 Oratorio in Festa	Cologno al Serio	IT	Lombardy
 Oratorio Sacro Cuore	Ghisalba	IT	Lombardy
-Church of St. Lorenzo Martire	Ghisalba	IT	Lombardy
+Chiesa di San Lorenzo Martire	Ghisalba	IT	Lombardy
 Chiesa dei Santi Nazario e Celso	Urgnano	IT	Lombardy
 Santuario di Ghisalba	Ghisalba	IT	Lombardy
 Parrocchia S. Lorenzo	Palosco	IT	Lombardy
@@ -4358,13 +4358,13 @@ Parrocchia San Tomaso Apostolo	Bergamo	IT	Lombardy
 Suore di Carità	Bergamo	IT	Lombardy
 Chiesa di San Lazzaro	Bergamo	IT	Lombardy
 Comunità cattolica latino-americana di Bergamo	Bergamo	IT	Lombardy
-Church of Our Lady dello Spasimo	Bergamo	IT	Lombardy
+Chiesa della Madonna dello Spasimo	Bergamo	IT	Lombardy
 Tempio Votivo della Pace	Bergamo	IT	Lombardy
 Parrocchia S.lucia	Bergamo	IT	Lombardy
 Oratorio Santa Lucia Bergamo	Bergamo	IT	Lombardy
 Parrocchia S. Lucia	Bergamo	IT	Lombardy
 Chiesa Cattolica Santa Lucia	Bergamo	IT	Lombardy
-Basilica of St. Alexander in Column	Bergamo	IT	Lombardy
+Basilica di Sant'Alessandro	Bergamo	IT	Lombardy
 Capela Colleoni, Bergamo	Bergamo	IT	Lombardy
 Basilica di Santa Maria Maggiore	Bergamo	IT	Lombardy
 Cattedrale di Bergamo	Bergamo	IT	Lombardy
@@ -4499,7 +4499,7 @@ Oratorio S.G.Bosco Verolavecchia	Verolavecchia	IT	Lombardy
 Basilica di San Lorenzo Martire	Verolanuova	IT	Lombardy
 Chiesa della Disciplina	Verolanuova	IT	Lombardy
 Parrocchia San Lorenzo	Verolanuova	IT	Lombardy
-Church of San Michele Arcangelo	Bassano Bresciano	IT	Lombardy
+Chiesa di San Michele Arcangelo	Bassano Bresciano	IT	Lombardy
 Oratorio S.Giovanni Bosco Milzanello	Leno	IT	Lombardy
 Parrocchia San Michele Arcangelo	Ostiano	IT	Lombardy
 Chiesa Pieve San Gaudenzio	Ostiano	IT	Lombardy
@@ -4544,8 +4544,8 @@ Chiesa di Santa Maria del Gradaro	Mantova	IT	Lombardy
 Cattedrale Di Mantova	Mantova	IT	Lombardy
 Parrocchia di Sant'Apollonia	Mantova	IT	Lombardy
 Parrocchia di Sant'Egidio	Mantova	IT	Lombardy
-Church of San Martino	Mantova	IT	Lombardy
-Church of Santa Maria degli Angeli	Mantova	IT	Lombardy
+Chiesa di San Martino	Mantova	IT	Lombardy
+Chiesa di Santa Maria degli Angeli	Mantova	IT	Lombardy
 Ognissanti	Mantova	IT	Lombardy
 Cappella Gonzaga	Mantova	IT	Lombardy
 Parrocchia di Santa Maria della Carita	Mantova	IT	Lombardy
@@ -4557,7 +4557,7 @@ Cattedrale Di S.pietro Apostolo Montova	Mantova	IT	Lombardy
 Cattedrale di San Pietro	Mantova	IT	Lombardy
 Duomo di Mantova	Mantova	IT	Lombardy
 Parrocchia di S. Pietro Apostolo	Mantova	IT	Lombardy
-Church of San Leonardo	Mantova	IT	Lombardy
+Chiesa di San Leonardo	Mantova	IT	Lombardy
 Chiesa di Santa Maria dei Miracoli	Mantova	IT	Lombardy
 Parrocchia di San Giorgio Martire	San Giorgio Bigarello	IT	Lombardy
 Chiesa Santa Maria in Valverde	San Benedetto Po	IT	Lombardy
@@ -4740,7 +4740,7 @@ Chiesa Parrocchiale di San Giacomo Maggiore	Ospitaletto	IT	Lombardy
 Oratorio S. Giovanni Bosco Ospitaletto	Ospitaletto	IT	Lombardy
 Parrocchia San Benedetto - Quartiere Primo Maggio - Brescia	Brescia	IT	Lombardy
 Parrocchia Violino	Brescia	IT	Lombardy
-Church of San Giacomo al Mella	Brescia	IT	Lombardy
+Chiesa di San Giacomo al Mella	Brescia	IT	Lombardy
 Oratorio San Giacomo	Brescia	IT	Lombardy
 Oratorio di Fiumicello	Brescia	IT	Lombardy
 Chiesa S. Giovanni Battista	Castegnato	IT	Lombardy
@@ -4818,7 +4818,7 @@ Chiesa dei Santi Nazaro e Celso	Brescia	IT	Lombardy
 Ancelle della Carità	Brescia	IT	Lombardy
 Santa Maria del Lino	Brescia	IT	Lombardy
 Santa Maria dei Miracoli	Brescia	IT	Lombardy
-Church of St. Ursula	Brescia	IT	Lombardy
+Chiesa di Sant'Orsola	Brescia	IT	Lombardy
 Chiesa di San Francesco d'Assisi	Brescia	IT	Lombardy
 Congregazione dell'Oratorio di San Filippo Neri - Padri della Pace	Brescia	IT	Lombardy
 Chiesa di Sant'Agata	Brescia	IT	Lombardy
@@ -4911,7 +4911,7 @@ Parrocchia di Ponti sul Mincio	Ponti sul Mincio	IT	Lombardy
 Tabaccheria Ponti sul Mincio	Ponti sul Mincio	IT	Lombardy
 Santuario della Madonna del Frassino	Peschiera del Garda	IT	Veneto
 Santuario del Frassino - Peschiera del Garda	Peschiera del Garda	IT	Veneto
-Parish of St. Martino Vescovo	Peschiera del Garda	IT	Veneto
+Chiesa di San Martino	Peschiera del Garda	IT	Veneto
 Chiesa di San Rocco	Villafranca di Verona	IT	Veneto
 Santuario della Madonna dell'Uva Secca	Povegliano Veronese	IT	Veneto
 Chiesetta di San Rocco	Sona	IT	Veneto
@@ -4926,11 +4926,11 @@ Chiesa di San Benedetto Abate di Lugana	Peschiera del Garda	IT	Veneto
 Parrocchia di Santa Maria Maggiore	Sirmione	IT	Lombardy
 Chiesa di Sant'Anna della Rocca	Sirmione	IT	Lombardy
 Chiesa di San Pietro in Mavino	Sirmione	IT	Lombardy
-Church of Saint Mary	Castelnuovo del Garda	IT	Veneto
+Chiesa di Santa Maria	Castelnuovo del Garda	IT	Veneto
 Parrocchia San Giuseppe all'Adige - Basson	Verona	IT	Veneto
 Chiesa Parrocchiale del Cristo Risorto	Bussolengo	IT	Veneto
 Santuario della Madonna del Perpetuo Soccorso	Bussolengo	IT	Veneto
-Church of Saint Mary Maggiore	Bussolengo	IT	Veneto
+Chiesa di Santa Maria Maggiore	Bussolengo	IT	Veneto
 Parrocchia di Pescantina	Pescantina	IT	Veneto
 Chiesa Di San Michele	Pescantina	IT	Veneto
 Duomo Di Pescantina	Pescantina	IT	Veneto
@@ -4982,7 +4982,7 @@ Centro Unit.Coop.Missionaria	Verona	IT	Veneto
 Chiesa dei Santi Nazaro e Celso	Verona	IT	Veneto
 Chiesa di Santa Maria del Paradiso	Verona	IT	Veneto
 Chiesa Cattolica Parrocchiale Madonna di Campagna Abitazione Del Parroco	Verona	IT	Veneto
-Church of Saint Michael Archangel	Verona	IT	Veneto
+Chiesa di San Michele Arcangelo	Verona	IT	Veneto
 Chiesa di Madonna della Strada	Belfiore	IT	Veneto
 Parrocchia di Belfiore	Belfiore	IT	Veneto
 Parrocchia di Caldierino	Caldiero	IT	Veneto
@@ -5015,7 +5015,7 @@ Parrocchia di San Nicola	Verona	IT	Veneto
 Basilica di Santa Anastasia	Verona	IT	Veneto
 Santa Anastasia, Verona, Italia	Verona	IT	Veneto
 Tombeaux De La Basilique	VERONA	IT	Veneto
-Church of Saint Thomas Becket	Verona	IT	Veneto
+Chiesa di San Tomaso Cantuariense	Verona	IT	Veneto
 Chiesa Parrocchiale di Santa Maria in Organo	Verona	IT	Veneto
 Chiesa di Santa Chiara	Verona	IT	Veneto
 Missionari Comboniani	Verona	IT	Veneto
@@ -5091,7 +5091,7 @@ Parrocchia Paruzzaro	Paruzzaro	IT	Piedmont
 Chiesa della Beata Vergine Immacolata	Colazza	IT	Piedmont
 Collegiata di Santa Maria Nascente	Arona	IT	Piedmont
 Chiesa di Santa Maria di Loreto	Arona	IT	Piedmont
-Church of St. Anne	Arona	IT	Piedmont
+Chiesa di Sant'Anna	Arona	IT	Piedmont
 Santuario Madonna della Riva	Angera	IT	Lombardy
 Chiesa di Santa Maria Assunta	Angera	IT	Lombardy
 ORATORIO CIM Castelletto Sopra Ticino	Castelletto Sopra Ticino	IT	Piedmont
@@ -5136,7 +5136,7 @@ Parrocchia San Ambrogio	Morazzone	IT	Lombardy
 Chiesa Parrocchiale della Beata Vergine del Rosario	Castiglione Olona	IT	Lombardy
 Oratorio San Luigi	Castiglione Olona	IT	Lombardy
 Oratorio di Santa Caterina di Alessandria	Buguggiate	IT	Lombardy
-Church of the Nativity of Saint Mary	Azzate	IT	Lombardy
+Chiesa della Natività di Maria Vergine	Azzate	IT	Lombardy
 Chiesa Azzate	Azzate	IT	Lombardy
 Oratorio San Giuseppe -Gazzada-	Gazzada Schianno	IT	Lombardy
 Chiesa della Santa Croce	Gazzada Schianno	IT	Lombardy
@@ -5176,7 +5176,7 @@ Oratorio S. Giovanni Bosco - Maccio	Villa Guardia	IT	Lombardy
 Parrocchia di Maccio	Villa Guardia	IT	Lombardy
 Parrocchia San Giorgio	Montano Lucino	IT	Lombardy
 Parrocchia Santi Antonio e Bernardo	Casnate con Bernate	IT	Lombardy
-Church of Saint Leonard	Capiago Intimiano	IT	Lombardy
+Chiesa di San Leonardo	Capiago Intimiano	IT	Lombardy
 Oratorio	Capiago Intimiano	IT	Lombardy
 Chiesa Parrocchiale di San Bartolomeo Apostolo	Grandate	IT	Lombardy
 Santuario di Sant'Antonio di Padova	Como	IT	Lombardy
@@ -5200,7 +5200,7 @@ Chiesa Brunella	Varese	IT	Lombardy
 Parish St. Anthony of Padua	Varese	IT	Lombardy
 Parrocchia di Biumo Inferiore	Varese	IT	Lombardy
 Comunita Pastorale Maria Madre Immacolata	Varese	IT	Lombardy
-Church of Saint Maximilian Kolbe	Varese	IT	Lombardy
+Chiesa di San Massimiliano Kolbe	Varese	IT	Lombardy
 Parrocchia di Cantello	Cantello	IT	Lombardy
 Parrocchia Prepositurale dei Ss. Mm. Quirico e Giulitta	Novazzano	CH	Ticino
 Chiesa di Sant'Ambrogio	Varese	IT	Lombardy
@@ -5278,14 +5278,14 @@ Santuario Santissima Trinità	Carate Urio	IT	Lombardy
 Chiesa di Santa Marta	Carate Urio	IT	Lombardy
 Parrocchia SS Giuseppe e Biagio	Stresa	IT	Piedmont
 Parrocchia SS Giuseppe e Biagio	Stresa	IT	Piedmont
-Church of San Vittore	Baveno	IT	Piedmont
+Chiesa di San Vittore	Baveno	IT	Piedmont
 Chiesa dei Santi Gervaso e Protaso	Baveno	IT	Piedmont
 Parrocchia Arcipreturale Dei Ss. Ambrogio E Theodulo	Stresa	IT	Piedmont
 Casa di Gesù Bambino -Istituto Cerro di Laveno Mombello	Laveno Mombello	IT	Lombardy
 Parrocchia Prepositurale di Baveno	Baveno	IT	Piedmont
-Church of Our Lady del Buon Rimedio	Verbania	IT	Piedmont
+Chiesa della Madonna del Buon Rimedio	Verbania	IT	Piedmont
 Chiesa Madre di Santa Maria Assunta	Mergozzo	IT	Piedmont
-Church of Our Lady di Campagna	Verbania	IT	Piedmont
+Chiesa di Madonna di Campagna	Verbania	IT	Piedmont
 Parrocchia Natività di Maria - Momo	Gargallo	IT	Piedmont
 Basilica San Vittore Martire	Verbania	IT	Piedmont
 Oratorio Circolo San Vittore	Verbania	IT	Piedmont
@@ -5334,7 +5334,7 @@ Santuario della Madonna del Castelletto	Circolo del Ceresio	CH	Ticino
 Santuario di Santa Maria dei Ghirli	Campione d'Italia	IT	Lombardy
 Oratorio di San pietro	Campione d'Italia	IT	Lombardy
 Eremo di San Zeno	Schignano	IT	Lombardy
-Church of Santa Maria Assunta	Schignano	IT	Lombardy
+Chiesa di Santa Maria Assunta	Schignano	IT	Lombardy
 Parrocchia cattolica	Lavena Ponte Tresa	IT	Lombardy
 Parrocchia San Cristoforo, Caslano	Caslano	CH	Ticino
 Chiesa Santa Maria degli Angioli	Lugano	CH	Ticino
@@ -5367,7 +5367,7 @@ Parrocchia cattolica	Lugano	CH	Ticino
 Santuario Nostra Signora dei Miracoli	Valsolda	IT	Lombardy
 Oratorio San Luigi di Porlezza	Porlezza	IT	Lombardy
 Chiesa San Bartolomeo apostolo	Carugo	IT	Lombardy
-Church of Saint Apostles Peter and Paul	Cantù	IT	Lombardy
+Chiesa dei Santi Apostoli Pietro e Paolo	Cantù	IT	Lombardy
 Oratorio San Giuseppe Di Vighizzolo	Cantù	IT	Lombardy
 Parrocchia S. Ambrogio	Inverigo	IT	Lombardy
 Santuario di Santa Maria della Noce	Inverigo	IT	Lombardy
@@ -5417,7 +5417,7 @@ Chiesa di S. Maria Maddalena	Erba	IT	Lombardy
 Parrocchia di S. Maria Annunciata	Ponte Lambro	IT	Lombardy
 Parrocchia S. Giuseppe - Garbagnate Rota	Bosisio Parini	IT	Lombardy
 Parrocchia S. Anna - Bosisio Parini	Bosisio Parini	IT	Lombardy
-Church of the Nativity of Saint Mary	Pusiano	IT	Lombardy
+Chiesa della Natività di Maria	Pusiano	IT	Lombardy
 Santuario Madonna della Neve	Pusiano	IT	Lombardy
 Parrocchia SS Pietro e Paolo	Erba	IT	Lombardy
 Chiesa di San Bernardino	Erba	IT	Lombardy
@@ -5437,7 +5437,7 @@ Parrocchia di S. Stefano	Garlate	IT	Lombardy
 Basilica San Pietro Al Monte	Valmadrera	IT	Lombardy
 San Michele Galbiate	Lecco	IT	Lombardy
 Oratorio San Giuseppe Olginate	Olginate	IT	Lombardy
-Church of Saint Agnes	Olginate	IT	Lombardy
+Chiesa di Sant'Agnese	Olginate	IT	Lombardy
 Chiesa del Corpus Domini e San Giuseppe Operaio	Calolziocorte	IT	Lombardy
 Oratorio San Michele Foppenico	Calolziocorte	IT	Lombardy
 Parrocchia di Lorentino	Calolziocorte	IT	Lombardy
@@ -5456,7 +5456,7 @@ Oratorio di Pescarenico	Lecco	IT	Lombardy
 Santi Materno e Lucia	Lecco	IT	Lombardy
 Parrocchia San Leonardo - Malgrate	Malgrate	IT	Lombardy
 Santuario Nostra Signora Della Vittoria	Lecco	IT	Lombardy
-Church of Santa Marta	Lecco	IT	Lombardy
+Chiesa di Santa Marta	Lecco	IT	Lombardy
 Lecco Centro	Lecco	IT	Lombardy
 Santa Messa in Latino - Lecco	Lecco	IT	Lombardy
 Oratorio San Luigi	Lecco	IT	Lombardy
@@ -5483,7 +5483,7 @@ Parish S. Maria Assunta	Brembate di Sopra	IT	Lombardy
 Parrocchia Ossanesga	Valbrembo	IT	Lombardy
 Parrocchia di Sombreno	Paladina	IT	Lombardy
 Santuario della Beata Vergine della Castagna	Bergamo	IT	Lombardy
-Church of the Holy Sepulcher	Bergamo	IT	Lombardy
+Chiesa del Santo Sepolcro	Bergamo	IT	Lombardy
 Bergamo Alta Cattedrale	Bergamo	IT	Lombardy
 Chiesa di Sant'Agata nel Carmine	Bergamo	IT	Lombardy
 Chiesa Cattolica Parrochiale S. Alessandro	Bergamo	IT	Lombardy
@@ -5578,7 +5578,7 @@ Chiesa di San Pietro Martire	Oliveto Lario	IT	Lombardy
 Chiesa Arcipretale San Lorenzo	Mandello del Lario	IT	Lombardy
 Oratorio San Lorenzo	Mandello del Lario	IT	Lombardy
 Santuario della Beata Vergine del Fiume	Mandello del Lario	IT	Lombardy
-Church of Saint Michael Archangel	Colonno	IT	Lombardy
+Chiesa di San Michele Arcangelo	Colonno	IT	Lombardy
 Chiesa Madre di San Bartolomeo	Sala Comacina	IT	Lombardy
 Chiesa dei Santi Giacomo e Filippo	Tremezzina	IT	Lombardy
 Basilica di Sant'Eufemia (Isola Comacina)	Tremezzo	IT	Lombardy
@@ -5606,7 +5606,7 @@ Chiesa di Sant'Antonio Abate	Perledo	IT	Lombardy
 Chiesa di San Martino	Perledo	IT	Lombardy
 Chiesa Prepositurale dei Santi Nazaro e Celso	Bellano	IT	Lombardy
 Cappella Cainallo	Esino Lario	IT	Lombardy
-Church of San Vittore	Esino Lario	IT	Lombardy
+Chiesa di San Vittore	Esino Lario	IT	Lombardy
 Chiesa di San Giovanni Battista	Esino Lario	IT	Lombardy
 Parrocchia dei Santi Gervasio e Protasio	Cortenova	IT	Lombardy
 Parrocchia San Francesco Moggio	Cortenova	IT	Lombardy
@@ -5677,7 +5677,7 @@ Santuario della Madonna di Valpozzo	Piantedo	IT	Lombardy
 Chiesa dei SS. Gusmeo e Matteo	Gravedona ed Uniti	IT	Lombardy
 Santa Croce Di Naro	Gravedona ed Uniti	IT	Lombardy
 Chiesa di San Vincenzo	Gera Lario	IT	Lombardy
-Church of Santo Stefano	Sorico	IT	Lombardy
+Chiesa di Santo Stefano	Sorico	IT	Lombardy
 Chiesa di San Miro	Sorico	IT	Lombardy
 Chiesa di San Bartolomeo	Sorico	IT	Lombardy
 Parrocchia di Regoledo di Cosio	Cosio Valtellino	IT	Lombardy
@@ -5696,14 +5696,14 @@ Chiesa di San Rocco (Mesocco)	Mesocco	CH	Grisons
 Oratorio Parrocchiale San Luigi	Chiavenna	IT	Lombardy
 Santuario Di Gallivaggio	Campodolcino	IT	Lombardy
 Pieve Di Sant'andrea Iseo	Vigano San Martino	IT	Lombardy
-Church of Santo Stefano	Berzo San Fermo	IT	Lombardy
+Chiesa di Santo Stefano	Berzo San Fermo	IT	Lombardy
 Parrocchia della Natività di Maria Vergine	Grone	IT	Lombardy
 Parrocchia di Sant'Alessandro in Ono San Pietro - BS	Ono San Pietro	IT	Lombardy
 Santuario d'Altino	Albino	IT	Lombardy
 Santuario del Colle Gallo	Gaverina Terme	IT	Lombardy
 Unità Pastorale Val Cavallina Centro	Casazza	IT	Lombardy
 Parrocchia di Spinone	Spinone al Lago	IT	Lombardy
-Church of San Bernardino	Ranzanico	IT	Lombardy
+Oratorio di San Bernardino	Ranzanico	IT	Lombardy
 Santuario di Altino	Albino	IT	Lombardy
 Chiesa Parrocchiale di Santa Maria Maddalena	Tavernola Bergamasca	IT	Lombardy
 Parrocchia Santi Faustino e Giovita	Monte Isola	IT	Lombardy
@@ -5746,7 +5746,7 @@ Oratorio Don Bosco	Artogne	IT	Lombardy
 Santuario della Madonna del Monte	Gianico	IT	Lombardy
 Oratorio Darfo	Darfo Boario Terme	IT	Lombardy
 Parrocchia di Marcheno	Marcheno	IT	Lombardy
-Parish of St. Michele Arcangelo	Marcheno	IT	Lombardy
+Parrocchia di San Michele Arcangelo	Marcheno	IT	Lombardy
 Chiesa Arcipretale dei Santi Cosma e Damiano	Marmentino	IT	Lombardy
 Parrocchia della Visitazione di Maria	Vestone	IT	Lombardy
 Chiesa Parrocchiale di San Martino	Treviso Bresciano	IT	Lombardy
@@ -5789,12 +5789,12 @@ Chiesa Vecchia S.Andrea	Malegno	IT	Lombardy
 Oratorio di Malegno	Malegno	IT	Lombardy
 Santa Maria Annunciata	Bienno	IT	Lombardy
 Chiesa di San Valentino Prete Martire	Breno	IT	Lombardy
-Church of Saint Antonio	Breno	IT	Lombardy
+Chiesa di Sant'Antonio	Breno	IT	Lombardy
 Chiesa di Santa Cristina	Lozio	IT	Lombardy
 Santuario della Via Crucis con Cappelle di Cerveno	Cerveno	IT	Lombardy
 Church of Saints Gervasio and Protasio	Ceto	IT	Lombardy
 Cemmo Oratorio	Capo di Ponte	IT	Lombardy
-Church of Santa Maria Assunta	Capo di Ponte	IT	Lombardy
+Chiesa di Santa Maria Assunta	Capo di Ponte	IT	Lombardy
 Chiesa di San Nicola	Brenzone sul Garda	IT	Veneto
 Santuario di Montecastello	Tignale	IT	Lombardy
 Comune Di Avio Madonna Della Neve	Torrebelvicino	IT	Trentino-Alto Adige
@@ -5883,7 +5883,7 @@ Chiesa di San Giovanni Battista	Vezza d'Oglio	IT	Lombardy
 Chiesa di San Clemente	Vezza d'Oglio	IT	Lombardy
 Chiesa della Santissima Trinità	Ponte di Legno	IT	Lombardy
 Chiesa Collegiata Parrocchiale di Santa Maria Maggiore	Sondalo	IT	Lombardy
-Church of Saint Vigilius of Trent	Pinzolo	IT	Trentino-Alto Adige
+Chiesa di San Vigilio	Pinzolo	IT	Trentino-Alto Adige
 Chiesa di S. Stefano	Carisolo	IT	Trentino-Alto Adige
 Chiesa di Santa Maria Antica	Pinzolo	IT	Trentino-Alto Adige
 Chiesa Madre	Pinzolo	IT	Trentino-Alto Adige
@@ -5920,12 +5920,12 @@ Oratorio Don Bosco APS Gardolo	Trento	IT	Trentino-Alto Adige
 Parrocchia San Udalrico	Lavis	IT	Trentino-Alto Adige
 Comunità di Pinè	Baselga di Pinè	IT	Trentino-Alto Adige
 Parrocchie della Paganella	Cavedago	IT	Trentino-Alto Adige
-Church of St. Thomas	Cavedago	IT	Trentino-Alto Adige
+Chiesa di San Tommaso	Cavedago	IT	Trentino-Alto Adige
 Chiesetta di San Giorgio	Giovo	IT	Trentino-Alto Adige
 Chiesetta di San Leonardo	Cembra Lisignago	IT	Trentino-Alto Adige
 Chiesa San Biagio	Cembra Lisignago	IT	Trentino-Alto Adige
 chiesa di Santa Maria Assunta	Cembra Lisignago	IT	Trentino-Alto Adige
-Church of the Immaculate	Segonzano	IT	Trentino-Alto Adige
+Chiesa dell'Immacolata	Segonzano	IT	Trentino-Alto Adige
 Chiesa di San Giovanni Battista	Mezzolombardo	IT	Trentino-Alto Adige
 Chiesa dell'Addolorata	Mezzolombardo	IT	Trentino-Alto Adige
 Parrocchia di Mezzolombardo	Mezzolombardo	IT	Trentino-Alto Adige
@@ -6400,8 +6400,8 @@ Paroisse Sts Pierre et Paul	Mulhouse	FR	Alsace
 Chapelle Saint Jean	Mulhouse	FR	Alsace
 Eglise Notre Dame	Riedisheim	FR	Alsace
 Paroisse Saint Joseph	Mulhouse	FR	Alsace
-Parish St. Fridolin	Mulhouse	FR	Alsace
-Church St Maurice	Pfastatt	FR	Alsace
+Église Saint-Fridolin de Mulhouse	Mulhouse	FR	Alsace
+Église Saint-Maurice	Pfastatt	FR	Alsace
 Église Saint-Antoine	Mulhouse	FR	Alsace
 Bureau d'accueil de la Paroisse Sainte Geneviève	Mulhouse	FR	Alsace
 Église Sainte Geneviève	Mulhouse	FR	Alsace
@@ -6431,7 +6431,7 @@ Röm.- kath. Pfarramt	Wegenstetten	CH	Aargau
 Pfarrkirche St. Michael	Wegenstetten	CH	Aargau
 Römisch-Kathol. Kirche	Frick	CH	Aargau
 Römisch-Kathol. Kirche	Frick	CH	Aargau
-Church of St. Peter and Paul	Frick	CH	Aargau
+Kirche St. Peter und Paul	Frick	CH	Aargau
 Katholische Pfarrkirche St. Leodegar	Schupfart	CH	Aargau
 St. Felix und Regula	Rheinfelden (Baden)	DE	Baden-Wuerttemberg
 St. Peter und Paul	Rheinfelden (Baden)	DE	Baden-Wuerttemberg
@@ -6591,7 +6591,7 @@ Expositurkirche zum hl. Josef	Sankt Leonhard im Pitztal	AT	Tyrol
 Pfarrkirche Hl. Martin Huben	Längenfeld	AT	Tyrol
 Pfarrkirche Längenfeld	Längenfeld	AT	Tyrol
 Pfarrkirche Unterägeri	Unterägeri	CH	Zug
-Church of St. Oswald	Zug	CH	Zug
+Kirche St. Oswald	Zug	CH	Zug
 St. Oswaldskirche	Zug	CH	Zug
 Missionsschwestern vom hl. Petrus Claver	Zug	CH	Zug
 Katholische Kirchgemeinde der Stadt Zug	Zug	CH	Zug
@@ -6672,7 +6672,7 @@ Behindertenseelsorge	Zürich	CH	Zurich
 Bruder Klaus	Zürich	CH	Zurich
 Magyar Misszió Zürich - Ungarnmission Zürich	Zürich	CH	Zurich
 Allerheiligen	Zürich	CH	Zurich
-Parish of St. Anthony	Wallisellen	CH	Zurich
+Pfarrei St. Antonius	Wallisellen	CH	Zurich
 Römisch-katholisches Pfarramt St. Mauritius	Regensdorf	CH	Zurich
 Römisch-Katholische Kirchgemeinde Maria-Lourdes	Zürich	CH	Zurich
 Katholische Pfarrei St. Michael Dietlikon Wangen-Brüttisellen	Dietlikon	CH	Zurich
@@ -6704,7 +6704,7 @@ Pfarre Nenzing	Nenzing	AT	Vorarlberg
 Pfarrkirche Bludesch	Bludesch	AT	Vorarlberg
 Ehe- Partner- Familien- und Lebensberatung d Katholischen Kirche Vbg	Bludenz	AT	Vorarlberg
 Pfarrkirche Mauren	Mauren	LI	Mauren
-Church St. Michael	Feldkirch	AT	Vorarlberg
+Alte Pfarrkirche Feldkirch-Tisis	Feldkirch	AT	Vorarlberg
 Pfarrkirche St. Sulpitius	Frastanz	AT	Vorarlberg
 Katholisches Bildungswerk Vorarlberg	Feldkirch	AT	Vorarlberg
 St. Wolfgangkapelle Tosters Feldkirch	Feldkirch	AT	Vorarlberg
@@ -6751,7 +6751,7 @@ Pfarrei Balgach	Balgach	CH	Appenzell Innerrhoden
 Katholische Kirche Au	Au	CH	Appenzell Innerrhoden
 St. Antonius Kapelle	Lustenau	AT	Vorarlberg
 röm. kath.	Berneck	CH	Saint Gallen
-Parish of St. Peter and Paul	Lustenau	AT	Vorarlberg
+Pfarrkirche St. Peter und Paul	Lustenau	AT	Vorarlberg
 Parish Church Dornbirn-Hatlerdorf	Dornbirn	AT	Vorarlberg
 Pfarre Bruder Klaus	Dornbirn	AT	Vorarlberg
 Pfarrkirche Dornbirn-Schoren	Dornbirn	AT	Vorarlberg
@@ -6817,7 +6817,7 @@ Lustenau Kirche	Hard	AT	Vorarlberg
 Pfarrkirche St. Georg	Lauterach	AT	Vorarlberg
 Pfarrzentrum	Hard	AT	Vorarlberg
 Pfarrkirche St. Sebastian	Hard	AT	Vorarlberg
-Parish Church of Saint Kolumban	Bregenz	AT	Vorarlberg
+Pfarrkirche Bregenz-St. Kolumban	Bregenz	AT	Vorarlberg
 Pfarrkirche Bregenz-St. Gebhard	Bregenz	AT	Vorarlberg
 Pfarrkirche Mariahilf	Bregenz	AT	Vorarlberg
 Kirche St. Gallus	Bregenz	AT	Vorarlberg
@@ -6876,7 +6876,7 @@ St. Jodok	Ravensburg	DE	Baden-Wuerttemberg
 Pfarrbüro Liebfrauen	Ravensburg	DE	Baden-Wuerttemberg
 Katholische Seelsorge bei Menschen mit Hörschädigung	Ravensburg	DE	Baden-Wuerttemberg
 Kath. Gesamtkirchenpflege Ravensburg	Ravensburg	DE	Baden-Wuerttemberg
-Basilica St. Martin	Weingarten	DE	Baden-Wuerttemberg
+Basilika St. Martin	Weingarten	DE	Baden-Wuerttemberg
 St. Laurentius	Wangen im Allgäu	DE	Baden-Wuerttemberg
 Katholisches Gemeindehaus Vogt	Vogt	DE	Baden-Wuerttemberg
 Pfarrkirche Hl. Nikolaus	Innerbraz	AT	Vorarlberg
@@ -6963,7 +6963,7 @@ Wallfahrtskirche Maria Trost	Nesselwang	DE	Bavaria
 St. Maria	Isny im Allgäu	DE	Baden-Wuerttemberg
 Rasenkreuz Meggen	Au	DE	Baden-Wuerttemberg
 Pfarramt Waltershofen	Kißlegg	DE	Baden-Wuerttemberg
-Parish Church of St. Gallus and Ulrich	Kißlegg	DE	Baden-Wuerttemberg
+Pfarrkirche St. Gallus und Ulrich	Kißlegg	DE	Baden-Wuerttemberg
 Mariä Himmelfahrt	Leutkirch im Allgäu	DE	Baden-Wuerttemberg
 Mariä Himmelfahrt	Altusried	DE	Baden-Wuerttemberg
 Wallfahrtskirche Heilig Kreuz	Altusried	DE	Bavaria
@@ -7210,7 +7210,7 @@ Paroisse.elelyon	Chartres	FR	Centre
 Chapelle Saint Jean Paul Ii	Auneau-Bleury-St-Symphorien	FR	Centre
 Église Saint-Pierre de Sainville	Sainville	FR	Centre
 Église de Chalo-Saint-Mars	Chalo-Saint-Mars	FR	Ile-de-France
-Church of Saint Remy	Auneau-Bleury-Saint-Symphorien	FR	Centre
+Église Saint-Remy	Auneau-Bleury-Saint-Symphorien	FR	Centre
 Paroisse Bse Marie Poussepin	Auneau-Bleury-Saint-Symphorien	FR	Centre
 Paroisse d'Ablis	Ablis	FR	Ile-de-France
 FSSP Saint-Martin	Saint-Martin-de-Bréthencourt	FR	Ile-de-France
@@ -7257,7 +7257,7 @@ Pôle catholique missionnaire de Fontainebleau	Fontainebleau	FR	Ile-de-France
 Fraternité Saint Pierre Fontainebleau	Fontainebleau	FR	Ile-de-France
 Fraternite Saint-Pierre	Fontainebleau	FR	Ile-de-France
 Chapelle du Carmel	Fontainebleau	FR	Ile-de-France
-Church Saint Amand	Thomery	FR	Ile-de-France
+Église Saint-Amand de Thomery	Thomery	FR	Ile-de-France
 Eglise Notre Dame de la Perseverence	Barbizon	FR	Ile-de-France
 Église Notre-Dame-de-la-Visitation	Dammarie-les-Lys	FR	Ile-de-France
 Église Sainte-Osmanne de Féricy	Féricy	FR	Ile-de-France
@@ -7334,7 +7334,7 @@ St Therese Basilique Lisieux	Lisieux	FR	Lower Normandy
 Cathédrale Saint-Pierre de Lisieux	Lisieux	FR	Lower Normandy
 Basilique De Lisieux	Lisieux	FR	Lower Normandy
 Sanctuaire Sainte Thérèse de Lisieux	Lisieux	FR	Lower Normandy
-Basilica of Saint Therese of Lisieux	Lisieux	FR	Lower Normandy
+Basilique Sainte-Thérèse de Lisieux	Lisieux	FR	Lower Normandy
 Paroisse de Lisieux	Lisieux	FR	Lower Normandy
 Église Saint-Jacques	Lisieux	FR	Lower Normandy
 Soeurs Oblates de Ste Therese	Lisieux	FR	Lower Normandy
@@ -7399,7 +7399,7 @@ Paroisse Saint Jean-Paul II	Anet	FR	Centre
 Eglise Saint Jacques Le Majeur et Saint Christophe	Houdan	FR	Ile-de-France
 Paroisse de Houdan	Houdan	FR	Ile-de-France
 Paroisse des Essarts le Roi	Les Essarts-le-Roi	FR	Ile-de-France
-Church of Saint-Pierre de Montfort-l'Amaury	Montfort-l'Amaury	FR	Ile-de-France
+Église Saint-Pierre de Montfort-l'Amaury	Montfort-l'Amaury	FR	Ile-de-France
 Eglise Saint-Remy	Saint-Rémy-l'Honoré	FR	Ile-de-France
 Église Saint-Martin	Bazoches-sur-Guyonne	FR	Ile-de-France
 Paroisse Saint-Martin	Chevreuse	FR	Ile-de-France
@@ -7616,7 +7616,7 @@ Eglise Sainte Lucie	Issy-les-Moulineaux	FR	Ile-de-France
 Église Saint-Étienne	Issy-les-Moulineaux	FR	Ile-de-France
 Église Notre-Dame-des-Pauvres d'Issy-les-Moulineaux	Issy-les-Moulineaux	FR	Ile-de-France
 Missionnaires Comboniens	Issy-les-Moulineaux	FR	Ile-de-France
-Church of Saint Remy	Vanves	FR	Ile-de-France
+Église Saint-Rémy de Vanves	Vanves	FR	Ile-de-France
 Groupe Saint Joseph	Vanves	FR	Ile-de-France
 Centre Jean XXIII	Le Chesnay-Rocquencourt	FR	Ile-de-France
 Paroisse Saint Germain et Notre Dame Résurrection	Le Chesnay-Rocquencourt	FR	Ile-de-France
@@ -7728,7 +7728,7 @@ Eglise Saint-Antoine-de-Padoue	Paris	FR	Ile-de-France
 Church of Notre-Dame de la Salette	Paris	FR	Ile-de-France
 Chapelle Notre-Dame du Bon Secours	Paris	FR	Ile-de-France
 Basilica San Pietro Di Roma	Paris	FR	Ile-de-France
-Church of Saint-Pierre-de-Montrouge	Paris	FR	Ile-de-France
+Église Saint-Pierre de Montrouge	Paris	FR	Ile-de-France
 Paroisse Notre-Dame du Travail	Paris	FR	Ile-de-France
 Église Notre-Dame-du-Travail	Paris	FR	Ile-de-France
 Franciscaines Missionnaires de Notre-Dame	Paris	FR	Ile-de-France
@@ -7779,7 +7779,7 @@ Paroisse Saint Thomas	Paris	FR	Ile-de-France
 Cathedrale De Chartres	Paris	FR	Ile-de-France
 Esprit-Saint Consolateur	Paris	FR	Ile-de-France
 Église Notre-Dame du Liban	Paris	FR	Ile-de-France
-Church of Saint-Étienne-du-Mont	Paris	FR	Ile-de-France
+Église Saint-Étienne-du-Mont de Paris	Paris	FR	Ile-de-France
 Saint-Étienne-des-Grès, Paris	Paris	FR	Ile-de-France
 Basilica Sacre Couer	Paris	FR	Ile-de-France
 Eglise Saint-Marcel	Paris	FR	Ile-de-France
@@ -7803,7 +7803,7 @@ Rue de Bac Saint Catherine Church	Paris	FR	Ile-de-France
 Chœur Grégorien de Paris - CGP	Paris	FR	Ile-de-France
 Paroisse Orthodoxe Ste-Clotilde	Paris	FR	Ile-de-France
 Cathédrale Saint-Louis des Invalides	Paris	FR	Ile-de-France
-Church of Saint-Thomas-d'Aquin	Paris	FR	Ile-de-France
+Église Saint-Thomas-d'Aquin de Paris	Paris	FR	Ile-de-France
 Église Saint-Pierre-du-Gros-Caillou	Paris	FR	Ile-de-France
 Cathedrale de la Sainte-Trinite	Paris	FR	Ile-de-France
 Missione Cattolica italiana - Parigi	Paris	FR	Ile-de-France
@@ -7857,7 +7857,7 @@ Saint-Germain-l'Auxerrois	Paris	FR	Ile-de-France
 Fuente de Saint Michel Paris	Paris	FR	Ile-de-France
 Saint Merry - Hors les murs	Paris	FR	Ile-de-France
 Église Saint-Eustache	Paris	FR	Ile-de-France
-Church of Saint-Leu-Saint-Gilles	Paris	FR	Ile-de-France
+Église Saint-Leu-Saint-Gilles de Paris	Paris	FR	Ile-de-France
 Pôle Mission	Paris	FR	Ile-de-France
 Paroisse Saint Roch - Paris 1er	Paris	FR	Ile-de-France
 Le Thabor	Paris	FR	Ile-de-France
@@ -7872,7 +7872,7 @@ Iglesia De San Eustaquio	Paris	FR	Ile-de-France
 Paroisse Saint Thomas	Paris	FR	Ile-de-France
 Saint-Ambroise	Paris	FR	Ile-de-France
 Paroisse Saint Ambroise	Paris	FR	Ile-de-France
-Church of Saint-Nicolas-des-Champs	Paris	FR	Ile-de-France
+Église Saint-Nicolas-des-Champs de Paris	Paris	FR	Ile-de-France
 Église Saint-Joseph-des-Nations	Paris	FR	Ile-de-France
 Paroisse Saint Thomas	Paris	FR	Ile-de-France
 Chaplaincy Etudiante Catholique des Grands Moulins	Paris	FR	Ile-de-France
@@ -7889,7 +7889,7 @@ Eglise Notre Dame	Saint-Mandé	FR	Ile-de-France
 St. Therese de Lisseux, France	Vincennes	FR	Ile-de-France
 Nôtre-Dame de París	Vincennes	FR	Ile-de-France
 Paroisse sainte Geneviève et Saint Martin	Paris	FR	Ile-de-France
-Church of St. Margaret	Paris	FR	Ile-de-France
+Église Sainte-Marguerite de Paris	Paris	FR	Ile-de-France
 Église du Bon Pasteur	Paris	FR	Ile-de-France
 Paroisse Saint Thomas	Paris	FR	Ile-de-France
 Paroisse Saint Gabriel	Paris	FR	Ile-de-France
@@ -7971,7 +7971,7 @@ Eglise Saint-Saturnin	Nogent-sur-Marne	FR	Ile-de-France
 Eglise Saint Gervais	Bry-sur-Marne	FR	Ile-de-France
 Eglise Catholique	Villiers-sur-Marne	FR	Ile-de-France
 Paroisse de La Sainte Trinite	Le Perreux-sur-Marne	FR	Ile-de-France
-Church of Saint Germain Auxerrois	Fontenay-sous-Bois	FR	Ile-de-France
+Église Saint-Germain-l'Auxerrois de Fontenay-sous-Bois	Fontenay-sous-Bois	FR	Ile-de-France
 Eglise Saint-Jean-XXIII	Fontenay-sous-Bois	FR	Ile-de-France
 Eglise Sainte Thérèse	Fontenay-sous-Bois	FR	Ile-de-France
 Territorial Prelature of the Mission de France	Le Perreux-sur-Marne	FR	Ile-de-France
@@ -8034,7 +8034,7 @@ La Chapelle	Orgeval	FR	Ile-de-France
 Chapelle de la Maladrerie de Poissy	Poissy	FR	Ile-de-France
 Eglise Saint-Nicolas	Villennes-sur-Seine	FR	Ile-de-France
 Paroisse Saint-Louis de Beauregard	Poissy	FR	Ile-de-France
-Cathedral St. Louis De Poissy	Poissy	FR	Ile-de-France
+Église Saint-Louis de Poissy	Poissy	FR	Ile-de-France
 Paroisse catholique de Poissy - Villennes - Médan	Poissy	FR	Ile-de-France
 Église Saint-Nicolas	Mézières-sur-Seine	FR	Ile-de-France
 Église Saint-Martin de Gargenville	Gargenville	FR	Ile-de-France
@@ -8049,7 +8049,7 @@ Paroisse	Meulan-en-Yvelines	FR	Ile-de-France
 Église Saint-Germain-des-Prés	Hardricourt	FR	Ile-de-France
 Eglise De Gaillon-sur-Montcient	Gaillon-sur-Montcient	FR	Ile-de-France
 Église Saint-Nicolas	Tessancourt-sur-Aubette	FR	Ile-de-France
-Church of Saint Etienne	Vernouillet	FR	Ile-de-France
+Église Saint-Étienne de Vernouillet	Vernouillet	FR	Ile-de-France
 Paroisse Saint Etienne	Vernouillet	FR	Ile-de-France
 Église Saint-Martin de Verneuil	Verneuil-sur-Seine	FR	Ile-de-France
 Kościół polski p.w. Sainte Jeanne d'Arc de l'Hautil	Triel-sur-Seine	FR	Ile-de-France
@@ -8175,7 +8175,7 @@ Paroisse St Joseph	Sartrouville	FR	Ile-de-France
 St. Martin's Church	Sartrouville	FR	Ile-de-France
 Église Jean-XXIII	Sartrouville	FR	Ile-de-France
 Église du Sacré-Cœur de Colombes	Colombes	FR	Ile-de-France
-Parish of Saint Martin	Bezons	FR	Ile-de-France
+Église Saint-Martin de Bezons	Bezons	FR	Ile-de-France
 Eglise Saint-Bernard	Colombes	FR	Ile-de-France
 Église Sainte-Marie des Vallées de Colombes	Colombes	FR	Ile-de-France
 Eglise St Pierre St Paul	Colombes	FR	Ile-de-France
@@ -8211,7 +8211,7 @@ Paroisse de la Madeleine	Paris	FR	Ile-de-France
 Eglise Saint-Philippe-du-Roule	Paris	FR	Ile-de-France
 Northe Dame Cathedral	Paris	FR	Ile-de-France
 Mary Magdalenae	Paris	FR	Ile-de-France
-Church of St Louis d'Antin	Paris	FR	Ile-de-France
+Église Saint-Louis-d'Antin	Paris	FR	Ile-de-France
 Eglise Saint-Augustin	Paris	FR	Ile-de-France
 Paroisse de la Sainte-Trinité	Paris	FR	Ile-de-France
 Trinité - Paris 9ème	Paris	FR	Ile-de-France
@@ -8238,7 +8238,7 @@ Square Saint-Laurent	Paris	FR	Ile-de-France
 Eglise Catholique Liberale.	Paris	FR	Ile-de-France
 Église Paroisse Saint Maurice	Paris	FR	Ile-de-France
 Catedra Notre Dame	Paris	FR	Ile-de-France
-Church of Saint-Georges-de-la-Villette	Paris	FR	Ile-de-France
+Église Saint-Georges de la Villette	Paris	FR	Ile-de-France
 Paroisse Saint Georges Communaute	Paris	FR	Ile-de-France
 Catedral de Notre Dame Paris	Paris	FR	Ile-de-France
 Paroisse Saint Gabriel	Paris	FR	Ile-de-France
@@ -8262,7 +8262,7 @@ Eglise Sainte-Reine	Levallois-Perret	FR	Ile-de-France
 Notre Dame Cathedral Paris	Paris	FR	Ile-de-France
 Catholic Church of Saint-Joseph des Epinettes	Paris	FR	Ile-de-France
 Mission Catholique Vietnamienne	Paris	FR	Ile-de-France
-Church of Saint-Vincent-de-Paul	Clichy	FR	Ile-de-France
+Église Saint-Vincent-de-Paul	Clichy	FR	Ile-de-France
 Église Sainte-Geneviève	Asnières-sur-Seine	FR	Ile-de-France
 Chapelle Saint-Daniel	Asnières-sur-Seine	FR	Ile-de-France
 Eglise Sainte Genevieve des Grandes Carrieres	Paris	FR	Ile-de-France
@@ -8273,7 +8273,7 @@ Notre Dame de Clignancourt	Paris	FR	Ile-de-France
 Eglise Saint Jean Porte Latine. Antony	Paris	FR	Ile-de-France
 Eglise Notre-Dame du Bon Conseil	Paris	FR	Ile-de-France
 Basilique Sainte-Jeanne-d'Arc	Paris	FR	Ile-de-France
-Church of Saint-Denys de la Chapelle	Paris	FR	Ile-de-France
+Église Saint-Denys de la Chapelle	Paris	FR	Ile-de-France
 Paroisse Orthodoxe Bulgare	Paris	FR	Ile-de-France
 Saint-Luc Catholic Church	Paris	FR	Ile-de-France
 Chapelle Saint-Pierre	Paris	FR	Ile-de-France
@@ -8315,7 +8315,7 @@ Paroisses Saint André & Notre Dame de Bon Secours	Bobigny	FR	Ile-de-France
 Église Saint-Ouen-le-Vieux	Saint-Ouen-sur-Seine	FR	Ile-de-France
 Église Notre-Dame des Agnettes	Gennevilliers	FR	Ile-de-France
 Paroisse de Gennevilliers	Gennevilliers	FR	Ile-de-France
-Church St. Marie Madeleine	Gennevilliers	FR	Ile-de-France
+Église Sainte-Marie-Madeleine de Gennevilliers	Gennevilliers	FR	Ile-de-France
 Saint-Paul de la Plaine Church	Saint-Denis	FR	Ile-de-France
 AD Missão na França	Saint-Denis	FR	Ile-de-France
 Fepaco France paroisse d'Aubervilliers	Saint-Denis	FR	Ile-de-France
@@ -8446,7 +8446,7 @@ Paroisse Saint Christophe	Coubron	FR	Ile-de-France
 Église Saint-Nicolas	Vaujours	FR	Ile-de-France
 Paroisse Saint Medard de Courtry	Courtry	FR	Ile-de-France
 Église Sainte Therese du Vert Galant	Tremblay-en-France	FR	Ile-de-France
-Parish St. Vincent de Paul	Villepinte	FR	Ile-de-France
+Église Saint-Vincent-de-Paul	Villepinte	FR	Ile-de-France
 Eglise Marcel Callo	Tremblay-en-France	FR	Ile-de-France
 Église Notre-Dame-des-Saints-Anges	Mitry-Mory	FR	Ile-de-France
 Paroisse de Villeparisis	Villeparisis	FR	Ile-de-France
@@ -8479,7 +8479,7 @@ Notre Dame de France	Baillet-en-France	FR	Ile-de-France
 Église Saint-Aquilin de Fontenay-en-Parisis	Fontenay-en-Parisis	FR	Ile-de-France
 Église Saint-Martin de Châtenay-en-France	Châtenay-en-France	FR	Ile-de-France
 Eglise de Villiers-le-Sec	Villiers-le-Sec	FR	Ile-de-France
-Church of Saint Martin of Mareil	Mareil-en-France	FR	Ile-de-France
+Église Saint-Martin de Mareil-en-France	Mareil-en-France	FR	Ile-de-France
 Église Saint Pierre et Saint Paul	Viarmes	FR	Ile-de-France
 Paroisse de Viarmes d'Asnières et de Noisy	Viarmes	FR	Ile-de-France
 Église Saint Rémi	Asnières-sur-Oise	FR	Ile-de-France
@@ -8500,7 +8500,7 @@ Eglise Notre-Dame de Chambly	Chambly	FR	Picardie
 Église Saint Martin	Belle-Église	FR	Picardie
 Église Saint-Denis	Bornel	FR	Picardie
 Église Saint-Germain-d'Auxerre	Noisy-sur-Oise	FR	Ile-de-France
-Church of Saint Vaast	Boran-sur-Oise	FR	Picardie
+Église Saint-Vaast de Boran-sur-Oise	Boran-sur-Oise	FR	Picardie
 Paroisse Sainte Famille de Chantilly	Chantilly	FR	Picardie
 Église Saint Pierre et Saint Paul	Précy-sur-Oise	FR	Picardie
 Paroisse Sainte-Geneviève	Gouvieux	FR	Picardie
@@ -8510,7 +8510,7 @@ Paroisse Sainte-Geneviève	Gouvieux	FR	Picardie
 Eglise Saint-Vincent de Moussy-le-Neuf	Moussy-le-Neuf	FR	Ile-de-France
 Église Saint-Pierre et Saint-Paul	Vémars	FR	Ile-de-France
 Paroisse Sainte Thérèse	Fosses	FR	Ile-de-France
-Church of Saint Martin	Survilliers	FR	Ile-de-France
+Église Saint-Martin de Survilliers	Survilliers	FR	Ile-de-France
 Église Notre-Dame	Orry-la-Ville	FR	Picardie
 Église Sainte Trinité	La Chapelle-en-Serval	FR	Picardie
 Paroisse Saint Esprit du Serval	Plailly	FR	Picardie
@@ -8959,7 +8959,7 @@ Paroisse Saint Romain	Rouen	FR	Haute-Normandie
 Église Saint François de Sales	Rouen	FR	Haute-Normandie
 Église Saint-André	Mont-Saint-Aignan	FR	Haute-Normandie
 Pastorale des familles Rouen	Rouen	FR	Haute-Normandie
-Church of St. Thomas of Canterbury	Mont-Saint-Aignan	FR	Haute-Normandie
+Église Saint-Thomas-du-Mont-aux-Malades de Mont-Saint-Aignan	Mont-Saint-Aignan	FR	Haute-Normandie
 Paroisse Saint-Marc de Rouen-Est	Rouen	FR	Haute-Normandie
 Eglise Saint-Hilaire	Rouen	FR	Haute-Normandie
 Eglise Sainte Claire	Rouen	FR	Haute-Normandie
@@ -9186,7 +9186,7 @@ Abbatiale Saint-Pierre de Corbie	Corbie	FR	Picardie
 Église Saint-Martin	Étinehem-Méricourt	FR	Picardie
 Eglise Saint-Remy	Dieppe	FR	Haute-Normandie
 Paroisse Dieppe-Ouest	Dieppe	FR	Haute-Normandie
-Church of Saint Jacques	Dieppe	FR	Haute-Normandie
+Église Saint-Jacques de Dieppe	Dieppe	FR	Haute-Normandie
 Chapelle Notre-Dame de Bonsecours	Dieppe	FR	Haute-Normandie
 Église Saint-Aubin	Criel-sur-Mer	FR	Haute-Normandie
 Paroisse Saint Jacques	Le Tréport	FR	Haute-Normandie
@@ -10192,7 +10192,7 @@ St. Arbogast church	Haslach im Kinzigtal	DE	Baden-Wuerttemberg
 St. Blasius	Biberach	DE	Baden-Wuerttemberg
 St. Afra	Mühlenbach	DE	Baden-Wuerttemberg
 Kath. Pfarramt Hardt	Hardt	DE	Baden-Wuerttemberg
-Church of St. Michael	Lauterbach	DE	Baden-Wuerttemberg
+Kirche St. Michael	Lauterbach	DE	Baden-Wuerttemberg
 Katholische Kirchenpflege	Lauterbach Schwarzw	DE	Baden-Wuerttemberg
 Katholische Kirche Hl. Geist	Schramberg	DE	Baden-Wuerttemberg
 Katholisches Pfarramt Schramberg Sankt Maria - Heilig Geist	Schramberg	DE	Baden-Wuerttemberg
@@ -10632,7 +10632,7 @@ St. Oswald	Stockach	DE	Baden-Wuerttemberg
 Katholische Dekanatsgeschäftsstelle	Tuttlingen	DE	Baden-Wuerttemberg
 Katholische Dekanatsverband Geschwister St. Tuttlingen-Spaichingen	Tuttlingen	DE	Baden-Wuerttemberg
 Kath. Gemeindehaus St. Josef	Tuttlingen	DE	Baden-Wuerttemberg
-Church of St. Gallus	Tuttlingen	DE	Baden-Wuerttemberg
+Kirche St. Gallus	Tuttlingen	DE	Baden-Wuerttemberg
 Katholisches Verwaltungszentrum	Tuttlingen	DE	Baden-Wuerttemberg
 St. Johann	Bad Dürrheim	DE	Baden-Wuerttemberg
 Pfarramt St. Fidelis	Villingen-Schwenningen	DE	Baden-Wuerttemberg
@@ -10830,7 +10830,7 @@ Outstanding romanesque church Basilika St Michael	Altenstadt	DE	Bavaria
 St. Stephan	Osterzell	DE	Bavaria
 Katholischer Kindergarten	Kaufbeuren	DE	Bavaria
 St. Rasso	Bad Wörishofen	DE	Bavaria
-Church of St. Martin	Bad Wörishofen	DE	Bavaria
+Kirche St. Martin	Bad Wörishofen	DE	Bavaria
 St. Stephan	Fuchstal	DE	Bavaria
 Pfarrkirche Mariä Himmelfahrt	Oberostendorf	DE	Bavaria
 St. Michael	Denklingen	DE	Bavaria
@@ -10887,7 +10887,7 @@ Katholischer Kindergarten St. Theresia	Laupheim	DE	Baden-Wuerttemberg
 Katholisches Pfarramt St. Martinus	Dietenheim	DE	Baden-Wuerttemberg
 Kirchengemeinde St. Johannes Regglisweiler 	Dietenheim	DE	Baden-Wuerttemberg
 St. Stephanus	Achstetten	DE	Baden-Wuerttemberg
-Church St. Martinus	Erbach	DE	Baden-Wuerttemberg
+Kirche St. Martinus	Erbach	DE	Baden-Wuerttemberg
 St. Martin	Illerkirchberg	DE	Bavaria
 Katholische Kirchenstiftung Unsere liebe Frau vom Rosenkranz	Bellenberg	DE	Bavaria
 St. Peter und Paul	Bellenberg	DE	Bavaria
@@ -11342,7 +11342,7 @@ St. Andreas	Schwenningen	DE	Bavaria
 Maria Immaculata	Höchstädt an der Donau	DE	Bavaria
 St. Nikolaus	Blindheim	DE	Bavaria
 St. Ulrich	Schwenningen	DE	Bavaria
-Parish Church of St. Peter and Paul	Münster	DE	Bavaria
+Pfarrkirche St. Peter und Paul	Münster	DE	Bavaria
 Pfarreiengemeinschaft Schmutter-Lech	Asbach-Bäumenheim	DE	Bavaria
 St. Maria Magdalena	Pöttmes	DE	Bavaria
 Mariä Heimsuchung	Pöttmes	DE	Bavaria
@@ -11574,7 +11574,7 @@ Eglise Notre-Dame de la Misericorde	Hesperange	LU	Luxembourg
 Église de Gasperich	Luxembourg	LU	Luxembourg
 Українська Греко-Католицька Церква в Люксембурзі	Luxembourg	LU	Luxembourg
 Église Saint Pie X	Luxembourg	LU	Luxembourg
-Church of the Sacred Heart	Luxembourg	LU	Luxembourg
+Église du Sacré-Cœur	Luxembourg	LU	Luxembourg
 Eglise De Sacre-Coeur		LU	Luxembourg
 Chapelle Du Christ-Roi	Luxembourg	LU	Luxembourg
 Grands-Clercs de la Cathédrale Notre-Dame de Luxembourg	Luxembourg	LU	Luxembourg
@@ -11603,7 +11603,7 @@ Mariä Heimsuchung	Saarburg	DE	Rheinland-Pfalz
 St. Laurentius	Saarburg	DE	Rheinland-Pfalz
 Kräizkappell	Grevenmacher	LU	Grevenmacher
 Chapelle Sainte-Croix	Grevenmacher	LU	Grevenmacher
-Church of St. Peter and Paul	Tawern	DE	Rheinland-Pfalz
+Kirche St. Peter und Paul	Tawern	DE	Rheinland-Pfalz
 Katholische KiTa St. Nikolaus	Konz	DE	Rheinland-Pfalz
 St. Aper	Wasserliesch	DE	Rheinland-Pfalz
 St. Laurentius	Igel	DE	Rheinland-Pfalz
@@ -11911,7 +11911,7 @@ St. Martin	Dahlem	DE	North Rhine-Westphalia
 St. Peter und Paul	Blankenheim	DE	North Rhine-Westphalia
 Katholischer Pfarrverbund Blankenheim	Blankenheim	DE	North Rhine-Westphalia
 Katholische Filialkirche St. Barbara und Helena	Pomster	DE	Rheinland-Pfalz
-Parish Church of St. Servatius and St. Dorothea	Müllenbach	DE	Rheinland-Pfalz
+Pfarrkirche St. Servatius und St. Dorothea	Müllenbach	DE	Rheinland-Pfalz
 St. Nikolaus	Nürburg	DE	Rheinland-Pfalz
 St. Wendelinus	Wirft	DE	Rheinland-Pfalz
 St. Maximin	Antweiler	DE	Rheinland-Pfalz
@@ -12136,7 +12136,7 @@ St. Elisabeth	Koblenz	DE	Rheinland-Pfalz
 Citykirche am Jesuitenplatz	Koblenz	DE	Rheinland-Pfalz
 Liebfrauenkirche	Koblenz	DE	Rheinland-Pfalz
 Katholische Erwachsenenbildung	Koblenz	DE	Rheinland-Pfalz
-Basilica of St. Castor	Koblenz	DE	Rheinland-Pfalz
+Basilika St. Kastor	Koblenz	DE	Rheinland-Pfalz
 St. Jakobus (Koblenz)	Koblenz	DE	Rheinland-Pfalz
 Heilig-Kreuz-Kirche	Koblenz	DE	Rheinland-Pfalz
 St. Aldegundis	Koblenz	DE	Rheinland-Pfalz
@@ -12190,7 +12190,7 @@ Pfarrei Sinzig Zum Guten Hirten	Sinzig	DE	Rheinland-Pfalz
 St. Sebastianus Bad Bodendorf	Sinzig	DE	Rheinland-Pfalz
 St. Johannes Nepomuk	Remagen	DE	Rheinland-Pfalz
 Katholische Pfarreiengemeinschaft Remagen	Remagen	DE	Rheinland-Pfalz
-Parish Church of St. Peter and Paul	Remagen	DE	Rheinland-Pfalz
+Pfarrkirche St. Peter und Paul	Remagen	DE	Rheinland-Pfalz
 St. Severin	Erpel	DE	Rheinland-Pfalz
 St. Martin	Linz am Rhein	DE	Rheinland-Pfalz
 St. Marien	Linz am Rhein	DE	Rheinland-Pfalz
@@ -12701,12 +12701,12 @@ Pfarrei Heilige Familie - Langen, Egelsbach, Erzhausen	Langen (Hessen)	DE	Hesse
 Katholische Kirchengemeinde St. Marien Pfarrer	Dreieich	DE	Hesse
 Katholisches Pfarrzentrum St. Johannes	Dreieich	DE	Hesse
 Katholische Kirchengemeinde St. Martinus	Hattersheim am Main	DE	Hesse
-Parish Church of St. Peter and Paul	Hofheim am Taunus	DE	Hesse
+Pfarrkirche St. Peter und Paul	Hofheim am Taunus	DE	Hesse
 Katholische Pfarrei St. Elisabeth Hofheim-Kriftel-Eppstein	Hofheim am Taunus	DE	Hesse
 Katholisches Gemeindezentrum St. Peter und Paul	Hofheim am Taunus	DE	Hesse
 Kirche St. Vitus	Kriftel	DE	Hesse
 Cathedral Of Saint Bartholomew	Kriftel	DE	Hesse
-Parish Church of St. Dionysius	Frankfurt am Main	DE	Hesse
+Pfarrkirche St. Dionysius	Frankfurt am Main	DE	Hesse
 Kirche der Katholischen Sankt Dionysius-Gemeinde	Frankfurt am Main	DE	Hesse
 St. Bartholomäus	Frankfurt am Main	DE	Hesse
 Justinuskirche Frankfurt	Frankfurt am Main	DE	Hesse
@@ -13068,14 +13068,14 @@ Abbazia della Vangadizza - Badia Polesine, Provincia di Rovigo	Badia Polesine	IT
 Chiesa Parrocchiale Di Badia Polesine	Badia Polesine	IT	Veneto
 Comunità di Merlara e Minotte	Merlara	IT	Veneto
 Parrocchia di S. Andrea Apostolo	Arquà Polesine	IT	Veneto
-Church of Saint Sebastian	Bosaro	IT	Veneto
+Chiesa di San Sebastiano Martire	Bosaro	IT	Veneto
 Chiesa S. Maria Assunta Di Grignano Polesine	Rovigo	IT	Veneto
 Oratorio San Giovanni Bosco - Parrocchia di San Michele Arcangelo	Villanova del Ghebbo	IT	Veneto
 Santuario Nostra Signora del Pilastrello	Lendinara	IT	Veneto
 Abbazia Santuario S. Maria Del Pilastrello	LENDINARA	IT	Veneto
 Santuario Madonna Del	Lendinara	IT	Veneto
 Chiesa di San Giovanni Battista	Costa di Rovigo	IT	Veneto
-Church of Saint Pius X	Rovigo	IT	Veneto
+Chiesa di San Pio X	Rovigo	IT	Veneto
 Chiesa di Sant'Andrea Apostolo	Pontecchio Polesine	IT	Veneto
 Parrocchia Pontecchio Polesine e Guarda Veneta	Pontecchio Polesine	IT	Veneto
 Diocese of Adria-Rovigo	Rovigo	IT	Veneto
@@ -13084,7 +13084,7 @@ Parrocchia di San Biagio	Ceregnano	IT	Veneto
 Duomo di Santo Stefano	Rovigo	IT	Veneto
 Oratorio della Beata Vergine di Pompei	Rovigo	IT	Veneto
 Chiesa di Santa Maria dei Sabbioni	Rovigo	IT	Veneto
-Church of Saint Francis and Saint Justina	Rovigo	IT	Veneto
+Chiesa dei Santi Francesco e Giustina	Rovigo	IT	Veneto
 Oratorio della Beata Vergine della Concezione	Rovigo	IT	Veneto
 Chiesa della Beata Vergine del Soccorso	Rovigo	IT	Veneto
 Parrocchia Cuore Immacolato di Maria detta Commenda	Rovigo	IT	Veneto
@@ -13100,7 +13100,7 @@ Parrocchia Arcipretale di Solesino	Solesino	IT	Veneto
 Parrocchia di San Zenone	Rovigo	IT	Veneto
 Parrocchia di Boara Pisani	Boara Pisani	IT	Veneto
 Parrocchia San Floriano Martire	Rovigo	IT	Veneto
-Church of Saint Martin Bishop	San Martino di Venezze	IT	Veneto
+Chiesa di San Martino Vescovo	San Martino di Venezze	IT	Veneto
 Unità Pastorale San Martino e Beverare	San Martino di Venezze	IT	Veneto
 Church of Saint Andrew	Anguillara Veneta	IT	Veneto
 Parrocchia di Anguillara Veneta	Anguillara Veneta	IT	Veneto
@@ -13116,7 +13116,7 @@ Chiesa di San Giovanni Battista	Bonavigo	IT	Veneto
 Parrocchia di Bevilacqua VR	Bevilacqua	IT	Veneto
 Santuario Madonna del Tresto	Ospedaletto Euganeo	IT	Veneto
 Chiesa di Sant'Antonio Abate	Montagnana	IT	Veneto
-Cathedral of Santa Maria Assunta	Montagnana	IT	Veneto
+Duomo di Montagnana	Montagnana	IT	Veneto
 Parrocchia Duomo di Montagnana	Montagnana	IT	Veneto
 Parrocchia di Borgo San Zeno	Montagnana	IT	Veneto
 Unità Pastorale di Caselle, Crosare, Pressana e Roveredo di Guà	Pressana	IT	Veneto
@@ -13131,7 +13131,7 @@ Chiesa Parrocchiale di Santa Croce	Este	IT	Veneto
 Parrocchia di Arteselle	Solesino	IT	Veneto
 Parrocchia della Nativita della Beata Vergine Maria	Este	IT	Veneto
 Parrocchia San Bartolomeo	Monselice	IT	Veneto
-Parish of San Giovanni Battista	Ospedaletto Euganeo	IT	Veneto
+Chiesa di San Giovanni Battista	Ospedaletto Euganeo	IT	Veneto
 Chiesa della Beata Vergine della Salute	Este	IT	Veneto
 Basilica di Santa Maria delle Grazie	Este	IT	Veneto
 Saint Thecla's Cathedral	Este	IT	Veneto
@@ -13174,7 +13174,7 @@ Primavera Tramonte	Teolo	IT	Veneto
 Santuario della Madonna della Salute	Abano Terme	IT	Veneto
 Chiesa del Sacro Cuore di Gesù	Padua	IT	Veneto
 Abbazia Santo Stefano	Due Carrare	IT	Veneto
-Parish of St. Giacomo Apostolo	Battaglia Terme	IT	Veneto
+Parrocchia di San Giacomo Apostolo	Battaglia Terme	IT	Veneto
 Parrocchia SAN Giorgio	Due Carrare	IT	Veneto
 Duomo dei Santi Pietro ed Eliseo	Montegrotto Terme	IT	Veneto
 Chiesa di San Gregorio Barbarigo	Montegrotto Terme	IT	Veneto
@@ -13258,12 +13258,12 @@ Centro Parrocchiale San Giuseppe	Legnaro	IT	Veneto
 Chiesa Parrocchiale Arcipretale di San Biagio	Legnaro	IT	Veneto
 Patronato Parrocchiale	Legnaro	IT	Veneto
 Parrocchia di Liettoli	Campolongo Maggiore	IT	Veneto
-Parish of St. Michele Arcangelo	Sant'Angelo di Piove di Sacco	IT	Veneto
+Chiesa di San Michele Arcangelo	Sant'Angelo di Piove di Sacco	IT	Veneto
 Parrocchia dei Ss. Felice e Fortunato di Campolongo Maggiore	Campolongo Maggiore	IT	Veneto
 Chiesa Parrocchiale di Santa Giustina Martire	Campagna Lupia	IT	Veneto
 Parrocchia di Bojon	Campolongo Maggiore	IT	Veneto
 Azione Cattolica vicariato di San Bonifacio	San Bonifacio	IT	Veneto
-Sanctuary of Santa Maria dei Miracoli	Lonigo	IT	Veneto
+Santuario di Santa Maria dei Miracoli	Lonigo	IT	Veneto
 Santuario di San Daniele	Lonigo	IT	Veneto
 Parrocchia di San Pietro Apostolo	San Bonifacio	IT	Veneto
 Parrocchia Praissola	San Bonifacio	IT	Veneto
@@ -13362,7 +13362,7 @@ Parrocchia Natività	Padova	IT	Veneto
 Circolo Santa Maria Assunta APS	Rubano	IT	Veneto
 Parrocchia di San Fidenzio	Rubano	IT	Veneto
 Parrocchia di Sant'Ignazio di Loyola	Padova	IT	Veneto
-Church of Saint Bartholomew the Apostle	Padova	IT	Veneto
+Chiesa di San Bartolomeo Apostolo	Padova	IT	Veneto
 Chiesa di San Bonaventura	Padova	IT	Veneto
 Parrocchia di San Daniele Martire	Padova	IT	Veneto
 Confraternity of St. Anthony of Padua	Padova	IT	Veneto
@@ -13371,7 +13371,7 @@ Saint Anthony of Padua - The friars of the Basilica	Padova	IT	Veneto
 San Antonio di Padova	Padova	IT	Veneto
 Sant'Antonio da Padova, prega per noi	Padova	IT	Veneto
 Basilica Del Santo	Padova	IT	Veneto
-Oratory of Saint George	Padova	IT	Veneto
+Oratorio di San Giorgio	Padova	IT	Veneto
 The Basilica of St. Anthony	Padova	IT	Veneto
 Cappella di San Giacomo	Padova	IT	Veneto
 Santuario Sant'antonio Di Padova	Padova	IT	Veneto
@@ -13387,7 +13387,7 @@ Santuario Di S.Antonio	Padova	IT	Veneto
 Chiesa Cattolica Parrocchiale S. Nicolo'	Padova	IT	Veneto
 Chiesa di San Francesco Grande	Padova	IT	Veneto
 Chiesa di Santa Margherita - Padova	Padova	IT	Veneto
-Parish of Saint Sophia	Padova	IT	Veneto
+Chiesa di Santa Sofia	Padova	IT	Veneto
 Chiesa Parrocchiale di San Camillo de Lellis	Padova	IT	Veneto
 Cappella universitaria San Massimo - Padova	Padova	IT	Veneto
 Chiesa Cattolica Parrocchiale Ognissanti	Padova	IT	Veneto
@@ -13427,7 +13427,7 @@ Parrocchia dei Santi Cosma e Damiano	Villafranca Padovana	IT	Veneto
 Parrocchia dei Santi Felice e Fortunato	Limena	IT	Veneto
 Parrocchia Altichiero	Padova	IT	Veneto
 Parrocchia Pontevigodarzere	Padova	IT	Veneto
-Church of San Giovanni Battista	Padova	IT	Veneto
+Chiesa di San Giovanni Battista	Padova	IT	Veneto
 Parrocchia di Vigodarzere	Vigodarzere	IT	Veneto
 Parrocchia San Bonaventura	Cadoneghe	IT	Veneto
 Parrocchia della Santissima Trinità	Vigonza	IT	Veneto
@@ -13469,7 +13469,7 @@ Oratorio delle Zitelle	Vicenza	IT	Veneto
 Cattedrale di Santa Maria Annunciata	Vicenza	IT	Veneto
 Duomo	Vicenza	IT	Veneto
 Oratorio dei Filippini	Vicenza	IT	Veneto
-Church of St. Vincent	Vicenza	IT	Veneto
+Chiesa di San Vincenzo	Vicenza	IT	Veneto
 chiesa di San Faustino a Vicenza	Vicenza	IT	Veneto
 Chiesa Cattolica Parrocchiale Servi	Vicenza	IT	Veneto
 Cripta Cattedrale	Vicenza	IT	Veneto
@@ -13499,7 +13499,7 @@ Parrocchia di San Giovanni Battista	Caldogno	IT	Veneto
 Parrocchia di S.giovanni Battista	Caldogno	IT	Veneto
 Chiesa Parrocchiale di San Bartolomeo	Caldogno	IT	Veneto
 Chiesa di Sant'Urbano Papa Martire	Caldogno	IT	Veneto
-Church of Saint Mary Etiopissa	Vicenza	IT	Veneto
+Chiesa di Santa Maria Etiopissa	Vicenza	IT	Veneto
 Scuola Campanaria San Matteo - Cavazzale	Monticello Conte Otto	IT	Veneto
 Chiesa Parrocchiale di San Matteo Apostolo	Monticello Conte Otto	IT	Veneto
 Chiesa-ADM Dueville	Dueville	IT	Veneto
@@ -13581,7 +13581,7 @@ Duomo di San Rocco	Dolo	IT	Veneto
 Parrocchia di Arino	Dolo	IT	Veneto
 Parrocchia di Cazzago	Pianiga	IT	Veneto
 Duomo di San Giovanni Battista	Mira	IT	Veneto
-Church of St. Nicholas	Mira	IT	Veneto
+Chiesa di San Nicola	Mira	IT	Veneto
 Chiesa Di Vigonza	Vigonza	IT	Veneto
 Parrocchia di Santa Margherita	Vigonza	IT	Veneto
 Parrocchia di S. Martino	Pianiga	IT	Veneto
@@ -13603,7 +13603,7 @@ Parrocchia di Salzano	Salzano	IT	Veneto
 Chiesa di Santa Maria Assunta - Borbiago	Mira	IT	Veneto
 Chiesa S. Maria Immacolata Di Lourdes	Venezia	IT	Veneto
 Parrocchia Madonna della Salute di Catene	Venezia	IT	Veneto
-Church of Saint Francis and Saint Clare	Venezia	IT	Veneto
+Chiesa di San Francesco e Santa Chiara	Venezia	IT	Veneto
 Chiesa S. Maria Immacolata Di Lourdes	Venezia	IT	Veneto
 Parrocchia Gesù Lavoratore Salesiani	Venezia	IT	Veneto
 Rinnovamento carismatico S. Pio X	Venezia	IT	Veneto
@@ -13621,7 +13621,7 @@ Chiesa di San Pietro (Maerne)	Martellago	IT	Veneto
 Parrocchia di Maerne	Martellago	IT	Veneto
 Oratorio di Olmo	Martellago	IT	Veneto
 Parrocchia Di Zelarino	Venezia	IT	Veneto
-Church of Saint Mary Immaculate of Lourdes	Venezia	IT	Veneto
+Chiesa di Santa Maria Immacolata di Lourdes	Venezia	IT	Veneto
 Parrocchia Sacro Cuore	Venezia	IT	Veneto
 Chiesa di San Carlo Borromeo	Venezia	IT	Veneto
 Parrocchia di S. Rita da Cascia	Venezia	IT	Veneto
@@ -13651,7 +13651,7 @@ Chiese Cattoliche Parrocchiali S. Maria Elisabetta	Venezia	IT	Veneto
 Cattedrale di santa Mortiana Martire	Venezia	IT	Veneto
 Chiesa di Sant'Eufemia	Venezia	IT	Veneto
 Parrocchia S. Eufemia - Collaborazione pastorale Giudecca, Venezia	Venezia	IT	Veneto
-Church of Saint Mary of the Rosary 'Gesuati'	Venezia	IT	Veneto
+Chiesa dei Gesuati	Venezia	IT	Veneto
 Redentore, Isola Della Giudecca	Venezia	IT	Veneto
 Basilica del Redentore	Venezia	IT	Veneto
 Церковь Иль Реденторе	Venezia	IT	Veneto
@@ -13712,9 +13712,9 @@ San Silvestro	Venezia	IT	Veneto
 San Polo, Venice, Italy	Venezia	IT	Veneto
 Chiesa di San Salvador	Venezia	IT	Veneto
 Chiesa di Santa Maria della Fava	Venezia	IT	Veneto
-Church of San Bartolomeo di Rialto	Venezia	IT	Veneto
+Chiesa di San Bartolomeo	Venezia	IT	Veneto
 Parrocchia SAN Giovanni IN Bragora	Venezia	IT	Veneto
-Church of San Giovanni Elemosinario	Venezia	IT	Veneto
+Chiesa di San Giovanni Elemosinario	Venezia	IT	Veneto
 Santa Maria dei Miracoli	Venezia	IT	Veneto
 Parrocchia dei Santi Apostoli di Venezia	Venezia	IT	Veneto
 Chiesa di San Giovanni Crisostomo	Venezia	IT	Veneto
@@ -13724,8 +13724,8 @@ Santa maria formosa	Venezia	IT	Veneto
 Parrocchia di Santa Maria Formosa	Venezia	IT	Veneto
 San Francesco della Vigna	Venezia	IT	Veneto
 Basilica dei Santi Giovanni e Paolo	Venezia	IT	Veneto
-Church of San Giuseppe di Castello	Venezia	IT	Veneto
-Church of San Francesco di Paola	Venezia	IT	Veneto
+Chiesa di San Giuseppe di Castello	Venezia	IT	Veneto
+Chiesa di San Francesco di Paola	Venezia	IT	Veneto
 San Domenico dei Domine Canes Inquisitori	Venezia	IT	Veneto
 San Pietro di Castello	Venezia	IT	Veneto
 Chiesa dei Santi Geremia e Lucia	Venezia	IT	Veneto
@@ -13827,7 +13827,7 @@ Parrocchia di San Pelagio	Treviso	IT	Veneto
 Parrocchia di San Michele Arcangelo	Quarto d'Altino	IT	Veneto
 Parrocchia di Casale sul Sile	Casale sul Sile	IT	Veneto
 Azione Cattolica Casale sul Sile	Casale sul Sile	IT	Veneto
-Parish of San Giovanni Battista	Jesolo	IT	Veneto
+Chiesa di San Giovanni Battista	Jesolo	IT	Veneto
 Parrocchia di Lughignano	Casale sul Sile	IT	Veneto
 Parrocchie Biancade-Roncade-Vallio	Roncade	IT	Veneto
 Parrocchie di Meolo Marteggia Losson	Meolo	IT	Veneto
@@ -13878,22 +13878,22 @@ Parish of Saint John Bosco	Lignano Sabbiadoro	IT	Friuli Venezia Giulia
 Parrocchia San Giovanni Bosco Lignano Sabbiadoro	Lignano Sabbiadoro	IT	Friuli Venezia Giulia
 Cerkev sv. Roka	Piran	SI	Piran-Pirano
 Krstilnica sv.Janeza Krstnika	Piran	SI	Piran-Pirano
-Church of St Peter	Piran	SI	Piran-Pirano
+Cerkev sv. Petra, Piran	Piran	SI	Piran-Pirano
 La Cappella dello Santo Spirito	Grožnjan	HR	Istarska
 Holy Trinity Church (Hrastovlje)	Koper	SI	Koper-Capodistria
 Župnijska cerkev sv. Jurija		SI	Piran-Pirano
-Parish church of St. George	Piran / Pirano (naselje)	SI	Piran-Pirano
+Cerkev sv. Jurija, Piran	Piran / Pirano (naselje)	SI	Piran-Pirano
 Chiesa di San Giorgio, Pirano	Piran	SI	Piran-Pirano
 Basilica di Sant'Eufemia	Grado	IT	Friuli Venezia Giulia
 ChiesaGrado - Insieme	Grado	IT	Friuli Venezia Giulia
 Stolnica Marijinega vnebovzetja	Koper	SI	Koper-Capodistria
-Church of the Holy Trinity	Koper	SI	Koper-Capodistria
+Cerkev Svete Trojice	Koper	SI	Koper-Capodistria
 Catedral de la Asunción de la Virgen María (Koper)	Koper	SI	Koper-Capodistria
 Cerkev sv. Jakoba	Koper	SI	Koper-Capodistria
 Basilica Santuario Parrocchiale di Santa Maria Assunta	Muggia	IT	Friuli Venezia Giulia
 Parrocchia San Matteo Apostolo	Muggia	IT	Friuli Venezia Giulia
 Parrocchia Santi Giovanni e Paolo	Muggia	IT	Friuli Venezia Giulia
-Church of San Francesco	Muggia	IT	Friuli Venezia Giulia
+Chiesa di San Francesco	Muggia	IT	Friuli Venezia Giulia
 Chiesa Cattolica Parrocchiale S. Benedetto Abate	Muggia	IT	Friuli Venezia Giulia
 Chiesa della Pieve Matrice di Sant'Ulderico	San Dorligo della Valle	IT	Friuli Venezia Giulia
 Parrocchia di San Lorenzo Martire	Trieste	IT	Friuli Venezia Giulia
@@ -13913,7 +13913,7 @@ Parrocchia della Beata Vergine del Rosario o Cappella Civica	Trieste	IT	Friuli V
 Chiesa di San Cipriano	Trieste	IT	Friuli Venezia Giulia
 Santuario Mariano di Monte Grisa	Trieste	IT	Friuli Venezia Giulia
 Chiesa di Sant'Apollinare Martire	Trieste	IT	Friuli Venezia Giulia
-Parish of San Vincenzo de Paoli	Trieste	IT	Friuli Venezia Giulia
+Parrocchia di San Vincenzo de Paoli	Trieste	IT	Friuli Venezia Giulia
 Chiesa Di San Pio X Trieste	Trieste	IT	Friuli Venezia Giulia
 Parrocchia Santa Teresa del Bambino Gesù - Trieste	Trieste	IT	Friuli Venezia Giulia
 Chiesa Parrocchiale della Beata Vergine delle Grazie	Trieste	IT	Friuli Venezia Giulia
@@ -13933,7 +13933,7 @@ Chiesa Parrocchiale di San Pio X	Trieste	IT	Friuli Venezia Giulia
 Parrocchia S. Pasquale Baylon	Trieste	IT	Friuli Venezia Giulia
 Chiesa Parrocchiale Cattolica di San Giovanni Decollato	Trieste	IT	Friuli Venezia Giulia
 Chiesa dei Santi Ermacora e Fortunato	Trieste	IT	Friuli Venezia Giulia
-Parish Catholic Church of Santa Maria Del Carmelo	Trieste	IT	Friuli Venezia Giulia
+Chiesa parrocchiale di Santa Maria del Carmelo	Trieste	IT	Friuli Venezia Giulia
 Chiesa Cattolica Parrocchiale S. Maria del Carmelo	Trieste	IT	Friuli Venezia Giulia
 Tempio Mariano di Monte Grisa	Trieste	IT	Friuli Venezia Giulia
 Basilica Cattedrale di San Giusto Martire	Trieste	IT	Friuli Venezia Giulia
@@ -13987,7 +13987,7 @@ Saint Donato	Bassano del Grappa	IT	Veneto
 Chiesa di San Francesco	Bassano del Grappa	IT	Veneto
 Centro Missionario Scalabrini	Bassano del Grappa	IT	Veneto
 Duomo di Santa Maria Assunta	Bassano del Grappa	IT	Veneto
-Parish of the Exaltation of the Holy Cross	Bassano del Grappa	IT	Veneto
+Parrocchia dell'Esaltazione della Santa Croce	Bassano del Grappa	IT	Veneto
 Oratorio Pier Giorgio Frassati	Bassano del Grappa	IT	Veneto
 Chiesa della Beata Giovanna	Bassano del Grappa	IT	Veneto
 Parrocchia di San Vito Bassano	Bassano del Grappa	IT	Veneto
@@ -14029,7 +14029,7 @@ Duomo di Feltre	Feltre	IT	Veneto
 Diocesi di Belluno-Feltre	Feltre	IT	Veneto
 Chiesa di San Rocco	Feltre	IT	Veneto
 Parrocchia di Trevignano	Trevignano	IT	Veneto
-Church of Saint Theonistus and Companion Martyrs	Trevignano	IT	Veneto
+Chiesa di San Teonisto e Compagni Martiri	Trevignano	IT	Veneto
 CPT - Collaborazione Pastorale di Trevignano	Trevignano	IT	Veneto
 Parrocchia Busta Contea	Montebelluna	IT	Veneto
 Oratorio Noi Montebelluna	Montebelluna	IT	Veneto
@@ -14038,7 +14038,7 @@ Chiesa di Santa Maria in Colle	Montebelluna	IT	Veneto
 Parrocchia di S.Gaetano	Montebelluna	IT	Veneto
 Parrocchia di Guarda	Montebelluna	IT	Veneto
 Parrocchia di Caonada	Montebelluna	IT	Veneto
-Church of Saint George Martyr	Paese	IT	Veneto
+Chiesa di San Giorgio Martire	Paese	IT	Veneto
 Oratorio Merlengo	Ponzano Veneto	IT	Veneto
 Parrocchia di Paderno	Ponzano Veneto	IT	Veneto
 Oratorio Parrocchiale Di Paderno	PONZANO VENETO	IT	Veneto
@@ -14092,7 +14092,7 @@ Parrocchia di Campea, Miane e Premaor	Miane	IT	Veneto
 Santuario della Madonna del Carmine	Miane	IT	Veneto
 Convento O.S.M. Abbazia S.Maria	Follina	IT	Veneto
 Santuario S.maria Annunciata In Comella - Bs	Seniga	IT	Veneto
-Church of Saint Mary of the Assumption	Pieve di Soligo	IT	Veneto
+Duomo di Santa Maria Assunta	Pieve di Soligo	IT	Veneto
 Parrocchia di Santa Maria Assunta	Pieve di Soligo	IT	Veneto
 Church of Saints Peter and Paul	Farra di Soligo	IT	Veneto
 Parrocchia di Soligo	Farra di Soligo	IT	Veneto
@@ -14116,11 +14116,11 @@ Duomo	Vittorio Veneto	IT	Veneto
 Parrocchia di Meschio	Vittorio Veneto	IT	Veneto
 Istituto Figlie Del Divino Zelo	Vittorio Veneto	IT	Veneto
 Chiesa di Santa Maria	Revine Lago	IT	Veneto
-Church of Saint Matthew Apostle	Revine Lago	IT	Veneto
+Chiesa di San Matteo Apostolo	Revine Lago	IT	Veneto
 Santuario di San Francesco da Paola	Revine Lago	IT	Veneto
 Oratorio di San Lorenzo e Marco	Vittorio Veneto	IT	Veneto
 Unità Pastorale Serravalle	Vittorio Veneto	IT	Veneto
-Church of Saint Andrew	Vittorio Veneto	IT	Veneto
+Pieve di Sant'Andrea di Bigonzo	Vittorio Veneto	IT	Veneto
 Chiesa di San Giovanni Battista	Vittorio Veneto	IT	Veneto
 Chiesa Parrocchiale di Santa Giustina	Vittorio Veneto	IT	Veneto
 Parrocchia di Sant'Antonio Tortal	Borgo Valbelluna	IT	Veneto
@@ -14273,7 +14273,7 @@ Parrocchia di San Michele Arcangelo	Gonars	IT	Friuli Venezia Giulia
 Chiesa del Santissimo Redentore	Palmanova	IT	Friuli Venezia Giulia
 Oratorio Di Santa Maria La Longa	SANTA MARIA LA LONGA	IT	Friuli Venezia Giulia
 Santuario della Madonna di Muriis	Pavia di Udine	IT	Friuli Venezia Giulia
-Church of San Michele Arcangelo	Basiliano	IT	Friuli Venezia Giulia
+Chiesa di San Michele Arcangelo	Basiliano	IT	Friuli Venezia Giulia
 Parrocchia di Sant'Andrea Apostolo	Pozzuolo del Friuli	IT	Friuli Venezia Giulia
 Parrocchia Pozzuolo del Friuli	Pozzuolo del Friuli	IT	Friuli Venezia Giulia
 Chiesa di Sant'Ulderico	Pavia di Udine	IT	Friuli Venezia Giulia
@@ -14352,7 +14352,7 @@ Chiesa dei Santi Nomi di Gesù e Maria	Sequals	IT	Friuli Venezia Giulia
 Chiesa Parrocchiale di San Nicolo Vescovo	Frisanco	IT	Friuli Venezia Giulia
 Oratorio Santissima Annunziata	MEDUNO	IT	Friuli Venezia Giulia
 Parrocchia di Santa Maria Assunta	Sequals	IT	Friuli Venezia Giulia
-Church of Santo Stefano	Pinzano al Tagliamento	IT	Friuli Venezia Giulia
+Chiesa di Santo Stefano	Pinzano al Tagliamento	IT	Friuli Venezia Giulia
 Santuario della Madonna di Strada	San Daniele del Friuli	IT	Friuli Venezia Giulia
 Chiesa di San Pietro (Travesio)	Travesio	IT	Friuli Venezia Giulia
 Canonica Della Parrocchia Di San Martino	NOGAREDO DI PRATO	IT	Friuli Venezia Giulia
@@ -14374,7 +14374,7 @@ Chiesa di San Cristoforo	Udine	IT	Friuli Venezia Giulia
 Sanctuary of the Blessed Virgin of Graces	Udine	IT	Friuli Venezia Giulia
 Basilica Santuario B.V.Delle Grazie	Udine	IT	Friuli Venezia Giulia
 Parrocchia San Paolino - Laipacco	Udine	IT	Friuli Venezia Giulia
-Church Of Santa Chiara	Udine	IT	Friuli Venezia Giulia
+Chiesa di Santa Chiara	Udine	IT	Friuli Venezia Giulia
 Parrocchia di S. Quirino	Udine	IT	Friuli Venezia Giulia
 Parrocchia di San Marco Evangelista	Udine	IT	Friuli Venezia Giulia
 Santuario Dei Caduti	UDINE	IT	Friuli Venezia Giulia
@@ -14417,19 +14417,19 @@ Chiesa di San Martino Vescovo	Torreano	IT	Friuli Venezia Giulia
 Parrocchia di San Leonardo Abate	San Leonardo	IT	Friuli Venezia Giulia
 Collaborazione Pastorale San Pietro al Natisone	San Pietro al Natisone	IT	Friuli Venezia Giulia
 Cerkev sv. Lovrenca	Kobarid	SI	Kobarid
-Parish Church of the Assumption of Virgin Mary	Kobarid	SI	Kobarid
+Župnijska cerkev Marijinega vnebovzetja	Kobarid	SI	Kobarid
 Javorca Spominska Cerkev Sv. Duha	Tolmin	SI	Tolmin
 Cerkev Rožnovenske Matere Božje	Bohinj	SI	Bohinj
-Church of St. Donatus	Krk	HR	Primorsko-Goranska
+Crkva sv. Dunata na Krku	Krk	HR	Primorsko-Goranska
 Župna crkva Selce	Crikvenica	HR	Primorsko-Goranska
-Church of St. Nikola Tavelić	Rijeka	HR	Primorsko-Goranska
+Crkva sv. Nikole Tavelića	Rijeka	HR	Primorsko-Goranska
 Franjevački svjetovni red, Krnjevo - Rijeka	Rijeka	HR	Primorsko-Goranska
 Crkva Uznesenja Blažene Djevice Marije	Omišalj	HR	Primorsko-Goranska
-Church of Our Lady of Lourdes	Rijeka	HR	Primorsko-Goranska
+Kapucinska crkva Gospe Lurdske u Rijeci	Rijeka	HR	Primorsko-Goranska
 Saint Vitus’ Cathedral	Rijeka	HR	Primorsko-Goranska
 Our Lady of Trsat Church (Crkva Gospe Trsatke)	Rijeka	HR	Primorsko-Goranska
 Župa svetoga Josipa Rijeka	Rijeka	HR	Primorsko-Goranska
-Church of St. Bartholomew	Čavle	HR	Primorsko-Goranska
+Crkva sv. Bartola	Čavle	HR	Primorsko-Goranska
 Župa sv. Filipa i Jakova ap. - Novi Vinodolski	Novi Vinodolski	HR	Primorsko-Goranska
 Župa Bl.Alojzija Stepinca Ogulin	Ogulin	HR	Karlovacka
 Župa Sveti Matej, Viškovo	Viškovo	HR	Primorsko-Goranska
@@ -14445,7 +14445,7 @@ Sv. Ciril in Metod	Metlika	SI	Metlika
 Grkokatolička župa Uzvišenja Svetoga Križa	Karlovac	HR	Karlovacka
 Samostan Kčeri Srca Isusova.	Lasinja	HR	Grad Zagreb
 Župa Uznesenja BDM, Kupinec	Jastrebarsko	HR	Zagrebacka
-Church of St. John Paul II.	Petrinja	HR	Sisacko-Moslavacka
+Crkva sv. Ivana Pavla II.	Petrinja	HR	Sisacko-Moslavacka
 Crkva Preobraženja Gospodnjeg	Petrinja	HR	Sisacko-Moslavacka
 Župa pohoda BDM Sisak	Sisak	HR	Sisacko-Moslavacka
 Katolička crkva sv. Marije	Sisak	HR	Sisacko-Moslavacka
@@ -14476,7 +14476,7 @@ Cerkev Sv. Marjete	Lukovica	SI	Lukovica
 Župnija Šmarca Duplica	Kamnik	SI	Kamnik
 Župnija Kranj	Kranj	SI	Kranj
 Župnijska cerkev sv. Andreja	Kranj	SI	Kranj
-Church of the Assumption of the Blessed Virgin Mary	Bled	SI	Bled
+Cerkev Marijinega vnebovzetja, Bled	Bled	SI	Bled
 Basilica di Santa Maria Ausiliatrice (Brezje)	Radovljica	SI	Radovljica
 Bazilika Marije Pomagaj	Radovljica	SI	Radovljica
 Cerkev Sv. Martina	Bled	SI	Bled
@@ -14508,8 +14508,8 @@ Magnificat - Siget	Zagreb	HR	Grad Zagreb
 Crkva Navještenja Blažene Djevice Marije	Velika Gorica	HR	Zagrebacka
 Župa sv Vida Mučenika, Petruševec - Church of St. Vitus	Zagreb	HR	Zagrebacka
 St. Martin's Church	Velika Gorica	HR	Zagrebacka
-Church of St. Anne	Zagreb	HR	Grad Zagreb
-Church of St. Leopold Mandić	Zagreb	HR	Grad Zagreb
+Župna crkva sv. Ane u Zagrebu	Zagreb	HR	Grad Zagreb
+Župna crkva sv. Leopolda Bogdana Mandića u Zagrebu	Zagreb	HR	Grad Zagreb
 Don Bosco Hrvatska	Zagreb	HR	Grad Zagreb
 Kršćanski ispraćaj pokojnika	Zagreb	HR	Grad Zagreb
 Saint Blaise’s Church	Zagreb	HR	Grad Zagreb
@@ -14531,14 +14531,14 @@ Grkokatolička Katedrala Sv. Cirila i Metoda	Zagreb	HR	Grad Zagreb
 International Catholic Community Zagreb	Zagreb	HR	Grad Zagreb
 Služavke Maloga Isusa	Zagreb	HR	Grad Zagreb
 Ravnateljstvo dušobrižništva za Hrvate u inozemstvu	Zagreb	HR	Grad Zagreb
-Church of St. Michael	Zagreb	HR	Grad Zagreb
+Župna crkva sv. Mihaela arkanđela u Gračanima	Zagreb	HR	Grad Zagreb
 Župa Remete	Zagreb	HR	Grad Zagreb
-Church of Sts. Peter and Paul	Zagreb	HR	Grad Zagreb
+Župna crkva sv. Petra i Pavla u Gračanima	Zagreb	HR	Grad Zagreb
 Crkva Majka Božja Lurdska	Zagreb	HR	Grad Zagreb
 RKT Župa Muke Isusove	Zagreb	HR	Grad Zagreb
 Župa Resnik	Zagreb	HR	Grad Zagreb
 Franjevacki Samostan i Crkva Bezgresnog Zaceca BDM	Zagreb	HR	Grad Zagreb
-Church of St. Leopold Mandic	Zagreb	HR	Grad Zagreb
+Župna crkva sv. Leopolda Bogdana Mandića u Dubravi	Zagreb	HR	Grad Zagreb
 Sveti papa Ivan XXIII.	Zagreb	HR	Grad Zagreb
 Crkva Blažene Djevice Marije	Zagreb	HR	Grad Zagreb
 Župnijska cerkev sv. Lovrenca	Brezice	SI	Brezice
@@ -14550,16 +14550,16 @@ Crkva sv. Ivana Krstitelja	Zlatar Bistrica	HR	Krapinsko-Zagorska
 Župa sv. Petra apostola, Ivanić-Grad	Ivanić-Grad	HR	Zagrebacka
 KMNL župe sv. Vida - Vrbovec	Vrbovec	HR	Zagrebacka
 Župa Ranjenog Isusa - Gradec	Gradec	HR	Zagrebacka
-Cathedral of Saint Teresa of Avila	Bjelovar	HR	Bjelovarsko-Bilogorska
+Bjelovarska katedrala	Bjelovar	HR	Bjelovarsko-Bilogorska
 Župa sv. Antuna Padovanskog, Bjelovar	Bjelovar	HR	Bjelovarsko-Bilogorska
-Church of the Holy Cross	Križevci	HR	Koprivnicko-Krizevacka
+Križevačka konkatedrala	Križevci	HR	Koprivnicko-Krizevacka
 Crkva Sv. Križa Križevci (putpodnoge.hr)	Križevci	HR	Koprivnicko-Krizevacka
 Grkokatolička Crkva u Hrvatskoj - Greek Catholic Church Croatia	Križevci	HR	Koprivnicko-Krizevacka
 Catedral de la Santísima Trinidad (Križevci)	Križevci	HR	Koprivnicko-Krizevacka
 Župa sv. Jurja - Desinić 	Desinić	HR	Krapinsko-Zagorska
 Karizmatska zajednica Božjeg Milosrđa	Pregrada	HR	Krapinsko-Zagorska
 Župa Uzvišenja Svetoga Križa, Sveti Križ Začretje	Sveti Križ Začretje	HR	Krapinsko-Zagorska
-Church of St. Mary Magdalene	Ivanec	HR	Varazdinska
+Crkva sv. Marije Magdalene	Ivanec	HR	Varazdinska
 Župnijska cerkev sv. Marije Vnebovzete	Kidričevo	SI	Majsperk
 Župa Presvetog Srca Isusova Vrbno	Bednja	HR	Krapinsko-Zagorska
 Sv. Ana	Cirkulane	SI	Zavrc
@@ -14573,8 +14573,8 @@ SVETA HELENA- selo povijesti, tradicije i kulture	Krizevci	HR	Koprivnicko-Krizev
 Molitvena zajednica "ISUS Spasitelj" Varaždin	Varaždin	HR	Varazdinska
 Varaždin Cathedral	Varaždin	HR	Varazdinska
 Župa sv. Fabijana i Sebastijana Varaždin	Varaždin	HR	Varazdinska
-Church of St. Fabian and Sebastian	Varaždin	HR	Varazdinska
-Church of St. Mary Magdalene	Gornji Kneginec	HR	Varazdinska
+Crkva sv. Fabijana i Sebastijana	Varaždin	HR	Varazdinska
+Crkva sv. Marije Magdalene	Gornji Kneginec	HR	Varazdinska
 Župa bl. Alojzija Stepinca Ivanovec	Čakovec	HR	Medimurska
 Chiesa di Sant'Antonio Abate e San Nicolò	Laives	IT	Trentino-Alto Adige
 Parrocchia di Laives	Laives	IT	Trentino-Alto Adige
@@ -14850,7 +14850,7 @@ Pfarrkirche Brandberg im Zillertal	Brandberg	AT	Tyrol
 Wallfahrtskirche Maria Rast	Hainzenberg	AT	Tyrol
 Pfarrkirche hl. Veit	Zell am Ziller	AT	Tyrol
 Mariä Himmelfahrt	Thaur	AT	Tyrol
-Basilica of St. Michael, Absam	Absam	AT	Tyrol
+Basilika St. Michael	Absam	AT	Tyrol
 Pfarrkirche Absam-Eichat	Absam	AT	Tyrol
 Pfarrkirche Volders	Volders	AT	Tyrol
 Marienkirche	Wattens	AT	Tyrol
@@ -14893,7 +14893,7 @@ Katholisches Pfarramt St. Benedikt	Benediktbeuern	DE	Bavaria
 St. Georg Bichl	Bichl	DE	Bavaria
 St. Jakob	Lenggries	DE	Bavaria
 St. Martin	Habach	DE	Bavaria
-Parish Church of St. Vitus	Iffeldorf	DE	Bavaria
+Pfarrkirche St. Vitus	Iffeldorf	DE	Bavaria
 St. Kilian	Bad Heilbrunn	DE	Bavaria
 Kalvarienberg	Bad Tölz	DE	Bavaria
 Catholic kindergarten St.Josef	Rottach-Egern	DE	Bavaria
@@ -14979,7 +14979,7 @@ Pfarrkirche St. Rupert am Kulm	Ramsau am Dachstein	AT	Styria
 Pfarrkirche Hl. Nikolaus	Sölk	AT	Styria
 Pfarrkirche Hl. Johannes dem Täufer	Haus	AT	Styria
 Pfarrkirche Assach	Aich	AT	Styria
-Parish Church of St. Sebastian	Ramsau bei Berchtesgaden	DE	Bavaria
+Pfarrkirche St. Sebastian	Ramsau bei Berchtesgaden	DE	Bavaria
 St. Andreas	Berchtesgaden	DE	Bavaria
 Pfarre Golling, Scheffau und Kellau	Golling an der Salzach	AT	Salzburg
 Raiffeisenbank Golling-Scheffau-Kellau	Golling an der Salzach	AT	Salzburg
@@ -15050,7 +15050,7 @@ Pfarrkirche Annaberg	Annaberg-Lungötz	AT	Salzburg
 Pfarrkirche zum Heiligen Kreuz	Rußbach am Paß Gschütt	AT	Salzburg
 Pfarrkirche Gosau	Gosau	AT	Upper Austria
 Kalvarienbergkirche	Hallstatt	AT	Upper Austria
-Parish of the Assumption, Hallstatt	Hallstatt	AT	Upper Austria
+Pfarrkirche Mariä Himmelfahrt, Hallstatt	Hallstatt	AT	Upper Austria
 Maria am Berg	Hallstatt	AT	Upper Austria
 Pfarrkirche Heilige Dreifaltigkeit	Obertraun	AT	Styria
 Pfarrkirche Maria Kumitz	Bad Mitterndorf	AT	Styria
@@ -15345,7 +15345,7 @@ Allerheiligenkirche	Graz	AT	Styria
 Pfarre Hl. Johannes Bosco	Graz	AT	Styria
 St. Lukas Church	Graz	AT	Styria
 Pfarre Graz-St. Johannes	Graz	AT	Styria
-Parish Graz-St. Joseph	Graz	AT	Styria
+Josefskirche	Graz	AT	Styria
 Katholische Kirche Graz-Münzgraben	Graz	AT	Styria
 St. Jakob In Thal	Thal	AT	Styria
 Schutzengelkirche	Graz	AT	Styria
@@ -15451,7 +15451,7 @@ Pfarrkirche Altenmarkt bei Furstenfeld	Fürstenfeld	AT	Styria
 Seelsorgeraum Heiliger Florian	Rudersdorf	AT	Burgenland
 Pfarrkirche Rudersdorf	Rudersdorf	AT	Burgenland
 Katholische Kirche Deutsch Kaltenbrunn	Deutsch Kaltenbrunn	AT	Burgenland
-Church of St. Stephen Harding	Apátistvánfalva	HU	Vas
+Harding Szent István-templom	Apátistvánfalva	HU	Vas
 Zalalövői Szent László Király-templom	Zalalövő	HU	Zala
 Pfarrkirche Mogersdorf (St. Josef)	Mogersdorf	AT	Burgenland
 Wallfahrtskirche Mariae Heimsuchung	Weichselbaum	AT	Burgenland
@@ -15702,7 +15702,7 @@ Crkva Svetog Jurja Velikog	Bebrina	HR	Brodsko-Posavska
 Župa Presvetog Trojstva, Gornji Lipovac	Nova Kapela	HR	Brodsko-Posavska
 Župa sv. Filipa i Jakova Odvorci	Sibinj	HR	Pozesko-Slavonska
 Mladi župe Sv. Terezije Avilske	Požega	HR	Pozesko-Slavonska
-Cathedral of Saint Teresa of Avila	Požega	HR	Pozesko-Slavonska
+Katedrala sv. Terezije Avilske	Požega	HR	Pozesko-Slavonska
 Pakrački dekanat	Pakrac	HR	Pozesko-Slavonska
 Župa sv. Marije Magdalene, Donja Obrijež	Pakrac	HR	Pozesko-Slavonska
 Župa Sv. Ivana Krstitelja, Badljevina	Badljevina	HR	Bjelovarsko-Bilogorska
@@ -15718,7 +15718,7 @@ Saint Peter’s Cathedral	Đakovo	HR	Osjecko-Baranjska
 Župa Kraljice sv. Krunice, Vođinci	Vođinci	HR	Vukovarsko-Srijemska
 Župa Uznesenja Blažene Djevice Marije Stari Jankovci 	Stari Jankovci	HR	Vukovarsko-Srijemska
 Župa Rođenja sv. Ivana Krstitelja Ivankovo	Ivankovo	HR	Vukovarsko-Srijemska
-Church of St. Vincent Pallotti	Vinkovci	HR	Vukovarsko-Srijemska
+Crkva sv. Vinka Pallottija	Vinkovci	HR	Vukovarsko-Srijemska
 Church of Immaculate Heart of Mary, Vinkovci	Vinkovci	HR	Vukovarsko-Srijemska
 Crkva Bezgrješnog Srca Marijina	Vinkovci	HR	Vukovarsko-Srijemska
 Katolička crkva sv. Antuna	Vinkovci	HR	Vukovarsko-Srijemska
@@ -15734,7 +15734,7 @@ Saint Joseph’s Church	Беочин	RS	Autonomna Pokrajina Vojvodina
 Crkva svetog Đorđa u Boboti	Trpinja	HR	Vukovarsko-Srijemska
 Crkva svetog Stefana u Borovu	Borovo	HR	Vukovarsko-Srijemska
 Župa Rođenja sv. Ivana Krstitelja, Sarvaš	Osijek	HR	Osjecko-Baranjska
-Church of St. Leopold Bogdan Mandic	Osijek	HR	Osjecko-Baranjska
+Crkva sv. Leopolda Bogdana Mandića	Osijek	HR	Osjecko-Baranjska
 Schönstattsko Svetište u Ivanovcima	Valpovo	HR	Osjecko-Baranjska
 Crkva Svetog Ćirila i Metoda	Osijek	HR	Osjecko-Baranjska
 Župa Uzvišenja sv. Križa, Osijek	Osijek	HR	Osjecko-Baranjska
@@ -15744,7 +15744,7 @@ Votive statue of the Holy Trinity	Osijek	HR	Osjecko-Baranjska
 Župa "Preslavnog Imena Marijina", Osijek	Osijek	HR	Osjecko-Baranjska
 Svetište Aljmaš - Gospa od Utočišta	Erdut	HR	Osjecko-Baranjska
 Црква Светог Чарлса Бормејског	Бачка Паланка	RS	Autonomna Pokrajina Vojvodina
-Church of Saint Mihajlo	Оџаци	RS	Autonomna Pokrajina Vojvodina
+Римокатоличка црква арханђела Михаила у Оџацима	Оџаци	RS	Autonomna Pokrajina Vojvodina
 Szent Imre Herceg Plébánia - Doroszló	Сомбор	RS	Autonomna Pokrajina Vojvodina
 Szent György plébánia Kúla - Župa Svetog Jurja Kula	Кула	RS	Autonomna Pokrajina Vojvodina
 Church of St. Leopold Bogdan Mandic	Virovitica	HR	Virovitick-Podravska
@@ -15877,7 +15877,7 @@ Biserica Romano-Catolică Iosefin	Timișoara	RO	Timis
 Notre-Dame	Timișoara	RO	Timis
 Parohia Greco-Catolică Timişoara III - Sfânta Maria, Regina Păcii, Timiş	Timișoara	RO	Timis
 Saint Catherine of Alexandria Catholic Church	Timișoara	RO	Timis
-Church of St Catherine	Timișoara	RO	Timis
+Biserica Sfânta Ecaterina din Timișoara	Timișoara	RO	Timis
 Biserica Penticostala Poarta Cerului	Timișoara	RO	Timis
 Biserica Romano-catolica din Mehala	Timișoara	RO	Timis
 Biserica Greco-Catolică Sfinții Petru și Pavel	Timișoara	RO	Timis
@@ -15916,7 +15916,7 @@ Nagyrécsei Szent László Király Templom	Nagyrécse	HU	Zala
 Szent Márton Church	Vörs	HU	Somogy
 Szent Jakab-templom	Lengyeltóti	HU	Somogy
 Andocsi Nagyboldogasszony Bazilika	Andocs	HU	Somogy
-Church of the Holy Spirit	Hévíz	HU	Zala
+Szentlélek-templom	Hévíz	HU	Zala
 Kemendollár Kápolna	Kemendollár	HU	Zala
 Saint Anne Round Church	Kallósd	HU	Zala
 Egyházközség Zalaszántó	Zalaszántó	HU	Zala
@@ -16349,7 +16349,7 @@ St. Sebald	Egling	DE	Bavaria
 St. Martin	Egling	DE	Bavaria
 St. Georg	Egling	DE	Bavaria
 St. Valentin	Egling	DE	Bavaria
-Church of St. Laurentius	Straßlach-Dingharting	DE	Bavaria
+Kirche St. Laurentius	Straßlach-Dingharting	DE	Bavaria
 St. Laurentius Kirche	Holzkirchen	DE	Bavaria
 Pfarrverband Holzkirchen-Warngau	Holzkirchen	DE	Bavaria
 St. Peter und Paul	Weyarn	DE	Bavaria
@@ -16414,7 +16414,7 @@ St. Hildegard	München	DE	Bavaria
 Fronleichnamskirche	München	DE	Bavaria
 Namen Jesu	München	DE	Bavaria
 St. Philippus	München	DE	Bavaria
-Parish of St. Willibald	München	DE	Bavaria
+Pfarrei St. Willibald	München	DE	Bavaria
 Kath. Kindergarten St. Willibald	München	DE	Bavaria
 Salvatorianer	München	DE	Bavaria
 Zu den hl. Zwölf Aposteln	München	DE	Bavaria
@@ -16534,7 +16534,7 @@ Kirche Wiederkunft Christi	Kolbermoor	DE	Bavaria
 Heilige Dreifaltigkeit	Kolbermoor	DE	Bavaria
 Katholisches Stadtpfarramt St. Quirinus	Rosenheim	DE	Bavaria
 Christkönig Kirche Rosenheim	Rosenheim	DE	Bavaria
-Parish Church St. Nicholas	Rosenheim	DE	Bavaria
+Pfarrkirche St. Nikolaus	Rosenheim	DE	Bavaria
 Stadtteilkirche Rosenheim-Inn	Rosenheim	DE	Bavaria
 Spitalkirche St. Joseph	Rosenheim	DE	Bavaria
 Polnische Katholische Mission	Rosenheim	DE	Bavaria
@@ -16904,7 +16904,7 @@ St. Georg	Stubenberg	DE	Bavaria
 Pfarrkirche Mühlheim am Inn	Mühlheim am Inn	AT	Upper Austria
 Pfarrkirche St. Michael	Geinberg	AT	Upper Austria
 Pfarrkirche St. Georgen	Sankt Georgen bei Obernberg am Inn	AT	Upper Austria
-Church Mariä Himmelfahrt zu St. Leonhard	Bad Füssing	DE	Bavaria
+Kirche Mariä Himmelfahrt zu St. Leonhard	Bad Füssing	DE	Bavaria
 Pfarrkirche zum Heiligen Abendmahl	Obernberg am Inn	AT	Upper Austria
 Katholische Pfarrkirche St. Nikolaus	Eggenfelden	DE	Bavaria
 Pfarrkirche St. Benedikt	Postmünster	DE	Bavaria
@@ -17422,7 +17422,7 @@ Pfarrkirche Naarn	Naarn im Machlande	AT	Upper Austria
 Stadtpfarrkirche Perg	Perg	AT	Upper Austria
 Pfarrkirche Pergkirchen	Perg	AT	Upper Austria
 Pfarrkirche Arbing	Arbing	AT	Upper Austria
-Parish St. Georgen an der Gusen	Sankt Georgen an der Gusen	AT	Upper Austria
+Pfarrkirche St. Georgen an der Gusen	Sankt Georgen an der Gusen	AT	Upper Austria
 Junge Kirche	Schwertberg	AT	Upper Austria
 Pfarrkirche Schwertberg	Schwertberg	AT	Upper Austria
 Pfarre Katsdorf	Katsdorf	AT	Upper Austria
@@ -17594,7 +17594,7 @@ Pfarre Regelsbrunn	Scharndorf	AT	Lower Austria
 Pfarre Petronell-Carnuntum	Petronell-Carnuntum	AT	Lower Austria
 Pfarrkirche Prinzersdorf	Prinzersdorf	AT	Lower Austria
 Pfarre Stattersdorf Harland	Sankt Pölten	AT	Lower Austria
-Parish of St. Johannes Kapistran	Sankt Pölten	AT	Lower Austria
+Pfarre St. Johannes Kapistran	Sankt Pölten	AT	Lower Austria
 Katholische Aktion	Sankt Pölten	AT	Lower Austria
 Katholische Frauenbewegung St. Pölten	Sankt Pölten	AT	Lower Austria
 Pfarre St. Polten-St. Josef	Sankt Pölten	AT	Lower Austria
@@ -17630,7 +17630,7 @@ Kirche zu St. Stephan	Mautern an der Donau	AT	Lower Austria
 Pfarrkirche Stein an der Donau	Krems an der Donau	AT	Lower Austria
 Pfarrkirche Egelsee	Krems an der Donau	AT	Lower Austria
 Dom der Wachau	Krems an der Donau	AT	Lower Austria
-Parish Krems St. Veit	Krems an der Donau	AT	Lower Austria
+Pfarrkirche St. Veit	Krems an der Donau	AT	Lower Austria
 rk Pfarramt Krems St. Paul	Krems an der Donau	AT	Lower Austria
 Pfarrkirche Krems-Lerchenfeld	Krems an der Donau	AT	Lower Austria
 Pfarrkirche Traismauer	Traismauer	AT	Lower Austria
@@ -17706,7 +17706,7 @@ Pfarre Breitenfeld	Wien	AT	Vienna
 Piaristenkirche	Wien	AT	Vienna
 Kalvarienbergkirche	Wien	AT	Vienna
 Pfarre Sühnekirche	Wien	AT	Vienna
-Parish and Monastery Church of St. Severin	Wien	AT	Vienna
+Lazaristenkirche	Wien	AT	Vienna
 John of Nepomuk chapel	Wien	AT	Vienna
 Filialkirche Weinhaus	Wien	AT	Vienna
 Filialkirche St. Ägyd	Wien	AT	Vienna
@@ -17889,10 +17889,10 @@ Kostel svatého Bartoloměje	Vyšší Brod	CZ	Jihocesky
 Klášter Vyšší Brod	Vyšší Brod	CZ	Jihocesky
 Pfarrkirche St. Nikolaus	Grünbach	AT	Upper Austria
 Kostel Narození Panny Marie	Dolní Dvořiště	CZ	Jihocesky
-Church of Saint Jiljí	Dolní Dvořiště	CZ	Jihocesky
+Kostel svatého Jiljí	Dolní Dvořiště	CZ	Jihocesky
 Kostel Narození Panny Marie	Černá v Pošumaví	CZ	Jihocesky
 Kostel svatého Mikuláše	Kájov	CZ	Jihocesky
-Church of St. Vitus	Český Krumlov	CZ	Jihocesky
+Kostel svatého Víta	Český Krumlov	CZ	Jihocesky
 St Vitus Cathedral, Český Krumlov	Český Krumlov	CZ	Jihocesky
 Kostel Božího Těla a Panny Marie	Český Krumlov	CZ	Jihocesky
 Kostel sv. Josefa a sv. Barbory	Kaplice	CZ	Jihocesky
@@ -18164,7 +18164,7 @@ Kostel svatého Mikuláše	Bor	CZ	Plzensky
 MMC Plzeňská diecéze	Kladruby	CZ	Plzensky
 Kostel sv.Anny	Planá	CZ	Plzensky
 Farnost u katedrály v Plzni	Plzeň	CZ	Plzensky
-Cathedral of St. Bartholomew	Plzeň	CZ	Plzensky
+Katedrála svatého Bartoloměje	Plzeň	CZ	Plzensky
 Salesiánská farnost Plzeň - Lobzy	Plzeň	CZ	Plzensky
 Kostel sv. Maří Magdalény	Bohutín	CZ	Central Bohemia
 kostel sv. Petra	Milín	CZ	Central Bohemia
@@ -18276,7 +18276,7 @@ Kostel svatého Antonína Paduánského	Velemín	CZ	Ustecky
 kostel sv. Martina	Velemín	CZ	Ustecky
 Zvěstování Panně Marii	Bílina	CZ	Ustecky
 Kostel svatého Vavřince	Kostomlaty pod Milešovkou	CZ	Ustecky
-Church of the Nativity of the Blessed Virgin Mary	Písek	CZ	Jihocesky
+Kostel Narození Panny Marie	Písek	CZ	Jihocesky
 Kostel svatého Petra a Pavla	Albrechtice nad Vltavou	CZ	Jihocesky
 Farnost Sepekov - poutní místo	Milevsko	CZ	Jihocesky
 Starokatolická farnost Tábor	Tábor	CZ	Jihocesky
@@ -18297,7 +18297,7 @@ Kostel sv. Václava	Rašovice	CZ	Central Bohemia
 sv. Vavřince	Zbraslavice	CZ	Central Bohemia
 Farnost Brtnice	Brtnice	CZ	Vysocina
 Kostel Sv. Jakuba Většího	Vílanec	CZ	Vysocina
-Church of St. James the Greater	Jihlava	CZ	Vysocina
+Kostel svatého Jakuba Většího	Jihlava	CZ	Vysocina
 Kostel sv. Jana Křtitele	Brtnice	CZ	Vysocina
 Kostel sv. Václava	Křižanov	CZ	Vysocina
 kostel sv. Vavřince	Vyskytná nad Jihlavou	CZ	Vysocina
@@ -18332,7 +18332,7 @@ Farnost Sebranice	Sebranice	CZ	Pardubicky
 Římskokatolická farnost Dolní Újezd u Litomyšle	Dolní Újezd	CZ	Pardubicky
 Kostel sv. Maří Magdalény	Mohelnice	CZ	Olomoucky
 Tetín Kostel Svaté Kateřiny	Tetín	CZ	Central Bohemia
-Church of Saint James	Beroun	CZ	Central Bohemia
+Kostel svatého Jakuba	Beroun	CZ	Central Bohemia
 Kostel Stětí svatého Jana Křtitele	Rudná	CZ	Central Bohemia
 Farnost Úhonice	Úhonice	CZ	Central Bohemia
 Kostel sv. Jakuba Staršího	Praha	CZ	Central Bohemia
@@ -18345,11 +18345,11 @@ Bazilika svaté Markéty	Praha	CZ	Praha
 Farnost sv. Markéty v Břevnově	Praha	CZ	Praha
 Starokatolická církev v ČR	Praha	CZ	Praha
 Římskokatolická farnost u kostela Nanebevzetí Panny Marie	Praha	CZ	Praha
-Church of the Assumption of the Virgin Mary	Praha	CZ	Praha
+Bazilika Nanebevzetí Panny Marie	Praha	CZ	Praha
 The Basilica of the Assumption of Our Lady	Praha	CZ	Praha
 Bazilika Nanebevzetí Panny Marie	Praha	CZ	Praha
 Cattedrale di San Lorenzo (Praga)	Praha	CZ	Praha
-Church of Saint Adalbert	Praha	CZ	Praha
+Kostel svatého Vojtěcha	Praha	CZ	Praha
 聖維特主教座堂 St. Vitus Cathedral	Praha	CZ	Praha
 St. Vitas Cathedral, Prague, Czech Republic	Praha	CZ	Praha
 St. Thomas Church	Praha	CZ	Praha
@@ -18372,7 +18372,7 @@ Sv. Jakub Starší  Praha-Petrovice	Praha	CZ	Central Bohemia
 The Saint Martin Rotunda At the Vyšerahd	Praha	CZ	Praha
 Saints Peter and Paul Basilica	Praha	CZ	Praha
 Svatý Apolinář	Praha	CZ	Praha
-Church of St. Apollinaire	Praha	CZ	Praha
+Kostel svatého Apolináře	Praha	CZ	Praha
 Roman Catholic Parish Church of St. Stepan	Praha	CZ	Praha
 The Prague Castle - St. George's Basilica	Praha	CZ	Praha
 Sedlec Cathedral	Praha	CZ	Praha
@@ -18386,11 +18386,11 @@ Klášter dominikánů Praha	Praha	CZ	Praha
 Polska Parafia Jana Pawła 2	Praha	CZ	Praha
 Paroisse Francophone de Prague	Praha	CZ	Praha
 Iglesia de Nuestra Señora en frente del Týn	Praha	CZ	Praha
-Church of Our Lady before Týn	Praha	CZ	Praha
-Basilica of St. James the Greater	Praha	CZ	Praha
+Kostel Panny Marie před Týnem	Praha	CZ	Praha
+Bazilika svatého Jakuba Většího	Praha	CZ	Praha
 Saint Vitus Catholic Church	Praha	CZ	Praha
 St. Joseph Church	Praha	CZ	Praha
-Church of Saint Roch	Praha	CZ	Praha
+Kostel svatého Rocha	Praha	CZ	Praha
 Kostel sv. Prokopa	Praha	CZ	Praha
 Iglesia de San Procopio	Praha	CZ	Praha
 Farnost Žižkov	Praha	CZ	Praha
@@ -18422,7 +18422,7 @@ Kostel svatého Bartoloměje	Suchdol	CZ	Central Bohemia
 Kostel sv. Václava	Suchdol	CZ	Central Bohemia
 kostel sv. Markéty	Suchdol	CZ	Central Bohemia
 Katedrála sv. Barbory	Kutná Hora	CZ	Central Bohemia
-Church of Saint James	Kutná Hora	CZ	Central Bohemia
+Kostel svatého Jakuba Staršího	Kutná Hora	CZ	Central Bohemia
 Греко-католицька парафія Найсвятішого серця Ісуса у м. Кутна Гора	Kutná Hora	CZ	Central Bohemia
 Chrám Nanebevzetí Panny Marie	Kutná Hora	CZ	Central Bohemia
 Bone Church	Kutná Hora	CZ	Central Bohemia
@@ -18459,7 +18459,7 @@ Vysokoškolské katolické společenství Pardubice - VKS UPCE	Pardubice	CZ	Pard
 Kostel Panny Marie Bolestné	Pardubice	CZ	Pardubicky
 Kostel Nanebevzetí Panny Marie	Vejvanovice	CZ	Pardubicky
 Farnost Pouchov	Hradec Králové	CZ	Kralovehradecky
-Church of the Nativity	Opočno	CZ	Kralovehradecky
+Kostel Narození Páně	Opočno	CZ	Kralovehradecky
 Římskokatolická farnost Dolní Dobrouč	Dolní Dobrouč	CZ	Pardubicky
 Kostel svatého Jiří	Javornice	CZ	Kralovehradecky
 Římskokatolická farnost Rokytnice v Orlických horách	Rokytnice v Orlických horách	CZ	Pardubicky
@@ -18546,7 +18546,7 @@ Katholische Pfarrgemeinde Hainburg	Hainburg an der Donau	AT	Lower Austria
 St. Philipp und Jakob	Hainburg an der Donau	AT	Lower Austria
 Fara Lúky	Bratislava	SK	Bratislavsky
 Holy Family Church	Bratislava	SK	Bratislavsky
-Church of the Most Holy Savior	Bratislava	SK	Bratislavsky
+Kostol Najsvätejšieho Spasiteľa	Bratislava	SK	Bratislavsky
 TK KBS	Bratislava	SK	Bratislavsky
 Petrus Pázmány	Bratislava	SK	Bratislavsky
 Rímskokatolícka cirkev, kostol Notre Dame	Bratislava	SK	Bratislavsky
@@ -18554,7 +18554,7 @@ Kanonisky sv. Augustína rehole Notre Dame	Bratislava	SK	Bratislavsky
 Modrý kostol	Bratislava	SK	Bratislavsky
 The Blue Church	Bratislava	SK	Bratislavsky
 Trinitarian Church of Bratislava	Bratislava	SK	Bratislavsky
-Church of the Annunciation	Bratislava	SK	Bratislavsky
+Kostol Zvestovania Pána	Bratislava	SK	Bratislavsky
 Old Cathedral of Saint John of Matha and Saint Felix of Valois	Bratislava	SK	Bratislavsky
 Vhod+Nevhod	Bratislava	SK	Bratislavsky
 Bratislavská arcidiecéza	Bratislava	SK	Bratislavsky
@@ -18562,12 +18562,12 @@ Starí rímskokatolíci na Slovensku	Bratislava	SK	Bratislavsky
 St. Ladislav Catholic Church (English Community)	Bratislava	SK	Bratislavsky
 Catholic Mass in English at the Blue Church in Bratislava	Bratislava	SK	Bratislavsky
 Kostol sv. Cyrila a Metoda	Bratislava	SK	Bratislavsky
-Cathedral of the Exaltation of the Holy Cross	Bratislava	SK	Bratislavsky
+Katedrála Povýšenia svätého Kríža	Bratislava	SK	Bratislavsky
 Farnosť Bratislava-Kalvária	Bratislava	SK	Bratislavsky
 Farnosť Bratislava - Prievoz	Bratislava	SK	Bratislavsky
 Kostol Sv. Vincenta De Paul	Bratislava	SK	Bratislavsky
 Blahoslavený Ján Havlík	Bratislava	SK	Bratislavsky
-Church of the Virgin Mary	Bratislava	SK	Bratislavsky
+Kostol Mena Panny Márie	Bratislava	SK	Bratislavsky
 Rímsko-katolícka Cirkev farnosť Šamorín	Šamorín	SK	Trnavsky
 Šamorin Roman Catholic Church	Šamorín	SK	Trnavsky
 Farnosť Štvrtok na Ostrove / Csallóközcsütörtöki Plébánia	Štvrtok na Ostrove	SK	Bratislavsky
@@ -18578,11 +18578,11 @@ Farnosť Veľké Úľany / Nagyfödémesi Egyházközség 	Veľké Úľany	SK	Tr
 Hurbanovo Rímskokatolícka farnosť	Hurbanovo	SK	Nitriansky
 Ógyallai  Római Katolikus Plébánia	Hurbanovo	SK	Nitriansky
 Roman Catholic church of Saint Lukas	Dulovce	SK	Nitriansky
-Church of the Holy Cross	Nové Zámky	SK	Nitriansky
+Kostol Svätého Kríža	Nové Zámky	SK	Nitriansky
 Vezekényi katolikusok	Vozokany	SK	Trnavsky
 Kostol sv. Vojtecha	Dvory nad Žitavou	SK	Nitriansky
 Rímskokatolícka farnosť sv. Štefana v Šuranoch	Šurany	SK	Nitriansky
-Chapel of Saint Rosalia	Bratislava	SK	Bratislavsky
+Kaplnka svätej Rozálie	Bratislava	SK	Bratislavsky
 Bazilika Marianka Bratia Tešitelia	Marianka	SK	Bratislavsky
 Pfarre Marchegg	Marchegg	AT	Lower Austria
 Kostol sv. Ondreja	Vysoká pri Morave	SK	Bratislavsky
@@ -18606,7 +18606,7 @@ Dom Kána - Duchovné centrum Lukov dvor	Nitra	SK	Nitriansky
 Nyitrai Kálvária	Nitra	SK	Nitriansky
 Latinské sv. omše v Nitre	Nitra	SK	Nitriansky
 Kostol sv. Cyrila a Metoda	Nitra	SK	Nitriansky
-Church of the Visitation of the Virgin Mary	Nitra	SK	Nitriansky
+Kostol Navštívenia Panny Márie	Nitra	SK	Nitriansky
 Kostol sv. Urbana	Nitra	SK	Nitriansky
 Kostol sv. Petra a Pavla	Nitra	SK	Nitriansky
 Kostol sv. Michala archanjela	Hlohovec	SK	Trnavsky
@@ -18652,11 +18652,11 @@ Pfarre Hohenau an der March	Hohenau an der March	AT	Lower Austria
 Kostol sv. Jána Bosca	Šaštín-Stráže	SK	Trnavsky
 Bazilika Sedembolestnej	Šaštín-Stráže	SK	Trnavsky
 Farnosť Senica	Senica	SK	Trnavsky
-Church of the Virgin Mary	Senica	SK	Trnavsky
+Kostol Navštívenia Panny Márie	Senica	SK	Trnavsky
 Kostol sv. Štefana Kráľa	Jablonica	SK	Trnavsky
 Kostel Narození Panny Marie	Velké Bílovice	CZ	South Moravian
 Kostol sv. Margity Antiochijskej	Kopcany	SK	Trnavsky
-Church of St. Lawrence	Hodonín	CZ	South Moravian
+Kostel svatého Vavřince	Hodonín	CZ	South Moravian
 Římskokatolická farnost Sudoměřice	Sudoměřice	CZ	South Moravian
 Kostol Všetkých svätých	Dechtice	SK	Trnavsky
 Rímskokatolícky farský úrad sv. Cyrila a Metoda	Piešťany	SK	Trnavsky
@@ -18685,7 +18685,7 @@ Kostel Panny Marie	Veselí nad Moravou	CZ	South Moravian
 Kostel sv. Václava	Domanín	CZ	South Moravian
 Kostel sv. Mikuláše	Letonice	CZ	South Moravian
 Kostel svatého Prokopa	Stříbrnice	CZ	Zlin
-Basilica of the Assumption of the Virgin Mary and Saints Cyril and Methodius	Velehrad	CZ	Zlin
+Bazilika Nanebevzetí Panny Marie a svatého Cyrila a Metoděje	Velehrad	CZ	Zlin
 Bazilika Nanebevzetí Panny Marie	Velehrad	CZ	Zlin
 Farnost Otrokovice	Otrokovice	CZ	Zlin
 Římskokatolická farnost Nivnice	Nivnice	CZ	Zlin
@@ -18719,14 +18719,14 @@ Bazilika Navstivenia Panny Marie	Staré Hory	SK	Banskobystricky
 Kostol sv. Juraja	Podbrezová	SK	Banskobystricky
 Kostol Nanebovzatia Panny Marie	Brezno	SK	Banskobystricky
 Bazilika Narodenia Panny Márie	Rajecká Lesná	SK	Zilinsky
-Church of Holy Trinity	Mošovce	SK	Zilinsky
+Kostol Najsvätejšej Trojice	Mošovce	SK	Zilinsky
 Kostol sv. Ladislava	Necpaly	SK	Zilinsky
 Farnost Precin	Prečín	SK	Trenciansky
 Farnosť Jasenica	Jasenica	SK	Trenciansky
 Katolícky Kostol Bytča	Bytča	SK	Zilinsky
 Farnosť Lietava	Lietava	SK	Zilinsky
 PreTiosa	Žilina	SK	Zilinsky
-Church of St. Stephen the King	Žilina	SK	Zilinsky
+Kostol svätého Štefana kráľa	Žilina	SK	Zilinsky
 Farnosť Žilina-Vlčince	Žilina	SK	Zilinsky
 Rímsko katolícka farnosť sv. Jána Krstiteľa Liptovská Osada	Liptovská Osada	SK	Zilinsky
 Farnosť Liptovská Lúžna	Liptovska Luzna	SK	Zilinsky
@@ -18827,7 +18827,7 @@ Farnosť Spišský Hrhov	Spišský Hrhov	SK	Presovsky
 Basilica of St. James	Levoča	SK	Presovsky
 Bazilika sv. Jakuba	Levoča	SK	Presovsky
 Mariánska Hora	Levoča	SK	Presovsky
-Basilica of the Virgin Mary	Levoča	SK	Presovsky
+Bazilika Navštívenia Panny Márie na Mariánskej hore	Levoča	SK	Presovsky
 Kostol sv. Margity	Margecany	SK	Kosicky
 Farnosť Bijacovce	Bijacovce	SK	Presovsky
 Bazilika Svätého kríža	Kežmarok	SK	Presovsky
@@ -19198,7 +19198,7 @@ Parafia św. Wawrzyńca w Głuchołazach	Głuchołazy	PL	Opole Voivodeship
 Parafia św. Józefa Robotnika w Bodzanowie	Głuchołazy	PL	Opole Voivodeship
 Sanktuarium św. Józefa	Prudnik	PL	Opole Voivodeship
 Parafia św. Michała Archanioła	Prudnik	PL	Opole Voivodeship
-Church of Sts. Michael the Archangel	Prudnik	PL	Opole Voivodeship
+Kościół św. Michała Archanioła w Prudniku	Prudnik	PL	Opole Voivodeship
 Bonifratrzy Prudnik	Prudnik	PL	Opole Voivodeship
 Parafia Rzymsko Katolicka Narodzenia Świętego Jana Chrzciciela	Głuchołazy	PL	Opole Voivodeship
 Parafia rzymskokatolicka św. Mikołaja	Nysa	PL	Opole Voivodeship
@@ -19490,7 +19490,7 @@ Parafia Nawiedzenia NMP w Mysłowicach	Mysłowice	PL	Silesian Voivodeship
 Parafia Matki Bożej Bolesnej	Mysłowice	PL	Silesian Voivodeship
 Parafia św. Michała Archanioła	Katowice	PL	Silesian Voivodeship
 Oaza Studencka Katowice 	Katowice	PL	Silesian Voivodeship
-Church of Sts. Michael the Archangel	Katowice	PL	Silesian Voivodeship
+Kościół św. Michała Archanioła w Katowicach	Katowice	PL	Silesian Voivodeship
 Kosciol Apostolow Piotra i Pawla	Katowice	PL	Silesian Voivodeship
 Parafia Chrystusa Krola	Katowice	PL	Silesian Voivodeship
 Parafia rzymskokatolicka sw. Jozefa	Katowice	PL	Silesian Voivodeship
@@ -19607,7 +19607,7 @@ Parafia rzymskokatolicka św. Jadwigi	Chorzów	PL	Silesian Voivodeship
 Parafia rzymskokatolicka św. Antoniego	Chorzów	PL	Silesian Voivodeship
 Parafia Ewangelicko-Augsburska	Chorzów	PL	Silesian Voivodeship
 Kościół pw. Św. Wawrzyńca	Chorzów	PL	Silesian Voivodeship
-Parish P.W. St. Augustine in Lipiny	Świętochłowice	PL	Silesian Voivodeship
+Kościół św. Augustyna w Lipinach	Świętochłowice	PL	Silesian Voivodeship
 Parafia Najświętszego Serca Pana Jezusa	Świętochłowice	PL	Silesian Voivodeship
 Parafia Matki Bożej Różańcowej	Świętochłowice	PL	Silesian Voivodeship
 Parafia Świętego Józefa w Chorzowie	Chorzów	PL	Silesian Voivodeship
@@ -19656,7 +19656,7 @@ Kościół Dobrego Pasterza w Świerklańcu	Świerklaniec	PL	Silesian Voivodeshi
 Parafia św. Andrzeja w Ujeździe	Ujazd	PL	Opole Voivodeship
 Parafia św. Michała Archanioła	Toszek	PL	Silesian Voivodeship
 Kościół Rzymskokatolicki Bożego Ciała	Strzelce Opolskie	PL	Opole Voivodeship
-Church. St. Barbara	Strzelce Opolskie	PL	Opole Voivodeship
+Kościół św. Barbary w Strzelcach Opolskich	Strzelce Opolskie	PL	Opole Voivodeship
 Kościół Rzymskokatolicki pw. św. Wawrzyńca	Strzelce Opolskie	PL	Opole Voivodeship
 Parafia Św. Joachima i Anny w Dziewkowicach	Strzelce Opolskie	PL	Opole Voivodeship
 Kościół Nawiedzenia NMP i św. Jadwigi	Strzelce Opolskie	PL	Opole Voivodeship
@@ -19805,7 +19805,7 @@ Kościół św. Jana Pawła II i św. Floriana	Nowy Targ (Gmina)	PL	Lesser Polan
 Parafia Św. Wojciecha Biskupa i Męczennika w Zaskalu	Szaflary	PL	Lesser Poland Voivodeship
 Sanktuarium Matki Bożej Królowej Podhala w Ludźmierzu	Nowy Targ (Gmina)	PL	Lesser Poland Voivodeship
 Kościół Królowej Jadwigi	Nowy Targ	PL	Lesser Poland Voivodeship
-Parish of St. John Paul II	Nowy Targ	PL	Lesser Poland Voivodeship
+Kościół św. Jana Pawła II w Nowym Targu	Nowy Targ	PL	Lesser Poland Voivodeship
 Parafia Najświętszego Serca Pana Jezusa	Nowy Targ	PL	Lesser Poland Voivodeship
 Parafia Świętej Katarzyny	Nowy Targ	PL	Lesser Poland Voivodeship
 Katolicka Odnowa w Duchu Świętym "Droga Święta"	Nowy Targ	PL	Lesser Poland Voivodeship
@@ -19926,7 +19926,7 @@ Parafia Niskowa	Chełmiec	PL	Lesser Poland Voivodeship
 Parafia ewangelicko-augsburska Przemienienia Pańskiego	Nowy Sącz	PL	Lesser Poland Voivodeship
 Kosciol sw. Ducha i Klasztor	Nowy Sącz	PL	Lesser Poland Voivodeship
 Bazylika św. Małgorzaty Antiocheńskiej w Nowym Sączu	Nowy Sącz	PL	Lesser Poland Voivodeship
-Parish of St. John Paul II	Nowy Sącz	PL	Lesser Poland Voivodeship
+Kościół św. Jana Pawła II w Nowym Sączu	Nowy Sącz	PL	Lesser Poland Voivodeship
 Duszpasterstwo Kobiet - Perły Maryi	Nowy Sącz	PL	Lesser Poland Voivodeship
 Kościół św. Józefa Rzemieślnika w Starej Wsi	Limanowa (Gmina)	PL	Lesser Poland Voivodeship
 Kościół św. Marii Magdaleny	Limanowa (Gmina)	PL	Lesser Poland Voivodeship
@@ -19989,7 +19989,7 @@ Kościół św. Michała Archanioła	Tuchów	PL	Lesser Poland Voivodeship
 Gréckokatolícky Farský Úrad	Kružlov	SK	Presovsky
 Farnosť Bardejov Družba	Bardejov	SK	Presovsky
 Kostolný obchod. V Bazilika sv.Egidia.	Bardejov	SK	Presovsky
-Basilica of St Giles	Bardejov	SK	Presovsky
+Bazilika svätého Egídia	Bardejov	SK	Presovsky
 Gréckokatolícka Cirkev, farnosť Svidník	Svidník	SK	Presovsky
 Cerkev Bodružal	Bodružal	SK	Presovsky
 Gréckokatolícka farnosť Hunkovce	Hunkovce	SK	Presovsky
@@ -20163,7 +20163,7 @@ Kościół św. Wincentego, Nadbrzezie 12, 31-983 Kraków - Pleszów	Kraków	PL	
 Parafia św. Mikołaja w Liszkach	Liszki	PL	Lesser Poland Voivodeship
 Parafia rzymskokatolicka pw swietych Apostolow Piotra i Pawla	Kraków	PL	Lesser Poland Voivodeship
 Parafia Chrystusa Króla	Kraków	PL	Lesser Poland Voivodeship
-Church of St. Bartholomew	Liszki	PL	Lesser Poland Voivodeship
+Kościół św. Bartłomieja w Morawicy	Liszki	PL	Lesser Poland Voivodeship
 Parafia św. Rodziny w Balicach	Zabierzów	PL	Lesser Poland Voivodeship
 Parafia Matki Bożej Nieustającej Pomocy	Kraków	PL	Lesser Poland Voivodeship
 Kościół św. Jana Pawła II	Kraków	PL	Lesser Poland Voivodeship
@@ -20178,7 +20178,7 @@ Redemptoryści Kraków	Kraków	PL	Lesser Poland Voivodeship
 Parafia Matki Bożej Nieustającej Pomocy	Kraków	PL	Lesser Poland Voivodeship
 Kościół św. Józefa	Kraków	PL	Lesser Poland Voivodeship
 Parafia Rzymsko-Katolicka P.w. Św. Stanisława Kostki	Kraków	PL	Lesser Poland Voivodeship
-Parish of the Holy Saviour	Kraków	PL	Lesser Poland Voivodeship
+Kościół św. Augustyna i św. Jana Chrzciciela w Krakowie	Kraków	PL	Lesser Poland Voivodeship
 Kosciol Najswietszego Salwatora w Krakowie	Kraków	PL	Lesser Poland Voivodeship
 Kaplica św. św. Piotra i Pawła	Kraków	PL	Lesser Poland Voivodeship
 Bazylika Sw. Michala Archaniola na Skalce	Kraków	PL	Lesser Poland Voivodeship
@@ -20190,7 +20190,7 @@ Bazylika Mniejsza i Klasztor na Skałce	Kraków	PL	Lesser Poland Voivodeship
 Kościół Bożego Ciała	Kraków	PL	Lesser Poland Voivodeship
 Bazylika archikatedralna sw. Stanislawa i sw. Waclawa	Kraków	PL	Lesser Poland Voivodeship
 Parafia rzymsko-katolicka p.w. Św. Stanisława Biskupa i Męczennika i Św. Wacława Męczennika	Kraków	PL	Lesser Poland Voivodeship
-Church of St. Giles	Kraków	PL	Lesser Poland Voivodeship
+Kościół św. Idziego w Krakowie	Kraków	PL	Lesser Poland Voivodeship
 Kościół św. Bernardyna	Kraków	PL	Lesser Poland Voivodeship
 Misjonarze	Kraków	PL	Lesser Poland Voivodeship
 Parafia Ewangelicko-Augsburska w Krakowie	Kraków	PL	Lesser Poland Voivodeship
@@ -20237,7 +20237,7 @@ Nuestra Señora de Czestokowa	Kraków	PL	Lesser Poland Voivodeship
 Parafia Prawosławna pw. Zaśnięcia Najświętszej Marii Panny	Kraków	PL	Lesser Poland Voivodeship
 Parafia Św. Bartłomieja	Kraków	PL	Lesser Poland Voivodeship
 Kościół Zmartwychwstania Pańskiego	Kraków	PL	Lesser Poland Voivodeship
-Church of St. Casimir the Prince	Kraków	PL	Lesser Poland Voivodeship
+Kościół św. Kazimierza Królewicza w Krakowie	Kraków	PL	Lesser Poland Voivodeship
 Bazylika Sw. Franciszka	Kraków	PL	Lesser Poland Voivodeship
 Church of the Transfiguration	Kraków	PL	Lesser Poland Voivodeship
 Parafia Rzymskokatolicka Przemienienia Pańskiego	Kraków	PL	Lesser Poland Voivodeship
@@ -20300,7 +20300,7 @@ Parafia Świętego Wojciecha i Matki Bożej Bolesnej	Wielka Wieś	PL	Lesser Pola
 Kosciol Podwyzszenia Krzyza Swietego	Zabierzów	PL	Lesser Poland Voivodeship
 Wspólnota Źródło	Zabierzów	PL	Lesser Poland Voivodeship
 Kościół św. Apostołów Piotra i Pawła	Zabierzów	PL	Lesser Poland Voivodeship
-Church of Mary Magdalene	Kraków	PL	Lesser Poland Voivodeship
+Kościół św. Marii Magdaleny w Dukli	Kraków	PL	Lesser Poland Voivodeship
 Parafia Narodzenia Najświętszej Maryi Panny	Zielonki	PL	Lesser Poland Voivodeship
 Kościół Matki Bożej Nieustającej Pomocy	Zielonki	PL	Lesser Poland Voivodeship
 Opcja Benedykta	Wielka Wieś	PL	Lesser Poland Voivodeship
@@ -20330,7 +20330,7 @@ Parafia NMP w Klimontowie	Proszowice	PL	Lesser Poland Voivodeship
 Domowy Kościół Rejon Bochnia	Bochnia	PL	Lesser Poland Voivodeship
 Kościół św. Pawła Apostoła w Bochni	Bochnia	PL	Lesser Poland Voivodeship
 Parafia sw. Bartlomieja Apostola	Brzesko	PL	Lesser Poland Voivodeship
-Basilica of St. Nicholas in Bochnia	Bochnia	PL	Lesser Poland Voivodeship
+Bazylika Kolegiacka św. Mikołaja w Bochni	Bochnia	PL	Lesser Poland Voivodeship
 Kościół św. Jana Nepomucena	Bochnia	PL	Lesser Poland Voivodeship
 Parafia Rzezawa	Rzezawa	PL	Lesser Poland Voivodeship
 Kościół Trójcy Przenajświętszej	Brzesko	PL	Lesser Poland Voivodeship
@@ -21072,7 +21072,7 @@ H. Godelieve Kerk	Roeselare	BE	Flanders
 Page Eglise Christ Roi Kortrijk	Wevelgem	BE	Flanders
 Pastorale Eenheid H. Edith Stein Kortrijk	Kortrijk	BE	Flanders
 Sint-Marcus	Kortrijk	BE	Flanders
-Church of Our Lady of Courtrai	Kortrijk	BE	Flanders
+Onze-Lieve-Vrouwekerk	Kortrijk	BE	Flanders
 Parochie  Sint-Rita	Harelbeke	BE	Flanders
 Sint-Amanduskerk	Harelbeke	BE	Flanders
 Sint-Amanduskerk	Zwevegem	BE	Flanders
@@ -21191,7 +21191,7 @@ Bisdom Brugge	Brugge	BE	Flanders
 Iglesia Nuestra Señora De Brujas	Brugge	BE	Flanders
 L‘eglise Notre-Dame Brugge	Brugge	BE	Flanders
 Madeleine in Brugge	Brugge	BE	Flanders
-Basilica of the Holy Blood	Brugge	BE	Flanders
+Basiliek van het Heilig Bloed	Brugge	BE	Flanders
 比利時聖皿	Brugge	BE	Flanders
 Basilique Saint sang	Brugge	BE	Flanders
 Saint Walburga Church	Brugge	BE	Flanders
@@ -21298,7 +21298,7 @@ Paroisse Ste Anne	Waterloo	BE	Wallonia
 Église Saint-Étienne d'Ohain	Lasne	BE	Wallonia
 Sint-Martinus Basiliek	Halle	BE	Flanders
 Sint Vincentiuskerk	Halle	BE	Flanders
-Church of Saint Joseph	Waterloo	BE	Wallonia
+Sint-Jozefskerk	Waterloo	BE	Wallonia
 Onze-Lieve-Vrouwekerk	Beersel	BE	Flanders
 Église Notre-Dame (Alsemberg)	Beersel	BE	Flanders
 Eglise Notre-Dame	Sint-Genesius-Rode	BE	Flanders
@@ -21393,7 +21393,7 @@ Basilique du Sacré-Cœur - Koekelberg	Ganshoren	BE	Brussels Capital
 Basilique Bruxelles	Koekelberg	BE	Brussels Capital
 Basilique de Koekelberg , Sacre Cœur de Bruxelles	Koekelberg	BE	Brussels Capital
 Het Klooster van de Zalige Nicolaas Tsjarnetskyj	Ganshoren	BE	Brussels Capital
-Cathedral of St. Michael and St. Gudula	Bruxelles	BE	Brussels Capital
+Kathedraal van Sint-Michiel en Sint-Goedele	Bruxelles	BE	Brussels Capital
 Cathédrale Saint-Michel et Gudule	Brussels	BE	Brussels Capital
 Capilla Sagrado Corazón Bruselas	Bruxelles	BE	Brussels Capital
 Église Notre-Dame du Finistère	Brussel	BE	Brussels Capital
@@ -21444,7 +21444,7 @@ Sint-Martinuskerk	Kortenberg	BE	Flanders
 Christus Koningkerk	Bruxelles	BE	Flanders
 Sint-Amandskerk	Grimbergen	BE	Flanders
 Parochie Sint-Amandus, Strombeek-Bever	Grimbergen	BE	Flanders
-Basilica of Saint Servatius	Grimbergen	BE	Flanders
+Sint-Servaasbasiliek	Grimbergen	BE	Flanders
 Onze-Lieve-Vrouw-ter-Noodkerk	Merchtem	BE	Flanders
 Onze-Lieve-Vrouwekerk	Grimbergen	BE	Flanders
 Sint-Rumolduskerk	Grimbergen	BE	Flanders
@@ -21514,10 +21514,10 @@ Onze-Lieve-Vrouw Onbevlekt Ontvangen	Sint-Truiden	BE	Flanders
 Sint-Laurentiuskerk	Sint-Truiden	BE	Flanders
 Sanctuaire de l'Enfant Jésus de Prague - Horion-Hozémont	Grâce-Hollogne	BE	Wallonia
 Église Saint-Denis	Waremme	BE	Wallonia
-Church of St. Francis de Sales	Liège	BE	Wallonia
+Église Saint-François-de-Sales	Liège	BE	Wallonia
 Eglise du Saint-Sacrement	Liège	BE	Wallonia
 Eglise Saint-Jacques, merveille de Liège	Liège	BE	Wallonia
-Church Saint Hubert	Liège	BE	Wallonia
+Église Saint-Hubert	Liège	BE	Wallonia
 St. Paul's Cathedral	Liège	BE	Wallonia
 Unité Pastorale Saint-Martin	Liège	BE	Wallonia
 Polska Wspólnota Katolicka w Liège	Liège	BE	Wallonia
@@ -21602,7 +21602,7 @@ Sint-Martinuskerk	Hasselt	BE	Flanders
 Bisdom Hasselt	Hasselt	BE	Flanders
 Sint-Hubertuskerk	Hasselt	BE	Flanders
 Virga-Jessebasiliek	Hasselt	BE	Flanders
-Cathedral St. Quintinus	Hasselt	BE	Flanders
+Sint-Quintinuskathedraal	Hasselt	BE	Flanders
 Minderbroederskerk	Hasselt	BE	Flanders
 Gezinsliturgie Diepenbeek Centrum	Diepenbeek	BE	Flanders
 Sint-Servaaskerk	Diepenbeek	BE	Flanders
@@ -21691,7 +21691,7 @@ Saint George's Church	Antwerpen	BE	Flanders
 Antwerp Catedral	Antwerpen	BE	Flanders
 Sint-Andrieskerk	Antwerpen	BE	Flanders
 De Kathedraal, Antwerpen	Antwerpen	BE	Flanders
-Cathedral of Our Lady	Antwerpen	BE	Flanders
+Onze-Lieve-Vrouwekathedraal	Antwerpen	BE	Flanders
 Bisdom Antwerpen	Antwerpen	BE	Flanders
 Antwerpen Katedral	Antwerpen	BE	Flanders
 Kerkfabriek Onze-Lieve-Vrouwekathedraal	Antwerpen	BE	Flanders
@@ -22037,7 +22037,7 @@ Kerk van de Heilige Martelaren van Gorcum	Scheveningen	NL	South Holland
 Българска Православна Църква гр. Хага, Холандия	Den Haag	NL	South Holland
 Oud-katholieke parochie Den Haag	Den Haag	NL	South Holland
 St Anthony Abbot Church	Scheveningen	NL	South Holland
-Church of Our Saviour	Den Haag	NL	South Holland
+Onze-Lieve-Vrouw-van-Goede-Raadkerk	Den Haag	NL	South Holland
 International roman catholic church	Den Haag	NL	South Holland
 Stichting Alida Kemp Fonds	Leidschendam	NL	South Holland
 Onbevlekt Hart van Maria	Den Haag	NL	South Holland
@@ -22099,7 +22099,7 @@ Igreja Nossa Senhora de Fatima	Amsterdam	NL	North Holland
 All Saints Catholic Church Afrika Huis	Amsterdam	NL	North Holland
 A.L.M. De Nossa Senhora de Fatima	Amsterdam	NL	North Holland
 De Krijtberg	Amsterdam	NL	North Holland
-Church of St. Peter and St. Paul, Amsterdam	Amsterdam	NL	North Holland
+Sint-Petrus-en-Pauluskerk	Amsterdam	NL	North Holland
 Communauté Catholique Francophone d’Amsterdam	Amsterdam	NL	North Holland
 Church of Our Lady	Amsterdam	NL	North Holland
 De Agnietenkapel	Amsterdam	NL	North Holland
@@ -22153,7 +22153,7 @@ De Nieuwe Augustinus	Amsterdam	NL	North Holland
 De Schaapskooi Landsmeer	Landsmeer	NL	North Holland
 Sint-Bonifatiuskerk	Zaandam	NL	North Holland
 H.H. Martelaren van Gorcumkerk	Koog aan de Zaan	NL	North Holland
-Church of St. Maria Magdalena	Zaandam	NL	North Holland
+Sint-Maria Magdalenakerk	Zaandam	NL	North Holland
 Sint-Laurentiuskerk	Heemskerk	NL	North Holland
 R.K. Parochie Onze Lieve Vrouw Geboortekerk	Wormerveer	NL	North Holland
 Kerk Snuiverstraat Krommenie	Krommenie	NL	North Holland
@@ -22275,7 +22275,7 @@ Sterrepleinkerk	Maastricht	NL	Limburg
 Sint-Jozefkerk	Lanaken	BE	Flanders
 Parochie Walburga Amby	Maastricht	NL	Limburg
 Monulphus en Gondulphuskerk	Berg en Terblijt	NL	Limburg
-Basilica of the Blessed Sacrament	Meerssen	NL	Limburg
+Basiliek van het Allerheiligst Sacrament	Meerssen	NL	Limburg
 Parochie St. Gerlach te Houthem	Valkenburg	NL	Limburg
 Sint-Margaritakerk	Margraten	NL	Limburg
 Sint-Petruskerk	Gulpen	NL	Limburg
@@ -22492,7 +22492,7 @@ St. George's Church	Köln	DE	North Rhine-Westphalia
 Jesuitenkirche Sankt Peter	Köln	DE	North Rhine-Westphalia
 St. Maria Lyskirchen	Köln	DE	North Rhine-Westphalia
 Church of St. Maria in Lyskirchen	Köln	DE	North Rhine-Westphalia
-Basilica of St Mary in the Capitol	Köln	DE	North Rhine-Westphalia
+Basilika St. Maria im Kapitol	Köln	DE	North Rhine-Westphalia
 St. Engelbert	Köln	DE	North Rhine-Westphalia
 St. Vitalis	Köln	DE	North Rhine-Westphalia
 St. Joseph	Köln	DE	North Rhine-Westphalia
@@ -22502,7 +22502,7 @@ St. Mechtern	Köln	DE	North Rhine-Westphalia
 Pfarrkirche St. Michael	Köln	DE	North Rhine-Westphalia
 Katholisches Pfarramt St. Michael	Köln	DE	North Rhine-Westphalia
 Katholisch in Köln-Mitte	Köln	DE	North Rhine-Westphalia
-Basilica of St Apostles	Köln	DE	North Rhine-Westphalia
+Basilika St. Aposteln	Köln	DE	North Rhine-Westphalia
 St. Gereon	Köln	DE	North Rhine-Westphalia
 Köln Dom	Köln	DE	North Rhine-Westphalia
 Katholischer Kirchengemeindeverband Ehrenfeld	Köln	DE	North Rhine-Westphalia
@@ -22516,7 +22516,7 @@ St. Peter	Köln	DE	North Rhine-Westphalia
 Comunidad Católica de Lengua Española	Köln	DE	North Rhine-Westphalia
 St. Quirinus	Köln	DE	North Rhine-Westphalia
 Keulen, Dom	Köln	DE	North Rhine-Westphalia
-Church of St. Mary in the Kupfergasse	Köln	DE	North Rhine-Westphalia
+Kirche St. Maria in der Kupfergasse	Köln	DE	North Rhine-Westphalia
 Diözesanrat der Katholiken im Erzbistum Köln	Köln	DE	North Rhine-Westphalia
 Zentralverband Katholischer Kirchenangestellter e.V. ZKD	Köln	DE	North Rhine-Westphalia
 Minoritenkirche	Köln	DE	North Rhine-Westphalia
@@ -22718,7 +22718,7 @@ St. Nikolaus Hardt Pfarrheim	Mönchengladbach	DE	North Rhine-Westphalia
 St. Maria Empfängnis	Mönchengladbach	DE	North Rhine-Westphalia
 Kath. Pfarramt St. Anna	Mönchengladbach	DE	North Rhine-Westphalia
 St. Anna	Mönchengladbach	DE	North Rhine-Westphalia
-Parish Office St. Barbara	Mönchengladbach	DE	North Rhine-Westphalia
+Franziskanerkirche St. Barbara mit Kloster	Mönchengladbach	DE	North Rhine-Westphalia
 St. Maria Rosenkranz	Mönchengladbach	DE	North Rhine-Westphalia
 pro multis gGmbH	Mönchengladbach	DE	North Rhine-Westphalia
 Polska Misja Katolicka	Mönchengladbach	DE	North Rhine-Westphalia
@@ -22766,7 +22766,7 @@ Franz-von-Sales-Kirche	Düsseldorf	DE	North Rhine-Westphalia
 St. Joseph	Düsseldorf	DE	North Rhine-Westphalia
 St. Maria Rosenkranz	Düsseldorf	DE	North Rhine-Westphalia
 St. Sebastian	Neuss	DE	North Rhine-Westphalia
-Basilica of St. Quirinus	Neuss	DE	North Rhine-Westphalia
+Quirinus-Münster	Neuss	DE	North Rhine-Westphalia
 Katholische Ehe-, Familien- und Lebensberatung	Neuss	DE	North Rhine-Westphalia
 Quirinus Basilika Neuss	Neuss	DE	North Rhine-Westphalia
 Bund der Deutschen Katholischen Jugend	Neuss	DE	North Rhine-Westphalia
@@ -23073,7 +23073,7 @@ Katholisches Pfarramt St. Marien und Josef	Radevormwald	DE	North Rhine-Westphali
 Caritashaus	Radevormwald	DE	North Rhine-Westphalia
 St. Bonifatius	Wuppertal	DE	North Rhine-Westphalia
 St. Barbara	Wülfrath	DE	North Rhine-Westphalia
-Basilica of St. Lawrence	Wuppertal	DE	North Rhine-Westphalia
+Basilika St. Laurentius	Wuppertal	DE	North Rhine-Westphalia
 Catholic Kindergarten St. Laurentius	Wuppertal	DE	North Rhine-Westphalia
 Katholische Citykirche Wuppertal	Wuppertal	DE	North Rhine-Westphalia
 Herz-Jesu-Kirche Elberfeld	Wuppertal	DE	North Rhine-Westphalia
@@ -24022,7 +24022,7 @@ Katholische Gemeinden Ostenland Pfarramt	Delbrück	DE	North Rhine-Westphalia
 Katholische Gemeinden Steinhorst Pfarrvikarie	Delbrück	DE	North Rhine-Westphalia
 St. Maria Immaculata	Verl	DE	North Rhine-Westphalia
 Herz-Jesu-Kirche Hövelriege	Hövelhof	DE	North Rhine-Westphalia
-Church St. Margaretha	Paderborn	DE	North Rhine-Westphalia
+Kirche St. Margaretha	Paderborn	DE	North Rhine-Westphalia
 St. Dionysius	Altenbeken	DE	North Rhine-Westphalia
 Heilig Kreuz	Altenbeken	DE	North Rhine-Westphalia
 St. Peter und Paul	Bad Driburg	DE	North Rhine-Westphalia
@@ -24092,7 +24092,7 @@ Katholische Pfarrgemeinde St. Johannes der Täufer	Seulingen	DE	Lower Saxony
 Wallfahrt Germershausen	Rollshausen	DE	Lower Saxony
 Basilika St. Cyriakus	Duderstadt	DE	Lower Saxony
 St. Josef	Bad Sachsa	DE	Lower Saxony
-Church of Saint Joseph	Herzberg am Harz	DE	Lower Saxony
+Kirche St. Josef	Herzberg am Harz	DE	Lower Saxony
 Kath. Kirche St. Benno	Bad Lauterberg im Harz	DE	Lower Saxony
 St. Elisabeth	Sondershausen	DE	Thuringia
 St. Maria Himmelfahrt	Bad Frankenhausen/Kyffhäuser	DE	Thuringia
@@ -24909,7 +24909,7 @@ Kaplica św. Maksymiliana Kolbego	Kowary	PL	Lower Silesian Voivodeship
 Kościół św. Jana Nepomucena	Kamienna Góra (Gmina)	PL	Lower Silesian Voivodeship
 Parafia św. Bartłomieja Apostoła w Leszczyńcu	Kamienna Góra (Gmina)	PL	Lower Silesian Voivodeship
 Parafia franciszkanów w Kowarach	Kowary	PL	Lower Silesian Voivodeship
-Basilica of the Assumption of the Blessed Virgin Mary, Krzeszow	Kamienna Góra (Gmina)	PL	Lower Silesian Voivodeship
+Bazylika Wniebowzięcia Najświętszej Maryi Panny w Krzeszowie	Kamienna Góra (Gmina)	PL	Lower Silesian Voivodeship
 Krzeszów Sanktuarium Matki Bożej Łaskawej	Kamienna Góra (Gmina)	PL	Lower Silesian Voivodeship
 Bazylika	Kamienna Góra (Gmina)	PL	Lower Silesian Voivodeship
 Kościół św. Józefa Oblubieńca NMP	Kamienna Góra (Gmina)	PL	Lower Silesian Voivodeship
@@ -25597,7 +25597,7 @@ Parafia Swietej Urszuli Ledochowskiej	Dopiewo	PL	Greater Poland Voivodeship
 Kościół św. Faustyny Kowalskiej	Komorniki	PL	Greater Poland Voivodeship
 Sanktuarium bł.Edmunda Bojanowskiego	Luboń	PL	Greater Poland Voivodeship
 Parafia św. Barbary	Luboń	PL	Greater Poland Voivodeship
-Church of St. John Paul II	Luboń	PL	Greater Poland Voivodeship
+Kościół św. Jana Pawła II	Luboń	PL	Greater Poland Voivodeship
 Parafia pw. bł. Jerzego Popiełuszki w Plewiskach	Komorniki	PL	Greater Poland Voivodeship
 Kościół bł. Jerzego Popiełuszki	Komorniki	PL	Greater Poland Voivodeship
 Parafia Rzymskokatolicka pw. św. Jadwigi Śląskiej	Poznań	PL	Greater Poland Voivodeship
@@ -25647,7 +25647,7 @@ Kościół pw. św. Jerzego	Poznań	PL	Greater Poland Voivodeship
 Nasz Dom Tarnowo	Tarnowo Podgórne	PL	Greater Poland Voivodeship
 Parafia sw. Jozefa Oblubienca Najswietszej Maryi Panny	Tarnowo Podgórne	PL	Greater Poland Voivodeship
 Parafia rzymskokatolicka Imienia Maryi	Poznań	PL	Greater Poland Voivodeship
-Church of Sts. Padre Pio	Poznań	PL	Greater Poland Voivodeship
+Kościół św. Ojca Pio w Poznaniu	Poznań	PL	Greater Poland Voivodeship
 Parafia Cerekwica	Rokietnica	PL	Greater Poland Voivodeship
 Kościół Chrystusa Króla	Rokietnica	PL	Greater Poland Voivodeship
 Kościół św. Faustyny Kowalskiej	Suchy Las	PL	Greater Poland Voivodeship
@@ -25673,7 +25673,7 @@ Kościół Matki Królowej Korony Polskiej	Mieszkowice	PL	West Pomeranian Voivod
 Parafia rzymskokatolicka św. św. Piotra i Pawła	Dębno	PL	West Pomeranian Voivodeship
 Kościół pw. św. Ottona Biskupa	Dębno	PL	West Pomeranian Voivodeship
 Parafia rzymskokatolicka św. M.M. Kolbego	Chojna	PL	West Pomeranian Voivodeship
-Church. St. Maximilian Kolbe	Chojna	PL	West Pomeranian Voivodeship
+Kościół św. Maksymiliana Marii Kolbego w Godkowie	Chojna	PL	West Pomeranian Voivodeship
 Parafia pw. św. Krzyża w Nawodnej	Chojna	PL	West Pomeranian Voivodeship
 St. Mariä Himmelfahrt	Schwedt/Oder	DE	Brandenburg
 Katholische Gemeinden Schwedt und Angermünde	Schwedt/Oder	DE	Brandenburg
@@ -25874,7 +25874,7 @@ Parafia św. Józefa	Opole	PL	Opole Voivodeship
 Church. Bl. Czeslaw	Opole	PL	Opole Voivodeship
 Parafia ewangelicko-augsburska	Opole	PL	Opole Voivodeship
 Bazylika NYSA	Nysa	PL	Opole Voivodeship
-Cathedral of the Exaltation of the Holy Cross	Opole	PL	Opole Voivodeship
+Katedra Podwyższenia Krzyża Świętego w Opolu	Opole	PL	Opole Voivodeship
 Diecezja Opolska	Opole	PL	Opole Voivodeship
 Kościół Matki Bożej Bolesnej i św. Wojciecha	Opole	PL	Opole Voivodeship
 Kościół Rzymskokatolicki św. Michała	Opole	PL	Opole Voivodeship
@@ -25937,7 +25937,7 @@ Holy Trinity Church	Wrocław	PL	Lower Silesian Voivodeship
 Parafia rzymsko-katolicka pw. Swietej Trojcy	Wrocław	PL	Lower Silesian Voivodeship
 Parafia św. Augustyna	Wrocław	PL	Lower Silesian Voivodeship
 Poradnia Rodzinna Franciszek	Wrocław	PL	Lower Silesian Voivodeship
-Church of Sts. Francis of Assisi	Wrocław	PL	Lower Silesian Voivodeship
+Kościół św. Franciszka z Asyżu we Wrocławiu	Wrocław	PL	Lower Silesian Voivodeship
 Українська Греко-Католицька Парафія Святого Юрія	Wrocław	PL	Lower Silesian Voivodeship
 Rzymskokatolicka parafia pw. św. Karola Boromeusza we Wrocławiu	Wrocław	PL	Lower Silesian Voivodeship
 St. Henry Church	Wrocław	PL	Lower Silesian Voivodeship
@@ -26181,7 +26181,7 @@ Katolicka parafia archikatedralna Świętej Rodziny	Częstochowa	PL	Silesian Voi
 DPS Częstochowa ul. Wesoła 14	Częstochowa	PL	Silesian Voivodeship
 Parafia św. Judy Tadeusza Apostoła	Częstochowa	PL	Silesian Voivodeship
 Parafia św. Jadwigi Królowej	Częstochowa	PL	Silesian Voivodeship
-Sanctuary of the Blood of Christ	Częstochowa	PL	Silesian Voivodeship
+Sanktuarium Krwi Chrystusa	Częstochowa	PL	Silesian Voivodeship
 Kasperiańskie Dni Młodych	Częstochowa	PL	Silesian Voivodeship
 Parafia Matki Boskiej Czestoch W Częstochowie Ul.michalowskiego	Częstochowa	PL	Silesian Voivodeship
 Parafia Rzymskokatolicka św. Andrzej Boboli	Częstochowa	PL	Silesian Voivodeship
@@ -26320,7 +26320,7 @@ Parafia Rzymskokatolicka Podwyższenia Krzyża Świętego	Ostrów Wielkopolski (
 Parafia pw. Ducha Świętego w Ostrowie Wielkopolskim	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
 Parafia Świętej Rodziny	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
 Parafia pw. Miłosierdzia Bożego w Ostrowie Wielkopolskim	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
-Parish of St. Paul the Apostle	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
+Parafia św. Pawła Apostoła	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
 Sanktuarium Milosierdzia	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
 Kościół św. Antoniego Padewskiego	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
 Parafia NMP Królowej Polski	Ostrów Wielkopolski	PL	Greater Poland Voivodeship
@@ -27199,7 +27199,7 @@ Parafia Zmartwychwstania Pańskiego	Poznań	PL	Greater Poland Voivodeship
 Kościół Maryi Królowej	Poznań	PL	Greater Poland Voivodeship
 Kosciol sw. Anny	Poznań	PL	Greater Poland Voivodeship
 Parafia Prawosławna Św. Mikołaja w Poznaniu	Poznań	PL	Greater Poland Voivodeship
-Church of St. Michael the Archangel	Poznań	PL	Greater Poland Voivodeship
+Kościół św. Michała Archanioła w Poznaniu	Poznań	PL	Greater Poland Voivodeship
 Parafia Archikatedralna w Poznaniu	Poznań	PL	Greater Poland Voivodeship
 Kaplica Matki Boskiej Skaplerznej	Poznań	PL	Greater Poland Voivodeship
 Parafia pw. św. Marcina w Poznaniu	Poznań	PL	Greater Poland Voivodeship
@@ -27236,12 +27236,12 @@ Kościół św. Łukasza Ewangelisty	Poznań	PL	Greater Poland Voivodeship
 Parafia Wniebowzięcia Najświętszej Maryi Panny	Poznań	PL	Greater Poland Voivodeship
 Duszpasterstwo Młodzieży Radość 	Poznań	PL	Greater Poland Voivodeship
 Parafia Rzymskokatolicka Chrystusa Odkupiciela	Poznań	PL	Greater Poland Voivodeship
-Church of the St. Stanislaus Kostka	Poznań	PL	Greater Poland Voivodeship
+Kościół św. Stanisława Kostki w Poznaniu	Poznań	PL	Greater Poland Voivodeship
 Reformowany Kościół Katolicki w Polsce	Poznań	PL	Greater Poland Voivodeship
 Kościół Matki Boskiej Zwycięskiej	Poznań	PL	Greater Poland Voivodeship
 Kosciol Wniebowstapienia Panskiego	Poznań	PL	Greater Poland Voivodeship
 Parafia Św. Aniołów Stróżów w Poznaniu	Poznań	PL	Greater Poland Voivodeship
-Church. St. Pope John Paul II	Poznań	PL	Greater Poland Voivodeship
+Kościół św. Jana Pawła II w Poznaniu	Poznań	PL	Greater Poland Voivodeship
 Kosciol Najswietszej Maryi Panny Matki Odkupiciela	Poznań	PL	Greater Poland Voivodeship
 Sanktuarium Miłosierdzia Bożego	Poznań	PL	Greater Poland Voivodeship
 Parafia Matki Bożej Fatimskiej	Czerwonak	PL	Greater Poland Voivodeship
@@ -27274,7 +27274,7 @@ Kościół Rzymskokatolicki pw. Podwyższenia Krzyża Świętego	Rogoźno	PL	Gre
 Kościół św. Stanisława BM	Skoki	PL	Greater Poland Voivodeship
 Kościół Św. Jana Chrzciciela	Kiszkowo	PL	Greater Poland Voivodeship
 Kosciol sw. Michala Archanioła	Skoki	PL	Greater Poland Voivodeship
-Church of the Annunciation in Popowo Koscielne	Mieścisko	PL	Greater Poland Voivodeship
+Kościół Zwiastowania Najświętszej Maryi Panny w Popowie Kościelnym	Mieścisko	PL	Greater Poland Voivodeship
 Parafia Popowo Kościelne	Mieścisko	PL	Greater Poland Voivodeship
 Parafia św.Stanisława Biskupa w Rosku	Witkowo	PL	Greater Poland Voivodeship
 Parafia pw. Matki Bożej Królowej Polski w Gorzykowie	Witkowo	PL	Greater Poland Voivodeship
@@ -27535,7 +27535,7 @@ Kościół pw. Świętej Trójcy	Bydgoszcz	PL	Kujawsko-Pomorskie
 Parafia św. Wojciecha	Bydgoszcz	PL	Kujawsko-Pomorskie
 Bydgoszcz Cathedral	Bydgoszcz	PL	Kujawsko-Pomorskie
 Parafia Św. Apostołów Piotra i Pawła	Bydgoszcz	PL	Kujawsko-Pomorskie
-Parish. St. Peter and Paul	Bydgoszcz	PL	Kujawsko-Pomorskie
+Kościół Świętych Apostołów Piotra i Pawła w Bydgoszczy	Bydgoszcz	PL	Kujawsko-Pomorskie
 Parafia Zmartwychwstania Pańskiego	Bydgoszcz	PL	Kujawsko-Pomorskie
 Parafia Ewangelicko-Metodystyczna w Bydgoszczy	Bydgoszcz	PL	Kujawsko-Pomorskie
 Parafia Rzymsko-Katolicka Swietego Wincentego A'Paulo	Bydgoszcz	PL	Kujawsko-Pomorskie
@@ -27580,7 +27580,7 @@ Kaplica pw. Świętej Rodziny w Łojewie	Inowrocław (Gmina)	PL	Kujawsko-Pomorsk
 Parafia Grabie	Aleksandrów Kujawski (Gmina)	PL	Kujawsko-Pomorskie
 Exaltation of the Holy Cross Church in Lowiczek	Bądkowo	PL	Kujawsko-Pomorskie
 Parafia pw. św. Anny w Bobrownikach	Bobrowniki	PL	Kujawsko-Pomorskie
-Church. St. Wojciech	Waganiec	PL	Kujawsko-Pomorskie
+Kościół św. Wojciecha Biskupa Męczennika w Zbrachlinie	Waganiec	PL	Kujawsko-Pomorskie
 Parafia Rzymsko-katolicka p.w. Najświętszego Serca Pana Jezusa w Brudnowie	Waganiec	PL	Kujawsko-Pomorskie
 Sanktuarium Matki Bożej Pani Kujaw	Aleksandrów Kujawski (Gmina)	PL	Kujawsko-Pomorskie
 Parafia Świętego Jana Chrzciciela w Służewie	Aleksandrów Kujawski (Gmina)	PL	Kujawsko-Pomorskie
@@ -27867,10 +27867,10 @@ Parafia Rzymskokatolicka św.Klemensa Hofbauera	Warszawa	PL	Masovian Voivodeship
 Siostry Uczennice Boskiego Mistrza - pddm	Warszawa	PL	Masovian Voivodeship
 Sanktuarium św. Faustyny	Warszawa	PL	Masovian Voivodeship
 Parafia św. Andrzeja Apostoła	Warszawa	PL	Masovian Voivodeship
-Church. St. Augustine	Warszawa	PL	Masovian Voivodeship
+Kościół św. Augustyna w Warszawie	Warszawa	PL	Masovian Voivodeship
 Parafia rzymskokatolicka św. Augustyna	Warszawa	PL	Masovian Voivodeship
 Kościół Narodzenia Najświętszej Maryi Panny w Warszawie	Warszawa	PL	Masovian Voivodeship
-Church of St. Anthony of Padua	Warszawa	PL	Masovian Voivodeship
+Kościół św. Antoniego z Padwy w Warszawie	Warszawa	PL	Masovian Voivodeship
 Warszawa Ul Senatorska 31	Warszawa	PL	Masovian Voivodeship
 Tempus	Warszawa	PL	Masovian Voivodeship
 Assumption of Mary into Heaven Basilica	Warszawa	PL	Masovian Voivodeship
@@ -27944,7 +27944,7 @@ Parafia św. Wyznawców Ojca Rafała i Brata Alberta	Warszawa	PL	Masovian Voivod
 Parafia św. Jadwigi Śląskiej  Warszawa - Żerań	Warszawa	PL	Masovian Voivodeship
 Kosciol pw. sw. Jadwigi Slaskiej	Warszawa	PL	Masovian Voivodeship
 Kościół Nawiedzenia Najświętszej Maryi Panny	Warszawa	PL	Masovian Voivodeship
-Church of St. Benon	Warszawa	PL	Masovian Voivodeship
+Kościół św. Benona w Warszawie	Warszawa	PL	Masovian Voivodeship
 Chapel of Our Lady of Loreto	Warszawa	PL	Masovian Voivodeship
 Parafia Matki Boskiej Loretańskiej	Warszawa	PL	Masovian Voivodeship
 Parafia katedralna św. Marii Magdaleny	Warszawa	PL	Masovian Voivodeship
@@ -29241,14 +29241,14 @@ Biserica Romano-Catolica	Vulcan	RO	Hunedoara
 Biserica Romano-Catolică Sfânta Varvara	Petroșani	RO	Hunedoara
 Biserica Catolică Petrila	Petrila	RO	Hunedoara
 Mănăstirea Oașa	Sugag-Tau	RO	Hunedoara
-Parish Roman Catholic Church of Saint Anthony	Râmnicu Vâlcea	RO	Valcea
+Biserica Romano-Catolică Sfântul Anton	Râmnicu Vâlcea	RO	Valcea
 Biserica Greco-Catolica Sfanta Rita	Râmnicu Vâlcea	RO	Valcea
 Mãnãstirea Lacul Frumos	Vladesti	RO	Valcea
 Parohia Romano-Catolica Biserica Sfantul Anton	Brezoi	RO	Valcea
 Parohia Sfântul Ierarh Nicolae - Oprești	Stâlpeni	RO	Arges
 Mănăstirea Robaia	Mușătești	RO	Arges
 Mănăstirea Robaia	Mușătești	RO	Arges
-Church of St. Apostol Iacob	Câmpulung	RO	Arges
+Biserica Bărăția din Câmpulung	Câmpulung	RO	Arges
 Mănăstirea Blănoiu	Racovita	RO	Valcea
 Parohia Greco-Catolica Hunedoara	Hunedoara	RO	Hunedoara
 Catedrala Romano-Catolica	Hunedoara	RO	Hunedoara
@@ -29518,7 +29518,7 @@ Catholic Church St. Anton Husi	Huși	RO	Vaslui
 Parohia Sfintii Voievozi Roman	Roman	RO	Neamt
 Biserica "Sf. Tereza"	Roman	RO	Neamt
 Capela Izvorul Tămăduirii Spital Roman	Roman	RO	Neamt
-Church of Blessed Ieremia Valahul	Roman	RO	Neamt
+Biserica Fericitul Ieremia Valahul	Roman	RO	Neamt
 Parohia „Adormirea Maicii Domnului” Pildești	Pildesti	RO	Neamt
 Biserica Trupul Si Sangele Domnului Gheraesti	Gherăești	RO	Neamt
 Parohia „Regina” Săbăoani	Sabaoani	RO	Neamt
@@ -29540,7 +29540,7 @@ Parohia "Sfântul Nicolae" Sadova	Sadova	RO	Suceava
 Parohia Sfinții Arhangheli, Mihoveni	Frasin	RO	Suceava
 Catedrala „Nașterea Maicii Domnului" - Gura Humorului	Gura Humorului	RO	Suceava
 Sanctuar Cacica	Cacica	RO	Suceava
-Basilica Assumption	Cacica	RO	Suceava
+Bazilica Adormirea Maicii Domnului	Cacica	RO	Suceava
 Catedrala Catolica Cacica		RO	Suceava
 Bazilica Minora Cacica	Cacica	RO	Suceava
 Capela Misionară "Izvorul Tămăduirii" Costâna 	Suceava	RO	Suceava
@@ -29597,7 +29597,7 @@ Biserica Veche de Lemn "Adormirea Maicii Domnului"	Chișinău	MD	Chisinau
 Костел святого Климентія	Одеса	UA	Odessa
 Католическая церковь св. Клементия	Одеса	UA	Odessa
 Римско-Католический Кафедральный Собор	Одеса	UA	Odessa
-Cathedral of the Assumption of the Blessed Virgin Mary	Одеса	UA	Odessa
+Кафедральний собор Успіння Пресвятої Діви Марії	Одеса	UA	Odessa
 Roman Catholic Church	Одеса	UA	Odessa
 St. Peter's Roman Catholic Church	Одеса	UA	Odessa
 Parafia sw. Piotra w Odessie	Одеса	UA	Odessa
@@ -29759,14 +29759,14 @@ Kościół św. Marii Magdaleny we Lwowie	Львів	UA	Lviv
 Монастир сс. Редемптористок	Львів	UA	Lviv
 Парафія  «Пресвятої Діви Марії Чудотворного Медальйона» , Левандівка	Львів	UA	Lviv
 Храм святих Ольги і Єлизавети	Львів	UA	Lviv
-Church of Sts. Olha and Elizabeth, Lviv	Львів	UA	Lviv
+Церква Святих Ольги і Єлизавети	Львів	UA	Lviv
 Kościół św. Elżbiety we Lwowie	Львів	UA	Lviv
 Церква св. Анни УГКЦ	Львів	UA	Lviv
 St. Anna Ukrainian Greek Catholic Church	Львів	UA	Lviv
 Гарнізонний храм свв. апп. Петра і Павла	Львів	UA	Lviv
 Church of St. Andrew	Львів	UA	Lviv
 Lviv Latin Cathedral	Львів	UA	Lviv
-Church of the Transfiguration in Lviv	Львів	UA	Lviv
+Преображенська церква	Львів	UA	Lviv
 Dominikanie we Lwowie	Львів	UA	Lviv
 Українська Греко-Католицька Церква Стрітення Господнього. Львів.	Львів	UA	Lviv
 Костел Марії Сніжної	Львів	UA	Lviv
@@ -29940,7 +29940,7 @@ Parafia sw. Jana Nepomucena i Matki Bozej Szkaplerznej we Frampolu	Frampol	PL	Lu
 Kościół Rzymskokatolicki Jana Nepomucena i Matki Bożej Szkaplerznej	Frampol	PL	Lublin Voivodeship
 Parafia Radzięcin	Frampol	PL	Lublin Voivodeship
 Parafia pw. Św. Bartłomieja Apostoła w Goraju	Goraj	PL	Lublin Voivodeship
-Basilica of Saint Anthony	Radecznica	PL	Lublin Voivodeship
+Bazylika św. Antoniego z Padwy w Radecznicy	Radecznica	PL	Lublin Voivodeship
 Kościół św. Izydora	Zwierzyniec	PL	Lublin Voivodeship
 Kościół Rzymskokatolicki św. Katarzyny Aleksandryjskiej	Szczebrzeszyn	PL	Lublin Voivodeship
 Parafia rzymskokatolicka św. Mikołaja	Szczebrzeszyn	PL	Lublin Voivodeship
@@ -30235,7 +30235,7 @@ Kościół Rzymskokatolicki Matki Bożej z Góry Karmel	Bielsk Podlaski	PL	Podla
 Parafia prawosławna Zaśnięcia NMP	Bielsk Podlaski	PL	Podlasie
 Parafia św Jana Chrzciciela w Wys Maz.	Wysokie Mazowieckie	PL	Podlasie
 Kościół Podwyższenia Krzyża Świętego	Sokoły	PL	Podlasie
-Parish of St. Michael the Archangel	Łapy	PL	Podlasie
+Kościół św. Michała Archanioła w Płonce Kościelnej	Łapy	PL	Podlasie
 Parafia św. Michała Archanioła w Płonce Kościelnej	Łapy	PL	Podlasie
 Kawiarenka Dialogowa Małżonków - Łapy	Łapy	PL	Podlasie
 Parafia Świętych Apostołów Piotra i Pawła w Łapach 	Łapy	PL	Podlasie
@@ -30465,7 +30465,7 @@ The Shrine of Divine Mercy	Vilnius	LT	Vilnius County
 Vilniaus Bernardinų Bažnyčia	Vilnius	LT	Vilnius County
 Šv. Dvasios (Domininkonų) bažnyčia | Church of the Holy Spirit	Vilnius	LT	Vilnius County
 Šv. Onos bažnyčia	Vilnius	LT	Vilnius County
-Church of St. Francis of Assisi	Vilnius	LT	Vilnius County
+Vilniaus šv. Pranciškaus Asyžiečio bažnyčia	Vilnius	LT	Vilnius County
 Vilniaus Šv. Jonų bažnyčia	Vilnius	LT	Vilnius County
 PJMD Vilniaus Šv.Kryžiaus namų skyrius	Vilnius	LT	Vilnius County
 Dominikonai Vilnius	Vilnius	LT	Vilnius County
@@ -30481,7 +30481,7 @@ Sanktuarium Bożego Miłosierdzia w Mińsku na Białorusi.	Мінск	BY	Minsk
 Church of Saints Simon and Helena	Мінск	BY	Minsk
 Архікатэдральны касцёл імя Найсвяцейшай Панны Марыі	Мінск	BY	Minsk
 Касцёл Святога Роха	Мінск	BY	Minsk
-Church of Holy Trinity, Minsk	Мінск	BY	Minsk
+Касцёл Найсвяцейшай Тройцы на Залатой Горцы	Мінск	BY	Minsk
 Церковь Святой Троицы	Мінск	BY	Minsk
 Šalčininkėlių Šv. Jurgio Bažnyčia	Šalčininkai	LT	Vilnius County
 Церковь Пресвятой Девы Марии	Мураванаашмянкоўскі сельскі Савет	BY	Grodnenskaya
@@ -30495,14 +30495,14 @@ Buivydziu Sv. Jurgio Baznycia	Buivydžiai I	LT	Vilnius County
 Griskabudzio Kristaus atsimainymo baznycia	Griškabūdis	LT	Marijampoles apskritis
 Šakių šv. Jono Krikštytojo parapija	Šakiai	LT	Taurages apskritis
 Skirsnemunė St. George's Church	Skirsnemunė	LT	Taurages apskritis
-Church of St. Casimir	Lekėčiai	LT	Kauno apskritis
+Lekėčių šv. Kazimiero bažnyčia	Lekėčiai	LT	Kauno apskritis
 Zapyškio Bažnyčia	Zapyškis	LT	Kauno apskritis
 Tabariškių Kristaus Karaliaus parapija	Ringaudai	LT	Kauno apskritis
 Aleksoto Sv. Kazimiero Parapija	Kaunas	LT	Kauno apskritis
 Church of Vytautas the Great	Kaunas	LT	Kauno apskritis
 Kauno Švč. Trejybės bažnyčia	Kaunas	LT	Kauno apskritis
-Church of St. Francis Xavier	Kaunas	LT	Kauno apskritis
-Cathedral Basilica of St. Peter and St. Paul	Kaunas	LT	Kauno apskritis
+Kauno šv. Pranciškaus Ksavero bažnyčia	Kaunas	LT	Kauno apskritis
+Kauno šv. apaštalų Petro ir Povilo arkikatedra bazilika	Kaunas	LT	Kauno apskritis
 Church of St. Gertrude	Kaunas	LT	Kauno apskritis
 Kauno Šv. Gertrūdos bažnyčia	Kaunas	LT	Kauno apskritis
 Giraitės Šventosios Šeimos Bažnyčia	Užliedžiai	LT	Kauno apskritis
@@ -30517,7 +30517,7 @@ Raseiniu Svc. Mergeles Marijos Emimo i Dangu Baznycia	Raseiniai	LT	Taurages apsk
 Carmelite Church of St. Cross	Kaunas	LT	Kauno apskritis
 Aukštosios Panemunės Šv.Mergelės Marijos vardo bažnyčia	Kaunas	LT	Kauno apskritis
 Kauno Šv. arkangelo Mykolo (Įgulos) bažnyčia	Kaunas	LT	Kauno apskritis
-Church of St. Michael the Archangel	Kaunas	LT	Kauno apskritis
+Kauno šv. arkangelo Mykolo bažnyčia	Kaunas	LT	Kauno apskritis
 Eigulių  Pal Jurgio Matulaičio parapijos bendruomenė	Kaunas	LT	Kauno apskritis
 Rumšiškių Šv. Arkangelo Mykolo Bažnyčia	Rumšiškės	LT	Kauno apskritis
 Kauno Jezuitu Sv Pranciskaus Ksavero Baznycia	Karmėlava	LT	Kauno apskritis
@@ -30746,7 +30746,7 @@ S:t Maria Katolska Kyrka	Skellefteå	SE	Vaesterbotten
 Sankt Josef Arbetarens Katolska Kyrka	Luleå	SE	Norrbotten
 Kriukų Šv. Lauryno Baznycia	Kriūkai	LT	Siauliu apskritis
 Cattedrale dei Santi Simeone ed Anna	Jelgava	LV	Jelgava
-Cathedral of the Immaculate Virgin Mary	Jelgava	LV	Jelgava
+Bezvainīgās Jaunavas Marijas katedrāle	Jelgava	LV	Jelgava
 Ķemeru Sv. Jāņa Kristītāja Romas katoļu baznīca	Jūrmala	LV	Engure
 Kurmenes Katoļu draudze	Kurmene	LV	Jaunjelgava
 Riga St. Albert Roman Catholic Church	Rīga	LV	Riga
@@ -46850,7 +46850,7 @@ Capela Maumeta	Aileu	TL	Aileu
 Estação Santa Cruz Manu-Nera	Aileu	TL	Aileu
 Salao igreza Santa cruz	Aileu	TL	Aileu
 Capela	Aileu	TL	Aileu
-Chapel of St.Teresa de Vila	Dili	TL	Dili
+Capela de Santa Teresa de Ávila	Dili	TL	Dili
 Gruta Relolisa	Dili	TL	Dili
 Gruta Tursailefa	Dili	TL	Dili
 Convento irma	Dili	TL	Dili
@@ -56738,7 +56738,7 @@ Grotte de Lourdes	Le Morne-Rouge	MQ	Martinique
 Église Sainte-Anne	Basse-Pointe	MQ	Martinique
 Église Saint-Jean-Baptiste	Basse-Pointe	MQ	Martinique
 Chapelle de Nord-Plage	Basse-Pointe	MQ	Martinique
-Church of. St. Mark	Soufriere	DM	Saint Mark
+Church of St. Mark	Soufriere	DM	Saint Mark
 Our Lady of Fatima Church	Roseau	DM	Saint George
 Grand Bay Presbytery	Berekua	DM	Saint Patrick
 Grand Bay Catholic Church	Berekua	DM	Saint Patrick

@@ -16887,7 +16887,7 @@ Paroisse Marie Reine du Monde de Bè Apéyéme	Lome	TG	Maritime
 St. Joseph Church	Lome	TG	Maritime
 Laura Vicuna d'Ablogamé	Lome	TG	Maritime
 Église de la Paroisse Universitaire Saint Jean Apôtre	Lome	TG	Maritime
-Chapel St Joseph d'Akato-Viepe	Lome	TG	Maritime
+Chapelle Saint-Joseph d'Akato-Viépé	Lome	TG	Maritime
 Église Catholique Saint Jean Baptiste de Yokoè Kopégan	Lome	TG	Maritime
 Eglise Catholique de Ségbé	Lome	TG	Maritime
 Église Catholique Notre Dame du Rosaire	Lome	TG	Maritime
@@ -50990,7 +50990,7 @@ kapela Svetog Spasa	Igalo	ME	Herceg Novi
 Sv. Antun	Herceg-Novi	ME	Herceg Novi
 Crkva sv. Leopolda	Herceg-Novi	ME	Herceg Novi
 crkva svetog Jeronima	Herceg-Novi	ME	Herceg Novi
-Monastery of the Presentation of the Virgin	Herceg-Novi	ME	Herceg Novi
+Manastir Vavedenja Bogorodice	Herceg-Novi	ME	Herceg Novi
 Crkva Svetog Nikole	Bijela	ME	Tivat
 crkva Gospe Karmelske	Igalo	ME	Herceg Novi
 Sv. Juraj	Jasenice	HR	Dubrovacko-Neretvanska
@@ -51431,7 +51431,7 @@ Crkva svetog Ivana Krstitelja	Rodoc	BA	Federation of Bosnia and Herzegovina
 Crkva svetog Ante	Siroki Brijeg	BA	Federation of Bosnia and Herzegovina
 Crkva sv. Ivana Krstitelja	Siroki Brijeg	BA	Federation of Bosnia and Herzegovina
 Crkva rođenja Blažene Djevice Marije	Ilici	BA	Federation of Bosnia and Herzegovina
-Chapel of St. Michaelmas	Ilici	BA	Federation of Bosnia and Herzegovina
+Kapela sv. Mihovila	Ilici	BA	Federation of Bosnia and Herzegovina
 Kapelica časnih sestara franjevki	Siroki Brijeg	BA	Federation of Bosnia and Herzegovina
 Crkva sv. Stjepana Prvomučenika	Siroki Brijeg	BA	Federation of Bosnia and Herzegovina
 Mosor	Siroki Brijeg	BA	Federation of Bosnia and Herzegovina
@@ -67533,7 +67533,7 @@ Chapelle Saint-Jacques	Chatel	FR	Rhone-Alpes
 Église Saint-Maurice	Abondance	FR	Rhone-Alpes
 Chapelle de Notre-Dame de la Compassion	Chatel	FR	Rhone-Alpes
 Chapelle de Recon	Torgon	FR	Rhone-Alpes
-Chapel St. André	Troistorrents	CH	Valais
+Chapelle Saint-André	Troistorrents	CH	Valais
 Chapelle du Pont	Monthey	CH	Valais
 St-Sylvestre	Choëx	CH	Valais
 Chapelle Saint Antoine	Monthey	CH	Valais
@@ -68945,7 +68945,7 @@ Cimetière Chamoson	Chamoson	CH	Valais
 Chapelle	Basse-Nendaz	CH	Valais
 Chapelle Notre-Dame de l’Espérance de Brignon	Basse-Nendaz	CH	Valais
 Église St. Nicolas de Flüe	Basse-Nendaz	CH	Valais
-Chapel of the Visitation	Vex	CH	Valais
+Chapelle de la Visitation	Vex	CH	Valais
 Chapelle de Châteauneuf	Conthey	CH	Valais
 Saint-Guérin	Sitten	CH	Valais
 Chapelle de Vissigen	Sion	CH	Valais
@@ -69197,17 +69197,17 @@ Bielkapelle	Zeneggen	CH	Valais
 Kapelle Barmühle	Visperterminen	CH	Valais
 Kapelle Niederhaeusern	Visperterminen	CH	Valais
 Pfarrkirche St. Theodul	Visperterminen	CH	Valais
-Chapel VI - Jesus prays in the Jetzemane Garden	Visperterminen	CH	Valais
-Chapel VII - The Flagellation of Jesus	Visperterminen	CH	Valais
-Chapel VIII - Jesus condemned to death	Visperterminen	CH	Valais
+Kapelle VI - Jesus betet im Garten Getsemani	Visperterminen	CH	Valais
+Kapelle VII - Die Geisselung Jesu	Visperterminen	CH	Valais
+Kapelle VIII - Jesus wird zum Tode verurteilt	Visperterminen	CH	Valais
 Chapel X - The Crucifixion	Visperterminen	CH	Valais
-Chapel V - Jesus preaches among the Doctors of the Temple	Visperterminen	CH	Valais
+Kapelle V - Der zwölfjährige Jesus im Tempel	Visperterminen	CH	Valais
 Waldkapelle "Maria Heimsuchung"	Visperterminen	CH	Valais
-Chapel IX - Jesus carries the cross	Visperterminen	CH	Valais
-Chapel II - The visit of Mary to Elizabeth	Visperterminen	CH	Valais
-Chapel I - the Annunciation	Visperterminen	CH	Valais
-Chapel III - The birth of Jesus	Visperterminen	CH	Valais
-Chapel IV - The presentation of Jesus at the temple	Visperterminen	CH	Valais
+Kapelle IX - Jesus trägt das Kreuz	Visperterminen	CH	Valais
+Kapelle II - Mariä Heimsuchung	Visperterminen	CH	Valais
+Kapelle I - Mariä Verkündigung	Visperterminen	CH	Valais
+Kapelle III - Die Geburt Jesu	Visperterminen	CH	Valais
+Kapelle IV - Die Darstellung Jesu im Tempel	Visperterminen	CH	Valais
 Kapelle Bizinen	Visperterminen	CH	Valais
 Bildstock Blatt	Visperterminen	CH	Valais
 Kapelle Unterstalden	Visperterminen	CH	Valais

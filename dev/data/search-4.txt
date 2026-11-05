@@ -4827,7 +4827,7 @@ Chapelle Saint Roch	Andenne	BE	Wallonia
 Église Saints-Pierre-et-Paul	Noville-les-Bois	BE	Wallonia
 Chapelle Notre-Dame de Bon Secours	Marchovelette	BE	Wallonia
 Église Saint-Martin	Marchovelette	BE	Wallonia
-Chapel Saint-Roche	Noville-les-Bois	BE	Wallonia
+Chapelle Saint-Roch	Noville-les-Bois	BE	Wallonia
 Église Saint-Médard	Noville-les-Bois	BE	Wallonia
 Chapelle Sainte-Roch	Andenne	BE	Wallonia
 Église Saint-Étienne	Seilles	BE	Wallonia
@@ -19697,7 +19697,7 @@ St.-Peters-Kirche - Chiesa di San Pietro	Ora	IT	Trentino-Alto Adige
 Maria Hilf	Ora	IT	Trentino-Alto Adige
 Marienkirche - Chiesa di Santa Maria	Ora	IT	Trentino-Alto Adige
 St. Blasius - S. Biagio	Trodena	IT	Trentino-Alto Adige
-Church St. Josef	Trodena	IT	Trentino-Alto Adige
+Kirche St. Josef	Trodena	IT	Trentino-Alto Adige
 St. Martin	Trodena	IT	Trentino-Alto Adige
 St. Franziskus - S. Francesco	Aldino - Aldein	IT	Trentino-Alto Adige
 Pfarrkirche Radein	Aldino - Aldein	IT	Trentino-Alto Adige
@@ -22838,7 +22838,7 @@ crkva svete Marije Magdalene	Marija Bistrica	HR	Krapinsko-Zagorska
 crkva svetog Petra	Vrbovec	HR	Zagrebacka
 crkva Srca Isusovog i svetog Ladislava	Krizevci	HR	Koprivnicko-Krizevacka
 crkva svete Margarete	Krizevci	HR	Koprivnicko-Krizevacka
-Chapel of Saint Elizabeth of Portugal	Gornja Brckovčina	HR	Koprivnicko-Krizevacka
+Kapela sv. Elizabete Portugalske	Gornja Brckovčina	HR	Koprivnicko-Krizevacka
 crkva svetog Mihaela arhanđela	Krizevci	HR	Koprivnicko-Krizevacka
 Sv. Vurij	Krizevci	HR	Koprivnicko-Krizevacka
 crkva svetog Ivana Krstitelja	Krizevci	HR	Koprivnicko-Krizevacka
@@ -53900,7 +53900,7 @@ Kapelle Klösterchen	Eupen	BE	Wallonia
 Kirche zur Unbefleckten Empfängnis (Klosterkirche)	Eupen	BE	Wallonia
 Werthkapelle - Kapelle St. Lambertus	Eupen	BE	Wallonia
 Kapelle zur schmerzhaften Mutter	Eupen	BE	Wallonia
-Church of the Sacred Heart	Eupen	BE	Wallonia
+Herz-Jesu-Kirche	Eupen	BE	Wallonia
 Pfarrkirche Sankt Katharina	Kettenis	BE	Wallonia
 Kapelle Herbesthal-Baum	Welkenraedt	BE	Wallonia
 Mariä-Heimsuchung-Kirche	Welkenraedt	BE	Wallonia
@@ -73717,7 +73717,7 @@ Kaplica dojazdowa pw. Miłosierdzia Bożego w Siemichoczach	Nurzec-Stacja	PL	Pod
 Kaplica pw. Matki Bożej Częstochowskiej.	Wyromiejki	PL	Podlasie
 Kaplica pw. Świętego Maksymiliana Marii Kolbego	Tołwin	PL	Podlasie
 Kaplica	Dziadkowice	PL	Podlasie
-Chapel of St. John Paul II	Dziadkowice	PL	Podlasie
+Kaplica św. Jana Pawła II	Dziadkowice	PL	Podlasie
 Kaplica cmentarna	Dziadkowice	PL	Podlasie
 Kościół pw. Matki Bożej Bolesnej	Osmola	PL	Podlasie
 Kaplica Nawiedzenia Najświętszej Maryi Panny	Pokaniewo-Kolonia	PL	Podlasie
