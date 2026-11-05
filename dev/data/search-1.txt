@@ -61554,7 +61554,7 @@ Cappella delle Stimmate	Chiusi della Verna	IT	Tuscany
 Cattedrale di Santa Reparata	Firenze	IT	Tuscany
 Chiesa di San Michele Arcangelo Visdomini	Firenze	IT	Tuscany
 Top Of The Duomo	Firenze	IT	Tuscany
-Duomo.catheral Santa Maria	Firenze	IT	Tuscany
+Cattedrale di Santa Maria del Fiore	Firenze	IT	Tuscany
 Church of Saint Salvador al Vescovo	Firenze	IT	Tuscany
 San Benedetto	Firenze	IT	Tuscany
 Santa Maria degli Angeli, Florence	Firenze	IT	Tuscany
