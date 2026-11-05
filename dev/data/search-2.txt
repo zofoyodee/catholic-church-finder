@@ -3445,7 +3445,7 @@ Chiesa dei Santi Martino Vescovo e Antonio Abate	Ferno	IT	Lombardy
 Oratorio di San Macario	Samarate	IT	Lombardy
 Oratorio Parrocchiale	Borgomanero	IT	Piedmont
 San Gottardo	Borgomanero	IT	Piedmont
-chiesa cattolica borgomanero	Borgomanero	IT	Piedmont
+Chiesa Cattolica, Borgomanero	Borgomanero	IT	Piedmont
 Unità parrocchiale S. Giovanni Paolo II Agrate Conturbia e Divignano	Agrate Conturbia	IT	Piedmont
 Church of Saint Mary V. of the Assumption	Borgo Ticino	IT	Piedmont
 Church of Saint Vincent	Marano Ticino	IT	Piedmont
@@ -3689,7 +3689,7 @@ Oratorio di S. Stefano	Lentate sul Seveso	IT	Lombardy
 Oratorio di Mocchirolo	Lentate sul Seveso	IT	Lombardy
 Parrocchia San Vito e Modesto	Cermenate	IT	Lombardy
 Parrocchia di Cermenate - CO	Cermenate	IT	Lombardy
-oratorio	Basiglio	IT	Lombardy
+Oratorio	Basiglio	IT	Lombardy
 Comunità Pastorale Discepoli di Emmaus	Rozzano	IT	Lombardy
 Parrocchia di Sant'Ambrogio	Rozzano	IT	Lombardy
 Parrocchia Sant'ambrogio Rozzano	Rozzano	IT	Lombardy
@@ -4164,7 +4164,7 @@ Cappella di S. Giuseppe del Pre.SST  "Serbelloni" di Gorgonzola - MI	Gorgonzola	
 Oratorio Gessate	Gessate	IT	Lombardy
 Parrocchia S. Michele Arcangelo	Bellinzago Lombardo	IT	Lombardy
 Oratorio San Tarcisio - Cambiago	Cambiago	IT	Lombardy
-Oratorio San Giovanni Bosco - Masate -	Masate	IT	Lombardy
+Oratorio San Giovanni Bosco - Masate	Masate	IT	Lombardy
 Oratorio san Luigi - Concorezzo	Concorezzo	IT	Lombardy
 Parrocchia Santi Cosma e Damiano	Concorezzo	IT	Lombardy
 Azione  Cattolica Casa di Betania	Agrate Brianza	IT	Lombardy
@@ -5012,7 +5012,7 @@ Chiesa della Decollazione di San Giovanni Battista	Verona	IT	Veneto
 Chiesa Cattolica Parrocchiale di Parona	Verona	IT	Veneto
 Chiesa di Sant'Eufemia	Verona	IT	Veneto
 Parrocchia di San Nicola	Verona	IT	Veneto
-Catholic church of Saint Anastasia, Verona, Italy	Verona	IT	Veneto
+Basilica di Santa Anastasia	Verona	IT	Veneto
 Santa Anastasia, Verona, Italia	Verona	IT	Veneto
 Tombeaux De La Basilique	VERONA	IT	Veneto
 Church of Saint Thomas Becket	Verona	IT	Veneto
@@ -5235,7 +5235,7 @@ Santo Eusebio Church  Via Volta 20	Chiasso	CH	Ticino
 Parrocchia San Cassiano - Breccia Como	Como	IT	Lombardy
 Chiesa di San Rocco	Como	IT	Lombardy
 Basilica di San Carpoforo	Como	IT	Lombardy
-Basilica of Saint Abundius - Como, Italy	Como	IT	Lombardy
+Basilica di Sant'Abbondio	Como	IT	Lombardy
 Chiesa Cattolica Parrocchiale S. Bartolomeo	Como	IT	Lombardy
 Parrocchia San Bartolomeo Ap. Ossi	Como	IT	Lombardy
 Parrocchia San Giuseppe Como	Como	IT	Lombardy
@@ -6374,7 +6374,7 @@ Römisch-katholische Kirche St. Christophorus	Basel	CH	Basel-City
 Communauté des Paroisses de l'Eau Vive	Huningue	FR	Alsace
 St. Peter und Paul	Weil am Rhein	DE	Baden-Wuerttemberg
 Katholische Kirchengemeinde Weil am Rhein	Weil am Rhein	DE	Baden-Wuerttemberg
-Kath.Pfarramt St.Urban	Rheinfelden (Baden)	DE	Baden-Wuerttemberg
+Kath. Pfarramt St. Urban	Rheinfelden (Baden)	DE	Baden-Wuerttemberg
 St. Peter und Paul	Inzlingen	DE	Baden-Wuerttemberg
 St. Maria	Weil am Rhein	DE	Baden-Wuerttemberg
 Saint Fridolin	Lörrach	DE	Baden-Wuerttemberg
@@ -6525,7 +6525,7 @@ Katholische Kirche Sogn Pieder	Domat/Ems	CH	Grisons
 Katholische Kirche St. Maria und Michael	Churwalden	CH	Grisons
 Cathédrale Sainte-Marie-de-l'Assomption	Chur	CH	Grisons
 Katholische Kirche	Arosa	CH	Grisons
-Kath.Kirche Maria Himmelfahrt	Arosa	CH	Grisons
+Kath. Kirche Maria Himmelfahrt	Arosa	CH	Grisons
 Röm.-Kath.	Davos Platz	CH	Grisons
 Katholische Kirchgemeinde Davos	Davos	CH	Grisons
 Kirche St. Peter und Paul	Mels	CH	Saint Gallen
@@ -7030,7 +7030,7 @@ St. Anna	Burggen	DE	Bavaria
 Kirche Mariä Himmelfahrt	Schongau	DE	Bavaria
 St. Jakob	Wildsteig	DE	Bavaria
 St. Georg	Bad Bayersoien	DE	Bavaria
-Kath.Pfarramt St.Nikolaus	Murnau a. Staffelsee	DE	Bavaria
+Kath. Pfarramt St. Nikolaus	Murnau a. Staffelsee	DE	Bavaria
 Mariä Geburt	Rottenbuch	DE	Bavaria
 St. Georg	Peißenberg	DE	Bavaria
 Wallfahrtskirche Mariä Himmelfahrt	Hohenpeißenberg	DE	Bavaria
@@ -7304,7 +7304,7 @@ Eglise Saint-Lubin	Saint-Lubin-des-Joncherets	FR	Haute-Normandie
 Paroisse Notre Dame des Rochelles	Dreux	FR	Centre
 Paroisse Saint-Étienne	Dreux	FR	Centre
 Église Saint-Michel	Dreux	FR	Centre
-eglise st eve	Dreux	FR	Centre
+Eglise St Eve	Dreux	FR	Centre
 Eglise Saint-Pierre	Montreuil	FR	Centre
 Carmel St Joseph	Saint-Georges-Motel	FR	Haute-Normandie
 Eglise Saint-Saturnin des Ligneries	Écorches	FR	Lower Normandy
@@ -7704,7 +7704,7 @@ Eglise du Saint Cure d'Ars	Le Kremlin-Bicêtre	FR	Ile-de-France
 Église Saint-Saturnin	Gentilly	FR	Ile-de-France
 Pole Esperance	Ivry-sur-Seine	FR	Ile-de-France
 Église Saint-Hippolyte	Paris	FR	Ile-de-France
-notre dame	Paris	FR	Ile-de-France
+Notre-Dame	Paris	FR	Ile-de-France
 Église Saint-Roger des Malassis	Vitry-sur-Seine	FR	Ile-de-France
 Paroisse de l'Eglise Apostolique Arménienne	Alfortville	FR	Ile-de-France
 Servants d'Autel du Diocèse de Créteil	Créteil	FR	Ile-de-France
@@ -7712,7 +7712,7 @@ Paroisse Notre Dame	Créteil	FR	Ile-de-France
 Église Saint-Rémi	Maisons-Alfort	FR	Ile-de-France
 Eglise de Creteil	Créteil	FR	Ile-de-France
 Carmel Sainte Thérèse	Créteil	FR	Ile-de-France
-église st pierre st paul	Ivry-sur-Seine	FR	Ile-de-France
+Paroisse Saint Pierre et Saint Paul	Ivry-sur-Seine	FR	Ile-de-France
 Presbytère - 209	Ivry-sur-Seine	FR	Ile-de-France
 Paroisse Saint Pierre et Saint Paul	Ivry sur Seine	FR	Ile-de-France
 Chapelle Saint-Marcel de Vitry-sur-Seine	Vitry-sur-Seine	FR	Ile-de-France
@@ -9526,7 +9526,7 @@ Abbaye Notre-Dame de Sept-Fontaines	Fagnon	FR	Champagne-Ardenne
 Paroisse de Nouvion sur Meuse et alentours	Nouvion-sur-Meuse	FR	Champagne-Ardenne
 Église Saint-Rémi	Cheveuges	FR	Champagne-Ardenne
 Église Sainte-Onésime	Donchery	FR	Champagne-Ardenne
-église de glaire	Glaire	FR	Champagne-Ardenne
+Église de Glaire	Glaire	FR	Champagne-Ardenne
 Église Notre Dame	Liart	FR	Champagne-Ardenne
 Église Saint-Rémi de Charleville-Mézières	Charleville-Mézières	FR	Champagne-Ardenne
 Eglise Sainte-Jeanne-d'Arc	Charleville-Mézières	FR	Champagne-Ardenne
@@ -9854,7 +9854,7 @@ Chapelle Notre-Dame des Affligés de Jumet	Charleroi	BE	Wallonia
 Chapelle Notre-Dame de Grace	Anhée	BE	Wallonia
 Église N-D de la Nativité	Anhée	BE	Wallonia
 Église Saint-Eloi	Yvoir	BE	Wallonia
-Eglise de Godinne⛪	Yvoir	BE	Wallonia
+Eglise de Godinne	Yvoir	BE	Wallonia
 Paroisse de Rivière	Profondeville	BE	Wallonia
 Collegiale Saint-Feuillen	Fosses-la-Ville	BE	Wallonia
 Chapelle Sainte-Brigide	Fosses-la-Ville	BE	Wallonia
@@ -9956,7 +9956,7 @@ La Chapelle de Travexin	Cornimont	FR	Lorraine
 Paroisse Ste Croix du Haut du Roc	Saulxures-sur-Moselotte	FR	Lorraine
 Paroisse de Planois	Basse-sur-le-Rupt	FR	Lorraine
 Chapelle Saint Nicolas	Oderen	FR	Alsace
-paroisse st mont	Remiremont	FR	Lorraine
+Paroisse Saint-Mont	Remiremont	FR	Lorraine
 Chapelle du vieux Saint-Amé	Saint-Amé	FR	Lorraine
 Chapelle Sainte-Claire (Vosges)	Saint-Amé	FR	Lorraine
 Paroisse Saint-Amé des Trois Vallées	Saint-Amé	FR	Lorraine
@@ -10671,7 +10671,7 @@ St. Michael	Hohentengen	DE	Baden-Wuerttemberg
 Verrechnungsstelle für katholische Kirchengemeinden	Sigmaringen	DE	Baden-Wuerttemberg
 Kirche St. Johann	Sigmaringen	DE	Baden-Wuerttemberg
 Herz-Jesu-Kirche Gorheim	Sigmaringen	DE	Baden-Wuerttemberg
-seelsorgeeinheit ertingen	Ertingen	DE	Baden-Wuerttemberg
+Seelsorgeeinheit Ertingen	Ertingen	DE	Baden-Wuerttemberg
 Pfarrkirche St. Georg	Riedlingen	DE	Baden-Wuerttemberg
 Katholisches Pfarramt Pfarramt Daugendorf	Riedlingen	DE	Baden-Wuerttemberg
 St. Laurentius	Oggelshausen	DE	Baden-Wuerttemberg
@@ -11238,7 +11238,7 @@ Auferstehung Christi	Ludwigsburg	DE	Baden-Wuerttemberg
 Kirchen, Katholische	Marbach am Neckar	DE	Baden-Wuerttemberg
 St. Maria	Schwaikheim	DE	Baden-Wuerttemberg
 St. Karl Borromäus	Winnenden	DE	Baden-Wuerttemberg
-katholic church st. michael	Kirchberg an der Murr	DE	Baden-Wuerttemberg
+Katholische Kirche St. Michael	Kirchberg an der Murr	DE	Baden-Wuerttemberg
 Gemeindehaus	Backnang	DE	Baden-Wuerttemberg
 Christkönigkirche	Backnang	DE	Baden-Wuerttemberg
 Katholische Kirche St. Wolfgang	Mundelsheim	DE	Baden-Wuerttemberg
@@ -11288,7 +11288,7 @@ Mariä Himmelfahrt	Sontheim an der Brenz	DE	Baden-Wuerttemberg
 Gundelfingen Pfarrheim	Gundelfingen an der Donau	DE	Bavaria
 St. Vitus	Giengen an der Brenz	DE	Baden-Wuerttemberg
 Maria Immaculata	Gundelfingen an der Donau	DE	Bavaria
-Kath.Pfarramt St.Martin	Lauingen (Donau)	DE	Bavaria
+Kath. Pfarramt St. Martin	Lauingen (Donau)	DE	Bavaria
 St. Ägidius	Wittislingen	DE	Bavaria
 Basilika St. Peter	Dillingen an der Donau	DE	Bavaria
 Studienkirche Mariä Himmelfahrt	Dillingen an der Donau	DE	Bavaria
@@ -12609,7 +12609,7 @@ St. Nikolaus	Gerbrunn	DE	Bavaria
 St. Elisabeth	Würzburg	DE	Bavaria
 Heilig-Kreuz-Kirche (Würzburg)	Würzburg	DE	Bavaria
 Dompfarrei St. Kilian Würzburg	Würzburg	DE	Bavaria
-Kath.Dompfarramt	Würzburg	DE	Bavaria
+Kath. Dompfarramt	Würzburg	DE	Bavaria
 Wurzburg Cathedral	Würzburg	DE	Bavaria
 St Gertrudes	Würzburg	DE	Bavaria
 St John in Stift Haug	Würzburg	DE	Bavaria
@@ -12657,7 +12657,7 @@ St. Martin Forchheim	Forchheim	DE	Bavaria
 Basilika Vierzehnheiligen	Forchheim	DE	Bavaria
 Kloster St. Anton	Forchheim	DE	Bavaria
 Speyer Cathedral, Speyer, Germany	Forchheim	DE	Bavaria
-Kath.Pfarramt	Pinzberg	DE	Bavaria
+Kath. Pfarramt	Pinzberg	DE	Bavaria
 St. Anna (alt)	Weilersbach	DE	Bavaria
 St. Bartholomäus	Schlüsselfeld	DE	Bavaria
 Pfarrkirche Sankt Johannes der Taufer	Schlüsselfeld	DE	Bavaria
@@ -12697,7 +12697,7 @@ Katholische Johannesgemeinde	Rüsselsheim am Main	DE	Hesse
 Katholische Kirche Königstädten	Rüsselsheim am Main	DE	Hesse
 Katholische Pfarrgemeinde Heilige Dreifaltigkeit und Auferstehung Christi	Rüsselsheim am Main	DE	Hesse
 Hl. Thomas von Aquin	Langen (Hessen)	DE	Hesse
-Pfarrei Heilige Familie - Langen.Egelsbach.Erzhausen	Langen (Hessen)	DE	Hesse
+Pfarrei Heilige Familie - Langen, Egelsbach, Erzhausen	Langen (Hessen)	DE	Hesse
 Katholische Kirchengemeinde St. Marien Pfarrer	Dreieich	DE	Hesse
 Katholisches Pfarrzentrum St. Johannes	Dreieich	DE	Hesse
 Katholische Kirchengemeinde St. Martinus	Hattersheim am Main	DE	Hesse
@@ -13020,7 +13020,7 @@ Kirchen, katholische Pfarramt Weichenwasserlos	Scheßlitz	DE	Bavaria
 Kath. Pfarramt Weismain	Weismain	DE	Bavaria
 St. Johannes der Täufer (Seßlach)	Seßlach	DE	Bavaria
 St. Kilian	Seßlach	DE	Bavaria
-Kath.Pfarramt	Weitramsdorf	DE	Bavaria
+Kath. Pfarramt	Weitramsdorf	DE	Bavaria
 St. Antonius Abbas	Seßlach	DE	Thuringia
 St. Sebastian	Seßlach	DE	Bavaria
 Kath. Pfarramt St. Kilian	Bad Staffelstein	DE	Bavaria
@@ -13094,7 +13094,7 @@ Parrocchia Beata Maria V. di Lourdes	Villadose	IT	Veneto
 Parrocchia Ss Andrea e Colomba in Villa Estense	Villa Estense	IT	Veneto
 Parrocchie di Vescovana - Santa Maria d'Adige - Barbona	Vescovana	IT	Veneto
 Parrocchia S. Giovanni Battista	Vescovana	IT	Veneto
-parrocchia	Granze	IT	Veneto
+Parrocchia	Granze	IT	Veneto
 Parrocchia di Stanghella	Stanghella	IT	Veneto
 Parrocchia Arcipretale di Solesino	Solesino	IT	Veneto
 Parrocchia di San Zenone	Rovigo	IT	Veneto
@@ -13368,7 +13368,7 @@ Parrocchia di San Daniele Martire	Padova	IT	Veneto
 Confraternity of St. Anthony of Padua	Padova	IT	Veneto
 Chiostro della magnolia	Padova	IT	Veneto
 Saint Anthony of Padua - The friars of the Basilica	Padova	IT	Veneto
-San Antonio De Padua, Italy	Padova	IT	Veneto
+San Antonio di Padova	Padova	IT	Veneto
 Sant'Antonio da Padova, prega per noi	Padova	IT	Veneto
 Basilica Del Santo	Padova	IT	Veneto
 Oratory of Saint George	Padova	IT	Veneto
@@ -13632,7 +13632,7 @@ Parrocchia San Marco Ev. Mestre	Venezia	IT	Veneto
 Chiesa di San Girolamo	Venezia	IT	Veneto
 Chiesa Parrocchiale di Santa Maria della Pace	Venezia	IT	Veneto
 San Lorenzo Giustiniani Cipressina	Venezia	IT	Veneto
-parrocchia san paolo	Venezia	IT	Veneto
+Parrocchia San Paolo	Venezia	IT	Veneto
 Chiesa Arcipretale dei Santi Gervasio e Protasio	Venezia	IT	Veneto
 Sala Lux - Parrocchia Carpenedo	Venezia	IT	Veneto
 Parrocchia di San Giovanni Evangelista	Venezia	IT	Veneto
@@ -14025,7 +14025,7 @@ Duomo di Santa Giustina	Enego	IT	Veneto
 Santuario dei Santi Vittore e Corona	Feltre	IT	Veneto
 Basilica - Santuario Ss. Vittore E Corona	Feltre	IT	Veneto
 Concattedrale di San Pietro Apostolo	Feltre	IT	Veneto
-duomo feltre	Feltre	IT	Veneto
+Duomo di Feltre	Feltre	IT	Veneto
 Diocesi di Belluno-Feltre	Feltre	IT	Veneto
 Chiesa di San Rocco	Feltre	IT	Veneto
 Parrocchia di Trevignano	Trevignano	IT	Veneto
@@ -14057,7 +14057,7 @@ Azione Cattolica Susegana e Crevada	Susegana	IT	Veneto
 Chiesa Parrocchiale di Santa Lucia di Piave	Santa Lucia di Piave	IT	Veneto
 Parrocchia di Parè - Conegliano	Conegliano	IT	Veneto
 Chiesa Parrocchiale dell'Annunciazione di Maria Vergine	Conegliano	IT	Veneto
-Parrocchia S. Pio X Conegliano - Gruppo Bosnia -	Conegliano	IT	Veneto
+Parrocchia S. Pio X Conegliano - Gruppo Bosnia	Conegliano	IT	Veneto
 Parrocchia di Santa Maria Assunta in Varago	Maserada sul Piave	IT	Veneto
 Parrocchia dell'Immacolata Concezione	Breda di Piave	IT	Veneto
 Parrocchia Saletto di Piave	Breda di Piave	IT	Veneto
@@ -16256,7 +16256,7 @@ Szent István Római Katolikus Plébánia Nagyszalonta	Salonta	RO	Bihor
 Biserica Greco-Catolică Sfântul Dumitru	Sânmartin	RO	Bihor
 Biserica Greco Catolica Pogorârea Sfântului Spirit	Sânmartin	RO	Bihor
 Biserica Greco-Catolica Nasterea Maicii Domnului	Sânmartin	RO	Bihor
-Capela Orășenească - Servicii Funerare Luigi Oradea !	Oradea	RO	Bihor
+Capela Orășenească - Servicii Funerare Luigi Oradea	Oradea	RO	Bihor
 Biserica Greco-Catolica Nufarul	Oradea	RO	Bihor
 Biserica Greco-Catolică Schimbarea la Faţă	Oradea	RO	Bihor
 Catedrala Greco-Catolică „Sfântul Nicolae” Oradea	Oradea	RO	Bihor
@@ -16362,7 +16362,7 @@ St. Peter und Paul	Brunnthal	DE	Bavaria
 Kath. Pfarrverband Feldkirchen-Höhenrain-Laus	Feldkirchen-Westerham	DE	Bavaria
 Katholische Pfarreiengemeinschaft Starnberg	Starnberg	DE	Bavaria
 St. Josef	Starnberg	DE	Bavaria
-Kath.Pfarramt Percha	Starnberg	DE	Bavaria
+Kath. Pfarramt Percha	Starnberg	DE	Bavaria
 St. Georg	Schäftlarn	DE	Bavaria
 Heilig-Kreuz-Kirche	Oberhaching	DE	Bavaria
 St. Bartholomäus	Oberhaching	DE	Bavaria
@@ -17758,7 +17758,7 @@ Jesuit Church (University church)	Wien	AT	Vienna
 Stephansdom	Wien	AT	Vienna
 Dom- und Metropolitanpfarre St. Stephan	Wien	AT	Vienna
 Cathédrale Saint-Étienne de Vienne	Wien	AT	Vienna
-Szt.István székesegyház,Bécs	Wien	AT	Vienna
+Stephansdom	Wien	AT	Vienna
 Erzdiözese Wien	Wien	AT	Vienna
 Duomo di Vienna	Wien	AT	Vienna
 Katholische Jugend Wien	Wien	AT	Vienna
@@ -17766,7 +17766,7 @@ katholischen Ostkirchen	Wien	AT	Vienna
 Bibel.Liturgie.Kirchenraum - Erzdiözese Wien	Wien	AT	Vienna
 Der Sonntag - Wochenzeitung	Wien	AT	Vienna
 Römisch Katholische Metropolitan und Pfarrkirche zu Sankt Stephan im Wien	Wien	AT	Vienna
-catedral de san esteban	Wien	AT	Vienna
+Stephansdom	Wien	AT	Vienna
 Katholische Kirche Maria Rotunda	Wien	AT	Vienna
 Griechisch-katholische St. Barbara Kirche	Wien	AT	Vienna
 Pfarrkanzlei St. Othmar	Wien	AT	Vienna
@@ -20661,7 +20661,7 @@ Eglise Saint-Leonard-du-Haut	Saint-Léonard	FR	Nord-Pas-de-Calais
 Église Saint-Wandrille	Outreau	FR	Nord-Pas-de-Calais
 Paroisse Saint Wandrille	Outreau	FR	Nord-Pas-de-Calais
 Église Saint-Vincent-de-Paul	Boulogne-sur-Mer	FR	Nord-Pas-de-Calais
-Église Saint François de Sales ⛪	Boulogne-sur-Mer	FR	Nord-Pas-de-Calais
+Église Saint François de Sales	Boulogne-sur-Mer	FR	Nord-Pas-de-Calais
 Basilique Notre Dame de Boulogne	Boulogne-sur-Mer	FR	Nord-Pas-de-Calais
 Cathedrale De Boulogne Sur Mer	Boulogne-sur-Mer	FR	Nord-Pas-de-Calais
 Basilica of Our Lady of the Immaculate Conception	Boulogne-sur-Mer	FR	Nord-Pas-de-Calais
@@ -21874,7 +21874,7 @@ Parochie Heilige Oda	Sint-Oedenrode	NL	North Brabant
 H Antonius van Padua Kerk	Erp	NL	North Brabant
 H. Willibrordus Kerk	Esch	NL	North Brabant
 R.K. Parochie Heilige Michaël	Schijndel	NL	North Brabant
-Sacramentskerk⛪	Berlicum	NL	North Brabant
+Sacramentskerk	Berlicum	NL	North Brabant
 Sint-Servatiuskerk	Erp	NL	North Brabant
 Sint Lambertus	Vorstenbosch	NL	North Brabant
 St Peter Church	Uden	NL	North Brabant
@@ -21916,7 +21916,7 @@ St. Paulus Bekering Kerk	Capelle aan den IJssel	NL	South Holland
 Oud-Katholieke Kerk	Gouda	NL	South Holland
 R.K. H.-Josephkerk Gouda	Gouda	NL	South Holland
 Sint-Bartholomeuskerk	Schoonhoven	NL	South Holland
-St. Barnabas kerk⛪	Haastrecht	NL	South Holland
+St. Barnabas kerk	Haastrecht	NL	South Holland
 Rooms-Katholiek Kerkhof Haastrecht	Haastrecht	NL	South Holland
 Kerk van de H.H. Michael en Johannes de Doper	Oudewater	NL	Utrecht
 Oud Katholieke Kerk	Oudewater	NL	Utrecht
@@ -21927,34 +21927,34 @@ Sint-Jan Geboortekerk	Vlijmen	NL	North Brabant
 Sint-Lambertuskerk	Engelen	NL	North Brabant
 Open Deur Diensten  Hervormd Aalburg 'De Burg'	Wijk en Aalburg	NL	North Brabant
 St. Willibrord Church	Ammerzoden	NL	Gelderland
-Johannes Nepomukkerk⛪	Woudrichem	NL	North Brabant
+Johannes Nepomukkerk	Woudrichem	NL	North Brabant
 Sint-Janskathedraal	's-Hertogenbosch	NL	North Brabant
 St John's Cathedral	's-Hertogenbosch	NL	North Brabant
-Heilige Annakerk⛪	Rosmalen	NL	North Brabant
+Heilige Annakerk	Rosmalen	NL	North Brabant
 Onze Lieve Vrouw van de Rozenkranskerk	Vinkel	NL	North Brabant
 Sint Lambertus	Nistelrode	NL	North Brabant
 Maria Magdalenakerk	Geffen	NL	North Brabant
 Petrus Emmaus Parochie	Heesch	NL	North Brabant
 Titus Brandsmaparochie Oss	Oss	NL	North Brabant
-Grote Kerk⛪	Oss	NL	North Brabant
+Grote Kerk	Oss	NL	North Brabant
 Sint-Hubertuskerk	Alem	NL	Gelderland
 Sint-Lambertuskerk	Lith	NL	Gelderland
 Sint-Remigiuskerk	Lithoijen	NL	Gelderland
-H. Benedictus kerk⛪	Teeffelen	NL	North Brabant
+H. Benedictus kerk	Teeffelen	NL	North Brabant
 Rk Kerk	Berghem	NL	North Brabant
 Sint Donatuskerk	Altforst	NL	Gelderland
 Maria Onbevlekte Ontvangenkerk	Leerdam	NL	South Holland
-H. Barbarakerk⛪	Nieuwegein	NL	Utrecht
-HH. Petrus en Paulus kerk⛪	Everdingen	NL	Gelderland
+H. Barbarakerk	Nieuwegein	NL	Utrecht
+HH. Petrus en Paulus kerk	Everdingen	NL	Gelderland
 Stichting Restauratie Oud-Katholieke Kerk	Culemborg	NL	Gelderland
 Parochie van de Heilige Barbara en Antonius	Culemborg	NL	Gelderland
 Parochie H. Paus Johannes XXIII	Houten	NL	Utrecht
 Cantilene	Houten	NL	Utrecht
-H. Alphonsuskerk⛪	Beneden-Leeuwen	NL	Gelderland
+H. Alphonsuskerk	Beneden-Leeuwen	NL	Gelderland
 Sint-Willibrorduskerk	Boven-Leeuwen	NL	Gelderland
-H.H. Ewaldenkerk⛪	Druten	NL	Gelderland
+H.H. Ewaldenkerk	Druten	NL	Gelderland
 Parochie H. Franciscus En H. Clara	Druten	NL	Gelderland
-St. Johannes de Doperkerk⛪	Wijk bij Duurstede	NL	Utrecht
+St. Johannes de Doperkerk	Wijk bij Duurstede	NL	Utrecht
 H.H. Petrus en Paulus kerk	Cothen	NL	Utrecht
 Gedachtenis kerk	Rhenen	NL	Utrecht
 St Philip Howard Roman Catholic Church	Cambridge	GB	England
@@ -22139,7 +22139,7 @@ Koepelkerk	Bussum	NL	North Holland
 Mariakerk Bussum	Bussum	NL	North Holland
 Sint VitusKerk Blaricum	Blaricum	NL	North Holland
 H. Urbanuskerk, Duivendrecht	Duivendrecht	NL	North Holland
-Sint Petrus Banden ⛪	Diemen	NL	North Holland
+Sint Petrus Banden	Diemen	NL	North Holland
 Alpha Almere	Almere-Stad	NL	Flevoland
 KatholiekAlmere	Almere-Stad	NL	Flevoland
 Voedselkast Kruidenwijk	Almere-Stad	NL	Flevoland
@@ -22165,11 +22165,11 @@ Oud-Katholieke Parochie St Agnes	Egmond aan Zee	NL	North Holland
 Oud Katholieke Kerk Alkmaar	Alkmaar	NL	North Holland
 Petrus en Pauluskerk	Bergen	NL	North Holland
 HH. Ursula en Gezellinnenkerk	Warmenhuizen	NL	North Holland
-Heilige Familiekerk⛪	't Kruis	NL	North Holland
+Heilige Familiekerk	't Kruis	NL	North Holland
 Sint Victor Parochie	Obdam	NL	North Holland
 Wulframkerk Waarland	Waarland	NL	North Holland
 Stichting Broeker Kerk	Broek in Waterland	NL	North Holland
-Nicolaas en Anthonius kerk⛪	Monnickendam	NL	North Holland
+Nicolaas en Anthonius kerk	Monnickendam	NL	North Holland
 Rooms-Katholieke Pastorie	Monnickendam	NL	North Holland
 HH. Nicolaas en Catharina, RK geloofsgemeenschap	Purmerend	NL	North Holland
 Mariakerk Volendam	Volendam	NL	North Holland
@@ -22191,7 +22191,7 @@ H. Gerardus Majella Church	Wervershoof	NL	North Holland
 Sint-Martinuskerk	Medemblik	NL	North Holland
 Parochie Sint Titus Brandsma	Medemblik	NL	North Holland
 Sint Odulphuskerk	Bakhuizen	NL	Friesland
-St. Ludgerus kerk⛪	Balk	NL	Friesland
+St. Ludgerus kerk	Balk	NL	Friesland
 Sint-Jozefkerk	Heeg	NL	Friesland
 St. Franciscusbasiliek	Bolsward	NL	Friesland
 Sint-Franciscuskerk	Franeker	NL	Friesland
@@ -22259,7 +22259,7 @@ Sint-Hubertuskerk	Riemst	BE	Flanders
 Sint-Petrus en Pauluskerk	Riemst	BE	Flanders
 Petrus en Pauluskerk	Maastricht	NL	Limburg
 Parochie Sint Pieter Maastricht	Maastricht	NL	Limburg
-Sint Martinuskerk⛪	Gronsveld	NL	Limburg
+Sint Martinuskerk	Gronsveld	NL	Limburg
 Sint-Bartholomeuskerk	Eckelrade	NL	Limburg
 H Kruisverheffing	Cadier en Keer	NL	Limburg
 Annajozeflambertustheresia	Maastricht	NL	Limburg
@@ -22288,7 +22288,7 @@ Kerk Heerlerbaan	Heerlen	NL	Limburg
 Parochie Sint-Servaas Lanaken	Lanaken	BE	Flanders
 Sint-Lambertuskerk	Lanaken	BE	Flanders
 Sint-Niklaaskerk	Maasmechelen	BE	Flanders
-Onbevlekt Hart van Maria⛪	Moorveld	NL	Limburg
+Onbevlekt Hart van Maria	Moorveld	NL	Limburg
 Pastorale Eenheid Sint. Vincentius Maasmechelen	Maasmechelen	BE	Flanders
 Sint-Remigiuskerk	Maasmechelen	BE	Flanders
 Sint-Philomenakerk	Maasmechelen	BE	Flanders
@@ -22407,7 +22407,7 @@ St. Clemens and St. Pankratius	Inden	DE	North Rhine-Westphalia
 St. Mariä Himmelfahrt	Düren	DE	North Rhine-Westphalia
 Kath. Pfarramt St. Joachim	Düren	DE	North Rhine-Westphalia
 Groß St. Arnold	Düren	DE	North Rhine-Westphalia
-st. cornelius catholic church	Inden	DE	North Rhine-Westphalia
+St. Cornelius Catholic Church	Inden	DE	North Rhine-Westphalia
 St. Martin	Niederzier	DE	North Rhine-Westphalia
 St. Thomas von Canterbury	Niederzier	DE	North Rhine-Westphalia
 St Cäcilia	Niederzier	DE	North Rhine-Westphalia
@@ -22565,7 +22565,7 @@ Sint Pieterskerk	Dilsen-Stokkem	BE	Flanders
 Basiliek Onze Lieve Vrouw van het Heilig Hart	Sittard	NL	Limburg
 Sint-Nicolaaskerk	Guttecoven	NL	Limburg
 Kerk O.L.Vrouw Geboorte	Sittard	NL	Limburg
-Sint Martinuskerk⛪	Born	NL	Limburg
+Sint Martinuskerk	Born	NL	Limburg
 Basiliek Amelberga Susteren	Susteren	NL	Limburg
 Sint-Lambertuskerk	Maaseik	BE	Flanders
 Kruisherenkerk Maaseik	Maaseik	BE	Flanders
@@ -22694,7 +22694,7 @@ St. Gabriel	Dormagen	DE	North Rhine-Westphalia
 St. Martinus	Dormagen	DE	North Rhine-Westphalia
 Messdiener St. Martinus Zons	Dormagen	DE	North Rhine-Westphalia
 Pfarrbüro St. Aloysius	Dormagen	DE	North Rhine-Westphalia
-St. Gereon und.Dionysius	Monheim am Rhein	DE	North Rhine-Westphalia
+St. Gereon und Dionysius	Monheim am Rhein	DE	North Rhine-Westphalia
 Marienkapelle	Monheim am Rhein	DE	North Rhine-Westphalia
 Heilige Drei Könige	Leverkusen	DE	North Rhine-Westphalia
 Kirche am Johannisberg	Leichlingen (Rheinland)	DE	North Rhine-Westphalia
@@ -23143,7 +23143,7 @@ Sint Jozef kerk	Someren-Heide	NL	North Brabant
 Franciscusparochie	Asten	NL	North Brabant
 St. Willibrord Church	Liessel	NL	North Brabant
 Heilige Naam Jezuskerk	Lierop	NL	North Brabant
-St. Jozefkerk⛪	Deurne	NL	North Brabant
+St. Jozefkerk	Deurne	NL	North Brabant
 Sint-Luciakerk	Helmond	NL	North Brabant
 Damiaan Helmond	Helmond	NL	North Brabant
 Goddelijke Voorzienigheid	Helmond	NL	North Brabant
@@ -23365,8 +23365,8 @@ H. Damianus Kerk⛪	Niftrik	NL	Gelderland
 Karl Leisner Mariendaal Kapel Groesbeek	Groesbeek	NL	Gelderland
 Goddelijk Hart van Jezuskerk	De Horst	NL	Gelderland
 Cenakelkerk	Heilig Land Stichting	NL	Gelderland
-Antonius Van Paduakerk ⛪	Nijmegen	NL	Gelderland
-Grote Bartholomeus kerk⛪	Beek	NL	Gelderland
+Antonius Van Paduakerk	Nijmegen	NL	Gelderland
+Grote Bartholomeus kerk	Beek	NL	Gelderland
 St. Martin	Kranenburg	DE	North Rhine-Westphalia
 St. Vincentius Asperden	Goch	DE	North Rhine-Westphalia
 St. Stephanus	Goch	DE	North Rhine-Westphalia
@@ -23398,7 +23398,7 @@ Hervormde kerk	Ressen	NL	Gelderland
 St. Werenfridus Elst	Elst	NL	Gelderland
 Johannes de Doper kerk	Wageningen	NL	Gelderland
 Sint-Antonius van Paduakerk	Ede	NL	Gelderland
-St. Werenfridus kerk⛪	Westervoort	NL	Gelderland
+St. Werenfridus kerk	Westervoort	NL	Gelderland
 Sint Eusebius Parochie Arnhem	Arnhem	NL	Gelderland
 Saint Martin Church	Arnhem	NL	Gelderland
 Oud-Katholieke Parochie Sint Willibrordus	Arnhem	NL	Gelderland
@@ -24162,7 +24162,7 @@ Sint Jozefkerk	Zwolle	NL	Gelderland
 Sint-Michaëlkerk	Zwolle	NL	Overijssel
 Basiliek Zwolle	Zwolle	NL	Overijssel
 Stichting Vrienden van de Grote Kerk	Dalfsen	NL	Overijssel
-Rooms katholieke kerk⛪	Emmeloord	NL	Flevoland
+Rooms-katholieke kerk	Emmeloord	NL	Flevoland
 St. Petrus Church	Lelystad	NL	Flevoland
 Parochielemelerveld	Lemelerveld	NL	Overijssel
 St. Pancratius Basiliek	Tubbergen	NL	Overijssel
@@ -24298,7 +24298,7 @@ Katholische Jugend Oldenburg	Vechta	DE	Lower Saxony
 St. Georg	Vechta	DE	Lower Saxony
 Maria Frieden	Vechta	DE	Lower Saxony
 St. Willibrord Church	Oldemarkt	NL	Overijssel
-H. Willibrordus kerk⛪	Lemmer	NL	Friesland
+H. Willibrordus kerk	Lemmer	NL	Friesland
 H. Fredericus Church	Sloten	NL	Friesland
 H. Fredericus kerk	Steggerda	NL	Friesland
 Sint-Franciscuskerk	Wolvega	NL	Friesland
@@ -24324,7 +24324,7 @@ Maria ten Hemelopneming	Veendam	NL	Groningen
 R.K. Maria ten Hemelopneming Kerk	Bedum	NL	Groningen
 Sint-Willibrorduskerk	Kloosterburen	NL	Groningen
 Sint-Bonifatiuskerk	Wehe-den Hoorn	NL	Groningen
-Jacobus de Meerderekerk⛪	Uithuizen	NL	Groningen
+Jacobus de Meerderekerk	Uithuizen	NL	Groningen
 Sint-Jozefkerk	Delfzijl	NL	Groningen
 PCI Maria Hertogin van Drenthe	Barger-Compascuum	NL	Drenthe
 Sint-Willehaduskerk	Emmer-Compascuum	NL	Drenthe
@@ -30263,7 +30263,7 @@ Parafia Prawosławna pw. Św. Mikołaja Cudotwórcy w Michałowie	Michałowo	PL	
 Parafia Rzymskokatolicka pw. Opatrzności Bożej w Michałowie	Michałowo	PL	Podlasie
 Parafia św. Jana Teologa w Mostowlanach	Gródek	PL	Podlasie
 Parafia NSPJ w Laskowcu i Nawiedzenia NMP w Giełczynie	Trzcianne	PL	Podlasie
-parafia-tykocin.pl	Tykocin	PL	Podlasie
+Parafia Tykocin	Tykocin	PL	Podlasie
 Parafia Przemienienia Pańskiego	Białystok	PL	Podlasie
 Kaplica Rzymskokatolicka pw. Imienia Maryi i św. Stanisława Biskupa i Męczennika	Białystok	PL	Podlasie
 Parafia Najświętszej Maryi Panny z Guadalupe	Białystok	PL	Podlasie
@@ -31368,7 +31368,7 @@ Capilla San Pablo	Talca	CL	Maule
 Iglesia de San Agustín	Talca	CL	Maule
 Iglesia Católica Santo Cura de Ars	Talca	CL	Maule
 Iglesia San José de Pelarco	Pelarco	CL	Maule
-capilla nuestra señora del rosario	Malargue	AR	Mendoza
+Capilla Nuestra Señora del Rosario	Malargue	AR	Mendoza
 Iglesia San Miguel Arcángel		CL	Maule
 Capilla Paula Montal		CL	Maule
 Iglesia San Pedro de Alcántara	Paredones	CL	O'Higgins
@@ -31427,13 +31427,13 @@ Capilla Codegua	Graneros	CL	O'Higgins
 San Francisco de Asis	San Francisco de Mostazal	CL	O'Higgins
 Capilla El Carmen	Graneros	CL	O'Higgins
 Parroquia Nuestra Señora del Carmen	Mostazal	CL	O'Higgins
-cristo águila sur	Paine	CL	Santiago Metropolitan
+Cristo Águila Sur	Paine	CL	Santiago Metropolitan
 Parroquia San Francisco Javier	Paine	CL	Santiago Metropolitan
 Capilla San Roberto Belarmino	Paine	CL	Santiago Metropolitan
 Cruz de Cristo	Paine	CL	Santiago Metropolitan
 Capilla Nuestra Señora del Carmen	Paine	CL	Santiago Metropolitan
-capilla el tránsito	Paine	CL	Santiago Metropolitan
-gruta de chada	Paine	CL	Santiago Metropolitan
+Capilla El Tránsito	Paine	CL	Santiago Metropolitan
+Gruta de Chada	Paine	CL	Santiago Metropolitan
 Monasterio Cisterciense	Paine	CL	Santiago Metropolitan
 Capilla El Escorial	Paine	CL	Santiago Metropolitan
 Cristo La Rana	Paine	CL	Santiago Metropolitan
@@ -31654,7 +31654,7 @@ Capilla Nuestra Señora de Las Flores		AR	Buenos Aires
 Parroquia Santuario de Nuestra Señora de Fátima	Junín	AR	Buenos Aires
 Sagrado Corazón de Jesús	Junín	AR	Buenos Aires
 Iglesia	Chivilcoy	AR	Buenos Aires
-capilla santo cristo		AR	Buenos Aires
+Capilla Santo Cristo		AR	Buenos Aires
 Capilla Inmaculada Concepción de María		AR	Buenos Aires
 Capilla Nuestra Señora de Fatima	Chivilcoy	AR	Buenos Aires
 Parroquia San Lorenzo Mártir	Navarro	AR	Buenos Aires
@@ -31716,7 +31716,7 @@ Casa de Encuentro y Oración San Juan Evangelista	Ezeiza	AR	Buenos Aires
 Capilla San Cayetano	Guernica	AR	Buenos Aires
 Capilla Nuestra Señora de Lujan	glew	AR	Buenos Aires
 Capilla Santa Maravilla de Jesús	Ezeiza	AR	Buenos Aires
-santa teresa de calcuta	ezeiza	AR	Buenos Aires
+Santa Teresa de Calcuta	ezeiza	AR	Buenos Aires
 Capilla Nuestra Señora de la Dulce Espera	Florencio Varela	AR	Buenos Aires
 Parroquia San José	Ezeiza	AR	Buenos Aires
 Capilla Cristo Redentor y Virgen de Itatí	Florencio Varela	AR	Buenos Aires
@@ -31849,7 +31849,7 @@ Pía Sociedad de San Cayetano	Don Torcuato	AR	Buenos Aires
 Centro de Oración Nuestra Señora de Lourdes	Don Torcuato	AR	Buenos Aires
 Nuestra Señora de Loreto	Tigre	AR	Buenos Aires
 Nuestra Señora del Valle	Tigre	AR	Buenos Aires
-casilla	Boulogne Sur Mer	AR	Buenos Aires
+Capilla	Boulogne Sur Mer	AR	Buenos Aires
 Plaza de la Virgen	Tigre	AR	Buenos Aires
 Parroquia Santa Lucía	Virreyes	AR	Buenos Aires
 Parroquia San José Obrero	San Isidro	AR	Buenos Aires
@@ -32198,7 +32198,7 @@ Capilla Colonial	Quillota	CL	Valparaiso
 Iglesia Santo Domingo	Quillota	CL	Valparaiso
 Capilla Jesús Crucificado	Quillota	CL	Valparaiso
 Iglesia de Puchuncaví	Puchuncaví	CL	Valparaiso
-iglesia de jesus	Hacienda La Calera	CL	Valparaiso
+Iglesia de Jesus	Hacienda La Calera	CL	Valparaiso
 Capilla Inmaculada Concepción	Hacienda La Calera	CL	Valparaiso
 Imagen de la Virgen del Carmen	Nogales	CL	Valparaiso
 Capilla de Caleu		CL	Valparaiso
@@ -32445,7 +32445,7 @@ Capilla Nuestra Señora de Luján	Achiras	AR	Cordoba
 Paroquia Nuestra Señora de la Merced		AR	San Luis
 Capilla Villa General Roca	Villa General Roca	AR	San Luis
 Paso del Rey		AR	San Luis
-virgen de fatima	villa el chacay	AR	Cordoba
+Virgen de Fatima	villa el chacay	AR	Cordoba
 Capilla de la Virgen de la Medalla Milagrosa	Concaran	AR	San Luis
 Capilla San Pedro		AR	San Luis
 Capilla Nuestra Señora del Tránsito	Alpa Corral	AR	Cordoba
@@ -32493,7 +32493,7 @@ Iglesia Nuestra Señora del Socorro	Mina Clavero	AR	Cordoba
 Capilla Nuestra Señora de Shoenstath	Villa Cura Brochero	AR	Cordoba
 Iglesia Virgen del Valle		AR	La Rioja
 Capilla "Virgen del Valle"	Los Medanitos	AR	Cordoba
-iglesia de pocho		AR	Cordoba
+Iglesia de Pocho		AR	Cordoba
 Capilla de la Medalla Milagrosa	Salsacate	AR	Cordoba
 Parroquia Nuestra Señora del Rosario	Salsacate	AR	Cordoba
 Iglesia "San José"	Villa Rumipal	AR	Cordoba
@@ -32501,7 +32501,7 @@ Parroquia Nuestra Señora de Loreto	Embalse	AR	Cordoba
 Virgen María	Almafuerte	AR	Cordoba
 Iglesia Apóstol San Pedro	Almafuerte	AR	Cordoba
 Capilla Colegio Jesús, María y José	Río Tercero	AR	Cordoba
-seminario de rosario: casa san alberto	Villa General Belgrano	AR	Cordoba
+Seminario de Rosario: Casa San Alberto	Villa General Belgrano	AR	Cordoba
 Gruta del Sagrado Corazón de Jesús	Santa Rosa de Calamuchita	AR	Cordoba
 Cruz Mayor del Cerro Vía Crucis	Santa Rosa de Calamuchita	AR	Cordoba
 Capilla San Roque - Tancacha	Tancacha	AR	Cordoba
@@ -32612,7 +32612,7 @@ Capilla del Monte de los Fieles.	Gobernador Galvez	AR	Santa Fe
 Cuasiparroquia Inmaculada Concepción		AR	Buenos Aires
 Parroquia nuestra señora del Carmen		AR	Buenos Aires
 Capilla Sagrado Corazón de Jesús	Ramallo	AR	Buenos Aires
-IGLESIA CATOLICA LOS AROMOS	San Pedro	AR	Buenos Aires
+Iglesia Católica Los Aromos	San Pedro	AR	Buenos Aires
 Iglesia San José	San Nicolas de los Arroyos	AR	Buenos Aires
 Capilla del Batallón del Ejército Argentino	San Nicolas de los Arroyos	AR	Buenos Aires
 Parroquia Nuestra Señora de Luján	Villa Constitución	AR	Santa Fe
@@ -32694,7 +32694,7 @@ Nuestra Señora de Itatí	Esperanza	AR	Santa Fe
 Iglesia Nuestra Señora de América	Santa Fe	AR	Santa Fe
 Hogar Don Guanella	Santa Fe	AR	Santa Fe
 Parroquia Nuestra Señora del Rosario de Nueva Pompeya	Santa Fe de la Vera Cruz	AR	Santa Fe
-virgen del carmen	Santa Fe de la Vera Cruz	AR	Santa Fe
+Virgen del Carmen	Santa Fe de la Vera Cruz	AR	Santa Fe
 Capilla del Colegio San José	Humboldt	AR	Santa Fe
 Capilla Fassi		AR	Santa Fe
 Capilla Virgen Niña	Fidela	AR	Santa Fe
@@ -33654,7 +33654,7 @@ San Francisco	San Miguel de Tucuman	AR	Tucuman
 Parroquia Nuestra Señora Milagrosa y San Martín	San Miguel de Tucuman	AR	Tucuman
 Iglesia Sagrada Familia	Alderetes	AR	Tucuman
 Cottolengo Don Orione	San Miguel de Tucuman	AR	Tucuman
-CAPILLA NUESTRA SRA. DEL CARMEN	Villa Carmela	AR	Tucuman
+Capilla Nuestra Sra. del Carmen	Villa Carmela	AR	Tucuman
 San Francisco Solano	Yerba Buena	AR	Tucuman
 Capilla San Javier	Yerba Buena	AR	Tucuman
 Capilla Nuestra Señora de Fátima	Alderetes	AR	Tucuman
@@ -33678,7 +33678,7 @@ Ermita San Cayetano	Molinos	AR	Salta
 Nuestra Señora del Rosario	Rosario de la Frontera	AR	Salta
 Capilla	Rosario de la Frontera	AR	Salta
 San Roque	Guachipas	AR	Salta
-CAPILLA VIRGEN DEL VALLE	Talapampa	AR	Salta
+Capilla Virgen del Valle	Talapampa	AR	Salta
 Parroquia San Antonio de Padua	La Viña	AR	Salta
 Capilla Medalla Milagrosa	Monte Quemado Airport	AR	Santiago del Estero
 Capilla Santa Rita	Monte Quemado Airport	AR	Santiago del Estero
@@ -33706,7 +33706,7 @@ Capilla Santa Teresita y San Héctor	Parada Cocco	AR	Corrientes
 Capilla Nuestra Señora de los Remedios	Empedrado	AR	Corrientes
 Capilla San Isidro Labrador	San Isidro	AR	Corrientes
 Nuestra Señora de la Medalla Milagrosa	El Sombrero	AR	Corrientes
-CAPILLA SANTA LIBRADA	Riachuelo	AR	Corrientes
+Capilla Santa Librada	Riachuelo	AR	Corrientes
 Capilla Santa María Magdalena	Corrientes	AR	Corrientes
 Parroquia San Roque de Montpellier	Corrientes	AR	Corrientes
 Capilla Madre Santa de la Esperanza	Corrientes	AR	Corrientes
@@ -33930,7 +33930,7 @@ Gruta de la Virgen - Malvinas	San Salvador de Jujuy	AR	Jujuy
 Parroquia Santa Teresita del Niño Jesús	San Salvador de Jujuy	AR	Jujuy
 Capilla Nuestra Sra. del Valle - Barrio El Chingo	San Salvador de Jujuy	AR	Jujuy
 Parroquia San Cayetano	Palpalá	AR	Jujuy
-Iglesia de Campo Verde -	San Salvador de Jujuy	AR	Jujuy
+Iglesia de Campo Verde	San Salvador de Jujuy	AR	Jujuy
 Capilla Sagrada Familia	San Pedro	AR	Jujuy
 Gruta de la virgen de Urkupiña	san Pedro de Jujuy	AR	Jujuy
 Centro Parroquial	Santa Clara	AR	Jujuy
@@ -33946,7 +33946,7 @@ Parroquía Nuestra Sra. de La Merced	Valle Grande	AR	Jujuy
 Iglesia San Francisco de Paula	Humahuaca	AR	Jujuy
 Capilla de Nuestra Sra. de Rosario		AR	Jujuy
 Iglesia de La Asunción		AR	Jujuy
-iglesia	Iruya	AR	Salta
+Iglesia	Iruya	AR	Salta
 Iglesia de San Roque y Nuestra Señora del Rosario	Iruya	AR	Salta
 Capilla	Iruya	AR	Salta
 Capilla		AR	Salta
@@ -34737,103 +34737,103 @@ Centro de Formação da Igreja Católica de Salto do Lontra		BR	PR Parana
 Capela São Francisco Xavier	Dois Vizinhos	BR	PR Parana
 Capela da Comunidade de Água Branca	Chopinzinho	BR	PR Parana
 Santa Rita		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 RIO PERDIDO Nossa Senhora Esperança		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 PALMITAL Raina da Paz		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 ENTRE LAGOS Nossa Senhora Dorosi		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 BACIA Nossa Senhora de Fátima		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 VILA RURAL   Veni Spirito Santo		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 Santa Cruz NS Aparecida		BR	PR Parana
 Bom Jesus		BR	PR Parana
 Kaplica		BR	PR Parana
 NOVA ESPERANÇA Santo Antônio		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 CAMPO NOVO - S. Familia		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 SÃO JORGE		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 Santa Barbara		BR	PR Parana
 CINAMÃO - São João Batista		BR	PR Parana
 Capela São Cristóvão		BR	PR Parana
 Capela São Sebastião		BR	PR Parana
 Capela Nsa Sra do Carmo		BR	PR Parana
-NOVO HORIZONTE		BR	PR Parana
-LINHA IGUAÇU-I		BR	PR Parana
-JARDIM FLORESTA		BR	PR Parana
-kaplica		BR	PR Parana
-DIVINA MISERICÓRDIA		BR	PR Parana
-kaplica		BR	PR Parana
+Novo Horizonte		BR	PR Parana
+Linha Iguaçu-I		BR	PR Parana
+Jardim Floresta		BR	PR Parana
+Capela		BR	PR Parana
+Divina Misericórdia		BR	PR Parana
+Capela		BR	PR Parana
 KENNEDY Santa Edwiges		BR	PR Parana
 Kaplica		BR	PR Parana
-SÃO CRISTÓVÃO		BR	PR Parana
-kaplica		BR	PR Parana
+São Cristóvão		BR	PR Parana
+Capela		BR	PR Parana
 Salão paroquial - Catequese		BR	PR Parana
 BOM PASTOR Bom Pastor		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 FONTE DA UNIÃO São Camiliano		BR	PR Parana
-kaplica		BR	PR Parana
-FAZENDINHA		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
+Fazendinha		BR	PR Parana
+Capela		BR	PR Parana
 GUARANI São João Batista		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 LINHA NORTE Perpétuo Socorro		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 FLOR DA SERRA  Santo Antônio		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 Silo - Cristo Resuscitado		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 ORGÂNICA,  Nossa S APARECIDA		BR	PR Parana
 PRIMAVERA S. Lucia		BR	PR Parana
 ALTO RECREIO Nossa Senhora Aparecida		BR	PR Parana
-kaplica		BR	PR Parana
-kaplica		BR	PR Parana
-LUSITâNIA Nossa Senhora das Graças,		BR	PR Parana
-ENTRE VILAS		BR	PR Parana
-kaplica		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
+Capela		BR	PR Parana
+Capela Nossa Senhora das Graças - Lusitânia		BR	PR Parana
+Entre Vilas		BR	PR Parana
+Capela		BR	PR Parana
+Capela		BR	PR Parana
 SANTA FÉ Santa Bárbara		BR	PR Parana
-kaplica		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
+Capela		BR	PR Parana
 PASSO DAS FLORES Nossa Senhora Aparecida		BR	PR Parana
 Pimentel São Paulo apóstolo		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 Barra do Mato Queimado N. S. de Monte Claro		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 LAGEADO BONITO São José		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 Bandeirantes		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 MIRIM São Joao Batista		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 LINHA ISRAEL Perpétuo Socorro		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 TAPUI Bom Jesus de Iguape	Quedas do Iguaçu	BR	PR Parana
-kaplica		BR	PR Parana
-MISSÃO RESGATE		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
+Missão Resgate		BR	PR Parana
+Capela		BR	PR Parana
 Alto Bela Vista Nossa Senhora Aparecida		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 PARANÁ Nossa Senhora de lá Salete		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 CARLOTA S. Lucia		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 NOVA ITÁLIA S. Lucia		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 ESTRELA Nossa Senhora de Fátima		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 SANTA ROSA Nossa Senhora Aparecida		BR	PR Parana
 kapLica		BR	PR Parana
 Alto Alegre Nossa Senhora Aparecida		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 NOVO RUMO  Nossa Senhora APARECIDA		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 JARDIM ALEGRE São José		BR	PR Parana
-kaplica		BR	PR Parana
+Capela		BR	PR Parana
 Igreja Matriz Sant'ana	Laranjeiras do Sul	BR	PR Parana
 Paróquia Nossa Senhora do Rosário		BR	PR Parana
 Seminario Menor Sao Josafat	Mallet	BR	PR Parana
@@ -35699,7 +35699,7 @@ Capela Nossa Senhora da Assunção	Araucaria	BR	PR Parana
 Comunidade Cristo Ressuscitado	Curitiba	BR	PR Parana
 Igreja Pentencostal de Jesus Cristo	Araucaria	BR	PR Parana
 Paróquia Nossa Senhora das Dores	Araucária	BR	PR Parana
-capela de sao jose operario	curitiba	BR	PR Parana
+Capela de Sao Jose Operario	curitiba	BR	PR Parana
 São Miguel	Araucaria	BR	PR Parana
 Capela		BR	PR Parana
 Capela	Campo Largo	BR	PR Parana
@@ -35760,7 +35760,7 @@ Capela Nossa Senhora da Glória	Palotina	BR	PR Parana
 Iglesia Católica de La Paloma del Espíritu Santo	Colonia Catuete	PY	Canindeyu
 Capela Santa Rita de Cassia	Salto del Guaira	PY	Canindeyu
 Capela São Sebastião	Salto del Guaira	PY	Canindeyu
-CASA DE MARIA	Alto Piquiri	BR	PR Parana
+Casa de Maria	Alto Piquiri	BR	PR Parana
 Capela Mortuária	Alto Piquiri	BR	PR Parana
 Capela		BR	PR Parana
 Nossa Senhora do Caravaggio		BR	PR Parana
@@ -35870,7 +35870,7 @@ Capela Nossa Senhora Aparecida	Registro	BR	SP Sao Paulo
 Igreja Católica Apostólica Romana		BR	SP Sao Paulo
 Igreja São Camilo de Lellis	Itapeva	BR	SP Sao Paulo
 Paróquia Mitra	Itapeva	BR	SP Sao Paulo
-comunidade bom jesus	itapeva	BR	SP Sao Paulo
+Comunidade Bom Jesus	itapeva	BR	SP Sao Paulo
 Capela Nossa Senhora da Penha		BR	SP Sao Paulo
 Capela Sagrada Família		BR	SP Sao Paulo
 Capela de São Caetano		BR	SP Sao Paulo
@@ -35917,7 +35917,7 @@ Capela do Colégio São José	Santos	BR	SP Sao Paulo
 Igreja Católica São João Batista	Guaruja	BR	SP Sao Paulo
 Capela São Pedro e São Paulo	Cubatão	BR	SP Sao Paulo
 Igreja de Santa Verônica		BR	SP Sao Paulo
-santa paulina	siqueira campos	BR	PR Parana
+Santa Paulina	siqueira campos	BR	PR Parana
 Igreja Matriz de Abatiá		BR	PR Parana
 Capela São Cristóvão	Santo Antonio da Platina	BR	PR Parana
 Capela São Bernardo		BR	SP Sao Paulo
@@ -36164,7 +36164,7 @@ Seminário Maria Mater Ecclesiae do Brasil	Itapecerica da Serra	BR	SP Sao Paulo
 Comunidade São Francisco de Assis	Itapecerica da Serra	BR	SP Sao Paulo
 Igreja São João Batista	São Paulo	BR	SP Sao Paulo
 Seminário Maria Mater Ecclesiae do Brasil	Itapecerica da Serra	BR	SP Sao Paulo
-comunidade santa isabel e são benedito	São Paulo	BR	SP Sao Paulo
+Comunidade Santa Isabel e São Benedito	São Paulo	BR	SP Sao Paulo
 Comunidade N. S.Aparecida e São Geraldo	São Paulo	BR	SP Sao Paulo
 Paróquia São Marcos	Embu	BR	SP Sao Paulo
 Capela Menino Jesus	Vargem Grande Paulista	BR	SP Sao Paulo
@@ -36641,7 +36641,7 @@ Paróquia Santa Terezinha	Barra do Pirai	BR	RJ Rio de Janeiro
 Capela Nossa Senhora de Fátima	Miguel Pereira	BR	RJ Rio de Janeiro
 Matriz de Santa Cruz	Mendes	BR	RJ Rio de Janeiro
 Capela Santo Antônio da Bica		BR	RJ Rio de Janeiro
-capela		BR	RJ Rio de Janeiro
+Capela		BR	RJ Rio de Janeiro
 Capela de São Pedro	Rio de Janeiro	BR	RJ Rio de Janeiro
 Capela Nossa Senhora de Fátima	Nilopolis	BR	RJ Rio de Janeiro
 Capela São Gerardo	Rio de Janeiro	BR	RJ Rio de Janeiro
@@ -36687,7 +36687,7 @@ Paróquia São João Batista	Niteroi	BR	RJ Rio de Janeiro
 Capela Santa Rita de Cássia	São Gonçalo	BR	RJ Rio de Janeiro
 Igreja Cristã Maranata	Niteroi	BR	RJ Rio de Janeiro
 Igreja de Santa Edwiges	Marica	BR	RJ Rio de Janeiro
-paroquia de são jose	Marica	BR	RJ Rio de Janeiro
+Paroquia de São Jose	Marica	BR	RJ Rio de Janeiro
 Capela de São Jorge	Maricá	BR	RJ Rio de Janeiro
 Capela de Santo Antônio	Maricá	BR	RJ Rio de Janeiro
 Igreja Nossa Senhora da Conceição	Saquarema	BR	RJ Rio de Janeiro
@@ -36882,15 +36882,15 @@ Iglesia Virgen de Copacabana	Candarave	PE	Tacna
 Parroquia de Challuyu	Challuyu	PE	Puno
 Capilla Rosario		PE	Puno
 Capilla Ascención		PE	Puno
-iglesia		PE	Puno
-iglesia		PE	Puno
-iglesia		PE	Puno
+Iglesia		PE	Puno
+Iglesia		PE	Puno
+Iglesia		PE	Puno
 Capilla de Rosario	Rosario	BO	La Paz
 Iglesia San Pedro de Ulloma	Ulloma	BO	La Paz
 Santuario Santiago de Callapa		BO	La Paz
 Parroquia de Sora Caquesani	Sora	BO	La Paz
-iglesia		BO	La Paz
-iglesia		BO	La Paz
+Iglesia		BO	La Paz
+Iglesia		BO	La Paz
 Parroquia de Pokevillque		BO	La Paz
 Capilla Asunción de Thola Ñusata	Tula Ñusata	BO	La Paz
 Parroquia de Chilahuala		BO	La Paz
@@ -37010,7 +37010,7 @@ Capilla Señor de Mayo	El Alto	BO	La Paz
 Capilla San Pablo	La Paz	BO	La Paz
 Capillla Santuario De La Cruz	La Paz	BO	La Paz
 Centro Juvenil Don Bosco	El Alto	BO	La Paz
-iglesia santiago primero	El Alto	BO	La Paz
+Iglesia Santiago Primero	El Alto	BO	La Paz
 Iglesia Santa Bárbara	La Paz	BO	La Paz
 Virgen de Copacabana	La Paz	BO	La Paz
 Capilla Parque Cementerio Los Andes	La Paz	BO	La Paz
@@ -37251,7 +37251,7 @@ Parroquia Cristo Resucitado	Villa el Salvador	PE	Lima
 Parroquia San Martín de la Caridad	Villa El Salvador	PE	Lima
 Capilla Sagrado Corazón de Jesús	Villa El Salvador	PE	Lima
 Parroquia Santa Ana	Surco	PE	Lima
-gruta san martin	Surco	PE	Lima
+Gruta San Martin	Surco	PE	Lima
 Capilla Señor de Los Milagros	Surco	PE	Lima
 Capilla Señor de los Milagros	Surco	PE	Lima
 Iglesia Nuestra Señora Del Carmen - Atocongo	Villa María del Triunfo	PE	Lima
@@ -37388,7 +37388,7 @@ Iglesia de Carampoma	Carampoma	PE	Lima
 Iglesia de Huanza	Huanza	PE	Lima
 Capilla Virgen de la Medalla Milagrosa	Chicla	PE	Lima
 Iglesia Matriz San Juan de Chicla	Chicla	PE	Lima
-SANTO TORIBIO DE MOGROBEJO	Chancay	PE	Lima
+Santo Toribio de Mogrobejo	Chancay	PE	Lima
 Iglesia de Nueva Estrella	Huaral	PE	Lima
 Capilla San Antonio de Padua	Huaral	PE	Lima
 Iglesia de Pomacocha	Pomacocha	PE	Lima
@@ -37455,7 +37455,7 @@ Misioneros Identes de Cristo Crucificado	Cusco	PE	Cusco
 Iglesia de Santo Domingo	Cusco	PE	Cusco
 Parroquia Santísima Trinidad de Mariscal Gamarra	Cusco	PE	Cusco
 Parroquia Santa Rosa	Cusco	PE	Cusco
-capilla	San Sebastián	PE	Cusco
+Capilla	San Sebastián	PE	Cusco
 Iglesia C.C. Tambomachay	Cusco	PE	Cusco
 Templo Patrón Salvador del Mundo	San Salvador	PE	Cusco
 Templo inmaculada Concepcion	Acomayo	PE	Cusco
@@ -37539,7 +37539,7 @@ Capilla Virgen de Urkupiña	Camiri	BO	Santa Cruz
 Capilla	Camiri	BO	Santa Cruz
 Iglesia San Antonio de los Sauces	Monteagudo	BO	Chuquisaca
 Parroquia La Santa Cruz		BO	Santa Cruz
-capilla		BO	Santa Cruz
+Capilla		BO	Santa Cruz
 Virgen de los dolores		PY	Boqueron
 Iglesia Matriz De Nuestra Señora María Auxiliadora	Bella Vista	PY	Amambay
 Parroquia virgen del carmen	Porto Murtinho	BR	MS Mato Grosso do Sul
@@ -37766,7 +37766,7 @@ Parroquia de Pozo Colorado	Santa Rita	BO	Santa Cruz
 Capilla "San Pedro"	Santa Cruz de la Sierra	BO	Santa Cruz
 Parroquia Nuestra Señora de Los Angeles	Cotoca	BO	Santa Cruz
 Capilla San Pablo	Santa Cruz de la Sierra	BO	Santa Cruz
-capilla	Santa Cruz de la Sierra	BO	Santa Cruz
+Capilla	Santa Cruz de la Sierra	BO	Santa Cruz
 Iglesia Madre del Verbo Divino	Santa Cruz de la Sierra	BO	Santa Cruz
 San Lorenzo	Santa Cruz de la Sierra	BO	Santa Cruz
 Iglesia Virgen de Urkupiña	Cotoca	BO	Santa Cruz
@@ -37789,7 +37789,7 @@ Capilla Comunidad Santa Rosa de Lima	Santa Cruz de la Sierra	BO	Santa Cruz
 Iglesia de Tarumatú	La Belgica	BO	Santa Cruz
 Parroquia de Cañada Larga	Cañada Larga	BO	Santa Cruz
 Santos Desposorios	Buena Vista	BO	Santa Cruz
-iglesia	San Carlos	BO	Santa Cruz
+Iglesia	San Carlos	BO	Santa Cruz
 Capilla San Jose del Cedro	El Cedro	BO	Santa Cruz
 Iglesia Católica Villa Cochabamba	Montero	BO	Santa Cruz
 Iglesia	Montero	BO	Santa Cruz
@@ -38243,7 +38243,7 @@ Igreja São Bom Jesus	Monte Santo de Minas	BR	MG Minas Gerais
 Igreja São Judas		BR	MG Minas Gerais
 Igreja da Abadia	Sao Sebastiao do Paraiso	BR	MG Minas Gerais
 Igreja Paula Frassinetti	Sao Sebastiao do Paraiso	BR	MG Minas Gerais
-PARÓQUIA SENHOR BOM JESUS		BR	MG Minas Gerais
+Paróquia Senhor Bom Jesus		BR	MG Minas Gerais
 Igreja do Rosario	Sao Sebastiao do Paraiso	BR	MG Minas Gerais
 Igreja de Nossa Senhora da Aparecida	Sao Sebastiao do Paraiso	BR	MG Minas Gerais
 Paróquia São José	São Sebastião do Paraíso	BR	MG Minas Gerais
@@ -38298,7 +38298,7 @@ Capela da Praça	Itapecerica	BR	MG Minas Gerais
 Capela Passos do São Francisco	Itapecerica	BR	MG Minas Gerais
 Igreja do Rosário	Itapecerica	BR	MG Minas Gerais
 Largo do Rosário	Ituverava	BR	SP Sao Paulo
-igreja catolica	pedregulho	BR	SP Sao Paulo
+Igreja Catolica	pedregulho	BR	SP Sao Paulo
 plenario padre luiz savio	pedregulho	BR	SP Sao Paulo
 Paróquia Divino Espírito Santo		BR	MG Minas Gerais
 Igreja São Sebastião		BR	MG Minas Gerais
@@ -38469,7 +38469,7 @@ Igreja Santo Antônio	Vilhena	BR	RO Rondonia
 Igreja Católica Apostólica Romana		BR	RO Rondonia
 Igreja São josé		BR	RO Rondonia
 Igreja Católica		BR	RO Rondonia
-igreja catolica		BR	MT Mato Grosso
+Igreja Catolica		BR	MT Mato Grosso
 Comunidade Nossa Senhora De Lourdes	Juína	BR	RO Rondonia
 Oratório São Francisco de Assis	Juína	BR	RO Rondonia
 Igreja de São Cristóvão	Juína	BR	RO Rondonia
@@ -38550,7 +38550,7 @@ Paroquia de Sao Miguel	Taquaral de Goiás	BR	GO Goias
 Estatua de Sao Miguel Arcanjo	Taqural de Goias	BR	GO Goias
 Santuario Nossa Senhora da Abadia		BR	GO Goias
 Capela Santa Luzia	Itapuranga	BR	GO Goias
-CAPELA SANTO EXPEDITO	Itapuranga	BR	GO Goias
+Capela Santo Expedito	Itapuranga	BR	GO Goias
 Igreja Nossa Senhora de Fátima	Itapuranga	BR	GO Goias
 Capela de Todos os Santos		BR	GO Goias
 Capela Nosso Senhor do Bonfim		BR	GO Goias
@@ -38609,16 +38609,16 @@ Capela São Leonardo Murialdo		BR	GO Goias
 Igreja DonZefa	Formosa	BR	GO Goias
 Igreja Nossa Senhora da Conceição		BR	MG Minas Gerais
 Centro Católico de Formação	Urucuia	BR	MG Minas Gerais
-IGREJA CATÓLICA NOSSA SENHORA DO PERPETUO SOCORRO	Rubiataba	BR	GO Goias
+Igreja Católica Nossa Senhora do Perpetuo Socorro	Rubiataba	BR	GO Goias
 Capela Santo Antonio Maria Claret	Goianésia	BR	GO Goias
-igreja matriz sagrado coração de jesus	Goianesia	BR	GO Goias
-nossa senhora da penha	Goianesia	BR	GO Goias
-são cristovão	Goianesia	BR	GO Goias
+Igreja Matriz Sagrado Coração de Jesus	Goianesia	BR	GO Goias
+Nossa Senhora da Penha	Goianesia	BR	GO Goias
+São Cristovão	Goianesia	BR	GO Goias
 Paróquia Laura Vincunã	Padre Bernardo	BR	GO Goias
 Igreja Matriz Nossa Senhora Aparecida		BR	MT Mato Grosso
-igreja catolica	Gaucha do Norte	BR	MT Mato Grosso
+Igreja Catolica	Gaucha do Norte	BR	MT Mato Grosso
 Paróquia São José		BR	GO Goias
-IGREJA NOSSA SENHORA APARECIDA	Gaúcha do Norte	BR	MT Mato Grosso
+Igreja Nossa Senhora Aparecida	Gaúcha do Norte	BR	MT Mato Grosso
 Paróquia São João Batista	Ribeirão Cascalheira	BR	GO Goias
 Gesp		BR	MT Mato Grosso
 Centro Catequético		BR	MT Mato Grosso
@@ -38968,7 +38968,7 @@ Iglesia Católica San Vicente Ferrer de Mercadillo	Mercadillo	EC	Loja
 Iglesia Católica San Vicente Ferrer | Vicentino		EC	Loja
 Iglesia Sagrado Corazón de Jesús		EC	Loja
 Iglesia		EC	Loja
-IGLESIA BARRIO GUAYPIRA	PALTAS-CASANGA -BARRIO GUAYPIRA	EC	Loja
+Iglesia Barrio Guaypira	PALTAS-CASANGA -BARRIO GUAYPIRA	EC	Loja
 Convento	Catacocha	EC	Loja
 Iglesia Católica Nuestra Señora del Quinche - Casanga	Casanga	EC	Loja
 Iglesia Católica de Yamana	Catacocha	EC	Loja
@@ -39018,7 +39018,7 @@ Iglesia Católica San José - Loja	Loja	EC	Loja
 Capilla UTPL	Loja	EC	Loja
 Iglesia Católica Sagrada Familia de Belén	Loja	EC	Loja
 Iglesia Católica San Cayetano | Loja	Loja, Ecuador	EC	Loja
-VIRGEN DEL CISNE	Loja	EC	Loja
+Virgen del Cisne	Loja	EC	Loja
 Iglesia Católica Parroquial San Juan Bautista de El Valle	Loja, Ecuador	EC	Loja
 Las Pitas	Loja	EC	Loja
 Capilla Católica de la Virgen del Carmen (Estancia Norte)	Loja	EC	Loja
@@ -39076,7 +39076,7 @@ Urna Católica de Jesús de Gran Poder	Pinas	EC	El Oro
 Iglesia Católica Matriz de Piñas	Piñas	EC	El Oro
 Iglesia Católica Nuestra Señora de Lourdes	Pinas	EC	El Oro
 Urna Católica San José de Piñas	Pinas	EC	El Oro
-iglesia catolica san jacinto	San Jacinto	EC	El Oro
+Iglesia Catolica San Jacinto	San Jacinto	EC	El Oro
 Iglesia Católica de Piñas Grandes	Pinas	EC	El Oro
 Iglesia Católica San Jacinto de Malvas	Malvas	EC	El Oro
 Iglesia Católica de Muluncay - Nuestra Señora de Monserrath	Muluncay	EC	El Oro
@@ -39089,7 +39089,7 @@ Iglesia Católica San Juan Bautista de Chuquiribamba	Chuquiribamba	EC	Loja
 Iglesia de Zenen		EC	Loja
 Iglesia Católica Santiago Apóstol	Santiago	EC	Loja
 Convento		EC	Loja
-MONTECRISTI	Loja	EC	Loja
+Montecristi	Loja	EC	Loja
 Iglesia Católica Nuestra Señora de Fátima | Jimbilla		EC	Loja
 Iglesia Católica Jesús de la Misericordia de Imbana	La Victoria de Imbana	EC	Loja
 Iglesia Católica de La Libertad	La Libertad	EC	Loja
@@ -39344,7 +39344,7 @@ Iglesia Matriz Santiago de Gualaceo	Gualaceo	EC	Azuay
 Iglesia de Capzha	Gualaceo	EC	Azuay
 Capilla de El Molle	Llacao	EC	Azuay
 Iglesia de Pasto pamba	Llacao	EC	Azuay
-Iglesia de La Caldera -	Caldera	EC	Azuay
+Iglesia de La Caldera	Caldera	EC	Azuay
 Iglesia de Ayancay	Ayancay	EC	Azuay
 Iglesia de Zhullin Alto	Llacao	EC	Azuay
 Iglesia de Guachun	Guachun	EC	Azuay
@@ -39373,7 +39373,7 @@ Capilla Católica Jesús Obrero	La Libertad	EC	Guayas
 Capilla Católica San Judas Tadeo | Salinas	Salinas	EC	Santa Elena
 Iglesia Católica Santa Rosa	Salinas	EC	Santa Elena
 Iglesia Católica San Rafael Arcángel	José Luis Tamayo	EC	Guayas
-igleisa san rafael	José Luis Tamayo	EC	Guayas
+Iglesia San Rafael	José Luis Tamayo	EC	Guayas
 Corazón de María	José Luis Tamayo	EC	Guayas
 Capilla Católica San Maximiliano María Kolbe | La Libertad	La Libertad	EC	Guayas
 Capilla Católica Cristo Rey	La Libertad	EC	Guayas
@@ -39393,7 +39393,7 @@ Iglesia Católica San José de Progreso	Juan Gómez Rendón (Progreso)	EC	Guayas
 Capilla Católica San Jacinto	Caimito	EC	Guayas
 Iglesia Católica San Vicente Ferrer | Baños de San Vicente	Baños de San Vicente	EC	Santa Elena
 Capilla Católica Santa María de Barandúa	Santa Elena	EC	Santa Elena
-IGLESIA  PUNTA BLANCA	Santa Elena	EC	Santa Elena
+Iglesia Punta Blanca	Santa Elena	EC	Santa Elena
 Iglesia Católica Santa Cruz | Puná	Puná Nueva	EC	Guayas
 Iglesia Católica La Dolorosa	Jaime Roldós Aguilera	EC	Guayas
 Iglesia Católica Santa Rosa de Lima	Santa Rosa de Flandes	EC	Guayas
@@ -39418,7 +39418,7 @@ Iglesia de Cristo del Consuelo	Cristo del Consuelo	EC	Canar
 Iglesia Parroquial Santa Rosa | Octavio Cordero Palacios	Octavio Cordero Palacios	EC	Azuay
 Iglesia de El Calvario	Llacao	EC	Azuay
 Iglesia de San Vicente	Llacao	EC	Azuay
-IGLESIA DE CORAZON DE JESUS	Llacao	EC	Azuay
+Iglesia de Corazon de Jesus	Llacao	EC	Azuay
 Iglesia de Patrón Santiago	Patrón Santiago	EC	Canar
 Iglesia de San Jacinto	San Jacinto	EC	Canar
 Iglesia de Dubliay - Virgen del Perpetuo Socorro	Dubliay	EC	Canar
@@ -39606,7 +39606,7 @@ Iglesia Católica Santos Joaquín y Ana	Guayaquil	EC	Guayas
 Capilla Católica de Schoenstatt	Guayaquil	EC	Guayas
 Iglesia Católica Madre Admirable de San Felipe	Guayaquil	EC	Guayas
 Capilla Católica San Ignacio de Loyola	Guayaquil	EC	Guayas
-iglesia catolica preciosisima sangre de nuestro señor	Santa Lucia	EC	Guayas
+Iglesia Catolica Preciosisima Sangre de Nuestro Señor	Santa Lucia	EC	Guayas
 Iglesia Católica Santo Tomás de Aquino	Guayaquil	EC	Guayas
 Parroquia Señor de la Divina Justicia	Santa Lucia	EC	Guayas
 Capilla Católica Nuestra Señora de las Nieves	Santa Lucia	EC	Guayas
@@ -39715,7 +39715,7 @@ Iglesia Católica Sagrado Corazón de Jesús	Pedro Carbo	EC	Guayas
 Iglesia Católica Virgen de Mercedes	Estero de Piedra	EC	Guayas
 Capilla Católica San Francisco de Asís		EC	Manabi
 Iglesia Católica Sagrado Corazón de Jesús | La Entrada	La Entrada	EC	Manabi
-iglesia		EC	Manabi
+Iglesia		EC	Manabi
 Iglesia Católica Central de Pedro Pablo Gómez	Pedro Pablo Gómez	EC	Manabi
 Iglesia Católica Cristo del Consuelo	Cristo del Consuelo	EC	Guayas
 Santuario Católico Santa Narcisa de Jesús - Cascol	Cascol	EC	Manabi
@@ -39732,7 +39732,7 @@ Campozano	Paján	EC	Manabi
 Iglesia Católica Santa Rosa	Campozano	EC	Manabi
 Iglesia Católica San Jacinto - Guale	Guale	EC	Guayas
 Capilla Católica de la Comuna de Agua Blanca	Agua Blanca	EC	Manabi
-iglesia virgen del carmen	Pajan	EC	Manabi
+Iglesia Virgen del Carmen	Pajan	EC	Manabi
 Capilla Divino Niño	Parroquia Machalilla	EC	Manabi
 Iglesia Católica San Pedro y San Pablo		EC	Manabi
 Iglesia Católica Santa Cruz	Julcuy	EC	Manabi
@@ -39747,7 +39747,7 @@ Iglesia Católica Juan Pablo II	Guayaquil	EC	Guayas
 Iglesia Católica Niño Divino	Guayaquil	EC	Guayas
 Capilla Católica María Madre	Guayaquil	EC	Guayas
 Iglesia dios viene	Guayaquil	EC	Guayas
-LA TORRE FUERTE	GUAYAQUIL	EC	Guayas
+La Torre Fuerte	GUAYAQUIL	EC	Guayas
 Capilla Católica Virgen del Rosario	Santa Lucia	EC	Guayas
 Iglesia Católica San José	Guayaquil	EC	Guayas
 Iglesia Católica San Juan Bautista de Pascuales	Guayaquil	EC	Guayas
@@ -39795,7 +39795,7 @@ Capilla Católica Nuestra Señora de La Merced	Bocana de Abajo	EC	Guayas
 Iglesia Católica ?	pueblo nuevo	EC	Guayas
 Capilla Católica Santa Rosa de Lima - Las Cañas	Las Cañas	EC	Guayas
 Capilla Catolíca Virgen de Guadalupe	Mamey	EC	Guayas
-capilla sagrada familia	Lomas de Sargentillo	EC	Guayas
+Capilla Sagrada Familia	Lomas de Sargentillo	EC	Guayas
 Iglesia Católica Virgen de Las Mercedes	Recinto Península de Ánimas	EC	Guayas
 Capilla Católica Virgen del Carmen	Recinto San Vicente (Las Ánimas)	EC	Guayas
 Iglesia Católica de Flor de María	Recinto Flor de María	EC	Guayas
@@ -39931,7 +39931,7 @@ Iglesia Católica Nueva San Vicente	San Vicente	EC	Bolivar
 Iglesia Católica Vieja de San Vicente	San Vicente	EC	Bolivar
 Capilla San Ramon	San Miguel	EC	Bolivar
 Iglesia Católica de San José de la Puntilla	San José de la Puntilla	EC	Bolivar
-IGLESIA DE SANTA ROSA DE TOTORAS	San Miguel	EC	Bolivar
+Iglesia de Santa Rosa de Totoras	San Miguel	EC	Bolivar
 Iglesia de Lourdes	Piscurco - San Miguel de Bolívar	EC	Bolivar
 Monasterio de las Hermanas Clarisas	Piscurco - San Miguel de Bolívar	EC	Bolivar
 Gruta Santuario de La Virgen de Lourdes	Piscurco - San Miguel de Bolívar	EC	Bolivar
@@ -39966,13 +39966,13 @@ Iglesia de Illapa	Guaranda	EC	Bolivar
 Capilla "CAPITO"	Guaranda	EC	Bolivar
 Capilla "SHACUNDO"	Guaranda	EC	Bolivar
 Iglesia San Simón	San Simón	EC	Bolivar
-TANDAHUAN	Guaranda	EC	Bolivar
+Tandahuan	Guaranda	EC	Bolivar
 Capilla Tres Cruses	Guaranda	EC	Bolivar
 Iglesia de San Vicente de las tres cruces	Guaranda	EC	Bolivar
 Iglesia de Pianda Alto	Guaranda	EC	Bolivar
 Iglesia de Chagcha	Guaranda	EC	Bolivar
 Iglesia de Shunguna	Guaranda	EC	Bolivar
-CONVENTILLO	Guaranda	EC	Bolivar
+Conventillo	Guaranda	EC	Bolivar
 Iglesia de Santa Fe	Guaranda	EC	Bolivar
 Iglesia	Guaranda	EC	Bolivar
 Iglesia Vinchoa Central	Guaranda	EC	Bolivar
@@ -40013,7 +40013,7 @@ Capilla Nuestra Señora de la Encarnacion	Jipijapa	EC	Manabi
 Capilla Católica Cristo del Consuelo	Jipijapa	EC	Manabi
 Capilla Católica Santa Cruz	Jipijapa	EC	Manabi
 Capilla Católica Virgen de Guadalupe | Jipijapa	Jipijapa	EC	Manabi
-IGLESIA SAN MARTIN		EC	Manabi
+Iglesia San Martin		EC	Manabi
 Iglesia Católica Sagrado Corazón de Jesús	Bellavista	EC	Manabi
 Iglesia Católica San Ignacio de Loyola | Sucre	Sucre	EC	Manabi
 Iglesia		EC	Manabi
@@ -40050,7 +40050,7 @@ Iglesia Católica Santa Lucía	Alhajuela	EC	Manabi
 Iglesia Católica La Inmaculada de Lourdes	San Plácido	EC	Manabi
 Iglesia Católica Santa Marianita - El Colorado	Montecristi	EC	Manabi
 Iglesia Católica Virgen del Mar	Parroquia Santa Marianita	EC	Manabi
-iglesia		EC	Manabi
+Iglesia		EC	Manabi
 Iglesia Católica Santa Isabella | Montecristi	Manta	EC	Manabi
 Capilla Católica Cristo Resucitado - Monterrey	Montecristi	EC	Manabi
 Iglesia Católica Santa Ana | Manta	Manta	EC	Manabi
@@ -40178,10 +40178,10 @@ Iglesia Católica Nuestra Señora del Carmen - Jama	Jama	EC	Manabi
 Iglesia Católica Santa María Bernarda | Chone	Chone	EC	Manabi
 Iglesia Católica San Pedro y San Pablo de Ricaurte	Ricaurte	EC	Manabi
 Iglesia Católica de Santa María		EC	Manabi
-IGLESIA SAN RAMON DE ARMADILLO		EC	Manabi
+Iglesia San Ramon de Armadillo		EC	Manabi
 Iglesia Católica Nuestra Madre de La Paz - El Paraíso (La 14)		EC	Manabi
 Iglesia Católica San Pedro y San Pablo | El Paraíso - La 14	El Paraíso La 14	EC	Manabi
-IGLESIA "NUESTRA SEÑORA DE MONSERRATE"		EC	Manabi
+Iglesia Nuestra Señora de Monserrate		EC	Manabi
 Iglesia Católica Nuestra Madre del Santo Rosario | La Bramadora		EC	Manabi
 Capilla Católica Nuestra Señora del Rocío		EC	Manabi
 Iglesia Católica Jesús del Gran Poder - Luz de América	Luz de América	EC	Santo Domingo de los Tsachilas
@@ -40323,7 +40323,7 @@ Capilla Católica Guallavi La Dolorosa	Guallavi La Dolorosa	EC	Chimborazo
 Iglesia Católica San Juan Bautista - Yaruquíes	Yaruquíes	EC	Chimborazo
 Capilla Católica San Vicente Ferrer	San Vicente	EC	Chimborazo
 Iglesia Católica de San José del Chibunga	San José del Chibunga	EC	Chimborazo
-IGLESIA JOSE DE CHIBUNGA	Riobamba	EC	Chimborazo
+Iglesia Jose de Chibunga	Riobamba	EC	Chimborazo
 Iglesia Católica San José del Batán	El Batán	EC	Chimborazo
 Iglesia Católica San Luis Rey de Francia - San Luis	San Luis - Riobamba	EC	Chimborazo
 Iglesia Católica de La Inmaculada	Riobamba	EC	Chimborazo
@@ -40387,7 +40387,7 @@ Capilla Católica San José de Igualata	San José de Igualata	EC	Chimborazo
 Iglesia Católica San Lucas de Ilapo	Ilapo	EC	Chimborazo
 Iglesia Católica de Tuntatacto	Tuntatacto	EC	Chimborazo
 Iglesia Católica de Cochapamba	Cochapamba	EC	Chimborazo
-IGLESIA DE SAN RAFAEL		EC	Chimborazo
+Iglesia de San Rafael		EC	Chimborazo
 Capilla Católica Virgen de Guadalupe - Saguazo Cruz de Mayo	Saguazo Cruz de Mayo	EC	Chimborazo
 Iglesia Católica de Lalanshi	Lalanshi	EC	Chimborazo
 Iglesia Católica de La Delicia	La Delicia	EC	Chimborazo
@@ -40418,7 +40418,7 @@ Iglesia Católica Matriz San Juan Bautista de Mocha	Mocha	EC	Tungurahua
 Capilla Católica Cruz de Mayo	Cruz de Mayo	EC	Tungurahua
 Iglesia Católica San Francisco	Rumipamba	EC	Tungurahua
 Iglesia Católica Santa Anita	Hualcanga Santa Anita	EC	Tungurahua
-jaloa la playa	quero	EC	Tungurahua
+Jaloa la Playa	quero	EC	Tungurahua
 Iglesia Católica de Hualcanga San José	Hualcanga San José	EC	Tungurahua
 Iglesia Católica de Santísima Cruz	Cruz de Mayo	EC	Tungurahua
 Iglesia Católica de Hualcanga Chico Centro	Hualcanga Chico Centro	EC	Tungurahua
@@ -40439,7 +40439,7 @@ Iglesia Católica Nuestra Señora del Rosario de Agua Santa - Palora	Palora	EC	M
 Iglesia Católica Santo Cura de Ars - San Juan María Vianey	Mushullacta	EC	Morona-Santiago
 Iglesia Católica San José de Canelos	Canelos	EC	Morona-Santiago
 Iglesia Católica Santo Domingo de Guzmán | Puyo	Puyo	EC	Pastaza
-GRUTA A LA VIRGEN DE GUADALUPE	Puyo	EC	Pastaza
+Gruta a la Virgen de Guadalupe	Puyo	EC	Pastaza
 Iglesia Católica Nuestra Señora de la Merced - La Merced	Puyo	EC	Pastaza
 Iglesia Católica San Juan Bautista | Veracruz	Veracruz	EC	Pastaza
 Capilla Católica Virgen de Agua Santa - El Calvario	El Calvario	EC	Pastaza
@@ -40587,7 +40587,7 @@ Santuario Católico Virgen de La Merced	San Ignacio	EC	Pichincha
 Iglesia de Fatima	Machachi	EC	Pichincha
 Capilla Católica Santísima Virgen del Cisne - El Obelisco	Machachi	EC	Pichincha
 Iglesia Católica Matriz Nuestra Señora de La Asunción de Tambillo	Tambillo	EC	Pichincha
-capilla san jose 3	QUITO	EC	Pichincha
+Capilla San Jose 3	QUITO	EC	Pichincha
 Iglesia Católica San Jerónimo de Pintag	Pintag	EC	Pichincha
 Urna Católica San Isidro Labrador | Pintag	Sangolqui	EC	Pichincha
 Iglesia Católica María Auxiliadora	Sangolqui	EC	Pichincha
@@ -40598,7 +40598,7 @@ Capilla Virgen de Guadalupe	Quito	EC	Pichincha
 Capilla Católica Niño Jesús - Los Cóndores	Quito	EC	Pichincha
 Iglesia del Camposanto Metropolitano	Quito	EC	Pichincha
 Iglesia Católica San Juan XXIII || Guamaní - Paquisha	Quito	EC	Pichincha
-IGLESIA EL ROCIO	Quito	EC	Pichincha
+Iglesia El Rocio	Quito	EC	Pichincha
 Iglesia Católica Santo Angel de Guamaní	Quito	EC	Pichincha
 Iglesia Católica El Buen Pastor de Turubamba	Quito	EC	Pichincha
 conjuntos	Sangolqui	EC	Pichincha
@@ -40771,7 +40771,7 @@ Igreja Matriz		BR	MT Mato Grosso
 Comunidade Santa Fé		BR	MT Mato Grosso
 Igreja Comunidade Santa Rita		BR	MT Mato Grosso
 Igreja Santa Catarina	Alta Floresta	BR	MT Mato Grosso
-capela	Alta floresta	BR	MT Mato Grosso
+Capela	Alta floresta	BR	MT Mato Grosso
 Igreja caolica	Alta floresta	BR	MT Mato Grosso
 Igreja Católica do Bairro Santa Maria	Alta Floresta	BR	MT Mato Grosso
 Capela São Benedito		BR	MT Mato Grosso
@@ -40793,8 +40793,8 @@ Capela Católica da Barra do Correntinho	Bom Jesus	BR	PI Piaui
 Paróquia Santo Antônio de Pádua	Castelo dos Sonhos	BR	MT Mato Grosso
 Comunidade sra Aparecida Nha Gaucha		BR	PA Para
 Santuário de Nossa Senhora do Coco da Aparecida	Loreto	BR	MA Maranhao
-conveção dos santos		BR	PA Para
-igreja rosa		BR	PA Para
+Conveção dos Santos		BR	PA Para
+Igreja Rosa		BR	PA Para
 Igreja Nossa Senhora das Dores	Eldorado do Carajás	BR	PA Para
 Capela do Sagrado Coração de Jesus	Porto Franco	BR	MA Maranhao
 Igreja Matriz	Porto Franco	BR	MA Maranhao
@@ -40826,7 +40826,7 @@ Igreja Católica Sao Francisco de Assis	Manaus	BR	AM Amazonas
 Igreja Católica São Francisco de Assis	Manaus	BR	AM Amazonas
 Igreja Católica Sagrado Coração	Manaus	BR	AM Amazonas
 Igreja Católica São Padre Pio		BR	AM Amazonas
-IGREJA CATOLICA DE SÃO JOÃ BATISTA		BR	AM Amazonas
+Igreja Católica de São João Batista		BR	AM Amazonas
 Sítio dos Padres	Sao Gabriel da Cachoeira	BR	AM Amazonas
 Igreja Santa Luzia	Itaituba	BR	PA Para
 Igreja de São Francisco das Chagas	Itaituba	BR	PA Para
@@ -40837,7 +40837,7 @@ Igreja de São João Batista		BR	PA Para
 Capela Nossa senhora do Perpétuo Socorro		BR	PA Para
 Igreja Católica São João Batista		BR	PA Para
 Igreja Católica N. S. das Graças		BR	PA Para
-igreja católica		BR	PA Para
+Igreja Católica		BR	PA Para
 Paróquia São Francisco de Assis (Nova)		BR	PA Para
 Sagrado Coração de Jesus	Imperatriz	BR	MA Maranhao
 Comunidade Nossa Senhora de Guadalupe	Imperatriz	BR	MA Maranhao
@@ -40888,7 +40888,7 @@ Igreja Católica do Riacho Doce	Belem	BR	PA Para
 Paróquia de Nossa Senhora das Cabeças		BR	PA Para
 Capela de São Francisco de Assis	Ananindeua	BR	PA Para
 Comunidade Santa Rita de Cassia	Belém	BR	PA Para
-comunidade são francisco de assis	Ananindeua	BR	PA Para
+Comunidade São Francisco de Assis	Ananindeua	BR	PA Para
 Paróquia São José Operário	Ananindeua	BR	PA Para
 Abrigo João de Deus	Ananindeua	BR	PA Para
 São José	Belém	BR	PA Para
@@ -40960,7 +40960,7 @@ Igreja Nossa Senhora de Santana	Vassouras	BR	RJ Rio de Janeiro
 Comunidade Nossa Senhora da Piedade	Barra do Piraí	BR	RJ Rio de Janeiro
 Igreja Batista Nova Aliança	Valenca	BR	RJ Rio de Janeiro
 Chácara Pentagna	Valenca	BR	RJ Rio de Janeiro
-Igreja de de São José	Valenca	BR	RJ Rio de Janeiro
+Igreja de São José	Valenca	BR	RJ Rio de Janeiro
 Igreja de Nossa Senhora da Penha	Sao Lourenco	BR	MG Minas Gerais
 Igreja de São Lázaro		BR	MG Minas Gerais
 Gruta de Nossa Senhora de Fátima		BR	MG Minas Gerais
@@ -41232,7 +41232,7 @@ Igreja de São Sebastião	Carandai	BR	MG Minas Gerais
 Capela de Nossa Senhora da Piedade		BR	MG Minas Gerais
 Capela do Sagrado Coração de Jesus e Maria		BR	MG Minas Gerais
 Capela Nossa Senhora das Graças do Rosas Lagoa Dourada		BR	MG Minas Gerais
-IGREJA DE SANTO ANTÔNIO		BR	MG Minas Gerais
+Igreja de Santo Antônio		BR	MG Minas Gerais
 Capela de São Sebastião do Palmeira	Carandaí	BR	MG Minas Gerais
 Capela de Nossa Senhora Aparecida	Carandai	BR	MG Minas Gerais
 Capela do Engenho	Cristiano Otoni	BR	MG Minas Gerais
@@ -41248,8 +41248,8 @@ Igreja Rosa Mística		BR	MG Minas Gerais
 Paróquia Nossa Senhora da Conceição		BR	MG Minas Gerais
 Igreja de São Francisco de Paula		BR	MG Minas Gerais
 Igreja do Rosário	São Francisco de Paula	BR	MG Minas Gerais
-igreja do são geraldo	sao francisco	BR	MG Minas Gerais
-cruz das rosa	sao francisco	BR	MG Minas Gerais
+Igreja do São Geraldo	sao francisco	BR	MG Minas Gerais
+Cruz das Rosa	sao francisco	BR	MG Minas Gerais
 Igreja São Pedro	Oliveira	BR	MG Minas Gerais
 Igreja São João Bosco	Oliveira	BR	MG Minas Gerais
 Capela de São Sebastião		BR	MG Minas Gerais
@@ -42692,7 +42692,7 @@ Igreja Católica de São Roque	Castro Alves	BR	BA Bahia
 Igreja Senhor do Bonfim		BR	BA Bahia
 Igreja nossa senhora Santana		BR	BA Bahia
 Paróquia Santa Luzia		BR	BA Bahia
-igreja de nova santana		BR	BA Bahia
+Igreja de Nova Santana		BR	BA Bahia
 Igreja do Santo Antônio		BR	BA Bahia
 Igreja Santa Luzia	Seabra	BR	BA Bahia
 Igreja São Pedro	Seabra	BR	BA Bahia
@@ -42970,7 +42970,7 @@ Igreja de Nossa Senhora da Ajuda		BR	SE Sergipe
 Igreja de Nossa Senhora do Rosário	Tobias Barreto	BR	SE Sergipe
 Igreja de Nossa Senhora da Ajuda		BR	SE Sergipe
 Igreja de Nossa Senhora dos Remédios		BR	SE Sergipe
-IGREJA NOSSA SENHORA APARECIDA	Poço Verde	BR	SE Sergipe
+Igreja Nossa Senhora Aparecida	Poço Verde	BR	SE Sergipe
 Matriz	Quijingue	BR	BA Bahia
 Igreja de São Paulo	Euclides da Cunha	BR	BA Bahia
 Igreja de Nosso Senhor do Bonfim	Banzaê	BR	BA Bahia
@@ -42978,7 +42978,7 @@ Igreja de Nossa Senhora Rainha dos Anjos	Banzaê	BR	BA Bahia
 Igreja de São João Batista	Euclides da Cunha	BR	BA Bahia
 Capela de Nossa Senhora de Lourdes	Ribeira do Pombal	BR	BA Bahia
 Igreja Matriz Velha de Santa Teresa de Jesus	Ribeira do Pombal	BR	BA Bahia
-Igreja da da Ascensão do Senhor	Ribeira do Pombal	BR	BA Bahia
+Igreja da Ascensão do Senhor	Ribeira do Pombal	BR	BA Bahia
 Igreja de Santa Rita	Ribeira do Pombal	BR	BA Bahia
 Capela de Santo Antônio	Ribeira do Pombal	BR	BA Bahia
 Capela de Santo Antônio e Santa Luzia	Ribeira do Pombal	BR	BA Bahia
@@ -43061,7 +43061,7 @@ Capela Nossa Senhora Aparecida	Itabaiana	BR	SE Sergipe
 Paróquia Nossa Senhora Rosa Mística	Nossa Senhora do Socorro	BR	SE Sergipe
 Capela Santa Luzia	Nossa Senhora do Socorro	BR	SE Sergipe
 Igreja Católica Apostólica Brasileira	Aracaju	BR	SE Sergipe
-capela santo antonio	nossa senhora do socorro	BR	SE Sergipe
+Capela Santo Antonio	nossa senhora do socorro	BR	SE Sergipe
 Paróquia Pio X	Aracaju	BR	SE Sergipe
 Paróquia Santo Antônio	Aracaju	BR	SE Sergipe
 Capela São Brás	Barra dos Coqueiros	BR	SE Sergipe
@@ -43574,7 +43574,7 @@ Capela Cristo Rei	Campina Grande	BR	PB Paraiba
 Igreja União	Campina Grande	BR	PB Paraiba
 Igreja São Viciente de Paula	Campina Grande	BR	PB Paraiba
 Convento São Francisco de Assis	Campina Grande	BR	PB Paraiba
-igreja sao judas tadeu	lagoa seca	BR	PB Paraiba
+Igreja Sao Judas Tadeu	lagoa seca	BR	PB Paraiba
 Capela Santa Rita de Cássia	Puxinana	BR	PB Paraiba
 Igreja catolica do Massapê	Queimadas	BR	PB Paraiba
 Memorial Nossa Senhora das Dores	Fagundes	BR	PB Paraiba
@@ -43664,7 +43664,7 @@ Capela de Nossa Senhora Santa Rita	Acari	BR	RN Rio Grande do Norte
 Capela de Nossa Senhora do Carmo	Iguatu	BR	CE Ceara
 Capela São José		BR	CE Ceara
 Igreja de Santo Antonio		BR	CE Ceara
-capela		BR	RN Rio Grande do Norte
+Capela		BR	RN Rio Grande do Norte
 Igreja Matriz de São Francisco		BR	CE Ceara
 Igreja de Nossa Senhora Do Carmo	Lucrécia	BR	RN Rio Grande do Norte
 Casa Paroquial	Jucurutu	BR	RN Rio Grande do Norte
@@ -43688,7 +43688,7 @@ Igreja Católica	Sossêgo	BR	PB Paraiba
 Igreja Nossa Senhora da Luz		BR	RN Rio Grande do Norte
 Paróquia Nossa Senhora da Conceição		BR	PB Paraiba
 Capela de São Severino		BR	PB Paraiba
-capela nossa senhora do perpétuo socorro	Esperanca	BR	PB Paraiba
+Capela Nossa Senhora do Perpétuo Socorro	Esperanca	BR	PB Paraiba
 Estátua Frei Damião	Remígio	BR	PB Paraiba
 Nosso senhor dos Passos	Remigio	BR	PB Paraiba
 Cruzeiro	Remigio	BR	PB Paraiba
@@ -43813,7 +43813,7 @@ Salão Paróquial Santo Inácio de Loyola	Teresina	BR	PI Piaui
 Igreja Sagrada Família	Teresina	BR	PI Piaui
 Gólgota	Teresina	BR	PI Piaui
 Capela de Santo Antônio	Teresina	BR	PI Piaui
-igreja cotolica	santa cruz	BR	MA Maranhao
+Igreja Católica	santa cruz	BR	MA Maranhao
 Igreja de Nossa Senhora das Graças	Codó	BR	MA Maranhao
 Centro comunitário João Paulo II	Caxias	BR	MA Maranhao
 Paróquia Nossa Senhora das Graças	Caxias	BR	MA Maranhao
@@ -44007,7 +44007,7 @@ Igreja do Icó		BR	CE Ceara
 Igreja de Canadá	Redencao	BR	CE Ceara
 Gruta de Nossa Senhora de Fátima		BR	CE Ceara
 Igreja  do Trápia		BR	CE Ceara
-sagrado coração de jesus	maranguape	BR	CE Ceara
+Sagrado Coração de Jesus	maranguape	BR	CE Ceara
 Capela Santa Luzia	Maracanau	BR	CE Ceara
 Igreja Santo Antônio	Pacajus	BR	CE Ceara
 Capela de São João	Pacajus	BR	CE Ceara
@@ -44252,7 +44252,7 @@ plot1	Xai-Xai	MZ	Gaza
 Igreja Católica	Tlawene	MZ	Gaza
 Igreja Tingonhamene	Tlawene	MZ	Gaza
 Igreja san apostolo	lhangulene segundo bairro	MZ	Gaza
-igreja	Zuza	MZ	Gaza
+Igreja	Zuza	MZ	Gaza
 Igreja	Chiduachine-sede	MZ	Gaza
 Igreja catolica	mapapa	MZ	Gaza
 Igreja Católica	Hokwé	MZ	Gaza
@@ -44276,17 +44276,17 @@ Igreja	primeiro bairro de muzumuia	MZ	Gaza
 Igreja Cumba	Cumba	MZ	Gaza
 Igreja catolica em mocambique	segundo bairro	MZ	Gaza
 Igreja catolica	segundo bairro	MZ	Gaza
-paroquia santo antonio da barragem	quarto bairro	MZ	Gaza
+Paroquia Santo Antonio da Barragem	quarto bairro	MZ	Gaza
 Igreja Catolica	Aldeia de Chate	MZ	Gaza
 Igreja	Bairro 25 de Setembro	MZ	Gaza
 Igreja	Bairro 25 de Setembro	MZ	Gaza
 Igreja	Bairro 25 de Setembro	MZ	Gaza
 Igreja	segundo bairro	MZ	Gaza
-comunidade nossa senhora de rosario	primeiro bairrode lionde	MZ	Gaza
+Comunidade Nossa Senhora de Rosario	primeiro bairrode lionde	MZ	Gaza
 Igreja	primeiro bairro	MZ	Gaza
 St. Boniface Catholic Church	Duiwelskloof	ZA	Limpopo
-igreja	mepuzi rio	ZA	Limpopo
-igreja católica	mapai sede	ZA	Limpopo
+Igreja	mepuzi rio	ZA	Limpopo
+Igreja Católica	mapai sede	ZA	Limpopo
 Casa das Irmãs	Manjacaze	MZ	Gaza
 Igreja	Manjacaze	MZ	Gaza
 Igreja Católica	Manjacaze	MZ	Gaza
@@ -44329,7 +44329,7 @@ Epoko Church		NA	Omusati
 St. Stefanus Church		NA	Ohangwena
 Missão Omupanda	Ondjiva	AO	Cunene
 St. Barbara	Tsumeb	NA	Oshikoto
-HALILI CATHOLIC BRANCH		NA	Kavango East
+Halili Catholic Branch		NA	Kavango East
 Nankudu Church	Nkurenkuru	NA	Kavango West
 Musita Gomuwa Sauyemwa	Rundu	NA	Kavango East
 Rundu R. C. Cathedral	Rundu	NA	Kavango East
@@ -44381,7 +44381,7 @@ Roman Catholic church	Bulawayo	ZW	Bulawayo
 Holy Spirit Catholic Church	Bulawayo	ZW	Bulawayo
 Christ the King Catholice Church	Bulawayo	ZW	Bulawayo
 Adolph Ludigo	Bulawayo	ZW	Bulawayo
-ST. PIUS CHURCH	Bulawayo	ZW	Bulawayo
+St. Pius Church	Bulawayo	ZW	Bulawayo
 Our Lady of Lourdes	Bulawayo	ZW	Bulawayo
 Queenspark Mariannhill House Bulawayo	Bulawayo	ZW	Bulawayo
 Holy Trinity Roman Catholic Church	Bulawayo	ZW	Bulawayo
@@ -44427,7 +44427,7 @@ St Mary's Catholic Church	Harare	ZW	Harare
 Roman Catholic Church	Harare	ZW	Harare
 Dombo Roman Catholic Church	Epworth	ZW	Harare
 Church of Christ	Epworth	ZW	Harare
-ROMAN CATHOLIC CHURCH	Epworth	ZW	Harare
+Roman Catholic Church	Epworth	ZW	Harare
 Nazareth House	Harare	ZW	Harare
 Igreja catolica		ZW	Manicaland
 Makumbe Mission		ZW	Mashonaland Central
@@ -44515,7 +44515,7 @@ Roman Catholic Church		MW	Southern Region
 Faith Apostolic Church		MW	Southern Region
 Roman Catholic Church		MW	Southern Region
 Igreja Reformada de Mulunga		MW	Southern Region
-mitalala catholic		MW	Southern Region
+Mitalala Catholic		MW	Southern Region
 CI St. Montfort New Church	Blantyre	MW	Southern Region
 Catholic	Makata	MW	Southern Region
 Church (under constr)	Blantyre	MW	Southern Region
@@ -44641,7 +44641,7 @@ Sainte-Cécile	Kinshasa	CD	Kinshasa
 Paroisse saint Laurent	Kinshasa	CD	Kinshasa
 Saint Augustin	Masina	CD	Kinshasa
 Paroisse Saint Matthias Murumba	Kinshasa	CD	Kinshasa
-PAROISSE SAINT ADRIEN	Kinshasa	CD	Kinshasa
+Paroisse Saint Adrien	Kinshasa	CD	Kinshasa
 Églse catholique Saint-Adrien	Kinshasa	CD	Kinshasa
 Saint Alphonse	Masina	CD	Kinshasa
 Sainte-Trinité	Masina	CD	Kinshasa
@@ -44651,7 +44651,7 @@ St Dominique	Kinshasa	CD	Kinshasa
 Saint-Pie X	Ngiri-Ngiri	CD	Kinshasa
 Église catholique St-Gabriel	Kinshasa	CD	Kinshasa
 Saint Amand	Kinshasa	CD	Kinshasa
-lubaga cathedral	Masina	CD	Kinshasa
+Lubaga Cathedral	Masina	CD	Kinshasa
 Saint Maria Goretti	Kinshasa	CD	Kinshasa
 Centre Lindonge	Kinshasa	CD	Kinshasa
 Notre Dame de Fatima	Kinshasa	CD	Kinshasa
@@ -44729,7 +44729,7 @@ St Adrew's Catholic Church		TZ	Rukwa
 St. Matthias Parish		MW	Northern Region
 Parokia ya Matias Mtume	Mbeya	TZ	Mbeya
 Catholic Cathedral St Anthony	Mbeya	TZ	Mbeya
-catholic church of idunda	Mbeya	TZ	Mbeya
+Catholic Church of Idunda	Mbeya	TZ	Mbeya
 Inyala KKKT	Mbeya	TZ	Mbeya
 Paroisse Saint Jean Bosco	Mbuji-Mayi	CD	Kasai-Oriental
 Église Saint Firmin	Mbuji-Mayi	CD	Kasai-Oriental
@@ -44747,12 +44747,12 @@ Parokia Katoliki Luilo		TZ	Njombe
 Parokia Katoliki Lupingu		TZ	Njombe
 Parokia Katoliki Madunda	Mlangali	TZ	Njombe
 Parokia Katoliki Mundindi		TZ	Ruvuma
-OLD CATHOLIC CHURCH	Mahanje	TZ	Ruvuma
+Old Catholic Church	Mahanje	TZ	Ruvuma
 Roman catholic church	Masasi	TZ	Mtwara
 St. Benedict's Church		TZ	Mtwara
 Kanisa la Katolika	Nachingwea	TZ	Lindi
 Parokia Katoliki Lumbila		TZ	Mbeya
-ROMAN CATHORIC CHURCH-MLANGALI PARISH	Mlangali	TZ	Njombe
+Roman Catholic Church - Mlangali Parish	Mlangali	TZ	Njombe
 Parokia Mkiu	Mlangali	TZ	Njombe
 Parokia Katoliki Lugarawa		TZ	Njombe
 Parokia Katoliki Lupanga	Mlangali	TZ	Njombe
@@ -44768,8 +44768,8 @@ Parokia Katoliki Makambako	Makumbako	TZ	Njombe
 Kipatimu Church		TZ	Pwani
 Roman Catholic Church	Lindi	TZ	Lindi
 Mafinga Roman Catholic Church	IRINGA	TZ	Iringa
-wenda church		TZ	Iringa
-ROMAN CATHOLIC CHURCH	Iringa	TZ	Iringa
+Wenda Church		TZ	Iringa
+Roman Catholic Church	Iringa	TZ	Iringa
 Kanisa la Roma Kalenga	Iringa	TZ	Iringa
 St.Don Bosco	iringa	TZ	Iringa
 Ipogolo parish church	Iringa	TZ	Iringa
@@ -44788,11 +44788,11 @@ Parokia ya Roho Mtakatifu Kiwanja cha Ndege	Morogoro	TZ	Morogoro
 St. Mary's Parish Holy Ghost Fathers	Morogoro	TZ	Morogoro
 modecco	Morogoro	TZ	Morogoro
 Roman Catholic Church	Morogoro	TZ	Morogoro
-ST MONICA CHURCH	Morogoro	TZ	Morogoro
+St Monica Church	Morogoro	TZ	Morogoro
 Catholic church Moyo Safi wa Mama Maria Zone	Morogoro	TZ	Morogoro
 Roman Catholic Church	Morogoro	TZ	Morogoro
 Kiegea A Catholic Church	Morogoro	TZ	Morogoro
-st. yuda thadei	Magomeni	TZ	Dar es Salaam
+St. Yuda Thadei	Magomeni	TZ	Dar es Salaam
 bishop house	Dar es Salaam	TZ	Dar es Salaam
 Kanisa Katoliki Parokia Ya Kutukuka Kwa Msalaba Kizuiani	Dar es salaam	TZ	Dar es Salaam
 Benedict Fathers	Dar es salaam	TZ	Dar es Salaam
@@ -44800,7 +44800,7 @@ Mt. Yohane Wa Mungu	Dar es salaam	TZ	Dar es Salaam
 Maria Vijibweni	Dar es Salaam	TZ	Dar es Salaam
 Roman catholic church	Kibaha	TZ	Pwani
 Baruti Roman Catholic Church	Dar es Salaam	TZ	Dar es Salaam
-st agustiono	Dar es salaam	TZ	Dar es Salaam
+St Agustiono	Dar es salaam	TZ	Dar es Salaam
 Roman Catholic	Dar es Salaam	TZ	Dar es Salaam
 Roman Catholic Church	Dar es Salaam	TZ	Dar es Salaam
 Roman Catholic church	Dar es Salaam	TZ	Dar es Salaam
@@ -44808,7 +44808,7 @@ Catholic Church Mabibo	Dar es Salaam	TZ	Dar es Salaam
 Saint John The Baptist	Dar es Salaam	TZ	Dar es Salaam
 Adventist Church	Dar es Salaam	TZ	Dar es Salaam
 kigango Cha kristo mfalme Mchikichini Parokia ya Msimbazi	Dar es Salaam	TZ	Dar es Salaam
-kanisa katoliki parokia ya msimbazi	Dar es Salaam	TZ	Dar es Salaam
+Kanisa Katoliki Parokia Ya Msimbazi	Dar es Salaam	TZ	Dar es Salaam
 Efatha	Dar es Salaam	TZ	Dar es Salaam
 MT. Fransisko wa Asizi, Kigango Cha Kigogo, Parokia ya Msimbazi	Dar es Salaam	TZ	Dar es Salaam
 Reformation Pentecosts Church	Dar es Salaam	TZ	Dar es Salaam
@@ -44915,7 +44915,7 @@ Isengero		BI	Ngozi
 Eglise Catholique Muremera		BI	Cankuzo
 Roman catholic Church		TZ	Tabora
 Buhangija Catholic Parish	shinyanga	TZ	Shinyanga
-roman catholic	Geita	TZ	Geita
+Roman Catholic	Geita	TZ	Geita
 Église Catholique		CD	Nord Kivu
 Couvent de Prêtres Catholiques		CD	Nord Kivu
 Chapel de Tchagombe		CD	South Kivu
@@ -44950,7 +44950,7 @@ Maison des Missionnaires des Sacrés Cœurs	Butare	RW	Southern Province
 Catedral catolique	Kirundo	BI	Kirundo
 Shanga Roman Catholic Church	Ngara	TZ	Kagera
 Nyabinyenga Parish	Nyanza	RW	Southern Province
-church		RW	Kigali
+Church		RW	Kigali
 Pères Pallotins	Goma	CD	Nord Kivu
 Cathédrale de Goma	Goma	CD	Nord Kivu
 Paroisse cbca himbi	Goma	CD	Nord Kivu
@@ -44966,7 +44966,7 @@ St Mary of Angels Church	Gitarama	RW	Southern Province
 Church of Edwin		RW	Southern Province
 Central Karembure	Kigali	RW	Kigali
 Paroisse Karoli-Lwanga	Kigali	RW	Kigali
-chapelle	Kigali	RW	Kigali
+Chapelle	Kigali	RW	Kigali
 Paroisse Saint Joseph Gahanga	Kigali	RW	Kigali
 Centrale de Busanza	Kigali	RW	Kigali
 Gikondo Catholic church	Kigali	RW	Kigali
@@ -44996,7 +44996,7 @@ Roman Catholic Church	Mwanza	TZ	Mwanza
 PRC (Pendecoste Restration Church)	Mwanza	TZ	Mwanza
 Church of Mennonite Tanzania	Mwanza	TZ	Mwanza
 E.A.G.T Makimbilio	Mwanza	TZ	Mwanza
-catholic	Mwanza	TZ	Mwanza
+Catholic	Mwanza	TZ	Mwanza
 Kungara Bwana Wetu Yesu Kristo	Mwanza	TZ	Mwanza
 EAGT	Mwanza	TZ	Mwanza
 Roman Catholic	Mwanza	TZ	Mwanza
@@ -45018,11 +45018,11 @@ KKKT Bwiru	Mwanza	TZ	Mwanza
 KKKT DMZV Bwiru	Mwanza	TZ	Mwanza
 Roman Catholic Church	Nyanguge	TZ	Mwanza
 Kijwire Roman Catholic	Muleba	TZ	Kagera
-kanisa	kagera	TZ	Kagera
+Kanisa	kagera	TZ	Kagera
 Kayanga Lutheran Church	Bugene	TZ	Kagera
 Mwemage Church		TZ	Kagera
-kanisa	kagera	TZ	Kagera
-kanisa	kagera	TZ	Kagera
+Kanisa	kagera	TZ	Kagera
+Kanisa	kagera	TZ	Kagera
 Kagondo Church	Kamachumu	TZ	Kagera
 Eglise Catholique Paroisse Nyakariba		CD	Nord Kivu
 Eglise Mushababwe		CD	Nord Kivu
@@ -45081,10 +45081,10 @@ Kagera Catholic Parish	Kisoro	UG	Western Region
 Gikoro Catholic Church	Kisoro	UG	Western Region
 Rubona Catholic Church	Kisoro	UG	Western Region
 Karungi Catholic Church	Kisoro	UG	Western Region
-kiniogo church	Kabale	UG	Western Region
+Kiniogo Church	Kabale	UG	Western Region
 Rushoorooza church	Kabale	UG	Western Region
 Christ the King	Kabale	UG	Western Region
-kikungiri	kabale	UG	Western Region
+Kikungiri	kabale	UG	Western Region
 Christ The King	Kabale	UG	Western Region
 Rubona Catholic Church	Kisoro	UG	Western Region
 Bushekwe Catholic Church	Kisoro	UG	Western Region
@@ -45139,7 +45139,7 @@ Kokoma Catholic Church		UG	Western Region
 Murore Catholic Church		UG	Western Region
 Ntingamo Catholic Church		UG	Western Region
 Kakore Parish	Kabale	UG	Western Region
-ST LUKE MUHANGA PARISH		UG	Western Region
+St Luke Muhanga Parish		UG	Western Region
 Kikobero Catholic Church		UG	Western Region
 Nteko Roman Catholic Church		UG	Western Region
 Nkwenda Catholic Church	Ntungamo	UG	Western Region
@@ -45147,9 +45147,9 @@ St Donati Catholic Church	Ntungamo	UG	Western Region
 Kyabuyorwa Catholic Church	Ntungamo	UG	Western Region
 Kashesha Catholic Church	Ntungamo	UG	Western Region
 Ishasha Catholic Church		UG	Western Region
-NYAKIBALE PARISH	Rukungiri	UG	Western Region
-RUHANGA CATHOLIC CHURCH	Ntungamo	UG	Western Region
-rutunnguru	Rutunguru East	UG	Western Region
+Nyakibale Parish	Rukungiri	UG	Western Region
+Ruhanga Catholic Church	Ntungamo	UG	Western Region
+Rutunnguru	Rutunguru East	UG	Western Region
 Christ The King Catholic Church	Rukungiri	UG	Western Region
 South Ankole Diosece Kyamate Church of Uganda	Ntungamo	UG	Western Region
 Ntungamo Catholic Parish	Ntungamo	UG	Western Region
@@ -45160,7 +45160,7 @@ Eglise Catholique Vuvogho		UG	Western Region
 Paroisse Catholique Luofu		UG	Western Region
 Eglise Catholique Nyamiindo		UG	Western Region
 Paroisse Catholique Kayna		UG	Western Region
-PAROISSE DE KAYNA	COMMUNE DE KAYNA	UG	Western Region
+Paroisse de Kayna	COMMUNE DE KAYNA	UG	Western Region
 Eglise Catholique Kyatenga		UG	Western Region
 Eglise Catholique Butangi		UG	Western Region
 Eglise Catholique Mighobwe		UG	Western Region
@@ -45195,7 +45195,7 @@ Eglise Catholique Vurusi		CD	Nord Kivu
 Eglise Catholique Muvugha		CD	Nord Kivu
 Eglise catholique Vayana		CD	Nord Kivu
 Rwamagaya catholic church	Mitoma	UG	Western Region
-church		UG	Western Region
+Church		UG	Western Region
 Kantunda RCC	Bushenyi	UG	Western Region
 Roman Catholic Church	Bushenyi	UG	Western Region
 Rugaga Catholic Church	Bushenyi	UG	Western Region
@@ -45207,7 +45207,7 @@ Catholic Cathedral Our Lady of Perpetual Help	Mbarara	UG	Western Region
 Kisenyi Catholic Church		UG	Western Region
 Kazinga Catholic Church		UG	Western Region
 Kashaka Catholic Church		UG	Western Region
-st charles lwanga		UG	Western Region
+St Charles Lwanga		UG	Western Region
 Nyakateete Catholic Church		UG	Western Region
 Kabashana RC		TZ	Kagera
 Buyango ROMAN CATHOLIC		TZ	Kagera
@@ -45230,7 +45230,7 @@ St. Bruno Ssaza Church	Masaka	UG	Central Region
 Nkozi Catholic Church		UG	Central Region
 Villa Maria Roman Catholic Church		UG	Central Region
 Romain Catholic Church		UG	Central Region
-catholic	Kibaya	TZ	Manyara
+Catholic	Kibaya	TZ	Manyara
 Mandewa Parish	Singida	TZ	Singida
 Kiomboi Catholic Church	Kiomboi	TZ	Singida
 Kondoa Parish Catholic Church	Kondoa	TZ	Dodoma
@@ -45256,12 +45256,12 @@ Mtakatifu Fransisko wa Asizi	Arusha	TZ	Arusha
 Saint Monica Parish	Arusha	TZ	Arusha
 Roman Catholic Church		TZ	Arusha
 Magnificat church	Kingori	TZ	Arusha
-roman catholic	kilimanjaro	TZ	Kilimanjaro
+Roman Catholic	kilimanjaro	TZ	Kilimanjaro
 Uparo Parish	Moshi	TZ	Kilimanjaro
 St. Pauls Catholic Church	Taveta	KE	Taita Taveta
 Kishumundu Church	Moshi	TZ	Kilimanjaro
 St John Church		TZ	Kilimanjaro
-MANDAKA CHURCH		KE	
+Mandaka Church		KE	
 Pentecost church		KE	
 Kirokomu Parish		KE	Makueni
 Bura Catholic Church	Wundanyi	KE	Taita Taveta
@@ -45299,7 +45299,7 @@ Ithemboni Catholic Church		KE	Makueni
 Mbitini Parish		KE	Kitui
 Kowak Parish		TZ	Mara
 St.Mary's Mabera catholic Church	Sirari	TZ	Mara
-lak nyiero parish		KE	Homa Bay
+Lak Nyiero Parish		KE	Homa Bay
 Golgotha Center		KE	Migori
 God Oloo catholic church	homabay	KE	Homa Bay
 sokoni parish HQ		KE	Homa Bay
@@ -45312,7 +45312,7 @@ Asumbi Parish		KE	Kisii
 Kiamabundu catholic church	Kisii	KE	Kisii
 Majiwa Catholic Church	Homa Bay East ward	KE	Homa Bay
 Nyamondo Catholic Church	Oyugis	KE	Homa Bay
-nyabigege catholic	Nyamira	KE	Nyamira District
+Nyabigege Catholic	Nyamira	KE	Nyamira District
 St. Paul’s Cathedral Parish	Homa Bay	KE	Homa Bay
 St. Arnold Nyaliengá Catholic Parish	Homa Bay	KE	Homa Bay
 Kajieyi Catholic Church	Oyugis	KE	Homa Bay
@@ -45326,7 +45326,7 @@ St.Luke Catholic Church Obunga	Kisumu	KE	Kisumu
 Sint Mary	Naivasha	KE	Nakuru
 St Augustine Parish		KE	Nakuru
 St. Marys Catholic Churh	Molo	KE	Nakuru
-ST.JOHN THE BAPTIST CATHOLIC CHURCH	Molo	KE	Nakuru
+St. John the Baptist Catholic Church	Molo	KE	Nakuru
 St Timothy	Londiani	KE	Kericho
 St Lwanga Church Njoro	Nakuru	KE	Nakuru
 Mary of God Sanctuary	Ol Kalou	KE	Nyandarua
@@ -45405,11 +45405,11 @@ St.Pius Catholic Church	Kiambu	KE	Kiambu
 Lioki Catholic Church	Kiambu	KE	Kiambu
 St. Teresa Catholic Church	Ruiru	KE	Nairobi Area
 St. Mary Magdalene Catholic Parish	Thika	KE	Nairobi Area
-OUR LADY OF CONSOLATA MWALA CATHOLIC CHURCH	Kangundo	KE	Machakos
-ST JOHN BOSCO MAKILIVA CATHOLIC CHURCH	Kangundo	KE	Machakos
-ST TERESA KOMBE MBIUNI PARISH	Kangundo	KE	Machakos
+Our Lady of Consolata Mwala Catholic Church	Kangundo	KE	Machakos
+St John Bosco Makiliva Catholic Church	Kangundo	KE	Machakos
+St Teresa Kombe Mbiuni Parish	Kangundo	KE	Machakos
 Christ the King Katutu Catholic Church		KE	Kitui
-catholic church_ kangonde		KE	Machakos
+Catholic Church, Kangonde		KE	Machakos
 Italian POW Church	Mai Mahiu	KE	Nakuru
 St Joseph Catholic Church Matathia	Kimende	KE	Nakuru
 Old Catholic Church	Kijabe	KE	Nakuru
@@ -45417,12 +45417,12 @@ Our Lady of the Annunciation - Gatitu Parish		KE	Kiambu
 Martyrs Of Uganda Catholic Church Gatundu	Gatundu	KE	Nairobi Area
 Mutomo Catholic Mission		KE	Nairobi Area
 Gatura Catholic Church		KE	Murang'a District
-MUKAA CATHOLIC CHURCH	Kivaa ward	KE	Kitui
-kamuthumba catholic church	Kivaa ward	KE	Kitui
+Mukaa Catholic Church	Kivaa ward	KE	Kitui
+Kamuthumba Catholic Church	Kivaa ward	KE	Kitui
 Mbondoni Catholic church	Mwingi	KE	Kitui
 Tulimani Catholic Church	Mwingi	KE	Kitui
 Muithi Museo Catholic Church	Mwingi	KE	Kitui
-chapel	Mwingi	KE	Kitui
+Chapel	Mwingi	KE	Kitui
 Sagana Catholic Parish	Sagana	KE	Kirinyaga
 ST JUDE	Othaya	KE	Nyeri
 Arch Angel Michael Chaka Catholic Church	Nyeri	KE	Nyeri
@@ -45433,7 +45433,7 @@ Don Bosco catholic church	Embu	KE	Embu
 Catholic church dioces of embu	Embu	KE	Embu
 St Peter's and Paul Catherdral	Embu	KE	Embu
 St Joseph Mukasa	Runyenje's	KE	Tharaka District
-karurumo		KE	Tharaka District
+Karurumo		KE	Tharaka District
 Magumoni	Karandini	KE	Tharaka District
 Junction catholic church		KE	Laikipia
 Naro Moru Catholic Church	Naro Moru	KE	Laikipia
@@ -45586,8 +45586,8 @@ Ekar Fo Masin'i Jesoa Ampitatafika Gara	Antanifotsy	MG	Vakinankaratra
 EKAR Saint Claude		MG	Vakinankaratra
 EKAR Md. Piera sy Paoly	Ambatolampy	MG	Vakinankaratra
 Ekar St Gabrielle Andohariana		MG	Analamanga
-ACAR KRISTY MPANJAKA MAHAVE LONA		MG	Itasy
-ECAR KRISTY MPANJAKA MAHAVELONA		MG	Itasy
+Acar Kristy Mpanjaka Mahave Lona		MG	Itasy
+Ecar Kristy Mpanjaka Mahavelona		MG	Itasy
 Ambatosana	Soavinandriana	MG	Itasy
 Ilot de la sainte vierge	Soavinandriana	MG	Itasy
 EKAR Soamahamanina	Miarinarivo	MG	Itasy
@@ -45739,7 +45739,7 @@ EKAR Saint François d'Assise Ampitilova	Mahajanga	MG	Boeny
 EKAR Masindahy Paoly Marovoay	Marovoay	MG	Boeny
 Cathédrale Notre-Dame-de-l'Assomption		MG	Sofia
 EKAR Ambohipo		MG	Sofia
-ECAR MAROVANTAZA	Marovantaza	MG	Sofia
+Ecar Marovantaza	Marovantaza	MG	Sofia
 ECAR Ambalafaminty	Ambalafaminty	MG	Sofia
 Eglise Catholiqueb	Anjiamangirana I	MG	Sofia
 ECAR Ambodisakoana	Ambodihazambo	MG	Sofia
@@ -46495,7 +46495,7 @@ Gereja St. Antonio	Metro	ID	Lampung
 Gereja Katolik Sitasi Hati Kudus, Margo Mulyo		ID	Lampung
 Gereja	Plaju	ID	South Sumatra
 Katedral St. Yosef	Pangkalpinang	ID	Bangka-Belitung Islands
-GEREJA KATHOLIK		ID	West Kalimantan
+Gereja Katholik		ID	West Kalimantan
 Gereja Katolik Paroki Santo Yosef, Kudangan		ID	Central Kalimantan
 Gereja Katolik Bintang Timur Stasi Kawa		ID	Central Kalimantan
 Gereja Katholik Paroki St.Yosef	Desa Kualan Hilir Kecamatan Simpang Hulu	ID	West Kalimantan
@@ -46514,7 +46514,7 @@ Gereja Santa Maria Magdalena, Nggongi	Nggongi	ID	East Nusa Tenggara
 Gereja	Praingkareha	ID	East Nusa Tenggara
 Gereja Santo Markus, Lulundilu	Lulundilu	ID	East Nusa Tenggara
 Gereja Santo Andreas, Ngallu	Ngallu	ID	East Nusa Tenggara
-GEREJA KATHOLIK STASI PALANGGAY	Mburukullu	ID	East Nusa Tenggara
+Gereja Katholik Stasi Palanggay	Mburukullu	ID	East Nusa Tenggara
 Gereja Santo Hendrikus, Melolo	Melolo	ID	East Nusa Tenggara
 Gereja Santo Petrus Batu Karang, Liman	Liman	ID	East Nusa Tenggara
 Gereja Sancta Familia, Sikumana	Sikumana	ID	East Nusa Tenggara
@@ -46523,7 +46523,7 @@ Gereja Santo Fransiskus dari Assisi, Kolhua	Kolhua	ID	East Nusa Tenggara
 Gereja Santo Yoseph, Naikoten	Naikoten	ID	East Nusa Tenggara
 Gereja Maulafa	Maulafa	ID	East Nusa Tenggara
 Biara Susteran RFM	Kelapalima	ID	East Nusa Tenggara
-KAPELA HATI KUDUS YESUS BIMOKU	KUPANG	ID	East Nusa Tenggara
+Kapela Hati Kudus Yesus Bimoku	KUPANG	ID	East Nusa Tenggara
 Gereja Santo Markus, Waikambala	Waikambala	ID	East Nusa Tenggara
 Gereja St.Fransiskus Gollu dewa	Bogorawatu	ID	East Nusa Tenggara
 Gereja Santo Agustinus, Tana Malli	Tana Malli	ID	East Nusa Tenggara
@@ -46545,18 +46545,18 @@ Gereja Santo Agustinus	Baroh	ID	East Nusa Tenggara
 Gereja Santo Paulus, Ande Ate	Ande Ate	ID	East Nusa Tenggara
 Stasi St. Mikhael Kadekap	Padedemanu	ID	East Nusa Tenggara
 Gereja Katholik Bali Loura	Totok	ID	East Nusa Tenggara
-GEREJA KATHOLIK TOTOK	Komi	ID	East Nusa Tenggara
+Gereja Katholik Totok	Komi	ID	East Nusa Tenggara
 Gereja Katholik St. Stefanus	Totok	ID	East Nusa Tenggara
 Gereja Santo Alfonsus de Ligouri, Kererobbo	Kererobbo	ID	East Nusa Tenggara
 Seminary	Weetobula	ID	East Nusa Tenggara
 Katedral Roh Kudus Weetebula	Weetebula	ID	East Nusa Tenggara
 Gereja Santo Arnoldus Janssen, Tambolaka	Tambolaka	ID	East Nusa Tenggara
 Gereja Stasi Wilhemus Pogo Tena	Weepangali	ID	East Nusa Tenggara
-GOA MARIA RABE GAGA	Weepangali	ID	East Nusa Tenggara
+Goa Maria Rabe Gaga	Weepangali	ID	East Nusa Tenggara
 Gereja Santo Paulus, Karuni	Karuni	ID	East Nusa Tenggara
 Gereja Katholik St. Stefanus Bondo Boghila	Bondoboghila	ID	East Nusa Tenggara
 Gereja Kattholik Manukuku	Malata	ID	East Nusa Tenggara
-GEREJA KATHOLIK PATERU WANNE	Weepangali	ID	East Nusa Tenggara
+Gereja Katholik Pateru Wanne	Weepangali	ID	East Nusa Tenggara
 Gereja Katholik Stasi St. Stefanus Kalebu Bila	Komi	ID	East Nusa Tenggara
 Gereja Katolik	Tamanaimahu	ID	East Nusa Tenggara
 Kompleks Kesusteran	Kombapari	ID	East Nusa Tenggara
@@ -46566,7 +46566,7 @@ Gereja Katolik	Ngarangiakambera	ID	East Nusa Tenggara
 Gereja Katholik ST. Thomas	Pahomba	ID	East Nusa Tenggara
 Gereja Katholik ST. Thomas	Pahomba	ID	East Nusa Tenggara
 Gereja Katholik Stasi Ottu	Pahomba	ID	East Nusa Tenggara
-GEREJA KATOLIK TADULA DEWA	Wailolung	ID	East Nusa Tenggara
+Gereja Katolik Tadula Dewa	Wailolung	ID	East Nusa Tenggara
 Gereja Sang Penebus, Wara Waingapu	Wara	ID	East Nusa Tenggara
 Gereja Santa Maria - Santo Yoseph, Dompu	Dompu	ID	West Nusa Tenggara
 Kapela Stasi Keka Catholic Church	Paka	ID	East Nusa Tenggara
@@ -46632,9 +46632,9 @@ Kapela Stasi Rejo	Feondari	ID	East Nusa Tenggara
 Kapela Ratekalo	Lekebai	ID	East Nusa Tenggara
 Paroki Feondari	Feondari	ID	East Nusa Tenggara
 Kapela	Woloau	ID	East Nusa Tenggara
-kapel st petrus detuleda	Detuleda	ID	East Nusa Tenggara
+Kapel St Petrus Detuleda	Detuleda	ID	East Nusa Tenggara
 Komunitas Religius Kanonik Regular dari Yesus Tuhan (CJD) - Indonesia	Ritapiret	ID	East Nusa Tenggara
-KAPELA SANTA MARIA EKOAE	Aelande	ID	East Nusa Tenggara
+Kapela Santa Maria Ekoae	Aelande	ID	East Nusa Tenggara
 Gereja Paroki Salib Suci	Maurole	ID	East Nusa Tenggara
 Gereja Kristus Raja Semesta Alam, Watobuku	Watubuku	ID	East Nusa Tenggara
 Gereja Santo Petrus, Lewouran	Lewouran	ID	East Nusa Tenggara
@@ -46723,10 +46723,10 @@ Gereja Santo Yoseph, Tanah Boleng	Nihaona	ID	East Nusa Tenggara
 Gereja Desa Helanlangowuyo	Lidang A	ID	East Nusa Tenggara
 Gereja Desa Duablolong	Riangderi	ID	East Nusa Tenggara
 Gereja Santo Fransiskus de Sales, Pada	Lewoleba	ID	East Nusa Tenggara
-gereja ritawolo	larantuka	ID	East Nusa Tenggara
+Gereja Ritawolo	larantuka	ID	East Nusa Tenggara
 Gereja Hati Kudus Yesus, Ritawolo	Leter	ID	East Nusa Tenggara
 kapela Santa Maria Fatimah-Niwak	niwak	ID	East Nusa Tenggara
-kapela lamaluo	Lamaluwo	ID	East Nusa Tenggara
+Kapela Lamaluo	Lamaluwo	ID	East Nusa Tenggara
 kapela Hone	Lamaluwo	ID	East Nusa Tenggara
 Gereja Santa Theresia dari Kanak-Kanak Yesus, Kiwangona	Lewolen	ID	East Nusa Tenggara
 Gereja Waikela	Waibereno	ID	East Nusa Tenggara
@@ -46762,7 +46762,7 @@ Gereja Santa Maria dari Gunung Karmel, Tumu	Tumu	ID	East Nusa Tenggara
 Kleseleon		ID	East Nusa Tenggara
 Paroki St. Yohanes Baptista		ID	East Nusa Tenggara
 Gereja Santa Maria Mater Dei, Oepoli	Oepoli	ID	East Nusa Tenggara
-KAPELA BAQUI	Pante Makasar	TL	Oecusse
+Kapela Baqui	Pante Makasar	TL	Oecusse
 Capela Sta-Lucia de Nunu-Heno	Pante Makasar	TL	Oecusse
 Kapela Bihala	Pante Makasar	TL	Oecusse
 Kapela St. Maria Auxiliadora	Pante Makasar	TL	Oecusse
@@ -46861,7 +46861,7 @@ igereza Sao Jode Operario Remexio	Dili	TL	Dili
 Uma Laku	Remexio Villa	TL	Dili
 Gruta Locmailulu	Dili	TL	Dili
 Gruta Nossa Senhora	Dili	TL	Dili
-church	Metinaro	ID	
+Church	Metinaro	ID	
 Paroquia Sao Francisco Dare	Dare	TL	Dili
 Gruta Nossa Senhora da Grasa Ailok-Laran	Dili	TL	Dili
 House provintion	Dili	TL	Dili
@@ -46897,7 +46897,7 @@ Capela Sao Joao Paulo II Uai-oli	Venilale	TL	Baucau
 Gruta St. Antonio Moga Do'i Gami	Laclo	TL	Manatuto
 Kapela Nossa Senhora Peregrinação	Laclo	TL	Manatuto
 Rezidensia Paroquia São Vicente	Manatuto	TL	Manatuto
-paroquia de sao vicenti ferrer	Manatuto	TL	Manatuto
+Paroquia de Sao Vicenti Ferrer	Manatuto	TL	Manatuto
 Kapela lakumesak	Manatuto	TL	Manatuto
 Salaun Paroquia São Vicente	Manatuto	TL	Manatuto
 Igreza Sao Jose Operario Iliheu	Manatuto	TL	Manatuto
@@ -46917,7 +46917,7 @@ Igreja São Sebastião Mahein Osso-Queli	Venilale	TL	Baucau
 Salão da Igreja São Sebastião	Venilale	TL	Baucau
 Biara Madre Par Pequenas Apostalas da Redensaun-Osso Queli	Venilale	TL	Baucau
 Capela Osso-Queli Cai-Cua da Nossa Senhora do Rosário		TL	Baucau
-igreza ostico	Venilale	TL	Baucau
+Igreza Ostico	Venilale	TL	Baucau
 Capela Osso-Queli da Nossa Senhora do Rosário		TL	Baucau
 Capela de Karabela		TL	Baucau
 Igreja Sagrado Coracao de Jesus Vila-Nova Baucau	Baucau	TL	Baucau
@@ -46925,7 +46925,7 @@ Rezidensia Igreza Katedral Santo Antonio de Baucau	Baucau	TL	Baucau
 Rezidensia Episkopal	Baucau	TL	Baucau
 Capeala Haurobu	Baucau	TL	Baucau
 Igreja Nossa Senhora do Rossario de Fatima Iliomar		TL	Lautem
-BAGUIA CHURCH		TL	Baucau
+Baguia Church		TL	Baucau
 Dirimuni		TL	Lautem
 Igreza paroquia de Luro	Luro	TL	Lautem
 Igreja Sao Paulo Lospalos	Lospalos	TL	Lautem
@@ -46960,7 +46960,7 @@ Gereja Katolik Stasi Santa Maria Immaculata		ID	South Kalimantan
 Gereja Katolik St. Theo Tokos Maria Bunda Allah	Longikis	ID	East Kalimantan
 St. Yakobus, Konut		ID	Central Kalimantan
 Santa Maria		ID	Central Kalimantan
-stasi		ID	Central Kalimantan
+Stasi		ID	Central Kalimantan
 Gereja Katolik Santo Yohanes Stasi Karali		ID	Central Kalimantan
 Gereja Katolik Santo Paulus		ID	East Kalimantan
 Gereja Katolik Santo Petrus Stasi Lempunah		ID	East Kalimantan
@@ -46993,7 +46993,7 @@ Gereja Santa Maria Bintang Kejora, Luwuk	Luwuk	ID	Central Sulawesi
 GEREJA MARANATHA AMBON	Ambon	ID	Maluku
 Gereja Santo Yohanes Penginjil	Masohi	ID	Maluku
 Gereja Katholik St. Lidya		ID	Maluku
-SANG SEMBAYANG	Kaimana	ID	West Papua
+Sang Sembayang	Kaimana	ID	West Papua
 Gereja Santa Yosep	Fakfak	ID	Papua
 Gereja Yaur		ID	Papua
 Katedral Kristus Raja	Sorong	ID	West Papua
@@ -47475,10 +47475,10 @@ Capilla de San Antonio	Zimatlan de Alvarez	MX	OAX Oaxaca
 Capilla de la VIrgen	Ocotlan de Morelos	MX	OAX Oaxaca
 Santa Ana	San Juan del Rio	MX	OAX Oaxaca
 Iglesia de San Isidro Labrador	San Lorenzo Albarradas	MX	OAX Oaxaca
-D-366 IGLESIA CATÓLICA		GT	Suchitepeque
+D-366 Iglesia Católica		GT	Suchitepeque
 Iglesia Católica	Champerico	GT	Retalhuleu
 Capilla San Juan Bosco	La Blanca	GT	San Marcos
-IGLESIA CATOLICA		GT	Retalhuleu
+Iglesia Catolica		GT	Retalhuleu
 Igelsia Católica		GT	Quetzaltenango
 Iglesia catolica	Retalhuleu	GT	Retalhuleu
 Parroquia Inmaculada Concepción de María	Génova	GT	Quetzaltenango
@@ -47557,11 +47557,11 @@ Iglesia de Santa Cruz	Chinautla	GT	Guatemala
 Iglesia de San José	San José Nacahuil	GT	Guatemala
 Seminario Menor	Tapachula	MX	CHP Chiapas
 Parroquia "San Judas Tadeo"	Tapachula	MX	CHP Chiapas
-IGLESIA CATOLICA	Tapachula	MX	CHP Chiapas
+Iglesia Catolica	Tapachula	MX	CHP Chiapas
 Capilla de San Miguel	Tuxtla Chico	MX	CHP Chiapas
-IGLESIA DE LA VIRGEN DE GUADALUPE	Veinte de Noviembre	MX	CHP Chiapas
+Iglesia de la Virgen de Guadalupe	Veinte de Noviembre	MX	CHP Chiapas
 Seminario Major	Veinte de Noviembre	MX	CHP Chiapas
-IGLESIA DE ESQUIPULAS	Veinte de Noviembre	MX	CHP Chiapas
+Iglesia de Esquipulas	Veinte de Noviembre	MX	CHP Chiapas
 Los Tres Reyes	El Tumbador	GT	San Marcos
 Parroquia San Rafael	San Rafael Pie de La Cuesta	GT	San Marcos
 Iglesia de San Martín Sacatepéquez	San Martín Sacatepéquez	GT	Quetzaltenango
@@ -47578,7 +47578,7 @@ Parroquia catolica	Tajumulco	GT	San Marcos
 Iglesia Catolica	Tajumulco	GT	San Marcos
 Santa Cruz	Comitancillo	GT	San Marcos
 Iglesia Católica	Momostenango	GT	Totonicapan
-IGLESIA CATOLICA	Cuilco	GT	Huehuetenango
+Iglesia Catolica	Cuilco	GT	Huehuetenango
 Iglesia Católica Señor de Esquipulas	Huehuetenango	GT	Huehuetenango
 iglesia San Sebastián Mártir	Huehuetenango	GT	Huehuetenango
 Catedral del Calvario	Huehuetenango	GT	Huehuetenango
@@ -47597,7 +47597,7 @@ Iglesia San Francisco Javier	Coban	GT	Alta Verapaz
 Ermita	Tactic	GT	Alta Verapaz
 Parroquia San Pablo Xukaneb	Tactic	GT	Alta Verapaz
 Iglesia Católica	San Juan Chamelco	GT	Alta Verapaz
-IGLESIA CATOLICA	Nuevo Milenio Valdivia	MX	CHP Chiapas
+Iglesia Catolica	Nuevo Milenio Valdivia	MX	CHP Chiapas
 iglesia San Jacinto	San Blas Atempa	MX	OAX Oaxaca
 Parroquia San Vicente Ferrer	Juchitán de Zaragoza	MX	OAX Oaxaca
 San Francisco de Asis	San Francisco Ixhuatan	MX	OAX Oaxaca
@@ -47623,7 +47623,7 @@ Iglesia de Santo Domingo	San Cristobal de las Casas	MX	CHP Chiapas
 Capilla El Señor de Esquipulas	Zinacantan	MX	CHP Chiapas
 Ermita de Tlaxcala	San Cristobal de las Casas	MX	CHP Chiapas
 Iglesia de San Diego	San Cristobal de las Casas	MX	CHP Chiapas
-iglesia de la virgen del rosario	San Cristobal de las casas	MX	CHP Chiapas
+Iglesia de la Virgen del Rosario	San Cristobal de las casas	MX	CHP Chiapas
 Capilla San José Ixtapa	San Jose Ixtapa (Barrio Viejo)	MX	GRO Guerrero
 Iglesia del divino niño	Ciudad Lazaro Cardenas	MX	MIC Michoacan
 Capilla el Señor de los Milagros	La Orilla	MX	MIC Michoacan
@@ -47653,10 +47653,10 @@ La Ermita	Colima	MX	COL Colima
 Iglesia de San Pedro y San Pablo	Colima	MX	COL Colima
 Iglesia Del Cerrito De La Cruz	Tepalcatepec	MX	MIC Michoacan
 Cerro de La Cruz	Comala	MX	COL Colima
-santa elena	Santa Elena De La Cruz	MX	JAL Jalisco
+Santa Elena	Santa Elena De La Cruz	MX	JAL Jalisco
 Templo de María Magdalena	Alista	MX	JAL Jalisco
 Templo de Nuestra Señora del Refugio	Tuxpan	MX	JAL Jalisco
-virgen de guadalupe	apatzingan	MX	MIC Michoacan
+Virgen de Guadalupe	apatzingan	MX	MIC Michoacan
 Templo de Santa Cecilia	Apatzingan	MX	MIC Michoacan
 Templo del Sagrado Corazón de Jesus	Buenavista Tomatlán	MX	MIC Michoacan
 Parroquia de Santa María de Guadalupe	Buena Vista Tomatlan	MX	MIC Michoacan
@@ -47731,13 +47731,13 @@ Parroquia San Juan Bautista	Cerano	MX	GUA Guanajuato
 Templo del Señor de la Sacristia	Cerano	MX	GUA Guanajuato
 Templo del señor de la Misericordia	La Cofradía de la Luz	MX	JAL Jalisco
 Capilla De Guadalupe	La Cofradía de la Luz	MX	JAL Jalisco
-TEMPLO DEL CARMEN	Ameca	MX	JAL Jalisco
+Templo del Carmen	Ameca	MX	JAL Jalisco
 Casa pastoral	Bellavista	MX	JAL Jalisco
 Iglesia de San Miguel de Cuyutlán	San Miguel Cuyutlan	MX	JAL Jalisco
 Capilla Santa Teresa de Los Andes	Villas de la Hacienda [Fraccionamiento]	MX	JAL Jalisco
 Templo del Señor de la Misericordia	Jardines del Eden	MX	JAL Jalisco
 Nuestra Señora Del Rosario	El Refugio	MX	JAL Jalisco
-SAN PABLO TARSO	Nicolas R Casillas	MX	JAL Jalisco
+San Pablo Tarso	Nicolas R Casillas	MX	JAL Jalisco
 Parroquia de Nuestra Señora de la Medalla Milagrosa	La Tijera	MX	JAL Jalisco
 Templo Miguel Agustín Pro	La Tijera	MX	JAL Jalisco
 Templo del Espíritu Santo	Altus Bosques	MX	JAL Jalisco
@@ -47846,7 +47846,7 @@ Iglesia de La Virgen de la Concepcion	Cuchicuato	MX	GUA Guanajuato
 Templo De San Martin De Porres	Las Huertas Tercera Seccion	MX	GUA Guanajuato
 Templo de San José	Irapuato	MX	GUA Guanajuato
 Templo de San Francisco de Asís	Irapuato, Guanajuato	MX	GUA Guanajuato
-TEMPLO DE SAN MARTIN DE PORRES	Irapuato	MX	GUA Guanajuato
+Templo de San Martin de Porres	Irapuato	MX	GUA Guanajuato
 Cristo Rey	Irapuato	MX	GUA Guanajuato
 Iglesia de la Virgen de Fátima	Irapuato	MX	GUA Guanajuato
 Templo Santa Rita de Casia	Ex-Hacienda del Copal	MX	GUA Guanajuato
@@ -47863,7 +47863,7 @@ Iglesia San José del Cuarto	Valle de Guadalupe	MX	JAL Jalisco
 Templo del Sagrado Corazòn	San Julian	MX	JAL Jalisco
 Iglesia Catolica	Serrano	MX	GUA Guanajuato
 Iglesia Del Señor de la Paz	Romita	MX	GUA Guanajuato
-CAPILLA DE SILVA	Colonia Rafael Corrales Ayala	MX	GUA Guanajuato
+Capilla de Silva	Colonia Rafael Corrales Ayala	MX	GUA Guanajuato
 Capilla Del Escoplo	Colonia Rafael Corrales Ayala	MX	GUA Guanajuato
 Capilla Niño Doctorcito	La Aldea	MX	GUA Guanajuato
 Paróquia del Señor de la Misericordia	Menores	MX	GUA Guanajuato
@@ -47872,7 +47872,7 @@ Iglesia de Santo Toribio	San Francisco del Rincon	MX	GUA Guanajuato
 Templo Santa RIta	San Francisco del Rincón	MX	GUA Guanajuato
 San Miguel	San Francisco del Rincon	MX	GUA Guanajuato
 Templo del Señor de la Columna	San Francisco del Rincon	MX	GUA Guanajuato
-TEMPLO LOS ANGELES	Silao	MX	GUA Guanajuato
+Templo los Angeles	Silao	MX	GUA Guanajuato
 Templo de Nuestra Señora del Refugio	León	MX	GUA Guanajuato
 Templo del Sagrado Corazón de Jesús	Ladrilleras del Refugio	MX	GUA Guanajuato
 Templo del Señor de la Misericordia	El Refugio de los Sauces	MX	GUA Guanajuato
@@ -47911,7 +47911,7 @@ Capilla El Pocito del Primer Milagro	San Juan de los Lagos	MX	JAL Jalisco
 Templete Juan Pablo II	San Juan de los Lagos	MX	JAL Jalisco
 Templo del Señor de las Cinco Llagas	Mezquitic de la Magdalena	MX	JAL Jalisco
 Templo De San Jose	Teocaltiche	MX	JAL Jalisco
-capilla	El Bajio (La Laguna)	MX	JAL Jalisco
+Capilla	El Bajio (La Laguna)	MX	JAL Jalisco
 Templo Cristo Rey	león	MX	GUA Guanajuato
 Templo del niño de la salud	Leon	MX	GUA Guanajuato
 Templo Expiatorio del Sagrado Corazón de Jesús	Leon	MX	GUA Guanajuato
@@ -47946,7 +47946,7 @@ San Felipe De Jesus	Colonia Nueva Revolucion	MX	GRO Guerrero
 Capilla de la santa cruz	San Francisco	MX	GRO Guerrero
 Capilla de la crucita	San Francisco	MX	GRO Guerrero
 Parroquia de Ntra. Señora María del Rosario	Tecoanapa	MX	GRO Guerrero
-HIGLECIA DE SAN ISIDRO LABRADOR.	tixtla de guerrero, gro	MX	GRO Guerrero
+Iglesia de San Isidro Labrador	tixtla de guerrero, gro	MX	GRO Guerrero
 Calvario	Chilapa de Alvarez	MX	GRO Guerrero
 Iglesia de San Rafael	Chilapa de Alvarez	MX	GRO Guerrero
 Iglesia San Antonio	Chilapa de Alvarez	MX	GRO Guerrero
@@ -48050,7 +48050,7 @@ Nuestra señora de Guadalupe	Unidad Habitacional Jose Maria Morelos y Pavon	MX	M
 Iglesia Nuestra señora de Guadalupe	Unidad Habitacional Jose Maria Morelos y Pavon	MX	MOR Morelos
 Capilla La Guadalupita	Tejalpa	MX	MOR Morelos
 Asunción de Tejalpa	Tejalpa	MX	MOR Morelos
-templo san gustin	Jonacatepec de Leandro Valle	MX	MOR Morelos
+Templo San Agustín	Jonacatepec de Leandro Valle	MX	MOR Morelos
 Iglesia de Santa Clara	Jonacatepec de Leandro Valle	MX	MOR Morelos
 Iglesia San Martin	Temoac	MX	MOR Morelos
 Iglesia San José	Temoac	MX	MOR Morelos
@@ -48127,8 +48127,8 @@ La Concepción	La Concepcion Coatipac (La Conchita)	MX	Mexico
 Virgen de la Candelaria	Colonia la Libertad	MX	Mexico
 Iglesia de San Miguel Árcangel	San Pedro Tlaltizapan	MX	MOR Morelos
 San Andres	Santa Maria Nativitas	MX	Mexico
-capilla de la virgen de los dolores	toluca	MX	MOR Morelos
-iglesia de san juan tilapa	San Juan Tilapa	MX	MOR Morelos
+Capilla de la Virgen de los Dolores	toluca	MX	MOR Morelos
+Iglesia de San Juan Tilapa	San Juan Tilapa	MX	MOR Morelos
 panteón	San Juan Tilapa	MX	MOR Morelos
 Capilla "La Loma"	Toluca de	MX	MOR Morelos
 San Nicolás	San Miguel Totocuitlapilco	MX	MOR Morelos
@@ -48203,7 +48203,7 @@ capilla de Cristo Rey	San Miguel Ameyalco	MX	Estado de México
 Capilla de San Mateo	San Mateo Atarasquillo	MX	MOR Morelos
 Atrio de la Iglesia de San Mateo Apostol	San Mateo Ataraquillo	MX	Estado de México
 Parroquia de Santa Maria la Asunción	Santa Maria Atarasquillo	MX	Estado de México
-capilla de san judas	Santa Maria Atarasquillo	MX	Estado de México
+Capilla de San Judas	Santa Maria Atarasquillo	MX	Estado de México
 Iglesia de Santiago Apostol	Santiago Analco	MX	Estado de México
 Capilla de la Santa Cruz	Colonia el Ocotal Analco	MX	Estado de México
 Iglesia de San Judas Tadeo	SALAZAR	MX	Estado de México
@@ -48269,8 +48269,8 @@ Capilla de la Santisima Trinidad	San Miguel Xico Viejo	MX	Mexico
 Iglesia del Carmen	Ixtapaluca	MX	Mexico
 Parroquia San Juan Bautista	San Isidro	MX	Mexico
 Capilla de Nuestra Señora de Guadalupe	San Jeronimo Cuatro Vientos	MX	Mexico
-capilla de chopos y av. sanbuenaventura	ixtapaluca	MX	Mexico
-virgen de las combies	San Buenaventura	MX	Mexico
+Capilla de Chopos y Av. Sanbuenaventura	ixtapaluca	MX	Mexico
+Virgen de las Combies	San Buenaventura	MX	Mexico
 Templo Parroquial Santa Maria De Guadalupe	Tlalmanalco de Velazquez	MX	Mexico
 Capilla de Contla	Santa Maria Texmelucan	MX	PUE Puebla
 Capilla San Jose	Tlacotepec de Jose Manzo	MX	PUE Puebla
@@ -48455,7 +48455,7 @@ Parroquia Santa Maria Magdalena	Tepetlaoxtoc de Hidalgo	MX	MOR Morelos
 Iglesia de la Asunción	Tepetlaoxtoc de Hidalgo	MX	MOR Morelos
 Cristo rey	Ecatepec	MX	Mexico
 El Sagrado Corazón	Estado de México	MX	Mexico
-altar virgen de los taxis	Ecatepec	MX	Mexico
+Altar Virgen de los Taxis	Ecatepec	MX	Mexico
 Altar Virgen de Bosque de los Eucaliptos	Ecatepec	MX	Mexico
 Altar Virgen Bosques Cedros	Santo Tomas Chiconautla	MX	Mexico
 Altar a la Virgen de Guadalupe	Santo Tomas Chiconautla	MX	Mexico
@@ -48471,7 +48471,7 @@ Iglesia San Lorenzo Tuzantlan		MX	PUE Puebla
 Iglesia Magdalena Alquizapan	San Juan Ixcaquixtla	MX	PUE Puebla
 Iglesia de San Antonio de Pauda	Tehuacan	MX	PUE Puebla
 Parroquia San Juan Bautista	Ciudad de Ajalpan	MX	PUE Puebla
-IGLESIA DE SAN DIEGO DE ALCALA CHALMA	Tehuacan	MX	PUE Puebla
+Iglesia de San Diego de Alcala Chalma	Tehuacan	MX	PUE Puebla
 Cristo Rey	San Andres Cacaloapan	MX	PUE Puebla
 Casa de Dios	San Isidro Vista Hermosa	MX	PUE Puebla
 Igrecia San Vicente Ferrer	San Isidro Vista Hermosa	MX	PUE Puebla
@@ -48663,7 +48663,7 @@ Parroquia Nuestra Señora de la Asunción	Xalapa de Enriquez	MX	VER Veracruz
 Iglesia del Tronconal Santa Teresita del Niño Jesús	El Castillo	MX	VER Veracruz
 Iglesía	Alto Lucero	MX	VER Veracruz
 Iglesia San Juan Bautista	San Juan Guichicovi	MX	OAX Oaxaca
-san juan evangelista	Arroyo peña amarailla	MX	VER Veracruz
+San Juan Evangelista	Arroyo peña amarailla	MX	VER Veracruz
 Iglesia San Marcos		MX	VER Veracruz
 Iglesia gatolica		MX	VER Veracruz
 Capilla Virgen del Carmen	Bochil	MX	CHP Chiapas
@@ -48690,11 +48690,11 @@ Iglesia Señor de Tila	Morelos Piedra 3ra. Seccion	MX	TAB Tabasco
 Hermita Cristo Rey	Jalpa de Mendez	MX	TAB Tabasco
 San Vicente	comalcalco	MX	TAB Tabasco
 Santa Ana y San Joaquín	Jalpa de Méndez	MX	TAB Tabasco
-IGLESIA LA CONCEPCION DE MEDELLIN Y MADERO	Fraccionamiento Ocuiltzapotlan Dos	MX	TAB Tabasco
+Iglesia la Concepcion de Medellin y Madero	Fraccionamiento Ocuiltzapotlan Dos	MX	TAB Tabasco
 Ermita Tercer Milenio	Macultepec	MX	TAB Tabasco
 Iglesia Santo Domingo de Guzmán	Sitala	MX	CHP Chiapas
-niño divino	Emiliano Zapata	MX	CHP Chiapas
-niño divino	Emiliano Zapata	MX	CHP Chiapas
+Niño Divino	Emiliano Zapata	MX	CHP Chiapas
+Niño Divino	Emiliano Zapata	MX	CHP Chiapas
 Iglesia de Santa Ana	General Luis Felipe Dominguez Suarez	MX	TAB Tabasco
 Iglesia de Nuestra Señora del Carmen	Balancan de Dominguez	MX	TAB Tabasco
 Iglesia de San Pedro	Capitan Felipe Castellanos Diaz (San Pedro)	MX	TAB Tabasco
@@ -48729,7 +48729,7 @@ Iglesia la Purísima Concepsión	Canada de Caracheo	MX	GUA Guanajuato
 La Cuevita del Padre Nieves	Canada de Caracheo	MX	GUA Guanajuato
 Templo en honor al Sagrado Corazón de Jesús	Los Fierros	MX	GUA Guanajuato
 Templo en honor a San Nicolas de Tolentino	Los Fierros	MX	GUA Guanajuato
-templo de la resureccion	tarimoro	MX	GUA Guanajuato
+Templo de la Resurrección	tarimoro	MX	GUA Guanajuato
 Capilla de la Loma	Tarimoro	MX	GUA Guanajuato
 Altar a la Virgen de Guadalupe	TARIMORO	MX	GUA Guanajuato
 San Antonio	El Sauz (El Sauz de Villasenor)	MX	GUA Guanajuato
@@ -48744,7 +48744,7 @@ Capilla de San Antonio de Padua	Coroneo	MX	GUA Guanajuato
 Ntra. Sra.  De La Purísima Concepción	Coroneo	MX	GUA Guanajuato
 Capilla Ntra. Sra. de Guadalupe	Coroneo	MX	GUA Guanajuato
 Capilla del Antiguo Panteón Municipal	Coroneo	MX	GUA Guanajuato
-capilla de xaxay	Yosphi	MX	QUE Queretaro
+Capilla de Xaxay	Yosphi	MX	QUE Queretaro
 calvario de San Ildefonso	Yosphi	MX	QUE Queretaro
 Parroquia de San Ildefonso	Yosphi	MX	QUE Queretaro
 Capilla de La Santa Cruz	Coroneo	MX	GUA Guanajuato
@@ -48790,12 +48790,12 @@ María de la Asunción	Chilcuautla	MX	HID Hidalgo
 Santa Ana	Chilcuautla	MX	HID Hidalgo
 Nuestra Señora de Guadalupe	Ajacuba	MX	HID Hidalgo
 Cristo de Santa Teresa	Ajacuba	MX	HID Hidalgo
-el calvario	San Agustin Tlaxiaca	MX	HID Hidalgo
-CAPILLA DE LOS OSORIO	San Agustin Tlaxiaca	MX	HID Hidalgo
-CAPILLA DE LA PURISIMA	San Agustin Tlaxiaca	MX	HID Hidalgo
-iglesia de san agustin	San Agustin Tlaxiaca	MX	HID Hidalgo
-IGLESIA DEL FRESNO	San Agustin Tlaxiaca	MX	HID Hidalgo
-CAPILLA DE MEXIQUITO	San Agustin Tlaxiaca	MX	HID Hidalgo
+El Calvario	San Agustin Tlaxiaca	MX	HID Hidalgo
+Capilla de los Osorio	San Agustin Tlaxiaca	MX	HID Hidalgo
+Capilla de la Purisima	San Agustin Tlaxiaca	MX	HID Hidalgo
+Iglesia de San Agustin	San Agustin Tlaxiaca	MX	HID Hidalgo
+Iglesia del Fresno	San Agustin Tlaxiaca	MX	HID Hidalgo
+Capilla de Mexiquito	San Agustin Tlaxiaca	MX	HID Hidalgo
 Iglesia de Santiago	El Huixmi	MX	HID Hidalgo
 Señor de los Olivos	El Arenal	MX	HID Hidalgo
 Nuestra Señora de Guadalupe	La Sala (La Caliente)	MX	HID Hidalgo
@@ -48951,10 +48951,10 @@ Santa Cruz	Almoloya	MX	HID Hidalgo
 Iglesia de Vista Hermosa	Santa Maria Nativitas	MX	HID Hidalgo
 Parroquia San Esteban Cuautempan	Tlamanca de Hernandez	MX	PUE Puebla
 Iglesia de Santa Elena	Santa Elena Tenepanigia	MX	PUE Puebla
-IGLESIA SAN ANTONIO	Tepango	MX	PUE Puebla
+Iglesia San Antonio	Tepango	MX	PUE Puebla
 Iglesia de San José	Tatauzoquico	MX	PUE Puebla
 Capilla de la virgen de Guadalupe	San Andres	MX	PUE Puebla
-CAPILLA DE LAS PÍLAS	San Juan Xiutetelco	MX	PUE Puebla
+Capilla de las Pílas	San Juan Xiutetelco	MX	PUE Puebla
 Iglesia de San Juan Bautista	San Juan Xiutetelco	MX	PUE Puebla
 Capilla de Santa Rosa	San Isidro	MX	PUE Puebla
 Altar	Cuaxoxpan	MX	PUE Puebla
@@ -48980,7 +48980,7 @@ Iglesia de San Bartolomé	San Bartolo Tutotepec	MX	HID Hidalgo
 Iglesia Tres Cruces.	Otatitlan	MX	VER Veracruz
 Iglesia de San Antonio	Tlaxco	MX	PUE Puebla
 Iglesia San Isidro Labrador	Metlaltoyuca	MX	PUE Puebla
-capilla	Papantla de Olarte	MX	VER Veracruz
+Capilla	Papantla de Olarte	MX	VER Veracruz
 Capilla de Nuestra Señora de Guadalupe	El Chote	MX	VER Veracruz
 Capilla de San Judas Tadeo	Papantla de Olarte	MX	VER Veracruz
 Capilla de San Miguel Arcángel	Papantla de Olarte	MX	VER Veracruz
@@ -49034,7 +49034,7 @@ Templo de la Compañía de Jesús	San Luis Potosi	MX	SLP San Luis Potosi
 Templo de San Juan de Dios	San Luis Potosi	MX	SLP San Luis Potosi
 Capilla de la Santa Virgen del Patrocinio	San Luis Potosi	MX	SLP San Luis Potosi
 Iglesia de Santiago	San Luis Potosi	MX	SLP San Luis Potosi
-arbol "santa cruz"	San Luis Potosi	MX	SLP San Luis Potosi
+Arbol "santa Cruz"	San Luis Potosi	MX	SLP San Luis Potosi
 Altar a laVirgen de Guadalupe	Soledad de Graciano Sanchez	MX	SLP San Luis Potosi
 Mural Virgen de Guadalupe	Soledad de Graciano Sanchez	MX	SLP San Luis Potosi
 Capilla	Soledad de Graciano Sanchez	MX	SLP San Luis Potosi
@@ -49095,7 +49095,7 @@ Virgen de la Concepción	CAMPECHE	MX	CAM Campeche
 Monumento a la Virgen de Guadalupe	Campeche	MX	CAM Campeche
 Nicho de La Virgen de Guadalupe	San Francisco de Campeche	MX	CAM Campeche
 Capilla Santa Teresita del Niño Jesús	Campeche	MX	CAM Campeche
-san judas	San Francisco de Campeche	MX	CAM Campeche
+San Judas	San Francisco de Campeche	MX	CAM Campeche
 Nuestra Señora de la Concepción	Pomuch	MX	CAM Campeche
 capilla honor san Roque	Dzitbalche	MX	CAM Campeche
 Iglesia Santa Cruz	Calkini	MX	CAM Campeche
@@ -49194,7 +49194,7 @@ Iglesia de San Antonio de Padua	San Antonio del Ciprés	MX	ZAC Zacatecas
 Templo San Antonio de Padua	San Antonio del Ciprés	MX	ZAC Zacatecas
 Iglesia de nuestra señora de loreto	Gonzales Ortega	MX	ZAC Zacatecas
 San Isido Labrador	Jose Maria Morelos	MX	ZAC Zacatecas
-nuestra señora de guadalupe	villa insurgentes	MX	ZAC Zacatecas
+Nuestra Señora de Guadalupe	villa insurgentes	MX	ZAC Zacatecas
 Iglesia Católica Nuestra Señora Virgen de La Luz	Tierra Blanca	MX	ZAC Zacatecas
 Parroquia de la señora de Guadalupe	Chichimequillas	MX	ZAC Zacatecas
 Templo de Nuestra Señora de Los Ángeles	Durango	MX	DUR Durango
@@ -49203,12 +49203,12 @@ San Durango	Victoria de Durango	MX	DUR Durango
 Santuario de Nuestra Señora de Fátima y del Carmen	Victoria de Durango	MX	DUR Durango
 Templo de Santa María Reina	Victoria de Durango	MX	DUR Durango
 Templo de la Resurrección	Victoria de Durango	MX	DUR Durango
-iglesia corpus christi	durango	MX	DUR Durango
+Iglesia Corpus Christi	durango	MX	DUR Durango
 Templo de Santa Teresa de Jesus	Venustiano Carranza	MX	DUR Durango
 Iglesia San Francisco de Asis	San Juan del Rio del Centauro del Norte	MX	DUR Durango
 Templo de la Purisima Concepcion	San Juan del Rio del Centaurio del Norte	MX	DUR Durango
 Iglesia de los Remedios	San Juan del Rio del Centaurio del Norte	MX	DUR Durango
-iglesia san isidro		MX	dgo
+Iglesia San Isidro		MX	dgo
 Templo Nuestra señora del refugio		MX	DUR Durango
 Sagrado Corazón de Jesús		MX	DUR Durango
 Parroquia de Salaverna	Salaverna	MX	ZAC Zacatecas
@@ -49365,7 +49365,7 @@ Capilla Santo Niño de Praga	Santiago	MX	NLE Nuevo Leon
 Parroquia San Jose Obrero	Santiago	MX	NLE Nuevo Leon
 Capilla El Seño de la Misericordia	Santiago	MX	NLE Nuevo Leon
 Siervas de Nuestro Señor Jesucristo (SNSJ)	Santiago	MX	NLE Nuevo Leon
-capilla san francisco de asis	Bosques de San Pedro	MX	NLE Nuevo Leon
+Capilla San Francisco de Asis	Bosques de San Pedro	MX	NLE Nuevo Leon
 Corpus Christi	Santa Catarina	MX	NLE Nuevo Leon
 Templo Zabulon 2	Monterrey	MX	NLE Nuevo Leon
 Oratorio Liceo de Monterrey Redwood	Monterrey	MX	NLE Nuevo Leon
@@ -49718,7 +49718,7 @@ Saint Philip Catholic Church	Shallowater	US	TX Texas
 Saint John the Baptist Catholic Church	Lubbock	US	TX Texas
 Corpus Christi Church	Lubbock	US	TX Texas
 Saint Elizabeth’s Old Chapel	Lubbock	US	TX Texas
-IGLESIA CUMBRES	Piedras Negras	MX	COA Coahuila
+Iglesia Cumbres	Piedras Negras	MX	COA Coahuila
 Obispado de Piedras Negras	Piedras Negras	MX	COA Coahuila
 MariaPolis	Piedras Negras	MX	COA Coahuila
 Nuestra Señora de San Juan de los Lagos Catholic Church	El Indio	US	TX Texas
@@ -50907,7 +50907,7 @@ Capilla Católica Virgen de Guadalupe	Esmeraldas	EC	Esmeraldas
 Capilla Católica San Pedro y San Pablo	Esmeraldas	EC	Esmeraldas
 La Resurrección	Tumaco	CO	Narino
 Iglesia Católica Parroquial de Nanegalito	Nanegalito	EC	Pichincha
-iglesia de rumicucho		EC	Pichincha
+Iglesia de Rumicucho		EC	Pichincha
 Iglesia		EC	Imbabura
 Iglesia patrimonial San Miguel de Perucho	Perucho	EC	Imbabura
 Iglesia Católica de Cochasqui	Quito	EC	Pichincha
@@ -51003,7 +51003,7 @@ Gruta de La Dolorosa	La Libertad	EC	Carchi
 Iglesia Católica Parroquial de Pioter	San Gabriel	EC	Carchi
 Iglesia Católica de Santa Martha de Cuba	Santa Martha de Cuba	EC	Carchi
 Santuario de la Purificación Huaca	San Gabriel	EC	Carchi
-iglesia de santa rosa		CO	Narino
+Iglesia de Santa Rosa		CO	Narino
 Iglesia Católica San José Obrero - Lago Agrio	Nueva Loja (Lago Agrio)	EC	Sucumbios
 Iglesia San Francisco de Asís	Puerto Asis	CO	Putumayo
 Parroquia Nuestra Señora del Carmen		CO	Putumayo
@@ -51111,7 +51111,7 @@ Iglesia Municipal de Sucre	Sucre	CO	Cauca
 Santa Barbara	La Vega	CO	Cauca
 Iglesia Catolica	Palestina Huila	CO	Huila
 Nuestra Señora De Las Mercedes	Saladoblanco	CO	Huila
-CAPILLA SAN CIRO	Saladoblanco	CO	Huila
+Capilla San Ciro	Saladoblanco	CO	Huila
 Iglesia Municipal	Oporapa	CO	Huila
 Iglesia San Rafael Arcángel	La Tola	CO	Narino
 Iglesia de Santa Bárbara	Iscuande	CO	Narino
@@ -51162,7 +51162,7 @@ Capilla del Amparo	Pital	CO	Huila
 Escuela Villarica	garzon huila	CO	Huila
 Iglesia	Nataga	CO	Huila
 Iglesia	La Macarena	CO	Meta
-igreja sagrado coração		BR	AM Amazonas
+Igreja Sagrado Coração		BR	AM Amazonas
 Parroquia	Mitú	CO	Vaupes
 Iglesia	San Jose del Guaviare	CO	Guaviare
 Iglesia San Jorge	San Jose del Guaviare	CO	Guaviare
@@ -51253,7 +51253,7 @@ Iglesia Catolica	LEJANIAS	CO	Meta
 Iglesia Nuestra Señora del Carmen	El Castillo	CO	Meta
 Parroquia San José	Cabrera	CO	Cundinamarca
 Parroquia la Sagrada Familia		CO	Cundinamarca
-IGLESIA CRISTO REY	Acacias	CO	Meta
+Iglesia Cristo Rey	Acacias	CO	Meta
 Santa Teresa de Los Andes	Palmeras	CO	Meta
 Iglesia		CO	Meta
 Parroquia San Felipe Apostol	Villavicencio	CO	Meta
@@ -51291,7 +51291,7 @@ Modalidad Familia	el canton de san pablo	CO	Choco
 Tienda Walter	el canton de san pablo	CO	Choco
 Vereda Puerto Pervel	El Canton de San Pablo	CO	Choco
 La hisla	el canton de san pablo	CO	Choco
-GUAPANDO	el canton de san pablo	CO	Choco
+Guapando	el canton de san pablo	CO	Choco
 TARIDO	el canton de san pablo	CO	Choco
 colegio	El Canton de San Pablo	CO	Choco
 Capilla	La Merced	CO	Risaralda
@@ -51402,7 +51402,7 @@ Parroquia San Antonio de Padua	San Antonio del Tequendama	CO	Cundinamarca
 Parroquia San Juan Pablo II	Soacha	CO	Cundinamarca
 Capilla Santisima Trinidad	Funza	CO	Cundinamarca
 Oratorio Salesiano Don Bosco	Mosquera	CO	Cundinamarca
-capilla	Funza	CO	Cundinamarca
+Capilla	Funza	CO	Cundinamarca
 Parroquia San Pio de Pietrelcina	Soacha	CO	Cundinamarca
 Iglesia Catolica	Soacha	CO	Cundinamarca
 Parroquia de Jesús y María	Soacha	CO	Cundinamarca
@@ -51530,7 +51530,7 @@ Altar de la Virgen	Pacho	CO	Cundinamarca
 Capilla El Cedro	Zipaquira	CO	Cundinamarca
 Parroquia San Francisco de Asis	Nemocon	CO	Cundinamarca
 Iglesia	Utica	CO	Cundinamarca
-IGLESIA NUESTRA SEÑORA DEL ROSARIO	Utica	CO	Cundinamarca
+Iglesia Nuestra Señora del Rosario	Utica	CO	Cundinamarca
 Templo San José de La Peña	La Pena	CO	Cundinamarca
 Iglesia de Santa Bárbara	Topaipi	CO	Cundinamarca
 Parroquia el Divino Niño	Pacho	CO	Cundinamarca
@@ -51624,7 +51624,7 @@ Fundación Nuestra Señora del Camino	San Felix	PA	Chiriqui
 Iglesia Nuestra Señora de Guadalupe	Roka	PA	Ngoebe-Bugle
 Virgen del Carmen		PA	Veraguas
 Parroquia San Pablo Apóstol	Mariato	PA	Herrera
-capilla		PA	Veraguas
+Capilla		PA	Veraguas
 Santa María		PA	Los Santos
 Nuestra Señora de la Candelaria	Tonosí	PA	Los Santos
 Iglesia Santa Rosa	Llano de Piedra	PA	Los Santos
@@ -51672,7 +51672,7 @@ Santa Librada	Santiago de Veraguas	PA	Veraguas
 Vírgen de Guadalupe	Santiago de Veraguas	PA	Veraguas
 San Roque	Santiago de Veraguas	PA	Veraguas
 Virgen del Carmen	Santiago de Veraguas	PA	Veraguas
-la candelaria	La Peña	PA	Veraguas
+La Candelaria	La Peña	PA	Veraguas
 San Francisco	San Francisco	PA	Veraguas
 Virgen del Cármen	La Pena	PA	Veraguas
 La Iglesia		PA	Chiriqui
@@ -53439,7 +53439,7 @@ Capilla San José Obrero	Suntracs, Ernesto Cordoba Campos	PA	Panama
 Capilla del Santísimo	San Miguelito	PA	Panama
 Iglesia de San Joaquín	Tocumen	PA	Panama
 Capilla de Oración San José	Tocumen	PA	Panama
-capilla san juan bautista	Pacora	PA	Panama
+Capilla San Juan Bautista	Pacora	PA	Panama
 Capilla Virgen del Carmen	Tocumen	PA	Panama
 lugar de celula cristiana	Pacora	PA	Panama
 Capilla San Esteban	Paso Blanco	PA	Panama
@@ -54490,7 +54490,7 @@ Iglesia Santa Helena del Opón	Santa Helena del Opón	CO	Santander
 Iglesia Inmaculada Concepción	Chima	CO	Santander
 Cementerio municipal	Valle de San Jose	CO	Santander
 Iglesia Santa Bárbara	Simacota	CO	Santander
-iglesia catolica nuestra señora de la purificcion	Valle de San Jose	CO	Santander
+Iglesia Católica Nuestra Señora de la Purificación	Valle de San Jose	CO	Santander
 Capilla San Roque	Valle de San José	CO	Santander
 Santuario: La Fuerza de la Cruz, Cantón Huancoyanka	Área Administrativa Federal - República de Facta de Galpan	CO	Santander
 Cruz Conmemorativa de la Misión Catolica 2018	Valle de San Jose	CO	Santander
@@ -54597,7 +54597,7 @@ Iglesia	El Espino	CO	Boyaca
 Iglesia La Capilla	Capitanejo	CO	Santander
 Parroquia San Bartolomé Apostol	Capitanejo	CO	Santander
 Capilla Sagrado Corazón	Capitanejo	CO	Santander
-IGLESIA SAN MIGUEL ARCANGEL	SAN MIGUEL	CO	Santander
+Iglesia San Miguel Arcangel	SAN MIGUEL	CO	Santander
 San Juan de Sahagún	San Jose de Miranda	CO	Santander
 Seminario Hispano Misionero de La Diocesis de Soata Malaga	San José de Miranda	CO	Santander
 Cementerio	San José de Miranda	CO	Santander
@@ -54674,8 +54674,8 @@ Parroquia San Juan Bautista	Cucuta	CO	Norte de Santander
 Iglesia Cristo Evangelizador	CUCUTA	CO	Norte de Santander
 Iglesia San Pedro		CO	Norte de Santander
 Iglesia de San Martín	Sardinata	CO	Norte de Santander
-CAPILLA DEL ROSAL	Cucuta	CO	Norte de Santander
-iglesia	cucuta	CO	Norte de Santander
+Capilla del Rosal	Cucuta	CO	Norte de Santander
+Iglesia	cucuta	CO	Norte de Santander
 Despacho Parroquial	Cucuta	CO	Norte de Santander
 Casa Parroquial	Cucuta	CO	Norte de Santander
 Iglesia San José Obrero	Tariba	VE	Tachira
@@ -54869,7 +54869,7 @@ Iglesia	Tabay	VE	Merida
 Iglesia	Tabay	VE	Merida
 Iglesia	La Mula	VE	Barinas
 Iglesia Mucuchíes	Mucuchies	VE	Merida
-CALVARIO	Barinitas	VE	Barinas
+Calvario	Barinitas	VE	Barinas
 Iglesia Santa Rosa	Pueblo Nuevo	VE	Zulia
 Iglesia Nuestra Señora de Guadalupe	El Pinar	VE	Merida
 Iglesia Pueblo de Torondoy	Torondoy	VE	Merida
@@ -54878,14 +54878,14 @@ Iglesia de Pueblo Llano	Pueblo Llano	VE	Merida
 Capilla Santisima Trinidad	Pueblo Llano	VE	Merida
 Iglesia El Arboito	Pueblo Llano	VE	Merida
 Iglesia San Pablo Apostol	La Puerta, Trujillo	VE	Trujillo
-IGLESIA SAN RAFAEL ARCANGEL TUÑAME	La Quebrada	VE	Trujillo
+Iglesia San Rafael Arcangel Tuñame	La Quebrada	VE	Trujillo
 Iglesia San Antonio Abad	La Quebrada	VE	Trujillo
 Iglesia Niño Jesús de Escuque	Escuque	VE	Trujillo
 Nuestra Señora la Candelaria	valera	VE	Trujillo
 Iglesia San Pedro	Valera	VE	Trujillo
 Iglesia San Juan Bautista	Valera	VE	Trujillo
 Iglesia San José	Valera	VE	Trujillo
-iglesia san lazaro	San Rafael de Carvajal	VE	Trujillo
+Iglesia San Lazaro	San Rafael de Carvajal	VE	Trujillo
 Iglesia de Sabaneta	Trujillo	VE	Trujillo
 Iglesia San Juan Bautista	Betijoque	VE	Trujillo
 Iglesia Nuestra Señora del Rosario	Betijoque	VE	Trujillo
@@ -54899,7 +54899,7 @@ Iglesia Virgen de Coromoto	Valera	VE	Trujillo
 Capilla Santisima Trinidad	Pampanito	VE	Trujillo
 Capilla del Espíritu Santo	Trujillo	VE	Trujillo
 Santuario Peña de la Virgen	Trujillo	VE	Trujillo
-IGLESIA DE LA ROSARIO	Trujillo	VE	Trujillo
+Iglesia de la Rosario	Trujillo	VE	Trujillo
 Capilla Nuestar Señora del Carmen	Trujillo	VE	Trujillo
 Capilla San José	Pampanito	VE	Trujillo
 Capilla Santo Domingo	Pampanito	VE	Trujillo
@@ -54908,7 +54908,7 @@ Capilla Nuestra Señora de Lourdes	Pampanito	VE	Trujillo
 Iglesia San Juan Bautista	Pampanito	VE	Trujillo
 Capilla Catolica	Pampanito	VE	Trujillo
 Capilla Inmaculada Concepción	Pampanito	VE	Trujillo
-IGLESIA NTRA SRA DEL PERPETUO SOCORRO	El Paradero	VE	Trujillo
+Iglesia Ntra Sra del Perpetuo Socorro	El Paradero	VE	Trujillo
 Iglesia Católica Medalla Milagrosa	Barinas	VE	Barinas
 Iglesia San Juan Bosco	Barinas	VE	Barinas
 Parroquia María Auxiliadora	Barinas	VE	Barinas
@@ -55293,10 +55293,10 @@ Iglesia San Diego de Alcalá	Puerto La Cruz	VE	Anzoategui
 Iglesia San Pedro	Barcelona	VE	Anzoategui
 Iglesia El Espíritu Santo	Barcelona	VE	Anzoategui
 Capilla	Lecherias	VE	Anzoategui
-iglesia nuestra señora del amparo	puerto la cruz	VE	Anzoategui
+Iglesia Nuestra Señora del Amparo	puerto la cruz	VE	Anzoategui
 Iglesia Juan Pablo II	Puerto La Cruz	VE	Anzoategui
 Iglesia Parroquial San Isidro Labrador		VE	Monagas
-iglesia santo domingo savio	puerto la cruz	VE	Anzoategui
+Iglesia Santo Domingo Savio	puerto la cruz	VE	Anzoategui
 Iglesia Chiquinquira	Cumaná	VE	Sucre
 Iglesia San José de Cantarrana	Cumana	VE	Sucre
 Iglesia Nuestra Señora de Llas Mercedes	Cumana	VE	Sucre
@@ -55383,7 +55383,7 @@ Casa Cural	Catarina	NI	Masaya
 Catedral de Nuestra Señora de la Asunción	Granada	NI	Granada
 Iglesia Tichana		NI	Rivas
 Iglesia San Pedro		NI	Rivas
-iglesia catolica	Nueva Guinea	NI	Atlantico Sur
+Iglesia Catolica	Nueva Guinea	NI	Atlantico Sur
 Iglesia catolica	Nueva Guinea	NI	Atlantico Sur
 Iglesia Católica Villa El Carmen	Villa El Carmen	NI	Managua
 Capilla corazon de Jésus	La Concepcion	NI	Masaya
@@ -55429,7 +55429,7 @@ Iglesia Santa Teresa de Jesús	El Ayote	NI	Chontales
 Iglesia de San Luis La Herradura	San Luis la Herradura	SV	La Paz
 Parroquia de Puerto El Triunfo	Puerto El Triunfo	SV	Usulutan
 Iglesia de San Dionisio	San Dionisio	SV	Usulutan
-virgen maria	Usulutan	SV	Usulutan
+Virgen Maria	Usulutan	SV	Usulutan
 Iglesia Luz Admirable (U. E. P.)	Santa maria	SV	Usulutan
 Iglesia de Ereguayquín	Ereguayquín	SV	Usulutan
 Iglesia de Intipucá	Intipucá	SV	La Union
@@ -55521,7 +55521,7 @@ Iglesia de San Ramón	San Ramón	SV	Cuscatlan
 Renovación carismática	San Ramon	SV	Cuscatlan
 Iglesia El Calvario	Apastepeque	SV	San Vicente
 Iglesia de El Calvario	San Esteban Catarina	SV	San Vicente
-virgen de candelaria	Apastepeque	SV	San Vicente
+Virgen de Candelaria	Apastepeque	SV	San Vicente
 Iglesia de El Calvario	San Sebastian	SV	San Vicente
 Iglesia Maria Auxiliadora	Guayamango	SV	Ahuachapan
 Catedral de la Santísima Trinidad	Sonsonate	SV	Sonsonate
@@ -55554,7 +55554,7 @@ Parroquia de Nuestra Señora de Guadalupe	San Sebastian Salitrillo	SV	Santa Ana
 Parroquia de San Sebastian Salitrillo	San Sebastian Salitrillo	SV	Santa Ana
 Capilla San José	Santa Ana	SV	Santa Ana
 Iglesia Católica Las Margaritas	Santa Ana	SV	Santa Ana
-Capilla Capilla Divino Niño	Mejicanos	SV	San Salvador
+Capilla Divino Niño	Mejicanos	SV	San Salvador
 San José Obrero	Mejicanos	SV	San Salvador
 Iglesia El Calvario	Delgado	SV	San Salvador
 Parroquia Cristo Salvador	Mejicanos	SV	San Salvador
@@ -55626,7 +55626,7 @@ Iglesia de Nueva Granada	Nueva Granada	SV	Usulutan
 Capilla San Lorenzo	Sesori	SV	San Miguel
 Iglesia de Chapeltique	Chapeltique	SV	San Miguel
 Iglesia Católica Caserío El Jicaro	Jocoro	SV	Morazan
-IGLESIA CATOLICA SAN JUAN	Jocoro	SV	Morazan
+Iglesia Catolica San Juan	Jocoro	SV	Morazan
 Iglesia de Santa Lucía	El Divisadero	SV	Morazan
 Parroquia San Felipe Jocoro	Jocoro	SV	Morazan
 Ermita El Calvario	Jocoro	SV	Morazan
@@ -55866,9 +55866,9 @@ Iglesia Reina de la Paz	Tegucigalpa	HN	Francisco Morazan
 Iglesia Catolica Madre de la Misericordia	Tegucigalpa	HN	Francisco Morazan
 Iglesia Santa Eduviges	Tegucigalpa	HN	Francisco Morazan
 Iglesia Rosa de Zerón	comayaguela	HN	Francisco Morazan
-iglesia el retiro	comayaguela	HN	Francisco Morazan
+Iglesia El Retiro	comayaguela	HN	Francisco Morazan
 Iglesia San Maximiliano María Kolbe	Tegucigalpa	HN	Francisco Morazan
-iglesia catolica san pedro apostol	El Lolo	HN	Francisco Morazan
+Iglesia Catolica San Pedro Apostol	El Lolo	HN	Francisco Morazan
 Iglesia San Francisco Javier	Comayagüela	HN	Francisco Morazan
 Capilla del Cuerpo de Bomberos	Tegucigalpa	HN	Francisco Morazan
 Iglesia del Calvario	Tegucigalpa	HN	Francisco Morazan
@@ -55918,7 +55918,7 @@ Iglesia de San Luis	San Luis	HN	Comayagua
 Iglesia Catolica	Minas de Oro	HN	Comayagua
 Iglesia de El Porvenir	El Porvenir	HN	Francisco Morazan
 Iglesia El Calvario	Chiquimula	GT	Chiquimula
-EL CALVARIO	Jocotan	GT	Chiquimula
+El Calvario	Jocotan	GT	Chiquimula
 Iglesia Católica de Aldea Santa Lucía	Zacapa	GT	Zacapa
 Iglesia El Calvario Teculutan	Teculután	GT	Zacapa
 Iglesia Catolica	Gualan	GT	Zacapa
@@ -55947,7 +55947,7 @@ Iglesia de Nueva Arcadia	Nueva Arcadia	HN	Copan
 Iglesia de Trascerros	Trascerros	HN	Santa Barbara
 Iglesia de El Níspero	El Níspero	HN	Santa Barbara
 Iglesia de Santa Rita	Santa Rita	HN	Santa Barbara
-san pedro apostol 139	La Union	HN	Lempira
+San Pedro Apostol 139	La Union	HN	Lempira
 Iglesia Nuestra Señora del Tránsito	Arada	HN	Santa Barbara
 Iglesia de Atima	Atima	HN	Santa Barbara
 Iglesia de San Vicente Centenario	San Vicente Centenario	HN	Santa Barbara
@@ -56053,7 +56053,7 @@ Iglesia San Juan Bautista	San Pedro Sula	HN	Cortes
 Iglesia María Auxiliadora	San Pedro Sula	HN	Cortes
 Iglesia San Antonio María Claret	La Lima	HN	Cortes
 Iglesia El Buen Pastor	San Jose del Boqueron	HN	Cortes
-PARROQUIA EL BUEN PASTOR	El Zapotal del Norte	HN	Cortes
+Parroquia El Buen Pastor	El Zapotal del Norte	HN	Cortes
 Capilla	El Zapotal del Norte	HN	Cortes
 Movimieno Camino	Pena Blanca	HN	Cortes
 Iglesia del Sagrado Corazón de Jesús	San Pedro Sula	HN	Cortes
@@ -56103,7 +56103,7 @@ Iglesia de Raya	Ramón Villeda Morales	HN	Gracias a Dios
 Iglesia de San José	Puerto Lempira	HN	Gracias a Dios
 Parroquia de taganga	Santa Marta	CO	Magdalena
 Iglesia San Rafael	Riohacha	CO	La Guajira
-iglesia divino niño	Maicao	CO	La Guajira
+Iglesia Divino Niño	Maicao	CO	La Guajira
 Iglesia Nuestra Señora del Carmen	Maicao	CO	La Guajira
 Iglesia San José	Maicao	CO	La Guajira
 Parroquia Inmaculada Concepción	Uribia	CO	La Guajira
@@ -56337,28 +56337,28 @@ Eglise Saint Antoine	Aquin	HT	Sud
 Eglise Sainte Hélène	Aquin	HT	Sud
 Salle Paroissiale de Pemerle	fond des negres	HT	Sud
 Église Catholique de Pochette	fond des negres	HT	Grandans
-LA PAROISSE DE POJJY	petite riviere	HT	Grandans
+La Paroisse de Pojjy	petite riviere	HT	Grandans
 L'Eglise Catholique	Petite Riviere de Nippes	HT	Grandans
 Cathédrale Saint-Louis-Roi-de-France	Jérémie	HT	Grandans
 Eglise Saint Bernadin	Baie de Henne	HT	Nord-Ouest
 Eglise Saint Thomas	Bombardopolis	HT	Nord-Ouest
 Eglise Sainte Bernadette	Baie de Henne	HT	Nord-Ouest
 Saint Michel Archange	Baie de Henne	HT	Nord-Ouest
-eglise st jean	jacmel	HT	Sud-Est
-eglise foyer de la grace	jacmel	HT	Sud-Est
-eglise la coroix	jacmel	HT	Sud-Est
+Eglise St Jean	jacmel	HT	Sud-Est
+Eglise Foyer de la Grace	jacmel	HT	Sud-Est
+Église de la Croix	jacmel	HT	Sud-Est
 Église Saint Pierre et Saint Paul	jacmel	HT	Sud-Est
 Église Sacré Coeur de Meyer	jacmel	HT	Sud-Est
-saint anne	la vallé Jacmel	HT	Sud-Est
-eglise sainte anne	Vallee de Jacmel	HT	Sud-Est
+Saint Anne	la vallé Jacmel	HT	Sud-Est
+Eglise Sainte Anne	Vallee de Jacmel	HT	Sud-Est
 Saint Joseph la Chapelle	Jacmel	HT	Sud-Est
 Saint Yves de Monchil	Jacmel	HT	Sud-Est
 Notre Dame du Perpétuel Secours	Jacmel	HT	Sud-Est
-st yves	jacmel	HT	Sud-Est
-eglise vierge miracle des cayes jacmel	jacmel	HT	Sud-Est
-egise st dominique de marigot	jacmel	HT	Sud-Est
-eglise marie madeleine	peredo	HT	Sud-Est
-eglise catholique decira	marigot	HT	Sud-Est
+St Yves	jacmel	HT	Sud-Est
+Eglise Vierge Miracle des Cayes Jacmel	jacmel	HT	Sud-Est
+Église Saint-Dominique de Marigot	jacmel	HT	Sud-Est
+Eglise Marie Madeleine	peredo	HT	Sud-Est
+Eglise Catholique Decira	marigot	HT	Sud-Est
 Église Vierge Baurette	Belle-Anse	HT	Sud-Est
 ecole notre dame de mont carmelle de pichon	Belle-Anse	HT	Sud-Est
 Iglesia Católica	Oviedo	DO	Pedernales
@@ -56388,7 +56388,7 @@ Cathédrale de transition Notre-Dame de l'Assomption	Pòtoprens	HT	Ouest
 Eglise St Anne de soleil 19	cite soleil	HT	Ouest
 Eglise Paroissial de cite soleil( Immaculee conception)	cite soleil	HT	Ouest
 Eglise Notre Dame de Grace	port-au- prince	HT	Ouest
-eglise st paul	tabarre	HT	Ouest
+Eglise St Paul	tabarre	HT	Ouest
 Église Saint-Siméon	Croix des Bouquets	HT	Ouest
 Peristille	Croix des Bouquets	HT	Ouest
 Assembly Jesus Chrit Bon Berger	Cabaret	HT	Ouest
@@ -56403,7 +56403,7 @@ Chapelle Ange Gabriel Archange	Croix des Bouquets	HT	Ouest
 St. Thomas	Croix des Bouquets	HT	Ouest
 Eglise Apostolique du chrit d'haiti	Croix des Bouquets	HT	Ouest
 Catholic Church	Cabaret	HT	Ouest
-eglise catholique de zorange	Cornillon	HT	Ouest
+Eglise Catholique de Zorange	Cornillon	HT	Ouest
 Eglise Catholique de Cornillon	Cornillon	HT	Ouest
 Eglise Catholique	Mirebalais	HT	Centre
 Paroisse Saint Jacques de Sarazins	Lascahobas	HT	Centre
@@ -56431,7 +56431,7 @@ Chapelle Saint-Nicolas de Saint Marc	Saint-Marc	HT	Artibonite
 Chapelle Catholique	Saint-Marc	HT	Artibonite
 Eglise Catholique de barbe	Saint-Marc	HT	Artibonite
 Eglise Catholique de Poirier	Grande Saline	HT	Artibonite
-paroisse,immaculee,conception,villard	Dessalines	HT	Artibonite
+Paroisse Immaculée Conception, Villard	Dessalines	HT	Artibonite
 Eglise catholique de Saint joseph	Grande Saline	HT	Artibonite
 Eglise Saint Francois de Xavier	Desarmes	HT	Artibonite
 Paroisse Saint Paulet Saint Pierre de Marmont	Thomonde	HT	Centre
@@ -56447,9 +56447,9 @@ eglise catholique saint Jean Baptiste	gonaives,bayonnais,capiti	HT	Artibonite
 Évêché	Gonayiv	HT	Artibonite
 Chapelle Saint Joseph	Ruelle Charlemagne #5 Trou Sable	HT	Artibonite
 Eglise catholique de K-yon	Gonayiv	HT	Artibonite
-eglise catholic bon samaritain	anse rouge	HT	Artibonite
-eglise catholique de l'arbre	Anse Rouge	HT	Artibonite
-eglise de bassin	Gonayiv	HT	Artibonite
+Eglise Catholic Bon Samaritain	anse rouge	HT	Artibonite
+Eglise Catholique de l'Arbre	Anse Rouge	HT	Artibonite
+Eglise de Bassin	Gonayiv	HT	Artibonite
 Eglise Catholique de Gros-Morne	Gros Morne	HT	Artibonite
 Eglise Notre Dame de la Mediatrice	Plaisance	HT	Nord
 Église Catholique	Saint Michel de L'Attalaye	HT	Nord
@@ -56508,7 +56508,7 @@ Capilla Santa Ana	Tamboril	DO	Santiago
 Parroquia Nuestra Señora del Carmen	Juan Lopez Abajo	DO	Espaillat
 Capilla Divino Niño	Villa Bisono	DO	Santiago
 FUSIMAÑA	Pedro Garcia	DO	Santiago
-iglesia	Pedro Garcia	DO	Santiago
+Iglesia	Pedro Garcia	DO	Santiago
 Capilla San José	San Cristobal	DO	San Cristobal
 Salones Parroquiales JM	Santo Domingo	DO	Nacional
 Casita de la Divina Misericordia	Santo Domingo Oeste	DO	Santo Domingo
@@ -56536,7 +56536,7 @@ Parroquia San Antonio De Padua	La Victoria	DO	Santo Domingo
 Iglesia San Pablo	La Romana	DO	La Romana
 Parroquia San José Obrero	San Pedro de Macoris	DO	San Pedro de Macoris
 Iglesia Divina Pastora		DO	La Romana
-iglesia	Punta Cana	DO	San Juan
+Iglesia	Punta Cana	DO	San Juan
 Iglesia Catolica La Altagracia	San Francisco de Macoris	DO	Duarte
 San Pablo Apostol	San Francisco de Macoris	DO	Duarte
 Capilla Vuelta Larga	Castillo	DO	Duarte
@@ -56694,7 +56694,7 @@ St Lucy RC Church	Micoud	LC	Micoud Quarter
 St Ann's Catholic Church	Praslin	LC	Praslin
 jackmel Catholic church	Anse La Raye	LC	Anse-la-Raye
 St Peter's R.C. Church	Dennery	LC	Dennery Quarter
-laressource parish church	Dennery	LC	Dennery Quarter
+Laressource Parish Church	Dennery	LC	Dennery Quarter
 St. Michael's R.C. Church	Dennery	LC	Dennery Quarter
 St. Benedict's Roman Catholic Church	Castries	LC	Castries Quarter
 Mount Calavary	Bisee	LC	Castries Quarter
@@ -56892,14 +56892,14 @@ Chapelle Saint André	Bingerville	CI	Lagunes
 Presbitère Catholique	Abidjan	CI	Lagunes
 Paroisse Notre-Dame de la Tendresse	Abidjan	CI	Lagunes
 Chapelle Catholique	Attécoubé	CI	Lagunes
-église saint luc	Abidjan	CI	Lagunes
+Église Saint Luc	Abidjan	CI	Lagunes
 Paroisse Saint Francois Xavier d'Anono	Cocody	CI	Lagunes
 Résidence des soeurs catholiques	Bingerville	CI	Lagunes
 Quasi Paroisse Saint Raphaël Provisoire	Bingerville	CI	Lagunes
 Chapelle	Bingerville	CI	Lagunes
 Eglise Catholique Saint Francois d'Assise	Abobo	CI	Lagunes
 Sainte Thérèse d’Avila	Abobo	CI	Lagunes
-chapelle notre dame de lourdes de zinsou	Cocody	CI	Lagunes
+Chapelle Notre Dame de Lourdes de Zinsou	Cocody	CI	Lagunes
 Paroisse Coeur Immatriculé de Marie	Abobo	CI	Lagunes
 Centre Marie Eugénie	Abobo	CI	Lagunes
 Cappelle Saint Jean Paul II	Bingerville	CI	Lagunes
@@ -56962,7 +56962,7 @@ Roman Catholic Church	Magburaka	SL	Northern Province
 St. Francis Xavier Cath. Church	Makeni	SL	Northern Province
 Our Lady Of Fatima Cathredal	Makeni	SL	Northern Province
 Our Lady of Fatima Cathedral	Makeni	SL	Northern Province
-unimak church	Makeni	SL	Northern Province
+Unimak Church	Makeni	SL	Northern Province
 Christ the King	Bumbuna	SL	Northern Province
 RC Church	Yifin	SL	Northern Province
 Cathédrale Toussaints	Camayenne	GN	Conakry
@@ -56998,7 +56998,7 @@ Roman Catholic Church	Foya	SL	Eastern Province
 Roman Catholic Church	Buedu	SL	Eastern Province
 St Anthony Catholics Church	Manosewallu	SL	Eastern Province
 Cathédrale Sainte-Marie de N'Zérékoré	Nzerekore	GN	Nzerekore
-CATHEDRALE PREFECTORALE DE LOLA	Lola	GN	Nzerekore
+Cathedrale Prefectorale de Lola	Lola	GN	Nzerekore
 Église Catholique Saint-Jean	Danane	CI	Dix-Huit Montagnes
 Mission Catholique	Man	CI	Dix-Huit Montagnes
 Eglise Catholique de Vavoua	Vavoua	CI	Haut-Sassandra
@@ -57288,7 +57288,7 @@ Nossa Senhora da Piedade	Pombas	CV	Paul
 Igreja de Santo Crucifixo	Ribeira Grande	CV	Ribeira Grande
 Igreja Nazarena	Ribeira Grande	CV	Ribeira Grande
 São Miguel	Ribeira Grande	CV	Ribeira Grande
-NOSSA SENHORA DA PENHA	Ribeira Grande	CV	Ribeira Grande
+Nossa Senhora da Penha	Ribeira Grande	CV	Ribeira Grande
 Chapela Nossa Senhora da Fátima	Ponta do Sol	CV	Ribeira Grande
 Igreja São José	Bissau	GW	Bissau
 Igreja São Antonio de Bandim	Bissau	GW	Bissau
@@ -57395,7 +57395,7 @@ Saint Jean de Fara		BF	Boucle du Mouhoun
 Eglise catholique de Ekoulkoala	Reo	BF	Centre-Ouest
 Grotte de la Sainte Vierge	Reo	BF	Centre-Ouest
 Église Bourkina	Koudougou	BF	Centre-Ouest
-eglise	Koudougou	BF	Centre-Ouest
+Eglise	Koudougou	BF	Centre-Ouest
 Eglise Saint Joseph Mukassa	Koudougou	BF	Centre-Ouest
 Grotte	Koudougou	BF	Centre-Ouest
 Sainte Thérèse de l'enfant Jesus	Kokologo	BF	Centre-Ouest
@@ -57409,7 +57409,7 @@ Saint Pierre de Nagrin	Ouagadougou	BF	Centre
 Saint Jean-Samuel	Ouagadougou	BF	Centre
 Cathédrale de l'Immaculée-Conception	Ouagadougou	BF	Centre
 Chapel de la Réconciliation	Ouagadougou	BF	Centre
-chapelle de nonsin	Ouagadougou	BF	Centre
+Chapelle de Nonsin	Ouagadougou	BF	Centre
 Église Notre Dame de Kologh-Naba	Ouagadougou	BF	Centre
 CCB Saint André	Ouagadougou	BF	Centre
 Missionnaires d'Afrique Maison Provinciale	01 B.P. 630, Ouagadougou 01	BF	Centre
@@ -57875,7 +57875,7 @@ Saint Pius V Catholic Church	Walsh	US	IL Illinois
 Saint Bruno Catholic Church	Pinckneyville	US	IL Illinois
 Saint John the Baptist Catholic Church	Smithton	US	IL Illinois
 Saint Cecilia Catholic Church	Bartelso	US	IL Illinois
-SS SIMON & JUDE	Gillespie	US	IL Illinois
+SS Simon & Jude	Gillespie	US	IL Illinois
 Saint Johns Catholic Church	Hillsboro	US	IL Illinois
 Saint Agnes Roman Catholic Church	Hillsboro	US	IL Illinois
 Saint Josephs Roman Catholic Church	Carlinville	US	IL Illinois
@@ -58835,7 +58835,7 @@ Carmel ofJesus, Mary and Joseph Fairfield	Fairfield	US	PA Pennsylvania
 Saint Joseph Catholic Church	Cockeysville	US	MD Maryland
 Sacred Heart Catholic Church (Little Church)	Reisterstown	US	MD Maryland
 National Shrine of Saint Elizabeth Ann Seton	Emmitsburg	US	MD Maryland
-red chapel	Emmitsburg	US	MD Maryland
+Red Chapel	Emmitsburg	US	MD Maryland
 Our Lady of Grace Catholic Church	Parkton	US	MD Maryland
 Newman Center	Towson	US	MD Maryland
 The Grotto	Towson	US	MD Maryland
@@ -62836,7 +62836,7 @@ St Jose	Mazarron	ES	Murcia
 Ermita de los Puertos de Santa Bárbara	Fuente-Alamo de Murcia	ES	Murcia
 Parroquia de Santiago Apóstol	Fuente-Alamo de Murcia	ES	Murcia
 Ermita de la Magdalena	Fuente-Alamo de Murcia	ES	Murcia
-iglesia	Fuente-Alamo de Murcia	ES	Murcia
+Iglesia	Fuente-Alamo de Murcia	ES	Murcia
 Ermita de Nuestra Señora de la Cabeza	Alhama de Murcia	ES	Murcia
 Ermita de San Roque	Fuente-Alamo de Murcia	ES	Murcia
 Parroquia de Nuestra Señora de la Candelaria	Fuente-Alamo de Murcia	ES	Murcia
@@ -62930,7 +62930,7 @@ Iglesia de Santa Ana	El Guijo	ES	Andalusia
 Ermita de la Virgen de Gracia	Torrecampo	ES	Andalusia
 Ermita de Jesús Nazareno	Torrecampo	ES	Andalusia
 Iglesia de San Sebastián	Torrecampo	ES	Andalusia
-iglesia de azuel	Cardena	ES	Andalusia
+Iglesia de Azuel	Cardena	ES	Andalusia
 Ermita Nueva de San Isidro	Fuencaliente	ES	Castille-La Mancha
 Iglesia de Nuestra Señora de la Encarnación	Santa Eufemia	ES	Andalusia
 Ermita de San Roque	Arjonilla	ES	Andalusia
@@ -64530,7 +64530,7 @@ Santuário de Nossa Senhora dos Covões	Alvaiazere	PT	Leiria
 Igreja de Pussos	Alvaiazere	PT	Leiria
 Capela de Santo António	Alvaiazere	PT	Leiria
 Capela da Nossa Senhora da Orada	Alvaiazere	PT	Leiria
-capela de nossa senhora de lourdes	Alvaiazere	PT	Leiria
+Capela de Nossa Senhora de Lourdes	Alvaiazere	PT	Leiria
 Capela de Santa Ana	Alvaiazere	PT	Leiria
 Capela de São João Baptista	Vila de Rei	PT	Castelo Branco
 Capela de Santa Maria Madalena e São Macário	Serta	PT	Castelo Branco
@@ -64813,7 +64813,7 @@ Iglesia de Santa Catalina	Riolobos	ES	Extremadura
 Iglesia de San Gil	Galisteo	ES	Extremadura
 Ermita de San Gregorio	Malpartida de Plasencia	ES	Extremadura
 Iglesia de San Juan Bautista	Malpartida de Plasencia	ES	Extremadura
-iglesia	Pradochano	ES	Extremadura
+Iglesia	Pradochano	ES	Extremadura
 Catedral de Plasencia	Plasencia	ES	Extremadura
 Iglesia de San José	Plasencia	ES	Extremadura
 Santuario de Santa María La Blanca	Arroyomolinos de la Vera	ES	Extremadura
@@ -66501,7 +66501,7 @@ Igreja de São Pedro Fins	Alfena	PT	Porto
 Capela de Nossa Senhora da Piedade	Alfena	PT	Porto
 Igreja Matriz de Alfena	Alfena	PT	Porto
 Capelinha dos Passos	Nogueira	PT	Porto
-Capela de Nosso Senhor da Santa Cruz,	Nogueira	PT	Porto
+Capela de Nosso Senhor da Santa Cruz	Nogueira	PT	Porto
 Igreja de Gondim	Anta	PT	Porto
 Igreja Paroquial de Santa Maria de Silva Escura	Nogueira	PT	Porto
 Capela de Santo Ovídio	Alfena	PT	Porto
@@ -67823,7 +67823,7 @@ Capela da Senhora do Sabroso	Tabuaco	PT	Viseu
 Igreja de Barcos	Tabuaco	PT	Viseu
 Igreja Matriz de Tabuaço - Nossa Senhora da Conceição	Tabuaco	PT	Viseu
 Igreja Matriz de Sendim - Nossa Senhora do Pranto	Tabuaco	PT	Viseu
-Capela de São Sebastião,	Tabuaco	PT	Viseu
+Capela de São Sebastião	Tabuaco	PT	Viseu
 Igreja de Paredes da Beira	Paredes da Beira	PT	Viseu
 Capela de Nossa Senhora da Assunção	Paredes da Beira	PT	Viseu
 Igreja Românica de São Pedro das Águias	Tabuaco	PT	Viseu
@@ -71610,7 +71610,7 @@ Iglesia de la Cátedra de San Pedro	La Serrada	ES	Castille and Leon
 Iglesia de La Asunción de Nuestra Señora	Martiherrero	ES	Castille and Leon
 Iglesia de San Martín	Sanchorreja	ES	Castille and Leon
 Iglesia de Nuestra Señora de la Asunción	Martiherrero	ES	Castille and Leon
-iglesia de n s de la asuncion	Martiherrero	ES	Castille and Leon
+Iglesia de N S de la Asuncion	Martiherrero	ES	Castille and Leon
 Real Monasterio de Santo Tomás	Avila	ES	Castille and Leon
 Iglesia de San Miguel Arcángel	Tornadizos de Avila	ES	Castille and Leon
 Iglesia de San Nicolás	Avila	ES	Castille and Leon
@@ -74735,7 +74735,7 @@ Santuario de la Virgen del Río	Tarazona	ES	Aragon
 Iglsesia de San Miguel Arcángel	Vierlas	ES	Aragon
 Ermita de Nuestra Señora de Gañarul	Magallon	ES	Aragon
 Parroquia de Nuestra Señora del Pilar	Fréscano	ES	Aragon
-iglesia virgen del puy	Mallen	ES	Aragon
+Iglesia Virgen del Puy	Mallen	ES	Aragon
 Iglesia de Nuestra Señora de la Asunción	Novallas	ES	Aragon
 Ermita de San Juan	Cascante	ES	Navarre
 Iglesia de la vitoria	Cascante	ES	Navarre
@@ -80266,7 +80266,7 @@ Igrexa de Santa María de Naraío	Naraío	ES	Galicia
 Igrexa de San Xurxo da Mariña	Ferrol	ES	Galicia
 Igrexa de San Xoán de Esmelle	Ferrol	ES	Galicia
 Igrexa Nova de San Martiño de Covas	Ferrol	ES	Galicia
-Igrexa Vella de de San Martiño de Covas	Ferrol	ES	Galicia
+Igrexa Vella de San Martiño de Covas	Ferrol	ES	Galicia
 Igrexa de San Pedro de Marmancón	Ferrol	ES	Galicia
 Igrexa de San Pedro de Leixa	Naron	ES	Galicia
 Igrexa da Nosa Señora dos Desamparados de Xuvia	Narón	ES	Galicia

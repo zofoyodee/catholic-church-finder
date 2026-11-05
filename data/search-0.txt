@@ -22,7 +22,7 @@ Santuario de Jesús Nazareno	Punta Arenas	CL	Magallanes
 Parroquia San Francisco De Asis, Punta Arenas	Punta Arenas	CL	Magallanes
 Parroquia Santa Teresa de Los Andes	Punta Arenas	CL	Magallanes
 Parroquia San Miguel	Punta Arenas	CL	Magallanes
-Parroquia Catedral de Punta Arenas, Chile	Punta Arenas	CL	Magallanes
+Parroquia Catedral de Punta Arenas	Punta Arenas	CL	Magallanes
 Santuario Maria Auxiliadora	Punta Arenas	CL	Magallanes
 Parroquia Cristo Obrero	Punta Arenas	CL	Magallanes
 Capilla Cristo Redentor Punta Arenas  Chile	Punta Arenas	CL	Magallanes
@@ -882,7 +882,7 @@ Catedral San Rafael Arcangel	San Rafael	AR	Mendoza
 Acción Católica Catedral	San Rafael	AR	Mendoza
 Obispado - Diócesis de San Rafael	San Rafael	AR	Mendoza
 Parroquia Nuestra Señora del Valle. San Rafael, Mendoza	San Rafael	AR	Mendoza
-Parroquia Nuestra Señora del Perpetuo Socorro. San Rafael, Mza, Argentina	Cuadro Nacional	AR	Mendoza
+Parroquia Nuestra Señora del Perpetuo Socorro, San Rafael	Cuadro Nacional	AR	Mendoza
 Parroquia San Juan Bosco	Eugenio Bustos	AR	Mendoza
 Capilla San Carlos Borromeo	San Carlos	AR	Mendoza
 Nuestra Señora del Cielo	Pilar	AR	Chubut
@@ -1255,7 +1255,7 @@ Capilla Jesús Misericordioso	Luján	AR	Buenos Aires
 Capilla Nuestra Senora de Guadalupe	Luján	AR	Buenos Aires
 Parroquia San Carlos Borromeo	Carlos Keen	AR	Buenos Aires
 Parroquia Sagrado Corazon de Jesus	Teodelina	AR	Santa Fe
-Parroquia San Francisco- Rojas-	Rojas	AR	Buenos Aires
+Parroquia San Francisco - Rojas	Rojas	AR	Buenos Aires
 Parroquia San José	Villa Cañás	AR	Santa Fe
 Parroquia La Merced Colón BA	Colón	AR	Buenos Aires
 Parroquia San José	Colón	AR	Buenos Aires
@@ -2656,7 +2656,7 @@ Capilla San Jose, Progreso Canelones	Canelones	UY	Canelones
 Parroquia San Antonio María Claret	Canelones	UY	Canelones
 Parroquia Santa Isabel de Hungría	Salinas	UY	Canelones
 parroquia del cristo obrero		UY	Canelones
-parroquia del cristo obrero		UY	Canelones
+Parroquia del Cristo Obrero		UY	Canelones
 Parroquia Santa Rosa de Lima	Canelones	UY	Canelones
 Capilla De Cella	Canelones	UY	Canelones
 Capilla De Cella	Canelones	UY	Lavalleja
@@ -2826,7 +2826,7 @@ Capilla de San José	El Bosque	CL	Santiago Metropolitan
 Capilla Santa Ana	El Bosque	CL	Santiago Metropolitan
 Capilla San Alban	El Bosque	CL	Santiago Metropolitan
 Parroquia del Espíritu Santo	El Bosque	CL	Santiago Metropolitan
-parroquia san columbano	El Bosque	CL	Santiago Metropolitan
+Parroquia San Columbano	El Bosque	CL	Santiago Metropolitan
 Capilla Santa Cruz	El Bosque	CL	Santiago Metropolitan
 Parroquia San Marcos	El Bosque	CL	Santiago Metropolitan
 Capilla Tantauco	El Bosque	CL	Santiago Metropolitan
@@ -4082,7 +4082,7 @@ Parroquia Nuestra Señora de la Candelaria	Córdoba	AR	Cordoba
 Inmaculada Concepción	Córdoba	AR	Cordoba
 Santuario María del Tránsito Cabanillas	Córdoba	AR	Cordoba
 Parroquia Nuestra Senora del Rosario y San Jose Obrero	Córdoba	AR	Cordoba
-Parroquia San Cayetano de Córdoba, Argentina.	Córdoba	AR	Cordoba
+Parroquia San Cayetano de Córdoba	Córdoba	AR	Cordoba
 Capilla virgen de los pobres - R.de Escalada	Córdoba	AR	Cordoba
 Parroquia Crucifixión del Señor	Córdoba	AR	Cordoba
 Parroquia San Nicolás de Bari	Córdoba	AR	Cordoba
@@ -4283,7 +4283,7 @@ Parroquia San Diego de Alcalá	Villa Gobernador Gálvez	AR	Santa Fe
 Villa Gobernador Gálvez. Iglesia Antigua	Villa Gobernador Gálvez	AR	Santa Fe
 Iglesia Catedral del Espíritu Santo	Villa Gobernador Gálvez	AR	Santa Fe
 Iglesia Santa Cecilia	Villa Gobernador Gálvez	AR	Santa Fe
-Parroquia Nuestra Señora de la Paz - V.Gdor.Gálvez	Villa Gobernador Gálvez	AR	Santa Fe
+Parroquia Nuestra Señora de la Paz - Villa Gobernador Gálvez	Villa Gobernador Gálvez	AR	Santa Fe
 Parroquia Nuestra Señora de la Merced	Rosario	AR	Santa Fe
 Parroquia Maria Mediadora de Todas las Gracias	Rosario	AR	Santa Fe
 Parroquia Nuestra Señora de Fátima	Rosario	AR	Santa Fe
@@ -4295,7 +4295,7 @@ Parroquia San Antonio Maria Gianelli	Rosario	AR	Santa Fe
 Fuente de Vida, Parroquia Sta Agripina, Rosario	Rosario	AR	Santa Fe
 Capilla Madre de la Esperanza	Rosario	AR	Santa Fe
 Parroquia San Cayetano Rosario - Santuario Arquidiocesano	Rosario	AR	Santa Fe
-iglesia san cayetano,rosario	Rosario	AR	Santa Fe
+Parroquia San Cayetano, Rosario	Rosario	AR	Santa Fe
 Basílica San José	Rosario	AR	Santa Fe
 Parroquia Nuestra Señora del Pilar	Rosario	AR	Santa Fe
 Oratorio San Pío de Pietrelcina	Rosario	AR	Santa Fe
@@ -4716,7 +4716,7 @@ Capilla De Adoración Perpetua	San Fernando del Valle de Catamarca	AR	Catamarca
 Catedral Basílica	San Fernando del Valle de Catamarca	AR	Catamarca
 Cathedral Basilica of Our Lady of the Valley	San Fernando del Valle de Catamarca	AR	Catamarca
 Catedral de la Virgen del Valle	San Fernando del Valle de Catamarca	AR	Catamarca
-conventosanfranciscocatamarca	San Fernando del Valle de Catamarca	AR	Catamarca
+Convento San Francisco, Catamarca	San Fernando del Valle de Catamarca	AR	Catamarca
 Parroquia San Antonio de Padua	San Fernando del Valle de Catamarca	AR	Catamarca
 capilla Nuestra sra del Rosario de San Nicolás Catamarca  	San Fernando del Valle de Catamarca	AR	Catamarca
 Iglesia De San Francisco	San Fernando del Valle de Catamarca	AR	Catamarca
@@ -4771,7 +4771,7 @@ Parroquia Virgen de Pompeya	Monte Caseros	AR	Corrientes
 Adoración Eucarística Perpetua- Monte Caseros	Monte Caseros	AR	Corrientes
 Acción Católica Monte Caseros	Monte Caseros	AR	Corrientes
 Parroquia SANTA ROSA DE LIMA	Artigas	UY	Artigas
-Parroquia Nuestra Señora del Rosario -Mte. Caseros.Ctes	Monte Caseros	AR	Corrientes
+Parroquia Nuestra Señora del Rosario - Monte Caseros	Monte Caseros	AR	Corrientes
 Capilla Nuestra Señora De Lourdes	Artigas	UY	Artigas
 Parroquia San Eugenio - Artigas - ROU	Artigas	UY	Artigas
 Mitra Diocesana de Uruguaiana - Paróquia São João Batista	Quaraí	BR	RS Rio Grande do Sul
@@ -6695,7 +6695,7 @@ Parroquia Nuestra Señora Del Carmen Agu	Aguilares	AR	Tucuman
 Parroquia San Cayetano	Aguilares	AR	Tucuman
 Parroquia Nuestra Señora del Perpetuo Socorro	Termas de Río Hondo	AR	Santiago del Estero
 IAM Parroquia Ntra. Sra. del Rosario- Hualfin	Hualfín	AR	Catamarca
-Capilla San Antonio de Padua -Piedra Grande-	Alpachiri	AR	Tucuman
+Capilla San Antonio de Padua - Piedra Grande	Alpachiri	AR	Tucuman
 Capilla Ntra Sra del Valle - Villa Nueva	Aguilares	AR	Tucuman
 Capilla Nuestra Senora del Valle	Aguilares	AR	Tucuman
 Capilla de San Nicolás	Concepción	AR	Tucuman
@@ -7235,7 +7235,7 @@ Parroquia San Miguel de Villarrica	Villarrica	PY	Guaira
 Nuestra Señora de la Asunción de Ybaroty	Villarrica	PY	Guaira
 Capilla Tres Ángeles Vca	Villarrica	PY	Guaira
 Capilla Espíritu Santo	Villarrica	PY	Guaira
-Parroquia Virgen de los 7 Dolores!	Félix Pérez Cardozo	PY	Guaira
+Parroquia Virgen de los 7 Dolores	Félix Pérez Cardozo	PY	Guaira
 Catedral De Villarrica.	Villarrica del Espíritu Santo	PY	Guaira
 Oratorio San Miguel	Yataity	PY	Guaira
 Parroquia San Isidro Labrador	Nueva Italia	PY	Central
@@ -11976,7 +11976,7 @@ Capela Divino Espírito Santo Heimital	Londrina	BR	PR Parana
 Capela São Miguel Arcanjo	Londrina	BR	PR Parana
 Paróquia Cristo Bom Pastor	Londrina	BR	PR Parana
 Comunidade São Leonardo Murialdo - Londrina	Londrina	BR	PR Parana
-capela n.s. aparecida	Londrina	BR	PR Parana
+Capela Nossa Senhora Aparecida	Londrina	BR	PR Parana
 Paróquia São Sebastião	Londrina	BR	PR Parana
 Capela Santa Paula	Ibiporã	BR	PR Parana
 Paróquia São Rafael	Ibiporã	BR	PR Parana
@@ -12810,7 +12810,7 @@ Mitra Diocesana de Itapeva - Paróquia São Roque	Buri	BR	SP Sao Paulo
 Paróquia São Roque de Buri	Buri	BR	SP Sao Paulo
 Capela De São José - Buri/sp	Buri	BR	SP Sao Paulo
 Igreja São José	Buri	BR	SP Sao Paulo
-Com.São Roque TurvodosAlmeidas		BR	SP Sao Paulo
+Comunidade São Roque - Turvo dos Almeidas		BR	SP Sao Paulo
 Comunidade SÃO PEDRO - Ba. Pocinho	São Miguel Arcanjo	BR	SP Sao Paulo
 Paróquia Nossa Senhora Aparecida Distrito Gramadao	São Miguel Arcanjo	BR	SP Sao Paulo
 Paróquia Santa Cruz Varginha	Itapetininga	BR	SP Sao Paulo
@@ -13182,7 +13182,7 @@ Capela Santa Gianna	São Manuel	BR	SP Sao Paulo
 Igreja Perpétuo Socorro -são Manuel	São Manuel	BR	SP Sao Paulo
 Comunidade Padre Pio	São Manuel	BR	SP Sao Paulo
 Igreja de São Benedito	São Manuel	BR	SP Sao Paulo
-🕍Santuário Santa Terezinha	São Manuel	BR	SP Sao Paulo
+Santuário Santa Terezinha	São Manuel	BR	SP Sao Paulo
 Paróquia Anglicana do Espírito Santo	São Manuel	BR	SP Sao Paulo
 Capela Santa Helena	São Manuel	BR	SP Sao Paulo
 Capela Santa Rita de Cássia	São Manuel	BR	SP Sao Paulo
@@ -20232,7 +20232,7 @@ Iglesia Nstra Senora Del Carmen - El Carmen	El Carmen	PE	Ica
 Parroquia Nuestra Señora de Guadalupe de Sunampe	Sunampe	PE	Ica
 Santísima Cruz de la Molina	Chincha Alta	PE	Ica
 Capilla Santa Rita	Chincha Alta	PE	Ica
-capilla cruz blanca	Chincha Alta	PE	Ica
+Capilla Cruz Blanca	Chincha Alta	PE	Ica
 MCC - Sub Secretariado Chincha	Chincha Alta	PE	Ica
 Capilla San Pedro Lomo Largo_oficial	Sunampe	PE	Ica
 Parroquia Nuestra Senora de Fatima	Chincha Alta	PE	Ica
@@ -20248,7 +20248,7 @@ Capilla Santa Rosa de las Americas	Pueblo Nuevo	PE	Ica
 Capilla Virgen De La Candelaria	San Vicente de Cañete	PE	Lima
 Ermita De Cancharí	San Vicente de Cañete	PE	Lima
 Santuario Madre del Amor Hermoso	San Vicente de Cañete	PE	Lima
-Catedral de San Vicente Mártir - Prelatura de Cañete y Yauyos, Prelatura de la Santa Cruz y del Opus Dei (	San Vicente de Cañete	PE	Lima
+Catedral de San Vicente Mártir - Cañete	San Vicente de Cañete	PE	Lima
 Iglesia De San Vicente Martir De Cañete	San Vicente de Cañete	PE	Lima
 Parroquia San Vicente Mártir - Cañete	San Vicente de Cañete	PE	Lima
 Capilla de San Hilarión	Cañete	PE	Lima
@@ -21296,7 +21296,7 @@ Santuario del Señor de Huanca	Cusco	PE	Cusco
 Huallhua, San Salvador	San Salvador	PE	Cusco
 Iglesia de Nuestra Senora de la Natividad	Chinchero	PE	Cusco
 Parroquia Santa Maria Magdalena De Taray	Taray	PE	Cusco
-Iglesia De San Pedro Apóstol, Pisac, Cusco, Perú	Pisac	PE	Cusco
+Iglesia de San Pedro Apóstol, Pisac	Pisac	PE	Cusco
 Parroquia San Miguel de Pitumarca	Sicuani	PE	Cusco
 Parroquia de San Pedro Apóstol de Andahuaylillas	Andahuaylillas	PE	Cusco
 La Ruta Del Barroco Andino	Andahuaylillas	PE	Cusco
@@ -21444,7 +21444,7 @@ Cathedral of Saint Ildefonso	Quillacollo	BO	Cochabamba
 Santuario de Urcupiña	Quillacollo	BO	Cochabamba
 Santisima Trinidad	Quillacollo	BO	Cochabamba
 Capilla Beato Rupert Mayer	Colcapirhua	BO	Cochabamba
-iglesia san miguel	Cochabamba	BO	Cochabamba
+Iglesia San Miguel	Cochabamba	BO	Cochabamba
 Parroquia Nuestra Señora de La Merced	Cochabamba	BO	Cochabamba
 Arquidiócesis de Cochabamba	Cochabamba	BO	Cochabamba
 Parroquia San Gerardo	Cochabamba	BO	Cochabamba
@@ -21612,7 +21612,7 @@ Centro Campestre "san juan"	Santa Cruz de la Sierra	BO	Santa Cruz
 Santuario La Roca IPUIB	Santa Cruz de la Sierra	BO	Santa Cruz
 Parroquia Madre Teresa de Calcuta	Santa Cruz de la Sierra	BO	Santa Cruz
 Santuario de la Purísima Concepción de la Virgen de Cotoca	Cotoca	BO	Santa Cruz
-capilla cristo resucitado	Santa Cruz de la Sierra	BO	Santa Cruz
+Capilla Cristo Resucitado	Santa Cruz de la Sierra	BO	Santa Cruz
 Oratorio de Adoración Perpetua Santa Cruz	Santa Cruz de la Sierra	BO	Santa Cruz
 Parroquia Nuestra Señora de Guadalupe, Hermanos Capuchinos.Santa Cruz, Bo"	Santa Cruz de la Sierra	BO	Santa Cruz
 Iglesia Nuestra Señora del Pilar	Santa Cruz de la Sierra	BO	Santa Cruz
@@ -22512,7 +22512,7 @@ Capela de Santa Maria Gorete	Bauru	BR	SP Sao Paulo
 Comunidade São João Batista - Paróquia Santo Antônio	Bauru	BR	SP Sao Paulo
 Capela Sao Miguel Arcanjo	Bauru	BR	SP Sao Paulo
 Paróquia São Brás	Bauru	BR	SP Sao Paulo
-igeja nossa senhora das gracas	Bauru	BR	SP Sao Paulo
+Igreja Nossa Senhora das Graças	Bauru	BR	SP Sao Paulo
 Igreja de São Miguel Arcanjo	Bauru	BR	SP Sao Paulo
 Capela Nossa Senhora De Guadalupe Bauru	Bauru	BR	SP Sao Paulo
 Paróquia Santa Edwiges	Bauru	BR	SP Sao Paulo
@@ -24545,7 +24545,7 @@ Mosteiro de Claraval	Claraval	BR	MG Minas Gerais
 Capela São Francisco de Assis	Claraval	BR	MG Minas Gerais
 Ibiraci,alto Da Boa Vista	Ibiraci	BR	MG Minas Gerais
 Ibiraci,alto Da Boa Vista	Ibiraci	BR	MG Minas Gerais
-paroquia nossa senhora das dores	Ibiraci	BR	MG Minas Gerais
+Paróquia Nossa Senhora das Dores	Ibiraci	BR	MG Minas Gerais
 Parish of St. Joseph	Capetinga	BR	MG Minas Gerais
 Igreja de Santo Antônio	Cássia	BR	MG Minas Gerais
 Santuário Santa Rita de Cássia Cássia MG	Cássia	BR	MG Minas Gerais
@@ -25534,7 +25534,7 @@ Capela Nossa Senhora de Fátima	Juscimeira	BR	MT Mato Grosso
 Paróquia Bom Jesus	Juscimeira	BR	MT Mato Grosso
 Igreja Matriz São Pedro Apóstolo	São Pedro da Cipa	BR	MT Mato Grosso
 Paróquia São Francisco de Assis	Jaciara	BR	MT Mato Grosso
-Capela SÃO SebastiÃO - ParÓQuia Santo AntÔNio - Bocaina - Leverger - Mt -	Santo Antônio de Leverger	BR	MT Mato Grosso
+Capela São Sebastião - Paróquia Santo Antônio - Bocaina	Santo Antônio de Leverger	BR	MT Mato Grosso
 Igreja Divino Espírito Santo	Várzea Grande	BR	MT Mato Grosso
 Igreja Nossa Senhora Aparecida	Várzea Grande	BR	MT Mato Grosso
 Igreja do Sagrado Coração de Jesus	Várzea Grande	BR	MT Mato Grosso
@@ -27166,7 +27166,7 @@ Parish and Convent of San Agustin	Guadalupe	PE	La Libertad
 Iglesia Matriz de Guadalupe	Guadalupe	PE	La Libertad
 Iglesia Wesleyana de Guadalupe	Guadalupe	PE	La Libertad
 San Isidro Labrador Church	Guadalupe	PE	La Libertad
-Iglesia de San Sebastián, Chepén, La Libertad, Perú	Chepén	PE	La Libertad
+Iglesia de San Sebastián, Chepén	Chepén	PE	La Libertad
 Parroquia San Sebastian de Chepen	Chepén	PE	La Libertad
 Colegio Capilla de unanca	San Pablo	PE	Cajamarca
 Santuario ETEN - Oficial	Eten	PE	Lambayeque
@@ -28263,7 +28263,7 @@ Parroquia Eclesiástica María Auxiliadora	Sabanilla	EC	Guayas
 Parroquia SAN Pedro Apóstol	Pedro Carbo	EC	Guayas
 Iglesia Catolica Santa Cruz	Pedro Carbo	EC	Guayas
 Iglesia Catolica San Pedro Apostol	Pedro Carbo	EC	Guayas
-Jipijapa - Parroquia - Pedro Pablo Gomez -		EC	Manabi
+Parroquia Pedro Pablo Gómez - Jipijapa		EC	Manabi
 Valle de la virgen, Pedro Carbo, Guayas	Pedro Carbo	EC	Guayas
 Puerto López, Iglesia Inmaculada Concepcion	Puerto Lopez	EC	Manabi
 Parroquia El Anegado	El Anegado	EC	Manabi
@@ -28566,7 +28566,7 @@ Igreja Imaculada Conceição de Maria	Tabatinga	BR	AM Amazonas
 Diocese do Alto Solimões	Tabatinga	BR	AM Amazonas
 Iglesia Santuario Divino Nino Jesus	Leticia	CO	Amazonas
 Catedral de Tabatinga - Paróquia dos Santos Anjos da Guarda	Leticia	CO	Amazonas
-Parroquia San José Obrero-Indiana, Perú	Indiana	PE	Loreto
+Parroquia San José Obrero-Indiana	Indiana	PE	Loreto
 Parroquia Inmaculada Concepcion Pebas	Pebas	PE	Loreto
 Iglesia Nuestra Senora de La Paz	Leticia	CO	Amazonas
 Capela São Francisco	São Paulo de Olivença	BR	AM Amazonas
@@ -31179,7 +31179,7 @@ Igreja São José Operário	Porto Real	BR	RJ Rio de Janeiro
 Santuário Diocesano de Adoração Coração Eucarístico de Jesus	Barra Mansa	BR	RJ Rio de Janeiro
 Comunidade Nossa Senhora de Fatima	Porto Real	BR	RJ Rio de Janeiro
 Comunidade São Sebastião-Porto Real/RJ	Porto Real	BR	RJ Rio de Janeiro
-comunidade são sebastião	Porto Real	BR	RJ Rio de Janeiro
+Comunidade São Sebastião	Porto Real	BR	RJ Rio de Janeiro
 Paróquia Nossa Senhora das Dores - Porto Real/RJ	Porto Real	BR	RJ Rio de Janeiro
 Comunidade Nossa Senhora Aparecida	Porto Real	BR	RJ Rio de Janeiro
 Comunidade São Miguel Arcanjo	Itatiaia	BR	RJ Rio de Janeiro
@@ -35064,7 +35064,7 @@ Paróquia São José	Eunápolis	BR	BA Bahia
 Paroquia Sao Jose Eunapolis	Eunápolis	BR	BA Bahia
 Paróquia Santo Antônio de Salinas	Santa Cruz de Salinas	BR	MG Minas Gerais
 Paroquia Senhor Bom Jesus	Santa Cruz de Salinas	BR	MG Minas Gerais
-Paróquia Nossa Senhora da Conceição -	Cachoeira de Pajeú	BR	MG Minas Gerais
+Paróquia Nossa Senhora da Conceição	Cachoeira de Pajeú	BR	MG Minas Gerais
 Paróquia Nossa S. da Conceição de Pedra Azul - MG/ Diocese de Araçuaí	Pedra Azul	BR	MG Minas Gerais
 Terço dos Homens - Pedra Azul, MG	Pedra Azul	BR	MG Minas Gerais
 Paróquia São Sebastião	Berizal	BR	MG Minas Gerais
@@ -39530,7 +39530,7 @@ Cruzeiro De Roma	Bananeiras	BR	PB Paraiba
 Igreja Nossa Senhora Da Boa Viagem	Bananeiras	BR	PB Paraiba
 Cruzeiro de Roma	Bananeiras	BR	PB Paraiba
 Pascom Santa Luzia	Bananeiras	BR	PB Paraiba
-💒Capela Nossa Sra da Pureza	Belém	BR	PB Paraiba
+Capela Nossa Senhora da Pureza	Belém	BR	PB Paraiba
 Paróquia Sagrada Família de Belém	Belém	BR	PB Paraiba
 Igreja Nossa Senhora da Conceição	Belém	BR	PB Paraiba
 Capela Nossa Senhora da Conceicao	Guarabira	BR	PB Paraiba
@@ -40118,7 +40118,7 @@ Novo Santuário São Francisco De Assis	Teresina	BR	PI Piaui
 Paróquia Santuário São Francisco	Teresina	BR	PI Piaui
 Church Santa Luzia	Teresina	BR	PI Piaui
 Igreja Nossa Senhora do Perpétuo Socorro	Teresina	BR	PI Piaui
-paróquia nossa senhora do desterro	Teresina	BR	PI Piaui
+Paróquia Nossa Senhora do Desterro	Teresina	BR	PI Piaui
 Santuário Arquidiocesano São Francisco de Assis	Teresina	BR	PI Piaui
 Capela de Nossa Senhora da Conceição Aparecida	Teresina	BR	PI Piaui
 Paróquia Cristo Libertador	Teresina	BR	PI Piaui
@@ -40957,7 +40957,7 @@ Capela do Divino Pai Eterno	Morrinhos	BR	CE Ceara
 Capela São João Batista	Morrinhos	BR	CE Ceara
 Paróquia Imaculada Conceição de Nossa Senhora	Marco	BR	CE Ceara
 Paróquia do Sagrado Coração de Maria	Morrinhos	BR	CE Ceara
-Capela São Francisco, Bairro Flores -	Amontada	BR	CE Ceara
+Capela São Francisco, Bairro Flores	Amontada	BR	CE Ceara
 Igreja Matriz De Amontada	Amontada	BR	CE Ceara
 Capela N. S. de Fátima Campo	Amontada	BR	CE Ceara
 Paróquia Nossa Senhora da Conceição-Amontada/Ce	Amontada	BR	CE Ceara
@@ -41395,7 +41395,7 @@ Paróquia Imaculada Conceição - Tabatinga/CE	Maranguape	BR	CE Ceara
 Igreja Nossa Senhora Conceição Da Tabatinga	Maranguape	BR	CE Ceara
 Capela de São Francisco	Caucaia	BR	CE Ceara
 Santuário de Nossa Senhora de Fátima	Maranguape	BR	CE Ceara
-Capela nossa senhora de fátima.gereraú	Maranguape	BR	CE Ceara
+Capela Nossa Senhora de Fátima - Gereraú	Maranguape	BR	CE Ceara
 Igreja de Santa Edwiges	Maranguape	BR	CE Ceara
 Capela Santo Antonio - Parque Santa Fé	Maranguape	BR	CE Ceara
 Capela Santa Rita De Cássia	Maranguape	BR	CE Ceara
@@ -43844,7 +43844,7 @@ Mwenyeheri Anuarite Makuburi Catholic Church	Dar es Salaam	TZ	Dar es Salaam
 Makuburi Catholic Parish	Dar es Salaam	TZ	Dar es Salaam
 Kibosho Parish	Dar es Salaam	TZ	Dar es Salaam
 Kanisa Kuu la Mt. Yosefu	Dar es Salaam	TZ	Dar es Salaam
-st joseph	Dar es Salaam	TZ	Dar es Salaam
+St Joseph	Dar es Salaam	TZ	Dar es Salaam
 IFM Catholic Charismatic Renewal Fellowship	Dar es Salaam	TZ	Dar es Salaam
 St. Imacculate Parish	Dar es Salaam	TZ	Dar es Salaam
 Mt. Anna Catholic Church Hananasif	Dar es Salaam	TZ	Dar es Salaam
@@ -51858,7 +51858,7 @@ Centro De Catecismo Nuestra Señora De La Encarnacion Jesus Maria Ags	Jesús Mar
 Sector Virgen de San Juan. La escalera, Jesús María, Aguascalientes.	Jesús María	MX	AGU Aguascalientes
 Parroquia San Felipe	Jesús María	MX	AGU Aguascalientes
 Capellanía San Antonio de Padua - San Antonio de los Horcones	Jesús María	MX	AGU Aguascalientes
-catedral de aguascalientes	Jesús María	MX	AGU Aguascalientes
+Catedral de Aguascalientes	Jesús María	MX	AGU Aguascalientes
 Catedral de Jesús Maria	Jesús María	MX	AGU Aguascalientes
 Parroquia Maria Madre de Misericordia	Aguascalientes	MX	AGU Aguascalientes
 Nuestra Señora del Rosario de Fátima	Aguascalientes	MX	AGU Aguascalientes
@@ -53010,7 +53010,7 @@ Parroquia del Sagrado Corazon de Jesus	Valle de Bravo	MX	Mexico
 San Nicolas Tolentino	Valle de Bravo	MX	Mexico
 Parroquia de Nuestra Señora de Guadalupe	Juárez	MX	MIC Michoacan
 Parroquia de nuestra Señora De Fatima	Valle de Bravo	MX	Mexico
-Nuestra Señora de Fátima Avandaro, México	Valle de Bravo	MX	Mexico
+Nuestra Señora de Fátima Avandaro	Valle de Bravo	MX	Mexico
 Santuario de Santa Maria	Valle de Bravo	MX	Mexico
 Cathedral of San Francisco de Asis	Valle de Bravo	MX	Mexico
 Catedral Valle Bravo	Valle de Bravo	MX	Mexico
@@ -53025,7 +53025,7 @@ Parroquia La Asunción de María	Valle de Bravo	MX	Mexico
 Capilla de San Andrés Apóstol.	Estado de México	MX	Mexico
 Parroquia San Jerónimo Amanalco	Amanalco	MX	Mexico
 Parroquia de la Virgen de la Asunción	Donato Guerra	MX	Mexico
-Parroquia Santa Rosa de Lima de Tafetán, Michoacán de Ocampo, México	Tafetán	MX	MIC Michoacan
+Parroquia Santa Rosa de Lima, Tafetán	Tafetán	MX	MIC Michoacan
 Parroquia Nuestra Senora de la Paz	Tzitzio	MX	MIC Michoacan
 Parroquia de San Guillermo	Tzitzio	MX	MIC Michoacan
 capilla de socialista Ntra. Sra. de Guadalupe  	Morelia	MX	MIC Michoacan
@@ -58133,7 +58133,7 @@ Parroquia de Cristo Rey Diócesis de Teotihuacan Oficial	Tecámac	MX	Mexico
 Capilla La Purisima Concepcion de Maria	Tecámac	MX	Mexico
 Parroquia San José en Los Héroes, Tecámac, México.	Tecámac	MX	MOR Morelos
 Parroquia de la Santa Cruz	Tecámac	MX	MOR Morelos
-Parroquia San José en Los Héroes, Tecámac, México.	Tecámac	MX	MOR Morelos
+Parroquia San José en Los Héroes, Tecámac	Tecámac	MX	MOR Morelos
 Santiago Apóstol	Nextlalpan	MX	MOR Morelos
 San Francisco de Asís, Molonco	Nextlalpan	MX	Mexico
 San Andrés Apóstol	Jaltenco	MX	MOR Morelos
@@ -59384,7 +59384,7 @@ Santuario de Santa Maria de Guadalupe en Rioverde	Rioverde	MX	SLP San Luis Potos
 Pascua Sta Maria Refugio Pecadores 2020	Rioverde	MX	SLP San Luis Potosi
 Santuario de Guadalupe	Rioverde	MX	SLP San Luis Potosi
 Nuestra Señora de Lourdes	Rioverde	MX	SLP San Luis Potosi
-Capilla de Adoración Perpetua, Rioverde, SLP, México	Rioverde	MX	SLP San Luis Potosi
+Capilla de Adoración Perpetua, Rioverde	Rioverde	MX	SLP San Luis Potosi
 Parroquia de Santa Elena	Rioverde	MX	SLP San Luis Potosi
 Capilla de San Antonio	Rioverde	MX	SLP San Luis Potosi
 Parroquia Dulce Nombre de Jesus	Ciudad Fernández	MX	SLP San Luis Potosi
@@ -60692,7 +60692,7 @@ Iglesia Nuestra Senora de Lourdes	La Paz	MX	BCS Baja California Sur
 Iglesia Santa Cecilia	La Paz	MX	BCS Baja California Sur
 Capilla Nuestra Senora de Fatima	La Paz	MX	BCS Baja California Sur
 Parroquia Nuestra Senora del Rosario	La Paz	MX	BCS Baja California Sur
-capilla cristro rey	La Paz	MX	BCS Baja California Sur
+Capilla Cristo Rey	La Paz	MX	BCS Baja California Sur
 Parroquia Santo Niño de la Salud	La Paz	MX	BCS Baja California Sur
 Iglesia La Resurrección del Señor	La Paz	MX	BCS Baja California Sur
 Capilla Sagrado Corazon de Jesus y Maria	La Paz	MX	BCS Baja California Sur
@@ -60974,7 +60974,7 @@ Parroquia de San José de la Isla	Genaro Codina	MX	ZAC Zacatecas
 Parroquia San Jerónimo	Guadalupe	MX	ZAC Zacatecas
 Capilla SUD Ojocaliente	Ojocaliente	MX	ZAC Zacatecas
 Parroquia Nuestra Senora de los Milagros	Ojocaliente	MX	ZAC Zacatecas
-parroquia san pablo apostol	General Pánfilo Natera	MX	ZAC Zacatecas
+Parroquia San Pablo Apóstol	General Pánfilo Natera	MX	ZAC Zacatecas
 Capilla de la Virgen de San Juan	General Pánfilo Natera	MX	ZAC Zacatecas
 Parroquia De Nuestra Señora De Los Dolores Zacatecas	Zacatecas	MX	ZAC Zacatecas
 Parroquia San José De Los Campos	Guadalupe	MX	ZAC Zacatecas
@@ -61240,7 +61240,7 @@ Parroquia Marìa Madre de la Iglesia en el Cañón de Jimulco		MX	DUR Durango
 Parroquia de San Gregorio Magno	Mazapil	MX	ZAC Zacatecas
 Parroquia de la Inmaculada Concepción	Concepción del Oro	MX	ZAC Zacatecas
 Iglesia	Concepción del Oro	MX	ZAC Zacatecas
-Mision San Javier, Bcs, Mexico	Loreto	MX	BCS Baja California Sur
+Misión San Javier	Loreto	MX	BCS Baja California Sur
 Parroquia Nuestra Señora de Loreto	Loreto	MX	BCS Baja California Sur
 Parish of Our Lady of Guadalupe	Ahome	MX	SIN Sinaloa
 Parroquia Nuestra Senora del Carmen	Gabriel Leyva S (B Juárez)	MX	SIN Sinaloa
@@ -61988,7 +61988,7 @@ Capilla de La Sagrada Familia	Ciudad Victoria	MX	TAM Tamaulipas
 Santuario del Caminero	Ciudad Victoria	MX	TAM Tamaulipas
 Parroquia de Nuestra Señora de San Juan de los Lagos	Ciudad Victoria	MX	TAM Tamaulipas
 Iglesia de nuestra señora de Lourdes 	Ciudad Victoria	MX	TAM Tamaulipas
-iglesia maria auxiliadora	Ciudad Victoria	MX	TAM Tamaulipas
+Iglesia María Auxiliadora	Ciudad Victoria	MX	TAM Tamaulipas
 Parroquia El Caminero	Ciudad Victoria	MX	TAM Tamaulipas
 Capilla de la Medalla Milagrosa	Victoria	MX	TAM Tamaulipas
 Parroquia de la Divina Providencia	Ciudad Victoria	MX	TAM Tamaulipas
@@ -72148,7 +72148,7 @@ Jardin De La Santísima Virgen Oporapa Huila	Oporapa	CO	Huila
 Parroquia San Antonio de Padua	Guapi	CO	Cauca
 Cathedral Inmaculada Concepcion	Guapi	CO	Cauca
 Parroquia Cristo Sacerdote	Patía	CO	Cauca
-La Virgen De Parragas, cauca, Colombia	Rosas	CO	Cauca
+La Virgen de Parragas	Rosas	CO	Cauca
 Iglesi San pedro	Timbío	CO	Cauca
 Parroquia San Pedro Timbio Cauca	Timbío	CO	Cauca
 Iglesia Nuestra Señora del Rosario de las Lajas	Timbío	CO	Cauca
@@ -73428,7 +73428,7 @@ Parroquia Virgen de la Medalla Milagrosa - Hnas Vicentinas	Bogotá, D.C.	CO	Bogo
 Parroquia san Jeronimo Emiliani	Bogotá, D.C.	CO	Bogota D.C.
 Casa Cural Parroquia San Pedro Claver	Bogotá, D.C.	CO	Bogota D.C.
 Parroquia Santos Cosme y Damian	Bogotá, D.C.	CO	Bogota D.C.
-delicias santa ana	Bogotá, D.C.	CO	Bogota D.C.
+Santa Ana, Delicias	Bogotá, D.C.	CO	Bogota D.C.
 Parroquia Nuestra Señora Del Pilar	Bogotá, D.C.	CO	Bogota D.C.
 Parroquia Alemana San Miguel Arcángel	Bogotá, D.C.	CO	Bogota D.C.
 Vicaría Inmaculada Concepción	Bogotá, D.C.	CO	Bogota D.C.
