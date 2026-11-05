@@ -3213,8 +3213,8 @@ async function selectChurch(i, { fly = true } = {}) {
   map.getSource('sel').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lt] }, properties: {} }] });
   lastInteract = performance.now();
   const wide = innerWidth > 640;
-  // phones stop further out, so the streets and churches around it stay in view
-  const closeIn = matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)').matches ? Math.min(Math.max(map.getZoom(), 11.5), 14) : Math.max(map.getZoom(), 13);
+  // phones stop a little further out than PCs, so the streets and churches around it stay in view
+  const closeIn = matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)').matches ? Math.min(Math.max(map.getZoom(), 12.5), 14) : Math.max(map.getZoom(), 13);
   if (fly) map.flyTo({ center: [lng, lt], zoom: closeIn, speed: 1.4, curve: 1.5, pitch: 30, padding: cardPad(wide), essential: true });
   const t = state.typ[i] & 7; const byName = state.typ[i] >> 3;
   const sc = scene(t, lng, lt);
