@@ -3230,7 +3230,8 @@ async function selectChurch(i, { fly = true } = {}) {
   let webInfo;
   try { [rec, webInfo] = await Promise.all([shardFor(i), webFor(i)]); } catch (err) { if (state.selected === i) $('cardBody').innerHTML = `<div><h2 id="cName">${esc(tr('detailsFailed'))}</h2><p class="where">${esc(tr('checkConnection'))}</p></div>`; return; }
   if (state.selected !== i) return;
-  const [name, street, town, region, postcode, cc, web0, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const [name, street, town, regionRaw, postcode, cc, web0, phone, socials, conf, datasets, oid, how, updated] = rec;
+  const region = /^[\d\s.,\-\/]+$/.test(regionRaw || '') ? '' : regionRaw;  // some sources give the region as a number code (Italy "52", Poland "24"): not for readers
   const web = webInfo.fix.web || web0;
   const shown = churchName(i, name);  // the name in the page's script; the original stays beneath it
   const addr = postalLines(street, town, region, postcode, cc);
