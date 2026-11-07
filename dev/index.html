@@ -4654,8 +4654,8 @@ let theme = 'parchment';  // the default for first visits
 try { const t = localStorage.getItem(THEME_KEY); if (t in THEMES) theme = t; } catch (e) {}
 document.documentElement.dataset.theme = theme;
 const themeMap = () => ({ ...NIGHT, ...THEMES[theme], streets: { ...NIGHT.streets, ...(THEMES[theme].streets || {}) } });
-// the white marks (Resurrection & Ascension, Glorious Mysteries) vanish on Parchment's cream: there they turn a deep teal, a colour no other mark uses
-const LIFE_ON_LIGHT = { '#fdf6e3': '#1f8a8a' };
+// the white marks (Resurrection & Ascension, Glorious Mysteries) vanish on Parchment's cream: there they turn pink
+const LIFE_ON_LIGHT = { '#fdf6e3': '#d64f97' };
 function tintLife() {
   const d = life.data; if (!d) return;
   const light = !!themeMap().pinText; let changed = false;
