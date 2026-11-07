@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="night">
+<html lang="en" data-theme="parchment">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -88,8 +88,8 @@
 ]}
 </script>
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#05070d">
-<script>/* the saved theme before anything paints; Night Sky for first visits */try{var t=localStorage.getItem('ccf-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<meta name="theme-color" content="#efe7d3">
+<script>/* the saved theme before anything paints; Parchment for first visits */try{var t=localStorage.getItem('ccf-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Church Finder">
@@ -4648,7 +4648,7 @@ const THEMES = {
   contrast: { ocean: '#000a1a', land: ['#1d1d1d', '#1d1d1d', '#222', '#222'], landEdge: '#ffffff', urban: '#333', lakes: '#000a1a', rivers: '#1d4f94', states: '#bbbbbb', borders: '#ffffff',
     label: ['#ffffff', '#ffffff'], halo: '#000000', sky: ['#000', '#333', '#000a1a'] },
 };
-let theme = 'night';  // the default for first visits
+let theme = 'parchment';  // the default for first visits
 try { const t = localStorage.getItem(THEME_KEY); if (t in THEMES) theme = t; } catch (e) {}
 document.documentElement.dataset.theme = theme;
 const themeMap = () => ({ ...NIGHT, ...THEMES[theme], streets: { ...NIGHT.streets, ...(THEMES[theme].streets || {}) } });
@@ -4673,7 +4673,7 @@ function renderThemes() {
   $('themeSel').innerHTML = Object.keys(THEMES).map(k => `<option value="${k}"${k === theme ? ' selected' : ''}>${esc(tr('theme_' + k))}</option>`).join('');
 }
 $('themeSel').addEventListener('change', (e) => {
-  theme = e.target.value in THEMES ? e.target.value : 'night';
+  theme = e.target.value in THEMES ? e.target.value : 'parchment';
   try { localStorage.setItem(THEME_KEY, theme); } catch (err) {}
   document.documentElement.dataset.theme = theme; track('theme/' + theme);
   paintTheme();
@@ -4698,8 +4698,8 @@ document.addEventListener('ccf-reset', () => {
     if (life.data && life.era !== 'all') setLifeEra('all');
     if (bible.data && bible.group !== 'all') { bible.group = 'all'; if (map.getSource('b-places')) map.getSource('b-places').setData(bibleFeatures()); htmlLabels.refresh(); }
     if (state.mode === 'bible') { if (bible.data) { renderBibleChips(); bibleTagline(); } } else if (state.mode === 'jesus') { if (life.data) renderLifeChips(); } else if (state.meta) { renderChips(); updateTagline(); }
-    // Night Sky
-    if (theme !== 'night') { theme = 'night'; document.documentElement.dataset.theme = theme; renderThemes(); paintTheme(); }
+    // Parchment
+    if (theme !== 'parchment') { theme = 'parchment'; document.documentElement.dataset.theme = theme; renderThemes(); paintTheme(); }
     // the visitor's own language (from the browser), as on a first visit
     const lang = detectLang();
     if (lang !== i18n.code) { $('langSel').value = lang; $('langSel').dispatchEvent(new Event('change')); try { localStorage.removeItem(LANG_KEY); } catch (e) {} }
