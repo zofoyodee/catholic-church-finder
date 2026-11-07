@@ -4652,7 +4652,20 @@ let theme = 'parchment';  // the default for first visits
 try { const t = localStorage.getItem(THEME_KEY); if (t in THEMES) theme = t; } catch (e) {}
 document.documentElement.dataset.theme = theme;
 const themeMap = () => ({ ...NIGHT, ...THEMES[theme], streets: { ...NIGHT.streets, ...(THEMES[theme].streets || {}) } });
+// the white marks (Resurrection & Ascension, Glorious Mysteries) vanish on Parchment's cream: there they turn pink
+const LIFE_ON_LIGHT = { '#fdf6e3': '#d64f97' };
+function tintLife() {
+  const d = life.data; if (!d) return;
+  const light = !!themeMap().pinText; let changed = false;
+  for (const r of [...d.eras, ...d.rosary.sets]) { r.c0 = r.c0 || r.color; const c = (light && LIFE_ON_LIGHT[r.c0]) || r.c0; if (c !== r.color) { r.color = c; changed = true; } }
+  if (!changed) return;
+  d.color = Object.fromEntries(d.eras.map(e => [e.k, e.color])); d.roColor = Object.fromEntries(d.rosary.sets.map(r => [r.k, r.color]));
+  if (map.getSource('j-places')) { const g = lifeGeo(); map.getSource('j-places').setData(g.places); map.getSource('j-route').setData(g.route); }
+  if (state.mode === 'jesus') renderLifeChips();
+  buildTimeline(); markTrack();
+}
 function paintTheme() {
+  tintLife();
   const m = themeMap(), set = (id, prop, v) => { if (map.getLayer(id)) map.setPaintProperty(id, prop, v); };
   set('ocean', 'background-color', m.ocean);
   set('land', 'fill-color', ['interpolate', ['linear'], ['zoom'], 0, m.land[0], 6, m.land[1], 9, m.land[2], 12, m.land[3]]);
