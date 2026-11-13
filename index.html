@@ -3149,7 +3149,10 @@ function wireShare(i, name, place) {
   $('shareMail').href = `mailto:?subject=${encodeURIComponent(tr('mailSubject', { name: title }))}&body=${encodeURIComponent(text + '\n\n' + tr('mailBody') + '\n' + url + '\n')}`;
   $('shareMail').addEventListener('click', () => setOpen(false));
   $('shareMore').hidden = !navigator.share;
-  $('shareMore').addEventListener('click', () => { setOpen(false); navigator.share({ title, text, url }).catch(() => {}); });
+  // a computer's share sheet (Windows into Outlook, for one) often drops the url and the title, so the
+  // message itself carries the name, the link and a line saying what it is
+  const fullText = text + '\n\n' + tr('mailBody') + '\n' + url;
+  $('shareMore').addEventListener('click', () => { setOpen(false); navigator.share({ title: tr('mailSubject', { name: title }), text: fullText, url }).catch(() => {}); });
   $('shareCopy').addEventListener('click', async () => {
     let ok = false;
     try { await navigator.clipboard.writeText(url); ok = true; } catch (e) {
