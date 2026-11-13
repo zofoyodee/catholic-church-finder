@@ -66,7 +66,7 @@ E = [
  ('hidden', 'egypt', 'The Flight into Egypt', 'Matthew 2:13-15', "Warned in a dream, Saint Joseph rises by night and takes the Child and His mother into Egypt, beyond the reach of Herod, fulfilling \"Out of Egypt I called my son\" (Hosea 11:1)."),
  ('hidden', 'nazareth', 'The Return to Nazareth', 'Matthew 2:19-23; Luke 2:39-40', "After Herod's death the Holy Family settles in Nazareth, and \"the child grew and became strong, filled with wisdom; and the favor of God was upon him\"."),
  ('hidden', 'temple', 'The Finding in the Temple', 'Luke 2:41-50', "At twelve He stays behind in Jerusalem after Passover. On the third day Mary and Joseph find Him among the teachers: \"Did you not know that I must be in my Father's house?\""),
- ('hidden', 'nazareth', 'The Hidden Life', 'Luke 2:51-52; Mark 6:3', "For some thirty years He lives at Nazareth, obedient to Mary and Joseph, working as a carpenter and advancing in wisdom and age and favor before God and man."),
+ ('hidden', 'nazareth', 'Unknown Life', 'Luke 2:51-52; Mark 6:3', "For some thirty years He lives at Nazareth, obedient to Mary and Joseph, working as a carpenter and advancing in wisdom and age and favor before God and man."),
 
  ('ministry', 'jordan', 'The Baptism of the Lord', 'Matthew 3:13-17; Mark 1:9-11; Luke 3:21-22', "John baptizes Him in the Jordan. The heavens open, the Holy Spirit descends like a dove, and the Father's voice says: \"This is my beloved Son, with whom I am well pleased.\""),
  ('ministry', 'desert', 'Forty Days in the Desert', 'Matthew 4:1-11; Luke 4:1-13', "Led by the Spirit into the desert, He fasts forty days and forty nights and overcomes the temptations of the devil with the word of God."),
