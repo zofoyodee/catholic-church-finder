@@ -2994,7 +2994,7 @@ $('spin').addEventListener('click', () => {
 $('zin').addEventListener('click', () => { lastInteract = performance.now(); map.zoomIn({ duration: 400 }); });
 $('zout').addEventListener('click', () => { lastInteract = performance.now(); map.zoomOut({ duration: 400 }); });
 // Whole Globe: the whole world on every tab (Jeff), not just the Holy Land overview
-$('home').addEventListener('click', () => { closeCard(); if (state.mode === 'jesus') lifePause(); map.flyTo({ center: [map.getCenter().lng, 20], zoom: phoneNow() ? 0.9 : 1.4, pitch: 0, bearing: 0, padding: viewPad(), duration: 1800 }); });
+$('home').addEventListener('click', () => { closeCard(); if (state.mode === 'jesus') lifePause(); map.flyTo({ center: [map.getCenter().lng, 20], zoom: worldZoom(), pitch: 0, bearing: 0, padding: viewPad(), duration: 1800 }); });
 $('rand').addEventListener('click', () => {
   if (state.mode === 'bible') { if (bible.data) { const ps = bibleVisible(); openBiblePlace(ps[Math.floor(Math.random() * ps.length)].id); } return; }
   if (state.mode === 'jesus') { if (life.data) { const evs = lifeEvents(); lifePause(); goEvent(evs[Math.floor(Math.random() * evs.length)].i); } return; }
@@ -3135,6 +3135,14 @@ const churchLink = (i) => location.origin + location.pathname + '?church=' + i;
 // the open sky between the search bar and the tabs on phones; a padding set by one camera move
 // sticks for the next, so overviews reset it to this rather than keep a closed card's
 const phoneNow = () => matchMedia('(max-width: 640px), (max-height: 500px) and (orientation: landscape)').matches;
+// Whole Globe zoom: the globe fills most of the free space, so it is the same size on every tab and never tiny
+// on a big PC screen (Jeff). Globe diameter in px is about 512 * 2^zoom * cos(20°) / π with the center at 20° N.
+function worldZoom() {
+  if (phoneNow()) return 0.9;  // phones were already right
+  const h = innerHeight - 160, w = innerWidth;
+  const d = Math.min(h * 0.82, w * 0.9);
+  return Math.min(3, Math.max(1.4, Math.log2(d * Math.PI / (512 * Math.cos(20 * Math.PI / 180)))));
+}
 function viewPad() {
   if (!phoneNow()) return { top: 0, bottom: 0, left: 0, right: 0 };
   const top = Math.round(document.querySelector('.search').getBoundingClientRect().bottom), nav = $('mnav'), r = nav ? nav.getBoundingClientRect() : null;
@@ -4724,7 +4732,7 @@ document.addEventListener('ccf-reset', () => {
   } catch (e) { console.warn('reset', e); }
   // and the whole world, on every tab (Life of Jesus and Bible Locations too, not just their own overview)
   if (state.mode === 'jesus') lifePause();
-  map.flyTo({ center: [map.getCenter().lng, 20], zoom: phoneNow() ? 0.9 : 1.4, pitch: 0, bearing: 0, padding: viewPad(), duration: 1800 });
+  map.flyTo({ center: [map.getCenter().lng, 20], zoom: worldZoom(), pitch: 0, bearing: 0, padding: viewPad(), duration: 1800 });
 });
 
 /* ---------- hooks for app/engage.js (tours, church of the day, globe view) ---------- */
