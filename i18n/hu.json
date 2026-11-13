@@ -321,7 +321,7 @@
   "jFailed": "Jézus életét nem sikerült betölteni. Ellenőrizd a kapcsolatot.",
   "jTagline_one": "Urunk életének <b>{n}</b> eseménye <b>{p}</b> helyszínen · koppints az idővonalra vagy egy tűre",
   "jTagline_other": "Urunk életének <b>{n}</b> eseménye <b>{p}</b> helyszínen · koppints az idővonalra vagy egy tűre",
-  "jEra_hidden": "Születés és rejtett élet",
+  "jEra_hidden": "Születés és ismeretlen élet",
   "jEra_ministry": "Nyilvános működés",
   "jEra_journey": "Úton Jeruzsálem felé",
   "jEra_passion": "Nagyhét és szenvedés",
