@@ -94,6 +94,10 @@ body.bible-mode .ms-acts .church-only { display: none; }
 .msheet .foot::before { display: none; }
 .msheet .foot button { font-size: 12.5px; }
 
+/* phones: the photo scrolls away with the text, only the Back and X buttons stay at the top (Jeff) */
+.compact .card { overflow-y: auto; overscroll-behavior: contain; }
+.compact .card .body { overflow: visible; flex: none; }
+
 /* the details card stops above the tabs, so they stay in reach */
 @media (max-width: 640px) { .compact .card { bottom: calc(var(--nav-h) + 6px); max-height: calc(100% - var(--nav-h) - 74px); } }
 
