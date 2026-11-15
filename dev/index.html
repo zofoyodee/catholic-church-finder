@@ -490,7 +490,9 @@ body.card-open .ctrls { right: calc(max(16px, env(safe-area-inset-right, 0px)) +
   background: rgba(5, 7, 13, 0.6); color: #fff; font-size: 13px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; z-index: 2;
 }
 .card .back svg { width: 18px; height: 18px; stroke: #fff; stroke-width: 2; }
-.card .hero:has(#cardBack:not([hidden])) .credit { left: 92px; }
+.card:has(#cardBack:not([hidden])) .hero .credit { left: 92px; }
+/* the Back and X buttons sit in a zero-height strip over the photo; on phones the whole card scrolls and the strip stays at the top (Jeff) */
+.card .card-btns { position: sticky; top: 0; z-index: 3; height: 0; flex: none; }
 .card .close {
   position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; border: 0;
   background: rgba(5, 7, 13, 0.6); cursor: pointer; display: grid; place-items: center; z-index: 2;
@@ -735,12 +737,12 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 .glabel.city.big { font-size: 15px; color: #fdf6e3; }
 .glabel.land { font-size: 13px; letter-spacing: 0.1em; opacity: 0.85; color: #f3d58c; }
 </style>
-<link rel="stylesheet" href="dev/app/engage.css?v=126">
-<link rel="stylesheet" href="dev/app/mobile.css?v=126">
-<link rel="stylesheet" href="dev/app/desktop.css?v=126">
+<link rel="stylesheet" href="dev/app/engage.css?v=127">
+<link rel="stylesheet" href="dev/app/mobile.css?v=127">
+<link rel="stylesheet" href="dev/app/desktop.css?v=127">
 </head>
 <body>
-<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-14 19:50 UTC -->
+<div style="position:fixed;z-index:30;top:0;left:50%;transform:translateX(-50%);background:#e8b84a;color:#1a1406;font:700 10px/1 system-ui,sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:0 0 8px 8px;white-space:nowrap;pointer-events:none">TEST SITE</div><!-- built 2026-11-15 04:51 UTC -->
 <noscript><h1>Catholic Church Finder</h1><p>Find a Catholic church anywhere in the world on an interactive 3D globe: Mass and Confession times near you, photos of parishes, cathedrals and basilicas, the places of Sacred Scripture and the life of Our Lord Jesus Christ. Please turn on JavaScript to open the globe.</p></noscript>
 <div id="stage"><div id="map" role="application" aria-label="Interactive globe of Catholic churches" data-i18n-attr="aria-label:mapLabel"></div></div>
 
@@ -842,10 +844,11 @@ button.near small { display: block; font-size: 11.5px; color: var(--ink-soft); }
 </aside>
 
 <aside id="card" class="card" hidden aria-labelledby="cName" role="dialog">
-  <div class="hero" id="hero">
+  <div class="card-btns">
     <button class="back" id="cardBack" hidden data-i18n-attr="aria-label:backToList"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7"/></svg><span data-i18n="backList">List</span></button>
     <button class="close" id="cardClose" aria-label="Close details" data-i18n-attr="aria-label:closeDetails"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
+  <div class="hero" id="hero"></div>
   <div class="body" id="cardBody"></div>
 </aside>
 
@@ -3241,6 +3244,7 @@ async function selectChurch(i, { fly = true } = {}) {
   hero.insertAdjacentHTML('afterbegin', sc.svg);
   showPhoto(i);
   $('cardBody').innerHTML = `<div><h2 id="cName">${LOADER(tr('loading'), 'inline')}</h2></div>`;
+  $('card').scrollTop = 0;
   $('card').hidden = false;
   let rec;
   let webInfo;
@@ -4247,7 +4251,7 @@ async function openBiblePlace(id, { fly = true } = {}) {
   $('bFly').addEventListener('click', () => map.flyTo({ center: [p.ll[1], p.ll[0]], zoom: 14, pitch: 50, bearing: map.getBearing() + 30, duration: 2200, padding: wide ? { right: 440, left: 0, top: 0, bottom: 0 } : { bottom: innerHeight * 0.55, top: 0, left: 0, right: 0 } }));
   bibleShare(bibleLink('bible=' + p.id), tr('bShareTitle', { name: p.n }));
   try { history.replaceState(null, '', location.pathname + '?bible=' + p.id); } catch (e) {}
-  $('cardBody').scrollTop = 0;
+  $('cardBody').scrollTop = $('card').scrollTop = 0;
   fillNearby(p);
 }
 async function openBibleLand(k, { fly = true } = {}) {
@@ -4274,7 +4278,7 @@ async function openBibleLand(k, { fly = true } = {}) {
   $('card').hidden = false;
   bibleShare(bibleLink('land=' + k), tr('bShareLand', { land: l.n, a: l.a }));
   try { history.replaceState(null, '', location.pathname + '?land=' + k); } catch (e) {}
-  $('cardBody').scrollTop = 0;
+  $('cardBody').scrollTop = $('card').scrollTop = 0;
 }
 
 /* ---------- Life of Jesus: a third mode following Our Lord through the Gospels, in order, along a timeline ----------
@@ -4553,7 +4557,7 @@ async function openLifePlace(id, { fly = true } = {}) {
   if (fly) map.flyTo({ center: lifeLL(p), zoom: Math.max(map.getZoom(), lifeZoom(p)), pitch: 30, speed: 1.3, padding: lifePad(), essential: true });
   if (!sameCard) bibleHero(p.n, p.m, p.w);
   const eras = [...new Set(p.ev.map(e => e.e))];
-  const scroll = sameCard ? $('cardBody').scrollTop : 0;
+  const scroll = sameCard ? $('cardBody').scrollTop : 0, cardScroll = sameCard ? $('card').scrollTop : 0;
   $('cardBody').dataset.jplace = id; delete $('cardBody').dataset.rosary;
   $('cardBody').innerHTML = `
     <div>
@@ -4575,7 +4579,7 @@ async function openLifePlace(id, { fly = true } = {}) {
   $('jPlayHere').addEventListener('click', () => { const e = p.ev.find(x => life.era === 'all' || x.e === life.era) || p.ev[0]; life.auto = true; goEvent(e.i); });
   bibleShare(bibleLink('jesus=' + p.id), tr('jShareTitle', { name: p.n }));
   try { history.replaceState(null, '', location.pathname + '?jesus=' + p.id); } catch (e) {}
-  $('cardBody').scrollTop = scroll;
+  $('cardBody').scrollTop = scroll; $('card').scrollTop = cardScroll;
   fillNearby(p);
 }
 
@@ -4616,7 +4620,7 @@ function openLifeMoment(k) {
   $('jNextM').addEventListener('click', () => { lifePause(); if (next) goEvent(next.i, { card: true }); });
   $('jPlayHere').addEventListener('click', () => { if (life.auto) { lifePause(); map.stop(); openLifeMoment(k); return; } life.auto = true; renderNow(); if (next) goEvent(next.i, { card: true }); else goEvent(k, { card: true }); });
   bibleShare(bibleLink('life=' + (k + 1)), tr('jShareMoment', { name: e.t }));
-  $('cardBody').scrollTop = 0;
+  $('cardBody').scrollTop = $('card').scrollTop = 0;
   fillNearby(p);
 }
 /* the Rosary: one set of mysteries in a moment's card, and the whole Rosary with how it came to be */
@@ -4640,7 +4644,7 @@ function openRosary() {
       <div class="actions"><a class="btn" href="https://www.usccb.org/how-to-pray-the-rosary" target="_blank" rel="noopener">${esc(tr('jRosaryPray'))}</a>
       <a class="btn" href="https://www.vatican.va/content/john-paul-ii/en/apost_letters/2002/documents/hf_jp-ii_apl_20021016_rosarium-virginis-mariae.html" target="_blank" rel="noopener">Rosarium Virginis Mariae</a></div></div>
     ${d.rosary.sets.map(r => rosarySet(r.k)).join('')}`;
-  $('cardBody').scrollTop = 0;
+  $('cardBody').scrollTop = $('card').scrollTop = 0;
 }
 $('cardBody').addEventListener('click', (e) => {
   if (!life.data) return;
@@ -4795,8 +4799,8 @@ const mapReady = new Promise(res => map.once('load', res));
 })();
 })();
 </script>
-<script src="dev/app/engage.js?v=126"></script>
-<script src="dev/app/mobile.js?v=126"></script>
+<script src="dev/app/engage.js?v=127"></script>
+<script src="dev/app/mobile.js?v=127"></script>
 <script>window.goatcounter = { path: () => location.pathname || '/' };  // links that open a church still count as a visit to the globe</script>
 <script>  // the test copy at /dev/ is never counted, so the stats show real visitors only
 if (!/^\/dev(\/|$)/.test(location.pathname)) { const s = document.createElement('script'); s.async = true; s.src = 'https://gc.zgo.at/count.js'; s.dataset.goatcounter = 'https://zofo.goatcounter.com/count'; document.body.appendChild(s); }
