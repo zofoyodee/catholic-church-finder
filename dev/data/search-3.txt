@@ -19457,9 +19457,9 @@ Holy Mary of Bisri Church	Jezzine	LB	Liban-Sud
 كنيسة مار بثيون	Baghdad	IQ	Mayorality of Baghdad
 Ancienne Eglise El Attaf	El Attaf	DZ	Ain Defla
 Abbaye Notre-Dame de l'Atlas	Tibhirine	DZ	Medea
-Tamesgida n Hellwan	Akbou	DZ	Bejaia
-الطاسيلي	بوفاريك	DZ	Blida
-كنيسية	حيدرة	DZ	Alger
+			
+			
+			
 Església del Pilar de la Mola	Sant Francesc de Formentera	ES	Balearic Islands
 Ermita de Sant Josep	Moraira	ES	Valencia
 Convent Franciscà	Benissa	ES	Valencia
@@ -52138,7 +52138,7 @@ Holy Trinity Anglican Cathedral	Karachi	PK	Sindh
 St. Andrews Church (akh/kashmir Colony)	Jamshed Town	PK	Sindh
 Church of Living Christ Pakistan	Jamshed Town	PK	Sindh
 St. Thomas Church	Karachi	PK	Sindh
-کیتھولک کلیسیا	کراچی	PK	Sindh
+			
 Seventh Day Adventist Church	Karachi	PK	Sindh
 St Judes Church	Karachi	PK	Sindh
 Blessing of God Church of Pakistan	Karachi	PK	Sindh
@@ -52149,7 +52149,7 @@ Old Airport Church	Karachi	PK	Sindh
 Ephesus Church of pakistan	Karachi	PK	Sindh
 كنيسة القلب الاقدس للسريان الكاثوليك	العشار	IQ	Basra Governorate
 كنيسة السريان الكاثوليك	Al Basrah al Qadimah	IQ	Basra Governorate
-حسن عناد ال شرار	السماوة	IQ	Al Muthanna
+			
 كنيسة ماريوسف البتول	Al `Amarah	IQ	Maysan
 کلیسای کاتولیک کلدان	اهواز	IR	Khuzestan
 Don Bosco Church	Lalitpur	IN	Uttar Pradesh
@@ -52221,7 +52221,7 @@ St. Peters Catholic Church	Leh	IN	Kashmir
 Saint Joseph Catholic Church	Dushanbe	TJ	Dushanbe
 Римско-католический приход Пресвятой Девы Марии	Kirgili	UZ	Fergana
 Римско-католический приход св. Терезы Младенца Иисуса	Shymkent	KZ	Ongtustik Qazaqstan
-ДОМ МОЛИТВЫ	Новопавловка	KG	Chuy
+			
 Comunione e Liberazione католик қозғалысы	Almaty	KZ	Almaty Qalasy
 Киелі Айқыш пен Opus Dei Қазақстандағы Прелатурасы	Almaty	KZ	Almaty Qalasy
 Римско-Католический приход Успения Пресвятой Богородицы	Талғар	KZ	Almaty Oblysy
