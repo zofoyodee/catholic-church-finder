@@ -17180,7 +17180,7 @@ St Andrew' Catholic Church, Adazi Nnukwu	Neni	NG	Anambra
 Holly Family Catholic Church	Asaba	NG	Delta
 St Anthony's Catholic Church, Umudioka	Nkpor	NG	Anambra
 St Joseph's Parish Umualumaku	Umualumaku, Ehime Mbano	NG	Imo
-CHAPEL		NG	Imo
+			
 Holy Mountain – Universal Centre for the Two Hearts of Love	Orlu	NG	Imo
 St Michael Catholic Church	Urualla	NG	Anambra
 St. Pauls Catholic Chuich	Ozuakoli Urualla	NG	Anambra
@@ -17335,7 +17335,7 @@ Catholic retreat centre		TD	Tandjile
 cathédrale Saint-Pierre-et-Saint-Paul	Pala	TD	Mayo-Kebbi Ouest
 Église catholique		NG	Adamawa
 Eglise Catholique	Guider	CM	North Province
-Igadala		NG	Borno
+			
 Agwan Fada (St. Peter´s)		NG	Borno
 Eglise Catholique Djougui		CM	North Province
 Eglise Catholique de		CM	North Province
@@ -18060,8 +18060,8 @@ Notre dame du Borgou	Banikoara	BJ	Alibori
 Église Notre-Dame du Perpétuel Secours	Niamey	NE	Niamey
 Eglise Saint Gabriel de Garbado	Niamey	NE	Niamey
 St Mary's Nursery and primary school Bagauda/Wak	Garun Malam	NG	Kano
-First Catholic Church	Hotoro	NG	Kano
-NACC Family House	Tudun Wada	NG	Kano
+			
+			
 Église Catholique	Tillaberi	NE	Tillaberi
 Église Mission Catholique	Tahoua	NE	Tahoua
 Eglise Catholique	Kousseri	CM	Far North
