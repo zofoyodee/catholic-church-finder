@@ -133,7 +133,7 @@ ZH_WORDS = [('聖母無原罪', 'Immaculate Conception'), ('無原罪聖母', 'I
             ('聖心', 'Sacred Heart'), ('聖母', 'Our Lady'), ('若瑟', 'St. Joseph'), ('伯多祿', 'St. Peter'), ('保祿', 'St. Paul'),
             ('方濟各', 'St. Francis'), ('德蘭', 'St. Teresa'), ('彌額爾', 'St. Michael'), ('安多尼', 'St. Anthony'), ('聖若望', 'St. John'),
             ('基督君王', 'Christ the King'), ('耶穌君王', 'Christ the King'), ('聖體', 'Blessed Sacrament'), ('文生', 'St. Vincent'),
-            ('聖安', 'St. Anne'), ('聖本篤', 'St. Benedict'), ('聖雅各伯', 'St. James'), ('聖瑪爾定', 'St. Martin'), ('耶穌', 'Jesus'), ('天主', ''), ('聖', '')]
+            ('聖安', 'St. Anne'), ('聖本篤', 'St. Benedict'), ('聖雅各伯', 'St. James'), ('聖瑪爾定', 'St. Martin'), ('耶穌', 'Jesus'), ('天主', ''), ('聖', ''), ('重慶', 'Chongqing')]
 ZH_TRAD = str.maketrans('圣会门稣罗马达贞亚纳尔约汉东华区堂', '聖會門穌羅馬達貞亞納爾約漢東華區堂')
 
 def zh_read(s):
