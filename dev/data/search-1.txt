@@ -63258,20 +63258,20 @@ Cattedrale di Samtavisi		GE	Shida Kartli
 Римско-Католический Костел	Сімферополь	UA	Crimea
 St.Simon And Jude Catholic Church	Сочи	RU	Krasnodarskiy
 Catholic Church in Abkhasia	Sukhumi	GE	Abkhazia
-MASS Riyadh	الرياض	SA	Ar Riyad
+			
 St. Anthony of Padua Catholic Church, Ras Al Khaimah	Ras al-Khaimah	AE	Abu Dhabi
-San Antonio de Padua, Silang, Cavite	الوكرة	QA	Al Wakrah
+			
 Catholic Church of Our Lady of the Rosary	الريان	QA	Al Wakrah
 Chiesa di Nostra Signora del Rosario (Doha)	الريان	QA	Al Wakrah
 Holy Rosary Catholic Church	الريان	QA	Al Wakrah
 St. Thomas Syro-Malabar Church	الريان	QA	Al Wakrah
 Roman Catholic Church Doha, Qatar	الريان	QA	Al Wakrah
 St. Mary's Malankara Catholic Church	الدوحة	QA	Al Wakrah
-Barwa Village Religious Complex	الدوحة	QA	Baladiyat ad Dawhah
-Doha Catholic Church	الدوحة	QA	Al Wakrah
-Catholic Church	الدوحة	QA	Baladiyat ad Dawhah
+			
+			
+			
 كنيسة القدّيس شربل - الدّوحة	Doha	QA	Baladiyat ad Dawhah
-Our Lady of Holy Rosary Church, Doha	الدوحة	QA	Baladiyat ad Dawhah
+			
 St. Andrew's Church, Abu Dhabi	أبوظبي	AE	Abu Dhabi
 Saint Paul Chatolic Church	أبوظبي	AE	Abu Dhabi
 St. Paul's Church	أبوظبي	AE	Abu Dhabi
@@ -63317,7 +63317,7 @@ Catholic Church of Our Lady of the Visitation	عوالي	BH	Northern
 Sacred Heart Catholic Church	المنامة	BH	Manama
 Syro Malankara Catholic Community - Bahrain	المنامة	BH	Manama
 Katolikong Pinoy sa Bahrain	المنامة	BH	Manama
-Baselica De Sto. Nino, Cebu City	المنامة	BH	Manama
+			
 Seraphic Hall, Catholic Church of Our Lady of the Rosary	الريان	QA	Baladiyat ar Rayyan
 St. Michael's Catholic Church	الشارقة	AE	Ash Shariqah
 St. Michael's Church, Sharjah, U.A.E.	الشارقة	AE	Ash Shariqah
