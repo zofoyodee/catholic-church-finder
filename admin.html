@@ -238,6 +238,70 @@ function featureName(p) {
 const langNames = typeof Intl.DisplayNames === 'function' ? new Intl.DisplayNames(['en'], { type: 'language' }) : null;
 const langName = (c) => { try { return (c && langNames && langNames.of(c)) || c || 'Unknown'; } catch (e) { return c; } };
 
+/* ---------- most-viewed churches, in English ---------- */
+// A visitor reading Chinese or Korean sends the church's country in their own language ("中国", "중국 본토") and its name as
+// registered (重慶市慈母堂). Here every country reads in English, and a name written only in another script reads the way
+// the English site shows it (data/names-x.json): "Chongqing Cimu Catholic Church". Views logged since 2026-11-18 carry the
+// church's number and its country in English; older ones are matched against the search index (fetched only when needed).
+const OTHER = /[^\u0000-ͯḀ-ỿ -⯿︀-️]/u;
+const regionEn = typeof Intl.DisplayNames === 'function' ? new Intl.DisplayNames(['en'], { type: 'region' }) : null;
+const ccEn = (cc) => { try { return (cc && regionEn && regionEn.of(cc)) || cc || ''; } catch (e) { return cc || ''; } };
+const SITE_LOCALES = ['en', 'es', 'fr', 'it', 'de', 'pt', 'pl', 'nl', 'cs', 'sk', 'sl', 'hr', 'hu', 'ro', 'lt', 'mt', 'sq', 'ca', 'la', 'tr', 'el', 'he', 'ar', 'ru', 'uk', 'hi', 'ta', 'te', 'ml', 'zh', 'zh-Hant', 'ja', 'ko', 'vi', 'id', 'fil', 'sw', 'yo', 'ig', 'zu', 'rw', 'mg', 'ln', 'qu', 'gn', 'ht', 'ak', 'sn', 'lg', 'rn', 'ny'];
+let countryBack = null;
+function countryToEn(name) {
+  if (!name) return '';
+  if (!countryBack) {
+    countryBack = new Map();
+    const codes = []; for (let a = 65; a < 91; a++) for (let b = 65; b < 91; b++) codes.push(String.fromCharCode(a, b));
+    for (const l of SITE_LOCALES) {
+      let dn = null; try { dn = new Intl.DisplayNames([l], { type: 'region' }); } catch (e) { continue; }
+      for (const c of codes) { let n = ''; try { n = dn.of(c); } catch (e) {} if (n && n !== c && !countryBack.has(n)) countryBack.set(n, c); }
+    }
+    for (const [k, v] of Object.entries({ '중국 본토': 'CN', '中国大陆': 'CN', '中國大陸': 'CN' })) countryBack.set(k, v);
+  }
+  const cc = countryBack.get(name);
+  return cc ? ccEn(cc) : name;
+}
+let namesX = null, searchLines = null;
+const getText = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(u); return r.text(); });
+async function churchRows(hits) {
+  const rows = hits.map((h) => {
+    const t = (h.title || '').split(' · '), name = h.path.slice(7);
+    // new: name · town · country in English · number; old: name · town · country in the visitor's language (empty parts left out)
+    if (t.length === 4 && /^\d+$/.test(t[3])) return { h, name, raw: t[0], town: t[1], country: t[2], i: +t[3] };
+    const old = t.length === 3 ? { raw: t[0], town: t[1], country: t[2] } : { raw: t[0] || name, town: '', country: t[1] || '' };
+    return { h, name, ...old, i: null };
+  });
+  if (rows.some((r) => OTHER.test(r.raw + r.town))) {
+    try { namesX = namesX || JSON.parse(await getText('data/names-x.json')); } catch (e) { namesX = {}; }
+    if (rows.some((r) => r.i == null && OTHER.test(r.raw + r.town))) {
+      try {
+        if (!searchLines) {
+          const meta = JSON.parse(await getText('data/meta.json'));
+          searchLines = (await Promise.all(Array.from({ length: meta.searchChunks }, (_, k) => getText('data/search-' + k + '.txt')))).join('\n').split('\n');
+        }
+        const want = new Map(rows.filter((r) => r.i == null && OTHER.test(r.raw + r.town)).map((r) => [r.raw + '\t' + r.town + '\t', r]));
+        for (let i = 0; i < searchLines.length && want.size; i++) {
+          const l = searchLines[i], f = l.split('\t'), r = want.get(f[0] + '\t' + f[1] + '\t');
+          if (r) { r.i = i; r.cc = f[2]; want.delete(f[0] + '\t' + f[1] + '\t'); }
+        }
+      } catch (e) {}
+    }
+  }
+  return rows.map((r) => {
+    const x = r.i != null && namesX && namesX[r.i];
+    let nm = r.raw, town = r.town;
+    if (x) {
+      const [, kind, text, xt] = x, what = { c: 'Catholic Church', k: 'Cathedral', s: 'Shrine' }[kind];
+      if (OTHER.test(r.raw)) nm = what ? (text ? text + ' ' + what : what) : text || r.raw;
+      if (xt && OTHER.test(r.town)) town = xt;
+    }
+    const country = r.cc ? ccEn(r.cc) : countryToEn(r.country);
+    const shown = [nm, town].filter(Boolean).join(', ');
+    return { count: r.h.count, html: esc(shown) + (country ? `<small>${esc(country)}</small>` : ''), tip: shown === r.name ? r.name : r.name + ' (as registered)' };
+  });
+}
+
 /* ---------- drawing ---------- */
 function rank(el, rows, { limit = 10, click } = {}) {
   rows = rows.filter((r) => r.count > 0).sort((a, b) => b.count - a.count);  // GoatCounter lists every device group, even at 0
@@ -351,7 +415,8 @@ async function load() {
     rank($('locations'), fromStats(lists.locations), { click: regionsOf });
     $('regions').innerHTML = '<p class="empty">Loading…</p>';
     rank($('features'), ev.filter((h) => !/^(church|bible-place|language)\//.test(h.path)).map((h) => ({ count: h.count, html: featureName(h.path), tip: h.path })));
-    rank($('churches'), byPrefix('church/').map((h) => ({ count: h.count, html: esc(h.path.slice(7)) + (h.title && h.title.split(' · ')[2] ? `<small>${esc(h.title.split(' · ')[2])}</small>` : ''), tip: h.title })));
+    $('churches').innerHTML = '<p class="empty">Loading…</p>';
+    churchRows(byPrefix('church/')).then((rows) => { if (my === run) rank($('churches'), rows); });
     rank($('bible'), byPrefix('bible-place/').map((h) => ({ count: h.count, html: esc(h.path.slice(12)) })));
     rank($('sitelangs'), byPrefix('language/').map((h) => ({ count: h.count, html: esc(langName(h.path.slice(9))) })));
     rank($('toprefs'), fromStats(lists.toprefs, (s) => esc(s.name || '(direct or unknown)')));

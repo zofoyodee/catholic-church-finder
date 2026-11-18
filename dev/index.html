@@ -1241,6 +1241,8 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<'
 const langName = (w) => { const c = w === 'tl' ? 'fil' : w; if (countryLocal && (countryLocal['_' + c] || countryLocal['_' + w])) return countryLocal['_' + c] || countryLocal['_' + w]; try { return (langNames && langNames.of(c)) || c; } catch (e) { return c; } };
 // Chinese Wikipedia serves each reader's script variant on request
 const wikiInit = (wiki, signal) => ({ signal, headers: wiki === 'zh' ? { 'Accept-Language': 'zh-CN' } : {} });
+// Site Stats is read in English: the church's country goes there in English, whatever language the visitor reads
+const countryEn = (cc) => { try { return cc ? new Intl.DisplayNames(['en'], { type: 'region' }).of(cc) : ''; } catch (e) { return cc || ''; } };
 const countryName = (cc) => { if (!cc) return ''; if (countryLocal && countryLocal[cc]) return countryLocal[cc]; try { return regionNames ? regionNames.of(cc) : cc; } catch (e) { return cc; } };
 
 async function getJSON(path) { const r = await fetch(BASE + path); if (!r.ok) throw new Error(path + ' ' + r.status); return r.json(); }
@@ -3228,7 +3230,7 @@ async function selectChurch(i, { fly = true } = {}) {
   if (state.dupOf && state.dupOf.has(i)) i = state.dupOf.get(i);  // a saved favourite of a removed duplicate opens the church it repeats
   else if ((state.typ[i] & 7) === 7) return;  // a pin taken off the globe because it is not a church
   $('cardBack').hidden = !cardFrom; $('cardBack').dataset.to = cardFrom; cardFrom = '';
-  if (state.selected !== i) shardFor(i).then(r => track('church/' + ([r[0], r[2]].filter(Boolean).join(', ') || i), [r[0], r[2], countryName(r[5])].filter(Boolean).join(' · '))).catch(() => {});
+  if (state.selected !== i) shardFor(i).then(r => track('church/' + ([r[0], r[2]].filter(Boolean).join(', ') || i), [r[0] || '', r[2] || '', countryEn(r[5]), i].join(' · '))).catch(() => {});
   state.selected = i;
   const lng = state.lon[i] / 1e6, lt = state.lat[i] / 1e6;
   map.getSource('sel').setData({ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lt] }, properties: {} }] });
